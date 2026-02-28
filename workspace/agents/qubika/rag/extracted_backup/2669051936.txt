@@ -1,0 +1,124 @@
+TITLE: Tasking Vulnerabilidades 2023
+DOMAIN: 5) Observabilidad
+PRIORITY: Media
+ID: 2669051936
+SOURCE: 2669051936__Tasking_Vulnerabilidades_2023.json
+
+---
+
+Documentos de referencia
+
+Tareas
+1) M001-[Pentest-2022]-APP INFONET
+Ticket:https://jira.bancardnet.dom/browse/GE-28
+Proyecto:Pago Movil Web (bportal)
+Descripcion:sesiones ya cerradas que se pueden reutilizar.
+Solución propuesta:cambiar session_store de cookie_store a redis_store.https://github.com/bancardsa/bancard-bportal/pull/12
+Status:producción
+2) M002-[Pentest-2022]-APP INFONET
+Ticket:https://jira.bancardnet.dom/browse/GE-29
+Proyecto:Pago Movil Web (bportal)
+Descripcion:bfcache del navegador permite volver atras y ver la informacion de las pantallas anteriores.
+Solución propuesta:agregar headers para indicar al navegador no cachear las vistas.https://github.com/bancardsa/bancard-bportal/pull/12
+Status:producción
+3) M004- Página Web Vulnerable a Password-Guessing / APP INFONET
+Ticket:https://jira.bancardnet.dom/browse/GE-31
+Proyecto:Pago Movil Web (bportal)
+Descripcion:La página de inicio de sesión no tiene ninguna protección contra ataques de fuerza bruta sobre  contraseñas. Los atacantes podrían realizar ataques de fuerza bruta para obtener credenciales de usuario legítimas.
+Posible solución:Implementar el bloqueo de la cuenta después de una cierta cantidad de intentos de contraseña incorrectos (10 o menos), o bien, implementar un Captcha.
+Dudas:cual es la manera de replicar esta vulnerabilidad? Hoy en dia los usuarios se bloquean al 5to intento. Qué cambio hay que hacer en este flujo? CONSULTAR A GUSTAVO porque usando su usuario hace el flujo de bloquear al 5to intento.
+Usuario bloqueado por reintentos
+Tasking:
+(1 dia) Analizar problema
+(2 dias) Analizar como bloquear cuentas y tiempo de vida del bloqueo
+Status:to do. Se conversó con bancard y está pendiente de su lado que nos confirmen la vulnerabilidad.
+4) M059- Cierre de Sesión Inadecuado -TPAGO
+Ticket:https://jira.bancardnet.dom/browse/GE-79
+Proyecto:portal web Tpago
+Descripcion:Es posible, después de cerrar sesión, acceder a la última sección visitada por el usuario después de seleccionar el botón Atrás del navegador sin necesidad de autenticación.
+A su vez, si se mantienen 2 solapas abiertas de la aplicación con la sesión iniciada y se cierra sesión en una de ellas, en la restante no se cierra la sesión, aunque no se pueden consultar datos (solo se puede observar la interfaz de la misma).
+Un usuario malintencionado podría obtener las cookies de sesión de un usuario válido y acceder a su cuenta
+Solución propuesta:headers para evitar chaching + fix en turbo + redis_store para sesiones.https://github.com/bancardsa/bancard-tpago-portal/pull/107
+Status:testing en staging.
+5) M062-[Pentest-2022]-Pago Movil
+Ticket:https://jira.bancardnet.dom/browse/GE-82
+Proyecto:auth-service
+Descripción:El mecanismo CORS (Cross-Origin Resource Sharing) no se lleva a cabo correctamente. El servidor web implementa la cabecera HTTP 'Origin' permitiendo a cualquier origen obtener acceso a los recursos expuestos. El contenido de la cabecera en la petición se refleja en la respuesta, y esto indica que el recurso puede ser utilizado por cualquier origen.
+Dudas:auth-service recibe requests directamente desde navegadores? Apps mobile usan WebView o algun mecanismo similar a un navegador que se fije en headers CORS? En caso de que así sea, cuáles son los origenes permitidos para configurar CORS en auth-service?
+Relevamiento:
+Revisar portales. le pegan a auth-service desde el navegador?
+auth-portal: utiliza auth-service a través de angus-remote. No hay invonveniente.
+No hay otros portales que hagan uso de auth-service desde el navegador.
+Consultar con equipo mobile de qubika si la app de comercios es afectada por politica CORS.
+Consultar con equipo mobile de bancard si las apps de ellos están afectadas por política CORS. Consultar a Gustavo persona indicada.
+Status:in progress.https://github.com/bancardsa/bancard-auth-service/pull/20Desde bancard sugirieron deployar a staging y ver luego si se rompen o no las apps.
+6) M067- Falta de Limitación de Requerimientos a las APIs -Pago Movil
+Ticket:https://jira.bancardnet.dom/browse/GE-88
+Proyecto:billing-proxy
+Descripción:Una cuenta puede ser bloqueada por varios intentos fallidos de autenticación, no hay límites en el número de solicitudes que un usuario o un origen específico pueden enviar una vez que el usuario esta autenticado. Esto puede permitir que un atacante ejecute ataques de denegación de servicio mediante el bloqueos de cuentas o de consumo excesivo de recursos una vez que esta autenticado. Implementar mecanismos de limitación de requerimientos automatizados para mitigar ataques de DOS.
+Posible solución:Implementar mecanismos de limitación de requerimientos automatizados, por usuario y por origen evitando el bloqueo de las cuentas, tanto en los endpoint publicos como en los autenticados, internos de la aplicación.
+Dudas:si bien el ticket menciona como recursos afectados las apps moviles de Pago Movil, se interpreta que la vulnerabilidad es en billing-proxy en donde no se limita la cantidad de requests. Poseen una descripcion más detallada? No es mas apropiado atacar este problema a nivel networking, en el firewall por ejemplo? No estarian afectados todos los portales y servicios de bancard? Sugieren algun cambio a nivel aplicacion? Hablarlo con gustavo para ver una solucion a nivel F5
+Tasking (sujeto a consultas):
+(2 dias) Setup de billing-proxy
+(2 dias) Analizar formas de limitar requests en la API de billing-proxy. Una posible solución es limitar en el nginx del proxy de la DMZ tantas requests por segundo/minuto desde un mismo dispositvo (IP/Mac address).
+(3 dias) Implementar reglas en el nginx de la DMZ para todos los servicios (en caso de ser esta la solución)
+Medir impacto con respecto a las entidades. Es posible que una entidad pueda hacer varias requests sin problemas? La idea es que no nos maten las entidades? Poner un límite sin afectar el funcionamiento normal.
+Consultar si esta solución es suficiente para el problema de bloqueos de cuentas.
+Status:relevamiento. El equipo de bancard estuvo de acuerdo con los puntos que planteamos y se hara un analisis mas general de la vulnerabilidad y no a nivel de aplicacion.
+7) M068-[Pentest-2022]-Pago Movil
+Ticket:https://jira.bancardnet.dom/browse/GE-89
+Proyecto:auth-service + apps mobile (Pago Movil, etc)
+Descripcion:Los tokens de autenticación utilizados en las solicitudes pueden reutilizarse incluso después de que el usuario cierre sesión en la aplicación móvil, y solo son invalidados cuando el usuario inicia sesión de nuevo.
+Posible solución:implementar endpoint de logout en auth_service que elimine de redis el baas_token que las apps mobile utilizan para firmar peticiones.
+Status:in progress.https://github.com/bancardsa/bancard-auth-service/pull/19
+8) M069-[Pentest-2022]-Pago Movil
+Ticket:https://jira.bancardnet.dom/browse/GE-90
+Proyecto:varios.
+Descripcion:Es posible detectar por parte de un atacante si una cuenta es valida o no. Esto puede permitir realizar mecanismos de descubrimiento de cuentas y efectuar ataques direccionados a aquellos usuarios validos en el sistema..
+Dudas:especificar qué errores dar en caso de input inválido en pantallas de inicio de sesión, registro de nuevo usuario, recupero de contraseña. Creo que hay que buscar un balance de que errores dar y cuales no sin perjudicar exp de usuario. Para el login es seguro decir credenciales invalidas. Para el registro de un nuevo usuario tendriamos que dar informacion mas detallada del error; por ejemplo en caso de email repetido.
+Hablar con Gustavo para preguntar que palabras usar, cuales son las pantallas en donde hay que corregir.
+Login y sign up:
+portal tpago
+
+bportal
+
+portal de comercios
+
+loyalty
+
+Recupero de contraseña: auth-portal
+Apps mobile con login y sign up:
+app de comercios (react native)
+
+pago movil ios y android (apps nativas)
+
+infonet cobranzas (android)
+
+Posiblemente los cambios haya que hacerlos en auth_service. Si creamos un nuevo error (una nueva key de error) hay que tocar los ¿6? portales para que sepan como manejarlos. Si se reutiliza un error key no haria falta.
+Tasking (sujeto a los cambios en Pago Movil App):
+(3 dias) Modificar endpoints (auth-service) de login, reset_password y registration para devolver un error mas generico (InvalidCredentials por ejemplo, uno que ya existe) en caso de no encontrar el usuario.
+(5 dias) Medir impacto a todos los portales que usen los dos endpoints anteriores (portal de comercios, pago movil web, tpago, auth-portal, app de comercios y app en IC). Modificar los mensajes, por ejemplo, “contraseña incorrecta” por “credenciales incorrectas”.
+(???)Modificar Pago Movil App
+Status:to do. Se plantearon a bancard las dudas y quedó de su lado ralizar un benchmarking de mejores prácticas para definir las pantallas y textos a ajustar.
+9) M080-[Pentest-2022]-Mini Pos
+Ticket:https://jira.bancardnet.dom/browse/GE-101
+Proyecto:miniPOS
+Descripción:Una cuenta puede ser bloqueada por varios intentos fallidos de autenticación, no hay límites en el número de solicitudes que un usuario o un origen específico pueden enviar una vez que el usuario esta autenticado. Esto puede permitir que un atacante ejecute ataques de denegación de servicio mediante el bloqueos de cuentas o de consumo excesivo de recursos una vez que esta autenticado
+Dudas:Similar a M067 pero en mini POS?Que requests son las que hay que limitar?
+Posible solución:Implementar mecanismos de limitación de requerimientos automatizados, por usuario y por origen evitando el bloqueo de las cuentas
+Tasking:
+(2 dias) Analizar formas de limitar requests en la API de mpos. Una posible solución es limitar en el nginx del proxy de la DMZ tantas requests por segundo/minuto desde un mismo dispositvo (IP/Mac address).
+(3 dias) Implementar reglas en el nginx de la DMZ para todos los servicios (en caso de ser esta la solución)
+Status:to do. Simil punto 6.
+10) M082-[Pentest-2022]-Mini POS
+Ticket:https://jira.bancardnet.dom/browse/GE-103
+Proyecto:miniPOS
+Descripción:Los tokens de autenticación utilizados en las solicitudes pueden reutilizarse incluso después de que el usuario cierre sesión en la aplicación móvil, y solo son invalidados cuando el usuario inicia sesión de nuevo
+Dudas:Similar a M068 pero en mini POS? De ser ese el caso se reutiliza la misma solución.
+Tasking (sujeto a estimación de la app miniPOS):
+(??? - depende si hacemos Punto 7 antes) Setup de auth-service
+(??? - depende si hacemos Punto 7 antes) Hacer un endpoint en auth que sea de logout, y que éste depreque el baas-token del usuario.
+(???)Cambios en minPOS para que llame al endpoint nuevo de auth
+Status:In progress. Simil punto 7
+11) Seguridad en redis
+Descripcion:agrergar autenticacion a instancias de Redis.

@@ -1,0 +1,81 @@
+TITLE: 3D Secure en TPAGO
+DOMAIN: General
+PRIORITY: Media
+ID: 4219109404
+SOURCE: 4219109404__3D_Secure_en_TPAGO.json
+
+---
+
+Alcance en TPAGO
+En TPAGO se integró el servicio 3DS en 4 flujos:
+Catastro de tarjetas
+
+Pago con nueva tarjeta
+
+Pago con tarjeta catastrada
+
+Suscripción a plan sin usuario logueado. También conocido como suscripción “flujo stripe”
+
+Modelado de datos en Payment Link Service
+Se ha tomado de base el flujo de VPOS pero se modificaron algunas cuestiones.
+Diagrama Entidad Relación
+El modeloCardinalSessiones el encargado de guardar la información de un flujo 3D Secure. Posee una asociación polimórficabelongs_to :resource, polymorphic: true, required: trueapuntando a unPaymentHooko a unNewCardRequest, según qué tipo de flujo sea el que realiza el usuario:
+Para el caso de pago con nueva tarjeta o pago con tarjeta catastrada, es unPaymentHook.
+
+Para el caso de catastros o suscripciones stripe, es unNewCardRequest.
+
+El modeloCardinalSessionse crea en el momento en el que tpago-portal solicita a payment-link-service el lookup de la operación utilizando los endpoints:
+POST /cardinal/card_registration_lookup/:new_card_request_id
+
+POST /cardinal/payment_lookup/:hook_alias
+
+El el diagrama de flujo se encuentra resumido el proceso 3DS. Varias partes del proceso no se incluyeron a fin de hacerlo más compacto. Para el detalle completo, recurrir al código.
+El diagrama de flujo refleja el proceso desde el punto de vista del navegador del usuario, en donde el código javascript es el encargado de realizar los llamados a tpago-portal y este a payment-link-service.
+Algunos puntos no incluidos en el diagrama:
+En los pagos, el PaymentHook ya se encuentra creado antes de que el usuario haga click en pagar.
+
+En los catastros/suscripciones stripe, el NewCardRequest se crea después del click en el botón.
+
+Al realizar el lookup, pls crea el registroCardinalSessiony le asigna el ddc_session_id y el lookup_response, con la respuesta de cardinal del lookup.
+
+Al submitear el form, en todos los casos, pls valida si el flujo tiene una cardinal_session y en caso que la tenga, si esa sesión requirió un Challenge. En caso de que sí haya requerido challenge, se llama al proceso de cardinal authenticate y se completa el authenticate_response en la cardinal_session.
+
+Tanto en pagos como en catastros, se envía al JPOS el resultado de cardinal con los campos de la cardinal_session con el siguiente formato:
+
+Tokenizacion de tarjetas VISA (TPago)
+Tokenizar ocasional1800Tokenizar ocasional
+ExternalServices::TokenRequestor.token_requestortoken_requestor_service.yml -> call_token_requestor{host_jpos}/bancard/util/commerceTokenbody a enviar{ commerce_id: siempre 232, card_brand: params[:card_brand] }
+
+ExternalServices::Tokenize.generate_card_tokentokenize_service.yml -> generate_card_token
+En STG:https://10.100.14.73:4141/tokens/generateToken3DS
+
+En PRD:https://10.10.17.99:8787/ecom/v1/tokens/generateToken
+
+body a enviar
+rubyEn definitiva los params que necesita la operación en pls son: card_brand, card_number, card_expiry, card_cvc, hook_alias (y de aca sacar el amount)
+Tokenizar pagos con tarjeta catastrada1800Tokenizar pagos con tarjeta catastrada
+Hacer el unmaskExternalServices::CardUtils.get_card_number{host_jpos}/bancard/util/get_cardbody a enviar:
+rubyTokenizar catastro1800Tokenizar catastro
+UsaExternalServices::CardUtils::get_visa_card_token{host_jpos}/bancard/util/tarjeta_tokenbody a enviar:
+rubySolución de tokenización de pagos ocasionales para TPago (persistir tokenize_response)
+Esto es necesario ya que en pagos ocasionales, el JPOS requiere que se le envíe la respuesta completa de la tokenización de VISA para autorizar el pago, y no solo el token.
+El usuario hace click en pagar
+
+Si es una tarjeta Visa internacional/intracountry:
+tpago-portal solicita tokenizacion de la tarjeta a PLS.
+
+PLS persiste la respuesta completa de la tokenizacion(/tokens/generateToken) en elPaymentHook, en una nueva columna tokenize_card_response del PaymentHook.
+
+tpago-portal recibe el TokenVisa que utilizará en lugar del card number de ahora en más.
+
+tpago-portal realiza proceso cardinal utilizando el TokenVisa/card number segun corresponda.
+
+tpago-portal manda a autorizar el pago utilizando el TokenVisa/card number segun corresponda.
+
+pls recibe la solicitud de autorizacion del pago para procesar con el servicio/bancard/paymentlink/payment_link_form
+Si es Visa internacional/intracountry: recupera de su base la respuesta completa de la tokenizacion para mandar al JPOS. Utiliza el pan_token
+
+Caso contrario no se envian datos de tokenizacion al JPOS. Utiliza el card number en claro.
+
+Un tema a tener en cuenta es que un mismo PaymentHook puede fallar una vez y reintentarse. En ese caso, la columna tokenize_response del PaymentHook se va a pisar siempre al último intento de pago.
+Por ejemplo: si el primer intento fue con VS internacional, se tokenizó, se guardó la respuesta y falló el pago, y después se reintenta con MasterCard, nuestra idea es pisar el tokenize_response con NULL para que quede coherente con el último intento de pago.

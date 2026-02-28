@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "description": "Repetition tracking index for corrections",
+    "updated": "2026-02-24T19:10:32Z"
+  },
+  "counts": {
+    "always-use-single-quotes-in-ruby-unless-interpolating-": 3
+  }
+}

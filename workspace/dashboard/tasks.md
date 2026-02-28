@@ -1,0 +1,19 @@
+# Agent Dashboard — Tasks
+
+Use IDs like `T-001`, `T-002`.
+
+## Pending
+- _none_
+
+## In Progress
+- _none_
+
+## Completed
+- [x] T-001 — Implement dashboard v2 (sidebar + live refresh + filters + approval badges) (owner: builder) (completed: 2026-02-17 12:27)
+- [x] T-002 — Deliver morning brief sections 6-10 (news/tech/X/history/music) (owner: researcher) (completed: 2026-02-17 08:01)
+- [x] T-003 — Migrate dashboard to global path projects/agent-dashboard (owner: main) (completed: 2026-02-17 12:49)
+
+## Quick Commands (manual)
+- Add task: append to **Pending** as `- [ ] T-XXX — <outcome> (owner: <agent>)`
+- Start task: move to **In Progress**
+- Complete task: move to **Completed** as `- [x] T-XXX — <outcome> (completed: YYYY-MM-DD)`

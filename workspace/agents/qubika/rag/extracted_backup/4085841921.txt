@@ -1,0 +1,61 @@
+TITLE: Cashout QR IC Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4085841921
+SOURCE: 4085841921__Cashout_QR_IC_Tasking_y_Estimacio╠ün.json
+
+---
+
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+App IC Mobile
+
+Análisis de tareas e impacto
+
+8
+
+Endpoint para generar QR de extracciones
+
+infonet-cobranzas-app-service
+
+24
+
+Endpoint para obtener movimiento por hook_alias
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetros indicadores a respuestas de productos
+
+infonet-cobranzas-app-service
+
+16
+
+Añadir nuevos parámetros a cashouts y representaciones de reporte de movimientos
+
+infonet-cobranzas-app-service
+
+8
+
+Configuraciones y deploy
+
+8
+
+Total desarrollo
+
+88
+
+Total gestión
+
+8.8
+
+Total
+
+96.8

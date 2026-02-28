@@ -1,0 +1,1636 @@
+TITLE: Ruby Upgrade Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2675277861
+SOURCE: 2675277861__Ruby_Upgrade_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Ayer: Arregló un problema con commerce-service uqe habia salido en el deploy
+Hoy:
+Blockers?:
+
+Ayer: Trabajando sobre tickets de commerce-suite que salieron en el deploy a prod.
+Hoy: Trabajando en un error relacionado a las reversashttps://bancard.atlassian.net/browse/PR-294
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Revisando ramas de commerce-suite y commerce-service
+Hoy:
+Blockers?:
+
+Ayer: Trabajando en biller-service. Por lo pronto quedó solucionado
+Hoy: Trabajando en un bug que reportó Manu de commerce-suite.
+Blockers?:
+
+Ayer: Terminó con lo del upgrade de notifications-service
+Hoy: Haciendo code reviews, esperando por tareas nuevas
+Blockers?:
+
+Ayer: VisaQR
+Hoy: VisaQR
+Blockers?:
+
+Ayer: Trabajando en TIcket PR-263, y hablando con Luis buscando una solución.
+Hoy: Está buscando como se crean y referencian las anulaciones para entender de donde surje el error.
+Blockers?:
+
+176incompleteChequear error y si es de C4C mover a bloqueado, agregar comment etiquetando a luis y avisar en el canal
+
+Ayer: Trabajando en test de act de VPos
+Hoy: Continúa con tests, quedan menos de 10.
+Blockers?:
+
+Ayer: Revisando error en biller-service relacionado al controlador de sidekiq. Al parecer es una incopatibilidad entre las versiones
+Hoy: Dandole una mano a caro con Onboarding y continúa con el tema de biller.
+Blockers?:
+
+Ayer: TPago
+Hoy: TPago
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Trabajando con ticket PR-263
+Hoy:
+Blockers?:
+
+Ayer: Termino de trabajar en VPos
+Hoy: Está trabajando con nlos tests que le estan fallando
+Blockers?:
+
+pto
+
+Ayer: Trabajando en setup de s4-service. Viendo otros servicios también que están configurados isn docker-compose para replicarlo en s4.
+Hoy: Viendo algunos tickets con Luis y Manu.
+Va a tener una reu con Nacho a las 14hs para ver el blocker de s4.
+Blockers:
+
+174incompleteReu con Nacho para ver como levantar s4-service.
+
+Ayer: Trabajando act de vpos-service. Resolivó conflics de la gema
+Hoy: Viendo un blocker que tiene en docker-compose intentando solucionarlo.
+Una vez solucionado va a revisar y con esto seguramente quede terminado vpos.
+Blockers:
+
+Ayer: Trabajando en la act de biller-service, actualizando ruby, bundler y las gemas. Resolvió dependencias. Hizo unos cambios de sintaxis y de bdd.
+Hoy: Trabajando en la corrección de los tests para terminar.
+Blockers:
+
+Ayer: tpago
+Hoy: Revisando bugs de la columna de deploy tst.
+Pudo reproducir los tests que están arreglados
+Blockers:
+
+175incompleteVer si se deployó correctamente.
+
+Ayer: Trabajando en ticket PR-239
+Hoy: Terminando con PR-239, ultimando las pruebas locales y arma PR.
+Va a estar revisando un issue con el C4C.
+Blockers:
+
+171incompleteHacer deploy
+
+Ayer: Termino con PR-208 y trabajando cn PR-237 (filtrado en boca de cobranza)
+Hoy: Viendo origen del error
+Blockers:
+
+172incompleteVer con alguien del equipo
+
+Ayer: Trabajando en PR-229. Usuario luego de eliminado puede seguir iniciando sesión.
+Hoy: Sigue trabajando con PR-229
+Blockers:
+
+Ayer: Trabajando en tarea PR-232
+Revisando PR en TPago, y se juntó con joaco a solucionar un tema de payment-link-service.
+Hoy: Termino con PR-232 y creo el PR.
+Va a revisar PRs
+Pedir reviews para gema debug asi deployamos hoy
+Blockers:
+
+Ayer: Trabajando con PR-114 (reabierto por marcelo).
+Hoy: Revisándolo pero es un bug inconsistente que no sucede seguido.
+Blockers:
+
+Ayer:
+Hoy: Trabajando en PR-240. Ya encontró error y está trabajando para solucionarlo.
+Blockers:
+
+173incompleteVer error con juan
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Yesterday: Trabajando en PR-230.
+Today: Terminó con PR-230. Va a probar y deployarlo junto a los ortos tickets en la tarde.
+Blockers:
+
+Yesterday: Trabajando en PR-27 y PR-36
+Today: Continúa con PR-27 y PR-36
+Blockers:
+
+Yesterday: Revisando PR’s. Continuó con PR-233 y PR-236. Están casi prontos
+Today: Hablando con Marcelo para ver si puede hacer unos cambios necesarios en relación a las tarjetas. Cuando termine va a ahcer PR y continuar con otro ticket.
+Blockers:
+
+Yesterday: Trabajando en PR-231.
+Today: Emprolijó todo y agregó una feature para mejorar la ux. Creó PR y están listas para deployar.
+Va a tomar otro ticket del backlog
+Blockers:
+
+Yesterday: Trabajando en PR-63
+Today: Continúa con PR-63 y PR-122 que fue re abierto.
+Blockers:
+
+Yesterday: Trabajando en PR-213 (browser edge que se toma como chrome)
+Today: Revisando flujo y detectando porque lo toma como “edg” en vex de “edge”
+Blockers:
+
+Yesterday: Trabajando en PR-230 para cambiar server de commerce-suite a Puma.
+Today: Logró levantarlo pero está revisando un error donde le están fallando las request.
+Va a estar viendo unas cosas de VisaQR.
+Blockers:
+
+Yesterday: Revisando PRs de Brunito y trabajando en PR-36.
+Today; Haciendo seguimiento a Luis para poder resolver PR-36.
+Blockers: Ticket-27, viendo como solucionar el error. Ver con alguien del equipo
+
+170incompleteVer error de pr-27
+
+Yesterday: Trabajando en PR-233 y PR-236 que están vinculadas
+Today: Continúa con pr-233 y pr-236 con intención de terminarlas hoy.
+Blockers:
+
+Yesterday: Trabajando en PR-231 (Anulaciones - Facturadores). Los filtros no están funcionando. Error relacionado a external-services.
+Today: Encontró el error y está encaminando todo para terminarlo hoy.
+Blockers:
+
+Yesterday: Subió PR-60, PR-176 y PR-158. Están aprobadas para subir.
+Today: Revisando algunas que no sucedían más, y movió a rechazado (PR-199 y PR-195)
+Trabajando en PR-63
+Blockers:
+
+Yesterday: Trabajando en PR-180 (gráficos mockeados).
+Today: Continúa con PR-180 y habló con Marcelo por PR-213 (problema edge)
+Blockers:
+
+Yesterday: Mirando PR-36 y PR-237.
+Probó PR-150 y PR-169
+Today: Va a continuar con PR-169.
+Blockers:
+
+Yesterday: Continúa con PR-215.
+Empezó a ver el PR-230.
+Today: Intentando terminar con PR-230 para luego volver al PR-215.
+Dandole una mano a tonga con el ticket que está trabajando
+Blockers?
+
+Yesterday: Terminando con PR-27 (anulación de facturadores)
+Today: Continúa con PR-27
+Blockers?
+
+Yesterday: Trabajando en PR-75 y PR-64. Subió PRs
+Today: Empezó con PR-229.
+Blockers?
+
+Yesterday: Trabajando con PR-101
+Today: Sigue con PR-101 - Listado de anulaciones. Pudo hacer andar los filtros en los query params. Simplificar los filtros.
+Está ahora viendo un tema con el paginado
+Blockers?
+
+169incompleteQueda replicar tarea PR-88. Esperando a que se retomen las pruebas en staging para probar con Manu. De mientras prueban local
+
+Yesterday: Terminó con PR-224
+Today: Ahora está trabajando en PR-60.
+Blockers?
+
+Yesterday: Trabajando en PR-116 arreglando vista de EPos que tiene un problema en la parte de los pagos. Oculta la parte de productos destacados
+Today: Sigue con PR-116, viéndolo con Juan y creó PR. Se lo pasó a Jose para que lo vea y de su ok, y luego mergear
+Blockers?
+
+Yesterday: Trabajando en PR-215. Arreglando pantalla de soporte.
+Today: Continua con PR-215, crea PR y continua con PR-230.
+Blockers?
+
+Yesterday: Trabajando en PR-27 (vista de anulaciones facturables)
+Today: Continúa con PR-27 e intentando terminarlo para hoy.
+Blockers?
+
+Yesterday: PTO
+Today: TPago
+Blockers?
+
+Yesterday:
+Today: Terminando PR-75 y empieza a trabajar con PR-64
+Blockers?
+
+Yesterday: Trabajando en PR-101 en listado de anulaciones, poder filtrar y que se mantengan.
+Today: Continúa con PR-101 solucionando tema de filtros.
+Blockers?
+
+168incompleteQueda replicar tarea PR-88. Esperando a que se retomen las pruebas en staging para probar con Manu. De mientras prueban local
+
+Yesterday: Cerrando el PR-122 y PR-209. Mergeados y falta deploy
+Today: Trabajando en PR-224, ya casi pronta. Termina hoy y continúa con otro.
+Blockers?
+
+Yesterday: Trabajando en PR-116 (Infonet cobranzas). Pudo reproducir
+Today: Buscando donde está ocurriendo el error.
+Blockers?
+
+Yesterday:
+Today: Trabajando en PR-215, quedo solucionado y pasa a revisión
+Blockers?
+
+Yesterday: Terminó PR-113, ready para QA. PR-36
+Today: Trabajando en
+Blockers?
+
+Yesterday: PTO
+Today: PTO
+Blockers?
+
+Yesterday: Trabajando en PR-196 (hacer cambios en consulta de saldo)
+Today: Trabajando en PR-207, bloqueada por tema de F5. Trabajando en PR-75
+Blockers?
+
+Yesterday: Trabajando en PR-87. Terminó siendo rechazada por Victor. Resultó ser un error en los datos de las bases de staging
+Today: Revisando comentarios de Juan en una PR en commer-service, en Ruby Debug. Tomo el PR-88, está intentando reproducirlo.
+Blockers?
+
+Yesterday: Trabajando en PR-114. No pudo reproducir, va a esperar a que venga manu.
+Trabajando en PR-122, que es para agregar el separador de miles. Subió PR
+Today: Trabajando en PR-181, inconsistencia de datos en resumen de ventas.
+Blockers?
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Trabajando en PR-215. Pudo reproducir.
+Today: Ayudando a Joaco con un bug de commerce-suite.
+Terminar PR-215 y hacer deploy a staging de lo que hay pendiente.
+Blockers?
+
+165incompleteDeployar release 5.0
+
+Yesterday: Terminando con PR-113 y PR-36.
+Mando PR de act de Picasso
+Today: Terminando con PR-113 y PR-36
+Blockers?
+
+166incomplete
+
+Yesterday: PTO
+Today: PTO
+Blockers?
+
+Yesterday: Trabajando con PR-196 (relacionado a js)
+Today: Sigue con PR-196. Viendo que Carlos devolvió la PR-207. Funciona local y en prod pero falla en staging.
+Blockers?
+
+Yesterday: Arreglando el CI de commerce-service. Encontró el prob y solucionó, el CI quedó arreglado.
+Revisó PRs y tomó tarea PR-87.
+Today: Viendo PR-87 a ver si es error de datos.
+Blockers?
+
+Yesterday: Pudo levantar commerce-service. Terminó con PR-227 e hizo cambio en Bancard-Portals y subió PR
+Today: Empezó a trabajar con PR-189
+Blockers?
+
+167completeVer de levantar commerce-service
+
+Yesterday: Trabajando en PR-213 relacionado a Edge. Encontró el problema y solucionó
+Today: Trabajando con Carlos con un tema del csv de audit.
+Viendo un problema de server error con José.
+Va a tener reu con Juan y Seba.
+Blockers?
+
+Yesterday: Hizo el deploy el viernes. Quedaron unas cosas pendientes y la idea es hacerlo mañana martes 28/11. Termino con pr-225 y mergeó
+Today: Trabajando en PR-215.
+Blockers?
+
+162completeDeployar release 4.0
+
+Yesterday: Trabajando en PR-113 (Export en levantar usuarios)
+Today: Viendo un error de timeout al auditar usuarios. Pasa solo en local, no en staging
+Blockers?
+
+163incompleteVer si no es un problema local o con algún servicio
+
+Yesterday:
+Today: PTO
+Blockers?
+
+Yesterday:
+Today: Subió PR del ticket PR-50 y empezó con PR-190 relacionada a clases de un botón. Está terminando y va a seguir con otro ticket de la lista
+Blockers?
+
+Yesterday: Preparando y Documentando la charla de Ruby Debug.
+Today: Revisando PRs con Bruno y hablando con Marcelo para entender el contexto y solucionarlo.
+Corrigiendo CI de commer-service para poder insertar la gema de Ruby-Debug
+Una vez terminado va a pasar a tomar tickets del backlog
+Blockers?
+
+Yesterday: Revisando ticket PR-202 con Gasti. Definiendo con Marcelo a ver si es un error o no para entender mejor el contexto.
+Today: Trabajando en PR-227 de editar una anulación. Recibiendo error de commerce service
+Blockers?
+
+164incompleteVer de levantar commerce-service
+
+Yesterday: Trabajó en PR-206, no pudo reproducir el issue por ende le avisó a Carlos y se va a encargar el de reproducirlo.
+Today: Trabajando en PR-213 relacionado a problema con Edge.
+Blockers?
+
+Yesterday: Trabajando en PR-225
+Dando soporte a Pablo escobar con tickets de procesamiento de comisiones. Quedo hecho el PR
+Today: Sigue con PR-225, ya esta casi todo probado y queda el pr pronto. En la tarde va a hacer el deploy de las tareas del release 4.0
+Blockers?
+
+160incompleteDeployar release 4.0
+
+Yesterday: Trabajando en tickets pendientes a su nombre.
+Trabajo con PR-36 y PR-113 que puede llegar a ser que se solucionen de la misma manera. Esta debuggeando y viendo si los puede solucionar juntos
+Today: Sigue con PR-36 y PR-113
+Blockers?
+
+Yesterday: Trabajando en PR-146 y los issues PR-51, PR-226 y PR-197
+Today: Onboarding flujo stripe para TPago
+Blockers?
+
+Yesterday: Trabajando con PR-217. Investigando tema de ElasticSearch. Al parecer el problema viene desde ahí.
+Today: Trabajando en completar el gráfico
+Blockers?
+
+Yesterday:
+Today: Trabajando en la implementación de ByeBug. Ahora está investigando una nueva Gema, Ruby Debug, así que está viendo esta ahora, probando en commerce-service.
+Blockers?
+
+Yesterday: Trabajando con PR-222, encontró el origen del error y está buscando como solucionarlo
+Today: Mientras tanto está trabajando en PR-227, intentando replicarlo para poder solucionarlo.
+Blockers? Encontrar la solución al PR-222
+
+161incompleteVer PR-222 con el equipo
+
+Yesterday: Trabajando en PR-124, ya está creado el PR para ser mergeado hoy e incluido en el release
+Today: Trabajando con PR-212. (problema con usuario logueado. No se cierra la sesión)
+Blockers?
+
+Yesterday: Trabajo con proceso de transacciones.
+Today: Continua con proceso, la idea es terminando para hoy.
+Hizo deploy a staging de los cambios del release de ayer.
+Va a juntarse con el patrón a ver el proceso de comisiones.
+Blockers?
+
+Yesterday: Trabajando con el PR-223
+Today: Continua con PR-223, por encontrar el error y solucionar. Luego continua con otro ticker del backlog.
+Blockers?
+
+158completeIntentar resolver error de gemas y ver con alguien
+
+Yesterday:
+Today: Arrancó con PR-216, PR-210, PR-221 y PR-106, tickets relacionados al deploy de hoy.
+Reportó una mejora PR-224
+Blockers?
+
+Yesterday: Termino con PR-207 y empezó con PR-167.
+Today: Continúa con PR-167
+Blockers?
+
+Yesterday:
+Today: Trabajando en la implementación de ByeBug. Ahora está investigando una nueva Gema, Ruby Debug, así que está viendo esta ahora, probando en commerce-service.
+Blockers?
+
+Yesterday: Terminó con PR-202 y subió PR para revisar
+Today: Viendo PR-222. Al parecer es tema con generación de PDF, que no se está enviando.
+Blockers?
+
+159incomplete
+
+Yesterday:
+Today: Trabajando en PR-124. Ya pudo reproducir Bug. Se deshabilita el botón cuando se da pagar una vez y falla. Viendo bien cual es la clase relacionada al botón.
+Blockers?
+
+Yesterday: Viendo temas de una nueva iniciativa de Bancard.
+Viendo proceso de sidekiq para enviar transacciones
+Today: Sigue con transacciones.
+Blockers?
+
+Yesterday: Trabajando en PR-223.
+Today: Sigue viendo en PR-223
+Blockers?
+
+153incompleteIntentar resolver error de gemas y ver con alguien
+
+Yesterday: Terminó con PR-145
+Today: Repasando issues del backlog y habló con Belén para que le asigne alguna tarea. Revisó tickets bloqueados para ver si se había desbloqueado alguno.
+Blockers?
+
+154completeVer PR-199 con Emi155incompleteVer issue reportado con luis de respuetas de C4C devolviendo errores en los arrays vacios
+
+Yesterday: Trabajando con PR-207. Recibía error 500 pero ya se resolvió.
+Today: Terminando de arreglar el issue.
+Blockers?
+
+Yesterday: Implementando ByeBug con Tonga
+Today: PTO
+Blockers?
+
+Yesterday: Trabajando con PR-202 y PR-222
+Today: Debuggeando ambos para encontrar error.
+Blockers?
+
+156incomplete
+
+Yesterday: Trabajó en PR-218.
+Implementación de ByeBug en commerce-suite
+Today: Trabajando en PR-224 (pagos)
+Blockers?
+
+157incompleteVer con Manu PR-224
+
+Yesterday: Avanzando con mejora de transacciones. Falta poder enviar errores de forma clara.
+Today: Después de sync va a parar con esto y seguir con ticket de conciliaciones PR-191
+Blockers?
+
+Yesterday: Solucionó problemas levantar el service local. Trabajando con PR-199, problemas cuando hay transacciones grandes (Error 500). El problema que se reportó ya no sucede.
+Today: Va a ver este error 500 con Manu
+Blockers?
+
+146incompleteVer con Manu
+
+Yesterday: Trabajando con tickets que mandó Luis PR-219, PR-220 y PR-221
+Today: Arrancó con ticket PR-145 y va a continuar probándolo. También call de priorización de tickets de Errores conocidos y mejoras.
+Blockers?
+
+147completeHay que hacerle segumiento a Luis por el PR-217 para ver si es tema de datos148completeVer con que seguir y priorizar bugs de sprint mejoras y errores conocidos149incompleteVer PR-199 con Emi150incompleteVer issue reportado con luis de respuetas de C4C devolviendo errores en los arrays vacios
+
+Yesterday: PR-207
+Today:
+Blockers?
+
+Yesterday: Trabajando con PR-210 (Paginado usuarios) Encontró unos detalles más y agregó esos fix al PR creado.
+Today: Implementando ByeBug
+Blockers?
+
+Yesterday: Llamada con Juan y Emi para resolver PR-161 y PR-106. Se subió PR
+Today: Trabajando con PR-221 (onboarding). La idea es terminarlo para hoy y ver PR-202 con Marcelo. Se creó ticket PR-222 asociado.
+Blockers?
+
+151incomplete
+
+Yesterday: Trabajando con PR-218. Reprodujo error. Había error de datos por sucursal errónea. Encontró el problema, y ahora está buscando el workaround.
+Today: Sigue trabajando con PR-218
+Blockers?
+
+152incomplete
+
+Yesterday: Investigando problema con duplicados. Revisando este tema con Carlos y Luis
+Today: Deployar tickets que están mergeados.
+Blockers?
+
+139completeHacer seguimiento de bug de datos.
+
+Yesterday: Terminando con PR-199. Viendo y solucionando problemas locales.
+Today: Seguir con PR-199 intentando liquidar antes de la weekly y luego seguir con PR-106.
+Blockers?
+
+140incomplete
+
+Yesterday: Repasando issues relacionados al PR-147 (Facturador). Revisando bugs en sprint de bugs conocidos y mejoras. Rechazó algunos que no estaban sucediendo
+Today: Va a trabajar con los tickets en staging luego del deploy. Esperando reu para priorizar errores conocidos y mejoras.
+Blockers?
+
+141incompleteHay que hacerle segumiento a Luis por el PR-217 para ver si es tema de datos142completeVer con que seguir y priorizar bugs de sprint mejoras y errores conocidos
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Trabajando con ticket PR-210.
+Today: Encontró problema con filtro de roles. Va a probar y ver si con esto soluciona todo.
+Blockers?
+
+Yesterday: Solucionando y revisando PR de datos adicionales.
+Today: Continúa con PR-161
+Blockers?
+
+143incompleteHacer seguimiento a Luis por PR-161 (tema c4c)
+
+Yesterday: PR-217. Puro reproducir el error pero seguramente sea un tema de datos.
+Today: Va a tomar el PR-215 mientras no se puede solucionar el PR-217.
+Blockers? Error 500 al pegarle al pegarle a commerce-service
+
+144incompleteHacer seguimiento a Luis para ver si es tema de datos
+
+Yesterday: Viendo PR-81, que tenía un error de Picasso-error.
+Today: Habló con Luis y le dio la solución. Queda pendiente hacer una última prueba.
+Blockers?
+
+145incomplete
+
+Yesterday: Trabajando en el PR-191. PR creada para revisar.
+Today: Creando PR’s para PR-191. Está viendo tema de Sidekiq que enviaron por teams. Es un bug de datos que tiene que arreglar Bancard. Hay que hacerle seguimiento porque no puede afectar.
+Blockers? No
+
+133incompleteHacer seguimiento de bug de datos.
+
+Yesterday: Trabajando en PR-199 (export csv infonet cobranzas)
+Today: Sigue con PR-199, intentando cerrarlo hoy.
+Blockers? No
+
+134incomplete
+
+Yesterday: Testeando PR-66 y PR-73. Escribió a Belu para ver si tiene algo para pasarle.
+Today: Probando PR-147 (Facturador). A raíz de esto reprodujo PR-194 que estaba como rechazado y reportó PR-217
+Blockers?
+
+135incompleteHay que hacerle segumiento a Luis por el PR-217 para ver si es tema de datos136incompleteVer con que seguir y priorizar bugs de sprint mejoras y errores conocidos
+
+Yesterday:
+Today: Feriado
+Blockers?
+
+Yesterday: Trabajando en PR-210 (Portal de comercios - Listado de usuarios)
+Today: Sigue trabajando con PR-210 investigando de donde viene el error
+Blockers?
+
+Yesterday: Trabajó con PR-202 y creó PR
+Today: Está trabajando sobre un error de customer fields que reportó Ariel
+Blockers?
+
+Yesterday: Trabajando en el PR-214.
+Today: Se hizo el merge y esta viendo PR-217
+Blockers?
+
+137incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: PR-216. Era tema de datos
+Today: Empezó con PR-81, esta investigando como surge.
+Blockers?
+
+138incomplete
+
+Yesterday: Viendo PR-73 y arrancó con PR-193
+Today: Ahora viendo PR-191. Ya encontró el problema y está trabajando en el fix.
+Hablando con Luis para resolver y ver un par de tickets donde tiene dudas.
+Blockers?
+
+127incomplete
+
+Yesterday: PTO
+Today: PR-199, seguramente termine para hoy y empiece con otro ticket.
+Blockers?
+
+128incompleteHablar con Manu sobre algunas dudas de los tickets abiertos
+
+Yesterday: Ayer tuvo onboarding con Nacho para conectarte a los ambientes de Staging.
+Probando PR-208, PR-209, PR-210 y PR-81
+Today: Trabajando con PR-203, PR-160, PR-106 y va a probar en prod PR-167, PR-179, PR-180 y PR-181
+Blockers?
+
+129completePendiente comunicación con C4C
+
+Yesterday: Termino con PR-242 de desembolsos y continuo con la PR-192.
+Today: Está con los últimos ajustes del código y sube la PR.
+Blockers?
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Trabajando en PR-202 y PR-203, revisándolos, los pasó a Revisión
+Today: Trabajando en PR-123, probablemente lo cierre hoy, y continúe con otro.
+Blockers?
+
+Yesterday: Trabajó en el PR-66 y lo pasó a Revisión
+Today: Trabajando en PR-94. Viendo el problema con Manu y Nacho. Ya encontró el problema y está esperando respuesta de Denis.
+Va a pasar a otro ticket de mientras.
+Blockers? F5
+
+130incompleteHablar con Denis131incompleteVer este ticket porque no es tema de actualización de Ruby. F5 está trancando esto, por ende escapa de nosotros y no es tema de actualización de Ruby. Habría que arreglar F5 y re testear para ver si esto sigue sin funcionar.
+
+Yesterday: Trabajando en PR-210. Levanto ambiente para empezar a trabajar en eso.
+Today: Hoy planea terminar PR-210. Ya pudo replicar local, falta arreglarlo.
+Blockers?
+
+Yesterday: Trabajó con PR-194 (pudo reproducir y es error de datos) y PR-98.
+Today: Encontró el problema en el PR-98 y lo pasó a rechazado.
+Trabajando con el PR-69
+Blockers?
+
+132incompleteHacer seguimiento a Luis sobre PR-194, para que le provea data nueva y ver si de verdad es un bug o problema de datos.
+
+Yesterday: Mirando problemas que surgieron relacionados a Sidekiq
+Viendo una iniciativa nueva y dando una mano a Gasti con un tema de Picasso Listing
+Today: Deployar pr de Sideqik y tomar un ticket
+Blockers? No
+
+122incomplete
+
+Yesterday: Liquidando con PR-107 y quedo cerrado.
+Today: Trabajando en PR-199.
+Blockers? No
+
+123incomplete
+
+Yesterday: Avanzó con PR-171.
+Today: PR-205, PR-212, PR-107 y PR-171 (C4C)
+Blockers? No
+
+124completeEn el caso que marcelo no responda, intentar hablar con Luis125incompletePendiente comunicación con C4C
+
+Yesterday: Sigue con tarea de desembolsos. Al terminar se mueve a actualización de Ruby (242)
+Today:
+Blockers? No
+
+Yesterday: Se reunió con juan para resolver lo de picasso
+Today: Trabajando con PR-187 y luego va a pasar a tomar algo del backlog.
+Blockers? No
+
+126completeVer con Juan
+
+Yesterday: Cerró PR-193
+Today: Trabajando en PR-161
+Blockers? No
+
+Yesterday:
+Today: Viendo PR-159 (Sidekiq)
+Blockers? No
+
+Yesterday: Trabajando el PR-107. Hablando con Luis y probando con un archivo nuevo. Está funcionando.
+Today: Va a agregar comment y cerrar el ticket. Luego agarrar otro ticket.
+Blockers? No
+
+118incomplete
+
+Yesterday: Iba a arrancar con PR-171. Ticket para probar comunicación con el sistema de Autenticación. Esperando respuesta de Marcelo.
+De mientras probó funcionalidades dentro de portal y reportó bugs de tipo mejora
+Today: Trabajar con el PR-171
+Blockers? Esperando por Marcelo Caceres (Bancard)
+
+119incompleteEn el caso que marcelo no responda, intentar hablar con Luis
+
+Yesterday: Trabajando en ticket de desembolsos
+Today: Trabajando en ticket de desembolsos (PR-242)
+Una vez que termine, pasa a agarrar tickets de Ruby
+Blockers?
+
+120completeHablar con Juan para resolver error del setup
+
+Yesterday: Trabajó sobre dos tickets sobre errores de formato de datos en unas vistas. PR-188 y PR-184
+Today: Trabajando en PR-187, está intentando solucionarlo.
+Blockers? Diferencias entre nombre del modelo y nombre de la tabla. Esto trae problemas al filtrar.
+
+121incompleteVer con Juan
+
+Yesterday: Trabajando en PR-164 y hablando con Manu. No pudo replicar y se movió a revisión porque estaba funcionando bien
+PR-205 mismo caso
+Today: PR-105 - Necesita un user que tenga más datos para poder probar esto, porque no puede replicar.
+Blockers? No
+
+Yesterday: Viendo proceso de Sidekiq
+Today: Haciendo ajustes en configs. De tarde reu con Bancard y agarrar algún ticket prioritario
+Blockers?
+
+109completeHablar con Nacho para ver si pueden sacarlo entre los dos110incompleteCoordinar con Agus y hablar con Luis
+
+Yesterday: Termino Ticket 177 y 178.
+Today: Arreglando comments que dejo Gasti en 178. Tomar blockers que reportó Belén y luego seguir con 106 y 107
+Blockers?
+
+111incomplete
+
+Yesterday: Luchando con Confluence y subiendo evidencias que tenía logueadas. Terminó PR-146
+Today: Tranajando en PR-147 y luego va a tomar PR-171
+Blockers? No
+
+112incomplete
+
+Yesterday: Trabajando en PR-182. Revisando con Carlos ese ticket, movido a Pruebas QA.
+Today: Belén lo movió a Realizar Código
+Blockers?
+
+113incompleteHablar con Juan para resolver error del setup
+
+Yesterday: Mirando el tablero y ayudando a Emi con PR-178 y luego trabajando en PR-184
+Today: Trabajando en PR-184
+Blockers? No
+
+115incomplete
+
+Yesterday: Mirando proceso de sincro de transacciones.
+Today: idem ayer
+Blockers?
+
+103completeHablar con Nacho para ver si pueden sacarlo entre los dos104incompleteCoordinar con Agus y hablar con Luis
+
+Yesterday: Trabajando con PR 177 (Reversas)
+Today: Sigue con PR 177
+Blockers? - No
+
+105incomplete
+
+Yesterday: Terminó con 145 y 146
+Today: Terminando con ticket del facturador (147)
+Blockers? - No
+
+106incomplete
+
+Yesterday: -
+Today: Hablando con Juan para coordinar que ticket puede tomar. Revisando ticket 182 y haciendo setup del ambiente.
+Blockers? - Está recibiendo un error al hacer el setup
+
+107incompleteHablar con Juan para resolver error del setup
+
+Yesterday:
+Today:
+Blockers?
+
+108incomplete
+
+Yesterday: Trabajando en un temita que remarcó Pablo Escobar, desde el jueves.
+Today: Con suerte hoy termina esa tarea.
+Blockers? No.
+
+100incomplete
+
+Yesterday: Trabajando en el ticket 107. Viene llevando mucho tiempo. Ticket muy complicado.
+Today: El archivo capaz tiene algún problema porque sigue sin poder encontrarle la vuelta. Va a seguir investigando. Tomó el ticket que reportó Carlos el viernes.
+Blockers? No.
+
+101incomplete
+
+Yesterday: -
+Today: Revisar transacciones, ventas, infonet y facturador. Esta con eso. Aun sigue probando con facturador. El resto está terminado. Ticket 144, 146 y 147 (es el que todavía falta).
+Blockers? No.
+
+102incomplete
+
+Yesterday: Trabajando con la iniciativa de SQL. Hablando con Bruno y él estuvo dando una mano.
+Today: Peleando con epos service proxy, el último servicio. Falla el ssh key. José está dando una mano.
+Blockers? No.
+
+Yesterday: Trabajando con los quilombos del deploy a staging. Arreglando selling portal que ya quedó deployado.
+Today: Ahora va a estar mirando un tema de procesos con Pablo Escobar. Y después va a estar viendo issues reportados.
+Blockers? No.
+
+97incomplete
+
+Yesterday: Trabajando en el ticket 107.
+Today: Fijarse en los logs de staging para intentar solucionar el 107.
+Blockers? No.
+
+98incomplete
+
+Yesterday: Reportando algunos bugs. Levantados en jira.
+Today: Le escribió a Belén para ver los módulos que hay que probar. Va a arrancar con eso.
+Blockers? No.
+
+99incomplete
+
+Yesterday: Habló con Bruno y se va a sumar unos días a ayudar.
+Today: Empezó con epos, se vinculó con el portal. Ahora siguiendo con vpos. Con Bruno dividieron tareas.
+Blockers? No.
+
+Yesterday: Configurando todo para el deploy a staging. Quedó commerce suite, commerce service y pmlink portal.
+Today: Revisando unos temas en selling portal, que es el otro que había que deployar. Está viendo para deployar eso también.
+Blockers? No.
+
+94incomplete
+
+Yesterday: Bloqueado por la vpn y el tema del cluster.
+Today: Sigue con algunos problemas y el ticket 107. Probar el 107 y después continuar con el siguiente ticket. También hay que probar el 108.
+Blockers? No.
+
+95incomplete
+
+Yesterday: -
+Today: Probando la versión de staging del deploy. Había un error 500 que dejó de pasar. Hay 5 bugs en staging que ya se reportaron.
+Blockers? No.
+
+96incomplete
+
+Yesterday: Trabajando con lo de SQL. Estuvo en el deploy de vuelto. Hasta las 3 AM.
+Today: Sigue con lo de SQL.
+Blockers? No.
+
+Yesterday: -
+Today: Revisando el tema de las tablas y el cluster. Vamos a tener que deployar Tpago por el update de Ruby. Revisando un ticket en el que trabajó Lau. Ticket 103. Hoy se deja todo actualizado en staging.
+Blockers? No.
+
+91incomplete
+
+Yesterday: Trabajando en el 107.
+Today: Aun no pusheado en staging el 107.
+Blockers? No.
+
+92incomplete
+
+Yesterday: Trabajando con Boca web. Se reportaron un par de bugs como know issues.
+Today: Se complicó seguir con eso con lo del cluster caído. Hoy arrancar con staging
+Blockers? No.
+
+93incomplete
+
+Yesterday: El viernes empezó a hacer la lista de picasso listing.
+Today: Trabajando en la iniciativa de SQL.
+Blockers? No.
+
+Yesterday: Siguiendo el bug de Manu.
+Today: El fix que reportó Manu es un tema del set up local. Quedaría integrar lo último de Extracciones. Ya con eso estaríamos para deployar a staging.
+Blockers? No.
+
+88incomplete
+
+Yesterday: Trabajando en el ticket 107.
+Today: Apunto de terminar el ticket 107. Cerrandolo.
+Blockers? No.
+
+89incomplete
+
+Yesterday: Trabajando con infonet y boca web.
+Today: Ese bug queda de lado por ser un tema del set up local. Hay bugs pequeños de infonet.
+Blockers? No.
+
+90incomplete
+
+Yesterday: Trabajando en el ticket 59.
+Today: Terminando el ticket 59.
+Blockers? No.
+
+Yesterday: Estuvo testeando el 103.
+Today: Pudo terminar el ticket 103. Ya está mergeado.
+Blockers? No.
+
+Yesterday: Estuvo revisando un caso en boca web.
+Today: Logró identificar exactamente donde pasa el bug. Es algo que se rompe solo con el update de ruby.
+Blockers? No.
+
+85incomplete
+
+Yesterday: Trabajando en el 108, ya está terminado. Había problemas con los credenciales.
+Today: En staging no debería pasar, solo en local. Se tiene que probar el 108 en staging. Va a continuar con el 107.
+Blockers? No.
+
+86incomplete
+
+Yesterday: Revisando bugs con Juan y Lau.
+Today: Hoy va a estar con el fix de infonet, darle repasada a modo de regresión a todo infonet.
+Blockers? No.
+
+87incomplete
+
+Yesterday: Sigue con el ticket 59.
+Today: Luchando con los endpoints, ahora está debuggeando, da respuesta vacía.
+Blockers? No.
+
+Yesterday: Sigue con el ticket 103
+Today: Sigue con el ticket 103, tratando de reproducir local el bug, finalmente pudo, sigue con problemas.
+Blockers? No.
+
+Yesterday: Terminando de ver los issues que levantó Manu de la integración de CNB. Ya quedo eso.
+Today: Avanzando con el tema de las gemas de picasso. Atento a tickets.
+Blockers? No.
+
+82incomplete
+
+Yesterday: Ticket 108, teniendo algunas dudas sobre ese issue.
+Today: Duda con el tema angus, va a preguntar la duda.
+Blockers? No.
+
+83incomplete
+
+Yesterday: Revisando lo que fixeo Juan. Lau también pasó su posible fix. Reviso lo de Tonga también y esta solucionado
+Today: Infonet no se solucionó
+Blockers? No.
+
+84incomplete
+
+Yesterday: Arreglo un par de cosas de la bbdd
+Today: Siguió trabajando en la tarea 59, que se volvió a reproducir.
+Blockers? No.
+
+Yesterday: Siguió trabajando con el ticket 105. Con sus usuarios no podia entrar pero con el de user de manu pudo reproducir el error.
+Today: Hoy no pudo reproducirlo. Va a seguir con ese ticket.
+Blockers? No.
+
+Yesterday: Fixeando los errores que reportó manu del rebase.
+Today: Bloqueado con eso por el tema de la VPN. Va a estar revisando unas cosas de datos adicionales. Prioridad lo que reportó Manu.
+Blockers? VPN.
+
+79incomplete
+
+Yesterday: Trabajando en la 108. Bastante avanzado.
+Today: Con el tema de la VPN está trabado. Cuando vuelva sigue debuggeando.
+Blockers? La VPN.
+
+80incomplete
+
+Yesterday: Problema con la actualización de commerce-suite. Volvió a repasar los bugs que había reportado, así que esta ok el reporte.
+Today: Trabado por el tema de la VPN. Va a testear extracciones.
+Blockers? La VPN.
+
+81incomplete
+
+Yesterday: Revisando los bugs que reportó Manu. Ayudando con las configuraciones de los análisis.
+Today: Hay algunos problemas en la BD. Estuvo trabajando en el ticket 59.
+Blockers? La VPN.
+
+Yesterday: Terminado el ticket 75. Arrancó con el 103.
+Today: Trabada por el tema VPN. Va a arreglar los comentarios de la PR del ticket 75.
+Blockers? No.
+
+Yesterday: Arreglando tests y ajustando gemas. Ya quedó integrado con la rama de QA
+Today: Le paso el estado de todo al equipo de Bancard. Hablando con Tonga por el rebase. Va a tomar la gema picasso.
+Blockers? No.
+
+76incomplete
+
+Yesterday: Ticket sobre datos. El ticket 109
+Today: Trabajando en el ticket 107 y 108, debuggeando y viendo si es problemas de datos.
+Blockers? No.
+
+77incomplete
+
+Yesterday: Bloqueado con el tema del rebase.
+Today: Quedó, ya actualizo y se arrancó con la regresión. Va a meterla lo más rápido y mejor que se pueda.
+Blockers? No.
+
+78incomplete
+
+Yesterday: Trabajando en el rebase de CNB.
+Today: Se juntó con Juan y ya dejaron la rama de QA lista con lo de CNB.
+Blockers? No.
+
+Yesterday: Trabajando en el ticket 75.
+Today: Modificando el archivo para fixear esa tarea. Modificar los test para tener caso de uso.
+Blockers? No.
+
+Yesterday: -
+Today: Arreglando unos temitas y fixeando los últimos 7 tests. Se va a pushear eso a la rama
+Blockers? No.
+
+73incomplete
+
+Yesterday: Trabajando en el ticket 106. El viernes cambió al 109.
+Today: Probablemente para hoy terminar el ticket 109 y volver al 106.
+Blockers? No.
+
+74incomplete
+
+Yesterday: -
+Today: Bloqueado, no se puede levantar los cambios. Esperando el rebase de la parte de Gaston.
+Blockers? No.
+
+75incomplete
+
+Yesterday: Trabajando con el rebase de commerce service. Se integró con CNB.
+Today: Ahora trabajando en el ruby upgrade QA, la rama de QA para Manu. Esta con 6 tests para terminar.
+Blockers? No.
+
+Yesterday: La semana pasada se trabo con el ticket 81 y pasó a otro, al 75.
+Today: El ticket 75 también se trabaja con infonet cobranzas.
+Blockers? No.
+
+Si no encuentra el error, toma otro ticket.
+
+Yesterday: Revisando la gema de picasso y se pauso.
+Today: Se hizo el rebase de CNB. Volviendo a ver el tema de las gemas.
+Blockers? No.
+
+70incomplete
+
+Yesterday: Trabajando el ticket 106.
+Today: Ya casi se termina el 106 y va a seguir el 108 y 109.
+Blockers? No.
+
+71incomplete
+
+Yesterday: Viendo el tema de lockers. Hablando con Bruno y Jhona por extracciones.
+Today: Hoy tuvieron una meeting con Bruno y Jhona. Cuando este el rebase va a arrancar sin demora.
+Blockers? Ver el tema de número de celulares para hacer el test de CNB correctamente.
+
+72incomplete
+
+Yesterday: Rebase de commerce-service, muchos cambios no hay. No hay problema con los tests.
+Today: Levanto commerce-service y suite, cuando quiere loggearse no ingresa. Está investigando ese error.
+Blockers? No.
+
+Yesterday: Ticket 81. Trato todo de vuelta con el entorno local.
+Today: No estaba funcionando el login, siguiendo probando.
+Blockers? No.
+
+Si no encuentra el error, toma otro ticket.
+
+Yesterday: Estuvo más enfocado en otra iniciativa.
+Today: Hoy va a retomar el tema de la gema picasso. Va a preguntar a bancard las novedades del deploy.
+Blockers? No.
+
+67incomplete
+
+Yesterday: Ayer terminó el ticket 104. Ya quedo listo, testeado por Manu.
+Today: Trabajando en el ticket 106.
+Blockers? No.
+
+68incomplete
+
+Yesterday: -
+Today:
+Blockers? No.
+
+69incomplete
+
+Yesterday: Trabajando con una tareita de Vuelto. Ya quedo mergeado.
+Today: Trabajando en el ticket 107.
+Blockers? No.
+
+Yesterday: Trabajando en el ticket 81.
+Today: Siguió con el 81, aún no encontró donde rompe. Va a seguir con ese y sino va a pedir ayuda.
+Blockers? No.
+
+Yesterday:
+Today: Arreglando la gema de picasso. Armando las ramas de provide para deployar cuando tengamos el ok.
+Blockers? No.
+
+64incompleteHoy va a estar más con Datos adicionales
+
+Yesterday: El ticket del jueves paso a Known issues.
+Today: Arrancó el PR 104. Bug en la pantalla de login
+Blockers? No.
+
+65incompleteTicket 106, nuevo de alta prioridad.
+
+Yesterday: -
+Today: Ticket 72 y 54, re testeando esos dos. El 54 quedo solucionado pero se destrabo otro error.
+Blockers? No.
+
+66incomplete
+
+Yesterday: Intentar reproducir el error del ticket 73.
+Today: Podría tomar el ticket 105.
+Blockers? No.
+
+Yesterday: Sigue trabajando con el ticket 81.
+Today: Sigue con el 81 y demas tickets de baja y media prioridad.
+Blockers? No.
+
+Yesterday: Armando todo para hacer el deploy a staging.
+Today: Siguiendo algunos issues de la regresión. Hoy hablar con Luis en la meeting de la tarde y deployar.
+Blockers? No.
+
+61incomplete
+
+Yesterday: Cerrado el ticket 77. Esta mergeada.
+Today: Trabajando en el ticket 88. Export de CSV.
+Blockers? No.
+
+62incomplete
+
+Yesterday: -
+Today: Terminando la regresión. Solo encontro un problema de comunicación con los servicios. Juan lo va a revisar
+Blockers? No.
+
+63incomplete
+
+Yesterday: Actualizando la branch para la tarea 54. Se dejó la PR abierta.
+Today: Tomó el ticket 84, no pudo reproducirlo.
+Blockers? No.
+
+Yesterday: Trabajando con el ticket PR 81. Se junto con Tonga para ver los logs.
+Today: No está encontrando en los logs el error. Ticket 81.
+Blockers? No.
+
+Yesterday: -
+Today: Poniendo al día. toda la mañana con Nacho, compartir sesiones. Faltan aplicar los cambios al portal de ventas QR.
+Blockers? No.
+
+58incomplete
+
+Yesterday: Una vez que se levantó lo de la VPN, siguió avanzando.
+Today: Después de la daily se junta con Jhona.
+Blockers? No.
+
+59incomplete
+
+Yesterday: Issue relacionados con la épica 91. El 99 esta fixeado el resto no.
+Today: Revisando lo que mandó Tonga. Y va a revisar lo de las sesiones.
+Blockers? No.
+
+60incomplete
+
+Yesterday: Pudo levantar commerce suite después de lo de la VPN. Siguió trabajando en el ticket 54.
+Today: Hace 2 semanas, alguien hizo un commit y básicamente estamos usando los mismo IDs para este formulario. Hoy va a estar dejando listo el 54.
+Blockers? No.
+
+Yesterday: Siguió trabajando en el ticket 81.
+Today: Se encontró otro error más y se van a intentar resolver.
+Blockers? No.
+
+Yesterday: -
+Today: -
+Blockers? -
+
+55incomplete
+
+Yesterday: -
+Today: Trabajando en el ticket PR-77. Leyendo documentación. Juntarse con Jhona
+Blockers? Si, la VPN
+
+56incomplete
+
+Yesterday: El viernes estuvo hablando con Marcelo y Carlos por SPI. Le van ayudar a testear.
+Today: Esperando solución de la VPN.
+Blockers? Si, la VPN
+
+57incomplete
+
+Yesterday: Trabajando en commerce service, rebase en ambas branchs.
+Today: Hoy haciendo comparaciones de que cambios hay.
+Blockers? Si, la VPN
+
+Yesterday: Trabajando con el rebase de commerce suite. Quedó en las dos branchs
+Today: Ticket 81, trabajando en ese ticket. Esperando lo de la VPN para probar el fix de ese ticket.
+Blockers? Si, la VPN
+
+Yesterday: -
+Today: -
+Blockers? -
+
+52incomplete
+
+Yesterday: Trabajando en PR 77.
+Today: Sigue con el PR 77, estuvo hablando con Nacho. Es un ticket complejo, es un problema importante. Sigue trabajando con ese.
+Blockers? No.
+
+53incomplete
+
+Yesterday: Mas enfocado en la parte de apertura de cajas, se arregló con el fix de Emi.
+Today: Probando infonet y se reportaron 2 tickets. Vamos a ver como probar, onboarding de las pruebas de spi.
+Blockers? No.
+
+54incomplete
+
+Yesterday: Arrancando con la tarea de SPI. Se pudo levantar el servicio.
+Today: Luchando con los test, que están fallando y está tratando de solucionar.
+Blockers? No.
+
+Yesterday: -
+Today: -
+Blockers? -
+
+Yesterday:
+Today:
+Blockers?
+
+49incomplete
+
+Yesterday: Terminó con el PR 46. Está en revision. Empezó a trabajar en el PR 99.
+Today: Sigue en el PR 99. Hay incosistencia de datos. Se reportó a Bancard y empezó a trabajar en el 77.
+Blockers? No.
+
+50incompleteMover el ticket 99 a la epica 91 (bugs de db)
+
+Yesterday: Trabajando con el ticket 82. Revisando staging.
+Today: Hoy siguió con lo de staging. Se hizo un exploratorio y no se detectaron bloqueantes. Sigue con el PR 46 y el 98.
+Blockers? No.
+
+51incomplete
+
+Yesterday: Ticket 98. Se trató de solucionar con la configuracion de IP y no anduvo.
+Today: José dio una mano para ayudar y anduvo. No es bug, es un problema del entorno local.
+Blockers? No.
+
+Yesterday: Con el ticket 97. Mismo error que el 89.
+Today: Revisando con que ticket seguir. Va a seguir con tickets de prioridad media/baja.
+Blockers?
+
+Yesterday: Se termino el ultimo ticket bloqueante. Ticket 82.
+Today: Deploy commerce suite y service. Haciendo pruebas y hubo algunos errores. Mañana se va a deployar de nuevo.
+Blockers? No.
+
+47incomplete
+
+Yesterday: -
+Today: Ticket 46. Falando algunos tests, ya dentro de 10 minutos se pushea la PR.
+Blockers?
+
+Yesterday: Estuvo con regresion. Se reportó el ticket 99.
+Today: Se repaso el portal en staging. Atento a probar el ticket 82.
+Blockers? No.
+
+48incomplete
+
+Yesterday: Ticket 98.
+Today: Sigue con el 98. Hablo con Victor para sacar el IP. Sigue fallando y está intentando reproducir el issue.
+Blockers? No.
+
+Yesterday: Trabajando en el ticket 68. Volvió.
+Today: Trabada con ese issue. Pedir ayuda para ese ticket, si se resuelve ese, se resuelve otro.
+Blockers? No.
+
+Yesterday: -
+Today: Terminando de probar el ticket 82. Arrancar a hacer los cambios de las gemas actualizadas. Dejarlas mas prolijas.
+Blockers? No.
+
+45incomplete
+
+Yesterday: Trabajando en el ticket 46.
+Today: Después de almorzar se va a solucionar.
+Blockers? No.
+
+Yesterday: Trabajando en la regresión de la DB.
+Today: Avanzando con el test, profundizando en los bugs.
+Blockers? No.
+
+46incomplete
+
+Yesterday: Ticket PR-90. Ya quedo listo y esta mergeado.
+Today: Tomó el PR-98. Va a estar trabajando en ese ticket.
+Blockers? No.
+
+Yesterday: Estuvo trabajando con el PR-59 para la descarga de facturas. Manu lo está testeando.
+Today: Va a estar tomando un ticket de los de baja y media prioridad.
+Blockers? No.
+
+Yesterday: Avanzando con el ticket 82.
+Today: Revisando las ramas que tenemos en las gemas. Picasso y Angus. Demasiado ramas duplicadas. Pinchando a Luis para solucionar el tema de la DB.
+Blockers? Problemas con la DB
+
+43incompleteVer el tema de SPI y Desembolsos con bancard
+
+Yesterday: Ticket 46.
+Today: Bloqueado con el tema de la DB.
+Blockers? DB.
+
+Yesterday: -
+Today: Casi terminada la regresión pero no se pudo. Bloqueado por el tema de la DB.
+Blockers?
+
+44incompleteVer si Manu puede dar una mano con Tpago.
+
+Yesterday: Terminando Vuelto.
+Today: Ticket PR-65. Probado en staging.
+Blockers?
+
+Yesterday: -
+Today: Trabado con el tema de la DB. Revisando el ticket 59 para ver si podía avanzar. Pero no podemos loguearnos por la DB.
+Blockers? La DB.
+
+Yesterday: Vulnerabilidades principales solucionadas. Vulnerabilidades de cookies solucionadas.
+Today: Bug 50 de baja prioridad. Ticket 82. Reunión con Nacho para revisar las gemas que se usan.
+Blockers? No.
+
+Yesterday: Empezó el ticket 82 pero se derivo a Juan.
+Today: Ticket 46. Para hoy debería quedar.
+Blockers? No.
+
+Yesterday: Viernes testeando ticket 80 y 90. Testing exploratorio.
+Today: Hoy se termina el testing. Ticket 59 paso a prioridad alta.
+Blockers?
+
+Yesterday: Viernes fixeando cosas del meu izquierdo. Se rompió el log in.
+Today: Peleando con el log in aun. Termina eso y vuelve a Infonet Cob.
+Blockers?
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Terminando otro ticket y tomo el 89, que ya esta.
+Today: Tomo el ticket 68, de prioridad media. Arranca con el 59 despues.
+Blockers?
+
+Yesterday: Ticket 78, reporte de transacciones. Ya quedo el PR, falta mergearlo. Viendo la solución de problemas de raiz.
+Today: Viendo el tema de vulnerabilidades. Siguiendo con eso.
+Blockers? No.
+
+Yesterday: Trabajando en el 46. Aun sin solucionar.
+Today: Priorizando el ticket bloqueante. PR 79, listo. Lo va a volver a probar Manu. Va a continuar con el ticket 82.
+Blockers? No.
+
+41incomplete
+
+Yesterday: Validando los tickets bloqueantes que volvieron. Ticket 37 y 35 volvieron pero no se movieron.
+Today: Hoy va a seguir probando tickets bloqueantes y comenzando la regresión.
+Blockers? No.
+
+42incomplete
+
+Yesterday: Ticket 87. No es para Ruby.
+Today: Arreglando el 86. Ver tema de vulnerabilidades para atacar.
+Blockers? No.
+
+Yesterday: Esperando por Vuelto.
+Today: Trabajando en la tarea 80. Ya está fixeada
+Blockers? No.
+
+Yesterday: Ticket 34, trabada con ese ticket.
+Today: Hoy hablo con Juan y le dió soporte. Se encontró el error. Está testeando la rama. Si sale todo bien se resuelve la subida, quedaría testear las fechas.
+Blockers? No.
+
+Yesterday: -
+Today: Hablando con Manu por unas dudas del ticket 32. Ticket 37, probando el fix y en un rato sale. Hablando con Neid y Ed por cyberseguridad
+Blockers? No.
+
+Yesterday: Trabajando en el PR 46.
+Today: Identificado el bug. Avanzando.
+Blockers? No.
+
+39incomplete
+
+Yesterday: Validando algunos bugs. Revisando el 32.
+Today: Se soluciono la duda del 32. Haciendo regresión. Se encontraron algunos bugs nuevos bloqueantes.
+Blockers? No.
+
+40incomplete
+
+Yesterday:
+Today: Sigue con el ticket 74 (media complejidad). Sigue con eso. Tambien dando soporte a Lau.
+Blockers? No.
+
+Yesterday:
+Today: Ticket 35. botón de auditoria. No esta actualizada la DB
+Blockers? La DB del ticket 35.
+
+Yesterday: -
+Today: Trabajando en el ticket 34, blocker que Jose explico. No se pueden replicar los pasos del ticket.
+Blockers? No.
+
+Yesterday: Charlando con los chicos de cyberseguridad. Armaron set up alternativo. Aún no pudieron correr los tests.
+Today: Avanzando con el ticket 24. El 29 hoy saltó un detalle mas (esta del lado de Bancard). Mientras con el ticket 32.
+Blockers? Cyberseguridad. Destrabar el tema con el equipo.
+
+36completePasarle credenciales al equipo de cyberseguridad.
+
+Yesterday: El PR 27 se pudo reproducir en staging. No tiene que ver el fix con el upgrade. Mismo con el ticket 36.
+Today: Esta trabajando en el ticket 31. Trabajando en un fix sin ticket. El fix que reportó Manu.
+Blockers? No.
+
+37completeHoy se termina el 36.
+
+Yesterday: Creando los bugs medianos y bajos. Intentando levantar auth. No se pudo pero lo mas prioritario son los bugs.
+Today: Validaciones de los bugs fixeados.
+Blockers? No.
+
+38incomplete
+
+Yesterday: Terminando el PR 39 y 40. Quedaron en staging.
+Today: Ticket 41. Quedo fixeado en review. Ticket PR 74 va a estar tomando.
+Blockers? No.
+
+Yesterday: Ticket 35.
+Today: Error en commerce. Reproducir el bug y encontrar el error.
+Blockers? No.
+
+Yesterday: Set up del proyecto.
+Today: Aun algunos errores para levantar commerce suite. Seguir con el ticket 34.
+Blockers? No.
+
+Yesterday: Tomando ajustes que levantó Manu del ticket 25. Quedo mergeado
+Today: Revisando PR 28 y no se pudo reproducir. (Ventas QR es otro proyecto). Ticket 29, cambio hecho y probando. Dando soporte a Emi y a Jose.
+Blockers? No.
+
+32incompletePasarle credenciales al equipo de cyberseguridad33incompleteCrear usuarios del equipo de cyberseguridad.
+
+Yesterday: Terminó con el ticket 36.
+Today: Trabajando en el 27. Viendo tema de auth para que se pueda testear. Está dando un null pero esta revisando. Después de eso volver a la 27.
+Blockers? No.
+
+34completeHoy se termina el 36.
+
+Yesterday: Ticket 25 que volvió para atrás. Ya se fixio. Hablando el tema de probar auth.
+Today: Se probó el 25 y está listo. Aprox en 2hs (14.30hs estaria auth)
+Blockers? No.
+
+35incomplete
+
+Yesterday: --
+Today: Va a comenzar con el ticket 40. Levantando el portal para fixear.
+Blockers? No.
+
+Yesterday:
+Today:
+Blockers?
+
+29incompleteCrear usuarios del equipo de cyberseguridad.
+
+Yesterday:
+Today: Ticket 36. Sin bloqueos, está por terminar.
+Blockers? No.
+
+30incompleteHoy se termina el 36.
+
+Yesterday: Ticket 26 y 25. 25 volvió para atrás.
+Today: PR 14. Testear ese.
+Blockers? No.
+
+31incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Trabajando en el PR-24, habia otro problema con la apertura de sesion. Ya quedo arreglado. Esta en revision.
+Today: Hoy trabajando en PR-28.
+Blockers? No.
+
+26incompleteCrear usuarios del equipo de cyberseguridad.
+
+Yesterday: Ticket 26 terminado.
+Today: Continuando con el ticket 36. Investigando C4C.
+Blockers? No.
+
+27incomplete
+
+Yesterday: Arrancó el testeo de infonet y se reportaron cosas
+Today: Continuando con los bugs que están fixeados.
+Blockers? No.
+
+28incomplete
+
+Yesterday: --
+Today: Ticket PR-39 y PR -40 (Infonet)
+Blockers? No.
+
+Yesterday: Viendo el bug 24. Probando solucion.
+Today: Set up de la nueva Mac. Hoy la idea es cerrar el ticket 24 y volver con el 28.
+Blockers? No.
+
+23incompleteCrear usuarios del equipo de cyberseguridad.
+
+Yesterday: Set up de commerce service y commerce suite. Problemas con la VPN.
+Today: Terminar y tener todo pronto para debuggear.
+Blockers? No.
+
+24incomplete
+
+Yesterday: No hubo mucho avance.
+Today: Ver si podemos fixear el crash y manu puede seguir.
+Blockers? Sigue habiendo un crash en infonet cobranzas.
+
+25incomplete
+
+Yesterday: Revisando error que reportó Emi. Quedó solucionado. Subiendo últimos cambios de commerce y suite.
+Today: Crear usuario a la gente de QA/cyberseguridad. Avanzar PR-28.
+Blockers? No.
+
+20incomplete
+
+Yesterday: Avanzando con auth y se terminó ayer.
+Today: Problemas con el provide y ya se arregló. No hay más trabajo que hacer en auth. Va a empezar con los tickets de fix.
+Blockers? No.
+
+21incomplete
+
+Yesterday: No hubo mucho avance.
+Today: Juan paso codigo nuevo y va a estar testeando eso. Arrancar con infonet cobranza.
+Blockers? Sigue habiendo un crash en infonet cobranzas.
+
+22incomplete
+
+Yesterday: Nada para esto.
+Today: Avanzando con los fixes. Terminar el tema de suite.
+Blockers? No.
+
+17incomplete
+
+Yesterday: Terminado el desarrollo de auth.
+Today: Hacer funciona la github action. Seguro hoy este con eso.
+Blockers? No.
+
+18completeTerminar el desarrollo hoy.
+
+Yesterday: Terminó, el testeo de commerce-suite. Se arrancó con autorizaciones vpos.
+Today: Hoy estuvo revisando y no hay issues.
+Blockers?
+
+19completeVer el tema de las vulnerabilidades con Pablo. Se va a sumar alguien o como lo manejamos.
+
+Yesterday: Terminando commerce-service.
+Today: Quedan 4 tests de commerce-service. Dar una mano a Emi. Arrancar a fixear.
+Blockers? No.
+
+14incomplete
+
+Yesterday: Auth a 95%
+Today: Ver tema docker file y actualizar MySQL.
+Blockers? No.
+
+15incompleteTerminar el desarrollo hoy.
+
+Yesterday: Testeando Commerce-service.
+Today: Seguir con el tema vulnerabilidades y testeando commerce-service.
+Blockers? No.
+
+16incompleteVer el tema de las vulnerabilidades con Pablo. Se va a sumar alguien o como lo manejamos.
+
+Yesterday: Solucionando conflictos pendientes en commerce-service.
+Today: Solo 100 tests fallando, hoy va a seguir con eso y entre hoy y mañana debería quedar
+Blockers? No.
+
+11incomplete
+
+Yesterday: No hay tests fallando. Hay algunas preguntas. Esta funcional.
+Today: Viendo el procedimiento para subir todo. Esta funcional en local.
+Blockers? No.
+
+12incomplete
+
+Yesterday: Arrancó a testear commerce-service. Los bugs que aparecieron están reportados en el excel y en jira.
+Today: La idea es terminar el testeo completo hoy. Tema vulnerabilidades que comento Pablo.
+Blockers? No.
+
+13incomplete
+
+Yesterday: Solucionado problema de commerce-suite
+Today: Actualizar commerce-service con los cambios de desembolsos. Mañana tendremos commerce-service.
+Blockers? No.
+
+8incomplete
+
+Yesterday: 20 test fallando solamente.
+Today: Va a pedir una reunión con decisiones de negocios. Intentamos tener hoy sino mañana.
+Blockers? No.
+
+9incomplete
+
+Yesterday: Se intento arrancar con commerce-service y suite.
+Today: Ya se actualizo el entorno y ahora la idea es arrancar con commerce-service incluido.
+Blockers? No.
+
+10incomplete
+
+Yesterday: Terminada la primer versión de commerce-service
+Today: Actualizar el resto de iniciativas de commerce-service.
+Blockers? No.
+
+5incomplete
+
+Yesterday: Avanzando on auth
+Today: Reunirse para liquidar dudas de logica de negocio Auth. Posibilidad de dejarlo a un 90% hoy.
+Blockers? No
+
+6incomplete
+
+Yesterday: C4C testeando. Repasando bugs bloqueantes. Tener en cuenta que uno no se pudo reproducir de vuelta
+Today: Hoy arrancando con commerce-service.
+Blockers? No.
+
+7incomplete
+
+Yesterday: Bajo commerce-service local y actualizar a develop
+Today:Solucionando conflictos y actualizando commerce-service que está 2 iniciativas atrasado
+Blockers? No.
+
+2incomplete
+
+Yesterday: Auth. Desbloqueado sidekik.
+Today: Volvió al bug que tenía
+Blockers? Si, bug de jruby en r spec
+
+3completeTratar de solucionar el bug con Pablo.
+
+Yesterday: Commerce-suite terminado el QA
+Today: Seguir con el CRM, C4C. Exploratorio de C4C. Crear tickets bloqueantes en Jira y dejar registro.
+Blockers?
+
+4incomplete

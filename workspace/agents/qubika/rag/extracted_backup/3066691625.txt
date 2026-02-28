@@ -1,0 +1,41 @@
+TITLE: 2024-05-09
+DOMAIN: General
+PRIORITY: Media
+ID: 3066691625
+SOURCE: 3066691625__2024-05-09.json
+
+---
+
+Fecha
+
+Participantes
+List meeting participants using their @ mention names
+
+#Paola
+
+#Jorge
+
+#Maria Oliva
+
+Objetivos
+List goals for this meeting (e.g., Set design priorities for FY19)
+
+Items de discusión
+Item
+
+Notes
+
+Add notes for each discussion topic
+
+Modelos que se van a crear y nombre de algunos nuevos
+
+En endpoint de pci_encripted
+Crear flow
+→ Single buy
+→
+
+Action items
+Add action items to close the loop on open questions or discussion topics:
+10incompleteDecisiones
+Type /decision to record the decisions you make in this meeting:
+14e35cbb-cd7a-48e0-ba9c-0d9e516ae7018f0a8cfc-35eb-4341-b3ce-9df15bbd28f9DECIDED

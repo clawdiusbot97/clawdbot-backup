@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0",
+  "profile_fields": {
+    "preferred_subgenres": ["string"],
+    "preferred_groove_types": ["rolling", "hypnotic", "driving", "broken", "syncopated"],
+    "preferred_low_end_profile": ["sub heavy", "mid bass", "plucky", "rolling bass"],
+    "dancefloor_bias": 1.0,
+    "experimentation_tolerance": "safe|medium|high"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "expected_agents": {
+    "main": {
+      "primary": "openrouter/moonshotai/kimi-k2.5",
+      "fallbacks": ["openrouter/deepseek/deepseek-v3.2", "openrouter/minimax/minimax-m2.1"]
+    },
+    "orchestrator-kimi": {
+      "primary": "openrouter/moonshotai/kimi-k2.5",
+      "fallbacks": ["openrouter/deepseek/deepseek-v3.2", "openrouter/minimax/minimax-m2.1"]
+    },
+    "researcher": {
+      "primary": "openrouter/minimax/minimax-m2.1",
+      "fallbacks": ["openrouter/deepseek/deepseek-v3.2"]
+    },
+    "writer": {
+      "primary": "openrouter/minimax/minimax-m2.1",
+      "fallbacks": ["openrouter/deepseek/deepseek-v3.2"]
+    },
+    "builder": {
+      "primary": "openrouter/deepseek/deepseek-v3.2",
+      "fallbacks": ["openai-codex/gpt-5.3-codex"]
+    },
+    "chief": {
+      "primary": "openrouter/deepseek/deepseek-v3.2",
+      "fallbacks": ["openrouter/minimax/minimax-m2.1"]
+    },
+    "ops": {
+      "primary": "openrouter/deepseek/deepseek-v3.2",
+      "fallbacks": ["openrouter/minimax/minimax-m2.1"]
+    },
+    "brokia": {
+      "primary": "openrouter/deepseek/deepseek-v3.2",
+      "fallbacks": ["openrouter/minimax/minimax-m2.1"]
+    },
+    "qubika": {
+      "primary": "openrouter/deepseek/deepseek-v3.2",
+      "fallbacks": ["openrouter/minimax/minimax-m2.1"]
+    }
+  },
+  "expected_defaults": {
+    "model": {
+      "primary": "openrouter/moonshotai/kimi-k2.5",
+      "fallbacks": ["openrouter/minimax/minimax-m2.1", "openrouter/deepseek/deepseek-v3.2"]
+    },
+    "subagents": {
+      "model": {
+        "primary": "openrouter/minimax/minimax-m2.1",
+        "fallbacks": ["openrouter/deepseek/deepseek-v3.2"]
+      }
+    }
+  },
+  "expected_models_files": {}
+}

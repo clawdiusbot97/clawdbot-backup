@@ -1,0 +1,36 @@
+TITLE: Estado de situación Facturación Electrónica - 20/12
+DOMAIN: General
+PRIORITY: Media
+ID: 3593437198
+SOURCE: 3593437198__Estado_de_situacio╠ün_Facturacio╠ün_Electro╠ünica_-_20_12.json
+
+---
+
+Tipo
+
+Ticket #
+
+Alto / Crítico - No permite seguir con el flujo
+
+PFE-372 - [OnboardingFE] Verificar los puntos con relación a la pantalla "Configurá tus datos de acceso"
+
+Medio
+
+PFE-385 - [OnboardingFE] Verificar la funcionalidad de "Volver a Enviar" en la pantalla de "Configurá tus datos de Acceso"
+PFE-388 - [OnboardingFE] Verificar el error que se genera luego de ingresar un código de verificación incorrecto y luego se hace click en "Volver a Enviar"
+PFE-399 - [Frontend - OnboardingFE] - Restricción en la selección de cantidades para productos/servicios no POS
+PFE-400 - [OnboardingFE] Favor verificar la validación de correo del apartado Continua aquí.
+
+Bajo / Cosmético -
+
+PFE-390 - https://bancard.atlassian.net/browse/PFE-390
+PFE-391 - [OnboardingFE] Verificar en la pantalla de "Registremos Tu Negocio" porque no se está pudiendo visualizar los íconos
+PFE-392 - [OnboardingFE] Favor verificar el mensaje de error que se genera cuando se da en "Comenzar Configuración" en la pantalla "Registremos Tu Negocio"
+PFE-393 - [OnboardingFE] Verificar los siguientes puntos relacionados a la pantalla de Biometria Mobile
+PFE-396 - [Frontend- Onboarding Clientes Nuevos] - Discrepancias en texto y tamaño de imágenes entre diseño implementado y Figma
+PFE-397 - [Frontend - OnboardingFE] - Inconsistencias entre diseño actual y prototipo Figma en la sección "¿Conocés estos productos?"
+
+Mejora → No cataloga como Bug
+
+PFE-389 - [OnboardingFE] En la pantalla de "Configurá tus datos de Acceso" si bien los campos de "Teléfono" solo permite el input de números, está permitiendo hacer copy/paste de letras
+PFE-394 - [OnboardingFE] Verificar de poder incluir la funcionalidad de actualizar en la pantalla web de la Biometría donde se encuentra el QR, posterior a haber completado desde el celular

@@ -1,0 +1,27 @@
+{
+  "accounts": [
+    { "username": "iamfakhrealam", "category": "tech", "display_name": "Fakhre Alam" },
+    { "username": "digitalix", "category": "tech", "display_name": "Digitalix" },
+    { "username": "quasarmarkets", "category": "finance", "display_name": "Quasar Markets" },
+    { "username": "mikekhristo", "category": "marketing", "display_name": "Mike Khristo" },
+    { "username": "theonenicka", "category": "marketing", "display_name": "Nick A." },
+    { "username": "siboptionpro", "category": "finance", "display_name": "Siboption Pro" },
+    { "username": "johnmventura", "category": "marketing", "display_name": "John Ventura" },
+    { "username": "shubh_dholakiya", "category": "marketing", "display_name": "Shubh Dholakiya" },
+    { "username": "hashgraphonline", "category": "tech", "display_name": "Hashgraph Online" },
+    { "username": "arceyul", "category": "tech", "display_name": "Arce Yul" },
+    { "username": "marco_exito", "category": "marketing", "display_name": "Marco Exito" },
+    { "username": "openclaw", "category": "tech", "display_name": "OpenClaw" },
+    { "username": "AlexFinn", "category": "marketing", "display_name": "Alex Finn" }
+  ],
+  "keywords": {
+    "tech": ["ai", "software", "engineering", "architecture", "system design", "devops", "code", "tech", "openclaw", "hedera", "grpc", "kafka", "rabbitmq", "pulsar", "database", "microservices", "cloud", "kubernetes", "docker"],
+    "finance": ["investing", "stocks", "crypto", "trading", "finance", "market", "economy", "portfolio", "risk", "asset", "wealth", "money", "investment", "stock", "bitcoin", "ethereum"],
+    "marketing": ["marketing", "growth", "brand", "social media", "content", "seo", "conversion", "audience", "engagement", "strategy", "campaign", "analytics", "digital", "advertising", "sales", "lead", "customer"]
+  },
+  "max_tweets_per_account": 5,
+  "min_keyword_score": 1,
+  "nitter_base_url": "https://nitter.net",
+  "include_retweets": false,
+  "only_with_keywords": false
+}

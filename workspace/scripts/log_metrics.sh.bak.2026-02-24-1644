@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+#
+# log_metrics.sh — LLM Metrics JSONL Logger
+#
+# Usage: log_metrics.sh <request_id> <session_id> <agent_id> <provider> <model> <tier> <input_tokens> <output_tokens> <latency_ms> <cost_est_usd> <cache_hit> <retry_count> <status> [error_code]
+#
+
+set -euo pipefail
+
+METRICS_FILE="/home/manpac/.openclaw/workspace/.openclaw/metrics.jsonl"
+mkdir -p "$(dirname "$METRICS_FILE")"
+
+# Validate minimum arguments
+if [[ $# -lt 13 ]]; then
+    echo "ERROR: Insufficient arguments" >&2
+    exit 1
+fi
+
+TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+REQUEST_ID="$1"
+SESSION_ID="$2"
+AGENT_ID="$3"
+PROVIDER="$4"
+MODEL="$5"
+TIER="$6"
+INPUT_TOKENS="$7"
+OUTPUT_TOKENS="$8"
+LATENCY_MS="$9"
+COST_EST_USD="${10}"
+CACHE_HIT="${11}"
+RETRY_COUNT="${12}"
+STATUS="${13}"
+ERROR_CODE="${14:-null}"
+
+# Build JSON line using printf for safety
+if [[ "$ERROR_CODE" == "null" ]]; then
+    JSON_LINE=$(printf '{"ts":"%s","request_id":"%s","session_id":"%s","agent_id":"%s","provider":"%s","model":"%s","tier":"%s","input_tokens":%s,"output_tokens":%s,"latency_ms":%s,"cost_est_usd":%s,"cache_hit":%s,"retry_count":%s,"status":"%s","error_code":null}' \
+        "$TS" "$REQUEST_ID" "$SESSION_ID" "$AGENT_ID" "$PROVIDER" "$MODEL" "$TIER" "$INPUT_TOKENS" "$OUTPUT_TOKENS" "$LATENCY_MS" "$COST_EST_USD" "$CACHE_HIT" "$RETRY_COUNT" "$STATUS")
+else
+    JSON_LINE=$(printf '{"ts":"%s","request_id":"%s","session_id":"%s","agent_id":"%s","provider":"%s","model":"%s","tier":"%s","input_tokens":%s,"output_tokens":%s,"latency_ms":%s,"cost_est_usd":%s,"cache_hit":%s,"retry_count":%s,"status":"%s","error_code":"%s"}' \
+        "$TS" "$REQUEST_ID" "$SESSION_ID" "$AGENT_ID" "$PROVIDER" "$MODEL" "$TIER" "$INPUT_TOKENS" "$OUTPUT_TOKENS" "$LATENCY_MS" "$COST_EST_USD" "$CACHE_HIT" "$RETRY_COUNT" "$STATUS" "$ERROR_CODE")
+fi
+
+# Validate JSON before writing
+if echo "$JSON_LINE" | jq . > /dev/null 2>&1; then
+    echo "$JSON_LINE" >> "$METRICS_FILE"
+    echo "METRICS_LOGGED:$REQUEST_ID:$MODEL:$STATUS" >&2
+else
+    echo "ERROR: Invalid JSON generated" >&2
+    exit 1
+fi

@@ -1,0 +1,124 @@
+# 📊 Curaduría de Emails - Resumen Ejecutivo
+Fecha: 2026-02-18  
+De: Clawdius (Asistente AI)  
+Para: jmpacheco1997@gmail.com  
+
+## 📋 Resumen de Emails Procesados
+
+### 1. 📈 QUBIKA RADAR - 2026-02-17
+**Prioridades:**
+- VS-69 Ruby Upgrade (deadline: 2026-02-17)
+- Deploy notification-engine staging
+- AWS DB config + redeploy code-health-dashboard
+
+**Blockers:**
+- Angus gem review pendiente
+- Deploy no completado
+- AWS DB sin finalizar
+
+**Acciones inmediatas:**
+- Seguimiento con equipo para completar blockers
+- Revisar estado de VS-69 Ruby Upgrade
+
+---
+
+### 2. 📂 Confluence Ingest (Bancard)
+**Procesado:** 705 JSONs de Confluence exportados
+**Hallazgos clave:**
+- Secretos visibles en runbooks de staging (necesita remediación inmediata)
+- Documentación técnica extensa sobre deploy, Docker, auth, servicios
+- Índice técnico creado por dominio (deploy, docker, auth, services, observability, onboarding, repos, infrastructure)
+
+**Artefactos generados:**
+- `CONFLUENCE_INDEX.md` - Índice técnico
+- `CONFLUENCE_ACTIONABLE_SUMMARY.md` - Top 15 hallazgos accionables
+- `QUBIKA_CONTEXT_PACK_V2.md` - Pack de contexto consolidado
+
+**Próximos pasos:**
+- Revisar y remediar secretos expuestos
+- Integrar contexto en radar semanal
+- Usar para consultas RAG (ya indexado con sanitización)
+
+---
+
+### 3. 💰 Guía de Finanzas Personales
+**Enviado a:** esosacal@gmail.com  
+**Contenido:** Guía completa para llevar cuentas mensuales (2026)
+**Herramientas destacadas:**
+- YNAB, Mint, Personal Capital
+- Métodos de presupuesto: 50/30/20, zero-based, envelope
+- Automatización con reglas bancarias
+- Análisis de gastos y optimización
+
+**Acción sugerida:** Implementar sistema de seguimiento mensual
+
+---
+
+### 4. 🔐 Seguridad RAG (Confluence/Bancard)
+**Auditoría completada:**
+- **Embeddings:** Local (`paraphrase-multilingual-MiniLM-L12-v2`)
+- **Generación:** Cloud (OpenRouter/DeepSeek-v3.2)
+- **Riesgo identificado:** Documentación interna enviada cruda a servicio externo
+
+**Medidas implementadas:**
+- Límites estrictos: TOP_K=3, MAX_RAG_CHARS_TOTAL=1200, MAX_CHUNK_CHARS=400
+- Sanitización automática: tokens, IPs privadas, hosts internos, credenciales
+- Anti prompt-injection: detección y exclusión de chunks peligrosos
+- Perfil EXTERNAL activado (cloud detection via OPENROUTER_API_KEY)
+
+**Próximos pasos seguridad:**
+- Re-indexar con sanitización activada
+- Monitorear logs de redacción (`logs/redaction_hits.log`)
+- Validar que no haya fugas en consultas reales
+
+---
+
+### 5. 🔧 Otros Emails Relevantes
+**AWS RDS connection playbook (staging dashboard)**
+- Posiblemente relacionado con configuración de base de datos
+- Revisar si requiere acción
+
+**Atlassian / Jira**
+- Token de API creado
+- Invitación a proyecto Brokia en Jira
+- Verificar acceso y configuración
+
+---
+
+## 🎯 Acciones Prioritarias
+
+1. **Radar QUBIKA:** Seguimiento de blockers (Angus gem, deploy, AWS DB)
+2. **Seguridad Confluence:** Remediar secretos en staging runbooks
+3. **RAG Sanitizado:** Re-indexar con sanitización activada
+4. **Finanzas:** Implementar sistema de seguimiento mensual
+5. **Jira:** Aceptar invitación y configurar integraciones
+
+---
+
+## 📅 Próximos Pasos (Semana 2026-02-18)
+
+- [ ] Revisar estado VS-69 Ruby Upgrade
+- [ ] Completar deploy notification-engine staging
+- [ ] Configurar AWS DB + redeploy code-health-dashboard
+- [ ] Remediar secretos en runbooks de staging
+- [ ] Integrar contexto Confluence en radar semanal
+- [ ] Probar consultas RAG con límites de seguridad
+- [ ] Configurar Jira para proyecto Brokia
+- [ ] Implementar presupuesto mensual con YNAB/Mint
+
+---
+
+## 🔗 Recursos y Enlaces
+
+- **Índice Confluence:** `CONFLUENCE_INDEX.md`
+- **Hallazgos Accionables:** `CONFLUENCE_ACTIONABLE_SUMMARY.md`
+- **Context Pack:** `QUBIKA_CONTEXT_PACK_V2.md`
+- **Política Seguridad RAG:** `rag_security_policy.md`
+- **Logs Seguridad:** `logs/security_audit.log`, `logs/redaction_hits.log`
+
+---
+
+**Nota:** Todos los documentos han sido sanitizados automáticamente (tokens, IPs internas, credenciales) antes de indexación y envío a LLM externo.
+
+---
+📧 Generado automáticamente por Clawdius | 📅 2026-02-18

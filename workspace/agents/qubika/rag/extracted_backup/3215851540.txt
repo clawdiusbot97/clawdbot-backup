@@ -1,0 +1,29 @@
+TITLE: Flujo Crear Sucursal - Onboarding Clientes Existentes
+DOMAIN: General
+PRIORITY: Media
+ID: 3215851540
+SOURCE: 3215851540__Flujo_Crear_Sucursal_-_Onboarding_Clientes_Existentes.json
+
+---
+
+Este documento contiene el flujo propuesto para la función de crear una sucursal para un comercio desde el Portal de Comercios.
+Actualmente, al usuario se le solicita seleccionar los productos que quiere agregar a la futura nueva sucursal antes de comenzar el flujo. Esto nos genera una complicación al momento de armar el carrito, ya que los comercios pueden tener distintos tipos de moneda según el producto que ofrecen para esa sucursal. Por ende, si TPago está configurado en USD, y VPos en Gs, nos crearía un carrito multimoneda, que afecta negativamente a la experiencia de usuario.
+Lo que se propone, es cambiar ese flujo, para que el usuario abra la sucursal solo con un producto, y luego agregue el resto por el flujo normal. También, pensamos que si el flujo es crear una sucursal, que lo mejor sea agregar primero la información de la sucursal, y por último el producto con el que se hará la apertura, para no confundir al usuario con el flujo normal, y que entienda lo que está haciendo
+Flujo Propuesto:
+Seleccionamos la opción “+ Crear Sucursal” desde el portal de comercios.
+
+Esto nos lleva a la pantalla de información para la “Configuración de Negocio”
+
+A partir de acá, el flujo continúa como está hoy en día, hasta el resumen
+
+Pantalla de “Como se llama tu negocio?”
+
+Siguiendo por “Ubica tu negocio”
+
+Ubicación en el mapa
+
+Ingresamos los datos bancarios en las pantallas de “Datos de Cuenta”
+
+Recién en este paso, una vez que el usuario ya ingresó todos los datos de la sucursal, vamos a mostrar la lista de productos, con un mensaje que sea algo como “Para abrir su sucursal, deberá asociar un producto” y que el usuario seleccione solo 1 producto para hacer la apertura inicial, de esta manera, no vamos a tener el problema de la multimoneda
+
+Una vez seleccionado el producto, avanzamos al resumen de la apertura de cuenta con los datos en la “Pantalla de Resumen”

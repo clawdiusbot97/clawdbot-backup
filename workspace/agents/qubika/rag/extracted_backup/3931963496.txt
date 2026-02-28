@@ -1,0 +1,27 @@
+TITLE: 🧩 Integrar un SDK de Kotlin en una App React Native
+DOMAIN: General
+PRIORITY: Media
+ID: 3931963496
+SOURCE: 3931963496__≡ƒº⌐_Integrar_un_SDK_de_Kotlin_en_una_App_React_Native.json
+
+---
+
+Aunque React Native es un framework basado en JavaScript, es posible integrar SDKs nativos escritos en Kotlin mediante la creación de unmódulo nativo(bridge) que conecta el código Kotlin con el de React Native.
+💡Idea principal:No usás directamente el SDK desde JavaScript. En cambio, construís un módulo nativo en Kotlin que "envuelve" el SDK y expone las funciones necesarias al código de React Native.
+✅ Checklist de integración
+🛠️ 1. Verificar que el proyecto tenga soporte nativo
+El proyecto debe tener la carpeta/android.
+
+Necesitás tener instalado Android Studio o al menos el entorno de desarrollo de Android (SDK + Gradle) configurado.
+
+📁 2. Crear el módulo nativo en Kotlin
+Ruta:android/app/src/main/java/com/tunombredeapp/
+Archivo:YourSdkModule.kt
+📦 3. Registrar el módulo con React Native
+Archivo:YourSdkPackage.kt
+🧩 4. Agregar el paquete enMainApplication.java
+📥 5. Agregar la dependencia del SDK
+Archivo:android/app/build.gradle
+🚀 6. Ejecutar y probar
+Desde consola:
+En JS:

@@ -1,0 +1,15 @@
+{
+  "keywords": {
+    "tech": ["ai", "software", "engineering", "architecture", "system design", "devops", "code", "tech", "openclaw", "hedera", "grpc", "kafka", "rabbitmq", "pulsar", "database", "microservices", "cloud", "kubernetes", "docker", "ruby", "rails", "jruby", "rspec", "tdd", "mysql", "redis", "postgresql", "auth", "authentication", "oauth", "jwt", "payments", "gateways", "stripe", "mercadopago", "notifications", "email", "sms", "push", "apis", "rest", "graphql", "testing", "quality", "reliability", "monitoring", "logs"],
+    "finance": ["investing", "stocks", "crypto", "trading", "finance", "market", "economy", "portfolio", "risk", "asset", "wealth", "money", "investment", "stock", "bitcoin", "ethereum", "longterm", "dividends", "etf", "index", "diversification", "rebalancing", "compound", "retirement", "financial_independence"],
+    "marketing": ["marketing", "growth", "brand", "social media", "content", "seo", "conversion", "audience", "engagement", "strategy", "campaign", "analytics", "digital", "advertising", "sales", "lead", "customer", "growth_hacking", "conversion_rate", "retention", "product_market_fit", "mvp", "validation", "customer_acquisition", "lifetime_value"],
+    "history": ["history", "medieval", "war", "geopolitical", "geopolitics", "historical", "ancient", "world war", "revolution", "empire", "battle", "history facts", "archaeology", "civilization", "history news", "military", "strategy", "historic"],
+    "news": ["news", "breaking", "update", "report", "Uruguay", "Latin America", "global", "crisis", "politics", "economy", "technology news", "headline", "alert", "developing", "coverage"]
+  },
+  "min_keyword_score": 1,
+  "max_tweets_per_category": 10,
+  "truncate_length": 280,
+  "include_low_score": false,
+  "obsidian_path": "/home/manpac/Obsidian/Twitter Digest",
+  "obsidian_filename_pattern": "Twitter Digest - {date}.md"
+}

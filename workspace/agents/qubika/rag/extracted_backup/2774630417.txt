@@ -1,0 +1,65 @@
+TITLE: [Ruby Update] Status Qubika - 9 de Noviembre
+DOMAIN: General
+PRIORITY: Media
+ID: 2774630417
+SOURCE: 2774630417__[Ruby_Update]_Status_Qubika_-_9_de_Noviembre.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Viendo PR-73 y arrancó con PR-193
+Today: Ahora viendo PR-191. Ya encontró el problema y está trabajando en el fix.
+Hablando con Luis para resolver y ver un par de tickets donde tiene dudas.
+Blockers?
+
+61incomplete
+
+Yesterday: PTO
+Today: PR-199, seguramente termine para hoy y empiece con otro ticket.
+Blockers?
+
+62incompleteHablar con Manu sobre algunas dudas de los tickets abiertos
+
+Yesterday: Ayer tuvo onboarding con Nacho para conectarte a los ambientes de Staging.
+Probando PR-208, PR-209, PR-210 y PR-81
+Today: Trabajando con PR-203, PR-160, PR-106 y va a probar en prod PR-167, PR-179, PR-180 y PR-181
+Blockers?
+
+63completePendiente comunicación con C4C
+
+Yesterday: Termino con PR-242 de desembolsos y continuo con la PR-192.
+Today: Está con los últimos ajustes del código y sube la PR.
+Blockers?
+
+Yesterday: Cerró PR-187
+Today: Va a continuar trabajando en otro ticket de la lista
+Blockers?
+
+Yesterday: Trabajando en PR-202 y PR-203, revisándolos, los pasó a Revisión
+Today: Trabajando en PR-123, probablemente lo cierre hoy, y continúe con otro.
+Blockers?
+
+Yesterday: Trabajó en el PR-66 y lo pasó a Revisión
+Today: Trabajando en PR-94. Viendo el problema con Manu y Nacho. Ya encontró el problema y está esperando respuesta de Denis.
+Va a pasar a otro ticket de mientras.
+Blockers? F5
+
+64incompleteHablar con Denis65incompleteVer este ticket porque no es tema de actualización de Ruby. F5 está trancando esto, por ende escapa de nosotros y no es tema de actualización de Ruby. Habría que arreglar F5 y re testear para ver si esto sigue sin funcionar.
+
+Yesterday: Trabajando en PR-210. Levanto ambiente para empezar a trabajar en eso.
+Today: Hoy planea terminar PR-210. Ya pudo replicar local, falta arreglarlo.
+Blockers?
+
+Yesterday: Trabajó con PR-194 (pudo reproducir y es error de datos) y PR-98.
+Today: Encontró el problema en el PR-98 y lo pasó a rechazado.
+Trabajando con el PR-69
+Blockers?
+
+66incompleteHacer seguimiento a Luis sobre PR-194, para que le provea data nueva y ver si de verdad es un bug o problema de datos.

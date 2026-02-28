@@ -1,0 +1,42 @@
+TITLE: [STEP 1] - Agregar Setup Step
+DOMAIN: General
+PRIORITY: Media
+ID: 4488953858
+SOURCE: 4488953858__[STEP_1]_-_Agregar_Setup_Step.json
+
+---
+
+Setup Step es un paso nuevo que no tenemos en la implementación de Cardinal 3DS. En este primer paso, se inicializa el proceso de 3DS, se averigua la marca de la tarjeta y se retornan parámetros necesarios para pasos futuros.
+
+En el orden de ejecución, viene a reemplazar el getDdcJwt, al hacer lo mismo, pero adicionalmente proveyendo la formUrl para incorporar al ddcForm.
+
+Parametros de Request
+PATH: /risk/v1/authentication-setups
+wide760numberdebe ser el visa token para VISA I?
+
+cómo se debe interpretar el valor detype?Card Types Dictionary. Podemos omitir.
+
+Parametros de Response
+wide760consumerAuthenticationInformation.accessTokenes el JWT token a colocar en ddcForm (Step 2)
+
+consumerAuthenticationInformation.deviceDataCollectionUrles la url a colocar en ddcForm (Step 2)
+
+consumerAuthenticationInformation.referenceIdes el identificador que reemplaza asession_idal hacer el Payer Authentication Enrollment (Step 3 - ex LookUp)
+
+Desarrollo:
+Usando Direct API
+Para este endpoint se requiere un service completamente nuevo en external services
+
+Implementar en Vpos y Tpago la capa business que utiliza el external service
+
+Usando Ruby Gem
+Implementar en Vpos y Tpago la capa business que aproveche la gema de cybersource
+
+Setup con Card Number
+
+Setup con Tokenized Card (VISA Token)
+
+En Común
+En vpos Portal y Tpago Portal, reemplazar la acción que genera el DDC JWT por esta, y actualizar la DDC form para recibir la formUrl y el JWT de este servicio
+
+Se recomienda como best practice, disparar el proceso desde el javascript una vez se haya escrito la tarjeta completa, en lugar de esperar a que se de click enPagar. Podríamos disparar siempre que el string tenga 15+ numeros para cubrir todas las tarjetas conocidas (15-18 digitos)

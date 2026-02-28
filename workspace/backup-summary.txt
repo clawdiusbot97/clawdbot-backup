@@ -1,0 +1,21 @@
+Daily OpenClaw backup routine executed at 2026-02-21 07:30 UTC.
+
+❌ Backup failed: Configuration missing.
+
+The backup script requires a private GitHub repository and a personal access token.
+
+We created a configuration file at ~/.openclaw/backup.env with placeholder values. Please edit it with your actual repository URL and token:
+
+1. Create a private GitHub repository (e.g., "openclaw-backup").
+2. Generate a personal access token with "repo" permissions.
+3. Update ~/.openclaw/backup.env:
+   BACKUP_GITHUB_REPO=https://github.com/yourusername/openclaw-backup.git
+   BACKUP_GITHUB_TOKEN=ghp_...
+
+Alternatively, use an SSH URL (git@github.com:yourusername/openclaw-backup.git) and omit the token if SSH keys are configured.
+
+After updating the config, the daily backup will run automatically.
+
+The backup script scans for secrets and sanitizes them before pushing. It excludes large directories like node_modules, venv, and sensitive directories.
+
+Next run scheduled for tomorrow same time.

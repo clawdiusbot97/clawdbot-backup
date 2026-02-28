@@ -1,0 +1,96 @@
+# Mensajes WhatsApp - Brokia PM Turbo
+
+---
+
+## A) WhatsApp a Juan Manuel - Baseline Express
+
+```
+Juanma, ¿cómo andás? Necesito 10 min de tu tiempo hoy o mañana para una prueba rápida que nos va a dar datos reales para la tesis.
+
+La idea: medir exactamente cuánto tiempo te lleva hacer cotizaciones en un día normal. No es tecnología, es un cronómetro y una planilla.
+
+Te pido:
+1. Elegí un día esta semana (el que más cotizaciones tengas)
+2. Por cada cotización que hagas:
+   - Cronometrá desde que el cliente te pide hasta que le mandás opciones
+   - Anotá: hora inicio, hora fin, cuántas aseguradoras contactaste, si cerró o no
+3. Sumario: 10 cotizaciones en un día
+
+Te paso una planilla de Google Sheets para que sea fácil. Me salva la vida para tener números reales para mostrarle a Enrique la semana que viene.
+
+¿Te bancás? Te mando el link en cuanto me digas.
+
+Gracias!
+```
+
+**Nota:** Si pregunta por qué tan urgente: *"Enrique nos pidió números concretos para la próxima reunión, queremos llegar preparados."*
+
+---
+
+## B) WhatsApp a Corredor #2 - Entrevista 30 min
+
+```
+Hola [NOMBRE], ¿cómo estás? Soy [Manuel/Rodrigo], estoy trabajando en un proyecto de tesis sobre correduría de seguros con Juan Manuel [APELLIDO] y me dijo que vos podés darme una mano con tu experiencia.
+
+¿Tendrías 30 min esta semana para una charla? Te cuento:
+
+- No es venta, es investigación
+- Quiero entender cómo hacés las cotizaciones hoy: cuánto tiempo te lleva, con qué herramientas, qué te frustra
+- Todo anónimo, nada grabado sin tu permiso
+- Al final te comparto un resumen de lo que encontramos (puede servirte)
+
+Puede ser [DÍA OPCIÓN 1] o [DÍA OPCIÓN 2] por Zoom/WhatsApp/llamada, lo que prefieras.
+
+¿Te sirve alguno de esos días?
+```
+
+**Follow-up si no responde en 4 horas:**
+```
+[NOMBRE], te reenvío por si se pasó. Si está complicado esta semana, podemos hacerla la otra. Pero me salvaría tener tu perspectiva. Gracias!
+```
+
+---
+
+## C) WhatsApp a Corredor #3 - Entrevista 30 min
+
+```
+Hola [NOMBRE], ¿cómo va? Te escribo porque estoy haciendo una investigación sobre el trabajo de los corredores de seguros en Uruguay, y Juan Manuel me dijo que vos tenés mucha experiencia y me podés dar una mirada valiosa.
+
+Estoy armando una tesis sobre cómo mejorar las operaciones de correduría (no es para vender nada, es proyecto académico con el CIE de ORT).
+
+¿Me darías 30 minutos para una entrevista rápida? Me interesa entender:
+- Cuánto tiempo te lleva preparar una cotización promedio
+- Qué herramientas usás hoy
+- Qué parte del proceso te resulta más tediosa
+
+Puede ser llamada telefónica, Zoom, o incluso un café si preferís presencial.
+
+¿Tenés un rato esta semana o la que viene?
+```
+
+**Si pregunta por qué lo contactamos:**
+```
+Juan Manuel me habló muy bien de vos y dijo que tenés una mirada realista del negocio. Necesito perspectivas de corredores que no sean solo él para no sesgar la investigación.
+```
+
+---
+
+## Instrucciones de uso
+
+1. **Copiar y pegar** directo en WhatsApp Web
+2. **Personalizar** [NOMBRE], [Manuel/Rodrigo], [DÍA OPCIÓN]
+3. **Enviar entre 9am-6pm** (horario laboral corredor)
+4. **Screenshot inmediato** del mensaje enviado → guardar en `evidence/day1/`
+5. **Esperar 4 horas** → si no responde, enviar follow-up
+6. **Confirmación recibida** → screenshot + anotar fecha/hora acordada
+
+---
+
+## Anticipar objeciones
+
+| Objeción | Respuesta |
+|----------|-----------|
+| "No tengo tiempo" | "Son solo 30 min, puedo adaptarme a tu horario. Si preferís, mandame un audio con tus respuestas y yo las organizo." |
+| "No sé si puedo ayudar" | "Tu experiencia cotidiana es justo lo que necesito. No busco expertos en tecnología, busco corredores reales." |
+| "¿Qué gano yo?" | "Te comparto un resumen de hallazgos que estamos recolectando (puede darte insights sobre herramientas que otros corredores usan)." |
+| "¿Es para vender algo?" | "No, es tesis académica. Ningún producto, ninguna venta. Solo investigación." |

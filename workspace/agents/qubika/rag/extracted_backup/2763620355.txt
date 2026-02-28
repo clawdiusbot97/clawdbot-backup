@@ -1,0 +1,9 @@
+TITLE: Tentative Initiatives
+DOMAIN: General
+PRIORITY: Media
+ID: 2763620355
+SOURCE: 2763620355__Tentative_Initiatives.json
+
+---
+
+Here we’ll locate all the Tentative Initiatives from Bancard, plus our own proposals.

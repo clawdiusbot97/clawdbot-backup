@@ -1,0 +1,68 @@
+TITLE: Git Branching
+DOMAIN: 7) Repos
+PRIORITY: Alta
+ID: 2711453730
+SOURCE: 2711453730__Git_Branching.json
+
+---
+
+The purpose of this document is to provide our team with a comprehensive guide on the utilization of Git branches within our project. In the dynamic sphere of software development, our proficiency in managing Git branches is pivotal to our collaborative success, project organization, and codebase integrity.
+Whether you are a long-standing member of our team or a recent addition, this guide aims to equip you with a thorough understanding of how we employ Git branches for effective collaboration, innovative development, and the maintenance of project stability. It is designed to be a clear and concise resource, offering practical insights that will enable you to seamlessly integrate with our development workflows.
+
+Git Branches
+Every Bancard project has its own remote repository on GitHub. Additionally, each service and portal has two main branches,masteranddevelop. As for gems, they typically use a single main branch, which ismaster.
+Portals and Services
+Two main branches.
+develop
+
+Thedevelopbranch serves as an integration branch forfeaturebranches and other changes. Changes are integrated into thedevelopbranch only when they are deployed to production in the upcoming release.
+Thedevelopbranch has no merge commits, so all merges into it will be performed using the 'Rebase and Merge' option.
+
+master
+
+Themasterbranch serves as the official release history, meaning it points to the latest production release.
+Themasterbranch is the only branch where merge commits are created, so merges into this branch will be done using the 'Create a merge commit' option.
+
+In all services and portals, we usefeaturebranches as the base for our initiatives and features.
+feature
+
+All new features should reside in their own branch. These branches, as well as hotfix branches, use thedevelopbranch as their base branch, meaning they originate from and merge back into this branch. The feature branches shoul be namedfeature/...
+
+Another type of branch used in the portals and services is the branch for each ticket.
+TKT-123
+
+The branches corresponding to tickets can be based on two different branches, either 'develop' or a 'feature' branch. If the ticket corresponds to a feature or initiative, it will use the branch associated with that initiative as its base. If the ticket is a hotfix destined for the next production deploy,developcan be used as the base branch.
+In the case where the ticket corresponds to a simple fix that is neither part of an initiative nor scheduled for production deployment, it is recommended to usefeature/TKT-123as the base branch.
+
+The last type of branch is theprovidebranch.
+provide
+
+Theprovidebranch is a resource we use to trigger image generation for branches other thanmaster,develop, orfeature. This branch is employed to consolidate feature branches into a single branch, allowing us to deploy all changes together to staging for testing.
+
+Gems
+One main branch.
+master
+
+Themasterbranch serves as the base branch for gems. All branches for changes start from and merge intomaster.
+In the gems, themasterbranch has no merge commits, so all merges into it will be performed using the 'Rebase and Merge' option.
+
+Another type of branch used in the gems is the branch for each ticket.
+TKT-123
+
+The branches corresponding to tickets are based onmaster. All of these branches start from and merge intomaster.
+
+Common Issues
+Como crear una ramaprovidecon varias ramasfeature:
+
+Imaginemos que tenemos 2 feature branches,feature/uno,feature/dos
+(Con rebase)
+Actualizar cada una de las ramas con la versión de develop mas actualizada.
+
+(Con cherry-pick)
+Actualizar cada una de las ramas con la versión de develop mas actualizada.
+
+Como agregar un commit de una feature en una ramaprovide:
+
+TBC
+Ahora que conocés nuestra forma de trabajar con Git, vayamos al siguiente paso:
+Configuración de Repositorios

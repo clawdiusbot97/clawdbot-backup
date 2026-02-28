@@ -1,0 +1,73 @@
+{
+  "date": "2026-02-28",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "US tells diplomats to push back on data sovereignty laws",
+        "source": "Reuters",
+        "date": "2026-02-25",
+        "url": "https://www.reuters.com/sustainability/boards-policy-regulation/us-orders-diplomats-fight-data-sovereignty-initiatives-2026-02-25/"
+      },
+      {
+        "title": "Wall Street selloff: AI displacement fears + tariff uncertainty",
+        "source": "Reuters",
+        "date": "2026-02-23",
+        "url": "https://www.reuters.com/business/wall-st-futures-dip-tariff-doubts-hit-risk-appetite-2026-02-23/"
+      },
+      {
+        "title": "Week-ahead: AI disruption remains an overhang; jobs data in focus",
+        "source": "Reuters",
+        "date": "2026-02-27",
+        "url": "https://www.reuters.com/business/wall-st-week-ahead-ai-disruption-looms-over-markets-with-us-jobs-data-tap-2026-02-27/"
+      },
+      {
+        "title": "Stocks rebound on renewed tech vigor; AI concerns ease",
+        "source": "Reuters",
+        "date": "2026-02-24",
+        "url": "https://www.reuters.com/business/us-stock-futures-steady-after-mondays-battering-tariffs-ai-concerns-dominate-2026-02-24/"
+      },
+      {
+        "title": "Breakingviews: policy responses to AI/job risk + Europe market-structure ambitions",
+        "source": "Reuters Breakingviews",
+        "date": "2026-02-27",
+        "url": "https://www.reuters.com/commentary/breakingviews/global-markets-breakingviews-2026-02-24/"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Nueva ola de calor hacia el cierre de febrero",
+        "source": "El Observador",
+        "date": "2026-02",
+        "url": "https://www.elobservador.com.uy/nacional/muy-elevadas-sensaciones-termicas-meteorologo-asegura-que-febrero-se-despedira-nueva-ola-calor-n6035069"
+      },
+      {
+        "title": "Economía 2026: sin señales firmes de repunte según índice CERES",
+        "source": "El Observador",
+        "date": "2026",
+        "url": "https://www.elobservador.com.uy/economia-y-empresas/la-economia-uruguaya-arranca-2026-senales-claras-repunte-segun-indice-ceres-n6033522"
+      },
+      {
+        "title": "Cronograma BPS: pagos de jubilaciones y pensiones febrero 2026",
+        "source": "El Observador",
+        "date": "2026-02",
+        "url": "https://www.elobservador.com.uy/economia-y-empresas/bps-compartio-el-calendario-pago-jubilaciones-y-pensiones-febrero-2026-aqui-las-fechas-n6032264"
+      },
+      {
+        "title": "Debate: adelantar inicio de clases en febrero (calendario escolar 2026)",
+        "source": "El Observador",
+        "date": "2026",
+        "url": "https://www.elobservador.com.uy/nacional/cambios-el-calendario-escolar-las-clases-deberian-empezar-febrero-n6022714"
+      },
+      {
+        "title": "Feriados de Carnaval febrero 2026 y fin de semana largo",
+        "source": "El Observador",
+        "date": "2026-02",
+        "url": "https://www.elobservador.com.uy/nacional/los-feriados-febrero-2026-generaran-fin-semana-largo-uruguay-cuando-caen-y-que-se-celebra-n6030783"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-02-28T15:32:19Z"
+}

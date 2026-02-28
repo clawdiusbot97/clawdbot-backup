@@ -1,0 +1,13 @@
+{
+  "action": "move",
+  "id": "<ID>",
+  "success": false,
+  "blocked_by_guardrail": false,
+  "stdout": "❌ Error: No se encontró <ID>.md\n",
+  "stderr": "Command failed: brokia/workitems/scripts/wi-move.sh '--id' '<ID>' '--to' 'RESEARCHING'\n",
+  "duration_ms": 72,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T15:45:29.889Z",
+  "finished_at": "2026-02-25T15:45:29.961Z"
+}

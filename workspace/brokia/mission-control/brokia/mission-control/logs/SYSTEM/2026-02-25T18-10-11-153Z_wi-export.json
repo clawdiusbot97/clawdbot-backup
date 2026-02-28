@@ -1,0 +1,13 @@
+{
+  "action": "wi-export",
+  "id": "SYSTEM",
+  "success": false,
+  "blocked_by_guardrail": false,
+  "stdout": "",
+  "stderr": "/bin/sh: 1: brokia/workitems/scripts/wi-export.sh: not found\n",
+  "duration_ms": 11,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T18:10:11.142Z",
+  "finished_at": "2026-02-25T18:10:11.153Z"
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-02-26",
+  "web_start": 1772143607146,
+  "web_end": 1772143632790,
+  "web_duration_ms": 25644,
+  "gmail_start": 1772143589631,
+  "gmail_end": 1772143591032,
+  "gmail_duration_ms": 1401,
+  "render_start": 1772143654012,
+  "render_end": 1772143700436,
+  "delivery_start": 1772143710542,
+  "delivery_end": 1772143710596,
+  "delivery_error": "DISCORD_SEND_SKIPPED: per instruction 'Return your summary as plain text; it will be delivered automatically'.",
+  "findings_count": 8,
+  "sources": [
+    "https://www.patracorp.com/resources/press-releases/patras-2026-ai-and-insurtech-tr-press-release/",
+    "https://www.heffnetwork.com/how-ai-is-reshaping-insurance-distribution-how-agencies-can-prepare-in-2026/",
+    "https://www.insightaceanalytic.com/report/ai-in-insurance-market/2738",
+    "https://www.insurancethoughtleadership.com/our-partners/2026-trends-vital-compete-and-accelerate-growth-new-era-insurance"
+  ]
+}

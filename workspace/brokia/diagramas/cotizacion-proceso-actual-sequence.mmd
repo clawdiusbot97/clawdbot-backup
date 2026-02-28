@@ -1,0 +1,41 @@
+---
+title: Proceso de Cotización Manual Actual (Secuencia)
+---
+
+sequenceDiagram
+    actor Cliente
+    participant Broker
+    participant Cotizador as Cotizadores Web
+    participant Excel
+    participant WhatsApp
+
+    Note over Cliente,Broker: Solicitud Inicial
+    Cliente->>Broker: Solicita cotización (WhatsApp/llamada)
+    Broker->>Cliente: Pide datos del vehículo
+    Cliente->>Broker: Proporciona datos (marca, modelo, año, zona, cédula*)
+
+    Note over Broker,Cotizador: Cotización en 7 Compañías
+    loop para cada compañía (7)
+        Broker->>Cotizador: Ingresa datos en portal web
+        Cotizador-->>Broker: Devuelve precio y cobertura
+        Note right of Cotizador: Tiempo: 3‑7 min por compañía
+    end
+
+    Note over Broker,Excel: Registro y Comparación
+    Broker->>Excel: Registra precios manualmente
+    Broker->>Excel: Construye tabla comparativa
+    Note right of Excel: Tiempo: 10‑15 min
+
+    Note over Broker,WhatsApp: Envío al Cliente
+    Broker->>WhatsApp: Envía tabla comparativa (PDF/imagen)
+    WhatsApp->>Cliente: Recibe propuesta
+
+    Note over Cliente,Broker: Discusión y Confirmación
+    Cliente->>Broker: Pregunta / solicita ajustes
+    Broker->>Cliente: Explica / aclara dudas
+    Cliente->>Broker: Confirma elección (verbal/mensaje)
+    Note left of Cliente: Confirmación informal (sin registro estructurado)
+
+    Note over Broker: Finalización
+    Broker->>Broker: Guarda respaldo (capturas, audios, Excel)
+    Note over Broker: Riesgo: dispersión de evidencia

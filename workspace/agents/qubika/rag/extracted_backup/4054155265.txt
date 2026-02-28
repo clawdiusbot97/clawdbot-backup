@@ -1,0 +1,97 @@
+TITLE: Cambios POS en Back de App IC - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4054155265
+SOURCE: 4054155265__Cambios_POS_en_Back_de_App_IC_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para [Iniciativa], a cargo de [Dev].
+Las horas estimadas son: 201 ~ 25
+Fecha de Inicio:
+Fecha de Entrega:
+Tarea
+
+Servicio
+
+Estimación (hs)
+
+Análisis de tareas e impacto
+
+8
+
+Añadir parámetro source y modificar operación de crear desembolso para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de crear pago para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de creación de QR para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de pagos con tarjeta para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de permisos para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+16
+
+Añadir parámetro source y modificar operación de onboarding para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+16
+
+Añadir origen nuevo para movimientos de app mobile
+
+epos-service
+
+8
+
+Modificaciones en manejo de origen de movimientos
+
+epos-service
+
+24
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+8
+
+Total Desarrollo
+
+176
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+25
+
+Total Desarrollo + Gestión
+
+201

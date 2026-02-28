@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-02-25T12:12:53.744Z",
+  "workitemId": "SYSTEM",
+  "actionContext": "workitems_get",
+  "success": true,
+  "action": "workitems_get",
+  "id": "N/A",
+  "message": "Workitems exported and loaded successfully",
+  "stdout": "✅ Export completado: brokia/workitems/index/workitems.json\n   Items: 6\n   Total cost: $0 USD/mes\n",
+  "stderr": "",
+  "blocked_by_guardrail": false
+}

@@ -1,0 +1,137 @@
+TITLE: Facturación Electrónica - Tareas Adicionales - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3275489281
+SOURCE: 3275489281__Facturacio╠ün_Electro╠ünica_-_Tareas_Adicionales_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación paralas tareas adicionales que el equipo de Qubika fue tomando por fuera de la estimación inicial.
+Las horas totales de desarrollo son 172.
+Las horas restantes de desarrollo para los cambios nuevos que surgieron para la creación de la oportunidad comercial son
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Solicitud de Código de Verificación en modal para retomar proceso de Onboarding
+
+4
+
+commerce-suite
+
+Modificar validación de OTP para no usar el company_type
+
+6
+
+commerce-service
+
+Verificación doble de Email en pantalla de registro de usuario
+No acepta copy-paste
+
+6
+
+commerce-suite
+
+Modificar el acceso code para que sea de 6 dígitos
+
+4
+
+commerce-service
+
+Datos adicionales en pantalla de Ingreso de Contraseña
+Posibilidad de agregar hasta 2 RRLL
+
+12
+
+commerce-suite
+
+Creación del Nodo de RRLL
+Obtención de datos envío
+Aca tenemos que usar de referencia el ejemplo del envío de la cuenta bancaria
+
+12
+
+external-commerce-service
+
+Creación de la lógica del envío de la informacion de RRLL
+
+4
+
+commerce-service
+
+Creación de el Nodo de Actividades Económicas
+Se crea un nodo por cada una de las AAEE
+
+12
+
+external-commerce-service
+
+Creación de la lógica del envío de la información de AAEE
+
+4
+
+commerce-service
+
+Creación de el Nodo de Establecimientos
+
+12
+
+external-commerce-service
+
+Creación de la lógica de envío de la información de Establecimientos
+
+4
+
+commerce-serice
+
+Agregar datos de score vs ci y score vs extracción de DIA a la OC
+
+4
+
+commerce-service
+
+Modificar el endpoint de get_opportunity_products y get_opportunity_plans para identificar el tipo de onboarding, si es para clientes nuevos o existentes, y en base a eso que nos devuelva que productos y planes se traen
+
+16
+
+commerce-service
+
+Modificar vistas con llamado a get_opportunity_products y get_opportunity_plans para que solo traiga los planes y productos que corresponden al onboarding de nuevos clientes
+
+4
+
+commerce-suite
+
+Cambios en la pantalla de Resumen.
+Definir que productos tienen un contador para agregar más de uno (Ej POS Android), y cuales no (Ej TPago)
+
+12
+
+commerce-suite
+
+Investigación y estimación de sección de biometría.
+
+32
+
+-
+
+Investigación y estimación de sección de carga de archivos
+
+24
+
+-
+
+Total Desarrollo
+
+172
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+25
+
+Total Desarrollo + Gestión
+
+197

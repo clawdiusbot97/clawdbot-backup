@@ -1,0 +1,15 @@
+TITLE: Proceso de Management
+DOMAIN: General
+PRIORITY: Media
+ID: 2788622418
+SOURCE: 2788622418__Proceso_de_Management.json
+
+---
+
+En Bancard, nos enorgullecemos de contar con un equipo altamente definido y eficiente, compuesto por gestores de proyectos, líderes técnicos y un dedicado equipo de desarrollo. Entendemos que el éxito de nuestros proyectos depende no solo de las habilidades individuales, sino también de procesos bien estructurados y una comunicación eficaz.
+En estas diapositivas, detallaremos nuestro enfoque hacia la gestión de proyectos. Cubriremos todo el ciclo de vida de nuestras iniciativas, desde la fase de estimación hasta la ejecución del trabajo, pasando por la comunicación y finalmente, la entrega. Este proceso no solo refleja nuestra metodología de trabajo, sino también nuestra dedicación a la calidad y la transparencia en cada paso.
+Nuestro objetivo con esta presentación es brindarte una visión clara y detallada de cómo funcionan nuestras operaciones internas. Queremos que cada miembro del equipo entienda su rol y la importancia de su contribución en el marco más amplio de nuestros proyectos.
+Esperamos que esta información les sea de utilidad y les proporcione una guía clara para entender y participar eficientemente en nuestros procesos de gestión de proyectos.
+Proceso de Management Bancard - Qubika
+{"attachmentHeader":"default","previewSize":{"width":"default","height":"default"},"previewVisibility":"collapsed"}3d542e10-8975-11ee-9395-992fd3b963a7["Proceso de Management - Bancard - Qubika (Interna)"][{"skyItemID":"1-l_OcPV3scs1_a_2yj2bOQD7QVOSFnLH7lI4vX2UvmQ","itemType":"file","permissions":[],"placeScheme":"gd","name":"Proceso de Management - Bancard - Qubika (Interna)","shareToken":"[TOKEN]","parentShareToken":"cacf7d46-3654-46ad-941d-df4b8[TOKEN]mYf6IO0__COHNPb0gtUVNiWTQ","description":"file / Shared by Agustin Llado"}]Siguiente Paso →
+Registro de horas en Kubrick

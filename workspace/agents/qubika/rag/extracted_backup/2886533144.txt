@@ -1,0 +1,61 @@
+TITLE: Preguntas PIX
+DOMAIN: General
+PRIORITY: Media
+ID: 2886533144
+SOURCE: 2886533144__Preguntas_PIX.json
+
+---
+
+Como nos confirma PIX si el pago esta confirmado? Con un callback o tenemos que hacer un request a /sell para ver el status de la compra?
+Confirman el pago en el webhook que se pasa como parámetro al crear el QR.
+
+Validar si va a aparecer como producto no contratado para todos los comercios. Hay comercios uqe directamente NO lo pueden contratar?
+En principio es igual que para cualquier servicio (como VentasQR). Luis quedó de validar que producto no quiera restringir ese producto a ciertos comercios.
+
+Que es el CPF?
+Es el identificador del comprador, el documento de identidad.
+
+Ver si usar merchant unico para bancard o para cada comercio.
+Vamos a usar un merchant para cada comercio. El merchant va a estar en rediseño y rediseño lo va a devolver en la respuesta cuando se haga la validación de contratos previa a la generación del QR. La validación de contratos se hace previo a cada generación de QR.
+
+Necesitamos almacenar información extra para los comercios que usen PIX?
+No
+
+Los usuarios va a ser general para todo bancard, por comercio, o por usuario del portal de comercios?
+En principio email y password van a ser únicos para toda la comunicación con Rendix y la única diferencia es que mandamos el merchantId diferente en el login. Luis quedó de confirmar que no vamos a tener problemas usando mismo usuario y pass. Consultar si no pueden haber problemas de concurrencia.
+
+Cuando expira el bearer token? Tiene un plazo o hay que pedir uno por request
+Consuntar con Rendix
+
+Podemos agregar pix como un servicio más de Bancard y manejarlo de esa forma? Como tenemos por ejemplo en VentasQR?
+Si
+
+En el callback o cuando se nos informe del pago exitoso / rechazado → Qué método de autenticación vamos a usar?
+En principio no tiene que tener autenticación. A confirmar con Rendix
+
+Pantalla de transacciones:Se va a ver detalle de cada transacción o solo la lista? Si la respuesta es si, hay que agregar tarea en portal para mostrar detalle y en el servicio para obtener la informaciónd e ese pago en particular
+En principio no vamos a implementar una vista específica (al igual que VentasQR que no tiene vista de detalle de un pago). Validar si es necesario. Si entra toda la info en la vista de reporte, entonces no es necesario agregar una vista de detalle.
+
+Se va a utilizar el endpoint de exchange o solo se va a aceptar transacciones en dólares? Si se va a utilizar, cuando?
+Tenemos que mostrar el tipo de cambio en el portal de PIX para que sea visible al momento de la generación de QR. Solo tipo de cambio, no la conversión de cada compra. Confirmar con Rendix la frecuencia de actualización del tipo de cambio.
+
+Cómo se entera el AS400 que recibió un pago de PIX? Cómo llega la información de esos pagos a commerce-service.
+No esta confirmado. No esta confirmado aún si al momento de la confirmación vamos a tener que llamar al jpos para registrar el pago.
+
+Vamos a asignar sucursal a los QRs PIX? Mas allá de que a nivel de PIX sean todos los QRs iguales, capaz que es mejor tener un registro interno de la sucursal que creó el QR por consistencia y para poder filtrar esos pagos en el portal de comercios.
+
+Luis quedó de confirmar que no vamos a tener problemas usando mismo usuario y pass en todos los logins. Consultar si no pueden haber problemas de concurrencia. Por ejemplo: dos logins se hacen al mismo tiempo y el segundo sobreescribe el token del primero por usar mismo usr y pass.
+esto podemos probar, ahora probe generar 2 token haciendo login con el mismo merchant y no se sobreescriben, sigue siendo valido el 1er token que genere que veo que dura 2 semanas
+
+Luis quedó de validar que sector de producto no quiera restringir PIX solo a ciertos comercios.
+
+Luis quedó de consuntar con Rendix la expiración del Bearer Token.
+al momento de hacer login te retorna el tiempo de expiracion del token
+
+En principio el endpoint de callback no tiene que tener autenticación. Luis va a confirmar con Rendix
+no indicaron eso, pero pareciera que no
+
+Luis quedó de confirmar con Rendix la frecuencia de actualización del tipo de cambio.
+
+No esta confirmado como van a llegar las transacciones a la tabla interna. No esta confirmado aún si al momento de la confirmación vamos a tener que llamar al jpos para registrar el pago o si esa información la va a mandar el BUS cuando la lea del CSV. Consulta para Victor y Gustavo.
+cuando PIX le informe al nuevo servicio que esta aprobado o rechazado la tx, esto se puede guardar ya en la tabla interna y también esos datos se debe enviar al jpos para que el jpos genere la transaccion y en esa respuesta del jpos hacia el servicio vendrán todos los datos transaccionales que usa bancard como boleta, cod autorizacion y con eso actualizan la tabla interna, lo del bus es aparte, no participa en esta parte del flujo

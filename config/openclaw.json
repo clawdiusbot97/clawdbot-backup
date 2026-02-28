@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.24",
+    "lastTouchedAt": "2026-02-25T15:10:26.668Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-25T15:10:26.636Z",
+    "lastRunVersion": "2026.2.24",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "google-gemini-cli:manuel.pacheco@qubika.com": {
+        "provider": "google-gemini-cli",
+        "mode": "oauth"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/moonshotai/kimi-k2.5",
+        "fallbacks": [
+          "openai-codex/gpt-5.3-codex-spark",
+          "openai-codex/gpt-5.3-codex",
+          "openai-codex/gpt-5.2-codex",
+          "openai-codex/gpt-5.2",
+          "openai-codex/gpt-5.1-codex-mini"
+        ]
+      },
+      "models": {
+        "openrouter/moonshotai/kimi-k2.5": {},
+        "openai-codex/gpt-5.3-codex-spark": {},
+        "openai-codex/gpt-5.3-codex": {},
+        "openai-codex/gpt-5.2-codex": {},
+        "openai-codex/gpt-5.2": {},
+        "openai-codex/gpt-5.1-codex-mini": {}
+      },
+      "workspace": "/home/manpac/.openclaw/workspace",
+      "memorySearch": {
+        "enabled": true,
+        "experimental": {
+          "sessionMemory": true
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 4000,
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 2,
+        "model": {
+          "primary": "openrouter/minimax/minimax-m2.1",
+          "fallbacks": [
+            "openrouter/deepseek/deepseek-v3.2"
+          ]
+        },
+        "thinking": "low"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "model": {
+          "primary": "openai-codex/gpt-5.2",
+          "fallbacks": [
+            "openrouter/moonshotai/kimi-k2.5",
+            "openrouter/deepseek/deepseek-v3.2",
+            "openrouter/minimax/minimax-m2.1"
+          ]
+        },
+        "subagents": {
+          "allowAgents": [
+            "researcher",
+            "writer",
+            "builder",
+            "codex_builder",
+            "chief",
+            "ops",
+            "brokia",
+            "qubika"
+          ]
+        }
+      },
+      {
+        "id": "researcher",
+        "name": "Researcher",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/researcher",
+        "agentDir": "/home/manpac/.openclaw/agents/researcher/agent",
+        "model": {
+          "primary": "openrouter/minimax/minimax-m2.1",
+          "fallbacks": [
+            "openrouter/deepseek/deepseek-v3.2"
+          ]
+        }
+      },
+      {
+        "id": "writer",
+        "name": "Writer",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/writer",
+        "agentDir": "/home/manpac/.openclaw/agents/writer/agent",
+        "model": {
+          "primary": "openrouter/minimax/minimax-m2.1",
+          "fallbacks": [
+            "openrouter/deepseek/deepseek-v3.2",
+            "openrouter/moonshotai/kimi-k2.5"
+          ]
+        }
+      },
+      {
+        "id": "builder",
+        "name": "Builder",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/builder",
+        "agentDir": "/home/manpac/.openclaw/agents/builder/agent",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "openai-codex/gpt-5.2-codex"
+          ]
+        }
+      },
+      {
+        "id": "codex_builder",
+        "name": "Codex Builder",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/codex_builder",
+        "agentDir": "/home/manpac/.openclaw/agents/codex_builder/agent",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": []
+        }
+      },
+      {
+        "id": "chief",
+        "name": "Chief of Staff",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/chief",
+        "agentDir": "/home/manpac/.openclaw/agents/chief/agent",
+        "model": {
+          "primary": "openrouter/deepseek/deepseek-v3.2",
+          "fallbacks": [
+            "openrouter/minimax/minimax-m2.1"
+          ]
+        }
+      },
+      {
+        "id": "ops",
+        "name": "Ops",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/ops",
+        "agentDir": "/home/manpac/.openclaw/agents/ops/agent",
+        "model": {
+          "primary": "openrouter/deepseek/deepseek-v3.2",
+          "fallbacks": [
+            "openai-codex/gpt-5.3-codex",
+            "openrouter/minimax/minimax-m2.1"
+          ]
+        }
+      },
+      {
+        "id": "brokia",
+        "name": "Brokia Specialist",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/brokia",
+        "agentDir": "/home/manpac/.openclaw/agents/brokia/agent",
+        "model": {
+          "primary": "openrouter/deepseek/deepseek-v3.2",
+          "fallbacks": [
+            "openrouter/minimax/minimax-m2.1"
+          ]
+        }
+      },
+      {
+        "id": "qubika",
+        "name": "Qubika Specialist",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/qubika",
+        "agentDir": "/home/manpac/.openclaw/agents/qubika/agent",
+        "model": {
+          "primary": "openrouter/deepseek/deepseek-v3.2",
+          "fallbacks": [
+            "openrouter/minimax/minimax-m2.1"
+          ]
+        }
+      },
+      {
+        "id": "orchestrator-kimi",
+        "name": "Orchestrator (Kimi K2.5)",
+        "workspace": "/home/manpac/.openclaw/workspace/agents/orchestrator-kimi",
+        "agentDir": "/home/manpac/.openclaw/agents/orchestrator-kimi/agent",
+        "model": {
+          "primary": "openrouter/moonshotai/kimi-k2.5",
+          "fallbacks": [
+            "openrouter/deepseek/deepseek-v3.2",
+            "openrouter/minimax/minimax-m2.1"
+          ]
+        },
+        "subagents": {
+          "allowAgents": [
+            "researcher",
+            "writer",
+            "chief",
+            "builder",
+            "ops",
+            "brokia",
+            "qubika"
+          ]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "media": {
+      "audio": {
+        "enabled": true,
+        "maxBytes": 20971520,
+        "models": [
+          {
+            "type": "cli",
+            "command": "/home/manpac/.openclaw/venvs/whisper/bin/python",
+            "args": [
+              "/home/manpac/.openclaw/workspace/scripts/transcribe_local.py",
+              "{{MediaPath}}"
+            ],
+            "maxChars": 4000,
+            "timeoutSeconds": 120
+          }
+        ]
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "${OPENCLAW_TELEGRAM_BOT_TOKEN}",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    },
+    "discord": {
+      "enabled": true,
+      "token": "${OPENCLAW_DISCORD_TOKEN}",
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    },
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": true,
+      "botToken": "${OPENCLAW_SLACK_BOT_TOKEN}",
+      "appToken": "${OPENCLAW_SLACK_APP_TOKEN}",
+      "userTokenReadOnly": true,
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "nativeStreaming": true,
+      "channels": {
+        "brokia-ai-briefing": {
+          "requireMention": false
+        },
+        "newsletter-digest": {
+          "requireMention": false
+        },
+        "twitter-news": {
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {}
+  },
+  "memory": {
+    "backend": "qmd",
+    "citations": "auto",
+    "qmd": {
+      "command": "/home/manpac/.npm-global/bin/qmd",
+      "includeDefaultMemory": true,
+      "update": {
+        "interval": "5m",
+        "debounceMs": 15000
+      },
+      "limits": {
+        "maxResults": 6,
+        "timeoutMs": 4000
+      },
+      "scope": {
+        "default": "deny",
+        "rules": [
+          {
+            "action": "allow",
+            "match": {
+              "chatType": "direct"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "slots": {
+      "memory": "memory-core"
+    },
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "slack": {
+        "enabled": true
+      },
+      "google-gemini-cli-auth": {
+        "enabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+TITLE: Cómo configuro Docker Compose?
+DOMAIN: 2) Docker
+PRIORITY: Alta
+ID: 2547220489
+SOURCE: 2547220489__Co╠ümo_configuro_Docker_Compose_.json
+
+---
+
+Para Servicios
+En este caso por el momento no hay una única pr de referencia, sino dos:
+Pr con mejoras:https://github.com/bancardsa/bancard-auth-service/pull/9/files
+
+Archivos a modificar(link al commit con la versión actualizada de cada uno):
+Dockerfile:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/Dockerfile
+
+README:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/README.md
+
+bin/destroy:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/bin/destroy
+
+bin/restart:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/bin/restart
+
+bin/run:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/bin/run
+
+bin/stop:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/bin/stop
+
+bin/terminal:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/bin/terminal
+
+docker-compose.yml:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/docker-compose.yml
+
+local-entrypoint.sh:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/local-entrypoint.sh
+
+config/application_configuration.sample.yml
+
+config/audit.sample.yml
+
+config/dory_cache_provider.sample.yml
+
+config/loggers.sample.yml
+
+config/services.sample.yml:https://github.com/bancardsa/bancard-auth-service/blob/16c97958599f6b8ec6cb38d66002288d4386fbd7/config/services.sample.yml
+
+.gitignore
+
+run.sh (borrar, si existe)
+
+test.sh (borrar, si existe)
+
+Archivos de configuración
+Los archivos de la carpetaconfigdependen del proyecto que se esté modificando, y en general se deben copiar los del proyecto desde el repositorio bancard-configurations:https://github.com/bancardsa/bancard-configurations.
+Los únicos cambios necesarios serían:
+En los archivosservices.ymlagregar las urls de acceso al servicio en ambiente de desarrollo comentadas, para facilitar el uso
+
+En los archivosdatabase.ymlagregar los datos de conexión a la base de datos de staging comentados, para facilitar el acceso (tener cuidado al habilitar)
+
+Portales
+En este caso hay que tomar como referencia la siguiente pr de commerce-suite:https://github.com/bancardsa/bancard-commerce-suite/pull/126.
+De todas formas, los archivos a modificar son:
+Dockerfile
+
+README
+
+bin/destroy
+
+bin/restart
+
+bin/run
+
+bin/stop
+
+bin/terminal
+
+docker-compose.yml
+
+local-entrypoint.sh
+
+config/application_configuration.sample.yml
+
+config/audit.sample.yml
+
+config/dory_cache_provider.sample.yml
+
+config/loggers.sample.yml
+
+config/services.sample.yml
+
+config/unicorn.sample.rb (en caso de que esté)
+
+run.sh (borrar, si existe)
+
+test.sh (borrar, si existe)

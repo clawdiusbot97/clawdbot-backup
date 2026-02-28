@@ -1,0 +1,109 @@
+TITLE: Espacio de Campañas en el Portal -  Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3111026694
+SOURCE: 3111026694__Espacio_de_Campan╠âas_en_el_Portal_-__Tasking_y_Estimacio╠ün.json
+
+---
+
+noteEste documento es la estimación realizada para el apartado de campañas en Infonet Cobranzas.
+Debajo encontrarán las tareas desglosadas con su estimación, y al final, una estimación total, una incluyendo QA con un total de 210 horas, y una sin QA con un total de 180 horas.
+Este documento es la estimación realizada para el apartado de campañas en Infonet Cobranzas.
+Debajo encontrarán las tareas desglosadas con su estimación, y al final, una estimación total, una incluyendo QA con un total de 210 horas, y una sin QA con un total de 180 horas.
+
+Tarea
+
+Estimación (hs)
+
+Crear modelo de Campaigns
+
+Nombre de campaña, prioridad, fecha inicio, fecha fin, estado, vigencia, default_url, is_default, csv_url
+
+8
+
+Crear modelo de CampaignMultimedia
+Relación con campaña
+Url del contenido, redirect del contenido, id de campaña
+
+6
+
+Crear modelo de CommerceCampaigns
+Relaciona campaña con comercio
+
+4
+
+Operación de crear campaña
+La operación de Create recibe la imagen y el csv, la sube a s4 y guarda el link (validar formato de csv y contenido multimedia, tamaño)
+Además de los atributos de la campaña debe recibir los archivos multimedia con sus respectivas urls (opcionales) y el csv con la lista de comercios.
+Si se sube una campaña con is_default = true puede no recibir el archivo csv y además debe desactivar la previa camapña por defecto si hay.
+
+24
+
+Operación de actualizar campaña
+En el caso que se suba un nuevo archivo csv, se va a mostrar la campaña solo en los comercios del último csv (se elimina el csv viejo del s4)
+La operación de Update recibe la imagen y el csv, la sube a s4 y guarda el link (validar formato de csv y contenido multimedia, tamaño)
+Además de los atributos de la campaña debe recibir los archivos multimedia con sus respectivas urls (opcionales) y el csv con la lista de comercios.
+Si se sube una campaña con is_default = true puede no recibir el archivo csv y además debe desactivar la previa camapña por defecto si hay.
+
+16
+
+Operación de get campaigns / index
+Usar picasso listing para la operación de index
+
+12
+
+Operación de eliminar campaña
+Borrar csv y contenido de s4
+
+12
+
+Job asíncrono que asocie las campañas a los comercios
+El create de una campaña debe desencadenar en un job asíncrono que asocie la campaña a los comercios listados en el csv
+En el caso de que sea un update la campaña tiene que mostrarse SOLO a los comercios que están cargados en el último csv.
+
+20
+
+Agregar STUB en bancard-stubs para la operación de Index de campañas
+
+2
+
+Agregar 6to producto y reorganizar la vista para que queden dos filas de tres productos centrados
+
+12
+
+Crear Carousel para las campañas
+Siempre va a haber una campaña por defecto, en el caso de que no haya una campaña asociada al comercio, mostrar esta.
+Incluye integración con la operación index de commerce-service
+
+40
+
+Desarrollo
+
+156
+
+Gestion 15%
+
+24
+
+QA (si necesario) 20%
+
+30
+
+Total desarrollo + Gestión
+
+180
+
+Total desarrolo + Gestión + QA
+
+210
+
+#EAE6FFPreguntas
+Pregunta
+
+Resp
+
+Cuál es el tamaño máximo que deberíamos soportar para el contenido multimedia?
+
+Debemos soportar videos, es necesario que desde un principio los soporte, o es una mejora a futuro?
+
+Quieren que le enviemos un reporte con la lista de comercios que fallaron?

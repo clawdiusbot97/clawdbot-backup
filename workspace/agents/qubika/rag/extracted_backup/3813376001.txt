@@ -1,0 +1,264 @@
+TITLE: Facturación Electrónica en VPos - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3813376001
+SOURCE: 3813376001__Facturacio╠ün_Electro╠ünica_en_VPos_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Facturación Electrónica en VPos, a cargo de.
+Las horas estimadas son:336 = 42 Días
+Fecha estimada de inicio:Miércoles
+Fecha estimada de Entrega:Lunes
+NOTA: Este tasking solo contempla las modificaciones en el flujo de pago ocasional.
+
+Tarea
+
+Estimación (hs)
+
+external-services
+
+Llevar cambios de la rama feature/e-invoicing a master y eliminar rama feature/e-invoicing.
+
+PR:https://github.com/bancardsa/bancard-external-services/pull/191
+Comentarios:
+No es correcto tener ramas paralelas. Los cambios deben estar todos en la rama principal.
+
+4
+
+invoices-service
+
+Actualizar rama de external-services en invoices-service para que apunte a master.
+
+PRhttps://github.com/bancardsa/bancard-invoices-service/pull/52
+Comentarios:
+Esto con el fin de resolver deuda técnica que a mediano plazo nos puede dar muchos problemas ya que no es correcto que un servicio apunte a una rama alternativa de una gema.
+
+4
+
+vpos-service
+
+Agregar endpoint para consulta de información del cliente dado su RUC.
+Comentarios:
+Vamos directo contra Taxit con external-services.
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Consultar-RUC-Receptor
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Servicio-para-consulta-por-RUC-de-cliente
+
+16
+
+Agregar columna de flag en la tabla applications para indicar si tiene activo FE.
+
+4
+
+Modificar CRUD de applications para contemplar la nueva flag.
+
+12
+
+Agregar tabla para features.
+
+16
+
+Agregar CRUD para features.
+
+12
+
+Crear tabla de FE para almacenar los datos de facturación de un buy.
+Comentarios:
+Evaluar cómo se van a almacenar estos datos teniendo en cuenta que permita la integración de multi_buy. Agregar también campos de nro de factura y CDC.
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Pago-Ocasional
+
+24
+
+Agregar params nuevos en endpoint de “create_single_buy” para recibir los params de FE.
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Nuevos-campos-para-VPOS
+
+16
+
+Al momento que el comercio crea el buy con la operación de “create_single_buy”, consultar y validar datos del emisor contra Taxit.
+Comentarios:
+En el caso de que los datos sean incorrectos, la creación del buy debe fallar y se le debe devolver al comercio un error bien descriptivo.
+(*4)
+
+24
+
+Luego de enviar el pago para autorizar en endpoint de confirmación (pay_buy), encolar la generación de la factura.
+Comentarios:
+Si la generación de factura falla, no se genera la factura pero el pago permanece efectuado. El comercio deberá realizar la factura desde el portal de FE.
+Guardar en la tabla nueva el nro de factura y CDC.
+
+24
+
+Modificar callback al comercio para agregar información del resultado de la generación de factura.
+Comentarios:
+En el caso de que no se haya hecho el flujo de FE, no agregar el bloque en el callback, ni siquiera vacío.
+
+12
+
+Agregar endpoint para cancelación de facturas.
+
+16
+
+Consumir RPG para enviar datos de facturación.
+
+24
+
+Modificar endpoint de “pay_with_alias_token” para recibir los datos de facturación (opcionales) y validarlos contra Taxit.
+Comentarios:
+Devolver error si la validacíon no es exitosa. Mucha de esta lógica se reutiliza del single buy.
+
+8
+
+En la operación de “pay_with_alias_token“ persistir información de facturación asociada al item del buy.
+
+2
+
+En la operación de “pay_with_alias_token“, en el flujo NO 3DS, si el pago se realiza correctamente, encolar la factura contra Taxit y persistir la info de la factura, nro y cdc.
+
+8
+
+En la operación de “pay_with_alias_token“ devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Pago-Ocasional-con-Token
+
+6
+
+En la operación “pay_buy“ que se utiliza para confirmar el pago con alias token que pasó por el flujo 3DS, si el pago se realiza correctamente, encolar la factura contra Taxit y persistir la info de la factura, nro y cdc.
+
+8
+
+En la operación de “pay_buy“ para los pagos con alias_token, devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Pago-Ocasional-con-Token
+
+2
+
+Para las Preauth ocasional, al momento de la creación del buy, validar y persistir información de FE.
+Comentarios:
+Se reutiliza todo lo de pago ocasional.
+
+0
+
+Para las Preauth con token, al momento de la creación del buy, validar y presistir información de FE.
+Comentarios:
+Se reutiliza todo lo de pago ocasional con token.
+
+0
+
+Para las Preauth en general, en la operación de “confirm_preauthorization“, si la confirmación se realizó con éxito, encolar la factura contra Taxit y persistir info, nro y cdc.
+
+8
+
+En la operación de “confirm_preauthorization“ para los pagos, devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+https://bancard.atlassian.net/wiki/spaces/PFE/pages/1066500249/ANALISIS+VPOS#Confirmar-preautorizacion-ocasional
+
+2
+
+Modificar operación “pay_zimple_buy“ para que en caso de success en el pago con zimple, se encole la factura. Modificar respuesta para devolver los parámetros opcionales. Modificar callback al comercio para agregar campos de factura pasó por el flujo de FE.
+
+16
+
+Factura Innominada
+Si el comercio está preparado para emitir factura electrónica, envía los datos de facturación en el campobilling, pero no envía el RUC del cliente (campoclient_rucllega nulo o vacío), se considerará como un caso de factura innominada. En este caso, se completarán los parámetros para el servicio de encolar FE de TaXit, de la siguiente manera:
+Nombre:“Sin nombre”
+
+RUC: “0”
+
+DV: “0”
+
+EnviarCorreo: 0
+
+CorreoElectronico: “”
+
+TipoIdentificacion: 5
+
+En caso de que se reciba el RUC del cliente (client_ruc), serán obligatorios los campos de Razón Social (client_name) y Correo (client_email) para continuar con el flujo.
+
+8
+
+General
+
+Creación y revisión de PRs, correción de errores, armado de ramas, deploy a ambiente de staging.
+
+24
+
+Total Desarrollo
+
+292
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+42
+
+Total Desarrollo + Gestión
+
+336
+
+Preguntas:
+(*1) Esto se va a usar solo para el pago con token?
+>No, sera un servicio habilitado para los comercios que tengan integrado pago con token y pago ocasional.
+
+(*2) En los params nuevos del create single buy, el comercio debería mandar RUC del cliente? Se lo va a pedir antes? En ese caso, también se lo vamos a pedir nosotros en el checkout?
+>El comercio debera enviar el RUC del cliente, ademas de los datos de nombre y mail, que luego seran cargados en el json del request para el single buy. El iframe no sera modificado. (modificar el iframe era la idea inicial como se ven en los mockups, pero fue descartada)
+
+(*3) Respecto a la tabla de “Configuración Global“ que proponen. Consideramos que es una buena oportunidad para implementar feature flags correctamente ya que la solicitud es por definición una implementación de feature flags.
+>Se puede realizar con el feature flags, siempre y cuando la activacion/desactivacion se pueda hacer en caliente, es decir, sin necesidad de reiniciar el servicio.
+
+Previo a realizar la factura electrónica, vamos a validar si tiene el servicio de FE activo en commerce-service?
+>Previo a encolar la factura electronica, se debe verificar si la configuracion global de FE esta activa, y si la configuracion de FE por comercio esta activa
+
+(*4) Que vamos a hacer con los datos del emisor? Entendemos que los datos a validar son los especificados en el documento (timbrado, nro de expedición, etc). Que tenemos que validar en esos datos?
+>Los datos: timbrado, numero de expedición, y establecimiento se deben verificar con la respuesta del servicio de "Consultar Emisor" dado el ruc del emisor.
+Las validaciones que se deben realizar son: timbrado: que exista en la lista de timbrados dado el ruc emisor establecimiento: que exista en la lista de establecimientos del timbrado dado punto de expedicion: que exista en la lista de establecimientos del timbrado dado y corresponda al establecimiento. El establishment debe ser de "Facturación Electrónica" para la validación del emisor.
+
+El envío al jpos para autorización se mantiene idéntico o hay que enviar algún dato extra?
+>En principio se mantiene identico.
+
+(*5) Como informamos al comercio, que la generación de la factura falló?
+
+Debemos devolver al comercio información de la factura encolada luego del checkout?
+>Por el momento solo es necesario devolver el numero de la factura generada
+
+Tarea
+
+Estimación (hs)
+
+vpos
+
+Luego de enviar el pago para autorizar en endpoint de confirmación de QR (confirm_qr_buy), encolar la generación de la factura.
+Comentarios:
+Si la generación de factura falla, no se genera la factura pero el pago permanece efectuado. El comercio deberá realizar la factura desde el portal de FE.
+Guardar en la tabla nueva el nro de factura y CDC.
+
+18
+
+vpos
+
+Confirmar que el callback al comercio ya tiene la informacion del resultado de la generacion de factura..
+Comentarios:
+En el caso de que no se haya hecho el flujo de FE, no agregar el bloque en el callback, ni siquiera vacío.
+
+En una revisión previa vimos que a priori ese código se puede reutilizar sin problemas
+
+1
+
+vpos
+
+En la operación de “confirm_qr_buy“ devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+
+4
+
+billing-proxy
+
+En la operación de “confirm_qr_buy“ devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+Se contemplan en éstas horas el setup del nuevo proyecto y un breve onboarding
+
+8

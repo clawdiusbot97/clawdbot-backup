@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""
+Twitter RSS formatter (Writer role).
+Reads raw tweet JSON from twitter-fetch, filters by relevance, and produces a curated markdown digest.
+Supports dynamic categories from keywords config.
+"""
+
+import json
+import os
+import sys
+import re
+from datetime import datetime, timezone
+from typing import Dict, List, Any, Optional
+
+# Paths
+SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_DIR = os.path.join(SKILL_DIR, "config")
+DIGESTS_DIR = os.path.join(SKILL_DIR, "digests")
+CHECKPOINTS_DIR = os.path.join(SKILL_DIR, "checkpoints")
+
+os.makedirs(DIGESTS_DIR, exist_ok=True)
+os.makedirs(CHECKPOINTS_DIR, exist_ok=True)
+
+CONFIG_KEYWORDS = os.path.join(CONFIG_DIR, "keywords.json")
+STATE_FILE = os.path.join(CHECKPOINTS_DIR, "last-digest.json")
+DEFAULT_STATE = {"last_digest_at": None, "last_data_timestamp": None}
+
+def load_json(path: str, default=None):
+    if not os.path.exists(path):
+        return default if default is not None else {}
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"ERROR loading {path}: {e}", file=sys.stderr)
+        return default if default is not None else {}
+
+def save_json(path: str, data):
+    try:
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"ERROR saving {path}: {e}", file=sys.stderr)
+
+def normalize_text(text: str) -> str:
+    """Remove extra whitespace, newlines, and truncate if needed."""
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+def keyword_score(text: str, keywords: List[str]) -> int:
+    """Count keyword matches (case-insensitive)."""
+    text_lower = text.lower()
+    score = 0
+    for kw in keywords:
+        if kw.lower() in text_lower:
+            score += 1
+    return score
+
+def format_timestamp(ts_str: Optional[str]) -> str:
+    """Format timestamp for display."""
+    if not ts_str:
+        return "unknown"
+    try:
+        dt = datetime.fromisoformat(ts_str.replace('Z', '+00:00'))
+        return dt.strftime("%Y-%m-%d %H:%M UTC")
+    except:
+        return ts_str
+
+def main():
+    # Parse command line arguments
+    raw_data_path = None
+    if len(sys.argv) > 1:
+        raw_data_path = sys.argv[1]
+    else:
+        # Look for latest raw data file
+        data_dir = os.path.dirname(os.path.dirname(SKILL_DIR)) + "/twitter-fetch/data"
+        if os.path.exists(data_dir):
+            files = sorted([f for f in os.listdir(data_dir) if f.startswith('tweets-raw-') and f.endswith('.json')], reverse=True)
+            if files:
+                raw_data_path = os.path.join(data_dir, files[0])
+    
+    if not raw_data_path or not os.path.exists(raw_data_path):
+        print(f"ERROR: Raw data file not found: {raw_data_path}", file=sys.stderr)
+        print("Usage: twitter_format.py [path/to/tweets-raw-{timestamp}.json]", file=sys.stderr)
+        sys.exit(1)
+    
+    # Load config
+    config = load_json(CONFIG_KEYWORDS)
+    if not config:
+        print("ERROR: Missing config/keywords.json", file=sys.stderr)
+        sys.exit(1)
+    
+    keywords = config.get("keywords", {})
+    categories = list(keywords.keys())
+    min_score = config.get("min_keyword_score", 1)
+    max_per_category = config.get("max_tweets_per_category", 10)
+    truncate_len = config.get("truncate_length", 280)
+    include_low = config.get("include_low_score", False)
+    
+    # Load raw data
+    raw_data = load_json(raw_data_path)
+    if not raw_data:
+        print(f"ERROR: Failed to load raw data from {raw_data_path}", file=sys.stderr)
+        sys.exit(1)
+    
+    tweets = raw_data.get("tweets", [])
+    if not tweets:
+        print("No tweets in raw data.", file=sys.stderr)
+        sys.exit(0)
+    
+    # Filter and score tweets
+    filtered_by_category = {cat: [] for cat in categories}
+    
+    for tweet in tweets:
+        category = tweet.get("category", "tech")
+        # If category not in keywords, fallback to first category
+        if category not in keywords:
+            category = categories[0] if categories else "tech"
+        text = tweet.get("text", "")
+        kw_list = keywords.get(category, [])
+        
+        score = keyword_score(text, kw_list)
+        tweet["score"] = score
+        tweet["keywords_matched"] = [kw for kw in kw_list if kw.lower() in text.lower()]
+        
+        if score >= min_score or include_low:
+            filtered_by_category[category].append(tweet)
+    
+    # Sort by date (newest first) within each category
+    for cat in categories:
+        filtered_by_category[cat].sort(key=lambda x: x.get("date", ""), reverse=True)
+        # Limit per category
+        filtered_by_category[cat] = filtered_by_category[cat][:max_per_category]
+    
+    # Generate digest
+    lines = []
+    lines.append("# 🐦 Twitter Digest")
+    lines.append(f"*Updated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}*")
+    lines.append("")
+    
+    total_included = 0
+    for cat in categories:
+        cat_tweets = filtered_by_category[cat]
+        if not cat_tweets:
+            continue
+        
+        lines.append(f"## {cat.capitalize()}")
+        lines.append("")
+        
+        for tweet in cat_tweets:
+            account = tweet.get("account", "")
+            display = tweet.get("display", account)
+            text = tweet.get("text", "")
+            link = tweet.get("link", "")
+            date = tweet.get("date", "")
+            
+            # Truncate text if needed
+            if len(text) > truncate_len:
+                text = text[:truncate_len-3] + "..."
+            
+            lines.append(f"**{display}** (@{account})")
+            lines.append(f"{text}")
+            lines.append(f"[🔗 Original tweet]({link})")
+            lines.append("")
+            total_included += 1
+    
+    lines.append("---")
+    lines.append(f"*{total_included} relevant tweets from {len(tweets)} total fetched*")
+    
+    digest = "\n".join(lines)
+    
+    # Save digest file
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
+    digest_path = os.path.join(DIGESTS_DIR, f"digest-{timestamp}.md")
+    with open(digest_path, 'w', encoding='utf-8') as f:
+        f.write(digest)
+    
+    # Update checkpoint
+    state = load_json(STATE_FILE, DEFAULT_STATE)
+    state["last_digest_at"] = datetime.now(timezone.utc).isoformat()
+    state["last_data_timestamp"] = raw_data.get("timestamp")
+    save_json(STATE_FILE, state)
+    
+    # Output digest to stdout (for OpenClaw agent to capture)
+    print(digest)
+    
+    # Print stats
+    print(f"\n📊 Formatting Stats:", file=sys.stderr)
+    print(f"  Total raw tweets: {len(tweets)}", file=sys.stderr)
+    for cat in categories:
+        count = len(filtered_by_category[cat])
+        print(f"  {cat.capitalize()}: {count} tweets", file=sys.stderr)
+    print(f"  Digest saved: {digest_path}", file=sys.stderr)
+
+if __name__ == "__main__":
+    main()

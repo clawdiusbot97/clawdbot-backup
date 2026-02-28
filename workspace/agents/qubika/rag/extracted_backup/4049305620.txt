@@ -1,0 +1,21 @@
+TITLE: Lookup de un pago con tarjeta catastrada
+DOMAIN: General
+PRIORITY: Media
+ID: 4049305620
+SOURCE: 4049305620__Lookup_de_un_pago_con_tarjeta_catastrada.json
+
+---
+
+VPOS
+JS → VPOS Portal
+jsVPOS portal → VPOS service
+rubyVPOS service → external-services
+rubyTPAGO
+JS → TPago Portal
+js
+
+TPago portal → payment-link-service
+ruby
+
+payment-link-service → external-services
+ruby

@@ -1,0 +1,40 @@
+TITLE: Notas Cybersource 3ds
+DOMAIN: General
+PRIORITY: Media
+ID: 4824793095
+SOURCE: 4824793095__Notas_Cybersource_3ds.json
+
+---
+
+Preguntas, tareas técnicas y recomendaciones adicionales (de la documentación oficial):
+Actualizar lógica para NO autorizar pagos si el enrollment service rechaza la operación
+La documentación de cybersource indica que según la respuesta del enrollment service (ex lookup), hay casos en los que no se debe proceder a la autorización. Es decir que para nuestro caso, sería condición suficiente para mostrar un mensaje de error sin siquiera llamar al JPOS.
+Nosotros hoy en dia sea cual sea el resultado del lookup, siempre llamamos al JPOS enviando el resultado. Mantenemos ese comportamiento?
+Rta: siempre llamar al JPOS.
+
+Disparar DDC apenas se complete el número de tarjeta(mejora UX y performance). Las buenas prácticas indican que el DDC hay que realizarlo ni bien el usuario introduce la tarjeta, antes de presionar “Pagar”. Para ahorrar tiempo. Implementamos de esa manera? Suma complejidad y llamados al servicio. Cómo aplica a flujos con tarjetas catastradas/alias_token? Imposible realizar si se requiere kount antes.
+Rta: no implementar esta mejora.
+
+Documentar nuevo modelo de datos y flujos 3DSpara QA y soporte. Diagramas.
+
+Riesgo detectado:que la gema oficial de cybersource no soporte el 100% de nuestros requerimientos o presente fallas o incompatibilidades, tendremos que implementar la comunicación con cybersource nosotros en external-services.
+Rta: la gema viene funcionando bien.
+
+Consideraciones especiales para Visa Token: se envia a cybersource el Visa Token en los mismos campos que el PAN? Hay que enviar de manera diferenciada?
+
+Nomenclatura: tenemos en código, tablas, columnas, muy presente el nombre “cardinal”. Reemplazarlos todos lleva un esfuerzo extra. Sobre todo lo relacionado a la base de datos.
+
+Migración de credenciales: en vPOS cada comercio tiene sus credenciales para cardinal.
+
+Reversibilidad del cambio: este cambio de proveedor de 3DS no está siendo planeado como reversible. No se podrá vovler a Cardinal como proveedor de una manera sencilla ni podrán estar activos ambos ni son compatibles entre sí.
+
+Ajustes al JPOS: qué cambios habría en los parámetros de las peticiones que se le hacen al JPOS para autorizar/preautorizar/catastrar ?
+
+Consideraciones importantes para el desarrollo
+En Step 3 (enrollment service) se debe enviar el referenceId obtenido en el Step 1 (setup service)
+
+Validar si elconsumerAuthenticationInformation.authenticationTransactionIdque recibimos en la respuesta del Check Enrollment (step 3) es el mismo que elTransactionIdque recibimos en elPOST returnUrl?TrasactionId=?Esto nos serviria para saber de qué pago estamos recibiendo el returnUrl.
+
+https://app.diagrams.net/#G1RDyKeUuSk8d7nmdrZ8PIf3ObgQnWC5yo#{"pageId"%3A"2YBvvXClWsGukQMizWep"}
+
+https://app.diagrams.net/#G1YniFU4FFpyAKf6b983OaeJpLB7NblfRz#{"pageId"%3A"Q6Qj3vK8hR4XFauKPOTc"}

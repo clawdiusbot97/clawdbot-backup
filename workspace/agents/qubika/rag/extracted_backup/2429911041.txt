@@ -1,0 +1,65 @@
+TITLE: Lista de Proyectos ( 🚩borrar)
+DOMAIN: General
+PRIORITY: Media
+ID: 2429911041
+SOURCE: 2429911041__Lista_de_Proyectos_(_≡ƒÜ⌐borrar).json
+
+---
+
+Proyecto
+
+Finalidad
+
+bancard-reversal-service
+
+bancard-tpago-portal
+
+bancard-billing-service-public-proxy
+
+bancard-payment-link-service
+
+bancard-vpos-service
+
+bancard-selling-service
+
+bancard-commerce-suite
+
+bancard-external-services
+
+bancard-commerce-service
+
+bancard-bportal
+
+bancard-mpos-service
+
+bancard-billing-service
+
+bancard-external-commerce-service
+
+bancard-payment-link-portal
+
+bancard-auth-service
+
+bancard-auth-portal
+
+bancard-vpos-portal
+
+bancard-commons
+
+bancard-entities-processing-service
+
+bancard-audit-service
+
+bancard-transfer-service
+
+bancard-s4-service
+
+bancard-biller-service
+
+bancard-epos-service
+
+bancard-loggers
+
+bancard-selling-portal
+
+bancard-notification-service

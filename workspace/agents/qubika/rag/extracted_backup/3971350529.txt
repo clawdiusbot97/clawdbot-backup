@@ -1,0 +1,89 @@
+TITLE: Histórico de Pagos - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3971350529
+SOURCE: 3971350529__Histo╠ürico_de_Pagos_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la vista deHistórico de Pagos, a cargo de.
+Las horas estimadas son:85
+Fecha de Inicio:
+Fecha estimada de Entrega:→ Considerando queesta 6hs por día
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Crear dataset que liste los pagos de un suscriptor en su suscripción
+Deberá traer también datos del suscriptor como RUC, EMAIL, TELÉFONO y si está activo.
+
+12
+
+payment-link-service
+
+Crear endpoint que consuma el nuevo dataset y represente los pagos
+
+8
+
+payment-link-service
+
+Crear maquetado de vista de pagos de un suscriptor
+
+15
+
+payment-link-portal
+
+Modificar la vista de Suscripciones para poder acceder desde ahí a la vista de Histórico de Pagos
+El nombre del suscriptor se verá como un link que al hacer hover cambiará el mouse a una mano y se podrá seleccionar para acceder ala vista.
+
+6
+
+payment-link-portal
+
+Crear opción para volver a listado de Suscripciones desde la vista de Histórico de Pagos
+
+6
+
+payment-link-portal
+
+Crear endpoint para poder consumir el listado de Pagos de un Suscriptor desde la API
+
+10
+
+external-commerce-service
+
+Consumir el endpoint nuevo para traer todos los pagos del suscriptor y representarlos en la tabla
+
+6
+
+payment-link-portal
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+12
+
+Total Desarrollo
+
+75
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+10
+
+Total Desarrollo + Gestión
+
+85

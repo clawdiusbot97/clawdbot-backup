@@ -1,0 +1,441 @@
+TITLE: CNB Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2675277852
+SOURCE: 2675277852__CNB_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: -
+Today: Viendo un ajuste con Victor. Viendo si va a ruby upgrade o a develop. Ticket 239.
+Blockers? No.
+
+68incomplete
+
+Yesterday: -
+Today: -
+Blockers?
+
+66incomplete
+
+Yesterday: Trabajando con el fix de tpago portal.
+Today: Joaco está revisando la PR. Después siguió repasando el proyecto de vpos.
+Blockers? No.
+
+67incomplete
+
+Yesterday: -
+Today: Trabajando en el ticket 238, unos cambios en el front. A la tarde hacemos el deploy. Estaria listo.
+Blockers? No.
+
+64incomplete
+
+Yesterday: Viendo lo de vpos iniciativa 3DS, junto con Joaco.
+Today: Trabajando en un fix de Vulnerabilidades. Quedó la PR lista. Ticket GE-89. Revisando algunas PRs. Viendo el ticket GE-79, probandolo en Bancard, surgió un fix. Así que va a estar con eso.
+Blockers? No.
+
+65incomplete
+
+Yesterday: -
+Today: -
+Blockers? No.
+
+62incomplete
+
+Yesterday: -
+Today: -
+Blockers? No.
+
+63incomplete
+
+Yesterday: Arrancó con el ticket 234.
+Today: Hoy va a estar trabajando con eso. Es una tarea de un CSV al que hay que agregar una nueva columna.
+Blockers? No.
+
+Yesterday: -
+Today: -
+Blockers? No.
+
+60incomplete
+
+Yesterday: -
+Today: Too las tareas de Jhona. Ticket 233, lo mergeo y deployo a staging.
+Blockers? No.
+
+61incomplete
+
+Yesterday: -
+Today: -
+Blockers? No.
+
+Yesterday: -
+Today: Marcelo subió un ticket y lo está revisando.
+Blockers? No.
+
+58incomplete
+
+Yesterday: -
+Today: Sin tickets ni tareas de momento.
+Blockers? No.
+
+59incomplete
+
+Yesterday: Onboarding y contexto de la iniciativa.
+Today: Sigue con el contexto.
+Blockers? No.
+
+Yesterday: Trabajando en la última tarea que subió Marcelo.
+Today: Sigue con la misma tarea. Ticket 227.
+Blockers? No.
+
+56incomplete
+
+Yesterday: Tomó la tarea 228. Tuvieron una reunión con Marcelo. La tarea 226 no era un error.
+Today: Hoy vamos a ver eso en la reunión de seguimiento. La 228 ya se termino y se subió, solo resta un detalle.
+Blockers? No.
+
+57incomplete
+
+Yesterday:
+Today: Temprano tuvo una reunión con Marcelo. Se dieron cuenta de que había un error en la parte de le reversa contra el facturador. Estuvo trabajando en fixear eso.
+Blockers? No.
+
+54incomplete
+
+Yesterday: -
+Today: -
+Blockers? No.
+
+55incomplete
+
+Yesterday: -
+Today: Revisando y haciendo algunas pruebas. Viendo el tema de la personalización de los errores. Se subió una PR con un cambio pequeño.
+Blockers? No.
+
+52incomplete
+
+Yesterday: Estuvo revisando la tarea 223. Se terminó el viernes y se subió
+Today: Hoy va a estar con Datos adicionales.
+Blockers? No.
+
+53incomplete
+
+Yesterday: Trabajando en las tareas del board. 221.
+Today: Vio un temita extraño, algo raro anda pasando. Los errores están resueltos, pero hay una parte que está tirando los errores por otro lado. El ticket se deployó, pero trabajando en la identificacion de esos errores (tarea agregada).
+Blockers? No.
+
+50incomplete
+
+Yesterday: -
+Today: Se deployó lo último y tomó el ticket 223.
+Blockers? No.
+
+51incomplete
+
+Yesterday: Reunión con Marcelo para revisar el ticket grande que subió.
+Today: Ticket 221. Ya está dando los toques finales y haciendo pruebas del ticket. Entre hoy y mañana debería estar cerrado el ticket.
+Blockers? No.
+
+48incomplete
+
+Yesterday: -
+Today: -
+Blockers? -
+
+49incomplete
+
+Yesterday: Viernes hizo deploy de los tickets pendientes.
+Today: Reunión con Marcelo para recibir detalles del ticket que creó Marcelo el viernes.
+Blockers? Si, la VPN.
+
+46incomplete
+
+Yesterday: Mergeando los tickets que tenía pendiente. Uno del voucher y otro del reporte histórico. Trancado con el tema del deploy.
+Today: Esperando que se solucione lo de la VPN para continuar con el tema del deploy.
+Blockers? Si, la VPN.
+
+47incomplete
+
+Yesterday: Siguen trabajando con los tickets in progress.
+Today: Hubo un error que reportó Victor, hay un error que estaba en el código y se pudo arreglar. Va a estar terminando todo esos tickets para hoy.
+Blockers? No.
+
+44incomplete
+
+Yesterday: Terminó el 217, ya subió la PR.
+Today: Se va a subir el 217 a staging. Y tomó el 219, va a tratar de tenerlo para hoy.
+Blockers? No.
+
+45incomplete
+
+Yesterday: Continuo con esta tarea (216), estuvieron preguntando en Temas y no recibieron respuesta. Empezó a armar el archivo con los métodos de validación.
+Today: Hoy hablo con Victor sobre un ticket nuevo. Terminar el documento hoy y continuar con el ticket 215.
+Blockers? El ticket 216 está bloqueado.
+
+42incompleteCrear ticket del informe de metodos de validacion (Seba)
+
+Yesterday: Ayer vieron con Jhona el tema del bloqueo.
+Today: Hoy Marcelo escribió y en un reporte quieren que se muestre un modal de una vista resumida. Ticket 217.
+Blockers? No.
+
+43incomplete
+
+Yesterday: -
+Today: Tuvo una reunión con Victor y Marcelo para ver unas cosas que Marcelo había encontrado. Va a revisar esos temas y va a crear un flujo con los metodos de validacion.
+Blockers? No.
+
+40incomplete
+
+Yesterday: -
+Today: Sin tareas de momento. Pablo Escobar estuvo subiendo unos commits a develop. Así que va actualizar eso.
+Blockers? No.
+
+41incomplete
+
+Yesterday: Surgió un bloqueo porque no estaba funcionando billing service. Capaz ese era el error que reportaba Marcelo.
+Today: Se pudo deployar una imagen de billing y se pudo continuar. Sigue intentado setear todo el ambiente para seguir el flujo localmente
+Blockers? No.
+
+38incomplete
+
+Yesterday: Subió a staging un par de cambios y unos ajustes en los separadores de miles.
+Today: Revisando staging, algunos datos quedaron incosistentes. Revisando nomas, sin tareas.
+Blockers? No.
+
+39incomplete
+
+Yesterday: Trabajando en el cambio de los timeouts.
+Today: Hoy sigue con el cambio de los timeouts. Localmente funcionando, hay que ver como se comporta en staging.
+Blockers? No.
+
+36incomplete
+
+Yesterday: Trabajando con el ticket 212. Está relacionado con el 208.
+Today: Revisando y testeando el 208. Terminado pero se está revisando.
+Blockers? Blocker de staging.
+
+37incomplete
+
+Yesterday: Trabajando en un cambio que se pidio la semana pasada
+Today: Sigue trabajando en el ticket 209.
+Blockers? No.
+
+34incomplete
+
+Yesterday: Trabajando en tickets 211 y 212.
+Today: El 211 ya está listo. Sigue trabajando en el 212. Lo subió Marcelo hoy temprano.
+Blockers? No.
+
+35incomplete
+
+Yesterday: Resolvió los tickets que subio Marcelo.
+Today: Fixeando errores de epos, hablando con Victor para solucionar otro problemas.
+Blockers? No.
+
+32incomplete
+
+Yesterday: Ticket 207, ya quedo. Se subió también el 204. Relacionado con el 203 que se está verificando.
+Today: Trabajando en el 208. Va a estar para hoy
+Blockers? No.
+
+33incomplete
+
+Yesterday: -
+Today: Pequeña meeting con Marcelo. Hay un problemita en commerce-suite. Ticket 197.
+Blockers? No.
+
+30incomplete
+
+Yesterday: -
+Today: Ticket 196 terminado. Ahora ticket 198, descarga de reportes.
+Blockers? No.
+
+31incomplete
+
+Yesterday: Termino el fix que paso Marcelo del envío de la factura por correo.
+Today: Enfoncandose en el error de staging. Trabajando en el ticket 191.
+Blockers? No.
+
+28incomplete
+
+Yesterday: Terminando el 190. Error en los reportes
+Today: Trabajando en el ticket 192. Sigue con ese.
+Blockers? No.
+
+29incomplete
+
+Yesterday: Fix terminado ayer.
+Today: PR aprobado y fix deployado. Siguiendo con los tests, sin otro ticket de momento.
+Blockers? No.
+
+26incomplete
+
+Yesterday: Sin ticket.
+Today: Estuvo haciendo QA de las tareas que trabajó. Encontro un fix pequeño, asi que se esta ajustando. Se está dando en staging.
+Blockers? No.
+
+27incomplete
+
+Yesterday:
+Today: Añadiendo unos tests para commerce suite. Para hacer escalable la iniciativa.
+Blockers? No.
+
+24incomplete
+
+Yesterday:
+Today: No hay muchas tareas. A disposición por si surje algo.
+Blockers?
+
+25incomplete
+
+Yesterday: Trabajando en la 178.
+Today: Ultimos ajustes de la 178. hoy se sube el ajuste.
+Blockers? No.
+
+22incomplete
+
+Yesterday: Se termino la tarea 181.
+Today: Cambio de texto. Tarea 182.
+Blockers? No.
+
+23incomplete
+
+Yesterday: Terminada la 172.
+Today: Esperando algún ajuste.
+Blockers? No.
+
+Yesterday: Terminó la tarea 174.
+Today: Hoy va a estar trabajando en la 178.
+Blockers? No.
+
+20incomplete
+
+Yesterday: terminando el 180. Quedó en staging.
+Today: Va a estar trabajando en el 181. Hoy seguramente se termine.
+Blockers? No.
+
+21incomplete
+
+Yesterday: Mirando el board y tomó la 172.
+Today: Hoy va a estar trabajando en la 172, en la parte del frontend.
+Blockers? No.
+
+Yesterday: -
+Today: Trabajando en la tarea 166.
+Blockers? No.
+
+17incomplete
+
+Yesterday: Terminó la 173. Se va a subir a staging.
+Today: Trabajando en el bug que se reportó en teams.
+Blockers?
+
+18incomplete
+
+Yesterday: -
+Today: Comenzará a ayudar y va a trabajar con la tarea 179.
+Blockers? No.
+
+19incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+15incomplete
+
+Yesterday: Terminando el 164. Quedo listo. Eso está deployado.
+Today: Arrancó con la tarea 173
+Blockers? No.
+
+16completeDar una mano con el deploy de la 146 (metodo de validacion restante)
+
+Yesterday: Se terminó la parte funcional del método de validación.
+Today: Quedan algunos detalles. Para que se haga la reversa de epos.
+Blockers? No.
+
+13incompleteApuntar al jueves para tener el método de validación
+
+Yesterday: Sigue con la 164. Está el desarrollo del front hecho.
+Today: Hay errores del back a solucionar. Revisando eso. Enfocarse en la 164.
+Blockers? Errores del back.
+
+14incompleteTerminar la 164
+
+Yesterday: Trabajo en commerce-suite.
+Today: Reunión con Victor para resolver unos problemas de commerce-suite.
+Blockers? No.
+
+11incompleteApuntar al jueves para tener el método de validación
+
+Yesterday: Trabajando en la tarea 164.
+Today: Se reportó un error (ticket 174) que ya se fixio. Hoy se termina el 164.
+Blockers? No.
+
+12incompleteApuntamos al miércoles para terminar la 164
+
+Yesterday: Terminado la parte de epos.
+Today: Arrancó con commerce-suite. Seguir con commerce-suite
+Blockers? No.
+
+9incomplete
+
+Yesterday: Tarea 164.
+Today: Hoy va a seguir con la 164.
+Blockers? No.
+
+10incompleteApuntamos al miércoles para terminar la 164
+
+Yesterday: Fixes en el front
+Today: Tarea de método de validación pendiente. Apuntamos al jueves de esta semana.
+Blockers? No.
+
+7incompleteApuntar al jueves para tener el método de validación
+
+Yesterday: Trabajando con las tareas 161 y 162. Había bloqueado unos tests
+Today: La 161 y la 162 se terminan hoy. Y va a seguir con la 164
+Blockers? No.
+
+8incomplete
+
+Yesterday: Fixeando todo para la DEMO. Siguió trabajando en el fix de un botón.
+
+Today: Trabajando en deuda técnica que quedó del proyecto. Después va a continuar con el último método de validación (Ticket 146).
+
+Blockers? No
+
+5completeTener en cuenta el re deploy después del 146.
+
+Yesterday: Cambios en Boca Web.
+
+Today: Cambios en Boca Web. Viendo errores que pasó Gustavo. Se corrigieron algunos pero va a seguir con eso.
+
+Blockers? No.
+
+6completeVer la creación de tickets
+
+Yesterday: Fixes para la demo en staging.
+Today: Fixes que salieron despues del deploy. Ticket 146 despues de los fixes.
+Blockers? No.
+
+2incompleteTener en cuenta el re deploy despues del 146.
+
+Yesterday: Ayudando a Jhona. Fix de flujo del cashout.
+Today: Fix de monitoreo. Fixes que salieron de la DEMO. Cambios en Boca Web. (https://jira.bancardnet.dom/confluence/display/PCNB/Cambios+en+boca+web)
+Blockers? No.
+
+3incompleteVer la creación de tickets
+
+Yesterday: Pasa a Vuelto 2.0
+Today: Vuelto 2.0
+Blockers? No.
+
+4incomplete

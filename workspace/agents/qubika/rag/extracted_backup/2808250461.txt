@@ -1,0 +1,115 @@
+TITLE: Ruby Upgrade - Estimations
+DOMAIN: 4) Servicios
+PRIORITY: Alta
+ID: 2808250461
+SOURCE: 2808250461__Ruby_Upgrade_-_Estimations.json
+
+---
+
+Dentro de estas estimaciones tuvimos en cuenta el esfuerzo dedicado a la actualización de Ruby y las gemas que se utilizan, teniendo en cuenta la compatibilidad de las mismas, cambios en las gemas nuestras o la búsqueda de alternativas para suplantarlas. También una etapa de testeo de la funcionalidad de otros servicios y plataformas/portales que interactúan con él. No está contemplado las posibles mejoras y errores conocidos que pueda proponer el equipo de Bancard.
+Service
+
+Min Est (Days)
+
+Max Est (Days)
+
+Comments
+
+Prioridad
+
+audit-service
+
+20
+
+30
+
+Hay que actualizar todo. Es un proyecto que está al día y no debería generar mucho desafío.
+
+5
+
+auth-service
+
+7
+
+14
+
+Ya está actualizado. Requiere algunas mejoras
+
+1
+
+biller-service
+
+14
+
+20
+
+Es un servicio chico con gemas bastante standard dentro de los servicios que tenemos
+
+2
+
+billing-service
+
+20
+
+30
+
+A confirmar si hay que actualizar o ya es compatible para darle una prioridad
+
+3
+
+loyalty-service
+
+???
+
+???
+
+A confirmar porque es un proyecto que esta desactualizado y sin mantenimiento. Puede llevar mucho tiempo. Habría que estimarlo con Gian, o hablarlo con él al menos para tener una mejor comprensión del funcionamiento de los flujos y procesos.
+
+muy baja
+
+mpos-service
+
+30
+
+45
+
+Arreglar GitHub actions que no están funcionando
+
+Usa gemas particulares, como unas custom (tlv, dukpt, rqrcode) que no tienen mucha o nula documentación y hay que entender mejor el contexto.
+
+Es un proyecto que está un poco deprectado. Hay que hablar con Bancard a ver si lo quiere actualizar
+
+7
+
+s4-service
+
+14
+
+20
+
+Es un proyecto chico que aloja rutas de archivos.
+
+6
+
+vpos-service
+
+20
+
+30
+
+Tiene un portal asociado que es VPos Portal
+
+Actualizar VPos service es sencillo, pero si tenemos que tocar VPos portal habría que asignarle bastante más. (Si hay que sumar VPos Portal, necestaríamos sumar aa la estimación que es el que sabe más del tema)
+
+4
+
+vpos-portal (Nice To Have)
+
+VPos portal no es un servicio por lo tanto no afectaría noa ctualizarlo, pero estaría bueno hacerlo en algún momento.
+Si hay que sumar VPos Portal, necestaríamos sumar aa la estimación que es el que sabe más del tema)
+
+a confirmar
+
+Estimación mínima:119 días
+Estimación máxima:179 días
+Estas estimaciones no incluyen a loyalty-service y vpos-portal. Habría que confirmar primero si se quieren actualizar, y en ese caso conyrespectivamente.

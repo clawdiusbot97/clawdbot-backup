@@ -1,0 +1,12 @@
+TITLE: Pull Requests
+DOMAIN: 7) Repos
+PRIORITY: Media
+ID: 2575237367
+SOURCE: 2575237367__Pull_Requests.json
+
+---
+
+Este templatedebe ser utilizadopara registrar nuevos PRs dentro de Github.
+Una sugerencia para simplificar la realización de pull requests consiste en vincularlas directamente con el proyecto para automatizar el proceso de envío. Esta estrategia puede resultar beneficiosa para agilizar el flujo de trabajo y garantizar la eficiencia en el manejo y la corrección de PRs.
+Template Android
+Template React Native

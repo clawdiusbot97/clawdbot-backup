@@ -1,0 +1,149 @@
+TITLE: Nuevo Portal de Reseteo de Contraseña - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3022290990
+SOURCE: 3022290990__Nuevo_Portal_de_Reseteo_de_Contrasen╠âa_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Esta estimación es en base al ticket
+https://bancard.atlassian.net/browse/PDA-388Tarea
+
+Estimación (hs)
+
+Portal / Servicio
+
+Diseño de pantallas + experiencia UX/UI (esto corre por cuenta de Qubika)
+
+40
+
+Setup del proyecto nuevo con todas las herramientas (rubocop, sentry, simplecov, github actions)
+
+32
+
+[auth-portal-new]
+
+Vista de ingreso de correo
+
+16
+
+[auth-portal-new]
+
+Endpoint para inicio de reseteo de contraseña
+
+16
+
+[auth-portal-new]
+
+Modificar el endpoint de inicio de reseteo de contraseña para que no envíe el OTP y refactorear el correo.
+Ademas verificar y si el reset_token no está expirado, enviar el mismo.
+
+16
+
+[auth-service]
+
+Vista de success en el envio de correo con boton para reenviar el correo
+
+Para el reenvío de correo, llamar el endpoint de reinicio de contraseña
+
+24
+
+[auth-portal-new]
+
+Crear vista para el ingreso de nueva contraseña.
+
+En el caso de requerir OTP, pegarle a un endpoint para enviar el mismo, mostrar el input para ingresarlo y botón para reenviarlo
+
+32
+
+[auth-portal-new]
+
+Endpoint para el envío de OTP
+
+8
+
+[auth-portal-new]
+
+Endpoint para generación y envío de OTP para reseteo de contraseña. Modificar texto de SMS
+
+16
+
+[auth-service]
+
+Endpoint para recepción de nuevas contraseñas y código OTP en el caso que aplique
+
+20
+
+[auth-portal-new]
+
+Revisar y refactorear endpoint de reseteo de contraseña
+
+8
+
+[auth-service]
+
+Vista de success en el reseteo de contraseña con botón de redirect a la return_url
+
+12
+
+[auth-portal-new]
+
+Agregar el portal nuevo
+
+4
+
+[bancard-docker]
+
+Agregar configuración del portal nuevo
+
+4
+
+[bancard-configurations]
+
+Configuración de máquina de auth-portal en staging
+
+2
+
+[infrastructura]
+
+Configuración de proxy dmz para auth-portal en staging
+
+2
+
+[infrastructura]
+
+Configuración de maquinas de auth-portal en producción
+
+4
+
+[infrastructura]
+
+Configuración de proxy dmz para auth-portal en producción
+
+4
+
+[infrastructura]
+
+Refactor del endpoint request_reset en auth-service
+
+Agregar columna requires_otp en la tabla services y modificar operación validate_otp? para que en lugar de recibir el requires_otp por parámetro lo consulte desde la tabla servicios por el servicio asociado al usuario.
+
+12
+
+[auth-service]
+
+Gestion 15% (no altera el scope, es por tema de facturación)
+
+35
+
+Diseño + Experiencia UX/UI (esto va por cuenta de Qubika)
+
+40
+
+Total desarrollo
+
+232
+
+Total hs desarrollo + gestión - Sin diseño
+
+267

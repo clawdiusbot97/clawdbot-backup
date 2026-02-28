@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Cron Jobs Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background: #f9f9f9; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        .summary { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #3498db; color: white; font-weight: 600; }
+        tr:nth-child(even) { background: #f8f9fa; }
+        tr:hover { background: #f1f8ff; }
+        .status-ok { color: #27ae60; font-weight: bold; }
+        .status-error { color: #e74c3c; font-weight: bold; }
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+        .badge-ok { background: #d5f4e6; color: #27ae60; }
+        .badge-error { background: #ffdddd; color: #e74c3c; }
+        .badge-warn { background: #fff3cd; color: #856404; }
+        .timestamp { font-family: monospace; font-size: 0.9em; color: #7f8c8d; }
+        .section { margin-bottom: 40px; }
+        .footnote { margin-top: 30px; font-size: 0.9em; color: #7f8c8d; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 OpenClaw Cron Jobs Report</h1>
+        <p><strong>Generated:</strong> 2026‑02‑20 22:40 UTC<br>
+        <strong>Total jobs:</strong> 24 (22 enabled, 2 disabled)</p>
+
+        <div class="summary">
+            <h2>📊 Summary</h2>
+            <ul>
+                <li><strong>✅ Operational:</strong> 15 jobs</li>
+                <li><strong>⚠️ With errors:</strong> 9 jobs (mainly delivery failures, model mismatches)</li>
+                <li><strong>🔄 Next 24h runs:</strong> 12 scheduled executions</li>
+                <li><strong>💰 Cost‑sensitive:</strong> 3 jobs using premium models (gpt‑5.2‑codex, minimax‑m2.1)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎯 News/Newsletters/Music/Briefing Jobs (Active)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Schedule</th>
+                        <th>Next Run (UTC)</th>
+                        <th>Status</th>
+                        <th>Model</th>
+                        <th>Delivery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Twitter RSS Digest</td>
+                        <td>Every 12h</td>
+                        <td class="timestamp">2026‑02‑20 17:21</td>
+                        <td><span class="badge badge-error">Error</span></td>
+                        <td>deepseek‑v3.2</td>
+                        <td>Telegram ‑5095009832</td>
+                    </tr>
+                    <tr>
+                        <td>Daily Newsletter Digest</td>
+                        <td>Daily 09:00 UTC</td>
+                        <td class="timestamp">2026‑02‑21 09:00</td>
+                        <td><span class="badge badge-error">Timeout</span></td>
+                        <td>minimax‑m2.1</td>
+                        <td>Telegram ‑5295394319</td>
+                    </tr>
+                    <tr>
+                        <td>daily‑research‑scout</td>
+                        <td>Daily 07:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 10:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>daily‑morning‑briefing</td>
+                        <td>Daily 08:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 11:00 UTC</td>
+                        <td><span class="badge badge-error">Delivery failed</span></td>
+                        <td>deepseek‑v3.2</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>evening‑fallback‑briefing</td>
+                        <td>Daily 18:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 21:00 UTC</td>
+                        <td><span class="badge badge-error">Model error</span></td>
+                        <td>gpt‑5.1‑codex</td>
+                        <td>Telegram ‑5248435389</td>
+                    </tr>
+                    <tr>
+                        <td>music‑trends‑scout‑5am</td>
+                        <td>Mon/Wed/Fri 05:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑24 08:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram ‑5291576044</td>
+                    </tr>
+                    <tr>
+                        <td>music‑radar‑extended‑weekly</td>
+                        <td>Sun 11:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑22 14:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram ‑5291576044</td>
+                    </tr>
+                    <tr>
+                        <td>weekly‑newsletter‑metrics</td>
+                        <td>Sun 19:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑22 22:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram ‑5295394319</td>
+                    </tr>
+                    <tr>
+                        <td>life‑story‑daily‑question</td>
+                        <td>Daily 14:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 17:30 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Main session</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ Nightly Ops & Health Jobs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Schedule</th>
+                        <th>Next Run (UTC)</th>
+                        <th>Status</th>
+                        <th>Model</th>
+                        <th>Delivery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nightly_healthcheck</td>
+                        <td>Daily 02:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 05:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>nightly_cost_guard</td>
+                        <td>Daily 02:10 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 05:10 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>nightly_backlog_groomer</td>
+                        <td>Daily 02:20 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 05:20 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>nightly_trends_gate</td>
+                        <td>Daily 02:40 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 05:40 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>nightly_inbox_triage</td>
+                        <td>Daily 03:10 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 06:10 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>nightly_summary</td>
+                        <td>Daily 03:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 06:30 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>healthcheck:security‑audit</td>
+                        <td>Sun 08:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑22 11:30 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>healthcheck:update‑status</td>
+                        <td>Sun 08:40 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑22 11:40 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>📁 Brokia & Qubika Jobs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Schedule</th>
+                        <th>Next Run (UTC)</th>
+                        <th>Status</th>
+                        <th>Model</th>
+                        <th>Delivery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>brokia‑doc‑diario‑sync</td>
+                        <td>Daily 21:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 00:30 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>brokia‑calendar‑alerts‑daily</td>
+                        <td>Daily 07:10 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 10:10 UTC</td>
+                        <td><span class="badge badge-error">Delivery failed</span></td>
+                        <td>default</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>brokia‑doc‑maestro‑weekly‑sync</td>
+                        <td>Sun 22:00 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑23 01:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>qubika‑daily‑focus</td>
+                        <td>Mon/Thu 08:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑24 11:30 UTC</td>
+                        <td><span class="badge badge-error">Delivery failed</span></td>
+                        <td>deepseek‑v3.2</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>qubika‑deadline‑check</td>
+                        <td>Mon‑Fri 17:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 20:30 UTC</td>
+                        <td><span class="badge badge-error">Model error</span></td>
+                        <td>deepseek‑v3.2</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                    <tr>
+                        <td>itau‑daily‑spend‑analysis</td>
+                        <td>Mon‑Fri 08:30 (Montevideo)</td>
+                        <td class="timestamp">2026‑02‑21 11:30 UTC</td>
+                        <td><span class="badge badge-error">Timeout</span></td>
+                        <td>deepseek‑v3.2</td>
+                        <td>Telegram 2017549847</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Weekly & Improvement Jobs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Schedule</th>
+                        <th>Next Run (UTC)</th>
+                        <th>Status</th>
+                        <th>Model</th>
+                        <th>Delivery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Weekly Improvements Review</td>
+                        <td>Mon 00:00 UTC</td>
+                        <td class="timestamp">2026‑02‑24 00:00 UTC</td>
+                        <td><span class="badge badge-ok">OK</span></td>
+                        <td>default</td>
+                        <td>Telegram ‑5248435389</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footnote">
+            <p>Report generated by OpenClaw Orchestrator • Last updated: 2026‑02‑20 22:40 UTC</p>
+            <p>⚠️ Jobs with errors require manual correction (model mismatch, delivery failure, timeout).</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+TITLE: [VisaQR] Preguntas Kick-Off
+DOMAIN: General
+PRIORITY: Media
+ID: 2787902826
+SOURCE: 2787902826__[VisaQR]_Preguntas_Kick-Off.json
+
+---
+
+Esto va implicar una carga inicial de merchants para todos los comercios actuales (al menos los que usan QR) y una carga inicial de al menos una terminal para cada comercio (correpondiente a los QRs que se generan en portal de VentasQR y API de Comercios SIN SER POS). Esto porque todos los QRs generados van a necesitar la información de merchant y de terminal.
+
+Modificar endpoint de creación de comercio para recibir parámetros nuevos que necesitamos enviar a HST.
+
+GENERACIÓN
+Analizar los dos tipos de QR y ver si son compatibles y los cambios que haya que hacer en nuestro QR para adaptarse al QR de HST.
+
+Opciones para la creación de los merchant. La información del merchant la vamos a guardar en una tabla en commerce-service.
+Al crear el comercio/sucursal
+
+Al agregar el servicio de VentasQR o Tpago a la sucursal. (En este caso, hay que solicitar que el servicio se agregue para todos los comercios que usen QR incluso desde API)
+
+DESDE NUESTRO PUNTO DE VISTA DEBEMOS SEGUIR GENERANDO LOS QRs NOSOTROS
+Modificar la generación de los QRs
+
+Modificar la decodificación de los QRs (porque los QRs van a cambiar)
+
+Opciones para la creación de las terminales. Podemos almacenar las terminales en commerce-service o en selling-service. Nosotros preferimos en commerce-service asociada a la sucursal. Crear por defecto una terminal por comercio/sucursal para utilizar siempre que el QR no sea generado desde un POS.
+Exponer un endpoint aparte para registrar las terminales (pidiendo la información del dispositivo)
+
+Registrar las terminales cuando se haga el primer pago con esa terminal (en la generación del QR Express recibimos la información del dispositivo)
+
+CONFIRMACIÓN
+Consideramos que en el caso de ser posible, lo mejor es que las confirmación entren por billing-proxy. Validar si es posible en cuanto a autenticación y autorización. Podemos agregar autorización sin problema y sin afectar a las entidades que consumen hoy en día.
+
+No nos parece correcto que se vaya directo contra selling. Preferimos incluso crear otro servicio con la autenticación y autorización requerida antes que ir directo contra selling-service.
+
+Endpoint de confirmación lo podemos especificar nosotros a HST? En ese caso podríamos usar el mismo endpoint que tenemos hoy en día en billing-proxy. Requiere alguna respuesta particular?
+
+HST nos manda el alias? Como nos manda la información de pago?
+
+Evaluar como son los mecanismos de encriptación de los datos que recibimos y que devolvemos en el caso de existir un mecanismo. ISO-8583
+
+Pregunta
+
+Respuesta
+
+Es obligatoria la creación del merchant? Porque en la documentación no aparece como obligatoria.
+
+Si
+
+En el caso de las terminales sean previamente registradas. Vamos a hacer una validación al momento de la generación y si la terminal no esta registrada la rechazamos?
+
+Si no está registrada no le podemos agregar al QR un terminal code por ende no va a funcionar
+
+En selling-service se recibe información de la terminal que genera el QR. Esa información se valida?
+
+Falta resp
+
+Hoy en día ya registramos terminales en rediseño? Como es el flujo? Se puede aprovechar para crear esas terminales en HST y en nuestras tablas?
+
+Definido → Rediseño le va a pegar a un endpoint nuestro para registrar terminales y nosotros la creamos en HST
+
+Que vamos a hacer con payment-link-service y los QRs que genera? Se decodifican con las mismas operaciones que selling
+
+Hay que revisar los datos que queremos agregar
+
+Que terminal le vamos a asignar a los QRs generados desde el portal de VentasQR y desde la api de comercios? Vamos a tener una terminal general para todos los comercios y sucursales? Una por comercio? Una por comercio/sucursal? Y para los QRs generados desde Tpago?
+
+Una por comercio / sucursal
+
+Se puede crear mas de una terminal para un mismo merchant code?
+
+Si
+
+Que pasa con los QRs de MPOS? Revisar a ver que no afectemos.
+
+mismos cambios que para payment-link-service
+
+Quieren aceptar pagos de HST en MPos?
+
+Como se van a hacer cambios en el resto de las aplicaciones esto ya se suma (o deja de funcionar)
+
+Autenticación
+
+Vamos a usar Basic Authentication, pero te exige agregar un certificado cliente, eso nos difiere al esquema que tenemos al día de hoy
+[Yesterday 4:42 PM] Pablo Garin (Guest)
+O sea, hay una forma de configurar nginx para que, cierto endpoint valide el certificado
+[Yesterday 4:42 PM] Pablo Garin (Guest)
+Dado que nosotros vamos a hacer un nuevo endpoint en billing-proxy, justamente el que se valida es ese

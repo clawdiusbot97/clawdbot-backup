@@ -1,0 +1,14 @@
+{
+  "action": "drop_move",
+  "id": "FEATURE-20260225-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Movido: FEATURE-20260225-001\n   Status: RESEARCHING → DROPPED\n   Folder: /home/manpac/.openclaw/workspace/brokia/workitems/archive/dropped\n",
+  "stderr": "",
+  "duration_ms": 70,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T19:19:33.363Z",
+  "finished_at": "2026-02-25T19:19:33.433Z",
+  "id_validation": "strict"
+}

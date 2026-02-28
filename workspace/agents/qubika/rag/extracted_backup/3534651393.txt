@@ -1,0 +1,151 @@
+TITLE: Linea Virtual - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3534651393
+SOURCE: 3534651393__Linea_Virtual_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Linea Virtual, a cargo de.
+Los diseños están basados enesteFigma, en la fecha
+Las horas totales estimadas son de282, con fecha de entrega aproximada para, teniendo en cuenta feriados y licencias.
+Las tareas marcadas enrojodependen de tareas realizadas por Bancard. No tener las tareas dependientes para la fecha que las vayamos a tomar puede afectar los tiempos de estimación.
+Módulo
+
+Tarea
+
+Estimación (hs)
+
+commerce-suite
+
+Modificar componente visual de balance de cuenta en sección de “Operaciones“ de Infonet Cobranzas.
+Comentarios:
+Identificar si es una cuenta de entidad o de Billetera IC para mostrar los títulos correpondientes. El saldo en mora mostrar solo si tiene saldo en mora.
+
+16
+
+Agregar componente visual de balance de cuenta en sección de “Mis Operaciones“ de Infonet Cobranzas.
+Comentarios:
+Identificar si es una cuenta de entidad o de Billetera IC para mostrar los títulos correpondientes. El saldo en mora mostrar solo si tiene saldo en mora. En esta sección la consulta de balance y renderizado del componente se hace de forma asincrónica.
+
+8
+
+Modificar componente visual de balance de cuenta en sección de “Monitoreo → Monitoreo de caja“ de Infonet Cobranzas.
+Comentarios:
+Identificar si es una cuenta de entidad o de Billetera IC para mostrar los títulos correpondientes. El saldo en mora mostrar solo si tiene saldo en mora. En esta sección la consulta de balance y renderizado del componente se hace de forma asincrónica.
+
+8
+
+Previo a cargar la vista de “Operaciones” de IC, hacer una consulta a billing para obtener información de la cuenta.
+Comentarios:
+Si la cuenta ES una cuenta de Billetera IC, hacer la consulta de saldo de forma sincrónica y si tiene saldo en mora, no permitirle hacer pagos en la boca. Si la cuenta NO es una cuenta de Billetera IC, hacer la consulta de saldo de forma asincrónica como se hace actualmente. Importante intentar reducir al máximo el overhead para esto.
+
+24
+
+Agregar nueva sección de Mi Cuenta en Infonet Cobranzas.
+Comentarios:
+Esta sección se le va a mostrar solo a los comercios que tengan una cuenta de Linea Virtual. Consultar cómo nos vamos a manejar respecto a roles y permisos.
+
+EPIC
+
+Agregar item en el sidebar para sección de Mi Cuenta.
+Comentarios:
+Mostrar solo a comercios con Linea Virtual. Para eso consultar entidad de la cuenta. Importante intentar reducir al máximo el overhead para esto.
+
+8
+
+Vista de Mi Cuenta: Agregar componente para balance de cuenta.
+
+8
+
+Vista de Mi Cuenta: Crear componente para resumen de movimientos de la cuenta.
+Comentarios:
+Esta información la debe devolver el endpoint de consulta de movimientos de la cuenta del dispatcher, calcularla de nuestro lado es mucho mas costoso ya que tenemos paginado y deberíamos recorrer todos los registros.
+
+22
+
+Vista de Mi Cuenta: Crear componente para reporte de movimientos de la cuenta.
+Comentarios:
+Debe manejar paginado.
+
+24
+
+Vista de Mi Cuenta: Agregar botón para la descarga de reporte de movimientos de la cuenta.
+
+18
+
+Vista de Mi Cuenta: Agregar filtrado para los movimientos de la cuenta.
+Comentarios:
+Solo se va a filtrar por fecha según el figma. El endpoint de consulta de movimientos en el dispatcher debe soportar filtrado por fecha. Debe permitir seleccionar rangos de fechas. Revisar los otros datepickers que se utilizan en boca.
+
+18
+
+billing-service
+
+Agregar financial_institution y saldo en mora a la respuesta de get_account_details.
+Comentarios:
+Esto lo vamos a necesitar para identificar en commerce-suite si la cuenta es de Billetera IC.
+
+8
+
+Agregar columna en financial_institutions para identificar a las entidades de Billetera IC.
+Comentarios:
+boolean default null.
+
+4
+
+Agregar flag nueva en la representation de respuesta de financial_institutions (la que indica si es Billetera IC).
+Comentarios:
+Esta flag debe devolverse en la respuesta en las operaciones get_account y get_account_details al menos.
+
+4
+
+Agregar columna en account_details para guardar el saldo en mora.
+
+4
+
+Modificar lógica de la operación get_account_details para guardar en la base el saldo en mora que nos devuelve el dispatcher.
+Comentarios:
+Tener en cuenta que este dato extra solo lo van a devolver los endpoints de las entidades que son Billetera IC.
+
+8
+
+Agregar saldo en mora en la representation de respuesta de account_details.
+
+4
+
+Agregar operación get_account_movements para obtener los movimientos de una cuenta.
+Comentarios:
+Esto lo vamos a manejar como el resto de las operaciones de las financial_institutions. En principio, los movimientos no se van a guardar en nuestra base.
+
+16
+
+Agregar operación download_account_movements_report para generar archivo CSV con los movimientos de una cuenta.
+Comentario:
+Para esto, el endpoint de movimientos de una cuenta no debe tener paginado por defecto.
+
+18
+
+Revisiones y correcciones de PRS, deploys, pruebas de ambiente
+
+24
+
+Total Desarrollo
+
+246
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+36
+
+Total Desarrollo + Gestión
+
+282
+
+Preguntas:
+Los cajeros van a poder ver la sección de Mi Cuenta con los movimientos?
+
+Los supervisores o super admins van a poder ver los movimientos de todas las cuentas del comercio? Esto en el caso de que cada sucursal tenga su cuenta y no se use una misma cuenta para todo el comercio. En ese caso, en la sección de Mi Cuenta hay que poner un selector de las sucursales.
+
+Que fuentes vamos a utilizar? Las fuentes acuales o las fuentes nuevas del figma? Porque podría quedar un poco inconsistente con el resto de las vistas.

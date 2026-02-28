@@ -1,0 +1,158 @@
+TITLE: Timezones
+DOMAIN: General
+PRIORITY: Media
+ID: 3401252897
+SOURCE: 3401252897__Timezones.json
+
+---
+
+A raíz del bug de las zonas horarias y el cambio a horario de verano en paraguay se hace este relevamiento por todos los servicios de bancard para determinar prioridad.
+Servicio
+
+Se rompe?
+
+Status
+
+bancard-docker
+
+configurations
+
+selling-service
+
+Si
+
+En producción
+
+✅
+
+✅
+
+vpos-service
+
+Si
+
+En producción
+
+✅
+
+✅
+
+pix-service
+
+Si
+
+En producción
+
+✅
+
+✅
+
+auth-service
+
+En producción
+
+✅
+
+✅
+
+external-commerce-service
+
+En producción
+
+✅
+
+✅
+
+billing-service-public-proxy
+
+En producción
+
+✅
+
+✅
+
+commerce-service
+
+No
+
+En testing
+
+✅
+
+✅
+
+epos-service
+
+No
+
+En testing
+
+✅
+
+✅
+
+epos-service-public-proxy
+
+No
+
+En testing
+
+✅
+
+✅
+
+payment-link-service
+
+No
+
+En testing
+
+✅
+
+✅
+
+billing-service
+
+No
+
+En testing
+
+✅
+
+✅
+
+biller-service
+
+En testing
+
+✅
+
+✅
+
+commerces-app-service
+
+En testing
+
+✅
+
+✅
+
+infonet-cobrnazas-app
+
+En testing
+
+✅
+
+✅
+
+audit-service
+
+mpos-service
+
+notification-service
+
+reversal-service
+
+s4-service
+
+transfer-service

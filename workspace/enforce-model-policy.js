@@ -1,0 +1,1 @@
+console.log('[enforce-model-policy] disabled: read-only safeguard active; no config changes performed.');

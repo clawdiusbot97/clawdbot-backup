@@ -1,0 +1,45 @@
+TITLE: Preguntas Rediseño App de Comercios
+DOMAIN: General
+PRIORITY: Media
+ID: 4199743504
+SOURCE: 4199743504__Preguntas_Redisen╠âo_App_de_Comercios.json
+
+---
+
+Pregunta
+
+Resp
+
+Vamos a querer poder ver las notificaciones en la app? Quieren priorzar esto?
+En el caso de que si, habría que haber un desarrollo en el back para poder enviarlas
+
+Revisar si todas las opciones delmenúestán implementados en la app
+
+Faltan:
+Facturación electrónica
+
+Dispositivos seguros
+
+Carga de documentos en HOME→ Que pasa al momento de subir el documento? Tendríamos que tener una vista que informe al usuario que su solicitud está siendo procesada?
+
+Revisar desde donde hacemos el conteo de los intentos de login y de bloqueado de usuario
+
+En la sección de cobrar con tarjeta hay que tener en cuenta el tema de permisos, merchant id, table device.
+
+Falta vista deempty state para dispositivos seguros
+
+En la vista deseleccionar sucursal para realizar un cobro, deberíamos agregar un buscador
+
+Es necesarioestepaso? No es mejor que seleccione automaticamente la sucursal por defecto
+
+Tenemos que generar un pdf deestos comprobantes?O compartimos directamente la vista como captura?
+
+Falta vista cuando falla el envío de una factura o está caído TaxiIT
+https://www.figma.com/design/B2OegwDelZT3W0HJ1biJTa/-HANDOFF--App---Adquirencia?node-id=11585-12538&t=Sb2uuxNchVFre0v0-4
+
+Vamos a poder filtrar las transferencias en la sección de movimientos?
+
+https://www.figma.com/design/B2OegwDelZT3W0HJ1biJTa/-HANDOFF--App---Adquirencia?node-id=11585-15837&t=Sb2uuxNchVFre0v0-4
+
+[Movimientos] Vamos a ver el detalle de las transferencias / acreditaciones
+https://www.figma.com/design/B2OegwDelZT3W0HJ1biJTa/-HANDOFF--App---Adquirencia?node-id=11585-15837&t=RwEW7ZPqZgUHX19T-4

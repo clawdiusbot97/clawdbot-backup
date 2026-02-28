@@ -1,0 +1,30 @@
+{
+  "stage": "delivered",
+  "timestamp": "2026-02-20T09:08:00Z",
+  "analysis_file": "/home/manpac/.openclaw/workspace/newsletter-analysis-2026-02-20.md",
+  "digest_file": "/home/manpac/.openclaw/workspace/newsletter-digest-2026-02-20.md",
+  "delivery": {
+    "timestamp": "2026-02-20T09:08:00Z",
+    "platform": "telegram",
+    "target_user_id": "2017549847",
+    "message_id": "381"
+  },
+  "sources_processed": [
+    "TLDR AI",
+    "TLDR Fintech",
+    "TLDR Design",
+    "TLDR Crypto",
+    "TLDR Dev",
+    "TLDR Marketing",
+    "TLDR",
+    "TLDR Data",
+    "AI Secret",
+    "Ruby Weekly",
+    "Node Weekly",
+    "History Facts",
+    "The Hustle",
+    "NY Times The World",
+    "NY Times The Morning"
+  ],
+  "note": "Analysis created from partial researcher output after subagent timeout; Digest generated and delivered successfully"
+}

@@ -1,0 +1,30 @@
+TITLE: Mejoras en Uso de Memoria - commerce-suite
+DOMAIN: General
+PRIORITY: Media
+ID: 3655598115
+SOURCE: 3655598115__Mejoras_en_Uso_de_Memoria_-_commerce-suite.json
+
+---
+
+Antecedentes
+En nuestro proyecto, hemos estado experimentando problemas significativos relacionados con el uso de memoria de uno de nuestros servicios desplegados en todos los servidores. Inicialmente, se observó un aumento constante en el consumo de memoria, lo que afectaba el rendimiento del sistema.
+Investigación y Cambios Implementados
+Tras una investigación exhaustiva, identificamos un cambio en el código que logró reducir tanto la memoria utilizada como la memoria retenida. Aunque esto resultó en una mejora, el consumo de memoria seguía incrementándose, aunque a un ritmo más lento.
+Posteriormente, dirigimos nuestra atención al servidor web Puma, donde detectamos que un mal uso de la memoria podría estar relacionado con la configuración del número de hilos por worker. Por defecto, Puma utiliza 5 hilos por worker, pero en producción, los servidores estaban configurados con un número superior, lo que potencialmente agravaba el problema.
+Acciones Tomadas
+Para probar nuestra hipótesis, realizamos los siguientes ajustes:
+boca-web:Ajustamos la configuración del número de hilos a 5 en uno de los cuatro servidores.
+
+commerce-suite:Aplicamos la misma configuración en uno de los tres servidores.
+
+Resultados Observados
+Después de implementar estos cambios, observamos una estabilización en el uso de memoria en los servidores con la nueva configuración. Esto sugiere que la reducción del número de hilos por worker es una solución efectiva para mitigar el problema de uso excesivo de memoria.
+A continuación, compararemos las imágenes de las gráficas de rendimiento entre dos nodos deboca-web: uno con el cambio implementado y otro sin el cambio. Este análisis comparativo nos permitirá visualizar de manera más clara el impacto directo del ajuste en el comportamiento del uso de memoria.
+La primera imagen muestra la gráfica de uso de memoria del nodo deboca-webque no tiene el cambio implementado. En esta gráfica se puede observar un aumento constante en el uso de memoria a lo largo del tiempo. Desde el 9 de enero hasta el 19 de enero, el consumo de memoria incrementa de manera sostenida, alcanzando un pico de 21,4 GB. Este comportamiento refleja el problema inicial de uso excesivo de memoria que hemos estado investigando.
+La segunda imagen presenta la gráfica de uso de memoria del nodo deboca-webque tiene el cambio implementado. En esta gráfica, se observa que entre el 9 y el 14 de enero, el uso de memoria aumenta gradualmente hasta alcanzar un valor de 13,7 GB. Sin embargo, a partir del 14 de enero y hasta el 19 de enero, el uso de memoria se estabiliza, manteniéndose constante en torno a los 13,7 y 13,8 GB. Este comportamiento indica una mejora significativa en la gestión de la memoria tras el ajuste en la configuración de los hilos.
+Próximos Pasos
+Implementación Gradual:Sugerimos aplicar esta configuración ajustada en el resto de los servidores para confirmar la estabilidad y consistencia en el uso de memoria.
+
+Monitoreo Continuo:Continuaremos monitoreando el uso de memoria para detectar cualquier comportamiento anómalo y garantizar la estabilidad del sistema. Ademas, es importante monitorear la eficiencia y performance del servicio, ya que la disminución en la cantidad de hilos puede ocasionar problemas de performance que fácilmente se pueden resolver aumentando la cantidad de workers.
+
+Documentación y Lecciones Aprendidas:Documentaremos estos hallazgos y ajustes en nuestras mejores prácticas para futuros proyectos.

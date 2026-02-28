@@ -1,0 +1,30 @@
+{
+  "accounts": [
+    { "username": "TechCrunch", "category": "tech", "display_name": "TechCrunch" },
+    { "username": "verge", "category": "tech", "display_name": "The Verge" },
+    { "username": "WIRED", "category": "tech", "display_name": "WIRED" },
+    { "username": "github", "category": "tech", "display_name": "GitHub" },
+    { "username": "OpenAI", "category": "tech", "display_name": "OpenAI" },
+    { "username": "financialtimes", "category": "finance", "display_name": "Financial Times" },
+    { "username": "business", "category": "finance", "display_name": "Bloomberg Business" },
+    { "username": "ReutersBiz", "category": "finance", "display_name": "Reuters Business" },
+    { "username": "TheEconomist", "category": "finance", "display_name": "The Economist" },
+    { "username": "historyfacts", "category": "history", "display_name": "History Facts" },
+    { "username": "medievalists", "category": "history", "display_name": "Medievalists.net" },
+    { "username": "HistoryTime_", "category": "history", "display_name": "History Time" },
+    { "username": "Reuters", "category": "news", "display_name": "Reuters" },
+    { "username": "BBCWorld", "category": "news", "display_name": "BBC World" },
+    { "username": "CNN", "category": "news", "display_name": "CNN" },
+    { "username": "nytimes", "category": "news", "display_name": "The New York Times" }
+  ],
+  "keywords": {
+    "tech": ["ai", "software", "engineering", "architecture", "system design", "devops", "code", "tech", "openclaw", "hedera", "grpc", "kafka", "rabbitmq", "pulsar", "database", "microservices", "cloud", "kubernetes", "docker", "ruby", "rails", "jruby", "rspec", "tdd", "mysql", "redis", "postgresql", "auth", "authentication", "oauth", "jwt", "payments", "gateways", "stripe", "mercadopago", "notifications", "email", "sms", "push", "apis", "rest", "graphql", "testing", "quality", "reliability", "monitoring", "logs"],
+    "finance": ["investing", "stocks", "crypto", "trading", "finance", "market", "economy", "portfolio", "risk", "asset", "wealth", "money", "investment", "stock", "bitcoin", "ethereum", "longterm", "dividends", "etf", "index", "diversification", "rebalancing", "compound", "retirement", "financial_independence"],
+    "marketing": ["marketing", "growth", "brand", "social media", "content", "seo", "conversion", "audience", "engagement", "strategy", "campaign", "analytics", "digital", "advertising", "sales", "lead", "customer", "growth_hacking", "conversion_rate", "retention", "product_market_fit", "mvp", "validation", "customer_acquisition", "lifetime_value"],
+    "history": ["history", "medieval", "war", "geopolitical", "geopolitics", "historical", "ancient", "world war", "revolution", "empire", "battle", "history facts", "archaeology", "civilization", "history news", "military", "strategy", "historic"],
+    "news": ["news", "breaking", "update", "report", "Uruguay", "Latin America", "global", "crisis", "politics", "economy", "technology news", "headline", "alert", "developing", "coverage"]
+  },
+  "max_tweets_per_account": 20,
+  "nitter_base_url": "https://nitter.net",
+  "include_retweets": false
+}

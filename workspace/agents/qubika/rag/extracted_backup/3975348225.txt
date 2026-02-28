@@ -1,0 +1,40 @@
+TITLE: [SRE] Mayo 19 - Mayo 23
+DOMAIN: General
+PRIORITY: Media
+ID: 3975348225
+SOURCE: 3975348225__[SRE]_Mayo_19_-_Mayo_23.json
+
+---
+
+Iniciativa
+
+Fecha Entrega Estimada
+
+Responsables
+
+Status
+
+Próximas Licencias
+Persona
+
+Fechas
+
+Comentarios
+
+al
+
+Ver con equipo de App de Comercios
+
+al
+
+Ver con equipo de TPago
+
+al
+
+Ya está contemplado por el equipo.va a estar de reemplazo.
+
+al
+
+Javier Valencia va a estar ocupando el lugar de Nacho en estos días.
+
+Próximos Desarrollos

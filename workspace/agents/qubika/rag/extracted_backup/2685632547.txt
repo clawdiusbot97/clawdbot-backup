@@ -1,0 +1,64 @@
+TITLE: Vulnerabilidades
+DOMAIN: General
+PRIORITY: Media
+ID: 2685632547
+SOURCE: 2685632547__Vulnerabilidades.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+PM
+
+Technical Reference
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+Slack Channel
+
+M. Teams Channel
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Minutes
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+Minutes
+
+Owner
+
+Client Demo
+
+Cadence
+
+Minutes
+
+Owner

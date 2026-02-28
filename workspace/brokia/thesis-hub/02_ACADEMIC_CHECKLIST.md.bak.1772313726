@@ -1,0 +1,23 @@
+# 02 — Academic Checklist (Brokia/ORT)
+
+> Fuente operativa: instrucciones vigentes del plan NEXT ACTIONS + canal Slack mapeado en `/home/manpac/.openclaw/workspace/CHANNELS.md`.
+> Zona horaria de trabajo: `America/Montevideo`.
+
+## VALID DEADLINES (usar para alertas)
+- [VALID] 26/03/2026 21:00 - anteproyecto
+- [VALID] 13/04/2026 - asignación (conditional)
+- [VALID] 22/04/2026 21:00 - nueva propuesta (conditional)
+
+## EXCLUDED/MAL (NO schedule / NO alert)
+- [EXCLUDED_MAL] 01/03/2027 21:00 - EXCLUDED/MAL
+- [EXCLUDED_MAL] 05/04/2027 - 08/04/2027 - EXCLUDED/MAL
+- [EXCLUDED_MAL] 31/05/2027 21:00 - EXCLUDED/MAL
+- [EXCLUDED_MAL] 30/09/2026 - EXCLUDED/MAL (ignore until confirmed)
+
+## Nota de entrega final
+- Entrega final: septiembre 2026 (fecha exacta TBD; no agendar automática hasta confirmación).
+
+## INBOX
+- ¿El hito del 13/04/2026 tiene hora oficial? (si no, mantener todo el día).
+- ¿La “nueva propuesta” del 22/04/2026 admite prórroga?
+- ¿Hay resolución oficial escrita para excluir permanentemente las fechas MAL?

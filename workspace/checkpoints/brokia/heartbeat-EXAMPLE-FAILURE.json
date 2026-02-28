@@ -1,0 +1,11 @@
+{
+  "schema": "brokia-heartbeat-v1",
+  "generated_at": "2026-02-25T02:49:00+00:00",
+  "checks": {
+    "auth": false,
+    "calendar_call": false
+  },
+  "ok": false,
+  "error": "Auth check failed: tachipachi9797@gmail.com missing calendar,gmail scopes",
+  "suggested_fix": "gog auth login --account tachipachi9797@gmail.com && gog auth consent --account tachipachi9797@gmail.com --scopes calendar,gmail"
+}

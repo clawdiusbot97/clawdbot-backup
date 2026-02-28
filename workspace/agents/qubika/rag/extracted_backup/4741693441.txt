@@ -1,0 +1,80 @@
+TITLE: Tokenización API Entidades (BEPSA) - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4741693441
+SOURCE: 4741693441__Tokenizacio╠ün_API_Entidades_(BEPSA)_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Tokenización en API Entidades, a cargo dey.
+Las horas estimadas son:
+Fecha de Inicio:Miércoles
+Fecha de Entrega:Miércoles
+Tarea
+
+Estimación (hs)
+
+Integración con RPG para tokenización:
+Implementar comunicacion con RPG. Crear archivo de configuración de la operación. Implementar método enServices:Rpg
+
+Ajustar configuración para poder acceder desde local.
+
+Mensajes de error. Mapear códigos de error de RPG a mensajes. Manejo de las excepciones.
+
+“00” tokenización exitosa. Para el resto de códigos hacer un diccionario de errores. En caso de que no este en el diccionario, devolver un error genérico.
+
+10
+
+Endpoint de tokenización
+Definir operation
+
+Validar parametros de entrada
+
+Llamar al RPG.
+
+Crear registro en tablatransactions_logcontransaction_type,transaction_stage,entity_transaction_id,body. EN el body incluir request enmascarado y el response, sea cual sea la respuesta
+
+Agregar tests.
+tokenizacion exitosa
+
+parametros faltantes
+
+error de conexión
+
+CardNotAllowedError
+
+TokenizeCardFailError
+
+14
+
+Crear constantes en BancardConstants paratransaction_typeytransaction_stage
+
+1
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+8
+
+Total Desarrollo
+
+33
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+5
+
+Total Desarrollo + Gestión
+
+38

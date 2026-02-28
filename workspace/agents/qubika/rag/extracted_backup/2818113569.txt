@@ -1,0 +1,9 @@
+TITLE: Pix
+DOMAIN: General
+PRIORITY: Media
+ID: 2818113569
+SOURCE: 2818113569__Pix.json
+
+---
+
+Incluir en el portal de comercios la opción de pagos con PIX (SPI de Brasil)

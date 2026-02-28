@@ -1,0 +1,20 @@
+TITLE: Infonet Cobranzas App
+DOMAIN: General
+PRIORITY: Media
+ID: 2569764868
+SOURCE: 2569764868__Infonet_Cobranzas_App.json
+
+---
+
+App Infonet Cobranzas - Figma
+
+Jira - Infonet Cobranzas
+
+Github Infonet Cobranzas
+
+Infonet Cobranzas API
+
+¿Como instalar una aplicación en un POS?
+
+Sprints
+Los sprint tendrán una duración de 2 semanas comenzando los días martes. Cada martes se realiza una demo al cliente.

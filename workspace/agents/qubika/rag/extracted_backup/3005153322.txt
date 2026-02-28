@@ -1,0 +1,30 @@
+TITLE: Deuda tecnica PIX
+DOMAIN: General
+PRIORITY: Media
+ID: 3005153322
+SOURCE: 3005153322__Deuda_tecnica_PIX.json
+
+---
+
+Post producción
+Comentarios enhttps://github.com/bancardsa/bancard-pix-service/pull/18
+
+Revisar current_commerce en pix_portal. Uso de sesión compartida con commerce-suite. Ver PRhttps://github.com/bancardsa/bancard-pix-portal/pull/8#discussion_r1553901345
+
+Cachear nombre de cajero y nombre de sucursal en pix-service. Usar Dory o algun mecanismo de cacheo.
+
+guardar en el commerce_branch_info el branch_code y el commerce_code
+
+Dockerfile local: instlar default-mysql-client para poder correr el comandorails dbconsole
+
+Cuando un usuario cambia de comercio en el portal de comercios, en el portal de pix se requiere un full reload para ver el cambio de comercio. Navegación con turbo no actualiza el comercio en la vista del perfil del usuario.
+
+Cache en pix-portal para los before_action del application controller. Demora mucho en obtener la current branch, chequear permisos, etc
+
+Mecanismo backup para creación de payments. No confiar unicamente en los webhooks.
+
+cambiar ruta de voucher para que use hook_alias en lugar del payment_id. considerando que la relación es uno a uno entre hook y payment. desarrollar endpoint get_payment_by_hook_alias.
+
+ErrorsController en pix-portal. Hacer que herede deActionController::Basepara evitar que salte algun error en los filtros de ActionController presentes en el ApplicationController. (Gasti: ya empecé a verlo, dejé las pruebas por la mitad) Ver branchfix-errors-controller
+
+Implementar en pix-service un mecanismo similar al de pix-portal para mostrar los errores 500 (config.exceptions_app = self.routes) con las rutas y un ErrorsController, para mostrar un JSON generico como el de angus para los InternalServerError.

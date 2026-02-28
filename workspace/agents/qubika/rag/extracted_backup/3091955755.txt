@@ -1,0 +1,160 @@
+TITLE: Propuesta Portal de Onboarding
+DOMAIN: General
+PRIORITY: Media
+ID: 3091955755
+SOURCE: 3091955755__Propuesta_Portal_de_Onboarding.json
+
+---
+
+Este documento cuenta con una propuesta para crear un portal nuevo para el Portal de Onboarding, donde nuevos clientes van a poder contratar los distintos productos de Bancard.
+Figma Mobile:Onboarding MOBILE - Portal de Comercios
+Figma Web:Onboarding WEB - Portal de Comercios
+
+Tarea
+
+Estimación (hs)
+
+configuración para bancard-onboarding-portal
+
+Setup inicial y creación de proyecto de bancard-onboarding-portal
+Configurar sentry, docker-compose, github actions, rubocop, solargraph
+
+16
+
+Agregar bancard-pix-portal en bancard-docker
+
+1
+
+Agregar bancard-pix-portal en bancard-configurations
+
+1
+
+Configurar máquina de staging para bancard-pix-portal
+
+2
+
+Configurar proxy dmz de staging para bancard-pix-portal
+
+2
+
+Configurar máquina de producción para bancard-pix-portal
+
+4
+
+Configurar proxy dmz de producción para bancard-pix-portal
+
+4
+
+Maquetado de Vistas
+
+Pantalla Principal - Selección de Productos
+
+Agregar flas de is_new_product a la tabla Opportunity_products.
+
+Landing Page - Facturación Electrónica
+Esto va a ser un template que va a ser reutilizable entre todas las landing page de los distintos productos
+
+Pantalla de Adición de Productos + Carrito
+
+Pantalla de Resumen de Productos
+Si se selecciona Facturación Electrónica, se despliega la sección para configurar el producto, si seleccionamos que queremos cobrar con POS, el precio es de 130mil gs y se le da la opción al usuario para sumar más POS. Si se selecciona que no, el precio es de 110mil gs y se esconde la sección para sumar POS.
+
+Pantalla de selección de tipo de comercio e información básica
+
+Pantalla de registro / autenticación
+Verificar si se quiere autenticar con Google
+Envío de mail para validar correo
+
+Pantalla de Información del comercio
+
+Pantalla de ubicación del comercio
+
+Pantalla de selección de negocio en el mapa
+Vamos a usar google maps?
+
+Pantalla de facturación estimada
+
+Pantalla de datos de cuenta bancaria
+Multiples casos
+
+Pantalla de adjunto de documentos
+
+Pantalla de ingreso de contraseña
+
+Pantalla de resumen
+Datos ingresados + carrito
+
+Modal de solicitud procesada
+
+Total
+
+30
+
+Configuración para bancard-onboarding-service
+
+Setup inicial y creación de proyecto de bancard-onboarding-service
+Configurar sentry, docker-compose, github actions, rubocop, solargraph
+
+20
+
+Agregar bancard-onboarding-service en bancard-docker
+
+1
+
+Agregar bancard-onboarding-service en bancard-configurations
+
+1
+
+Configurar máquina de staging para bancard-onboarding-service
+
+2
+
+Configurar proxy de servicios de staging para bancard-onboarding-service
+
+2
+
+Configurar máquina de producción para bancard-onboarding-service
+
+4
+
+Configurar proxy de servicios de producción para bancard-onboarding-service
+
+4
+
+Agregar modelos para Leads
+
+Agregar modelos para Productos
+
+Agregar modelos para Planes
+
+Agregar modelos para Requests
+
+Agregar modelos para Billing-Accounts
+
+Crear CRUDs para Leads
+
+Crear CRUDs para Productos
+
+Crear CRUDs para Planes
+
+Crear CRUDs para Requests
+
+Crear CRUDs para Billing-Accounts
+
+Pregunta
+
+En el flujo de agregar productos, al agregar facturación electrónica desde la vista mobile, se le solicita al usuario que seleccione si quiere hacer cobro con tarjeta, pero en la vista web se hace una vez que se terminaron de agregar todos los productos. Se facilitaria el desarrollo si fuese igual en ambos casos, osea, adaptar el flujo mobile al web.
+Agregar pantalla de “Resumen de Compras” al flujo mobile.
+
+En la pantalla deregistro de usuario, vemos que está el botón de autocompletar con Google. Esto sería para autenticar, o solo para completar los datos? Porque en el segundo caso no es necesario el botón.
+
+En la pantalla deregistro de usuario, vamos a pedir los datos en caso de que la persona cumple con las condiciones del PEP?
+
+En el ingreso de datos de cuenta bancaria, en el caso que el cliente no tenga cuenta y quiera crear una con alguna entidad bancaria, el flujo va a ser el mismo que usamos para cuentas TIC?
+
+En la vista deingreso de contraseña, como vamos a manejar / almacenar esa contraseña?
+Tendríamos también que darle la opción al usuario de poder cambiarla desde el portal de facturación electrónica.
+Estas contraseñas las setea el usuario a través nuestro, o ingresa la contraseña a través de nosotros.
+Que pasa en el caso si la contraseña se cambia y un comercio quiere facturar?
+
+ó

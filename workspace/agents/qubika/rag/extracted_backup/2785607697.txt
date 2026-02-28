@@ -1,0 +1,51 @@
+TITLE: 3DSec Fase 2 Daily Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2785607697
+SOURCE: 2785607697__3DSec_Fase_2_Daily_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Creó PRs para PAF 45 y PAF 46. Terminó con elflujo de catastros y podría quedar para probar.
+Today: Empezó con las tareas de pago con Visa Token
+
+Yesterday:
+Today: Probando bien el flujo de catastros para poder cerrarlo.
+Continúa con PAF-16 (pago con token). Necesita que se terminen de definir unas cosas
+Dandole una mano a Gasti con Java y a Juli con WebSockets
+
+Yesterday: Continuó con las pruebas del flujo y ahora está trabajando en PAF-16
+Today: Probando bien el flujo de catastros para poder cerrarlo.
+Continúa con PAF-16 (pago con token). Necesita que se terminen de definir unas cosas
+
+Yesterday: Empezó a probar local el flujo de catastros ya que estaba terminado el flujo del jpos. Faltan algunos servicios del jpos para poder terminar con uinas pruebas y sacarlo a QA
+Today: Continuó con las pruebas del flujo y ahora está trabajando en PAF-16
+
+Yesterday: Va a empezar a trabajar en PAF-41 y PAF-42, que son las últimas dos tareas relacionadas al catastro.
+Today: Pasó PAF-41 a revisión y terminó con PAF-42. Está terminando de probar local y una vez que verifique que todo está bien va a crear la PR.
+
+Yesterday: Terminó con PAF-29, que relacionada al catastro.
+Today: Va a empezar a trabajar en PAF-41 y PAF-42, que son las últimas dos tareas relacionadas al catastro.
+
+Yesterday: Terminando con PAF-29, que relacionada al catastro.
+Today:
+
+Yesterday: Termino con PR-35, creó PR y está esperando review de nacho / jose
+Today: Ahora está trabajando en la PR-36
+Blockers?
+
+Yesterday: Probando una librería para serializar json a objetos java y emprolijar.
+Today: Terminó de implementar y va a hacer las pruebas de lo que viene haciendo de la app de java.
+Blockers?
+
+Yesterday: Dando soporte más que nada.
+Today:
+Blockers?

@@ -1,0 +1,65 @@
+TITLE: Optimización en el Uso de Memoria
+DOMAIN: General
+PRIORITY: Media
+ID: 3773562898
+SOURCE: 3773562898__Optimizacio╠ün_en_el_Uso_de_Memoria.json
+
+---
+
+1. Introducción
+Este documento presenta un análisis detallado sobre la problemática de mala utilización de memoria detectada en los serviciosBoca WebyAPI de Comercios (external-commerce-service), incluyendo las acciones tomadas para mitigar el impacto y los resultados obtenidos tras la implementación de soluciones.
+2. Descripción del Problema
+Se identificó un aumento progresivo y una utilización ineficiente de la memoria en ambos servicios, lo cual afectaba su estabilidad y rendimiento, obligando a reiniciar de forma recurrente los mismos para liberar la memoria y así evitar impacto a los usuarios. Tras una investigación detallada, se determinó que una de las causas principales, aunque no la única, residía en el uso de las libreríasangus-remoteypicasso-remote. Estas librerías hacían un uso ineficiente de la memoria, reteniendo una cantidad significativa de recursos.
+Estas librerías son fundamentales para la comunicación con otros servicios de Bancard y están implementadas en todos los portales y APIs de la empresa, por lo que su eliminación o reemplazo implicaría un cambio de gran magnitud y complejidad.
+3. Acciones Implementadas
+Para abordar esta problemática, se llevaron a cabo una serie de medidas en ambos servicios, las cuales se describen a continuación.
+3.1. Boca Web
+Identificación y Primera Medida
+Se realizó una investigación minuciosa deangus-remoteypicasso-remotey se identificó dónde se estaba haciendo un mal uso de la memoria.
+
+Se realizaron modificaciones enangus-remoteypicasso-remotepara reducir la retención de memoria y optimizar el uso de la misma.
+
+Los cambios se desplegaron en staging y posteriormente en producción.
+
+Resultados Iniciales
+Se observó una disminución significativa en el uso de memoria.
+
+Sin embargo, la memoria seguía aumentando entre despliegues.
+
+La siguiente imagen muestra la evolución del uso de memoria en el servicio antes y después del despliegue de los cambios en producción el22 de noviembre. Hasta esa fecha, se observa que los reinicios eran más frecuentes debido a la acumulación excesiva de memoria. A partir del22 de noviembre, si bien el problema no se resolvió completamente, los reinicios se hicieron menos frecuentes y el incremento en el consumo de memoria se redujo, indicando una mejora en la eficiencia del uso de la misma.
+Entre el22 de noviembre y el 30 de diciembre, se registraroncuatro reiniciosdel servicio. Sin embargo, tras analizar los registros, encontramos evidencia de que al menosdos de estos reiniciosfueron provocados por despliegues a producción y no por una saturación de memoria. Estos reinicios corresponden a las fechas28 de noviembre y 19 de diciembre.
+En cuanto al reinicio del4 de diciembre, aunque no se encontró evidencia directa que confirme su relación con un despliegue, es altamente probable que haya sido causado por uno, ya que ocurrió en la madrugada de un miércoles, horario habitual para estos procesos.
+En conclusión, el ajuste implementado enangus-remoteypicasso-remotepermitió reducir la retención de memoria en el servicio. Aunque el crecimiento progresivo de memoria persistió, el impacto disminuyó, logrando mayor estabilidad en el sistema y reduciendo la necesidad de reinicios constantes.
+Medidas Adicionales
+Tras continuar con la investigación, se descubrió que el servidor web Puma recomienda la configuración de 5 hilos por worker para un uso óptimo de la memoria. Sin embargo, en este servicio en particular, se tenían configurados 8 hilos por worker, lo cual, según la documentación, estaba afectando negativamente el rendimiento y el uso eficiente de la memoria.
+
+Se ajustaron las configuraciones de los servidores web con el fin de maximizar la eficiencia en el uso de la memoria.
+
+Estado Actual
+A partir del 9 de enero, luego de implementar los ajustes recomendados en la configuración del web server, se observa una disminución considerable en el uso de memoria del servicio, incluso observando una tendencia a estabilizarse.
+Todos los reinicios realizados desde el 9 de enero en adelante fueron exclusivamente debido a despliegues a producción. Desde esa fecha, no se han registrado más reinicios relacionados con la saturación de memoria. Este hecho tiene sentido, ya que, como se puede observar claramente en la gráfica, el uso de memoria disminuyó de manera significativa, lo que indica que el servicio ha alcanzado una mayor estabilidad y eficiencia en el consumo de memoria.
+Es importante destacar que la disminución en la cantidad de hilos por worker no implica una limitación definitiva en la capacidad transaccional ni en el procesamiento del servicio. Los hilos por worker fueron ajustados únicamente para lograr una configuración óptima en el uso de memoria. En caso de ser necesario y con el fin de escalar el servicio, se puede aumentar la cantidad de workers. Actualmente, cada nodo del servicio tiene configurados 8 workers con 5 hilos cada uno, lo que da un total de 40 hilos concurrentes por nodo.
+
+3.2. API de Comercios (external-commerce-service)
+Identificación y Primera Medida
+Se detectó un consumo excesivo de memoria en el servicio con riesgo de saturación. Tras una evaluación, se identificó que la actualización de las gemas angus-remote y picasso-remote optimizaría el uso de memoria. Mientras se implementaban estos cambios, se realizó una investigación adicional sobre la capacidad de procesamiento de los servidores de la API. Durante este análisis, se observó que la cantidad de memoria RAM asignada a los nodos de external-commerce era considerablemente baja en comparación con otros servicios. Mientras los servidores de otros servicios contaban con al menos 15 GB de RAM, los nodos de external-commerce no superaban los 8 GB.
+
+Como primer paso, se procedió a aumentar la memoria asignada a los servidores deexternal-commerce, dado que la configuración inicial era insuficiente en comparación con el resto de los servicios. A partir del 31 de enero, la nueva memoria total asignada a esos servidores es 15GB.
+Si bien la memoria del nodo se aumentó, no se modificódirectamentela configuración de memoria de la JVM, dado que el valor máximo de memoria por defecto que puede utilizar la JVM es de alrededor -debido a gestión interna de la JVM- 1/4 de la memoria física total del host. Entonces, al crecer la memoria física, ese 1/4 crece también. Existía la probabilidad de que ese 1/4 incrementado tampoco fuera suficiente pero no se tenía certeza de que no iba a serlo, por lo tanto se procedió a realizar un cambio a la vez para poder analizar los resultados de cada cambio de forma independiente. Es decir, si se veía que ese 1/4 efectivamente era insuficiente, se ajustaría la configuración de la JVM para que pueda utilizar más de la memoria añadida al host.
+
+Resultados Iniciales
+A pesar de que la memoria de los nodos era mayor, la JVM no la utilizaba adecuadamente. Si bien en el gráfico se puede observar que a partir del 31 de enero los reinicios se hacen más espaciados (cada 7 días en lugar de cada 4 o menos como antes del cambio), tuvimos la necesidad de reiniciar los nodos a causa de falta de memoria en la JVM
+
+Medidas Adicionales
+A partir del 19 de febrero, se aumentó la cantidad de memoria asignada a la JVM, permitiendo un mejor aprovechamiento de los recursos disponibles en los nodos.
+
+Estado Actual
+El servicio ahora hace un mejor aprovechamiento de los recursos de la máquina y, desde el cambio en la memoria de la JVM, no ha sido necesario reiniciar el servicio nuevamente. Como se puede notar en los gráficos, el servicio utiliza más memoria que antes. Esto es esperable, ya que todos los servicios requieren una cantidad mínima de memoria para funcionar correctamente, y esta necesidad está directamente relacionada con la cantidad de hilos configurados.
+En cuanto a la cantidad de hilos, hasta el 6 de enero, el servicio contaba con 16 hilos por nodo. A partir de esa fecha, debido a un error en la configuración, la cantidad de hilos se incrementó a 128 hilos por nodo, lo que provocó un aumento considerable en la demanda de recursos y requirió reinicios más frecuentes.
+El 19 de febrero se corrigió la configuración, estableciendo la cantidad de hilos en 64 por nodo, lo que representa cuatro veces más capacidad de procesamiento en comparación con la configuración vigente hasta el 6 de enero. Esta configuración sigue abierta a ajustes en caso de que se considere necesario.
+Debemos seguir monitoreando para identificar si el uso de memoria se estabiliza y confirmar que ya no será necesario reiniciar el servicio ni ajustar la configuración de hilos.
+4. Conclusión
+El análisis y las medidas implementadas en los serviciosBoca WebyAPI de Comercios (external-commerce-service)permitieron identificar y mitigar los problemas de consumo excesivo e ineficiente de memoria.
+EnBoca Web, la optimización de las libreríasangus-remoteypicasso-remote, junto con el ajuste de la configuración de los web servers, redujo significativamente la retención de memoria y estabilizó el servicio. Desde el 9 de enero, los reinicios han sido exclusivamente por despliegues, lo que indica que la problemática de saturación de memoria fue controlada con éxito.
+EnAPI de Comercios, los cambios realizados en la asignación de memoria de los nodos y, posteriormente, en la memoria de la JVM, permitieron un mejor aprovechamiento de los recursos del sistema. La corrección en la configuración de hilos el 19 de febrero también contribuyó a mejorar el rendimiento del servicio. Desde entonces, no ha sido necesario reiniciarlo debido a problemas de memoria.
+Si bien los resultados han sido positivos, es fundamental continuar con el monitoreo de ambos servicios para confirmar que el consumo de memoria se mantenga estable y realizar ajustes adicionales si es necesario.

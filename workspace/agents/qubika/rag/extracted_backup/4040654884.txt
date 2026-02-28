@@ -1,0 +1,52 @@
+TITLE: Evolución del Portal de Comercios
+DOMAIN: General
+PRIORITY: Media
+ID: 4040654884
+SOURCE: 4040654884__Evolucio╠ün_del_Portal_de_Comercios.json
+
+---
+
+Esta iniciativa tiene como fin refactorear la UI del Portal de Comercios
+Team
+
+Name
+
+Role
+
+Project Manager
+
+Technical Reference
+
+Tentative Timeline
+
+Estimación Original
+
+-
+
+Start date
+
+-
+
+Next Release
+
+-
+
+End date
+
+TBD
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+Slack Channel
+
+#bancard-evolucion-portal-de-comercios
+
+M. Teams Channel
+
+Figma
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?t=pfOadg01xLZFUVNs-0

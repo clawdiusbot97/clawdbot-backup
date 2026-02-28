@@ -1,0 +1,13 @@
+{
+  "action": "create_export",
+  "id": "REQUIREMENT-20260225-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Export completado: brokia/workitems/index/workitems.json\n   Items: 7\n   Total cost: $0 USD/mes\n",
+  "stderr": "",
+  "duration_ms": 794,
+  "provider": "unknown",
+  "model": "unknown",
+  "started_at": "2026-02-25T15:33:22.699Z",
+  "finished_at": "2026-02-25T15:33:23.493Z"
+}

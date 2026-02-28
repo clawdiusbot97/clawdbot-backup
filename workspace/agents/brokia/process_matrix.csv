@@ -1,0 +1,8 @@
+Process ID,Process Name/Description,Category,Estimated Current Duration,Frequency,Importance (1-10),Pain Points,Automation Potential,Dependencies,Risk of Automation,Estimated Time Saved,Priority Rank,Status
+PR001,Collect client info & docs,Customer Service,30 min,Daily,9,Manual data entry, scattered sources, follow-up needed,High,Email, CRM, Client portals,Low,20 min,,Not Started
+PR002,Get quotes from multiple insurers,Quoting,2 hours,Daily,9,Different portals per insurer, format variations, comparison needed,High,Insurer portals, Rating systems,Medium,90 min,,Not Started
+PR003,Fill underwriting forms,Underwriting,45 min,Daily,8,Complex questions, validation errors, multiple versions,Medium,Insurer systems, Policy admin,Medium,25 min,,Not Started
+PR004,Submit claims documentation,Claims,1 hour,Weekly,9,Missing documents, format requirements, submission tracking,High,Claims system, Email, Client docs,Low,40 min,,Not Started
+PR005,Follow up on pending claims,Claims,30 min,Daily,7,Manual tracking, no centralized dashboard, phone tag,Medium,Claims system, Phone, Email,Low,15 min,,Not Started
+PR006,Renewal reminders and processing,Renewals,1 hour,Monthly,8,Calendar reminders, custom letters, approval workflows,Medium,Policy system, Email, Calendar,Low,45 min,,Not Started
+PR007,Commission calculation & reporting,Administrative,4 hours,Monthly,6,Complex spreadsheets, reconciliation issues, manual adjustments,High,Accounting system, Carrier reports,Medium,180 min,,Not Started

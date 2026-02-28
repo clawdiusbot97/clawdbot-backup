@@ -1,0 +1,76 @@
+TITLE: Cómo funciona la Gema ruby/debug?
+DOMAIN: General
+PRIORITY: Media
+ID: 2788033796
+SOURCE: 2788033796__Co╠ümo_funciona_la_Gema_ruby_debug_.json
+
+---
+
+Ruby/debuges una gema que brinda funcionalidades de debugging para aplicaciones Ruby.
+Proceso de instalación en repositorios de Bancard
+Voy a tomar de ejemplo commerce-service para enumerar los cambios necesarios para agregar debug a un proyecto de Bancard. El mismo es un servicio hecho enPicasso, que utiliza docker-compose.
+Gemfile: agregar la dependencia de la gema debug dentro de los grupos:development, :test. Debe utilizarse la opciónplatforms: :rubyya que la gemano es compatible con jruby, y falla el pipeline CI en caso de no hacerlo.
+
+docker-compose.yml: agregar si no están estas dos líneas de configuración, las cuales permiten attachearse a la consola del servicio y poder interactuar con la misma.
+
+bin/run: se reemplaza el comandodocker compose logs -fpordocker attach $(docker compose ps --quiet service). Éste último lo que hace es attachearse a la consola del contenedor que corre el servicio. Esto nos permite ver los logs del servicio e interactuar con la consola del servicio.
+Nota: la segunda parte del comando,$(docker compose ps --quiet service), sirve para encontrar el container ID que está corriendo dentro del compose el servicio llamadoservice. Para el ejemplo de commerce-service, dentro del archivo docker-compose tenemos 4 servicios: db, redis, service y sidekiq. Para el caso de un portal, el contenedor al que deberiamos attachearnos seríaportal.
+
+bin/restart: idem bin/run
+
+bin/logs: se agrega este archivo solo por conveniencia, al haber eliminado el comandodocker compose logs -fde los archivos anteriores.
+
+scripts/console: se cambiaBundler.setupporBundler.require. Con este cambio, se indica a bundler que hagarequirede todas las gemas presentes en los grupos indicados, para no requerir manualmente la gemadebugcada vez que se quiera agregar un breakpoint. A su vez, permite la eliminación del resto de sentenciasrequirede gemas a lo largo del proyecto. Se debe hacerrequire 'picasso/commands/console'antes deBundler.requirepara poder tener acceso aPicasso Environment.environment_name
+
+config.ru: idem scripts/console pero para el archivoconfig.ru, que es el que se utiliza a la hora de inicializar el servicio
+
+spec/spec_helper.rb: idem anteriores, con la salvedad de que se requieren los gruposdefaultytest.
+
+Comandos principales
+Para invocar al debugger desde el código ruby, es necesario llamar abinding.breako cualquiera de sus alias:binding.bydebugger
+Dentro de una sesión de debug, se pueden usar numerosos comandos. Esta lista contiene los principales. Revisar la documentación para el listado completo con descripciones detalladas.
+Salir del debugger y continuar la ejecución
+
+continue, c
+
+Salir del debugger y salir del programa
+
+quit, q
+
+Información del frame (locals, globals, instance variables)
+
+info, i
+i locals, i globals, i ivars
+
+Backtrace
+
+backtrace, bt
+
+Metodos, constantes, variables disponibles
+
+outline, o, ls
+
+Breakpoints
+
+Listar:break, b
+Crear:break <line>, break <file:line>, break <Class#method>, break <Class.method>, break <expr>.<method>, catch <Exception>, watch <@ivar>
+Eliminar:delete, delete <num>
+
+Breakpoint options
+
+do: <cmd or expr>
+pre: <cmd or expr>
+if: <expr>
+path: <path_regexp>
+Por ejemplo:debugger(do: "info")
+
+Links útiles
+ruby/debug repo on Github
+
+Rails guides - Debugging rails applications with the debug gem
+
+PR commerce-service
+
+Friday Talk: recording
+
+Friday Talk: presentation

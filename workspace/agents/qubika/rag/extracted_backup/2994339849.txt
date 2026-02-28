@@ -1,0 +1,41 @@
+TITLE: Flujos de Trabajo / Workflows
+DOMAIN: 7) Repos
+PRIORITY: Alta
+ID: 2994339849
+SOURCE: 2994339849__Flujos_de_Trabajo___Workflows.json
+
+---
+
+Los workflows en Jira son fundamentales para gestionar los procesos de trabajo dentro de los proyectos. Estos flujos de trabajo definen el ciclo de vida de las tareas, desde su creación hasta su finalización, asegurando que todos los pasos necesarios se completen de manera ordenada y eficiente.
+Nos sucede bastante que al crear los boards, los Workflows no están especificados, ni las columnas con sus estados. Muchas veces hay confusiones en que estado está cada ticket, y nos cuesta diferenciar entre ticketsEn Revisión, Aprobados, Mergeados o Deployados.
+Algunos inconvenientes con los que nos hemos topado:
+Estados en columnas incorrectas, al querer mover un ticket, hay columnas que están deshabilitadas pero no deberían, o estados mal posicionados, por ejemplo el deRevisión QA BCen la columnaPor Hacer
+Inconsistencias en distintos tableros.
+Ej: El tablero siguiente en comparación al que vimos arriba
+Lo que proponemos, es un flujo de trabajo y estados único, consistente para todos los proyectos, que tenga transiciones limpias, columnas que reflejen todos los estados y ayuden a identificar en que situación exacta está cada tarea y una guía que refleje todo esto.
+Entre todo el equipo de Qubika, pensamos en las columnas que deberíamos tener, para que todo lo mencionado arriba, pueda reflejarse en el tablero.
+Columnas propuestas:
+Por hacer: Tareas que están en el sprint por hacerse
+
+En Progreso: Tareas en las que se está trabajando en su desarrollo
+
+En Revisión: Tareas que están en revisión de código, esperando ser aprobadas.
+
+Bloqueado: Esta tarea tiene algún bloqueante
+
+Para Deployar (mergeado): Tareas que están mergeadas post revisión aprobada, esperando para ser deployadas a Staging.
+
+Deployado STG: Tareas deployadas a staging, esperando por ser probadas.
+
+QA en Progreso:En proceso de QA para el ambiente de STAGING
+
+Aprobado por QA:Estas tareas están aprobadas por QA en staging, y pueden ser deployadas a PROD, en el caso de que el QA detecte algún bug o corrección que haya que hacer, vuelve a “Por hacer”.
+
+Listo / Listo CCC: En Prod
+
+Rechazado: El ticket no es más valido
+
+Flujo propuesto por el equipo de Qubika
+
+En el siguiente link, encontramos una guía de como utilizar el editor del Workflow 👇🏻
+https://support.atlassian.com/jira-cloud-administration/docs/what-is-the-new-workflow-editor/

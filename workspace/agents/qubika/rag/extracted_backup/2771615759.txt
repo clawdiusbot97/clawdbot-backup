@@ -1,0 +1,163 @@
+TITLE: Estimación Push Notifications
+DOMAIN: General
+PRIORITY: Media
+ID: 2771615759
+SOURCE: 2771615759__Estimacio╠ün_Push_Notifications.json
+
+---
+
+El cometido de este flujo es notificar al cajero que generó un QR cuando se realiza un pago por parte del cliente.
+Como funciona hoy en día notification-service y pago movil
+Primero hay que registrar el token. Hay que llamar a endpoint de Notification-service para registrar el user_device
+user_id => usuario loggeado en la app (el que va a recibir la push)
+
+token => token usado para enviar la push Notification
+
+platform => android, ios
+
+app_short_name => pm, mpos. Por defecto es pm (Pago Movil)
+
+Para enviar una push, hay que llamar a `send_push_notification` del servicio notification-service, indicando
+user_id => usuario al que le llegará la push
+
+data => datos que se le quiera mandar en la push
+
+message => mensaje que aparecerá en la push
+
+app_short_name => de donde viene (pm, mpos)
+
+notification-service, en función del user_id y la app_short_name, busca el token asociado y envía en forma asíncrona la push con esos datos y el mensaje
+
+Tasking y Estimación
+Proyecto
+
+Descripción
+
+hrs
+
+notification-service
+
+agregar como app_short_name a “app_commerce” y habilitar esto en las validaciones (ver base_resource).
+
+4
+
+notification-service
+
+endpoint para deshabilitar un token de un usuario para un app_short_name
+
+12
+
+notification-service
+
+modificar endpoint de set_user_device para que si viene de la app de comercios sobreescriba si hay otro device para esa misma app y usuario
+
+12
+
+notification-service
+
+evaluar de hacer nuevo metodo para la lógica de las push para el caso de la app de comercios
+
+4
+
+backend-app
+
+integración con notification-service (services.yml, etc)
+
+4
+
+backend-app
+
+endpoint para el set_user_device, llama a notification-service y registra el token, platform, user_id y app_short_name. Este endpoint va a ser llamado por la app.
+
+16
+
+backend-app
+
+endpoint para eliminar un token de un usuario para una app_short_name. Llama luego a notification-service
+
+12
+
+selling-service
+
+integración con notification-service (services.yml, etc)
+
+4
+
+selling-service
+
+agregar en el metodo “pay” para enviar la push_notification via notification-service.
+Dado un payment_hook, tengo el user_id del usuario del comercio que generó el QR
+
+data => Ver con Bancard que datos necesitamos del Voucher (monto, etc).
+
+message => “Usted ha recibido un pago”. Ver con Bancard que téxto se va a mostrar.
+
+app_short_name => en este caso, siempre va a ser “app_commerce”.
+
+24
+
+app de commerce
+
+Configurar Firebase e instalar las librerías necesarias
+
+12
+
+app de commerce
+
+Configurar permisos para Android y iOS
+
+6
+
+app de commerce
+
+Generar el token
+
+4
+
+app de commerce
+
+Guardar el token de forma local (este punto tal vez no es necesario si lo mandamos una unica vez al loguearse)
+
+4
+
+app de commerce
+
+Solicitar permisos de notificaciones al usuario
+
+4
+
+app de commerce
+
+Integrar endpoint para el seteo del token
+
+4
+
+app de commerce
+
+Integrar endpoint para la eliminación de token
+
+4
+
+app de commerce
+
+Generar los listeners para las diferentes situaciones (Usuario en app, usuario con la app en el background)
+
+8
+
+app de commerce
+
+Pantalla para mostrar información del Voucher. Si el usuario no está loggeado, solo puede cerrarla. En caso contrario, un botón “Aceptar” y lo lleva a la home.
+
+8
+
+Testing interno antes de QA
+
+8
+
+Gestión
+
+8
+
+Total
+
+162

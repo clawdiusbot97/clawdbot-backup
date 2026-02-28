@@ -1,0 +1,36 @@
+TITLE: Configuración de servicio en Proxy de Servicios
+DOMAIN: General
+PRIORITY: Media
+ID: 4275535973
+SOURCE: 4275535973__Configuracio╠ün_de_servicio_en_Proxy_de_Servicios.json
+
+---
+
+Para configurar un servicio en el proxy de servicios (10.100.14.73), es necesario configurar 2 cosas:
+nginx
+
+iptables
+
+Configuración de NGINX
+Para la configuración de nginx, se debe crear y/o modificar los siguientes archivos dentro de/etc/nginx/:
+sites-available/*.conf
+
+sites-enable/*.conf (links simbólicos a sites-available de los que se quiera habilitar)
+
+conf.d/*.conf
+
+sudo nginx -t // verificar que la configuración sea correcta
+
+sudo -s reload
+
+Para dicha configuración, lo ideal es basarse en otro servicio que ya tenga configurado nginx, como jPOS o Fingerprint.
+Puertos - Configuración
+Se pueden ver las reglas de iptables con el siguiente comando:
+sudo iptables -L -n // por defecto muestra la tablafilter
+
+En este paso, se deben agregar nuevas reglas para los nuevos puertos que abrimos al configurar nginx y que queramos habilitar. Por ejemplo se debe permitir el acceso al puerto 4499, el cual se corresponde con el puerto de la API de Docker configurado en el paso anterior. Para eso se debe agregar la siguiente regla a través del comandosudo vim /etc/sysconfig/iptables:
+
+# Rule for docker 4499 - Docker API
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 4499 -j ACCEPT
+
+Luego de modificar el archivo de configuración de iptables se debe ejecutar el comandosudo systemctl reload iptablespara que tome la configuración nueva.

@@ -1,0 +1,47 @@
+@startuml cotizacion-proceso-actual-sequence
+title Proceso de Cotización Manual Actual (Secuencia UML)
+
+actor Cliente
+participant Broker
+participant "Cotizadores Web" as Cotizador
+database Excel
+participant WhatsApp
+
+== Solicitud Inicial ==
+
+Cliente -> Broker: Solicita cotización (WhatsApp/llamada)
+Broker -> Cliente: Pide datos del vehículo
+Cliente -> Broker: Proporciona datos\n(marca, modelo, año, zona, cédula*)
+
+== Cotización en 7 Compañías ==
+
+loop para cada compañía (7)
+  Broker -> Cotizador: Ingresa datos en portal web
+  Cotizador -> Broker: Devuelve precio y cobertura
+  note right: Tiempo: 3‑7 min por compañía
+end
+
+== Registro y Comparación ==
+
+Broker -> Excel: Registra precios manualmente
+Broker -> Excel: Construye tabla comparativa
+note right: Tiempo: 10‑15 min
+
+== Envío al Cliente ==
+
+Broker -> WhatsApp: Envía tabla comparativa (PDF/imagen)
+WhatsApp -> Cliente: Recibe propuesta
+
+== Discusión y Confirmación ==
+
+Cliente -> Broker: Pregunta / solicita ajustes
+Broker -> Cliente: Explica / aclara dudas
+Cliente -> Broker: Confirma elección (verbal/mensaje)
+note left: Confirmación informal\n(sin registro estructurado)
+
+== Finalización ==
+
+Broker -> Broker: Guarda respaldo (capturas, audios, Excel)
+note over Broker: Riesgo: dispersión de evidencia
+
+@enduml

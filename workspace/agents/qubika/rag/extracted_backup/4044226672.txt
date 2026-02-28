@@ -1,0 +1,94 @@
+TITLE: Cómo levanto un proyecto desde cero?
+DOMAIN: General
+PRIORITY: Media
+ID: 4044226672
+SOURCE: 4044226672__Co╠ümo_levanto_un_proyecto_desde_cero_.json
+
+---
+
+El propósito de este documento es listar las tareas y especificaciones técnicas que hay que realizar para hacer el setup de un portal / servicio desde 0.
+Tareas & Estimaciones
+
+Detalles Técnicos
+
+Tareas & Estimaciones
+Tarea
+
+Estimación (hs)
+
+Portal / Servicio
+
+Setup inicial y creación de Proyecto de de Portal bancard-cybersource-portal
+
+8
+
+cybersource-portal
+
+Dockerización con docker-compose
+
+8
+
+cybersource-portal
+
+Configuración de Sentry
+
+4
+
+cybersource-portal
+
+Configuración de GitHub Actions, Bito, RSpec, Rubocop
+
+8
+
+cybersource-portal
+
+Creación de Application Credentials
+
+4
+
+cybersource-portal
+
+Integrar Redis para compartir sesión con commerce-suite
+
+4
+
+cybersource-portal
+
+Agregar bancard-cybersource-portal en bancard-configurations
+
+4
+
+bancard-configurations
+
+Configurar máquina de staging para bancard-cybersource-portal
+
+4
+
+dockerized-nginx
+
+Configurar proxy de servicios de staging para bancard-cybersource-portal
+
+4
+
+commerce-suite-nginx
+
+Configurar maquina de producción para bancard-cybersource-portal
+
+6
+
+dockerized-nginx
+
+Configurar proxy de servicios de producción para bancard-cybersource-portal
+
+6
+
+commerce-suite-nginx
+
+Crear tarjeta del producto de VPos 3.0 “Cybersource” en sección de Mis Productos Contratados / Productos Adicionales.
+
+16
+
+commerce-suite
+
+Detalles Técnicos
+https://drive.google.com/file/d/1Fc8KEm13BCKQcO7ZlYDNRznHomhSAlIL/view?usp=drive_link

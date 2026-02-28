@@ -1,0 +1,264 @@
+TITLE: Flujo de Onboarding para nuevos clientes - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3062824973
+SOURCE: 3062824973__Flujo_de_Onboarding_para_nuevos_clientes_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Tasking y estimación para el frontend del flujo de nuevos clientes
+Este documento contiene todas las tareas que van a realizarse para completar el refactor del flujo de nuevos clientes para facturación electrónica. Esta es una estimación tentativa y no la estimación final, por ende, va a cambiar según las respuestas que obtengamos sobre las preguntas realizadas.
+Todo lo que se agregue post inicio de desarrollo deberá ser re estimado por el equipo de Qubika y aprobado por Bancard.
+Incluye:
+Todas las vistas que se estimaron y van a trabajar están en los siguientes Figma
+Figma Web
+
+Figma mobile
+
+El desarrollo se estimó para ambas vistas Web y Mobile
+
+Todas las tareas que recaudan información también incluyen el paso de guardar la estructura a medida que se avance, para luego poder cargar el proceso de cada cliente
+
+Se incluyen algunos cambios necesarios en el backend.
+
+No Incluye:
+Identificación personal con Biometría (a definirse del lado de Bancard)
+
+Autenticación con google (ver preguntas)
+
+Estimación para guardado de contraseñas (ver preguntas)
+
+Estimado para apertura de cuenta TIC (ver preguntas)
+
+Landing Page de productos distintos a Facturación Electrónica
+
+El total de esta estimación inicial es de678 horas, incluidos desarrollo + QA + gestión. Recordar que esto puede cambiar según lo que se defina a partir de las preguntas que realizamos abajo.
+Estas horas incluyen únicamente el proceso de desarrollo hasta la salida a Staging. Una vez concluido este proceso se estiman40hssemanales por desarrollador y20hsde QA hasta la salida a producción.
+
+Tarea
+
+Estimación (hs)
+
+Portal / Servicio
+
+Pantalla Principal - Selección de Productos
+
+32
+
+commerce-suite
+
+Agregar flas de is_new_product a la tabla Opportunity_products.
+
+3
+
+commerce-service
+
+Landing Page - Facturación Electrónica
+Esto va a ser un template dinámico que va a ser reutilizable entre todas las landing page de los distintos productos
+Modal de “Desea agregar este producto al carrito”
+Incluye imagen, titulo, subtitulo, descripción, beneficios
+
+36
+
+commerce-suite
+
+Landing Page - Modelar componentes desplegables de datos adiciionales del producto
+
+16
+
+commerce-suite / commerce-service
+
+Pantalla de Adición de Productos + Carrito
+
+32
+
+commerce-suite
+
+Pantalla de Configuración de Producto (Facturación Electrónica)
+
+16
+
+commerce-suite
+
+Pantalla de Resumen de Productos
+
+24
+
+commerce-suite
+
+Pantalla de selección de tipo de comercio e información básica
+
+24
+
+commerce-suite
+
+Pantalla de registro / autenticación
+Incluye desplegable para la sección del PEP
+Verificar si se quiere autenticar con Google
+
+16
+
+commerce-suite
+
+Modal de autenticación por correo
+Envío de mail para validar correo
+
+8
+
+commerce-suite
+
+Pantalla de Información del comercio
+
+8
+
+commerce-suite
+
+Pantalla de ubicación del comercio
+
+8
+
+commerce-suite
+
+Pantalla de selección de negocio en el mapa
+Vamos a usar google maps?
+
+24
+
+commerce-suite
+
+Pantalla de facturación estimada
+
+8
+
+commerce-suite
+
+Pantalla de datos de cuenta bancaria
+Multiples casos
+Titular de la cuenta
+
+No titular
+
+Cuenta Zimple
+
+Solicitar cuenta
+
+32
+
+commerce-suite
+
+Pantalla de adjunto de documentos
+
+commerce-suite
+
+Pantalla de ingreso de contraseña
+
+8
+
+commerce-suite
+
+Modificar la operación de el envío de información al C4C para soportar el campo de contraseña
+
+8
+
+external-services
+
+Agregar campo de contraseña al mapper de c4c
+
+4
+
+external-services
+
+Agregar contraseña (encriptada/segun los estandares de Taxit) al modelo de Leads (y al endpoint de creación de leads)
+
+20
+
+commerce-services
+
+Pantalla de resumen
+Datos ingresados + carrito
+Esta tarea va a requerir trabajo en commerce-service también
+
+40
+
+commerce-suite / commerce-service
+
+Agregar columna en la tabla Lead que sea el último paso completado.
+
+3
+
+commerce-service
+
+Agregar modal para retomar el proceso de onboarding para clientes que ya lo hayan iniciado.
+Esta función va a redirigir al usuario
+
+32
+
+commerce-suite / commerce-service
+
+Modal de solicitud procesada
+
+8
+
+commerce-suite
+
+Total desarrollo
+
+422
+
+Gestión 20%(Incluye reuniones de seguimiento, tasking, re estimación, etc.. No afecta el tiempo de entrega, es solo para facturación)
+
+80
+
+QA 20%(Tareas de QA a realizarse a medida que la iniciativa vaya avanzando, para crear un desarrollo más ágil y evitar acumulación de errores al final del proyecto)
+
+80
+
+BugFixing Milestone 1
+
+48
+
+BugFixing Milestone 2
+
+48
+
+Total desarrollo + QA + gestión
+
+678
+
+notePreguntas
+Debajo listamos preguntas que fueron surgiendo a medida que creábamos la estimación. Las respuestas a estas peguntas pueden llevar a cambiar los tiempos estimados anteriormente.
+Preguntas
+Debajo listamos preguntas que fueron surgiendo a medida que creábamos la estimación. Las respuestas a estas peguntas pueden llevar a cambiar los tiempos estimados anteriormente.
+
+Pregunta
+
+Respuesta / Solución
+
+En el flujo de agregar productos, al agregar facturación electrónica desde la vista mobile, se le solicita al usuario que seleccione si quiere hacer cobro con tarjeta, pero en la vista web se hace una vez que se terminaron de agregar todos los productos. Se facilitaria el desarrollo si fuese igual en ambos casos, osea, adaptar el flujo mobile al web.
+Agregar pantalla de “Resumen de Compras” al flujo mobile.
+
+solucionado.
+
+En la pantalla deregistro de usuario, vemos que está el botón de autocompletar con Google. Esto sería para autenticar, o solo para completar los datos? Porque en el segundo caso no es necesario el botón.
+
+no va botón
+
+En la pantalla deregistro de usuario, vamos a pedir los datos en caso de que la persona cumple con las condiciones del PEP?
+
+si
+
+En el ingreso de datos de cuenta bancaria, en el caso que el cliente no tenga cuenta y quiera crear una con alguna entidad bancaria, el flujo va a ser el mismo que usamos para cuentas TIC?
+
+No, el proceso va a ser el mismo a como está hoy en día en el onboarding viejo para nuevos clientes.
+
+En la vista deingreso de contraseña, como vamos a manejar / almacenar esa contraseña?
+Tendríamos también que darle la opción al usuario de poder cambiarla desde el portal de facturación electrónica.
+Estas contraseñas las setea el usuario a través nuestro, o ingresa la contraseña a través de nosotros.
+Que pasa en el caso si la contraseña se cambia y un comercio quiere facturar?
+Podemos hacer que se guarden las facturas sin cargar y luego cuando se actualice la contraseña que se manden
+
+Se lo vamos a mandar al c4c pero es asincrónico, por ende nosotros la vamos a tener que guardar. Hay que hablar con TaxIt para ver como la almacena TaxIt para ver como hacerlo nosotros.
+
+Actualmente estamos guardando la IP del cliente al momento de guardar un carrito / contratación. En el flujo nuevo lo queremos hacer igual?
+
+Como hacemos si el usuario quiere llegar a cambiar el mail luego de que paso esa pantalla?

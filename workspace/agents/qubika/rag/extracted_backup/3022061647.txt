@@ -1,0 +1,98 @@
+TITLE: Refactor del Portal de Reseteo de Contraseña - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3022061647
+SOURCE: 3022061647__Refactor_del_Portal_de_Reseteo_de_Contrasen╠âa_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Esta estimación es en base al ticket
+https://bancard.atlassian.net/browse/PDA-388
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Modificar vista de ingreso de correo -
+
+Cambiar título a Olvidaste tu Contraseña? y agregar el texto sobre el campo
+
+1.5
+
+[auth-portal]
+
+Modificar endpoint para inicio de reseteo de contraseña
+
+Revisar
+
+1
+
+[auth-portal]
+
+Modificar el endpoint de inicio de reseteo de contraseña para que no envíe el OTP y refactorear el correo.
+Ademas verificar y si el reset_token no está expirado, enviar el mismo.
+
+16
+
+[auth-service]
+
+Vista de success en el envio de correo con boton para reenviar el correo
+
+Para el reenvío de correo, llamar el endpoint de reinicio de contraseña
+
+20
+
+[auth-portal]
+
+Modificar vista para el ingreso de nueva contraseña.
+
+En el caso de requerir OTP, pegarle a un endpoint para enviar el mismo, mostrar el input para ingresarlo y botón para reenviarlo
+
+28
+
+[auth-portal]
+
+Endpoint para el envío de OTP
+
+8
+
+[auth-portal]
+
+Endpoint para generación y envío de OTP para reseteo de contraseña. Modificar texto de SMS
+
+16
+
+[auth-service]
+
+Revisar y refactorear endpoint de reseteo de contraseña
+
+8
+
+[auth-service]
+
+Vista de success en el reseteo de contraseña con botón de redirect a la return_url
+
+8
+
+[auth-portal]
+
+Refactor del endpoint request_reset en auth-service
+
+Agregar columna requires_otp en la tabla services y modificar operación validate_otp? para que en lugar de recibir el requires_otp por parámetro lo consulte desde la tabla servicios por el servicio asociado al usuario.
+
+12
+
+[auth-service]
+
+Gestion 15% (no altera el scope, es por tema de facturación)
+
+18hs
+
+Total desarrollo
+
+119hs
+
+Total hs desarrollo + gestión
+
+137hs

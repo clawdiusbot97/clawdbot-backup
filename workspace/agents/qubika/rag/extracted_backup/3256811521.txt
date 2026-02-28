@@ -1,0 +1,206 @@
+TITLE: Biometría en Facturación Electrónica - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3256811521
+SOURCE: 3256811521__Biometri╠üa_en_Facturacio╠ün_Electro╠ünica_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para el agregado de la Biometría en el flujo de Facturación Electrónica.
+Para las tareas que tienen 2 opciones de estimación, se tomó el valor más bajo. Dependiendo de las respuestas a las preguntas adjuntas, esto puede llegar a variar.
+Las horas totales por el momento sumas266.
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Genérica
+
+Pantalla Inicial de Biometría - Validemos tu Identidad
+Web
+Mobile
+
+8
+
+commerce-suite
+
+Pantalla final de Biometría - Registremos tu negocio
+Web
+Mobile
+
+8
+
+commerce-suite
+
+Mobile
+
+Vista de Cédula de Identidad (Mobile)
+
+8
+
+commerce-suite
+
+Agregar acción de abrir cámara y adjuntar archivo para peticiones de frente y dorso
+Requiere investigación de como funciona la función de javascript, pruebas.
+
+16
+
+commerce-suite
+
+Guardar fotos de Cédula de Identidad en S4 y Domus para enviar como adjunto al C4C
+requiere cambios en commerce-service.
+Esto es necesario porque se quiere retomar el flujo en web.
+
+16
+
+commerce-suite / commerce-service
+
+Vista de Tomar Selfie(Mobile)
+
+8
+
+commerce-suite
+
+Guardar foto del usuario en S4
+requiere cambios en commerce-service
+Esto es necesario porque se quiere retomar el flujo en web.
+
+12
+
+commerce-suite / commerce-service
+
+Enviar datos a DigiYo para crear la petición de verificación con DIA.
+Si tenemos que integrarnos con la API de día para ejecutar el DIA creado, vamos a necesitar horas extra
+pregunta 2
+
+32
+
+commerce-suite
+
+PopUp de Verificación de identidad
+En esta animación estamos haciendo polling a la API de DIA, esperando la respuesta Exitosa o Rechazada.
+
+8
+
+commerce-suite
+
+Guardar y enviar al C4C la respuesta de DIA en caso de éxito.
+
+12
+
+commerce-service
+
+Modificar proceso de envío al C4C para enviar los datos del DIA / DigiYo.
+depende de pregunta 5
+* Asumiendo que solo se envía una columna con el JSON de los datos del DIA / DigiYo.
+
+12
+
+commerce-service
+
+PopUp de Verificación exitosa
+
+4
+
+commerce-suite
+
+PopUp de Verificación fallida
+Acá hay que identificar qué falló y que el usuario lo vuelva a cargar, por ende tenemos que redirigirlo a esa vista.
+
+8
+
+commerce-suite
+
+Web
+
+Pantalla para continuar el flujo de verificación en Mobile
+Web (Con otro diseño)
+
+8
+
+commerce-suite
+
+Redirigir al usuario mediante QR
+Hay que definir como vamos a darle la opción al usuario para seguir el flujo en el celular.
+
+16
+
+commerce-suite
+
+Levantar los datos de verificación de identidad en el flujo mobile para corroborar si el proceso está completo.
+
+12
+
+commerce-suite
+
+Pantalla deVerificación Exitosa
+
+4
+
+commerce-suite
+
+PopUp cuando la verificación de Biometría no llega al 70 %
+Esta vista se muestra cuando el usuario carga los datos y la validación no llega al 70%. Se le ofrece al usuario volver a hacer la biometría
+
+6
+
+commerce-suite
+
+PopUp cuando la verificación de Biometría no llega al 70% nuevamente
+En este PopUp se le avisa al usuario que no cumplió nuevamente con el puntaje, por ende va a ser revisado por un Representante Comercial, pero que puede continuar igualmente con el flujo.
+Se envía el resultado con estado Asignado
+
+10
+
+commerce-suite
+
+Integración
+
+Integración y pruebas generales de todo el flujo
+
+24
+
+Total Desarrollo
+
+232
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+34
+
+Total Desarrollo + Gestión
+
+266
+
+notePreguntas
+Preguntas
+
+1
+Se necesita un video de la cara del usuario al momento de validar la identidad? O solo con mirar fijo al celular estaría?
+
+Solo Selfie
+
+2
+Luego de llamar al SDK de DigiYo para enviar los datos, es necesario mandar ejecutar en DIA creado, o se ejecuta automáticamente al crearse?
+
+Si
+
+3
+Necesitamos diseño para avisarle al usuario si falló la verificación de identidad
+
+En proceso
+
+4
+Tenemos que definir que porcentaje es aceptable para la verificación
+
+70%
+
+5
+En que formato y dentro de que objeto del C4C se van a enviar los datos del DIA?
+
+6
+La redirección a mobile va a ser via link o QR?
+
+QR

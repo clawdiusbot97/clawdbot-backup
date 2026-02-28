@@ -1,0 +1,133 @@
+TITLE: Vuelto 2.0 Daily Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2675900458
+SOURCE: 2675900458__Vuelto_2.0_Daily_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Viernes hasta último momento resolviendo el tema con Victor.
+Today: Seguimos al tanto, dando soporte.
+Blockers? No.
+
+20incomplete
+
+Yesterday: Deploy a staging de Vuelto con el fix.
+Today:
+Blockers? No.
+
+Yesterday:
+Today: Deploy a staging de Vuelto.
+Blockers?
+
+19incomplete
+
+Yesterday: ayer hablamos con Víctor y estamos a la espera de que agreguen la migración para poder deployar, quedó en avisarnos.
+Today: Pablo me pasó un avance de la estimación de tareas de SPI y lo estuve revisando, si les parece bien puedo ir adelantando un par de tickets hasta tener más novedades con el deploy
+Blockers?
+
+17incomplete
+
+Yesterday: Viendo PRs de pre-autoerizaciones.
+Today: -
+Blockers? No.
+
+18incomplete
+
+Yesterday: Ayer Tonga le explico como fue el proceso de deploy.
+Today: Aun sin usuario, vamos a usar el de Tonga. Revisaron los estados de las branchs. Cuando tengamos el Ok de las bbdd hacemos el deploy.
+Blockers? No.
+
+15incomplete
+
+Yesterday: Ayer ayudando a Lau con el tema del proceso de deploy. Ayudando a Gastón con BPortal
+Today: Viendo las branchs para ver si esta todo Ok.
+Blockers? No.
+
+16incomplete
+
+Yesterday:
+Today: Testeando lo que se pudo en entorno local. Juntarse con Tonga para ver el proceso de deploy.
+Blockers? No.
+
+13incomplete
+
+Yesterday: El viernes se trabajaron los servicios de manera local.
+Today: Hoy ayudando a Gaston a levantar VPortal. Dando una mano en lo que es vulnerabilidades.
+Blockers?
+
+14completeSeguimiento ticket 177
+
+Yesterday: Todos los tickets terminados.
+Today: Pablo revisó las PRs y asumimos que están bien. Victor pidió las PRs.
+Blockers? No.
+
+11incomplete
+
+Yesterday: Sigue la 177, se pudo levantar el docker y los unit tests.
+Today: Se junta con Jose y Juan para evitar romper algo tocando una gema que es cross iniciativa.
+Blockers? No.
+
+12incompleteSeguimiento ticket 177
+
+Yesterday:
+Today: Terminado ticket 174. Todos los tests pasaron. Listo para revisión. Ticket 169 tambien listo. Se encontró un error, se va a juntar con Joaco para ver si puede solucionarlo.
+Blockers? No.
+
+8incomplete
+
+Yesterday: Peleando con el docker. José envió la solución
+Today: Hoy va a probar esa solución. Levantar y probar que funcione.
+Blockers? No.
+
+9incompleteSeguimiento ticket 177
+
+Yesterday:
+Today:
+Blockers?
+
+10incomplete
+
+Yesterday: Terminando el ticket 169
+Today: Terminando ticket 169, ya terminado. Ver tema tests del ticket 174
+Blockers? No.
+
+5incomplete
+
+Yesterday: Trabajando en la tarea 177.
+Today: Hablar con Jose, para ver el tema de ANGUS.
+Blockers? No poder levantar el docker.
+
+6incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+7incomplete
+
+Yesterday: Ticket 169 y 174. Test de 169 que no pasa, Gaston va a ayudar. Ticket 174 hay que correr los tests.
+Today: Cerrar el 169 y si llega el 174
+Blockers? No es bloqueante externo. Tests que falla. 174 Jose va a ayudar.
+
+2incomplete
+
+Yesterday: Ticket 177. Agregando parámetros opcionales ANGUS
+Today: Esta tarde se va a juntar con Jose para terminar de entender ANGUS. Mañana tendriamos los test hechos para cerrarla.
+Blockers?
+
+3incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+4incomplete

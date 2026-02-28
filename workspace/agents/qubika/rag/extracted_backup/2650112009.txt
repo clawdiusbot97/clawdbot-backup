@@ -1,0 +1,21 @@
+TITLE: Infonet Cobranzas TD
+DOMAIN: General
+PRIORITY: Media
+ID: 2650112009
+SOURCE: 2650112009__Infonet_Cobranzas_TD.json
+
+---
+
+Pago de Servicios
+: Consulta de factura
+: Comisión a cargo del usuario
+Servicio:Recarga de Saldo - TIGO TELEFONIA
+Nro. Tel.:0981551796
+Nro. Tel.:0983524013
+
+Servicio:Pago de Facturas - ANDE
+NIS:4179710
+
+Servicio:Pago de tasas - Dinapi
+RUC:45648255
+Nombre:Gustavo

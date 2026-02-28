@@ -1,0 +1,243 @@
+TITLE: 3DS en TPago - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3897492453
+SOURCE: 3897492453__3DS_en_TPago_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la iniciativa de agregar el flujo de 3DS a TPago, a cargo dey
+Las horas estimadas son:422h ~ 54 días
+Fecha estimada de Inicio del desarrollo:Lunes
+Fecha estimada de entrega:Jueves
+Tarea
+
+Repositorio
+
+Estimación (hs)
+
+VPos Mandato Gambling - Ajustes para flujo completo/ pruebas
+
+vpos
+
+8hs
+
+VPos Mandato Gambling - Ajustes para flujo completo/ Peer review y correcciones/ Deploy a Staging
+
+vpos
+
+8hs
+
+DDC
+
+Endpoint para averiguar si se requiere 3DSec para un proceso
+
+tpago-portal
+
+8hs
+
+Endpoint para averiguar si se requiere 3DSec para un proceso.
+
+payment-link-service
+
+8hs
+
+Endpoint de creación de JWT para ddc
+
+Tpago-portal
+
+8hs
+
+Endpoint de creación de JWT para ddc
+
+payment-link-service
+
+8hs
+
+Integrar DDC form y frame en el formulario de catastro. Inlcuye: asignar input ddc_jw al form, submitear el form con target ddc_frame, obtención de un cardinal_session_id al finalizar el ddc.
+
+tpago-portal
+
+16hs
+
+Integrar DDC form y frame en el formulario pago con nueva tarjeta
+
+tpago-portal
+
+16hs
+
+Integrar DDC form y frame en el formulario de pago con tarjeta catastrada
+
+tpago-portal
+
+16hs
+
+Lookup
+
+Endpoint de lookup
+
+tpago-portal
+
+8hs
+
+Endpoint de lookup. Realizar lookup en base a cardinal_session_id y datos de la compra/catastro. Crear registro en la tabla cardinal_sessions asociado a la compra/catastro. Persistir respuesta de Lookup. Evaluar necesidad de challenge. Si hay challenge, generar JWT para llamar al endpoint del stepUpUrl.
+
+payment-link-service
+
+24hs
+
+Challenge
+
+Integrar CMPI form y frame para realizar challenge en el flujo de catastro de tarjeta
+
+tpago-portal
+
+12hs
+
+Integrar CMPI form y frame para realizar challenge en el flujo de pagos con tarjeta nueva
+
+tpago-portal
+
+12hs
+
+Integrar CMPI form y frame para realizar challenge en el flujo de pagos con tarjeta catastrada
+
+tpago-portal
+
+12hs
+
+Endpoint de ReturnUrl para cuando finaliza el challenge → disparar submit del form (catastro de tarjeta)
+
+tpago-portal
+
+12hs
+
+Endpoint de ReturnUrl para cuando finaliza el challenge → disparar submit del form (pago con tarjeta nueva)
+
+tpago-portal
+
+12hs
+
+Endpoint de ReturnUrl para cuando finaliza el challenge → disparar submit del form (pago con tarjeta catastrada)
+
+tpago-portal
+
+12hs
+
+Authenticate
+
+Catastro de tarjeta: realizar authenticate si el flujo lo requiere, persistir respuesta de authenticate en el registro CardinalSession. Vincular la nueva UserCard al NewCardRequest.
+
+payment-link-service
+
+12hs
+
+Pago con tarjeta nueva: realizar authenticate si el flujo lo requiere, persistir respuesta de authenticate en el registro CardinalSession. vincular nuevo pago al CardinalSession.
+
+payment-link-service
+
+12hs
+
+Pago con tarjeta nueva: Si se eligió la opción de catastrar nueva tarjeta, y el pago fue exitoso, catastrar sin pasar por 3DSec la nueva tarjeta en un proceso asíncrono
+
+payment-link-service
+
+12hs
+
+Pago con tarjeta catastrada: realizar authenticate si el flujo lo requiere, persistir respuesta de authenticate en el registro CardinalSession. Vincular nuevo pago al CardinalSession.
+
+payment-link-service
+
+12hs
+
+Enviar datos de cardinal a los endpoints de jpos de catastro y pago.
+
+payment-link-service
+
+16hs
+
+Ajustar metodos de catastro/pago para aceptar parámetros de Cardinal.
+
+external-services
+
+16hs
+
+Crear y editar modelos con sus respectivas migraciones:
+- NewCardRequest (nuevo)
+- UserCards
+- CardinalAcceptedCards (nuevo)
+- CardinalSessions (nuevo)
+
+payment-link-service
+
+8hs
+
+Limitar catastros a un máximo de 5 tarjetas activas y habilitadas no retroactivo.
+
+payment-link-service
+
+8hs
+
+Pago con nueva tarjeta: usuario logueado. deshabilitar checkbox de guardar tarjeta si el usuario ya alcanzó el limite de tarjetas
+
+tpago-portal
+
+8hs
+
+Pago con nueva tarjeta: usuario logueado. Hacer nueva operación para consultar numero de tarjetas activas.
+
+payment-link-service
+
+8hs
+
+Agregar configuraciones de credenciales y flags de Cardinal
+
+bancard-configurations
+
+4hs
+
+Agregar configuraciones de credenciales y flags de Cardinal
+
+payment-link-service
+
+4hs
+
+Pagos con tarjeta nueva: Validar resultado del proceso kount. Comenzar 3DSec sólo en caso de que kount sea exitoso o no haya sucedido.
+
+tpago-portal
+
+8hs
+
+Integrar servicio de tokenizacion para catastros/bancard/util/tarjeta_token
+
+payment-link-service
+
+12hs
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+32hs
+
+Total Desarrollo
+
+368h
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+54h
+
+Total Desarrollo + Gestión
+
+422h

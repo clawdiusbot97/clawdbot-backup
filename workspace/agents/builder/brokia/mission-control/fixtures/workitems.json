@@ -1,0 +1,47 @@
+[
+  {
+    "id": "WI-001",
+    "title": "Implement user authentication",
+    "status": "in_progress",
+    "type": "feature",
+    "allowed_actions": ["move_to_blocked", "move_to_review", "close"],
+    "created_at": "2026-02-20T10:00:00Z",
+    "assignee": "dev-team"
+  },
+  {
+    "id": "WI-002",
+    "title": "Fix login redirect bug",
+    "status": "backlog",
+    "type": "bugfix",
+    "allowed_actions": ["start", "archive"],
+    "created_at": "2026-02-21T14:30:00Z",
+    "assignee": null
+  },
+  {
+    "id": "WI-003",
+    "title": "Add payment gateway integration",
+    "status": "review",
+    "type": "feature",
+    "allowed_actions": ["approve", "request_changes", "close"],
+    "created_at": "2026-02-19T09:15:00Z",
+    "assignee": "backend-team"
+  },
+  {
+    "id": "WI-004",
+    "title": "Update documentation for API v2",
+    "status": "blocked",
+    "type": "task",
+    "allowed_actions": ["unblock", "archive"],
+    "created_at": "2026-02-18T16:45:00Z",
+    "assignee": "docs-team"
+  },
+  {
+    "id": "WI-005",
+    "title": "Performance optimization for search",
+    "status": "done",
+    "type": "improvement",
+    "allowed_actions": ["reopen"],
+    "created_at": "2026-02-15T11:20:00Z",
+    "assignee": "perf-team"
+  }
+]

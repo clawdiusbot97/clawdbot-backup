@@ -1,0 +1,35 @@
+TITLE: Mejoras encontradas
+DOMAIN: General
+PRIORITY: Media
+ID: 2682355775
+SOURCE: 2682355775__Mejoras_encontradas.json
+
+---
+
+Punto 1
+Proyecto: TPago portal
+Hay problemas en la navegacion a traves del sitio. Por ejemplo:
+/home/your_activity
+
+/home/your_cards
+
+/home/your_subscriptions
+
+/home/your_profile
+
+Llevan a páginas que se ven asi:
+Las mismas no estan bien resueltas, ya que no muestran el layout general de la aplicacion. Solo muestran el turbo frame respectivo.
+Sugiero poder vincular dichas rutas a sus respectivas vistas en la pantalla principal, de modo que esas rutas puedan ser colocadas en el navegador y lleve a la pantalla correcta.
+Punto 2
+Proyecto TPago portal
+Sesiones de usuario son almacenadas en cookies de navegador.https://api.rubyonrails.org/classes/ActionDispatch/Session/CookieStore.html. Es la estrategia por default que traen las aplicaciones hechas en Rails ya que otorga varios beneficios. Principalmente performance.
+Esto genera que no hay control del lado del servidor acerca de sesiones expiradas/cerradas.
+Ejemplos de problemas generados por esta estrategia de sesiones:
+Una cookie vieja de una sesion “cerrada” se puede reutilizar, y la sesion se vuelve a activar.
+Se loguea un usuario. Se setea una cookie_bancard_tpago_portal_sessioncuyo valor es una sesion válida.
+
+El usuario cierra sesion. Se sobreescribe el valor de la cookie_bancard_tpago_portal_sessionborrando el user_id, haciendo que la sesion quede cerrada en ese navegador.
+
+Se restaura manualmente el valor de la cookie obtenido en el paso 1 luego del login. La sesion vuelve a estar activa.
+
+Requests paralelas.

@@ -1,0 +1,51 @@
+=== OpenClaw Model Normalization Diff ===
+Date: 2026-02-22
+
+## openclaw.json Changes
+
+### Agent: researcher
+- BEFORE: primary="openai-codex/gpt-5.1-codex", fallbacks=["openrouter/minimax/minimax-m2.1"]
++ AFTER:  primary="openrouter/minimax/minimax-m2.1", fallbacks=["openrouter/deepseek/deepseek-v3.2"]
+  REASON: Grok/Codex son 3-5x más caros. Minimax tiene buena calidad para research a fracción del costo.
+
+### Agent: writer  
+- BEFORE: primary="openai-codex/gpt-5.1-codex", fallbacks=["openai-codex/gpt-5.1-codex"]
++ AFTER:  primary="stepfun/step-3.5-flash:free", fallbacks=["openrouter/minimax/minimax-m2.1"]
+  REASON: Step flash es gratuito y suficiente para tareas de escritura. Minimax como fallback de calidad.
+
+### Agent: builder
+- BEFORE: primary="openai-codex/gpt-5.3-codex", fallbacks=["openrouter/deepseek/deepseek-v3.2"]
++ AFTER:  primary="openrouter/deepseek/deepseek-v3.2", fallbacks=["openai-codex/gpt-5.3-codex"]
+  REASON: Deepseek-v3.2 es ~3x más barato que Codex para la mayoría de tareas de código. Codex reservado para fallback manual cuando se solicite explícitamente.
+
+### Agent: chief
+- BEFORE: primary="openai-codex/gpt-5.1-codex", fallbacks=["openai-codex/gpt-5.1-codex"]
++ AFTER:  primary="openrouter/deepseek/deepseek-v3.2", fallbacks=["openrouter/minimax/minimax-m2.1"]
+  REASON: Chief es planificación y priorización, no requiere Codex. Deepseek ofrece buen razonamiento a menor costo.
+
+### Agent: ops
+- BEFORE: primary="openai-codex/gpt-5.1-codex", fallbacks=["openai-codex/gpt-5.1-codex"]
++ AFTER:  primary="openrouter/deepseek/deepseek-v3.2", fallbacks=["openrouter/minimax/minimax-m2.1"]
+  REASON: Ops son tareas de infra/seguridad. Deepseek maneja bien análisis técnico; minimax como fallback rápido.
+
+### Agent: brokia
+- BEFORE: primary="openai-codex/gpt-5.1-codex", fallbacks=["openai-codex/gpt-5.1-codex"]
++ AFTER:  primary="openrouter/deepseek/deepseek-v3.2", fallbacks=["openrouter/minimax/minimax-m2.1"]
+  REASON: Especialista de dominio Brokia necesita razonamiento estructurado, no código. Deepseek es óptimo.
+
+### Agent: qubika
+- BEFORE: primary="openrouter/deepseek/deepseek-v3.2", fallbacks=["openai-codex/gpt-5.1-codex"]
++ AFTER:  primary="openrouter/deepseek/deepseek-v3.2", fallbacks=["openrouter/minimax/minimax-m2.1"]
+  REASON: Uniformidad con otros especialistas. Minimax ofrece mejor latencia como fallback.
+
+## Key Changes Summary
+- 6 agents migrados de Codex a Deepseek/Minimax
+- 1 agent (writer) migrado a Step Flash (gratuito)
+- Builder: Codex pasa a ser fallback manual, no default
+- Estimated cost reduction: ~60-70% en agents especializados
+
+## Guardrails Implemented
+- config_lock_check.py: Valida expected snapshot cada 5 min
+- drift_alert_check.py: Detecta cambios en agent.model.primary
+- drift_alert_notify.py: Envía alerta Telegram si hay drift
+- openclaw-rotate.service: Ejecuta ambos checks

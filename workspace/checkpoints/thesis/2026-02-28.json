@@ -1,0 +1,24 @@
+{
+  "date": "2026-02-28",
+  "cache_used": false,
+  "dedupe_checked_days": 7,
+  "sources": [
+    "https://developer.nvidia.com/case-studies/scientific-literature-ai-nvidia-nemotron",
+    "https://arxiv.org/html/2602.18998v1",
+    "https://www.techspot.com/news/111485-humble-pdf-becoming-problem-ai.html",
+    "https://www.latent.space/p/ainews-the-unreasonable-effectiveness",
+    "https://intuitionlabs.ai/pdfs/claude-vs-chatgpt-vs-copilot-vs-gemini-2026-enterprise-guide.pdf",
+    "https://www.infotech.com/digital-disruption/llms-in-2026-what-s-real-what-s-hype-and-what-s-coming-next"
+  ],
+  "findings_count": 6,
+  "delivery": {
+    "attempted": true,
+    "channel_id": "1476311753305362564",
+    "message_ids": [
+      "1477259932217643039",
+      "1477360757900443791",
+      "1477387166337204224"
+    ],
+    "last_sent_at": "2026-02-28T19:29:15Z"
+  }
+}

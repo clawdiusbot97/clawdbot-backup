@@ -1,0 +1,19 @@
+{
+  "date": "2026-02-27",
+  "generated_at_ms": 1772190188279,
+  "markdown_path": "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-02-27.md",
+  "findings_count": 7,
+  "sources": [
+    "https://www.applied-ai.com/briefings/pdf-parsing-benchmark/",
+    "https://github.com/opendataloader-project/opendataloader-bench",
+    "https://modal.com/blog/low-latency-voice-bot",
+    "https://www.verisk.com/blog/carriers-adapt-strategically-as-ai-transforms-insurance-underwriting/",
+    "https://www.jdsupra.com/legalnews/ai-and-insurance-policy-interpretation-2096698/",
+    "https://www.insurtechworld.org/post/102mk3p/the-claims-spectrum-and-how-it-impacts-ai-strategy",
+    "https://dig.watch/updates/ai-automation-quietly-reshapes-core-insurance-operations"
+  ],
+  "delivered": true,
+  "delivery_channel_id": "1476311753305362564",
+  "delivered_message_id": "1476897923814916116",
+  "delivery_error": null
+}

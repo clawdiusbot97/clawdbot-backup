@@ -1,0 +1,16 @@
+TITLE: Notas
+DOMAIN: General
+PRIORITY: Media
+ID: 4492394583
+SOURCE: 4492394583__Notas.json
+
+---
+
+Consideraciones importantes para el desarrollo
+En Step 3 (enrollment service) se debe enviar el referenceId obtenido en el Step 1 (setup service)
+
+Validar si elconsumerAuthenticationInformation.authenticationTransactionIdque recibimos en la respuesta del Check Enrollment (step 3) es el mismo que elTransactionIdque recibimos en elPOST returnUrl?TrasactionId=?Esto nos serviria para saber de qué pago estamos recibiendo el returnUrl.
+
+https://app.diagrams.net/#G1RDyKeUuSk8d7nmdrZ8PIf3ObgQnWC5yo#{"pageId"%3A"2YBvvXClWsGukQMizWep"}
+
+https://app.diagrams.net/#G1YniFU4FFpyAKf6b983OaeJpLB7NblfRz#{"pageId"%3A"Q6Qj3vK8hR4XFauKPOTc"}

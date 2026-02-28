@@ -1,0 +1,116 @@
+TITLE: Carga de Archivos - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3263791105
+SOURCE: 3263791105__Carga_de_Archivos_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la sección de carga de archivos dentro del flujo de Facturación Electrónica.
+Vista Web:https://www.figma.com/design/q4Y1h3mLhjS3CeQU93p8Vw/%E2%9C%85-Onboarding-Portal-de-Comercios-2024?node-id=1187-20923&t=2HXhJjVgVIDk1Uij-4
+Vista Mobile:https://www.figma.com/design/q4Y1h3mLhjS3CeQU93p8Vw/%E2%9C%85-Onboarding-Portal-de-Comercios-2024?node-id=814-11685&t=3wgLXTh5OAhwxPzG-4
+Endpoint de la API de TaxIT para verificar constancia de usuario digital:https://documenter.getpostman.com/view/27482367/2sA3duFYJL#58394635-0bd6-4f74-934a-4c56e796ad04
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Modificar el endpoint de get_company_attachments para que reciba el producto como parámetro opcional, y en el caso de ser Facturación Electrónica que pida los archivos de “Contancia de DNIT” y “Formulario Definitivo”
+Agregar también links a youtube, por ende vamos a tener que agregar otra columna donde vamos a poner estos links.
+
+8
+
+commerce-service
+
+Crear pantalla de Carga de Archivos
+Llamar endpoint de get_company_attachments
+Web y Mobile
+Cambio de componente según si el archivo está cargado o no
+Mensajes de error
+Vista del archivo Cargado
+Redirección a urls
+Descarga de PDFs de ejemplo
+Opción de borrado de archivo adjunto
+
+24
+
+commerce-suite
+
+Llamar al endpoint de TaxIT para validar el archivo de “Constancia de DNIT”
+
+8
+
+commerce-suite
+
+Llamar al endpoint de TaxIT para validar el archivo de “Timbrado Definitivo”
+
+8
+
+commerce-suite
+
+Validar que el RUC / CI que devuelve TaxIT coincide con el registrado por el usuario en el flujo.
+Si no coincide, mostrar mensaje de error
+
+4
+
+commerce-suite
+
+Integración con endpoint de TaxIT de “Constancia de DNIT” en external-services
+
+12
+
+external-services
+
+Integración con endpoint de TaxIT de “Timbrado Definitivo” en external-services
+
+12
+
+external-services
+
+Integración con endpoint de TaxIT de “Constancia de DNIT” en commerce-service y guardar la respuestsa en la tabla de Leads
+
+8
+
+commerce-service
+
+Integración con endpoint de TaxIT de “Timbrado Definitico” en commerce-service y guardar la respuestsa en la tabla de Leads
+
+8
+
+commerce-service
+
+Validar que los archivos obligatorios estén adjuntos al momento de avanzar
+
+8
+
+commerce-suite
+
+Enviar los archivos a commerce-service y guardarlos como adjuntos al C4C
+
+6
+
+commerce-suite
+
+Integración con el resto del flujo
+
+4
+
+commerce-suite
+
+Total Desarrollo
+
+110
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+16
+
+Total Desarrollo + Gestión
+
+126
+
+notePreguntas
+Preguntas

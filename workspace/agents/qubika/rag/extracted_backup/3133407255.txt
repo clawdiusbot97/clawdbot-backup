@@ -1,0 +1,363 @@
+TITLE: Portal Facturación Electrónica - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3133407255
+SOURCE: 3133407255__Portal_Facturacio╠ün_Electro╠ünica_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Portal de Facturación Electrónica
+En el documento de abajo pueden encontrar el listado de tareas con sus respectivas estimaciones para la iniciativa del Portal de Facturación electrónica.
+Este estimativo incluye:
+Setup del nuevo portal
+
+Vistas en base alFigmacreado para el mismo, con su correspondiente flujo
+
+Las vistas solo van a ser web, no está incluido el estimativo para hacerlas responsive. En el caso que se quisiera hacer estas vistas responsive, necesitaríamos un diseño para guiarnos, ya que muchos de los componentes de estas vistas se complejizan en el formato mobile, y necesitaríamos una referencia de alguien más experto en UX/UI
+
+Cambios en el backend
+
+Integración con TaxIt (de los endpoints que ya están funcionales). Hay preguntas abiertas y tareas para TaxIt sobre endpoints que faltan o están incompletos
+
+No incluye:
+Estimación para vistas Mobile
+
+Pantalla de Mi Cuenta
+
+Gráficas de la sección Monitoreo
+
+Tareas relacionadas a las respuestas que surjan de las preguntas hechas en la sección de Preguntas. (Al final del documento)
+
+Notas Adicionales:
+En verde están marcadas las tareas con preguntas abiertas
+
+En rojo están marcadas las tareas que aún no han sido estimadas
+
+Estimación
+La estimación total para el desarrollo es de 507 horas de desarrollo para las tareas listadas
+
+Gestión 15% (Incluye reuniones de seguimiento, tasking, re estimación, etc.. No afecta el tiempo de entrega, es solo para facturación)
+
+QA 20% (Tareas de QA a realizarse a medida que la iniciativa vaya avanzando, para crear un desarrollo más ágil y evitar acumulación de errores al final del proyecto)
+
+Bug Fixing 20% (Se piensa hacer un desarrollo ágil, donde se vaya validando con QA a medida que se desarrollen pantallas y funcionalidades. Estas tareas de Bug Fixing, se esperan hacer dentro del proceso, para no acumular bugs al final del desarrollo, que puedan perjudicar y atrasar el proyecto de la fecha estipulada)
+
+Puntos importantes a tener en cuenta sobre la estimación y el proceso de desarrollo
+La suma de todas estas tarea va a dar un total de782 horas. Al final del desarrollo se va a entregar un producto que ha sido desarrollado y validado por el equipo de QA.
+
+Es necesario luego de este desarrollo, hacer pruebas de regresión, para validar que todo esté funcionando como se definió. Las pruebas de QA en el proceso de desarrollo no significan que no puedan surgir bugs al final del mismo, pero si que van a reducirlos en un gran porcentaje, y evitar arrastrar errores que pueden ser cruciales, detectándolos en etapas tempranas.
+
+Todas las tareas y cambios que se agreguen serán re estimados.
+
+Desde Qubika nos comprometemos a avisar sobre estos posibles cambios y bloqueos que podamos a llegar a tener con tiempo, para que desde Bancard puedan comunicar al área de finanzas y producto.
+
+Una vez concluido este proceso se estiman,40hssemanales por desarrollador y20hsde QA hasta la salida a producción, en caso de ser requeridos
+
+Tarea
+
+Estimación
+
+Portal / Servicio
+
+Creación del Portal
+
+Setup inicial y creación de proyecto de bancard-invoices-portal
+Configurar sentry, docker-compose, github actions, rubocop, solargraph
+
+24
+
+bancard-invoices-portal
+
+Crear roles y permisos para acceder al portal
+
+4
+
+bancard-commerce-service
+
+Manejo de autorización y autenticación
+
+4
+
+bancard-invoices-portal
+
+Modificar la pantalla de administración para asignar los permisos
+Que roles vamos a tener?
+
+3
+
+bancard-commerce-suite
+
+Agregar bancard-invoices-portal en bancard-docker
+
+2
+
+bancard-docker
+
+Agregar bancard-invoices-portal en bancard-configurations
+
+2
+
+bancard-configurations
+
+Configurar máquina de staging para bancard-invoices-portal
+
+4
+
+Configurar proxy dmz de staging para bancard-invoices-portal
+
+4
+
+Configurar máquina de producción para bancard-invoices-portal
+
+8
+
+Configurar proxy dmz de producción para bancard-invoices-portal
+
+8
+
+Tareas del Portal
+
+Hacer pruebas de integración con API de TaxIt con Postman
+
+8
+
+Postman
+
+Hacer setup inicial para conexión con API de TaxIt en external-services
+La conexión con la api va a ser por api key o por token?
+
+16
+
+bancard-external-services
+
+Crear servicio para obtener facturas de TaxIt en external-services
+
+16
+
+bancard-external-services
+
+Crear servicio para obtener facturas de TaxIt en commerce-service
+Manejo de filtros y búsquedas en el backend, y test para todos estos casos
+
+20
+
+bancard-commerce-service
+
+Crear servicio para obtener facturas de TaxIt en commerce-suite
+
+8
+
+bancard-commerce-suite
+
+Crear servicio para obtener detalles de factura en external-services
+Aún no tenemos la definición de este endpoint
+
+12
+
+bancard-external-services
+
+Crear servicio para obtener detalles de factura de TaxIt en commerce-service
+
+16
+
+bancard-comerce-service
+
+Crear servicio para obtener detalles de factura de TaxIt en commerce-suite
+
+8
+
+bancard-commerce-suite
+
+Crear servicio para enviar detalles de factura por mail en external-services
+El endpoint también soporta enviar a destinatarios adicionales, queremos soportar eso? Tendríamos que crear una pantalla adicional
+
+8
+
+bancard-external-services
+
+Crear servicio para enviar detalles de factura de TaxIt por mail en commerce-service
+
+12
+
+bancard-comerce-service
+
+Crear servicio para enviar detalles de factura de TaxIt por mail en commerce-suite
+
+6
+
+bancard-commerce-suite
+
+Crear servicio para crear nota de crédito de factura en external-services
+El endpoint para recibir detalle de factura no está creado aún, pero el response deberia ser equivalente al body que tenemos que enviar para la anulación?
+Qué hacemos con el campo motivo?
+Se puede ver la forma de que se haga la nota de crédito solo con el número de factura y el motivo?
+
+16
+
+bancard-external-services
+
+Crear servicio para crear nota de crédito de factura de TaxIt en commerce-service
+
+16
+
+bancard-comerce-service
+
+Crear servicio para crear nota de crédito de factura de TaxIt en commerce-suite
+
+16
+
+bancard-commerce-suite
+
+Crear servicio para la generación de factura en external-services
+
+16
+
+bancard-external-services
+
+Crear servicio para la generación de factura de TaxIt en commerce-service
+
+16
+
+bancard-comerce-service
+
+Crear servicio para la generación de factura de TaxIt en commerce-suite
+
+16
+
+bancard-commerce-suite
+
+Crear pantalla de “Mis Facturas”
+
+40
+
+bancard-invoices-portal
+
+Crear componentes para Filtros
+
+24
+
+bancard-invoices-portal
+
+Crear maquetado de Sidebar
+
+8
+
+bancard-invoices-portal
+
+Crear buscador por nombre
+La tabla se va a actualizar a medida que el usuario escribe
+Agregar spinner para mostrar al usuario que se están cargando los resultados
+No es mejor tener un solo buscador para Nombre, RUC o #de factura, en vez de tener dos separados?
+
+16
+
+bancard-invoices-portal
+
+Crear pantalla de “Detalles de Factura”
+
+30
+
+bancard-invoices-portal
+
+Crear modal para confirmar anulación de factura
+
+12
+
+bancard-invoices-portal
+
+Crear modal para aceptar términos para la anulación
+
+6
+
+bancard-invoices-portal
+
+[Generar Factura] Crear pantalla de “Generar Factura” (solo maquetado)
+
+6
+
+bancard-invoices-portal
+
+[Generar Factura] Crear wizard para moverse entre pantallas
+
+4
+
+bancard-invoices-portal
+
+[Generar Factura] Crear componente de “Resumen de Factura”
+
+20
+
+bancard-invoices-portal
+
+[Generar Factura] Crear componente de “Consulta”
+
+8
+
+bancard-invoices-portal
+
+[Generar Factura] Crear componente de “Datos”
+
+8
+
+bancard-invoices-portal
+
+[Generar Factura] Crear componente de “Concepto”
+
+24
+
+bancard-invoices-portal
+
+[Generar Factura] Crear modal de confirmación
+
+6
+
+bancard-invoices-portal
+
+[Mi Cuenta] Crear Pantalla de “Mi Cuenta”
+Falta definición
+
+[Monitoreo] Crear gráficas
+Falta definición
+
+[Monitoreo] Integrar componente de listado de facturas, filtros, buscadores
+
+6
+
+bancard-invoices-portal
+
+Total desarrollo
+
+507
+
+Gestión 15%(Incluye reuniones de seguimiento, tasking, re estimación, etc.. No afecta el tiempo de entrega, es solo para facturación)
+
+75
+
+QA 20%(Tareas de QA a realizarse a medida que la iniciativa vaya avanzando, para crear un desarrollo más ágil y evitar acumulación de errores al final del proyecto)
+
+100
+
+Bug Fixing 20%(Se piensa hacer un desarrollo ágil, donde se vaya validando con QA a medida que se desarrollen pantallas y funcionalidades. Estas tareas de Bug Fixing, se esperan hacer dentro del proceso, para no acumular bugs al final del desarrollo, que puedan perjudicar y atrasar el proyecto de la fecha estipulada)
+
+100
+
+Total desarrollo + QA + gestión
+
+782
+
+notePreguntas
+Las respuestas de estas preguntas pueden afectar a la estimación
+Preguntas
+Las respuestas de estas preguntas pueden afectar a la estimación
+
+Que roles vamos a tener?
+
+La conexión con la api va a ser por api key o por token?
+
+[TaxIt] Necesitamos endpoint para obtener detalle de factura
+
+[TaxIt] Necesitamos agregar campos adicionales al endpoint que trae todas las facturas, para poder completar la tabla con los datos de las mismas
+
+El endpoint para reenviar la factura por mail también soporta enviar a destinatarios adicionales, queremos soportar eso? Tendríamos que crear un modal adicional o reestructurar el existente
+
+Tenemos dos buscadores en lapantalla principal del Portal, uno para buscar por nombre y por RUT, y otro para buscar por número de factura. No sería mejor unificarlos?

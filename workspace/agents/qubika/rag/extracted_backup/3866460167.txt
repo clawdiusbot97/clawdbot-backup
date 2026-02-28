@@ -1,0 +1,70 @@
+TITLE: Incidente de Reversas de QR en Tpago
+DOMAIN: General
+PRIORITY: Media
+ID: 3866460167
+SOURCE: 3866460167__Incidente_de_Reversas_de_QR_en_Tpago.json
+
+---
+
+Información del Incidente
+Fecha y hora del incidente:El incidente ocurrió durante casi 24 horas, desde el día 20 de marzo a las 5:30 AM hasta el día 21 de marzo a las 2:26 AM, cuando ocurrió la última reversa por error.
+
+Servicios afectados:El único servicio afectado fueTpago.
+
+Usuarios impactados:El error ocurrió un total de190 vecesen ese lapso de tiempo.
+
+Descripción del Problema
+Síntomas:
+El día21 de marzo en la madrugada, durante un pase a producción de los cambios relacionados al "no cambio de hora", se identificó un error en la confirmación de los pagos QR de Tpago. El error ocurría en notificación de los pagos exitosos desdepayment-link-serviceatpago-portal.
+Este errorno estaba relacionadocon los cambios desplegados ese día, ya que al revisar los logs enSentry, se evidenció que el problema había comenzadodesde un pase a producción realizado la madrugada anterior.
+Impacto:
+Durante casi 24 horas, las confirmaciones QR de Tpago fallaban de forma intermitente.
+
+Días después, ciertoscomercioscomenzaron a levantar reclamos porque, debido a este error, veían los pagos aprobados en la web de Tpago, pero a los pocos minutos esos pagos se revertían, dejando el pago sin efecto.
+
+Causa Raíz
+Análisis técnico:
+Varias causas contribuyeron al comportamiento incorrecto del servicio deTpagodurante el incidente:
+Problema en la lógica de reversas en payment-link-service:
+payment-link-servicees el servicio encargado de recibir las confirmaciones de pagos con QR por parte de las entidades.
+
+Según el código, cuando un pago se confirma correctamente contraJPOS, se actualiza su estado a"Confirmado".
+
+Luego, se intenta enviar unanotificación a tpago-portal.
+
+Si la notificación falla, el pago se encola parareversar, y su estado se cambia a"Reversado".
+
+Esto genera que durante un corto periodo de tiempo (1 minuto aprox), el comercio pueda ver un pagoconfirmado, pero que luego se revierta si la notificación a tpago-portal falla.
+
+Cambio en las reglas del firewall el 10 de marzo:
+Con el nuevo firewall, los servicios internos ya no podían comunicarse entre ellos saliendo a internet. Por este motivo, se modificó la configuración de los servicios para que la comunicación entre los mismosya no saliera a internety se realizara exclusivamente a través de lared interna.
+
+Antes del cambio, la comunicación entrepayment-link-serviceytpago-portalusaba el dominio público de Tpago, lo que implicaba salir a internet.
+
+Para corregir esto, se realizaroncambios en calienteen los servidores de producción, asegurando la comunicación a través de la red interna.
+
+Además, se agregaroncommitsen la configuración del serviciopayment-link-servicepara que el error no volviera a ocurrir en el próximo despliegue.
+
+Despliegue del 20 de marzo:
+Se llevaron cambios a producción (no relacionados con el "no cambio de hora").
+
+El deploy sobrescribió la configuración en caliente, haciendo que la comunicación contpago-portalvolviera a fallar, ya que el commit agregado no modificaba la configuración adecuada.
+
+Sin embargo, uno de los nodos depayment-link-serviceseguía funcionando correctamente, porque el cambio en caliente se había hecho en el servidor directamente, mientras que en el otro nodo se realizó dentro del contenedor, por lo que se perdió tras el despliegue.
+
+Como resultado, las confirmaciones fallabande forma aleatoriadependiendo del nodo que procesara la solicitud.
+
+Identificación del problema:
+La madrugada del21 de marzo, durante el despliegue de los cambios por el "no cambio de hora", el equipo deQAdetectó que había errores intermitentes en la confirmación de pagos QR enTpago.
+
+Luego de investigar, se determinó que el error no era causado por los cambios desplegados en ese momento, sino quese originó en el despliegue del día anterior (20 de marzo).
+
+Solución Implementada
+Cómo se resolvió:
+Secorrigió la configuracióndepayment-link-service, modificando la URL detpago-portalpara que utilice undominio que resuelve la IP privada del F5.
+
+Luego de este cambio,los errores en las confirmaciones dejaron de ocurrirylos pagos dejaron de revertirsedespués de ser confirmados.
+
+Mejoras pendientes:
+La solución aplicada en la configuración es definitiva, ya que la nueva regla del firewall requiere que todos los servicios se comuniquen a través de la red privada.
+Se debe mejorar la implementación de la confirmación de pagos en payment-link-service, ya que, aunque poco frecuente, un fallo en la notificación atpago-portalgenera una inconsistencia temporal en la que el comercio puede ver un pagoconfirmadoy luegoreversado.

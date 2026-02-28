@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-20",
+  "generatedAtUtc": "2026-02-20T08:00:00Z",
+  "window": "last_24h",
+  "maxFindings": 20,
+  "findingsCount": 0,
+  "topSignals": [],
+  "emergingSubgenrePatterns": [
+    "Reggaeton mega‑concentration continues (Bad Bunny chart lock).",
+    "Regional electronic hybrids (vinahouse/guaracha/baile funk/SEA breakbeat) still rising.",
+    "DJ set/mix culture acceleration continues.",
+    "Bass‑forward electronic revival in US listening persists.",
+    "Rock momentum remains fragmented across editorial tastemakers."
+  ],
+  "artistMomentum": [
+    {"artist": "Bad Bunny", "momentum": "very-strong-up"},
+    {"artist": "Rosa Pistola", "momentum": "emerging-watch"},
+    {"artist": "Galcher Lustwerk", "momentum": "steady-underground-up"},
+    {"artist": "Priori", "momentum": "steady-underground-up"},
+    {"artist": "Logic1000", "momentum": "festival-circuit-up"}
+  ],
+  "actionableInputsForBriefs": [
+    "Monitor SoundCloud weekly upload stats for regional‑hybrid micro‑style acceleration.",
+    "Track any new challenger to Bad Bunny's chart concentration.",
+    "Prepare rock‑focused brief for editorial‑driven discovery lanes."
+  ],
+  "lowConfidenceToVerify": [
+    "Beatport hype chart movement via direct official chart snapshots.",
+    "EDM blog release claims lacking independent chart corroboration.",
+    "Smaller rock outlet reports pending label/artist primary confirmation."
+  ],
+  "breakoutSignal": {
+    "detected": false,
+    "level": null,
+    "summary": null
+  }
+}

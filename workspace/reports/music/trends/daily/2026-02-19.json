@@ -1,0 +1,109 @@
+{
+  "date": "2026-02-19",
+  "generatedAtUtc": "2026-02-19T08:00:00Z",
+  "window": "last_24h",
+  "maxFindings": 20,
+  "findingsCount": 8,
+  "topSignals": [
+    {
+      "title": "Bad Bunny fills the full Hot Latin Songs Top 25",
+      "source": "https://www.billboard.com/music/chart-beat/bad-bunny-breaks-record-most-hits-hot-latin-songs-chart-1236181085/",
+      "date": "2026-02-18",
+      "genreFamily": "reggaeton",
+      "subgenreHypothesis": "mainstream reggaeton + urbano-pop crossover",
+      "whyItMatters": "Historic chart concentration implies extreme audience and algorithm focus.",
+      "confidence": "high"
+    },
+    {
+      "title": "DtMF returns to #1 on Global 200; Bad Bunny controls top 5",
+      "source": "https://www.billboard.com/music/chart-beat/bad-bunny-dtmf-global-charts-top-five-1236180385/",
+      "date": "2026-02-17",
+      "genreFamily": "reggaeton",
+      "subgenreHypothesis": "melodic reggaeton with pop crossover",
+      "whyItMatters": "Confirms broad non-regional momentum and export power.",
+      "confidence": "high"
+    },
+    {
+      "title": "SoundCloud report: electronic >1/3 of uploads, #DJSET +39% YoY",
+      "source": "https://mixmag.asia/read/soundcloud-2026-music-intelligence-report-electronic-music-growth-news",
+      "date": "2026-02-17",
+      "genreFamily": "electronic",
+      "subgenreHypothesis": "DJ-set-led discovery and fast scene cycling",
+      "whyItMatters": "Creator behavior indicates faster trend propagation through mixes and sets.",
+      "confidence": "high"
+    },
+    {
+      "title": "Regional electronic hybrids (vinahouse/guaracha/baile funk/SEA breakbeat) rising",
+      "source": "https://mixmag.asia/read/soundcloud-2026-music-intelligence-report-electronic-music-growth-news",
+      "date": "2026-02-17",
+      "genreFamily": "electronic",
+      "subgenreHypothesis": "global-local club hybrids",
+      "whyItMatters": "Potential source of next micro-style breakouts.",
+      "confidence": "medium-high"
+    },
+    {
+      "title": "US electronic gains in minimal tech house, UK garage, bassline; dubstep +35%",
+      "source": "https://mixmag.asia/read/soundcloud-2026-music-intelligence-report-electronic-music-growth-news",
+      "date": "2026-02-17",
+      "genreFamily": "electronic",
+      "subgenreHypothesis": "bass-forward club resurgence",
+      "whyItMatters": "Signals renewed appetite for rhythmic, high-energy club formats.",
+      "confidence": "medium-high"
+    },
+    {
+      "title": "RA weekly new-music curation spotlights Galcher Lustwerk, Priori, Rosa Pistola",
+      "source": "https://ra.co/",
+      "date": "2026-02-18",
+      "genreFamily": "electronic",
+      "subgenreHypothesis": "minimal/deep house + leftfield club crossover",
+      "whyItMatters": "RA curation often precedes underground DJ uptake.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Ability Fest 2026 returns with fully electronic lineup",
+      "source": "https://www.abc.net.au/triplej/news/ability-fest-2026-line-up-melbourne-location/106360372",
+      "date": "2026-02-18",
+      "genreFamily": "electronic",
+      "subgenreHypothesis": "house/electro-pop and selector-driven club programming",
+      "whyItMatters": "Programming choices reveal audience demand and promoter confidence.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Rock momentum remains list-driven via weekly tastemaker roundups",
+      "source": "https://www.loudersound.com/music/tracks-singles/classic-rocks-tracks-of-the-week-february-16-2026",
+      "date": "2026-02-16",
+      "genreFamily": "rock",
+      "subgenreHypothesis": "indie-jangle + metalcore crossover pockets",
+      "whyItMatters": "No singular rock breakout; attention is distributed across editorial ecosystems.",
+      "confidence": "medium-low"
+    }
+  ],
+  "emergingSubgenrePatterns": [
+    "Reggaeton winner-take-most concentration around a single catalog.",
+    "Regional electronic hybrids entering global discovery rails.",
+    "DJ set/mix artifacts accelerating trend transmission.",
+    "Bass-forward electronic styles re-accelerating in US listening."
+  ],
+  "artistMomentum": [
+    {"artist": "Bad Bunny", "momentum": "very-strong-up"},
+    {"artist": "Rosa Pistola", "momentum": "emerging-watch"},
+    {"artist": "Galcher Lustwerk", "momentum": "steady-underground-up"},
+    {"artist": "Priori", "momentum": "steady-underground-up"},
+    {"artist": "Logic1000", "momentum": "festival-circuit-up"}
+  ],
+  "actionableInputsForBriefs": [
+    "Frame a brief on event-amplified catalog dominance in reggaeton.",
+    "Track guaracha/vinahouse/baile-funk/SEA-breakbeat signals weekly for micro-style breakouts.",
+    "Separate reporting lanes into chart concentration, curator momentum, and scene upload behavior."
+  ],
+  "lowConfidenceToVerify": [
+    "Beatport hype chart movement via direct official chart snapshots.",
+    "EDM blog release claims lacking independent chart corroboration.",
+    "Smaller rock outlet reports pending label/artist primary confirmation."
+  ],
+  "breakoutSignal": {
+    "detected": true,
+    "level": "high",
+    "summary": "Bad Bunny historic chart lock across Hot Latin Songs and Global 200."
+  }
+}

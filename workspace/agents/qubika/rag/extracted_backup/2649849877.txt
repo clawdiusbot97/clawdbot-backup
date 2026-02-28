@@ -1,0 +1,11 @@
+TITLE: Pago Móvil TD
+DOMAIN: General
+PRIORITY: Media
+ID: 2649849877
+SOURCE: 2649849877__Pago_Mo╠üvil_TD.json
+
+---
+
+Usuario con tarjetas registradas
+Email:gustavo.rodriguez428@gmail.com
+Contraseña:123gustavo

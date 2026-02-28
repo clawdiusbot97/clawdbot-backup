@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+  echo "Uso: search-searx \"consulta\" [count]" >&2
+  exit 2
+fi
+
+QUERY="$1"
+COUNT="${2:-5}"
+SEARX_SCRIPT="/home/manpac/.openclaw/workspace/skills/searxng-search/scripts/searxng_search.sh"
+
+# 1) Primary: SearXNG
+SEARX_OUT="$({ SEARXNG_BASE_URL="${SEARXNG_BASE_URL:-http://127.0.0.1:8088}" "$SEARX_SCRIPT" "$QUERY" "$COUNT"; } 2>/dev/null || true)"
+
+if [[ -n "$SEARX_OUT" ]]; then
+  if command -v jq >/dev/null 2>&1; then
+    RESULTS_LEN="$(jq -r '.results | length // 0' <<<"$SEARX_OUT" 2>/dev/null || echo 0)"
+    if [[ "$RESULTS_LEN" -gt 0 ]]; then
+      echo "$SEARX_OUT"
+      exit 0
+    fi
+  else
+    # Without jq, return SearX output as-is
+    echo "$SEARX_OUT"
+    exit 0
+  fi
+fi
+
+# 2) Fallback: Tavily (only if key exists)
+if [[ -z "${TAVILY_API_KEY:-}" ]]; then
+  echo "$SEARX_OUT"
+  exit 0
+fi
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "$SEARX_OUT"
+  exit 0
+fi
+
+TAVILY_RAW="$(curl -fsSL https://api.tavily.com/search \
+  -H 'Content-Type: application/json' \
+  -d "$(jq -nc --arg q "$QUERY" --argjson n "$COUNT" '{api_key: env.TAVILY_API_KEY, query: $q, max_results: $n, search_depth: "basic", include_answer: false, include_raw_content: false}')" \
+  2>/dev/null || true)"
+
+if [[ -z "$TAVILY_RAW" ]]; then
+  echo "$SEARX_OUT"
+  exit 0
+fi
+
+jq -c '{
+  query: .query,
+  number_of_results: ((.results // []) | length),
+  provider: "tavily-fallback",
+  results: ((.results // []) | map({
+    title: (.title // ""),
+    url: (.url // ""),
+    snippet: (.content // "")
+  }))
+}' <<<"$TAVILY_RAW"

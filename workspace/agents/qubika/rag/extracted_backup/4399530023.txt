@@ -1,0 +1,599 @@
+TITLE: QR HUB - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4399530023
+SOURCE: 4399530023__QR_HUB_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la iniciativa QR HUB, a cargo dey.
+El equipo cuenta con licencias, y para estas fechas tenemos los feriados del,y.
+Licencias:
+→al
+→al
+Acá tenemos dos escenarios, continuar en enero sin Joaquín, o que ingrese otra persona en del equipo en su ausencia. Esto está atado a la disponibilidad del equipo y a la planificación del Q2, a definir más adelante en el mes.
+Las horas estimadas son:650 horas ~ 82 días
+Fecha de Inicio:
+Fecha estimada de Entrega sin Joaco en enero:
+Fecha estimada de Entrega con suplente de Joaco en enero:→Puede variar atado a la suplencia de la otra persona.
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+Tpago
+
+Añadir selector para QR Hub
+
+tpago-portal
+
+4
+
+Vista para mostrar QR de QR Hub
+
+tpago-portal
+
+4
+
+Añadir channel para callback de QR
+
+tpago-portal
+
+2
+
+Vista para mostrar estado de la transacción
+
+tpago-portal
+
+4
+
+Llamado a payment-link-service para la creación del QR con XAIX
+
+tpago-portal
+
+8
+
+Llamado a payment-link-service para cancelar QR (cada vez que desde la vista se vaya para atrás, se cancela el QRHub)
+
+tpago-portal
+
+8
+
+Llamado a endpoint para consumir feature flags de qr hub, para saber si está habilitado o no
+
+tpago-portal
+
+8
+
+VPOS
+
+Añadir selector para QR Hub
+
+vpos-portal
+
+4
+
+Vista para mostrar QR de QR Hub
+
+vpos-portal
+
+4
+
+Añadir channel para callback de QR
+
+vpos-portal
+
+2
+
+Vista para mostrar estado de la transacción
+
+vpos-portal
+
+4
+
+Llamado a vpos-service para la creación del QR con XAIX
+
+vpos-portal
+
+8
+
+Llamado a vpos-service para cancelar QR (cada vez que desde la vista se vaya para atrás, se cancela el QRHub)
+
+vpos-portal
+
+8
+
+Llamado a endpoint para consumir feature flags de qr hub, para saber si está habilitado o no
+
+vpos-portal
+
+8
+
+Infonet Cobranzas
+
+Añadir selector para QR Hub
+
+commerce-suite
+
+4
+
+Vista para mostrar QR de QR Hub
+
+commerce-suite
+
+4
+
+Añadir channel para callback de QR
+
+commerce-suite
+
+2
+
+Vista para mostrar estado de la transacción
+
+commerce-suite
+
+4
+
+Llamado a epos-service para la creación del QR con XAIX
+
+commerce-suite
+
+8
+
+Llamado a epos-service para cancelar QR (cada vez que desde la vista se vaya para atrás, se cancela el QRHub)
+
+commerce-suite
+
+8
+
+Llamado a endpoint para consumir feature flags de qr hub, para saber si está habilitado o no
+
+commerce-suite
+
+8
+
+Selling Portal
+
+Añadir selector para QR Hub
+
+selling-portal
+
+4
+
+Vista para mostrar QR de QR Hub
+
+selling-portal
+
+4
+
+Añadir channel para callback de QR
+
+selling-portal
+
+2
+
+Vista para mostrar estado de la transacción
+
+selling-portal
+
+4
+
+Llamado a selling-service para la creación del QR con XAIX
+
+selling-portal
+
+8
+
+Llamado a selling-service para cancelar QR (cada vez que desde la vista se vaya para atrás, se cancela el QRHub)
+
+selling-portal
+
+8
+
+Llamado a endpoint para consumir feature flags de qr hub, para saber si está habilitado o no
+
+selling-portal
+
+8
+
+External Services
+(posibilidad de que no sea necesario, si la gema de circuit breaker no soporta manejo con restool y external-services)
+
+Endpoint para generar QR consumiendo XAIX QR
+
+external-services
+
+8
+
+Endpoint para cancelar QR consumiendo XAIX QR
+
+external-services
+
+8
+
+Implementación de gema circuit-breaker para prevenir problemas de hilos si es que XAIX falla o está lento.
+
+external-services
+
+16
+
+Infonet Cobranzas App
+
+Endpoint para generar QR
+
+infonet-cobranzas-app-service
+
+12
+
+Endpoint para cancelar QR
+
+infonet-cobranzas-app-service
+
+12
+
+Llamado a endpoint para consumir feature flags de qr hub, para saber si está habilitado o no
+
+infonet-cobranzas-app-service
+
+12
+
+POS
+
+Endpoint para generar QR
+
+external-commerce-service
+
+12
+
+Endpoint para cancelar QR
+
+external-commerce-service
+
+12
+
+Llamado a endpoint para consumir feature flags de qr hub, para saber si está habilitado o no
+
+external-commerce-service
+
+12
+
+QR Hub
+
+Refactor lógica de creación (llamado a xaix qr y creacion de payment hook)
+
+qr-hub-service
+
+12
+
+Refactor lógica de cancelación
+
+qr-hub-service
+
+8
+
+Refactor general
+
+qr-hub-service
+
+40
+
+Refactor lógica de confirmación
+
+qr-hub-service
+
+8
+
+Agregar servicio nuevo RPG para obtener datos únicos por comercio a la hora de crear un qr-hub
+
+qr-hub-service
+
+8
+
+Agregar modelo y tabla de transaction_logs para registrar llamado y respuesta con xaixqr
+
+qr-hub-service
+
+4
+
+Agregar registro de transacciones a operacion de crear y cancelar QR
+
+qr-hub-service
+
+4
+
+Subir imagen de QR a s4 y devolver en respuesta de generación de QR
+
+qr-hub-service
+
+8
+
+Agregar soporte para nuevos signal codes de xaix
+
+qr-hub-service
+
+8
+
+Payment Link
+
+Endpoint (callback) para replicar confirmación
+
+payment-link-service
+
+12
+
+Endpoint para generar QR
+
+payment-link-service
+
+12
+
+Endpoint para cancelar QR
+
+payment-link-service
+
+12
+
+Crear modelo nuevo para pagos de QR Hub
+
+payment-link-service
+
+8
+
+Epos
+
+Endpoint (callback) para replicar confirmación
+
+epos-service
+
+20
+
+Endpoint para generar QR y crear Payment Hook
+
+epos-service
+
+12 - 400
+
+Endpoint para cancelar QR
+
+epos-service
+
+12
+
+Crear modelo nuevo para pagos de QR Hub
+
+epos-service
+
+8
+
+Epos Public
+
+Endpoint para generar QR y crear Payment Hook
+
+epos-service-public-proxy
+
+12
+
+Endpoint para cancelar QR
+
+epos-service-public-proxy
+
+12
+
+Selling
+
+Endpoint (callback) para replicar confirmación
+
+selling-service
+
+12
+
+Endpoint para generar QR y crear Payment Hook
+
+selling-service
+
+12
+
+Endpoint para cancelar QR
+
+selling-service
+
+12
+
+Crear modelo nuevo para pagos de QR Hub
+
+selling-service
+
+8
+
+Crear modelo, tabla y lógica para manejo de feature flags
+
+selling-service
+
+8
+
+Crear endpoint que recibe key de feature flag y devuelva su valor (para consumir desde portales)
+
+selling-service
+
+8
+
+Vpos
+
+Endpoint (callback) para replicar confirmación
+
+vpos-service
+
+12
+
+Endpoint para generar QR y Payment Hook
+
+vpos-service
+
+12
+
+Crear modelo nuevo para pagos de QR Hub
+
+vpos-service
+
+8
+
+Endpoint para cancelar QR
+
+vpos-service
+
+8
+
+Crear modelo, tabla y lógica para manejo de feature flags
+
+vpos-service
+
+8
+
+Crear endpoint que recibe key de feature flag y devuelva su valor (para consumir desde portales)
+
+vpos-service
+
+8
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+Incluye todos los servicios y portales involucrados
+
+40
+
+Total desarrollo
+
+600
+
+Total gestión 10%
+
+60
+
+Total
+
+660
+
+Tareas unificación QR
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+Encode y Decode
+
+Modificar método de generación de QR para incluir datos de qr-hub
+
+bancard-commons
+
+40
+
+Modificar método de decodificación de QR para incluir datos de qr-hub
+
+bancard-commons
+
+40
+
+Billing Proxy
+
+Modificar endpoint de decode_qr_code para devolver datos opcionales de qr-hub
+
+bancard-billing-service-public-proxy
+
+16
+
+Payment Link
+
+Deshabilitar QR al momento de salir de la vista
+
+tpago-portal
+
+6
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+payment-link-service
+
+8
+
+Epos
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+epos-service
+
+16
+
+Modificar endpoint de cancelación de QR para cancelar también en qr-hub
+
+epos-service
+
+8
+
+Selling
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+selling-service
+
+8
+
+Modificar endpoint de cancelación de QR para cancelar también en qr-hub
+
+selling-service
+
+8
+
+Vpos
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+vpos-service
+
+8
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+Incluye todos los servicios y portales involucrados
+
+40
+
+Total desarrollo
+
+198
+
+Total gestión 10%
+
+20
+
+Total
+
+218

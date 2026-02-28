@@ -1,0 +1,14 @@
+{
+  "action": "create",
+  "id": "SYSTEM",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Creado: /home/manpac/.openclaw/workspace/brokia/workitems/inbox/IDEA-20260226-001.md\n   ID: IDEA-20260226-001\n   Type: idea\n   Title: Smoke create from refactor\n   Status: NEW\n   implementation_approved: false\n",
+  "stderr": "",
+  "duration_ms": 71,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-26T05:03:39.497Z",
+  "finished_at": "2026-02-26T05:03:39.568Z",
+  "id_validation": "fallback"
+}

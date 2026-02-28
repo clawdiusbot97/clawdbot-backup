@@ -1,0 +1,74 @@
+TITLE: 3D Sec Fase 2
+DOMAIN: General
+PRIORITY: Media
+ID: 2742484993
+SOURCE: 2742484993__3D_Sec_Fase_2.json
+
+---
+
+Se desea incorporar la funcionalidad de Preautorizaciones en los servicios de VPOS PCI. Para ello, es necesario agregar nuevos servicios, tanto en la creación de una pre-autorización como en la confirmación de la misma.
+Team
+
+Name
+
+Role
+
+Project Manager
+
+Technical Reference
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+3D Sec Fase 2 - Tasking and Estimation
+
+Start date
+
+End date
+
+TBD
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+Slack Channel
+
+#bancard-3dsec
+
+M. Teams Channel
+
+[PRIVATE_URL_WITH_CREDENTIALS]
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Weekly on Monday, Tuesday, Thursday
+
+Minutes
+
+15
+
+Owner
+
+Client Demo
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-

@@ -1,0 +1,9 @@
+TITLE: Tasking y Estimación - Red N1
+DOMAIN: General
+PRIORITY: Media
+ID: 2857533489
+SOURCE: 2857533489__Tasking_y_Estimacio╠ün_-_Red_N1.json
+
+---
+
+En esta carpeta se van a listar los documentos de Tasking y Estimación para la iniciativa RedN1

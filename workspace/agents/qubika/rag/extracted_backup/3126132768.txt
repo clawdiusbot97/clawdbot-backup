@@ -1,0 +1,160 @@
+TITLE: Portal de Marketing - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3126132768
+SOURCE: 3126132768__Portal_de_Marketing_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+noteEste documento tiene la estimación para el portal de Marketing y Administración propuestoacá.
+Debajo se encuentra el detalle de tareas con su estimación, siendo un total de202 horassi se opta por desarrollo sin QA, y un total de237 horasen el caso de querer que incluir un QA.
+Este documento tiene la estimación para el portal de Marketing y Administración propuestoacá.
+Debajo se encuentra el detalle de tareas con su estimación, siendo un total de202 horassi se opta por desarrollo sin QA, y un total de237 horasen el caso de querer que incluir un QA.
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Setup
+
+Setup inicial y creación de proyecto de bancard-admin-portal
+Configurar sentry, docker-compose, github actions, rubocop, solargraph
+
+24
+
+bancard-admin-portal
+
+Agregar manejo de autenticación y permisos
+
+12
+
+bancard-admin-portal
+
+Agregar servicio de admin portal en la tabla de servicios
+
+1
+
+auth-service
+
+Agregar bancard-admin-portal en bancard-docker
+
+2
+
+bancard-docker
+
+Agregar bancard-admin-portal en bancard-configurations
+
+2
+
+bancard-configurations
+
+Configurar máquina de staging para bancard-admin-portal
+
+4
+
+Configurar proxy dmz de staging para bancard-admin-portal
+
+4
+
+Configurar máquina de producción para bancard-admin-portal
+
+8
+
+Configurar proxy dmz de producción para bancard-admin-portal
+
+8
+
+Pantallas
+
+Pantalla para login
+
+6
+
+bancard-admin-portal
+
+Pantalla de home
+Crear sidebar y header (logo de bancard, nombre de usuario, botón de logout)
+
+12
+
+bancard-admin-portal
+
+Pantalla de index de campañas
+Filtros, botón de buscar, botón de crear nueva campaña. Paginado.
+En cada campaña botón de editar y eliminar.
+
+16
+
+bancard-admin-portal
+
+Modal para confirmación de eliminación de campaña
+
+2
+
+bancard-admin-portal
+
+Pantalla de crear y editar campaña
+
+28
+
+bancard-admin-portal
+
+Integración con backend
+
+Integración con auth para la operación de login
+
+8
+
+bancard-admin-portal
+
+Agregar STUBS de operaciones de campaigns en bancard-stubs
+
+4
+
+bancard-stubs
+
+Integración con operación de create campaign
+
+12
+
+bancard-admin-portal
+
+Integración con operación de update campaign
+
+8
+
+bancard-admin-portal
+
+Integración con operación de get campaigns / index
+
+8
+
+bancard-admin-portal
+
+Integración con operación de delete campaign
+
+6
+
+bancard-admin-portal
+
+Desarrollo
+
+175
+
+Gestión (15%)
+
+27
+
+QA (20%)
+
+35
+
+Total Desarrollo + Gestión
+
+202
+
+Total Desarrollo + Gestión + QA
+
+237

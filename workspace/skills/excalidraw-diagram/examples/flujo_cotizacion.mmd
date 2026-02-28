@@ -1,0 +1,17 @@
+---
+title: Flujo de Cotización - Brokia
+---
+flowchart TD
+    Cliente[Cliente solicita cotización] --> WhatsApp[WhatsApp/chat]
+    WhatsApp --> Extraer[Extraer datos auto/conductor<br/>OCR/IA]
+    Extraer --> Consultar[Consultar múltiples aseguradoras]
+    Consultar --> Comparar[Comparar opciones]
+    Comparar --> Presentar[Presentar al cliente]
+    Presentar --> Bind[Bind & emisión]
+    Bind --> Documentar[Documentar en sistema]
+    
+    style Cliente fill:#e1d5e7,stroke:#333
+    style Extraer fill:#d5e8d4,stroke:#333
+    style Consultar fill:#dae8fc,stroke:#333
+    style Presentar fill:#fff2cc,stroke:#333
+    style Bind fill:#f8cecc,stroke:#333

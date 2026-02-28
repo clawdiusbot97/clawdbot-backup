@@ -1,0 +1,51 @@
+TITLE: Preguntas Onboarding Nuevos Clientes
+DOMAIN: General
+PRIORITY: Media
+ID: 3426811922
+SOURCE: 3426811922__Preguntas_Onboarding_Nuevos_Clientes.json
+
+---
+
+Pregunta
+
+Respuesta
+
+Los productos son:
+Facturación Electronica
+
+POS Android
+
+smartPOS
+
+VentasQR
+
+TPago
+
+VPos
+
+o hay algún otro producto que no esté en el Figma y aún así vaya?
+
+Caso PIX: No está disponible para contratar para nuevos comercios?
+
+Caso VPos:
+Vemos que está disponible, pero entendemos que VPos al ser un producto que se embebe en una web, no es para comercio físico, y su contratación siempre requiere tener una sucursal aparte específicamente para este producto, por ende, deberíamos ver la forma de que el usuario DEBA contratar VPos por separado, y no en el mismo flujo que el resto de los productos.
+
+Vemos tambien que tiene una pantalla deDatos Tecnicosque deberíamos desarrollar. Los campos de esta pantalla donde se guardan? Este diseño está solo web, pero no mobile
+
+Caso InfonetCobranzas:Entendemos que InfonetCobranzas tiene un onboarding distinto que se está haciendo en RedN1, pero que no iría para esta primera fase de Onboarding, verdad?
+
+Caso SmartPos y POS Android:Hoy en día el usuario puede contratar estos POS por separado, y a su vez desde el producto de Facturación Electrónica. Si el usuario agrega al carrito un pos, y luego suma más pos desde la configuración del producto de Facturación Electrónica, como deberíamos mostrar eso en el carrito? Acumulamos todos los SmartPOS y POS Android?
+
+Caso VentasQR:
+Le vamos a poner VentasQR o QR solo?
+
+Caso pantalla de Carga de Archivos:Cuando tenemos más de un producto seleccionado deberíamos pedir todos los archivos respectivos de cada producto en la misma pantalla de Carga de Archivos? O deberíamos mostrar una por Producto?
+En el caso de que se muestre todo en la misma pantalla, deberíamos actualizar el diseño para que el usuario pueda identificar bien que archivos son solicitados para cada producto.
+
+Caso Biometría:Aplica para todos los productos o solo para FE?
+
+Caso Facturación Electrónica:En las pantallas que son exclusivas para FE, deberíamos identificar eso, para que el usuario entienda porque se le están solicitando esos datos, por ejemplo pantalla de contraseña y representante legal.
+
+Caso que Facturación Electrónica no esté siendo contratada:Que pasa con los campos que se nos requieren enestedocumento. Los nodos no se deberian enviar, o se envian vacios? Y el resto de los campos?
+
+Caso Representantes Legales:Estos campos se solicitan solamente cuando se contrata FE, o es para todos los productos? Porque en el caso que sea para todos los productos, deberíamos separar la vista de la de Contraseña para la Firma Digital

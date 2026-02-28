@@ -1,0 +1,20 @@
+TITLE: Análisis VPos - Nuevos medios de Pago
+DOMAIN: General
+PRIORITY: Media
+ID: 3663691777
+SOURCE: 3663691777__Ana╠ülisis_VPos_-_Nuevos_medios_de_Pago.json
+
+---
+
+VPos Actualmente
+
+Se quieren agregar 4 nuevos medios de pago
+Apple Pay y Google Pay
+
+QR
+
+Pix
+
+TPago
+
+La propuesta es tener una tab por cada medio de pago

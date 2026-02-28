@@ -1,0 +1,145 @@
+TITLE: Pre autorizaciones en Vpos - Tasking y estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3074981908
+SOURCE: 3074981908__Pre_autorizaciones_en_Vpos_-_Tasking_y_estimacio╠ün.json
+
+---
+
+En este documento se detallan todas las tareas para la iniciativa de pre autorizaciones en Vpos.
+Se identificaron que tareas se pueden paralelar, para poder cumplir con la fecha del 30 de Junio.
+En el proceso se identificaron 4 tareas grandes, que se dividieron en épicas
+Modificar pay_pci_encrypted_buy
+
+Configuración
+
+Crear endpoint de confirmación
+
+Modificar endpoint de rollback
+
+Las tareas 1 y 2 se pueden paralelar, y toman 66 y 12 hs respectivamente. Luego, las tareas 3 y 4 se pueden paralelar entre sí, pero son dependientes de la tarea 1, por ende, debemos terminar la 1 antes de empezar con la 3 y 4.
+El roadmap queda de esta manera:
+Tarea 1:al→
+Tarea 2:al→
+Tarea 3:al
+Tarea 4:al
+Nos queda un margen de 4 días por si surgen cambios o tareas nuevas (pequeñas) que son imprevistas, para no llegar apretados.
+Servicio
+
+Tarea
+
+Estimación (hs)
+
+vpos-service
+
+[Modificar pay_pci_encrypted_buy] Agregar flag nueva "preauthorization" a request params del endpoint, de tipo string.
+
+8hs
+
+[Modificar pay_pci_encrypted_buy] Crear nuevo modelo PciPreauthorizationPayment que herede de Payment
+
+4hs
+
+[Modificar pay_pci_encrypted_buy] Llamar al servicio JPos 'get_card_info' para obtener datos de la tarjeta y verificar si es apta o no para flujo preauths pci (use type == "L")
+
+8hs
+
+[Modificar pay_pci_encrypted_buy] Manejo de errores: si la tarjeta no es "L" o el RPG rechaza, retornar mensaje de error indicando que la tarjeta no aplica o fué rechazada, respectivamente. actualizar flow y buy.
+
+8hs
+
+[Modificar pay_pci_encrypted_buy] Agregar type nuevo PCI_PREAUTH_FLOW en el modelo de Flow.
+
+4hs
+
+[Modificar pay_pci_encrypted_buy] Si se cumplen validaciones previas para preauths pci, crear un Flow de type nuevo "PCI_PREAUTH_FLOW", un single buy asociado a ese flow (con la flag de preauthorization en true) y llamar al RPG al programa "VPRG005". si la respuesta del rpg es exitosa es decir se aprueba la creacion de la preauth pci, crear payment de tipo nuevo "PciPreauthorizationPayment" y finalizar flujo devolviendo la representation de tipo "confirmation" usando el payment ya creado para rellenar esos datos.
+
+24hs
+
+[Modificar pay_pci_encrypted_buy] Clonar validaciones ya existentes respecto al application on behalf y callback de buy creado luego de crear el buy. Mirar codigo del flujo normal de pci encrypted para mas detalles
+
+El callback no es un callback a una url, sino un Publisher de Audit.
+(flows.rb, capa business, linea 295)
+
+6hs
+
+[Modificar pay_pci_encrypted_buy] Clonar callback de payment creado luego de crear el payment. Mirar código del flujo normal de PCI_Encrypted para mas detalles.
+
+El callback no es un callback a una url, sino un Publisher de Audit.
+
+6hs
+
+[Config] Agregar nueva capa business RPG en vpos-service y nuevos archivos de configuración para manejo de parámetros de request y response de PGMs del RPG.
+
+Programa VPRG005
+
+12hs
+
+[Crear endpoint de confirmación] Crear endpoint de confirmación de pci preauths en vpos-service con request params y response, nueva representation, capa business.
+
+8hs
+
+[Crear endpoint de confirmación] Validar token de auth en el endpoint. localizar el flow y validarlo (validar status)
+
+4hs
+
+[Crear endpoint de confirmación] Validar monto según documentación. En caso de fallar validación devolver error.
+
+8hs
+
+[Crear endpoint de confirmación] Llamar al RPG al PGM VPRG005 para confirmar la preauth pci. Actualizar 4 datos de la preauthorization pci payment: confirm_swtich_response, confirm_switch_response_details, auth_cod y tkt_number.
+
+4hs
+
+[Crear endpoint de confirmación] Si el RPG fue success, actualizar status de flow y preauth pci (payment) a processed_ok y confirmed, respectivamente.
+
+4hs
+
+[Crear endpoint de confirmación] Si el RPG no fue success, actualizar solamente en el caso de que los resp_code que devuelva no sean reintentables. crear key en service_configuration.yml con ese listado de resp_codes donde se deberá rechazar.
+
+4hs
+
+[Crear endpoint de confirmación] Modificar metodo de modelo flow 'get_preauthorization' para agregar nuevo type de payment PciPreauthorizationPayment y que lo busque en la base.
+
+2hs
+
+[Modificar endpoint de rollback] Crear nuevo modelo PciPreauthorizationRollback
+
+6hs
+
+[Modificar endpoint de rollback] En el metodo rollback_payment de business/rollbacks.rb agregar nuevo when para el case ya existente para cuando sea un PciPreauthorizationPayment crear el PciPreauthorizationRollback.
+
+4hs
+
+[Modificar endpoint de rollback] Refactorizar metodos del modelo flow, ya que se peude resolver de mejor forma que no sea propensa a error (ya hay un bug en metodo 'rollbacks' para las pci, no está listado el tipo de rollback)
+
+16hs
+
+[Modificar endpoint de rollback] Agregar en el case de payment un nuevo when para los casos de PciPreauthorizationPayment y llamar al RPG para confirmar el rollback.
+
+6hs
+
+[Modificar endpoint de rollback] Implementar método nuevo para checkear que la respuesta del RPG sea correcta. hacer lo que hoy hace el metodo check_rollback_response!
+
+8hs
+
+[Modificar endpoint de rollback] Agregar en el case de la llamada a audit 'publish_payment_rollback_event' un nuevo when para los rollback de este flujo.
+
+6hs
+
+TESTS RUBY
+
+40hs
+
+Total desarrollo
+
+200hs → 1 mes y una semana para 1 dev
+
+Total + Management 15% (Es para temas de facturación, no está incluido en el tiempo de desarrollo)
+
+230hs
+
+Posibles horas extra: 30%
+Incluye soporte pos desarrollo, bug fixing, mejoras y nuevas peticiones que puedan surgir de desarrollo.
+
+60hs

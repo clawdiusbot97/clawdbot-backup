@@ -1,0 +1,75 @@
+TITLE: BORRAR VUELTO (Iniciadores de Pagos) - Portal de Comercios - Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2634579989
+SOURCE: 2634579989__BORRAR_VUELTO_(Iniciadores_de_Pagos)_-_Portal_de_Comercios_-_Estimacio╠ün.json
+
+---
+
+Confluence:https://jira.bancardnet.dom/confluence/pages/viewpage.action?spaceKey=PRYINPA&title=Portal+de+comercios
+
+Introducción
+Esta iniciativa trata de incluir nueva información (provenientes del BUS) en las tablas raw_transactions y transactions para luego mostrarlas en los reportes de Ventas. Para ello es necesario crear un nuevo modelo asociado a las raw_transactions y transactions, y realizar todas las modificaciones en los endpoints y reportes para incluir un nuevo campo (en formato json).
+
+Estimación
+
+Proyecto
+
+Descripción
+
+Estimación (hrs)
+
+commerce-service
+
+Nuevo modelo para almacenar los datos adicionales de la transacción que viene del bus.
+Contendrá: id, raw_transaction_id, transaction_id, customer_fields, billing_identifier, other_data (json)
+
+8
+
+commerce-service
+
+Al momento de crear una raw_transaction, crear un registro en la nueva tabla (transaction_id en null)
+
+12
+
+commerce-service
+
+Al momento de crear la transaction, buscar el registro en la nueva tabla (por raw_transaction_id) y actualizar el valor de transaction_id
+
+12
+
+commerce-service
+
+Modificar el proceso de purga de transacciones, para purgar también registros de este nueva tabla (por transaction_id)
+
+12
+
+commerce-service
+
+Agregar el campo transaction_additional_data en la respuesta del endpoint de movimientos de Ventas. Modificar dataset.
+
+24
+
+commerce-service
+
+Modificar endpoint de descarga de csv (Ventas) para agregar el transaction_addictional_data.
+Importante: solo para reporte “con comisiones” (que es cuando el usuario presiona el check en el portal de comercios).
+
+20
+
+commerce-suite
+
+En la pantalla de Ventas, incluir los datos adicionales en cada transacción en la columna “Usuario”.
+Si bien los datos adicionales los tomamos del campo “other data”, es un json. Analizar con Luis luego cómo mostramos esos key/values dentro de la columna Usuario.
+
+30
+
+gestión
+
+Gestión de Jira, Sprints, reuniones de seguimiento
+
+15
+
+Total
+
+133

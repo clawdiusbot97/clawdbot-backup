@@ -1,0 +1,101 @@
+TITLE: Tpago - Kount 360 - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4481548313
+SOURCE: 4481548313__Tpago_-_Kount_360_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Kount 360, a cargo dey.
+Las horas estimadas son: 32h ~ 4d
+Fecha de Inicio: A definir
+Fecha de Entrega: A definir
+Tarea
+
+Estimación (hs)
+
+PLS - Business - Kount Login con ExternalServices
+
+4h
+
+PLS - Business - Kount evaluate_order con ExternalServices
+
+4h
+
+PLS - Business - Kount update_order con ExternalServices
+
+4h
+
+PLS - Crear endpoint de EvaluateOrder
+
+4h
+
+PLS - Tras autorizar, Kount update_order asíncrono (Sidekiq job)
+
+4h
+
+Tpago - Eliminar gema kount-complete y reemplazar su uso con llamados a PLS
+
+4h
+
+Tpago - KountBusiness sólo para kount_enabled? (tabla Configurations)
+
+1h
+
+Tpago - Remover updateOrder (se realizará desde PLS)
+
+1h
+
+Tpago - Para evaluateOrder, traficar hook_alias en vez de amount y datos de payer, y bin + last_4 en vez de cardNum
+
+1h
+
+Bancard-Configurations - Agregar restool de kount_orders y kount_login
+
+1/2h
+
+Bancard-Constants - Agregar constante de 'Tpago Pago Casual'
+
+1/2h
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+4h
+
+Total Desarrollo
+
+32h (4 dias)
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+Total Desarrollo + Gestión
+
+Consultas
+Hoy tpago manda a kount siempre CreditCard como constante. Continuamos así? Sino habría que usar get_card_info
+
+Actualizamos la documentación de los llamados a Kount 360 via API, para que verifiquen que mandamos en cada parámetro.
+https://bancard.atlassian.net/wiki/pages/resumedraft.action?draftId=1697775691
+En particular, en tpago sí se usan los commerce_id y commerce_branch_id en lugar de los codes.Usar precarga de comercios y enviar el commerce_code.
+
+Existe algún parámetro que sea único con el cual tener cuidado cuando un pago:
+Se valida con Kount, luego
+
+Falla y
+
+Se vuelve a reintentar, validando con Kount
+(Recomendamos como caso de prueba)
+
+Al llamar al JPOS para autorizar el pago, va a ser diferente el formato en el que enviaremos el resultado de kount. (Va a ser como se envia en vPOS):
+json

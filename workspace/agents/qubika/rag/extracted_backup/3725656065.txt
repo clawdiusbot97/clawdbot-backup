@@ -1,0 +1,38 @@
+TITLE: Rotación de Logs - Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 3725656065
+SOURCE: 3725656065__Rotacio╠ün_de_Logs_-_Bancard.json
+
+---
+
+Introducción
+Esta iniciativa tiene como objetivo mejorar y estandarizar la rotación de logs en el ecosistema de Bancard. Para ello, se dividirán los trabajos en dos categorías principales: la rotación de logs generados por las aplicaciones (portales y servicios) y la rotación de los logs de salida de los servidores (puma, sidekiq, nginx y redis).
+Rotación de Logs en Servidores
+El equipo de SRE será responsable de la rotación de logs en los servidores, utilizandologrotatepara gestionar la configuración y eliminación de los logs de puma, sidekiq, nginx y redis.
+Rotación de Logs en Aplicaciones
+Para la rotación de logs generados por las aplicaciones, se utilizarábancard-loggers, la herramienta de logging estándar en todos los portales y servicios. Esta herramienta permite configurar la frecuencia de rotación, el tipo de salida y el nivel de log mediante un archivo de configuración.
+Objetivos de la Iniciativa
+El propósito es estandarizar el logging de todas las aplicaciones, asegurando una configuración uniforme en cuanto a frecuencia de rotación y nivel de logs:
+Rotación diariapara todos los logs de producción.
+
+Rotación semanalpara todos los logs de staging.
+
+Log level INFOpara producción.
+
+Log level DEBUGpara staging.
+
+Revisión de todos los portales y serviciospara garantizar que no haya logs sin configurar. De no estar configurados, los logs no generan su salida en un archivo sino que escriben en STDOUT (logs del servidor web).
+
+Orden de Prioridad
+Los trabajos se realizarán en el siguiente orden de prioridad:
+Servicios involucrados en el flujoQR POS.
+
+VPOS.
+
+Infonet Cobranzas.
+
+Resto de los portales y servicios faltantes.
+
+Implementación y Despliegue
+Los cambios en la configuración son relativamente simples y pueden aplicarse rápidamente. Una vez realizados, será necesario desplegar los servicios en el orden de prioridad definido para que los cambios se reflejen correctamente en los diferentes ambientes.

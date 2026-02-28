@@ -1,0 +1,47 @@
+{
+  "active_jobs": [
+    {
+      "id": "d4755542-b64c-4067-90b1-4e1076b31990",
+      "name": "morning-intelligence",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Montevideo"
+      }
+    }
+  ],
+  "orphaned_jobIds": [
+    "02789295-9d14-479c-a9ef-d3c93bef2d4c",
+    "075106a5-eb3c-40dd-875f-fd2229927ddd",
+    "09c8db11-a8c2-4091-b6c2-b0a8c68fc4a9",
+    "1179b115-83d0-47d6-830f-0687d53d343a",
+    "2888925e-a492-481e-bedb-db9fd615e403",
+    "2f57ee48-16b1-4a33-9ba1-d3728fa59fcc",
+    "59355241-f710-4002-b044-c6a5ac7d3351",
+    "5ee30706-284b-4406-9512-91782b68672b",
+    "62497b07-d021-4655-9340-1cd82badcc45",
+    "6ed083c2-ac56-42dc-a18d-7ecf4d41ae7f",
+    "74e0f30c-8f1e-4866-894c-fcaf6cb0ca93",
+    "7c6a920b-ed3f-4701-ba09-65202d3c6026",
+    "7e76d0c9-97e3-4d00-aa4d-c24064519f9e",
+    "80625409-f748-4bb7-89e7-f8952123c3af",
+    "83ef00f3-6414-490b-87c9-88bfcf12d3b9",
+    "8c7f2ba1-a3a0-48c0-b788-407aa4286763",
+    "91385195-348a-4006-9352-3c52f743c8d7",
+    "92783453-921f-4847-a288-c9fc430cba45",
+    "b625c33f-a9e5-46c2-92b6-946b5ccc8dc2",
+    "b8ea6237-5df6-41cf-af52-988abd5dd906",
+    "c8dfb239-ed97-4d74-80f5-0a403561fdd1",
+    "c93c5864-931c-4f16-b4ac-907702222853",
+    "d7e1795d-77b5-4555-88e1-d3098c6ac643",
+    "db0fe015-9d14-4522-acf2-8775a2b4b97e",
+    "dedba884-eb8d-42de-b637-fc345356a632",
+    "efa06a4f-bfc8-449f-995a-c5cac0f56ba7",
+    "f7ba2a8c-6339-4041-bac9-7e29f3f92383",
+    "fac822a3-7c2b-4b09-8181-acf586903840",
+    "fbd34d15-bde6-4f63-8bc6-6023e2be46c4",
+    "fd9aeac4-275f-4b27-b051-39f10ea849cd"
+  ],
+  "decision": "no_auto_restore"
+}

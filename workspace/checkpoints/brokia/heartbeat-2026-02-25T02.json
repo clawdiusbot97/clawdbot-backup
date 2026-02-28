@@ -1,0 +1,9 @@
+{
+  "schema": "brokia-heartbeat-v1",
+  "generated_at": "2026-02-25T02:48:51+00:00",
+  "checks": {
+    "auth": true,
+    "calendar_call": true
+  },
+  "ok": true
+}

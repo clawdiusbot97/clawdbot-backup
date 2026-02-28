@@ -1,0 +1,62 @@
+TITLE: Cómo Maximizar la Eficiencia de Jira
+DOMAIN: General
+PRIORITY: Media
+ID: 2919137286
+SOURCE: 2919137286__Co╠ümo_Maximizar_la_Eficiencia_de_Jira.json
+
+---
+
+El fin de este documento, es detallar varias de las funcionalidades que nos ofrece Jira, para maximizar su rendimiento y mejorar los procesos de trabajo, haciéndolos más ágiles e intuitivos a la hora de trabajar.
+Algunas de las funcionalidades que nos ofrece Jira son la creación de reportes, que nos ayudan a medir nuestros resultados y a la toma de decisiones estratégicas, la creación de releases, donde podemos agrupar tickets que van siendo deployados, para tener una mejor trazabilidad de nuestro trabajo y facilitar la búsqueda, la sincronización con repositorios de GitHub, para poder vincular nuestros tickets directamente a las PRs, crear reglas de automatización para poder simplificar procesos repetitivos y la mejora de los flujos de trabajo, para obtener una visión más clara a la hora de mirar los tableros.
+I. Creación de Reportes
+Los reportes son herramientas utilizados que reflejan el impacto del trabajo de un equipo, y pueden evidenciar puntos débiles y de mejora, también como calcular la velocidad en la que trabaja el equipo, para poder refinar las estimaciones a futuro y darnos un panorama más preciso de como se va avanzando.
+II. Flujos de Trabajo / Workflows
+Los workflows en Jira son fundamentales para gestionar los procesos de trabajo dentro de los proyectos. Estos flujos de trabajo definen el ciclo de vida de las tareas, desde su creación hasta su finalización, asegurando que todos los pasos necesarios se completen de manera ordenada y eficiente.
+Nos sucede bastante que al crear los boards, los Workflows no están especificados, ni las columnas con sus estados. Muchas veces hay confusiones en que estado está cada ticket, y nos cuesta diferenciar entre ticketsEn Revisión, Aprobados, Mergeados o Deployados.
+Algunos inconvenientes con los que nos hemos topado:
+Estados en columnas incorrectas, al querer mover un ticket, hay columnas que están deshabilitadas pero no deberían, o estados mal posicionados, por ejemplo el deRevisión QA BCen la columnaPor Hacer
+Inconsistencias en distintos tableros.
+Ej: El tablero siguiente en comparación al que vimos arriba
+Lo que proponemos, es un flujo de trabajo y estados único, consistente para todos los proyectos, que tenga transiciones limpias, columnas que reflejen todos los estados y ayuden a identificar en que situación exacta está cada tarea y una guía que refleje todo esto.
+Entre todo el equipo de Qubika, pensamos en las columnas que deberíamos tener, para que todo lo mencionado arriba, pueda reflejarse en el tablero.
+Columnas propuestas:
+Por hacer: Tareas que están en el sprint por hacerse
+
+En Progreso: Tareas en las que se está trabajando en su desarrollo
+
+En Revisión: Tareas que están en revisión de código, esperando ser aprobadas.
+
+Bloqueado: Esta tarea tiene algún bloqueante
+
+Para Deployar (mergeado): Tareas que están mergeadas post revisión aprobada, esperando para ser deployadas a Staging.
+
+Deployado STG: Tareas deployadas a staging, esperando por ser probadas.
+
+QA en Progreso:En proceso de QA para el ambiente de STAGING
+
+Aprobado por QA:Estas tareas están aprobadas por QA en staging, y pueden ser deployadas a PROD, en el caso de que el QA detecte algún bug o corrección que haya que hacer, vuelve a “Por hacer”.
+
+Listo / Listo CCC: En Prod
+
+Rechazado: El ticket no es más valido
+
+Flujo propuesto por el equipo de Qubika
+
+En el siguiente link, encontramos una guía de como utilizar el editor del Workflow 👇🏻
+https://support.atlassian.com/jira-cloud-administration/docs/what-is-the-new-workflow-editor/III. Releases
+Los releases son agrupaciones de tareas. Estas tareas pueden agruparse por cambios cortos, medianos y grandes. Lo que permiten los releases es la buena trazabilidad de el progreso, y nos ayuda a tener un mejor historial de como se fue trabajando, también, ayudarnos a identificar mejor en que deploy se trabajó cierta tarea o se hizo cierto cambio.
+
+https://support.atlassian.com/jira-software-cloud/docs/enable-releases-and-versions/IV. Sincronización de Tablero de Jira con GitHub
+Trazabilidad Completa: Al vincular commits, pull requests y branches de GitHub directamente a las tareas y historias de usuario en Jira, se logra una trazabilidad completa desde la planificación hasta la entrega. Esto permite a los equipos entender rápidamente el estado del trabajo y cómo los cambios en el código afectan a las funcionalidades específicas o a la resolución de problemas.
+Mejora la Colaboración: Facilita la comunicación entre desarrolladores y otros miembros del equipo (como gestores de proyecto, QA, etc.) al permitirles ver en Jira los detalles relevantes del desarrollo en GitHub sin necesidad de cambiar de plataforma.
+Automatización de Tareas: Puedes configurar Jira para actualizar automáticamente el estado de las tareas basándose en acciones específicas en GitHub, como cuando se hace merge a un pull request. Esto reduce la necesidad de actualizaciones manuales y mejora la precisión del seguimiento del proyecto.
+Gestión de Releases y Versiones: Conectar GitHub con Jira facilita la creación y el seguimiento de releases. Puedes asociar commits y pull requests a versiones específicas en Jira, lo que ayuda en la planificación de lanzamientos y en la gestión de versiones.
+Facilita la Revisión de Código: Integrar GitHub con Jira hace que sea más sencillo para los equipos realizar revisiones de código de manera eficiente, ya que pueden vincular directamente los cambios en el código con las tareas correspondientes, proporcionando un contexto claro durante las revisiones.
+Informes Mejorados: La integración permite generar informes más ricos y detallados sobre el progreso del desarrollo, ya que puedes combinar datos de Jira y GitHub para obtener una visión completa del trabajo realizado y pendiente.
+Mejora la Visibilidad: Todos los miembros del equipo pueden tener una visión clara del progreso del desarrollo y de cómo contribuye cada cambio en el código a los objetivos del proyecto, lo que mejora la transparencia y la comprensión general del proyecto.
+Seguimiento de Problemas Eficiente: La conexión entre Jira y GitHub facilita el seguimiento de bugs o incidencias desde que se reportan hasta que se resuelven, vinculando directamente los problemas en el código con las tareas de Jira correspondientes.
+Modificar campos en los tickets
+
+Crear columnas
+
+Crear reglas de automatización.

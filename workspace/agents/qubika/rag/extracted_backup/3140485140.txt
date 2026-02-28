@@ -1,0 +1,30 @@
+TITLE: Pruebas en query de descarga de reporte de transacciones
+DOMAIN: General
+PRIORITY: Media
+ID: 3140485140
+SOURCE: 3140485140__Pruebas_en_query_de_descarga_de_reporte_de_transacciones.json
+
+---
+
+Se prueba la posibilidad de una optimización en una query que podría estar generando problemas, utilizando la base de datos nueva, a la hora de realizar una descarga de reporte de transacciones en bancard-commerce-service, utilizando activerecord 70.0.
+El caso de prueba se hace sobre la consulta de activerecord:
+Para esta prueba se utiliza develop como rama base de bancard-commerce-service, apuntando a la base de datos de ip:10.100.14.22:3306
+Prueba con includes/preload:
+includesen activerecord funciona como shorthand parapreloadoeager_load, y toma por defecto preload, a menos que se configure para que no sea el caso, por lo que para este momento, tiene el mismo comportamiento tantoincludescomopreload, y estas son las queries que se lanzan:
+Donde(1095252680, 1095252685, 1095252686, 1095252687, 1095252688, 1095252691, ...)es una iteración sobre los ids de las transactions que se plantea traer.
+Para este caso, podemos ver que en un recorrido de una vuelta se toma 5 segundos, y todo el flujo del worker 7 segundos
+2024-06-11T17:56:57.253Z 1 TID-2gdp AsyncTasks::TransactionsReportDownload JID-1a016c926d4f771d4574f0d0 INFO: done: 7.556 sec
+Prueba con eager_load:
+Para la siguiente prueba cambiamos el includes de la consulta por un eager_load, por lo que la consulta quedaría de la siguiente manera:
+
+Y las queries que se lanzan son las siguientes:
+Se puede ver que con eager_load se hacen menos queries para llegar al resultado, y el proceso un tiempo muy similar al caso con includes
+2024-06-12T16:41:55.342Z 1 TID-1785 AsyncTasks::TransactionsReportDownload JID-eec1052ff40d4b6a5b87c959 INFO: done: 9.743 sec
+
+Prueba con implementación de joins:
+Se prueba cambiar includes por joins para algunos campos de la consulta, para ver el comportamiento.
+
+Para estos casos se lanza una query por cada transacción, buscando commerce_branches, payment_processors y devices, por lo que se generan problemas de tipo n+1 por cada transacción.
+En este caso de prueba, se hacen tres queries por cada transacción, una por cada elemento dentro del joins, por lo que hace que el flujo demore mucho más en terminar, siendo que se hacen miles de queries para llegar a terminar.
+El flujo completo, con un solo batch de transacciones, termina con un tiempo de más de 5 minutos
+2024-06-12T16:56:25.899Z 1 TID-177l AsyncTasks::TransactionsReportDownload JID-5cd09d2dc411c713548d6f25 INFO: done: 330.441 sec

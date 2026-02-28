@@ -1,0 +1,107 @@
+TITLE: IPA Users Setup
+DOMAIN: 6) Onboarding
+PRIORITY: Media
+ID: 2261025149
+SOURCE: 2261025149__IPA_Users_Setup.json
+
+---
+
+The aim of this document is to provide a guide for the proper configuration of an IPA user in the staging environment, ensuring fast and seamless access to all servers.
+Requirements
+For connecting and navigating between staging machines, we will perform SSH key forwarding. This will allow us to use our own SSH key to make jumps from the development bastion. To use key forwarding, we need to first add our SSH key to the SSH agent using the following command:
+ssh-add -K ~/.ssh/id_rsa (in macOS)
+
+ssh-add ~/.ssh/id_rsa (in Linux)
+
+Development Bastion
+IP:10.100.14.4
+Access from:VPN de Moove IT
+User:IPA
+The development bastion acts as the only SSH entry point to all staging servers, proxies, and the deployment server. To access any of the mentioned servers, you must first go through this bastion.
+Recommended Configuration
+Add the following host to the~/.ssh/configfile on our local machine:
+
+This will allow us to access the bastion using the commandssh bastion-bancardinstead ofssh <ipa-user>@10.100.14.4.
+The optionForwardAgent yeswill allow us to perform SSH key forwarding.
+Since access to this bastion will be quite frequent, to avoid entering a password, we will add our public key to the authorized keys on this machine:
+Enter the bastion usingssh bastion-bancardand our password.
+
+Create (if it doesn't exist) the folder~/.sshwith the commandmkdir ~/.ssh.
+
+Create (if it doesn't exist) the file~/.ssh/authorized_keysusing the commandvim ~/.ssh/authorized_keysand add our public SSH key to it, which can be found in the file~/.ssh/id_rsa.pubon our machine.
+
+We modify the access permissions of the~/.sshfolder using the commandchmod 700 ~/.sshand of the~/.ssh/authorized_keysfile on the bastion using the commandchmod 600 ~/.ssh/authorized_keys.
+
+By following these steps, we should now be able to SSH into the development bastion using the commandssh bastion-bancard, without requiring a password.
+Deployment Server
+IP:10.100.14.57
+Access from:Bastión de desarrollo
+User:servicios
+Password:[PASSWORD]
+The deployment server is the machine used for deploying both staging and production environments for all Bancard services and portals. Access to this machine will be done through the development bastion with key forwarding.
+Recommended Configuration
+Access the development bastion with the commandssh bastion-bancard.
+
+Create the host for the deployment server on the bastion:
+Create the file~/.ssh/configusing the commandvim ~/.ssh/configand add the following host:
+
+This will allow us to access the deployment server using the commandssh deploy-serverinstead ofssh services@10.100.14.57.
+
+Modify the access permissions of the~/.ssh/configfile using the commandchmod 600 ~/.ssh/config.
+
+To avoid password prompts when accessing the deployment server, we need to add our public key to the~/.ssh/authorized_keysfile on this machine. To do this, we should enter it withssh deploy-server, open the file withvim ~/.ssh/authorized_keys, and paste our public key inside it, the same key we added inside the bastion, which can be found in the~/.ssh/id_rsa.pubfile on our machine.
+
+Staging Proxy
+IP:10.100.14.73
+Access from:Bastión de desarrollo
+User:IPA
+This machine is responsible for performing proxy pass to all staging services. Access to this machine will be done through the development bastion with key forwarding.
+Recommended Configuration
+Enter the development bastion.
+
+Create a host for the proxy server on the bastion:
+Open the~/.ssh/configfile with the commandvim ~/.ssh/configand add the following hosts:
+
+This will allow us to access the staging proxy using the command:ssh staging-proxy.
+
+If you haven't already done so in the previous part, modify the access permissions of the~/.ssh/configfile using the commandchmod 600 ~/.ssh/config.
+
+To avoid password prompts when entering the staging proxy, we need to add our public key to this machine's authorized keys:
+Access the machine withssh staging-proxyand our password.
+
+Create (if it doesn't exist) the~/.sshfolder using the commandmkdir ~/.ssh.
+
+Create (if it doesn't exist) the~/.ssh/authorized_keysfile using the commandvim ~/.ssh/authorized_keysand add our public SSH key to it, which can be found in the~/.ssh/id_rsa.pubfile on our machine.
+
+Modify the access permissions of the~/.sshfolder using the commandchmod 700 ~/.sshand of the~/.ssh/authorized_keysfile on the bastion using the commandchmod 600 ~/.ssh/authorized_keys.
+
+Staging Servers (with dockerized services/portals)
+Access from:Bastión de desarrollo
+User:IPA
+The recommended configuration and access will be the same for all staging servers. Access to these machines will be done through the development bastion with key forwarding. We will use the server where auth, commerce, epos, mpos, and vpos are located as an example.
+Recommended Configuration
+Enter the development bastion.
+
+Create hosts for the servers on the bastion:
+Open the~/.ssh/configfile with the commandvim ~/.ssh/configand add the following host:
+
+This will allow us to access the server with the following commands:ssh auth-srv,ssh commerce-srv,ssh epos-srv, etc.
+
+If you haven't done so already in the previous part, modify the access permissions of the~/.ssh/configfile using the commandchmod 600 ~/.ssh/config.
+
+To avoid password prompts when entering the servers, we need to add our public key to the authorized keys on these machines:
+We access the server withssh [auth-srv|commerce-srv|...]and our password.
+
+Create (if it doesn't exist) the~/.sshfolder using the commandmkdir ~/.ssh.
+
+Create (if it doesn't exist) the~/.ssh/authorized_keysfile using the commandvim ~/.ssh/authorized_keysand add our public SSH key to it, which can be found in the~/.ssh/id_rsa.pubfile on our machine.
+
+Modify the access permissions of the~/.sshfolder using the commandchmod 700 ~/.ssh, and of the~/.ssh/authorized_keysfile on the bastion using the commandchmod 600 ~/.ssh/authorized_keys.
+
+In order to use Docker on the staging machines, we need to add our user to the docker group:sudo usermod -aG docker <ipa-user>. To apply this change, we must log out of the server and log back in.
+
+Return to the development bastion and repeat steps 1 to 4 for the rest of the servers where dockerized services are located.
+
+MISSION ACCOMPLISHED!
+Annex
+Example of ~/.ssh/config file on the development bastion:

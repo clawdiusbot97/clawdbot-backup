@@ -1,0 +1,150 @@
+TITLE: 22/11 Tareas pendientes - 10 de Noviembre
+DOMAIN: General
+PRIORITY: Media
+ID: 2772566393
+SOURCE: 2772566393__22_11_Tareas_pendientes_-_10_de_Noviembre.json
+
+---
+
+Esta es la lista de tareas pendientes para el deploy del 22 de Noviembre de Ruby Updates
+Seguir los siguientes pasos para tomar una task:
+Elegir una task de la lista que esté marcada como “Sin Asignar”
+
+DesdeJira:
+Asignarse la task
+
+Mover la task a en curso
+
+Mover la task al sprint “Pruebas de Commerce”
+
+Desde Confluence:
+Asignarse la tarea
+
+Marcar la tarea con el estado “En Curso”
+
+Avisar en el canal de Teams “Actualización Ruby” que se va a estar trabajando en esta tarea
+
+IMPORTANTE
+Cada Dev / QA es responsable de notificar en el canal deTeamsen qué tarea está trabajando y cada vez que haya una modificación en la misma (PR listo, merge, transición a Revisión QA o rechazado), como también actualizar su estado en este documento
+Issue #
+
+Status
+
+Priority
+
+Assignee
+
+Comments
+
+PR-199
+
+En cursoPurple
+
+AltaRed
+
+PR-192
+
+En cursoPurple
+
+mediaYellow
+
+Está siendo probado por Marcelo
+
+PR-210
+
+LISTOGreen
+
+AltaRed
+
+Este error no surge a partir de la actualización de Ruby. Igualmente, entendemos que es importante y se está trabajando en él.
+
+PR-106
+
+POR HACER
+
+AltaRed
+
+Unassigned
+
+Error de C4C, hablar con Luis
+
+PR-191
+
+En revisionYellow
+
+CRITICARed
+
+Deployado
+
+PR-70
+
+En revisionYellow
+
+mediaYellow
+
+Deployado
+
+PR-76
+
+En revisionYellow
+
+mediaYellow
+
+Deployado
+
+PR-214
+
+En revisionYellow
+
+AltaRed
+
+Deployado
+
+PR-217
+
+En cursoPurple
+
+CRITICARed
+
+Posible error de datos, ver con Luis
+
+PR-161
+
+En cursoPurple
+
+AltaRed
+
+Error de C4C, ver con Luis
+
+PR-81
+
+bloqueadoRed
+
+mediaYellow
+
+Error de C4C, ver con Luis
+
+PR-216
+
+bloqueadoRed
+
+AltaRed
+
+Error de Datos, ver con Luis
+
+:note:atlassian-note#C0B6F2Estados
+Por hacer
+En cursoPurple
+En revisionYellow
+listoGreen
+bloqueadoRed
+notePrioridades
+BajaGreen
+mediaYellow
+AltaRed
+CRITICARed
+Prioridades
+BAJA
+MEDIA
+ALTA
+CRITICA

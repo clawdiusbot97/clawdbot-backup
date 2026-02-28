@@ -1,0 +1,12 @@
+{
+  "last_run": "2026-02-21T16:09:29.412654+00:00",
+  "accounts": {
+    "tech_ai": "processed",
+    "tech_news": "processed",
+    "finance_macro": "processed",
+    "history_ideas": "processed",
+    "uruguay_news": "processed",
+    "uruguay_macro": "processed",
+    "uruguay_politics": "processed"
+  }
+}

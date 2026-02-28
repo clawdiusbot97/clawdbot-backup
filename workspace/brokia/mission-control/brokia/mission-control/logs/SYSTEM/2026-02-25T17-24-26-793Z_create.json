@@ -1,0 +1,13 @@
+{
+  "action": "create",
+  "id": "SYSTEM",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Creado: /home/manpac/.openclaw/workspace/brokia/workitems/inbox/FEATURE-20260225-001.md\n   ID: FEATURE-20260225-001\n   Type: feature\n   Title: Test feature\n   Status: NEW\n   implementation_approved: true\n",
+  "stderr": "",
+  "duration_ms": 146,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T17:24:26.647Z",
+  "finished_at": "2026-02-25T17:24:26.793Z"
+}

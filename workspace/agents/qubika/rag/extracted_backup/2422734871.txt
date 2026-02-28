@@ -1,0 +1,16 @@
+TITLE: S4 dockerization
+DOMAIN: 2) Docker
+PRIORITY: Media
+ID: 2422734871
+SOURCE: 2422734871__S4_dockerization.json
+
+---
+
+Required Changes
+Check and complete bancard-docker configuration for s4-service and s4-static in production.
+
+Check and update all the services/portals configuration in production (bancard-configurations).
+
+Update DMZ proxies configuration in production.
+
+Update services proxies configuration in production.

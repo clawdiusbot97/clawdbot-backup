@@ -1,0 +1,68 @@
+TITLE: Tareas Mayo y futuro
+DOMAIN: General
+PRIORITY: Media
+ID: 3085303812
+SOURCE: 3085303812__Tareas_Mayo_y_futuro.json
+
+---
+
+En este documento están listadas las horas trabajadas en Mayo hasta la fecha, con un total de 76 horas.
+A esto, hay que sumarle el trabajo de la fechahasta la salida en producciónde:
+y las tareas de QA de parte dey de
+Horas totales trabajadas en Mayo hasta la fecha
+
+76 horas
+
+Tarea
+
+PQRA-144 Agregar columnas a la tabla de confirmations y registrar el requestID y el tipo de confirmación de HST
+
+PQRA-164 Agregar operación para modificar el merchant en commerce-service
+
+PQRA-166 Aplicar formato correcto para tag 03
+
+PQRA-167 Tamaño en padrón EMV
+
+PQRA-168 Modificación sección cuotas
+
+PQRA-169 Ajustes sitio web
+
+PQRA-170 Pruebas y Mejoras en endpoint de confirmación el selling-service
+
+PQRA-171 Pruebas y Mejoras en endpoint de confirmación en payment-link-service
+
+PQRA-172 Regenerar token de hst si está vacio o nulo
+
+PQRA-173 Revisar manejo de errores con HST
+
+PQRA-174 Decodificar el rawQRData de base64 en la confirmación de hst
+
+PQRA-177 Controlar el valor máximo que puede tener el tag 62.08 (solo puede ser hasta 15 caracteres, si supera se debe truncar), este punto ya se levanto capaz falta el commit nomas
+
+PQRA-179 Cambiar el formato de los campos taxIndicator y taxValue de booleano a numérico
+
+PQRA-183 Favor verificar el error que da en la actualización de datos del comercio
+
+Horas restantes por trabajar
+
+35 horas de desarrollopor semanahasta la salida en producción
+
+40 horas de QApor semanahasta la salida en producción
+
+Tareas
+
+Soporte
+
+Mejoras
+
+Bugfixing
+
+Pruebas con Visa
+
+Pruebas con HST
+
+Pruebas con JPos
+
+Puesta y deploy a Producción
+
+Pruebas QA (tickets, bug fixes, exploratory)

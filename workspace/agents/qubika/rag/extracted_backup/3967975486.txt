@@ -1,0 +1,50 @@
+TITLE: Anotaciones Pagos Adicionales
+DOMAIN: General
+PRIORITY: Media
+ID: 3967975486
+SOURCE: 3967975486__Anotaciones_Pagos_Adicionales.json
+
+---
+
+Histórico de pagos de un suscriptor
+Crear dataset que liste los pagos de un suscriptor en su suscripción(PLS)
+Deberá traer también datos del suscriptor como RUC, EMAIL, TELÉFONO y si está activo.
+
+Crear endpoint que consuma el nuevo dataset y represente los pagos(PLS)
+
+Crear maquetado de vista de pagos de un suscriptor(PLP)
+Que se pueda acceder desde el listado de suscriptores y del resumen de suscriptores
+
+Consumir el endpoint nuevo para traer todos los pagos del suscriptor y representarlos en la tabla(PLP)
+
+Pagos adicionales
+
+Agregar un nuevo tipo de pago llamado ExtraPayment(PLS)
+
+Crear nuevo endpoint para poder cobrar a un suscriptor un monto específico(PLS)
+Deberá ser un pago ocasional y no debe afectar a la suscripción(pago extra).
+
+El pago no se muestra en la vista de suscripciones(No es el último pago).
+
+Al pago se le agrega el ExtraPayment Type y está asociado al suscriptor.
+
+Agregar nuevo botón en las acciones de suscriptores para cobrar pago adicional(PLP)
+Solo accesible para usuarios administradores
+
+Si no es administrador, mostrar el botón en gris(deshabilitado) con un hover “No cuenta con permiso para esta funcionalidad”
+
+Crear modal con formulario que solicite el monto del pago adicional, que cuente con doble confirmación.(PLP)
+
+Modificar el endpoint de reporte de movimientos para que devuelva el Type del pago.(PLS)
+
+Mostrar el dato Type en la vista de reporte de movimientos(PLP)
+EXTRA(consultar con ellos): Hacer un filtro para este nuevo campo
+
+Revisar endpoint get_subscribers_by_link_alias de external-commerce y crearle un endpoint(External-Commerce-Service)
+
+Crear endpoint endpoint para debitarle el pago adicional a un suscriptor específico(External-Commerce-Service)
+Puede pasarse un identificador de un suscriptor específico, o correr sobre todos los suscriptores de la suscripción
+
+Consultas:
+“Indicar el pago con el número de boleta y su estado. También dejar en un texto “Creado el pago #{ticket_number} fue #{status}. A este pago lo puede administrar en el listado de movimientos“ La palabra movimientos tendrá el formato de unlinky deberá llevar a lavista de movimientos.” => Que pasa si el cobro adicional es para multiples suscriptores? Cómo se muestran estos mensajes para X suscriptores?
+En la feature de histórico de pago, es necesario tener un endpoint en la API para poder consultar los pagos de un suscriptor específico?

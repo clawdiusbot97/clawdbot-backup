@@ -1,0 +1,74 @@
+TITLE: VPos - Debito Ocasional
+DOMAIN: General
+PRIORITY: Media
+ID: 3233480714
+SOURCE: 3233480714__VPos_-_Debito_Ocasional.json
+
+---
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Quitar validación de tarjeta débito en el iframe (single buy)
+
+24
+
+vPos portal
+
+Verificar flujo en multi buy
+
+4
+
+vPos portal
+
+Verificar flujo en preautorización single buy
+
+4
+
+vPos portal
+
+Verificar flujo en preautorización muti buy
+
+4
+
+vPos portal
+
+Verificar flujo en single buy
+
+4
+
+vPos service
+
+Verificar flujo en multi buy
+
+4
+
+vPos service
+
+Verificar flujo en preautorización single buy
+
+4
+
+vPos service
+
+Verificar flujo en preautorización muti buy
+
+4
+
+vPos service
+
+Total Desarrollo
+
+52
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+8
+
+Total Desarrollo + Gestión
+
+60

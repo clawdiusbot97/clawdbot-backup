@@ -1,0 +1,6 @@
+{
+  "status": "reset",
+  "reason": "invalid_json_detected",
+  "original": "brokia-heartbeat.json.corrupted",
+  "reset_at": "2026-02-28T18:37:02.289617Z"
+}

@@ -1,0 +1,63 @@
+TITLE: Cómo funciona Picasso Listing?
+DOMAIN: General
+PRIORITY: Media
+ID: 2260926502
+SOURCE: 2260926502__Co╠ümo_funciona_Picasso_Listing_.json
+
+---
+
+bancard-picasso-listingis a library aiming to expose ActiveRecord::Relation and let clients build their own filter conditions without the risk of SQL Injection, plus sorting, and paging options.
+Datasets
+Datasets wrap an ActiveRecord::Relation, define a set of columns that can be used as filters, and define aggregation calculations. Example:
+Q
+Q objects specify filtering, sorting, paging, and selecting options that will be applied to a dataset.
+Client code doesn't interact directly with Q objects, instead of that,bancard-picasso-listingreceives and exposes Q objects as plain Ruby hashes.
+The above example instructs the dataset to:
+filter cities that belong to France and its population are between 1MM and 10MM
+
+retrieve the 2nd page, being 15 results per page.
+
+sort by population in descending order
+
+retrieve average population
+
+filteroption is an S-expression that may be composed of some other ones. In the above example,and,eq,andbetweenare filter operators. Here's the list of possible filter operators:
+and
+
+between
+
+equal
+
+greater_than_or_equal
+
+in
+
+is_null
+
+like
+
+not
+
+or
+
+regexp
+
+valuesis an Array that specificies the values of the filter placeholders: '?'
+pagingspecifies which page to retrieve and the number of results per page. If the option is not
+specified, the default page is 1 with 10 results.
+sortingspecifies the order of the results, it ressembles an SQL `ORDER BY` clause.
+selectis an array that specifies which information will be retrieved. By default,:list,:count
+and all the specified dataset aggregations will be returned.
+Reports
+Reports are the result of querying a dataset.
+SimpleQBuilder
+Module implemented inside a particular project to prepare theqparam to be consumed bybancard-picasso-listing
+
+# Builds a hash of Q options that consists of a set of eq and between # conditions. Those conditions are then joined by AND or OR, based on __and_or hash option.
+self.build(q, defaults = {})
+@param q:Options for Q building
+@param defaults:Values default for q.
+
+If a key inqends with __between, then the value is assumed to be Hash with :start and :end options.
+If a field name ends with -_datetime or __datetime, then the values are converted to full date time string, in the case of __datetime that part is striped from the field name.
+If a field name ends with __in, then the values are expected to be an array and will transform into a IN query.

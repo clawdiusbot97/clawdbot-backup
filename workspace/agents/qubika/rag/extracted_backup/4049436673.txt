@@ -1,0 +1,21 @@
+TITLE: Lookup de un catastro
+DOMAIN: General
+PRIORITY: Media
+ID: 4049436673
+SOURCE: 4049436673__Lookup_de_un_catastro.json
+
+---
+
+VPOS
+JS → VPOS Portal
+jsVPOS portal → VPOS service
+rubyVPOS service → external-services
+rubyTPAGO
+JS → TPago Portal
+js
+
+TPago portal → payment-link-service
+ruby
+
+payment-link-service → external-services
+ruby

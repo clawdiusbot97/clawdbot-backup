@@ -1,0 +1,33 @@
+{
+  "interests": {
+    "tech_ai": ["ai", "artificial intelligence", "machine learning", "llm", "transformer", "openai", "anthropic", "developer tools", "startups", "indie hacking", "tech business", "software engineering", "programming", "code", "tools", "productivity"],
+    "tech_news": ["tech news", "startup", "funding", "acquisition", "regulation", "product launch", "innovation", "technology", "business", "market", "industry", "trends"],
+    "finance_macro": ["macroeconomics", "investing", "long-term", "financial regulation", "interest rates", "inflation", "portfolio", "asset allocation", "stocks", "bonds", "crypto", "economy", "global markets", "risk", "wealth", "retirement", "financial independence"],
+    "history_ideas": ["history", "medieval", "geopolitics", "strategy", "historical lessons", "applied history", "war", "civilization", "empire", "revolution", "historical analysis", "geopolitical shifts", "military", "diplomacy"],
+    "uruguay": ["uruguay", "economy", "politics", "regulation", "bcu", "central bank", "export", "dollar", "inflation", "employment", "growth", "development", "latin america", "mercosur", "trade", "policy", "government", "president", "minister"]
+  },
+  "scoring": {
+    "interest_match": 2,
+    "strategic_impact": 3,
+    "concrete_data": 2,
+    "educational_thread": 1,
+    "promotional_penalty": -2,
+    "controversy_penalty": -1,
+    "repetitive_penalty": -1
+  },
+  "selection": {
+    "tech_ai": 3,
+    "tech_news": 2,
+    "finance_macro": 3,
+    "history_ideas": 2,
+    "uruguay": 3
+  },
+  "output": {
+    "obsidian_base_path": "/home/manpac/Obsidian/Daily",
+    "filename_pattern": "YYYY-MM-DD-briefing.md",
+    "telegram_channel_id": "-5095009832",
+    "max_tweets_per_account": 100,
+    "ignore_replies": true,
+    "ignore_promotional": true
+  }
+}

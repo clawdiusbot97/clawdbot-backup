@@ -1,0 +1,74 @@
+TITLE: VisaQR
+DOMAIN: General
+PRIORITY: Media
+ID: 2788033784
+SOURCE: 2788033784__VisaQR.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+Project Manager
+
+Technical Reference
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+TBD
+
+End date
+
+TBD
+
+Comms + Management Tools
+
+Confluence Space
+
+https://bancard.atlassian.net/wiki/spaces/PQRA/pages/50266486/Esquema+de+onbording
+
+Jira Board
+
+https://bancard.atlassian.net/jira/software/c/projects/PQRA/issues/?filter=allissues
+
+Slack Channel
+
+#bancard-visaqr
+
+M. Teams Channel
+
+[PRIVATE_URL_WITH_CREDENTIALS]
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+TBD
+
+Minutes
+
+15
+
+Owner
+
+Client Demo
+
+Cadence
+
+Minutes
+
+Owner

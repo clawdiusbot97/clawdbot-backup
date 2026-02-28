@@ -1,0 +1,84 @@
+TITLE: Preautorizaciones en VPOS PCI
+DOMAIN: General
+PRIORITY: Media
+ID: 2685665304
+SOURCE: 2685665304__Preautorizaciones_en_VPOS_PCI.json
+
+---
+
+Se desea incorporar la funcionalidad de Preautorizaciones en los servicios de VPOS PCI. Para ello, es necesario agregar nuevos servicios, tanto en la creación de una pre-autorización como en la confirmación de la misma.
+Team
+
+Name
+
+Role
+
+Developer
+
+Manager
+
+QA
+
+Pao
+
+Referente
+
+Pao
+
+PM Bancard
+
+Tentative Timeline
+
+Estimación Original
+
+Estimación
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+Confluence Bancard
+
+Jira Board
+
+Link al Jira de Bancard
+
+Épica:Preauth_VPOS_PCI
+
+Slack Channel
+
+#bancard-team
+
+M. Teams Channel
+
+Interno con Pao
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Minutes
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+Minutes
+
+Owner
+
+Client Demo
+
+Cadence
+
+Minutes
+
+Owner

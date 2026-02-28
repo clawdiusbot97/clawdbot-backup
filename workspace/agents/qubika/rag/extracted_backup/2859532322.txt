@@ -1,0 +1,18 @@
+TITLE: Petición de Cambios
+DOMAIN: General
+PRIORITY: Media
+ID: 2859532322
+SOURCE: 2859532322__Peticio╠ün_de_Cambios.json
+
+---
+
+En este documento vamos a centralizar las peticiones de cambios o tareas que vienen desde el lado de Bancard para que no se pierdan y así poder hacerles un seguimiento más controlado.
+Petición
+
+Proyecto
+
+Prioridad
+
+Responsable
+
+Estado

@@ -1,0 +1,101 @@
+TITLE: Checklist de Validaciones para Campos y Formularios
+DOMAIN: General
+PRIORITY: Media
+ID: 3455615003
+SOURCE: 3455615003__Checklist_de_Validaciones_para_Campos_y_Formularios.json
+
+---
+
+Esta guía proporciona una lista completa de los campos más comunes en los formularios y las validaciones recomendadas para cada uno. Su objetivo es asegurar la coherencia, precisión y facilidad de uso en el desarrollo de formularios para mejorar la experiencia del usuario y reducir errores.
+Rango de Fechas:
+Validar que la fecha de inicio sea anterior a la fecha de fin.
+
+Verificar que ambas fechas estén dentro de un intervalo lógico (por ejemplo, no permitir fechas futuras en ciertos contextos).
+
+Formato de fecha consistente.
+
+Edades:
+Validar que la edad sea numérica y esté dentro de un rango realista (ej. 0-120).
+
+Calcular la edad a partir de una fecha de nacimiento para garantizar coherencia.
+
+Restricciones según el contexto (ej. mayores de edad).
+
+Nombres:
+Permitir solo caracteres alfabéticos y espacios.
+
+Definir una longitud mínima y máxima.
+
+Considerar tildes y caracteres especiales, según el idioma.
+
+Documentos (DNI, Pasaporte, etc.):
+Validar el formato específico del país.
+
+Restringir a solo caracteres válidos (números, letras según corresponda).
+
+Prevenir duplicados, en caso de registros previos.
+
+Fecha de Nacimiento:
+Validar el formato.
+
+Verificar que la fecha sea razonable (no permitir fechas futuras ni demasiado antiguas).
+
+Relacionar con otros campos, como edad o rango etario.
+
+Correo Electrónico:
+Validar formato correcto (ej.usuario@dominio.com).
+
+Prevenir duplicados.
+
+Evitar direcciones temporales o no verificadas en ciertos contextos.
+
+Número de Teléfono:
+Validar la cantidad de dígitos y formato según el país.
+
+Posible validación con una máscara de entrada.
+
+Dirección:
+Separar en calle, número, ciudad, estado/provincia y código postal.
+
+Considerar validaciones geográficas (ej. códigos postales válidos).
+
+Contraseñas:
+Definir una longitud mínima y restricciones de complejidad (mayúsculas, minúsculas, números, caracteres especiales).
+
+Verificar la coincidencia entre el campo de “Contraseña” y “Confirmar Contraseña”.
+
+Asegurarse de que no contenga datos personales (ej. nombre, email).
+
+Checkbox de Aceptación (Términos y Condiciones):
+Requerido para proceder con el formulario.
+
+Posible validación con un pop-up o enlace a los términos.
+
+Campos Numéricos (ej. Cantidad, Precio):
+Validar valores numéricos positivos, dependiendo del contexto.
+
+Definir rango aceptable según el campo (ej. cantidades mínimas, precios razonables).
+
+Permitir solo números o valores decimales, según el tipo.
+
+Agregar separadores de miles y decimales
+
+URLs (páginas web o enlaces):
+Validar que el enlace sea correcto y empiece conhttp://ohttps://.
+
+En algunos contextos, verificar que la URL sea válida o no esté bloqueada.
+
+Campos Seleccionables (ej. País, Ciudad):
+Limitar a opciones específicas para evitar entradas no válidas.
+
+Dependencias entre campos (por ejemplo, las ciudades disponibles según el país seleccionado).
+
+Campos de Texto Libre (ej. Comentarios, Descripciones):
+Definir longitud máxima.
+
+Evitar caracteres especiales no deseados (seguridad de inyección SQL).
+
+Código Postal:
+Validación de formato por país.
+
+Dependencias entre otros campos (ej. código postal asociado a una ciudad o estado).

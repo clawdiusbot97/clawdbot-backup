@@ -1,0 +1,10 @@
+=== read_compact log ===
+Timestamp: 2026-02-21T20:53:20+00:00
+File: test.txt
+Offset: 1
+Limit: 
+Lines: 1
+Chars: 4
+
+=== OUTPUT ===
+test

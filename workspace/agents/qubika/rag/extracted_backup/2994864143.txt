@@ -1,0 +1,9 @@
+TITLE: Reportes
+DOMAIN: General
+PRIORITY: Media
+ID: 2994864143
+SOURCE: 2994864143__Reportes.json
+
+---
+
+Los reportes son herramientas utilizados que reflejan el impacto del trabajo de un equipo, y pueden evidenciar puntos débiles y de mejora, también como calcular la velocidad en la que trabaja el equipo, para poder refinar las estimaciones a futuro y darnos un panorama más preciso de como se va avanzando.

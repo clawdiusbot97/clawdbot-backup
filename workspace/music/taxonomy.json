@@ -1,0 +1,351 @@
+{
+  "schema_version": "2.0",
+  "house": {
+    "deep_house_90s": {
+      "bpm_typical": "120-125",
+      "groove_signature": "lazy 4th轧hr swing, soulful",
+      "kick_style": "rounded 909-ish, warm",
+      "bassline_approach": "walking bass, jazz-influenced",
+      "percussion_style": "minimal, brushed hi-hats",
+      "sound_design_traits": "analog warmth, chord stabs",
+      "dancefloor_intensity": 5,
+      "underground_mainstream_spectrum": 0.3
+    },
+    "deep_house_modern": {
+      "bpm_typical": "122-126",
+      "groove_signature": "tight, deeper",
+      "kick_style": "tight, compressed",
+      "bassline_approach": "sub bass with mid-frequency content",
+      "percussion_style": "sparse, filtered",
+      "sound_design_traits": "clean, modern processing",
+      "dancefloor_intensity": 6,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "microhouse": {
+      "bpm_typical": "125-130",
+      "groove_signature": "robotic, quantized",
+      "kick_style": "tight 808-ish",
+      "bassline_approach": "plucky, short envelope",
+      "percussion_style": "reduced, clicky",
+      "sound_design_traits": "digital, precise",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.5
+    },
+    "minimal_house": {
+      "bpm_typical": "125-130",
+      "groove_signature": "hypnotic, stripped",
+      "kick_style": "tight, punchy",
+      "bassline_approach": "repetitive, melodic fragments",
+      "percussion_style": "sparse, essential only",
+      "sound_design_traits": "negative space, sparse",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "romanian_minimal": {
+      "bpm_typical": "126-132",
+      "groove_signature": "hypnotic tribal",
+      "kick_style": "punchy, processed",
+      "bassline_approach": "melodic loops, micro-phrases",
+      "percussion_style": "tribal, organic",
+      "sound_design_traits": "ethereal, melodic",
+      "dancefloor_intensity": 8,
+      "underground_mainstream_spectrum": 0.6
+    },
+    "organic_house": {
+      "bpm_typical": "118-125",
+      "groove_signature": "natural, flowing",
+      "kick_style": "soft, acoustic-influenced",
+      "bassline_approach": "woodsy, textured",
+      "percussion_style": "real instruments, field recordings",
+      "sound_design_traits": "nature sounds, acoustic",
+      "dancefloor_intensity": 4,
+      "underground_mainstream_spectrum": 0.3
+    },
+    "afro_house": {
+      "bpm_typical": "122-128",
+      "groove_signature": "african rhythms, driving",
+      "kick_style": "rounded, warm",
+      "bassline_approach": "slap, syncopated",
+      "percussion_style": "congas, djembe, cowbell",
+      "sound_design_traits": "tribal, ethnic",
+      "dancefloor_intensity": 8,
+      "underground_mainstream_spectrum": 0.5
+    },
+    "progressive_house_2000s": {
+      "bpm_typical": "125-135",
+      "groove_signature": "big room builds",
+      "kick_style": "layered, big",
+      "bassline_approach": "melodic, uplifting",
+      "percussion_style": "standard 4th轧hr",
+      "sound_design_traits": "synth-heavy, emotional",
+      "dancefloor_intensity": 9,
+      "underground_mainstream_spectrum": 0.2
+    },
+    "progressive_house_modern": {
+      "bpm_typical": "120-128",
+      "groove_signature": "deep emotional",
+      "kick_style": "tight, warm",
+      "bassline_approach": "subtle, melodic",
+      "percussion_style": "minimal, atmospheric",
+      "sound_design_traits": "atmospheric, emotional",
+      "dancefloor_intensity": 6,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "indie_dance": {
+      "bpm_typical": "115-125",
+      "groove_signature": "indie-rock influenced",
+      "kick_style": "live-sounding",
+      "bassline_approach": "guitar-influenced",
+      "percussion_style": "live drums feel",
+      "sound_design_traits": "guitar textures, organic",
+      "dancefloor_intensity": 5,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "dark_disco": {
+      "bpm_typical": "120-128",
+      "groove_signature": "eBM-influenced",
+      "kick_style": "hard, distorted",
+      "bassline_approach": "dark, metallic",
+      "percussion_style": "mechanical, industrial",
+      "sound_design_traits": "dark, aggressive",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.6
+    }
+  },
+  "techno": {
+    "detroit": {
+      "bpm_typical": "120-130",
+      "groove_signature": "soulful futuristic",
+      "kick_style": "909, warm",
+      "bassline_approach": "rolling, melodic",
+      "percussion_style": "standard 4th轧hr",
+      "sound_design_traits": "roland classics, space",
+      "dancefloor_intensity": 6,
+      "underground_mainstream_spectrum": 0.5
+    },
+    "dub_techno": {
+      "bpm_typical": "120-130",
+      "groove_signature": "hypnotic, spacey",
+      "kick_style": "soft, compressed",
+      "bassline_approach": "reverb-drenched",
+      "percussion_style": "minimal, delayed",
+      "sound_design_traits": "dub delay, space",
+      "dancefloor_intensity": 5,
+      "underground_mainstream_spectrum": 0.7
+    },
+    "hypnotic": {
+      "bpm_typical": "125-135",
+      "groove_signature": "repetitive droning",
+      "kick_style": "steady, consistent",
+      "bassline_approach": "monophonic, sustained",
+      "percussion_style": "minimal, ritualistic",
+      "sound_design_traits": "trance-like, minimal",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.6
+    },
+    "minimal_techno": {
+      "bpm_typical": "125-135",
+      "groove_signature": "extreme reduction",
+      "kick_style": "tight, punchy",
+      "bassline_approach": "filtered, subtle",
+      "percussion_style": "minimal, clicky",
+      "sound_design_traits": "functional, sparse",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.5
+    },
+    "peak_time": {
+      "bpm_typical": "130-140",
+      "groove_signature": "energy-focused",
+      "kick_style": "hard, driving",
+      "bassline_approach": "simple, effective",
+      "percussion_style": "standard, driving",
+      "sound_design_traits": "dj-friendly, big",
+      "dancefloor_intensity": 9,
+      "underground_mainstream_spectrum": 0.3
+    },
+    "hard_techno": {
+      "bpm_typical": "145-160",
+      "groove_signature": "aggressive relentless",
+      "kick_style": "hard, distorted",
+      "bassline_approach": "industrial, metallic",
+      "percussion_style": "mechanical, fast",
+      "sound_design_traits": "distorted, harsh",
+      "dancefloor_intensity": 9,
+      "underground_mainstream_spectrum": 0.7
+    },
+    "industrial": {
+      "bpm_typical": "140-160",
+      "groove_signature": "mechanic, abrasive",
+      "kick_style": "hard, metallic",
+      "bassline_approach": "noise-based, distorted",
+      "percussion_style": "metallic, factory sounds",
+      "sound_design_traits": "mechanical, harsh",
+      "dancefloor_intensity": 8,
+      "underground_mainstream_spectrum": 0.8
+    },
+    "acid": {
+      "bpm_typical": "130-150",
+      "groove_signature": "303 squelch-driven",
+      "kick_style": "hard, driving",
+      "bassline_approach": "tb-303 synced",
+      "percussion_style": "standard techno",
+      "sound_design_traits": "acid, raw 303",
+      "dancefloor_intensity": 8,
+      "underground_mainstream_spectrum": 0.6
+    },
+    "melodic_techno": {
+      "bpm_typical": "125-135",
+      "groove_signature": "emotional, melodic",
+      "kick_style": "warm, rounded",
+      "bassline_approach": "harmonic, arpeggiated",
+      "percussion_style": "atmospheric",
+      "sound_design_traits": "emotional, harmonic",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "raw_techno": {
+      "bpm_typical": "128-138",
+      "groove_signature": "lo-fi, gritty",
+      "kick_style": "distorted, rough",
+      "bassline_approach": "lo-fi, imperfect",
+      "percussion_style": "crunchy, rough",
+      "sound_design_traits": "grit, underground",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.8
+    }
+  },
+  "breaks_uk": {
+    "breakbeat": {
+      "bpm_typical": "130-145",
+      "groove_signature": "break-driven, funky",
+      "kick_style": "varied, break-influenced",
+      "bassline_approach": "funky, syncopated",
+      "percussion_style": "break-heavy",
+      "sound_design_traits": "funk samples, old school",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "uk_garage": {
+      "bpm_typical": "130-140",
+      "groove_signature": "2-step rhythm",
+      "kick_style": "tight, syncopated",
+      "bassline_approach": "wobble, layered",
+      "percussion_style": "skeletal, sparse",
+      "sound_design_traits": "vocal-centric, crisp",
+      "dancefloor_intensity": 6,
+      "underground_mainstream_spectrum": 0.3
+    },
+    "2step": {
+      "bpm_typical": "135-145",
+      "groove_signature": "skeleton rhythm",
+      "kick_style": "minimal",
+      "bassline_approach": "wobble, compressed",
+      "percussion_style": "minimal, essential",
+      "sound_design_traits": "vocal-focused, sparse",
+      "dancefloor_intensity": 6,
+      "underground_mainstream_spectrum": 0.5
+    },
+    "jungle": {
+      "bpm_typical": "160-180",
+      "groove_signature": "amen breaks, ragga",
+      "kick_style": "heavy, distorted",
+      "bassline_approach": "reese, dark",
+      "percussion_style": "break-heavy, amen",
+      "sound_design_traits": "ragga samples, dark",
+      "dancefloor_intensity": 9,
+      "underground_mainstream_spectrum": 0.7
+    },
+    "dnb_liquid": {
+      "bpm_typical": "170-180",
+      "groove_signature": "smooth, melodic",
+      "kick_style": "standard dnb",
+      "bassline_approach": "reese, melodic",
+      "percussion_style": "standard dnb",
+      "sound_design_traits": "soulful, jazzy",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.4
+    },
+    "dnb_neuro": {
+      "bpm_typical": "170-180",
+      "groove_signature": "dark, technical",
+      "kick_style": "punchy, distorted",
+      "bassline_approach": "reese, metallic",
+      "percussion_style": "technical, precise",
+      "sound_design_traits": "dark, neurotic",
+      "dancefloor_intensity": 8,
+      "underground_mainstream_spectrum": 0.6
+    },
+    "dnb_minimal": {
+      "bpm_typical": "170-180",
+      "groove_signature": "stripped, techy",
+      "kick_style": "tight, minimal",
+      "bassline_approach": "subtle, minimal",
+      "percussion_style": "sparse, techy",
+      "sound_design_traits": "minimal, functional",
+      "dancefloor_intensity": 6,
+      "underground_mainstream_spectrum": 0.6
+    },
+    "electro_breaks": {
+      "bpm_typical": "130-145",
+      "groove_signature": "electro-influenced",
+      "kick_style": "electro-style",
+      "bassline_approach": "electro, distorted",
+      "percussion_style": "break-driven",
+      "sound_design_traits": "electro, aggressive",
+      "dancefloor_intensity": 7,
+      "underground_mainstream_spectrum": 0.5
+    }
+  },
+  "ambient_experimental": {
+    "ambient": {
+      "bpm_typical": "60-90",
+      "groove_signature": "atmospheric, textural",
+      "kick_style": "soft, sparse",
+      "bassline_approach": "drone, sustained",
+      "percussion_style": "minimal, textural",
+      "sound_design_traits": "pads, field recordings",
+      "dancefloor_intensity": 1,
+      "underground_mainstream_spectrum": 0.7
+    },
+    "idm": {
+      "bpm_typical": "120-160",
+      "groove_signature": "complex, abstract",
+      "kick_style": "varied, complex",
+      "bassline_approach": "abstract, experimental",
+      "percussion_style": "complex rhythms",
+      "sound_design_traits": "abstract, glitchy",
+      "dancefloor_intensity": 3,
+      "underground_mainstream_spectrum": 0.8
+    },
+    "downtempo": {
+      "bpm_typical": "80-110",
+      "groove_signature": "relaxed, lounge",
+      "kick_style": "soft, acoustic",
+      "bassline_approach": "smooth, melodic",
+      "percussion_style": "acoustic, organic",
+      "sound_design_traits": "chill, lounge",
+      "dancefloor_intensity": 2,
+      "underground_mainstream_spectrum": 0.3
+    },
+    "leftfield": {
+      "bpm_typical": "120-140",
+      "groove_signature": "alternative, experimental",
+      "kick_style": "varied, alternative",
+      "bassline_approach": "experimental, pop-leaning",
+      "percussion_style": "varied, alternative",
+      "sound_design_traits": "alternative, experimental pop",
+      "dancefloor_intensity": 4,
+      "underground_mainstream_spectrum": 0.6
+    },
+    "experimental": {
+      "bpm_typical": "variable",
+      "groove_signature": "avant-garde",
+      "kick_style": "unconventional",
+      "bassline_approach": "abstract, noise",
+      "percussion_style": "found objects, unconventional",
+      "sound_design_traits": "avant-garde, genre-bending",
+      "dancefloor_intensity": 2,
+      "underground_mainstream_spectrum": 0.9
+    }
+  }
+}

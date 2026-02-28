@@ -1,0 +1,3055 @@
+TITLE: Análisis de deuda técnica y actualización continua Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 4200661022
+SOURCE: 4200661022__Ana╠ülisis_de_deuda_te╠ücnica_y_actualizacio╠ün_continua_Bancard.json
+
+---
+
+16falsedecimallisttrue
+Diagnóstico detallado por proyecto
+bancard-audit-service (API)760bancard-audit-service (API)
+Tipo:API
+
+Stack:JRuby 1.7.27 → compatibilidad Ruby 1.9.3
+
+Framework:Picasso
+
+Dependencias:36 directas / 79 totales (resueltas)
+
+Alertas Dependabot:49 ( 22 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+
+Puntúa alto por: (a) runtimeEOL(JRuby 1.7.x, Ruby 1.9.3), (b) framework/stackmuy desfasado(sinatra 1.4,rack 1.6,puma 3.x,sidekiq 2.x,rspec 2.x), (c) 49 alertas (22 altas/críticas), (d)sin despliegues productivos. Según la rúbrica, esto cae en8–10.
+Notas técnicas
+Runtime:JRuby 1.7.27 está fuera de soporte desde hace años. Migrar a JRuby 9.4.x (Ruby 3.1) o superior es imprescindible.
+
+Stack web:
+rack 1.6.4(2015) → línea estable 3.2.x.
+
+sinatra 1.4.7(2015) → última 4.1.1 (2024).
+
+puma 3.11.4-java(2018) → última 7.0.3 (2025).
+
+thin 1.5.1(2014) → última 2.0.1, pero se recomienda retirar.
+
+Jobs:sidekiq 2.17.8(2014) → línea estable 8.x (2025). Requiere rediseño de jobs y cliente Redis moderno.
+
+Redis:redis 3.3.0→ última 5.4.1.
+
+Observabilidad:sentry-raven 2.13.0está deprecado, debe migrarse asentry-ruby.
+
+Tooling:
+rspec 2.99.0→ última 3.13.1.
+
+rake 0.9.2.2→ última 13.3.0.
+
+faraday 0.17.3→ última 2.13.x.
+
+net-ssh 2.9.4→ última 7.3.0.
+
+Equivalencia JRuby ↔ Ruby:JRuby 1.7.x = Ruby 1.9.3 (EOL desde 2015).
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.4 → 3.2.0 (MAJOR)
+
+sinatra:1.4.7 → 4.1.1 (MAJOR)
+
+puma:3.11.4 → 7.0.3 (MAJOR)
+
+thin:1.5.1 → 2.0.1 (MAJOR; recomendable retirar)
+
+sidekiq:2.17.8 → 8.0.x (MAJOR)
+
+redis (gem):3.3.0 → 5.4.1 (MAJOR)
+
+sentry-raven:2.13.0 → reemplazar porsentry-ruby(EOL)
+
+rspec:2.99.0 → 3.13.1 (MAJOR)
+
+rake:0.9.2.2 → 13.3.0 (MAJOR)
+
+faraday:0.17.3 → 2.13.x (MAJOR)
+
+net-ssh:2.9.4 → 7.3.0 (MAJOR)
+
+mail:2.7.1 → 2.8.1 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y base de plataforma
+Migrar deJRuby 1.7.27 → JRuby 9.4.x(Ruby 3.1).
+
+Actualizar Bundler y RubyGems; fijarBUNDLED WITH.
+
+Stack web
+MigrarRack 1.6 → 3.x,Sinatra 1.4 → 4.x,Puma 3.x → 7.x.
+
+RetirarThinsi no se usa en producción.
+
+Jobs y Redis
+MigrarSidekiq 2.x → 8.xyredis 3.x → 5.xen el mismo ciclo.
+
+Revisar compatibilidad de jobs, reintentos y middlewares.
+
+Observabilidad
+Reemplazarsentry-ravenporsentry-ruby.
+
+Validar filtros de datos sensibles y alertas.
+
+Tooling y soporte
+Migrar aRSpec 3.x(usartranspecpara facilitar).
+
+SubirRake 13.xyFaraday 2.x(migrar adapters).
+
+Actualizarnet-ssha 7.x (revisar algoritmos de claves).
+
+Seguridad
+Resolver las49 alertas, priorizando las22 altas/críticas.
+
+Despliegue seguro
+Armar entorno destagingcon pruebas de carga y regresión.
+
+Aplicarcanary releasey plan de rollback documentado.
+
+bancard-auth-portal (Portal)760bancard-auth-portal (Portal)
+Tipo:Portal
+
+Stack:JRuby 9.2.0 → compatibilidad Ruby ~2.5-2.6
+
+Framework:Sinatra
+
+Dependencias:30 directas / 78 totales (resueltas)
+
+Alertas Dependabot:30 ( 14 altas/críticas )
+
+Última actualización en producción:01-ago-2020
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a) runtime desactualizado / posiblemente EOL para JRuby 9.2.x, (b) framework Sinatra y stack web antiguos, (c) muchas dependencias base desfasadas, (d) alertas altas/críticas, (e) más de 18 meses sin producción.
+
+Notas técnicas
+JRuby 9.2.0 está bastante atrás y puede no recibir parches de seguridad recientes.
+
+Sinatra usado es de versión antigua; algunos middlewares y gemas podrían no ser compatibles con versiones modernas.
+
+Gems base comorack,puma,rack-test, etc., están considerablemente desfasadas respecto a sus últimas versiones.
+
+Cobertura de tests y ambiente de staging / CI probablemente limitado para detectar fallos al actualizar.
+
+Vulnerabilidad potencial en dependencias de red, utilitarios y autenticación, dada la brecha de tiempo sin mantenimiento.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:2.2.3 → 3.2.0 (MAJOR)
+
+puma:4.3.5 → 7.0.2 (MAJOR)
+
+sinatra:2.0.8.1 → 3.1.0 (MAJOR)
+
+rack-test:1.1.0 → 2.1.0 (MAJOR)
+
+redis:4.2.1 → 5.4.1 (MAJOR)
+
+net-ssh:2.9.4 → 7.3.0 (MAJOR)
+
+activesupport:6.0.3.2 → 7.2.2.2 (MAJOR)
+
+i18n:1.8.3 → 1.14.7 (MINOR)
+
+rspec:3.9.0 → 3.13.1 (MINOR)
+
+rake:13.0.1 → 13.3.0 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Planificar y actualizar el runtime
+Migrar JRuby 9.2.0 →JRuby 9.4.xpara obtener compatibilidad actual con Ruby moderno, mayor soporte de seguridad.
+
+Hacer pruebas de compatibilidad en entorno de desarrollo / staging.
+
+Actualizar stack web completo
+Subir Sinatra a versión ≥ 3.x.
+
+Migrar Rack 2.2 → 3.x, adaptando middleware (rack-contrib, etc.).
+
+Actualizar Puma a versión ≥ 7.x.
+
+Actualizar utilitarios críticos y dependencias de soporte
+Mejorar Redis, net-ssh, activesupport, i18n, etc., asegurándose de que los clientes externos/distribución de red funcionen tras el cambio.
+
+Remediar alertas de seguridad inmediatamente
+Priorizar las ~14 alertas altas/críticas; parchear o actualizar gemas con vulnerabilidades conocidas antes de hacer otros upgrades mayores.
+
+Fortalecer infraestructura de testing / staging
+Aumentar cobertura de tests, especialmente rutas del portal, middleware, autenticaciones.
+
+Usar staging para probar los cambios grandes.
+
+Despliegue progresivo / rollback
+Hacer los cambios en bloques pequeños para reducir riesgo (runtime primero, luego web stack, luego utilitarios).
+
+Tener plan de rollback si algo no funciona tras la actualización.
+
+bancard-auth-service (API)760bancard-auth-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.1.0 → compatibilidad Ruby 3.1 (JRuby 9.4.x implementa Ruby 3.1)
+
+Framework:Angus
+
+Dependencias:46directas /141totales (resueltas)
+
+Alertas Dependabot:39(14altas/críticas )
+
+Última actualización en producción:19-mar-2024
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a) 39 alertas (umbral “>30”), (b) varias librerías base muy desfasadas (p. ej.rack1.6.x,sidekiq5.x,redis3.x), (c) ~18 meses sin despliegue a prod. Según la rúbrica, esto cae en8–10.
+
+Notas técnicas
+JRuby 9.4.xestá soportado (al día con Ruby 3.1). Sugerido actualizar al último 9.4.x estable para correcciones del runtime.
+
+Bundler:2.4.7 (desde elGemfile.lock).
+
+Core web stack desfasado:
+rack 1.6.13(2017–2020) requiere salto mayor a línea3.xpara estar alineado con el ecosistema actual.RubyGems
+
+puma 6.0.2detrás de la serie7.0.x.RubyGems
+
+Background jobs:sidekiq 5.2.8está varias mayores atrás; la rama actual es8.0.x. Requiere migración por cambios de API y de cliente Redis.RubyGems
+
+Cliente Redis:redis 3.3.5es antiguo; la línea estable está en5.x. Requiere revisar compatibilidad con Sidekiq nuevo y opciones deredis-client.RubyGems+1
+
+HTTP stack:faraday 0.17.3(2019) tiene cambios de API hacia la serie2.x;httparty 0.14.0(2016) va por0.23.x.RubyGems+1
+
+CORS:rack-cors 1.0.6pasó a3.0.0. Ver breaking changes.RubyGems
+
+Base de datos:activerecord 7.0.7+activerecord-jdbc-adapter 70.1/jdbcmysql 70.1. Existen71.0(enero-2025) y AR7.2.xcon fixes. Coordinar bump conjunto (AR + AR-JDBC).RubyGems+2RubyGems+2
+
+Email:mail 2.7.1tiene 2.8.1 estable (2.9.0 en beta).RubyGems
+
+Equivalencia JRuby ↔ Ruby:JRuby 9.4.x ↔ Ruby 3.1 (compatibilidad de lenguaje y stdlib).
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.0 (MAJOR) — salto necesario para alinear middleware moderno.RubyGems
+
+puma:6.0.2 → 7.0.3 (MAJOR) — revisar flags y configuración.RubyGems
+
+sidekiq:5.2.8 → 8.0.4 (MAJOR) — cambios en API y requisitos de Redis.RubyGems
+
+redis (gem):3.3.5 → 5.4.1 (MAJOR) — contemplar migración aredis5.x y/oredis-client.RubyGems+1
+
+faraday:0.17.3 → 2.13.4 (MAJOR) — adapters/ middleware cambiaron de namespace.RubyGems
+
+httparty:0.14.0 → 0.23.1 (MINORa nivel semántico, pero con cambios acumulados) .RubyGems
+
+rack-cors:1.0.6 → 3.0.0 (MAJOR).RubyGems
+
+activerecord:7.0.7 → 7.2.2.2 (MINOR) — aplicar junto con AR-JDBC.RubyGems
+
+activerecord-jdbc-adapter:70.1 → 71.0 (MAJOR).RubyGems
+
+activerecord-jdbcmysql-adapter:70.1 → 71.0 (MAJOR).RubyGems
+
+mysql2:0.5.5 → 0.5.6 (PATCH).RubyGems
+
+mail:2.7.1 → 2.8.1 (MINOR; 2.9.0 en beta).RubyGems
+
+Los “última” se basan en RubyGems al17-sep-2025.
+Recomendaciones de actualización (orden sugerido)
+Bump del runtime y toolchain (seguro):
+ActualizarJRuby 9.4.xa la última patch estable yBundler≥ 2.5 para resolver mejor el árbol. Verificar CI y flags de JVM.
+
+CongelarBUNDLED WITHtras el upgrade.
+
+Modernización del stack web (bloque mayor con pruebas):
+Migrarrack1.6 → 3.x. Revisar middlewares de Angus y cualquier dependencia que fijerack ~>1.
+
+Actualizarpuma6.0 → 7.xy su configuración (threads,workers,preload_app!).
+
+Cola de background y Redis (coordinado):
+Plan de migraciónsidekiq5.x → 8.xjunto aredis5.x(oredis-client). Revisar inicialización, options, middlewares y métricas.
+
+Pruebas de compatibilidad de jobs programados considekiq-scheduler.
+
+HTTP y clientes externos:
+faraday0.17 → 2.x: adaptar adapters (Faraday::Adapter), middleware y manejo de errores.
+
+httparty0.14 → 0.23.x: revisar opciones de timeouts, parser y logging.
+
+Persistencia (coordinado con JRuby):
+ActualizarAR-JDBCa71.0yActiveRecorda7.2.xen el mismo PR.
+
+Ejecutar migración de conexión MySQL/JDBC y pruebas de consultas N+1/performance.
+
+Seguridad y CORS:
+rack-cors3.0.0y política CORS restrictiva (solo orígenes necesarios).
+
+ResolverDependabot (39/14)priorizando CVEs altas/críticas.
+
+Mantenimiento general:
+Subirmail2.8.1,mysql20.5.6y otras de patch/minor.
+
+Revisar gems internas (angus/, picasso/, bancard/*) para aflojar pins que impidan upgrades.
+
+bancard-biller-service (API)760bancard-biller-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.5.0→ equivalente aRuby 3.1(versión estable y soportada).
+
+Framework:Angus.
+
+Dependencias:44directas /133totales (resueltas).
+
+Alertas Dependabot:31(11altas/críticas ).
+
+Última actualización en producción:19-mar-2024
+
+Riesgo (rúbrica unificada):Alto (6/10)
+Aunque el runtime está soportado (JRuby 9.4.x), varias dependencias claves están desfasadas, existen más de 10 alertas críticas, y algunos componentes (Rack, Sidekiq, Redis) están varias versiones atrás.
+
+Notas técnicas
+Runtime:JRuby 9.4.5.0 está alineado con Ruby 3.1, aún soportado. Sin embargo, JRuby 9.4 tiene actualizaciones más recientes (9.4.8.0).
+
+Framework:Angus (custom). Gemsangus,angus-authentication,angus-routerestán en versiones 0.0.3/0.0.4, bastante antiguas.
+
+ORM / DB:activerecord-jdbc-adapteryactiverecord-jdbcmysql-adapteren ramas 52.x, muy por detrás de la 70.x, con impacto en compatibilidad y seguridad.
+
+Base web:rack 2.2.4(última estable 3.2.0), lejos de las versiones modernas.
+
+Jobs / Cache:sidekiq 6.2.2(última 8.0.7) yredis 4.5.1(última 5.3.0) → ambos requieren upgrades mayores.
+
+Observabilidad:no se detectósentry-rubyninewrelic_rpm; se ve un uso parcial deopentelemetry-sdk 1.0.2(hoy 1.8.x).
+
+HTTP & XML:faraday 1.3.0,httparty 0.18.1,nokogiri 1.11.1, todas al menos 2–4 años atrasadas.
+
+Bundler:2.2.5, también desfasado.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:2.2.4 → 3.2.0 (MAJOR)
+
+sidekiq:6.2.2 → 8.0.7 (MAJOR)
+
+redis:4.5.1 → 5.3.0 (MAJOR)
+
+faraday:1.3.0 → 2.12.0 (MAJOR)
+
+httparty:0.18.1 → 0.22.0 (MINOR)
+
+nokogiri:1.11.1 → 1.16.7 (MINOR)
+
+activerecord-jdbc-adapter:52.8 → 70.2 (MAJOR)
+
+activerecord-jdbcmysql-adapter:52.8 → 70.2 (MAJOR)
+
+opentelemetry-sdk:1.0.2 → 1.8.x (MINOR)
+
+angus-authentication:0.0.3 → 0.0.7 (MINOR)
+
+angus-router:0.0.3 → 0.0.4 (PATCH)
+
+Recomendaciones de actualización (orden sugerido)
+Plataforma base:actualizar aJRuby 9.4.8.0, Bundler ≥2.5, y subiractiverecord-jdbc-adapter+jdbc-mysqla la rama 70.x para soporte de Ruby 3.1 y DBs modernas.
+
+Infra crítica:migrarSidekiq 6 → 8yRedis 4 → 5, revisando compatibilidad conredis-client. Esto requiere antes tener Rack ≥3.1.
+
+Framework y ecosistema web:subirRack 2.2 → 3.2, junto con actualizaciones de Angus (angus-authentication,angus-router).
+
+Capa HTTP/XML:actualizarFaraday 1.x → 2.x,Nokogiri, yHTTParty, corrigiendo adaptadores y middlewares.
+
+Observabilidad:migrar deopentelemetry-sdk 1.0.2 → 1.8.x, y considerar añadirsentry-rubyonewrelic_rpmpara completar monitoreo.
+
+Hardening:limpiar lockfile, limitar plataforma ajava, y establecer pipeline CI con Dependabot + auditoría de CVEs.
+
+bancard-billing-service (API)760bancard-billing-service (API)
+Tipo:API
+
+Stack:JRuby 9.2.7.0→ equivalenteRuby 2.5(EOL el 31-mar-2021).
+
+Framework:Angus(API interna; se observanangus,angus-authentication,angus-routeren el Gemfile.lock).
+
+Dependencias:51directas /139totales (resueltas)
+
+Alertas Dependabot:59(31altas/críticas )
+
+Última actualización en producción:5-mar-2020
+
+Riesgo (rúbrica unificada):Crítico (10/10)
+RuntimeEOL(JRuby 9.2 ⇒ Ruby 2.5), últimas releases en 2020 (>5 años),31alertas altas, y base del stack muy desfasada (p.ej.rack 1.6,sidekiq 5,redis 3,faraday 0.x,activesupport/activerecord 5.2).
+
+Notas técnicas
+Runtime:JRuby 9.2 implementa Ruby 2.5 (EOL desde 2021-03-31). Migrar al menos aJRuby 9.4 (Ruby 3.1); la serie 9.4 es la recomendada actualmente (JRuby 9.4.x “Ruby 3.1 compatible”).
+
+ORM / ecosistema Rails:El proyecto usaActiveRecord/ActiveSupport 5.2.4.2(serie 5.2 EOL; hoy se recomiendan 7.1/7.2+).
+
+Observabilidad:Usasentry-raven2.13.0, SDKdeprecado(migrar asentry-ruby).
+
+Jobs y Redis:Sidekiq 5.2.7conredis 3.3.5. Sidekiq8requiereJRuby 9.4+y Rack 3.1+, y se apoya enredis-client.
+
+HTTP & XML:Faraday 0.17.3(API pre-2.x) yNokogiri 1.10.x(muy atrás respecto a 1.16.x).
+
+DB (JRuby):activerecord-jdbc-adapter 52.8yjdbc-mysql 8.0.30lejos de sus últimas versiones (70.x y 9.1.x).
+
+Bundler:2.0.2(antiguo).
+
+PLATFORMS en lock:incluyejavayruby; para despliegue en JRuby conviene mantener solojavapara simplificar resolución.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+JRuby / Ruby:9.2.7.0 →9.4.x(MAJOR, habilita Ruby 3.1).
+
+activerecord:5.2.4.2 →7.2.2.2(MAJOR).
+
+activesupport:5.2.4.2 →7.2.2.2(MAJOR).
+
+rack:1.6.13 →3.2.0(MAJOR).
+
+sidekiq:5.2.7 →8.0.7(MAJOR; requiere JRuby 9.4+ y Rack 3.1+).
+
+redis (gem):3.3.5 →5.3.0(MAJOR).
+
+faraday:0.17.3 →2.12.0(MAJOR; cambios en middlewares).
+
+httparty:0.18.1 →0.22.0(MINOR).
+
+nokogiri:1.10.10 →1.16.7(MINOR).
+
+mysql2:0.5.3 →0.5.6(PATCH).
+
+activerecord-jdbc-adapter:52.8-java →70.2-java(MAJOR).
+
+jdbc-mysql:8.0.30 →9.1.0.1(MAJOR).
+
+sentry-raven:2.13.0 → reemplazar porsentry-ruby(EOL/Deprecated).
+
+angus-authentication:0.0.3 →0.0.7(MINOR).
+
+angus-router:0.0.3 →0.0.4(PATCH).
+
+Las “últimas” versiones referenciadas arriba son las estables listadas públicamente al día de hoy en RubyGems.
+Recomendaciones de actualización (orden sugerido)
+Base de plataforma (bloqueante de todo):
+Actualizar aJRuby 9.4.x (Ruby 3.1), subirBundlery regenerarGemfile.locksolo con plataformajava. Alinearactiverecord-jdbc-adapter (70.x)yjdbc-mysql (9.1.x).
+
+Seguridad/telemetría:
+Migrarsentry-raven→sentry-ruby(nuevo SDK, configuración distinta). Aprovechar y actualizarOpenTelemetrya1.8.x.
+
+Ecosistema Rails/AR (sin Rails “full”, pero usa AR):
+SubirActiveRecord/ActiveSupporta7.1/7.2, corrigiendo compatibilidades de migraciones/serializadores. (Series 5.2 estánEOL).
+
+Jobs y Redis:
+Plan de saltoSidekiq 5 → 8(cambio mayor): actualizar aRedis 7+en infraestructura y a gemasredis 5.x/redis-client. Sidekiq 8 exigeJRuby 9.4+yRack 3.1+.
+
+Capa HTTP/XML:
+MigrarFaraday 0.x → 2.x(revisar middlewares y adapters) yHTTParty 0.22; subirNokogiri 1.16.x(compilación nativa/Java renovada).
+
+Rack y framework:
+El lock usaRack 1.6; la rama actual es3.x. Verificar si las gemasAngusfijan Rack 1.x. Si no hay compatibilidad, evaluaractualizarangus-*oreplataformara Rails API/Sinatra para poder adoptarRack 3.xy ecosistema moderno.
+
+Limpieza de lock y hardening:
+Eliminar plataformarubydel lock, revisar transitive deps, y activar auditoría continua (Dependabot + CI) con política defailen vulnerabilidades altas.
+
+bancard-billing-service-public-proxy (API)760bancard-billing-service-public-proxy (API)
+Tipo:API
+
+Stack:JRuby 9.4.1.0 → Ruby 3.1 (equivalencia de JRuby 9.4 a Ruby 3.1)
+
+Framework:Angus (gems:angus0.0.14,angus-authentication0.0.3,angus-router0.0.4)
+
+Dependencias:54directas /152totales (resueltas del Gemfile.lock)
+
+Alertas Dependabot:42(16altas/críticas)
+
+Última actualización en producción:8-abr-2024
+
+Riesgo (rúbrica unificada):Crítico (8/10)
+Runtime enEOL(JRuby 9.4 ⇒ Ruby 3.1 terminó soporte de seguridad el31-mar-2025) .
+
+Núcleo webmuy desfasado(rack1.6,sidekiq5.x,redis3.x,faraday0.17).
+
+>30alertas totales (42).
+
+Última puesta en prod hace ~17 meses.
+
+El valor “616” parece inconsistente (mayor que el total). No lo usé literalmente para el cálculo; asumo ≥16 altas/críticas dadas las cifras históricas.
+
+Notas técnicas
+Runtime y plataforma
+JRuby 9.4 = Ruby 3.1, rama EOL desde 2025-03-31. Aunque haya parches de JRuby 9.4.x, la línea apunta a Ruby 3.1; para salir de EOL hará falta migrar de línea mayor cuando JRuby soporte Ruby ≥3.2, o migrar a CRuby.
+
+Framework / stack
+Proyectono Rails; usaAngus+activesupport/activerecord7.0 víaadapters JDBC(activerecord-jdbc-adapter/activerecord-jdbcmysql-adapter70.0-java).
+
+Rack 1.6.13(2016-2019 era) limita ecosistema; la rama estable actual esRack 3.2.x.
+
+Procesamiento asíncrono
+Sidekiq 5.2.8muy antiguo. La línea actual es8.xy exige cambios (drivers Redis nuevos, configuración y compatibilidad).
+
+Cliente Redis
+Gemredis3.3.5(2016–2017). Línea actual5.4.x. Migración implica adoptar API moderna y/oredis-client.
+
+HTTP / XML
+Faraday 0.17.3(pre-2.x); hoy2.13.x.HTTParty 0.14.0(2017) vs0.23.x.Nokogiri 1.16.0-javavs1.18.9actual.
+
+Observabilidad
+Presenteopentelemetry-sdk1.2.1 (mínimo). Conviene revisar exporters/auto-instrumentation.
+
+Limpieza de plataforma
+mysql20.5.4 aparece en el lock, pero enJRubyel adaptador efectivo esJDBC(jdbc-mysql+activerecord-jdbcmysql-adapter), por lo quemysql2es prescindible en esta plataforma.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+Las “últimas” corresponden a lo publicado en RubyGems a la fecha.
+rack:1.6.13→3.2.1(MAJOR, salto múltiple).
+
+puma:6.0.2→7.0.3(MAJOR).
+
+sidekiq:5.2.8→8.0.7(MAJOR).
+
+redis:3.3.5→5.4.1(MAJOR).
+
+faraday:0.17.3→2.13.4(MAJOR).
+
+httparty:0.14.0→0.23.1(MINORdentro de 0.x; breaking potencial).
+
+nokogiri (java):1.16.0→1.18.9(MINOR).
+
+activesupport:7.0.4→7.2.2.2(MINOR).
+
+activerecord:7.0.4→7.2.2.2(MINOR).
+
+activerecord-jdbc-adapter:70.0-java→71.0(MAJOR).
+
+activerecord-jdbcmysql-adapter:70.0-java→71.0(MAJOR).
+
+sentry-ruby:5.21.0→5.27.2(MINOR).
+
+Recomendaciones de actualización (orden sugerido)
+Estrategia de runtime (bloque obligatorio)
+Definir plan parasalir de Ruby 3.1 (EOL):
+a) Mantener JRuby y esperar soporte para Ruby ≥3.2,o
+b)Migrar a CRuby(si la operación no depende de la JVM).
+
+Mientras tanto, subir a laúltima 9.4.xy aJava 17/21 LTSsi aplica.
+
+Core del servidor web
+Rack: trazar migración1.6 → 2.x/3.x(middleware, API de cookies/params, rack-session). Esto puede exigir actualizar/ajustarAngusy cualquier middleware propio.
+
+Puma:6.0 → 7.0(nuevas defaults, mejoras HTTP/1.1 y TLS).
+
+Cola de trabajos y Redis
+Redis client: migrarredis3.x → 5.xo usarredis-clienty actualizar configuración.
+
+Sidekiq: plan de5.x → 8.x(revisar compatibilidad en JRuby, requerirRedis ≥6.2y cambios de configuración). Hacerdry-runen staging, migrar middlewares yretry sets.
+
+Capa de datos (AR JDBC)
+Subiractiverecorda7.2.2.2y losadapters JDBC 71.0coordinadamente; ejecutar migraciones y suite de tests para detectar cambios en conexión/pools.
+
+HTTP/XML y utilitarios
+Faraday 2.x,HTTParty 0.23.x, **Nok
+
+bancard-bportal (Portal)760bancard-bportal (Portal)
+Tipo:Portal
+
+Stack:Ruby 2.2.10 (MRI) →no aplica equivalencia JRuby ↔ Ruby
+
+Framework:Rails 4.2.0
+
+Dependencias:43directas /103totales (resueltas)
+
+Alertas Dependabot:125(64altas/críticas )
+
+Última actualización en producción:4-abr-2022
+
+Riesgo (rúbrica unificada):Crítico (10/10)
+RuntimeEOL(Ruby 2.2, fin de vida 2018-03-31), frameworkEOL(Rails 4.2, sin soporte desde 2017), ecosistema desfasado (rack/puma/sprockets antiguos),>30alertas y>18 mesessin despliegues.ruby-lang.org+1
+
+Notas técnicas
+Runtime:Ruby2.2.10está EOL hace años; no recibe fixes de seguridad. Migración obligatoria.ruby-lang.org
+
+Framework:Rails 4.2.0EOL; última rama soportada hoy es Rails 8.x.endoflife.date
+
+Servidor web:puma 3.12.6(muy antiguo; rama principal hoy es 7.x).rubygems.org
+
+Stack de assets legado:sprockets 3.1.0,sprockets-rails 2.3.1,uglifier 2.7.1,execjs 2.5.2,jquery-rails 4.1.0,turbolinks 5.0.1→ turbolinks estáarchivadoy fuereemplazado por Turbo.GitHub
+
+Observabilidad:sentry-raven 2.13.0(deprecado); migrar asentry-ruby(+sentry-rails).Sentry Docs
+
+Librerías nativas JS:therubyracer 0.12.2estáarchivado; usarmini_racer.
+
+Testing:presentesrspec/rspec-railsyminitest(base para refactors).
+
+Base de datos:no se observan adaptadorespg/mysql2/sqlite3en el lock; probablemente integra servicios externos o el driver se gestiona fuera de Bundler (verificar enGemfile/entorno).
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rails:4.2.0 →8.0.2.1(MAJOR / EOL) – salto por múltiples versiones.endoflife.date
+
+rack:1.6.4 →3.2.1(MAJOR).rubygems.org
+
+puma:3.12.6 →7.0.2(MAJOR).rubygems.org
+
+sprockets:3.1.0 →4.2.2(MAJOR).
+
+nokogiri:1.6.6.2 →1.18.9(MINORdentro de 1.x, pero gran salto).
+
+jquery-rails:4.1.0 →4.6.0(MINOR).
+
+execjs:2.5.2 →2.10.0(MINOR).
+
+sentry-raven:2.13.0 →reemplazar porsentry-ruby+sentry-rails(EOL/deprecado).Sentry Docs
+
+turbolinks:5.0.1 →reemplazar porturbo-rails(EOL/archivado).GitHub
+
+therubyracer:0.12.2 →reemplazar pormini_racer(EOL/archivado).
+
+Recomendaciones de actualización (orden sugerido)
+Cordon sanitario y bases
+Congelar features; activar branch de modernización.
+
+ActualizarBundlery regenerar lockfile con Ruby 2.7 en un branch de compatibilidad (última 4.2.x = 4.2.11.3). Esto reduce fricción para los siguientes saltos.endoflife.date
+
+Desacople de componentes EOL
+Migrarsentry-raven → sentry-ruby (+ sentry-rails).
+
+Sustituirturbolinks → turbo-rails.
+
+Sustituirtherubyracer → mini_racer.Sentry Docs+1
+
+Ruta de upgrade de Rails (recomendada por etapas)
+Rails 4.2.0 → 4.2.11.3(último patch), luego→ 5.2.x,→ 6.1.x,→ 7.1/7.2,→ 8.0.x; acompañar con upgrades de Ruby:2.2 → 2.7 → 3.1/3.2 → 3.3. Priorizar passing tests en cada etapa.endoflife.date+1
+
+Servidor y middleware
+Actualizarpuma 3.x → 7.xyrack 1.6 → 3.x(ajustar configuraciones deprecated).rubygems.org+1
+
+Front-end / assets
+sprockets 3 → 4y evaluarmigrar a importmap/esbuild/webpack(er)según estrategia; si se mantiene Uglifier, usar modoharmonyo migrar aterser/esbuild.
+
+Hardening y calidad
+Subirnokogiri,execjs,jquery-railsa últimas estables; ejecutarBrakeman,bundler-audit, CI con matriz Ruby/Rails de destino.
+
+Observabilidad y pruebas
+Reconfigurar Sentry consentry-ruby(activar tracing), revisar cobertura derspecy smoke tests para cada release target.Sentry Docs
+
+bancard-commerce-portal (Portal)760bancard-commerce-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.4.3 →(no aplica equivalencia JRuby ↔ Ruby)
+
+Framework:Rails 8.0.2
+
+Dependencias:36directas /154totales (resueltas)(del Gemfile.lock)
+
+Alertas Dependabot:2(0altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Bajo
+Runtimesoportado y moderno(Ruby 3.4.x está en mantenimiento normal)ruby-lang.org; Frameworkactual (Rails 8)con sólo un patch pendiente (8.0.2 → 8.0.2.1). Muy pocas alertas y stack Hotwire/Propshaft moderno.
+
+Notas técnicas
+Rails 8 + Hotwire sin Node: usapropshaft,importmap-rails,turbo-railsystimulus-rails(stack actual recomendado para Rails 8). Propshaft 1.1.0 y Turbo/Stimulus están presentes.rubygems.org+2rubygems.org+2
+
+Servidor web:puma 6.6.0(última mayor es 7.0.x). Actualizar trae mejoras de performance y TLS; implica cambios menores de configuración.rubygems.org
+
+HTTP middleware:rack 3.1.15(línea 3.2.x es la más reciente).rubyonrails.org
+
+Observabilidad:sentry-rubyya integrado. Versión al día recomendable ≥5.26.rubygems.org
+
+Seguridad/CI:brakemanincluido (7.0.2); hay versión 7.1.x.Wikipedia
+
+Redis(cliente):redis 5.4.0+redis-client 0.24.0; hay parches/minor nuevos.rubygems.org+1
+
+Nokogiri: 1.18.8 (hay 1.18.10). Mantenerlo al día reduce riesgo de CVEs en XML/HTML.rubygems.org
+
+Bundler: lock con2.6.7; la serie 2.6 continúa vigente (hasta 2.6.9). Sugerido alinear entorno de build.blog.rubygems.org
+
+Plataformas: lock incluye variantes GNU/MUSL para aarch64 y x86_64 (por gems con binarios como nokogiri). Asegurar consistencia con la imagen base (Debian/Alpine) en CI/CD.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rails:8.0.2 →8.0.2.1(PATCH)VersionLog
+
+rack:3.1.15 →3.2.1(MINOR)rubyonrails.org
+
+puma:6.6.0 →7.0.3(MAJOR)rubygems.org
+
+redis:5.4.0 →5.4.1(PATCH)rubygems.org
+
+redis-client:0.24.0 →0.25.3(MINOR)rubygems.org
+
+sentry-ruby:5.24.0 →5.27.0(MINOR)rubygems.org
+
+nokogiri:1.18.8 →1.18.10(PATCH)rubygems.org
+
+propshaft:1.1.0 →1.2.1(MINOR)rubygems.org
+
+brakeman:7.0.2 →7.1.2(MINOR)Wikipedia
+
+importmap-rails:2.1.0 →2.2.2(MINOR)rubygems.org
+
+Otras claves ya están al día:turbo-rails 2.0.16,stimulus-rails 1.3.4.rubygems.org+1
+Recomendaciones de actualización (orden sugerido)
+Aplicar parches de seguridad y estabilidad de base
+BumpRails 8.0.2 → 8.0.2.1,Rack 3.1 → 3.2,Nokogiri 1.18.8 → 1.18.10,Redis 5.4.0 → 5.4.1,Sentry 5.24 → 5.27. Cambios de comportamiento bajos, cobertura con smoke tests y e2e.rubygems.org+4VersionLog+4rubyonrails.org+4
+
+Actualizar infraestructura de ejecución
+Puma 6.6 → 7.0.3(major). Revisar flags/variables (p. ej.workers,threads,preload_app) y validarlo con carga. Aprovechar fixes de HTTP/1.1/2 y TLS.rubygems.org
+
+Modernizar tooling y dependencias de build
+Bundler 2.6.7 → 2.6.9en CI/CD, yredis-client 0.24 → 0.25.x. Esto alinea el entorno con versiones mantenidas y reduce fricción en instalaciones.blog.rubygems.org+1
+
+Front-end Rails nativo
+MantenerPropshafteImportmapactualizados (1.2.x / 2.2.x). Ejecutarbin/rails assets:precompileen staging y revisar fingerprints/headers.rubygems.org+1
+
+Seguridad y QA
+EjecutarBrakemancon la versión 7.1.x en CI y resolver hallazgos. Añadir job programado semanal.Wikipedia
+
+bancard-commerce-service (API)760bancard-commerce-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.5.0→ equiv.Ruby 3.1(JRuby 9.4.x apunta a compatibilidad con Ruby 3.1).jruby.org
+
+Framework:Picasso(gembancard-picasso2.0.0)
+
+Dependencias:78directas /194totales (resueltas)
+
+Alertas Dependabot:21(6altas/críticas )
+
+Última actualización en producción:9-feb-2024
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+Runtime baseEOL(Ruby 3.1 finalizó soporte; JRuby 9.4 sigue apuntando a Ruby 3.1).Ruby+1
+
+>18 mesessin despliegues en producción.
+
+Variasdependencias base muy desfasadas(Sidekiq 5.x, Faraday 0.17.x, Redis 4.x, Puma 6.0.2).rubygems.org+3rubygems.org+3rubygems.org+3
+
+21 alertas (6 altas/críticas).
+
+Notas técnicas
+Runtime:JRuby 9.4.x (Ruby 3.1). Ruby 3.1 quedóEOLel26-mar-2025(último release 3.1.7 y sin más parches de seguridad). Recomendada migración a una rama soportada (Ruby 3.3/3.4 cuando el runtime objetivo lo permita).Ruby
+
+Framework:bancard-picasso2.0.0 + gemspicasso-*internas (0.0.1). No hay señales de Rails/Angus en este servicio.
+
+Base de datos:activerecord7.0.8 conJRuby JDBC(activerecord-jdbc-adapter/activerecord-jdbcmysql-adapter70.0).
+
+Servidor/stack HTTP:rack2.2.10,puma6.0.2,faraday0.17.3,httparty0.14.0,nokogiri1.18.1,jwt2.7.1,redis4.5.1,sidekiq5.2.10.
+
+Observabilidad:sentry-ruby5.21.0 presente (existe rama 5.2x más reciente).rubygems.org
+
+Testing:no se observan gems típicas de test (rspec/minitest) en el lockfile.
+
+Bundler:2.4.7 (no bloqueante, pero hay 2.5.x disponibles).
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+sidekiq:5.2.10 →8.0.7(MAJOR) — Cambios relevantes en Redis/cliente y middleware.rubygems.org
+
+faraday:0.17.3 →2.13.4(MAJOR) — API y middlewares reprocesados desde 1.x/2.x.rubygems.org
+
+redis:4.5.1 →5.4.1(MAJOR) — Requiere revisar inicialización y timeouts.rubygems.org
+
+puma:6.0.2 →7.0.2(MAJOR) — Ajustes de configuración y JRuby support.rubygems.org
+
+activerecord-jdbc-adapter:70.0 →71.0(MAJOR) — Alinea fixes de AR/JDBC.
+
+activerecord-jdbcmysql-adapter:70.0 →71.0(MAJOR).
+
+jwt:2.7.1 →3.1.2(MAJOR) — Cambios en validación/claims.rubygems.org
+
+httparty:0.14.0 →0.23.1(MINOR) — ojo: en <1.0, minor puede traer breaking.rubygems.org
+
+rack:2.2.10 →2.2.17(PATCH) — parches de seguridad/bugs.rubygems.org
+
+nokogiri:1.18.1 →1.18.10(PATCH) — parches recientes.rubygems.org
+
+activesupport:7.0.8 →7.2.2.2(MINOR) — primera parada antes de evaluar 8.x.rubygems.org
+
+Nota: el lockfile también incluyemysql20.5.5 (PATCH a 0.5.6), pero en JRuby el acceso real a MySQL pasa por los adaptadores JDBC anteriores.
+Recomendaciones de actualización (orden sugerido)
+Riesgo estructural (runtime):
+Fijar objetivo desalida de Ruby 3.1. Mientras tanto, subir aJRuby 9.4.x más recientepara concentrar fixes del runtime (sin cambiar rama Ruby), y plan demigración a una serie soportada (Ruby 3.3/3.4)en cuanto el ecosistema/infra lo permita.jruby.org+1
+
+Base HTTP y concurrency:
+Sidekiq 5 → 8(ajustar inicialización de Redis, middleware y colas; confirmar compatibilidad conredis5.x oredis-client).rubygems.org
+
+Redis 4 → 5(revisar namespacing, pool y timeouts).rubygems.org
+
+Puma 6 → 7(validar flags, thread pool, hooks y JRuby).rubygems.org
+
+Rack 2.2.10 → 2.2.17(parches).rubygems.org
+
+Cliente HTTP:
+Faraday 0.17 → 2.13(replantear middlewares, adapters y configuración global).rubygems.org
+
+HTTParty 0.14 → 0.23(ajustes de API menores; correr smoke tests).rubygems.org
+
+Persistencia (JRuby/AR):
+AR-JDBC 70 → 71en ambos adaptadores; correr migraciones y smoke de conexiones.
+
+Seguridad/Serialización:
+JWT 2.7 → 3.1(revisar algoritmos por defecto y verificación deexp/nbf).rubygems.org
+
+Nokogiria última 1.18.10 por parches.rubygems.org
+
+Observabilidad y mantenimiento:
+Subirsentry-rubya 5.26/5.27 y habilitarbreadcrumbs/traces si aplica.rubygems.org
+
+Activar/normalizarDependabotcon lotes semanales para mantener ramas de seguridad y reducir acumulación.
+
+Calidad y delivery:
+Incluirframework de tests(al menos smoke/E2E) si hoy no existe en el repo; agregarCIcon matrices JRuby.
+
+Definir ventanas paradeployes pequeños y frecuentesmientras se aplica cada bloque.
+
+bancard-commerce-suite (Portal)760bancard-commerce-suite (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.1.4 (MRI) →N/A (no aplica equivalencia JRuby)
+
+Framework:Rails 7.0.7.2
+
+Dependencias:79directas /215totales (resueltas)
+
+Alertas Dependabot:127(65altas/críticas )
+
+Última actualización en producción:9-feb-2024
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+RuntimeEOL(Ruby 3.1 terminó soporte en marzo de 2025); framework y ecosistema desfasados (Rails 7.0; Rack 2.x; Puma 5.x; Sprockets 3.x);65alertas altas/críticas; sin despliegues hace>18 meses.
+
+Notas técnicas
+Runtime:Ruby3.1.4está enEOL. Requiere plan de actualización aRuby 3.3.x(rama soportada actualmente).
+
+Bundler:2.3.26(del lockfile) — conviene subir a2.5.xpara mejor compatibilidad con Ruby 3.3 y resolver avisos de seguridad de dependencias de desarrollo.
+
+Framework:Rails7.0.7.2(lockfile). La última serie estable es8.0.x; si se prioriza menor riesgo, un peldaño intermedio es7.2.xantes de ir a 8.0.
+
+Pila base desfasada:
+Rack 2.2.13(lockfile) vs3.2.xactual. Rails 8 adopta Rack 3; el salto requiere revisión de middlewares.
+
+Puma 5.6.7(lockfile) vs7.0.2actual (soporte para Rack 3 y mejoras de rendimiento).
+
+Sidekiq 7.2.0(lockfile) vs8.0.7(requiere Ruby ≥3.2 y Rack 3).
+
+Assets:Sprockets 3.7.2+sprockets-rails 3.4.2(lockfile). La rama 3.x es vieja; migrar alSprockets 4.2.xo evaluarPropshaftal subir a Rails 7.2/8.0.
+
+Nokogiri:en1.18.5-*(lockfile). Hay parches recientes1.18.10(mejoras y fixes).
+
+Plataformas:PLATFORMSincluyelinux(lockfile); Nokogiri empaquetado paraaarch64-linux-gnu.
+
+Observabilidad/DB/tests:no se infiere del Gemfile.lock.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+“Última” tomada de RubyGems al16-sep-2025.
+rails:7.0.7.2 →8.0.2.1(MAJOR)
+
+rack:2.2.13 →3.2.1(MAJOR)
+
+puma:5.6.7 →7.0.2(MAJOR)
+
+sidekiq:7.2.0 →8.0.7(MAJOR)
+
+sprockets:3.7.2 →4.2.2(MAJOR)
+
+sprockets-rails:3.4.2 →3.5.2(MINOR)
+
+redis:4.8.1 →5.4.1(MAJOR)
+
+redis-client:0.19.0 →0.25.2(MINOR)*
+
+faraday:2.3.0 →2.13.4(MINOR)
+
+httparty:0.21.0 →0.23.1(MINOR)
+
+nokogiri:1.18.5 →1.18.10(PATCH)
+
+En0.y.z, los saltos “minor” pueden incluir cambios incompatibles: revisarCHANGELOGantes de actualizar.
+
+Recomendaciones de actualización (orden sugerido)
+Seguridad y base de ejecución
+Migrar runtime aRuby 3.3.x(rama en mantenimiento) y subirBundlera 2.5.x. Esto desbloquea Sidekiq 8 y Rails 8, y reduce exposición por EOL.
+
+Ejecutarbundle update --patchpara aplicar parches no disruptivos (nokogiri, mini libs) y bajar rápidamente parte de las65alertas altas.
+
+Peldaño intermedio del framework
+Actualizar aRails 7.2.xmanteniendoRack 2.2.xpara reducir riesgo de ruptura. Ajustar deprecations (Zeitwerk, ActiveSupport).
+
+Assets:actualizar aSprockets 4.2.xo planificar migración aPropshaftsi el paso siguiente es Rails 8.
+
+Pila web y jobs
+Puma→ 7.0.x (mejor rendimiento y compatibilidad futura con Rack 3).
+
+Sidekiq→ 8.0.x (requiere Ruby ≥3.2 y Rack 3; no aplicar hasta cerrar paso 4). Preparar cambios de configuración y métricas.
+
+Migración a Rack 3 y Rails 8
+Con Rails 7.2 actualizado y Sprockets/Assets resueltos, migrar aRails 8.0.xyRack 3.2.x(revisión de middlewares, middlewares custom y gems que tocan Rack).
+
+Clientes HTTP y Redis
+faraday2.13.x yhttparty0.23.x (alinear adapters, timeouts y manejo de errores).
+
+Cambiarredis 4.x→5.xyredis-client 0.25.x(verificar conexiones, pool y timeouts).
+
+Cierre
+Revisar Gemfile para eliminar gems no usadas, fijar versiones mínimas compatibles y habilitarDependabotsemanal con automerge para parches.
+
+Agregar jobs en CI parabundle audit/brakeman(si aplica) y aprobar PRs de seguridad más rápido.
+
+bancard-commerces-app-service (API)760bancard-commerces-app-service (API)
+Tipo:API
+
+Stack:JRuby 9.3→equiv. Ruby 2.6.x(EOL 2022-03-31)
+
+Framework:Angus (angus 0.0.14; angus-router 0.0.3; angus-authentication 0.0.3)
+
+Dependencias:41directas /95totales (resueltas)(del Gemfile.lock)
+
+Alertas Dependabot:34(13altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+Runtime baseEOL(JRuby 9.3 ↔ Ruby 2.6) + framework con releases muy antiguas;rack 1.6,puma 4ysidekiq 5muy desfasados;34alertas (13 altas/críticas) y sin releases a prod → encaja en 8–10.
+
+Notas técnicas
+Runtime:JRuby9.3apunta a Ruby2.6(EOL2022-03-31). Migrar aJRuby 9.4(Ruby3.1) o planificarJRuby 10(Ruby3.3) para soporte a largo plazo.
+
+Angus & ecosistema:Gemsangus(0.0.14),angus-router(0.0.3, 2014) yangus-authentication(0.0.3, 2018) tienen actividad pública mínima → riesgo de compatibilidad con Rack ≥2 y JRuby modernos.
+
+Web stack:
+rack 1.6.13(Feb-2020) — rama antigua con historial de CVEs relevantes (p.ej.,CVE-2019-16782,CVE-2020-8161) mitigadas en 1.6.12/2.1.3+, pero el proyecto permanece muy atrás frente aRack 3.2.0(Jul-2025).
+
+puma 4.3.12— actual estable7.0.3(Sep-2025); salto mayor recomendado.
+
+Background jobs:sidekiq 5.2.8→ rama actual8.0.x(2025). Esto implica cambios de configuración y Redis.
+
+Redis client:redis 3.3.5muy antiguo; última serie4.x(2024).
+
+HTTP cliente:faraday 2.8.1(2023) con última2.13.4(Jul-2025).
+
+ActiveSupport:5.2.8.1frente a7.2.2.2 / 8.0.2.1actuales; para JRuby 9.4 (Ruby 3.1) el target razonable es7.2.x.
+
+DB:mysql2 0.5.3(2019) vs0.5.6(2024). Valorar compatibilidad con JRuby/Conector MySQL y, si procede, drivers JDBC.
+
+Observabilidad y tests:presentesentry-ruby 5.7.0(última5.27.0, Sep-2025); stack de tests con RSpec, SimpleCov, WebMock, etc.
+
+Bundler/lock:BUNDLED WITH 2.3.26. EnPLATFORMSfiguraruby(nojava) → probable lock generado fuera de JRuby; conviene regenerarlo bajo JRuby para evitar resoluciones inconsistentes.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 →3.2.0(MAJOR) — salto necesario para seguridad y compatibilidad.
+
+puma:4.3.12 →7.0.3(MAJOR) — mejoras de rendimiento/seguridad; existe buildjava.
+
+sidekiq:5.2.8 →8.0.7(MAJOR) — cambios de config, requisitos de Redis y middleware.
+
+redis:3.3.5 →4.4.0(MAJOR) — API más moderna; revisar compatibilidad con Sidekiq 7/8.
+
+activesupport:5.2.8.1 →8.0.2.1(MAJOR)(objetivo recomendado: 7.2.x con JRuby 9.4).
+
+faraday:2.8.1 →2.13.4(MINOR).
+
+mysql2:0.5.3 →0.5.6(PATCH).
+
+sentry-ruby:5.7.0 →5.27.0(MINOR).
+
+angus-authentication:0.0.3 →0.0.7(MINOR).
+
+angus-router:0.0.3 →0.0.4(PATCH).
+
+Incluyo solo lo que aplica en este servicio a partir del Gemfile.lock.
+Recomendaciones de actualización (orden sugerido)
+Base y lockfile
+RegenerarGemfile.locken JRuby(plataformajava). ActualizarBundlera la última 2.x compatible.
+
+Congelar master, habilitarCI con matriz(JRuby 9.3 y 9.4), y medir cobertura actual (SimpleCov).
+
+Migración de runtime
+Actualizar aJRuby 9.4.x (Ruby 3.1)como paso inmediato; prepararcompat(keyword args, frozen string, etc.). Definir roadmap aJRuby 10 / Ruby 3.3cuando esté estable.
+
+Núcleo web
+Elevarrack→ 2.2+/3.x ypuma→ 6/7. Para ello:
+a) Auditar dependencia de Angus con Rack 1.6; si bloquea,actualizar angus-router/authy/oparchear/forkear Anguspara Rack 2.x.
+b) Revisar middlewares y su API (cambios derack.input, headers, streaming).
+c) Hacercanaryen staging con pruebas de performance.
+
+Jobs & almacenamiento
+sidekiq 5 → 7/8yredis 3 → 4.x(oredis-clientsi Sidekiq lo exige en tu configuración). Revisarretry/backoff, middlewares y métricas.
+
+Librerías de base
+Subiractivesupporta7.2.x(alineado con Ruby 3.1/JRuby 9.4), luego evaluar salto a 8.x tras migrar a Ruby 3.3+.
+
+Clientes y utilitarios
+faraday 2.13.x(ajustar adapters) ymysql2 0.5.6(verificar compatibilidad del conector en JRuby/producción).
+
+Observabilidad
+sentry-ruby 5.27.xy activarbreadcrumbsyperformance tracespara cubrir la migración.
+
+Deuda específica de Angus
+Dado el bajo movimiento del ecosistema Angus, definir estrategia:
+a) mantenimiento mínimo (fork interno con soporte Rack 2/3), o
+b)migración graduala un micro-framework soportado (Sinatra/Roda) manteniendo contratos de API.
+
+bancard-cybersource-portal (Portal)760bancard-cybersource-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.4.3 →(no aplica equivalencia JRuby ↔ Ruby; runtime MRI)
+
+Framework:Rails
+
+Dependencias:41directas /159totales (resueltas)
+
+Alertas Dependabot:4(2altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Bajo
+Runtimesoportado(Ruby 3.4.x con soporte hasta31-mar-2028), frameworkactual (Rails 8.0.x), dependencias al día en su mayoría, y pocas alertas (≤5).
+
+Notas técnicas
+Runtime:Ruby3.4.3(recomendado subir a 3.4.6 por parches de seguridad). La rama 3.4 tiene soporte activo hasta31-mar-2028.
+
+Rails/Stack web:Rails8.0.2,Rack 3,Puma 6.6. Uso dePropshaft+Importmap+Turbo/Stimulus(stack moderno de Rails 7/8, sin Webpacker/Sprockets).
+
+Seguridad/Calidad:IncluyeBrakeman(auditoría estática) y testing tools (capybara,factory_bot_rails). TieneSentry (sentry-ruby)para monitoreo de errores.
+
+Infra/Entrega:IncluyeKamal(orquestación de despliegue en contenedores).
+
+Base de datos:No se observa adapter de DB (pg/mysql2/sqlite3) en el lockfile ⇒ el portal probablemente consume APIs y no accede a BD directamente desde Rails.
+
+Bundler:2.6.7.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+Sólo se listan las que aportan valor para este servicio.
+Rails:8.0.2 →8.0.2.1(PATCH).
+
+Rack:3.1.15 →3.2.0(MINOR).
+
+Puma:6.6.0 →7.0.2(MAJOR).
+
+Propshaft:1.1.0 →1.2.1(MINOR).
+
+importmap-rails:2.1.0 →2.2.2(MINOR).
+
+Turbo-Rails:2.0.16 →2.0.16(—ya al día).
+
+Stimulus-Rails:1.3.4 →1.3.4(—ya al día).
+
+Nokogiri:1.18.8 →1.18.10(PATCH).
+
+Redis (gem):5.4.0 →5.4.1(PATCH).
+
+Sentry-Ruby:5.24.0 →5.27.0(MINOR).
+
+Recomendaciones de actualización (orden sugerido)
+Parchear runtime y framework base
+ActualizarRuby 3.4.3 → 3.4.6(parches recientes).
+
+AplicarRails 8.0.2 → 8.0.2.1yRack 3.1.15 → 3.2.0. Cambios no disruptivos y cierran issues de seguridad/correcciones.
+
+Actualizar librerías de seguridad y toolchain
+Nokogiri 1.18.10,Redis 5.4.1,Sentry-Ruby 5.27.0. Ejecutar suite de tests y un smoke test de runtime.
+
+Mantener el stack de assets JS al día
+importmap-rails 2.2.2yPropshaft 1.2.1(mejoras y fixes). Validar precompilación y loads de assets.
+
+Planificar upgrade mayor de servidor HTTP
+MigrarPuma 6.6 → 7.0en una rama dedicada: revisar cambios de configuración (threads/workers), validar healthchecks y timeouts en staging con carga.
+
+Gobernanza de dependencias
+Dado el bajo volumen de alertas (4/2), habilitarautomergeparaPATCH/MINORen dependencias de dev/test y agregar políticas de rotación mensual. IncluirBrakemanen el pipeline y una ejecución semanal.
+
+bancard-epos-portal (Portal)760bancard-epos-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.1.4 →(no aplica equivalencia JRuby ↔ Ruby)
+
+Framework:Rails7.0.7.2(detectado en Gemfile.lock)
+
+Dependencias:81directas /196totales (resueltas)
+
+Alertas Dependabot:no disponibles(s/d)
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Alto (7/10)
+RuntimeEOL(Ruby 3.1 dejó de tener soporte el31-mar-2025); framework en 7.0 (dos “minors” atrás vs 7.2 y a un “major” de 8.0); stack base con componentes clave atrasados (Rack 2.x, Puma 5.x, Sprockets 3.x) respecto de sus líneas estables actuales.
+
+Notas técnicas
+Runtime:Ruby 3.1 estáEOLdesde 31-mar-2025 → actualizar a3.3.x(soportado hasta 31-mar-2027) o3.4.x(hasta 31-mar-2028).
+
+Framework:App enRails 7.0.7.2; línea estable actual en7.2.2.2y8.0.2.1. Sugerido migrar primero a 7.2.x para absorber deprecaciones y parches, y evaluar salto a 8.0 luego.
+
+HTTP stack / servidor:
+Rack 2.2.13(Rails 7.0 requiere 2.2.x). Línea estable más reciente es2.2.17dentro de 2.x y3.2.xpara proyectos que ya soportan Rack 3.
+
+Puma 5.6.7: línea estable actual6.6.x/7.0.x(reciente).
+
+Assets:Sprockets 3.7.2(obsoleto). Línea 4.x vigente (4.2.2) requiere cambios enmanifest.js, precompilación y configuración.
+
+Observabilidad:sentry-ruby 5.21.0(hay 5.26.0).
+
+Tests presentes:rspec-rails,factory_bot_rails,simplecov,webmock.
+
+BG jobs / cache:sidekiq 7.2.0+redis 4.8.1(línea redis 5.x vigente).
+
+HTTP clients:faraday 2.3.0(última 2.13.4) yhttparty 0.21.0(última 0.23.1).
+
+HTML/XML:nokogiri 1.18.5(última 1.18.9).
+
+Front end heredado:uglifier 4.2.0yjquery-rails 4.4.0(última 4.6.0). Considerar minimizar uso o actualizar.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+Ruby (runtime):3.1.4 →3.3.9 / 3.4.6(EOL→soportado)
+
+Rails:7.0.7.2 →7.2.2.2(MINOR)(opcional siguiente: 8.0.2.1 —MAJOR).
+
+Rack:2.2.13 →2.2.17(PATCH/MINORdentro de 2.x)(a futuro con Rails 8: 3.2.x —MAJOR).
+
+Puma:5.6.7 →7.0.3(MAJOR)(o al menos 6.6.1 —MAJOR).
+
+Redis (gem):4.8.1 →5.4.1(MAJOR).
+
+Sidekiq:7.2.0 →8.x(MAJOR)(siempre revisar breaking changes y requisitos de Redis).
+
+Faraday:2.3.0 →2.13.4(MINOR).
+
+HTTParty:0.21.0 →0.23.1(MINOR).
+
+Nokogiri:1.18.5 →1.18.9(PATCH).
+
+Sprockets:3.7.2 →4.2.2(MAJOR).
+
+jquery-rails:4.4.0 →4.6.0(MINOR).
+
+sentry-ruby:5.21.0 →5.26.0(MINOR).
+
+Las “últimas” corresponden a las versiones estables publicadas a la fecha de este informe.
+Recomendaciones de actualización (orden sugerido)
+Saneamiento del runtime
+Actualizar aRuby 3.3.x(LTS) o3.4.x. Recompilar gems nativos y correr toda la suite de tests.
+
+Actualizar framework con pasos seguros
+7.0 → 7.2.2.2(mínimo) y aplicar parches de seguridad; luego evaluarRails 8.0si no hay blockers (Rack 3). Mantener compat con gems auditadas.
+
+HTTP stack y servidor
+SubirRacka 2.2.17 ahora; planificar migración aRack 3junto con Rails 8.
+
+ActualizarPumaa6.6.xo7.0.x(con ajustes en configuración si aplica).
+
+Assets / Front-end
+MigrarSprockets 3 → 4.2.x(manifest, precompilación, fingerprints).
+
+Evaluar reducirjquery-railsyeliminaruglifiersi no es necesario (Rails 7/8 suele usar esbuild/importmap).
+
+Librerías de base
+redisa5.4.x(y validar compat con Sidekiq);
+
+Sidekiqa8.xsi se requiere (leer breaking changes);
+
+faraday2.13.x,httparty0.23.x,nokogiri1.18.9;
+
+sentry-ruby5.26.x.
+
+Seguridad y mantenimiento continuo
+Habilitar Dependabot/bundler-audity programar revisiones mensuales de vulnerabilidades. (Sin cifras actuales en este repo).
+
+Entrega y verificación
+Pipeline de smoke tests + performance básico tras cada bloque; monitoreo de errores con Sentry actualizado.
+
+bancard-epos-service (API)760bancard-epos-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.1.0→ equivalente aRuby 3.1.x(rama 3.1 EOL el31-mar-2025).
+
+Framework:Angus (ecosistemaangus-*+ Rack)
+
+Dependencias:55directas /136totales (resueltas)
+
+Alertas Dependabot:30(14altas/críticas )
+
+Última actualización en producción:12-jun-2023
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+Runtime baseEOL(Ruby 3.1). Stack web anclado enRack 1.6(2 majors atrás). Librerías base muy desfasadas (Sidekiq 5,Redis 3,Faraday 0.17,Puma 6). Uso desentry-ravendeprecado.14alertas altas/críticas y>24 mesessin despliegues.
+
+Notas técnicas
+Runtime:JRuby 9.4.x apunta a compatibilidad Ruby 3.1 (EOL desde 31-mar-2025). Mantener 9.4.x actualizado mitiga bugs, pero no remueve el riesgo de base por EOL de 3.1.
+
+Framework / HTTP stack:El lockfile resuelverack (1.6.13), lo que limita middleware moderno y compatibilidad de seguridad presente en Rack 2/3.
+
+Background jobs:sidekiq (5.2.8)requiere Redis viejo y API obsoleta frente aSidekiq 7/8(cambios de configuración y cliente Redis).
+
+Observabilidad / errores:Se usasentry-raven,deprecado; la migración es haciasentry-ruby.
+
+Red / clientes HTTP:faraday (0.17.3)yhttparty (0.14.0)muy atrás respecto a ramas actuales; Faraday cambió APIs en 1.x/2.x y middlewares.
+
+DB:Presencia deactiverecord-jdbc*indica uso de JDBC en JRuby (correcto). También aparecemysql2 (0.5.4)en las resueltas: verificar que no se cargue en runtime JRuby (nativo C).
+
+Gems internas:Varias dependencias internas (angus!,bancard-*, etc.) fijadas por Git; revisar compatibilidad con bumps de Rack/Redis/Sidekiq.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+Actual = delGemfile.lockdel servicio; Última = a la fecha (RubyGems).
+rack:1.6.13→3.2.0(MAJOR) — salto multi-major.
+
+puma:6.0.2→7.0.2(MAJOR) — ajustes menores en config.
+
+sidekiq:5.2.8→8.0.7(MAJOR) — requiereredis-clienty cambios en configuración.
+
+redis (gem):3.3.5→5.4.1(MAJOR) — API moderna víaredis-client.
+
+faraday:0.17.3→2.13.4(MAJOR) — middlewares/adapters cambiaron.
+
+httparty:0.14.0→0.23.1(MINOR*) — varias versiones 0.x con potenciales cambios incompatibles.
+
+sentry-raven:2.13.0→reemplazar porsentry-ruby5.26.0(EOL) — guía de migración oficial.
+
+mysql2:0.5.4→0.5.6(PATCH) —ojo:evitar cargar en JRuby.
+
+nokogiri:1.18.8→1.18.9(PATCH).
+
+activesupport:7.0.4→7.2.2.2(MINOR) — opción de salto a8.0.2.1(MAJOR) si el runtime lo permite.
+
+savon:2.15.0→2.15.1(PATCH) — existe 3.0.0-rc.
+
+angus-authentication:0.0.3→0.0.7(PATCH) — última en RubyGems.
+
+En series0.xlos bumps “minor” pueden introducirbreaking changes.
+
+Recomendaciones de actualización (orden sugerido)
+Seguridad y runtime primero
+Actualizar aJRuby 9.4.x más reciente(compatibilidad Ruby3.1.7), aplicar parches y re-construir imágenes. Planificar siguiente ciclo para salir de 3.1 (EOL) cuando JRuby publique compatibilidad 3.2/3.3.
+
+Remplazarsentry-ravenporsentry-rubysiguiendo la guía de migración. Validar envs y release tracking.
+
+Base web / HTTP stack
+Fase A:llevarRack 1.6 → 2.2.xyFaraday 0.17 → 1.xpara reducir superficie de cambio; ejecutar test suites y smoke tests.
+
+Fase B:Rack 2.2 → 3.xyFaraday 2.x; revisar middlewares y cualquier integración Angus con Rack (en especial enrutado y manejo de headers).
+
+Puma 6 → 7y revisar configuración (threads,workers,preload_app).
+
+Jobs y almacenamiento
+Sidekiq 5 → 7/8junto conRedis 5.x(oredis-client). Migrar configuración, revisar reintentos, programaciones y métricas. Validar claves y TTLs en Redis en staging.
+
+Clientes y parsing
+HTTP:httparty 0.14 → 0.23.1(ajustes de opciones por defecto) yFaraday 2.x(adapters).
+
+XML/SOAP:actualizarsavon2.15.0 → 2.15.1; verificar timeouts y manejo de WSDL.
+
+Nokogiri:1.18.8 → 1.18.9(parches).
+
+Rails components / AR
+MantenerActiveSupport 7.2.x(rama soportada) y alinearactiverecord-jdbc*a la misma serie. Considerar salto a8.xsólo con runtime > Ruby 3.2.
+
+Higiene de dependencias
+Eliminar carga accidental demysql2en JRuby (asegurar que sólo se resuelva en plataformas MRI si aplica).
+
+Subirangus-authentication0.0.3 → 0.0.7y revisar compatibilidad con Rack ≥2.
+
+Ejecutarbundle update --conservativepor grupos (seguridad primero), y re-activar Dependabot con rangos permitidos.
+
+bancard‑epos‑service‑public‑proxy (API)760bancard-epos-service-public-proxy (API)
+Tipo:API
+
+Stack:JRuby 9.4.1.0→ equivale aRuby 3.1.x(MRI 3.1; EOL desde mar-2025)
+
+Framework:Angus(angus0.0.14, angus-authentication0.0.3, angus-router0.0.4)
+
+Dependencias:44directas /148totales (resueltas)
+
+Alertas Dependabot:43(16altas/críticas )
+
+Última actualización en producción:12-jun-2023
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+Runtime baseEOL(MRI 3.1), framework anclado aRack 1.6, dependencias núcleo desfasadas (Sidekiq 5,Redis gem 3,Faraday 0.x),16alertas altas y>24 mesessin deploy.
+
+Notas técnicas
+Runtime:JRuby 9.4.x está activo, pero su equivalencia MRI3.1quedóEOL (mar-2025); conviene planificar salto aJRuby 9.5.x(MRI 3.2/3.3) para recuperar soporte de seguridad y compatibilidad de gems.
+
+Framework / Rack:Angus fijarack 1.6.13(pin efectivo~> 1.5). Esto impide subir aRack 2/3, hereda CVEs históricos y limita upgrades de servidor/app middleware.
+
+Servidor de app:puma 6.0.2-java(serie 6). Aunque más moderno que 4.x, hoy está por detrás de 7.x; hay fixes y mejoras de rendimiento/HTTP2/threading.
+
+Jobs / Redis:sidekiq 5.2.8yredis 3.3.5están varias generaciones atrás (hoy el ecosistema está en Sidekiq 7/8 y redis gem 5.x).
+
+HTTP/Clientes:faraday 0.17.3(API 0.x),httparty 0.14.0(muy antiguo); ruptura segura al migrar a ramas actuales (Faraday 2.x).
+
+DB:mysql2 0.5.4(faltan parches menores respecto a 0.5.6).
+
+Parsing:nokogiri 1.13.10(rama actual estable es 1.18.x).
+
+Core Rails:activesupport 7.0.4— con Rails 7.2/8.0 vigentes, conviene al menos alinear a 7.2.x.
+
+Observabilidad:sentry-ruby 5.21.0presente (👍). TambiénOpenTelemetry(opentelemetry-sdk 1.8.0,opentelemetry-instrumentation-rack 0.26.0) ya integrado.
+
+Fuente: análisis completo delGemfile.lockadjunto.
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13→3.2.x(MAJOR) — requiere soltar el pin de Angus/angus-authentication.
+
+sidekiq:5.2.8→8.x(MAJOR / EOLen 5.x).
+
+redis (gem):3.3.5→5.4.x(MAJOR).
+
+faraday:0.17.3→2.13.x(MAJOR; cambios en middleware/adapters).
+
+httparty:0.14.0→0.23.x(MINOR; cambios acumulados pueden romper).
+
+puma:6.0.2-java→7.0.x(MAJOR).
+
+nokogiri:1.13.10→1.18.x(MINOR).
+
+mysql2:0.5.4→0.5.6(PATCH).
+
+activesupport:7.0.4→7.2.2.x(MINOR)(o 8.x =MAJORsi el roadmap lo permite).
+
+(Incluyo solo las que aplican en este proyecto.)
+Recomendaciones de actualización (orden sugerido)
+Bloque crítico de plataforma (seguridad mínima)
+Planificarsalto de JRuby 9.4 → 9.5.x(MRI ≥3.2) en la imagen base y CI/CD.
+
+Fijarnokogiri≥1.18yactualizarmysql2a 0.5.6para arrastrar fixes.
+
+MantenerSentryyOTelactivos en todos los ambientes.
+
+Desbloqueo del stack web (Rack)
+Actualizar/parchear Angus(yangus-authentication) pararemoverrack ~> 1.5.
+
+Una vez liberado,migrar a Rack 2.2.xy luego aRack 3.xcon pruebas de compatibilidad (middlewares, headers, streaming,rackup).
+
+Infraestructura de concurrencia y colas
+Sidekiq 5 → 7/8yredis gem 3 → 5.x. Revisar: configuración (concurrency,timeout,retry/dead), middlewares, métricas; validar compatibilidad con JRuby reciente.
+
+Revisar timeouts de red y pools en Redis/HTTP tras la migración.
+
+Red y clientes externos
+Faraday 0.x → 2.x(reemplazar middlewares, revisar adapters; explicitar timeouts/retries).
+
+HTTParty 0.14 → 0.23.xySavon 2.11 → 2.15.xsi aplica SOAP.
+
+Base del framework
+Actualizaractivesupporta 7.2.x(sin salto mayor por ahora).
+
+Validar gemas internas que dependan de APIs de 5/6/7.0.
+
+Vulnerabilidades & Operación continua
+Priorizar cierre de las16 alertas altas/críticas(primero superficierack/HTTP, parsing y server).
+
+Adoptarhigiene semanal: Dependabot + CI verde + sandbox de smoke tests y canary.
+
+bancard‑external‑commerce‑service (API)760bancard-external-commerce-service (API)
+Tipo:API
+
+Stack:JRuby 9.3.14.0→ equivale aRuby 2.6.x(MRI)(EOL)
+
+Framework:Angus(conangus-authentication 0.0.7,angus-router 0.0.3)
+
+Dependencias:41directas /180totales (resueltas)
+
+Alertas Dependabot:43(22altas/críticas )
+
+Última actualización en producción:11-jul-2024
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+Runtime baseEOL(Ruby 2.6), framework atado arack < 2, dependencias clave muy antiguas (puma 4.x,sidekiq 2.x,redis 3.x), y22alertas altas/críticas. Último deploy>=12 meses.
+
+Notas técnicas
+Runtime:JRuby9.3.xmapea aRuby 2.6, fuera de soporte desde 2022. Requiere migración aJRuby 9.4.x(Ruby 3.1) o idealmente9.5.x(Ruby 3.2/3.3) para recuperar parches de seguridad y compatibilidad con gems modernas.
+
+Framework / Rack:Angus fijarack ~> 1.5, lo que impide subir aRack 2/3y hereda CVEs de la serie 1.x.
+
+Servidor de app:puma 4.1.0(antiguo). Ramas actuales: 6/7.
+
+Jobs / Redis:sidekiq 2.17.7(serie de 2013) yredis 3.3.5: ambos muy desfasados frente a líneas actuales (Sidekiq 7/8, redis gem 5.x).
+
+HTTP/Clientes:faraday 1.0.1(actual 2.x), múltiples cambios de middleware/adapters.
+
+DB:mysql2 0.5.2(última estable 0.5.6).
+
+Observabilidad:ya usasentry-ruby 5.22.1(correcto; no está usandosentry-raven). Además, hayOpenTelemetryinstrumentado (OTLP exporter, instrumentación derack,net_http,redis,active_record).
+
+Core de Rails:activesupport (= 5.2.3)arrastrado indirectamente; muy por detrás de 7.x/8.x.
+
+Fuente: análisis completo delGemfile.lockadjunto.
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:~> 1.5→3.2.x(MAJOR) — requiere desbloquear Angus/angus-authentication.
+
+puma:4.1.0→7.0.x(MAJOR) — fixes de seguridad y mejoras JRuby.
+
+sidekiq:2.17.7→8.0.x(MAJOR/EOL) — salto grande con cambios en Redis, middleware y configuración.
+
+redis (gem):3.3.5→5.4.x(MAJOR) — nuevas APIs y pools.
+
+faraday:1.0.1→2.13.x(MAJOR) — cambios en adapters/middleware.
+
+mysql2:0.5.2→0.5.6(PATCH) — estabilidad/compatibilidad.
+
+activesupport:5.2.3→7.2.2.x(MAJOR) — considerar compatibilidad con el resto del stack.
+
+(Solo se listan las que aplican en este servicio.)
+Recomendaciones de actualización (orden sugerido)
+Bloque crítico de plataforma (seguridad mínima viable)
+Migrar a JRuby 9.4.x/9.5.x(Ruby ≥3.1).
+
+Actualizar pumaa7.0.xy fijar--releasecompatible para JRuby.
+
+Fijar versiones segurasde parsing/red: pin derackprovisional a2.2.x(temporal) yfaraday≥2.x en un branch de hardening (ver paso 2 para el desbloqueo definitivo).
+
+Desbloqueo de Rack / Framework
+Actualizar o parchear Angus(yangus-authentication) pararemoverrack ~> 1.5.
+
+Una vez liberado,migrar a Rack 3.x(o 2.2.x si 3.x no es viable aún) y ejecutar smoke tests de rutas/middlewares.
+
+Background jobs y Redis
+Sidekiq 2.x → 7/8yredis gem 5.x.
+
+Revisar colas, middlewares y configuración (concurrency,timeouts,retry,dead). Añadir dashboards y healthchecks.
+
+Clientes de red y base de datos
+faraday 1.x → 2.x(adaptar middleware/adapters y timeouts).
+
+mysql2 0.5.2 → 0.5.6(rebuild nativo en CI/CD si aplica).
+
+Core libs
+Planificar actualización deactivesupport(y cualquier dependencia de la familia Rails) al menos a7.2.xpara evitar incompatibilidades con gems modernas.
+
+Gestión de vulnerabilidades y operación
+Atender primero las22 alertas altas/críticas; activar rutina semanal de merges de Dependabot con CI verde.
+
+Mantener y ampliarOpenTelemetry(ya presente) ySentryen todos los entornos.
+
+bancard-infonet-cobranzas-app-service (API)760bancard-infonet-cobranzas-app-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.1.0 →equivale a Ruby 3.1.4
+
+Framework:Angus
+
+Dependencias:49directas /239totales (resueltas)
+
+Alertas Dependabot:39(9altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Alto (6/10)
+Runtime soportado (JRuby 9.4.x), pero dependencias clave desactualizadas:rack <2,puma 4.3,httparty 0.14,sentry-ravendeprecado. Alertas altas en cantidad moderada (9). Nunca se desplegó en producción.
+
+Notas técnicas
+Runtime:JRuby 9.4.1.0 está basado en Ruby 3.1, que quedóEOL en mar-2025. Aunque JRuby sigue dando soporte, conviene planear migración hacia JRuby 9.5 (Ruby 3.2/3.3).
+
+Framework:Angus y angus-authentication bloqueanrack <2, dejando al servicio enRack 1.6.x, línea abandonada desde 2020. Esto implica CVEs no resueltas.
+
+Servidor de aplicación:puma 4.3.12-java(2021). La rama estable es 7.0.x, con mejoras de seguridad, soporte JRuby y HTTP/2.
+
+Observabilidad:uso desentry-raven 2.13.0(EOL). Debe migrar asentry-ruby.
+
+Networking:faradayaparece sin versión fija, probablemente en 0.x/1.x. Última estable es 2.13.x.httparty 0.14.0es antiguo (último 0.23.x).
+
+Base de datos:no aparecemysql2en este lock; probablemente use otro adaptador.
+
+Parsing:nokogirisin pin, conviene fijar en 1.18.x.
+
+Jobs:Sidekiq aparece con constraint abierto, por lo que puede estar en rama vieja (5/6). Lo vigente es 8.x.
+
+SOAP:savon 2.11.2, actual 2.15.1.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:<2(~1.6.x) →3.2.0(MAJOR).
+
+puma:4.3.12→7.0.2(MAJOR).
+
+sentry-raven:2.13.0→ reemplazar porsentry-ruby 5.22+(EOL/DEPRECADO).
+
+sidekiq:constraint abierto (probable 5/6) →8.0.x(MAJOR).
+
+redis gem:constraint abierto (probable 3.x) →5.4.x(MAJOR).
+
+faraday:constraint abierto (0.x/1.x) →2.13.4(MAJOR).
+
+httparty:0.14.0→0.23.1(MINOR, aunque puede romper APIs por cambios acumulados).
+
+nokogiri:constraint abierto →1.18.9(MINOR).
+
+savon:2.11.2→2.15.1(MINOR).
+
+activesupport:indirecto (probable 7.0.x por dependencia) →7.2.2.2(MINOR) o8.0.2.1(MAJOR).
+
+Recomendaciones de actualización (orden sugerido)
+Seguridad crítica y observabilidad
+Migrar desentry-ravenasentry-ruby.
+
+Fijarnokogiri≥1.18.x.
+
+Subirpumaa ≥7.0 para resolver vulnerabilidades.
+
+Ecosistema web y framework
+Desbloquearracken Angus para permitir ≥2.2 o 3.x.
+
+Esto requerirá fork/upgrade de Angus/angus-authentication.
+
+Background jobs
+Actualizarsidekiqa 8.x yredisgem a 5.x. Validar compatibilidad de colas y middlewares.
+
+Clientes de red
+Subirfaradaya 2.x yhttpartya 0.23.x, ajustar adapters.
+
+Actualizarsavona 2.15.1.
+
+Base del framework
+Actualizaractivesupporty Rails internamente a la última rama estable (7.2.x, evitando por ahora salto mayor a 8).
+
+Higiene continua
+Resolver 9 alertas altas.
+
+Configurar pipeline con Dependabot y CI.
+
+Completar test suite de integración antes del primer despliegue.
+
+bancard-invoices-portal (Portal)760bancard-invoices-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.3.5 →(no aplica equivalencia JRuby, es MRI Ruby actual)
+
+Framework:Rails 7.1.5.1
+
+Dependencias:42directas /311totales (resueltas)
+
+Alertas Dependabot:13(6altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Medio (4/10)
+Runtime soportado (Ruby 3.3 es actual), framework Rails vigente (7.1). Varias dependencias críticas están en releases recientes. Sin embargo, hay 6 alertas altas/críticas y aún no se desplegó nunca en prod.
+
+Notas técnicas
+Runtime:Ruby 3.3.5 es la última rama soportada, sin riesgo inmediato de EOL.
+
+Framework:Rails 7.1.5.1 es estable y mantenido. Línea actual es 7.1.x/7.2.x.
+
+Dependencias base:
+puma 6.6.0(última estable 7.0.x, requiere upgrade mayor).
+
+rackaparece con constraint abierto (>=), resuelto probablemente a 3.x (última rama estable).
+
+redissin pin; conviene asegurar que se use la rama 5.x.
+
+nokogiritambién sin versión explícita; importante fijar ≥1.18.x.
+
+Errores/observabilidad:ya usasentry-ruby 5.22.4, versión actualizada y mantenida (no está usandosentry-raven, que es deprecado).
+
+Base de datos:mysql2no aparece en lock (no usa MySQL directamente, puede estar usando otro adaptador).
+
+Tooling frontend:no haywebpacker(deprecado), lo cual es positivo; Rails 7 usaimportmap-rails,jsbundling-railsocssbundling-rails.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rails:7.1.5.1→7.2.2.2(MINOR).
+
+puma:6.6.0→7.0.2(MAJOR).
+
+rack:(constraint abierto, resuelto ≥3.0.x) →3.2.0(MINORdentro de rama 3).
+
+nokogiri:constraint abierto →1.18.9(MINOR).
+
+redis gem:constraint abierto →5.4.x(MAJOR, si hoy está en 4.x).
+
+activesupport:indirecto con Rails, ya en 7.1.5.1 →7.2.2.2(MINOR).
+
+Recomendaciones de actualización (orden sugerido)
+Consolidación de dependencias abiertas
+Pinnearrack,redisynokogiria versiones explícitas estables (≥3.2, ≥5.4, ≥1.18).
+
+Esto evita resolver versiones inseguras por constraints demasiado laxos.
+
+Upgrade de infraestructura base
+Subirpumaa 7.0.x y validar configuración de workers/threads en Rails 7.
+
+Actualizar Rails/activesupport a 7.2.x para incorporar fixes y soporte extendido.
+
+Seguridad y alertas Dependabot
+Atacar primero las 6 alertas altas/críticas, priorizando librerías de red/parsing (rack,nokogiri).
+
+Mantener Dependabot activo con merges semanales.
+
+Preparación para producción
+Validar CI/CD con test suite.
+
+Agregar monitoreo de errores y performance (ya integrado consentry-ruby).
+
+Revisar DB adapters y conexión según ambiente real.
+
+bancard-invoices-service (API)760bancard-invoices-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.8.0 →equivale a Ruby 3.1.4(soporte JRuby alineado con MRI 3.1.x)
+
+Framework:Angus
+
+Dependencias:40directas /177totales (resueltas)
+
+Alertas Dependabot:24(11altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Alto (7/10)
+Runtime aún soportado (JRuby 9.4.x sigue recibiendo parches), pero basado en Ruby 3.1 que ya estáEOL. Framework Angus anclaracka versiones antiguas. Varias dependencias críticas desfasadas. Alertas altas >10 y sin despliegues productivos.
+
+Notas técnicas
+Runtime:JRuby 9.4.8.0 es estable, pero su equivalencia Ruby 3.1.x está fuera de soporte oficial desde marzo 2025. El equipo de JRuby mantiene parches, pero hay riesgo indirecto.
+
+Framework:Angus + angus-authentication obligan arack < 2, lo cual hereda CVEs y limita modernización.
+
+Dependencias base:
+puma 6.5.0(última estable 7.0.x).
+
+faraday 0.17.3yhttparty 0.14.0muy desactualizados.
+
+savon 2.11.2está varias versiones atrás.
+
+activesupportaparece sin pin explícito, pero arrastra versión indirecta (probable 7.0.4.x).
+
+Redis/Sidekiq:sólo están declarados con constraints (>=), lo cual sugiere que no se resolvió versión concreta en este lock; depende delGemfile. De cualquier modo, sidekiq ≥7 es lo vigente, y Redis gem ≥5.x.
+
+Observabilidad:no se encontrósentry-raven, pero tampoco aparecesentry-ruby. Podría no tener instrumentación de errores activa.
+
+Base de datos:mysql2 0.5.6es la última estable, aquí no hay brecha.
+
+XML/HTML parsing:nokogirifigura con constraint>=; convendría fijar y actualizar a la rama estable 1.18.x.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:<2(efectiva ~1.6.x) →3.2.0(MAJOR, rompe compatibilidad).
+
+puma:6.5.0→7.0.2(MAJOR).
+
+faraday:0.17.3→2.13.4(MAJOR).
+
+httparty:0.14.0→0.23.1(MINOR, pero pre-1.0 cambios incompatibles).
+
+savon:2.11.2→2.15.1(MINOR).
+
+activesupport:(probable 7.0.4.x) →7.2.2.2o8.0.2.1(MINOR/MAJOR).
+
+nokogiri:constraint>=(resolver) →1.18.9(MINOR).
+
+redis gem:constraint>=(posible 3.x) →5.4.x(MAJOR).
+
+sidekiq:constraint>=(posible 5.x) →8.0.x(MAJOR).
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y base mínima segura
+Mantener JRuby actualizado en la rama9.4.x. Explorar plan de migración a JRuby9.5.x(basado en Ruby 3.2/3.3).
+
+Revisar constraints enGemfilepara forzar versiones explícitas denokogiri,sidekiq,redis.
+
+Desbloqueo Rack / Framework
+Evaluar actualización de Angus/angus-authentication o aplicar fork/patch para liberar dependencia derack ~>1.5.
+
+Esto permitirá subir aRack 2.x/3.xy resolver vulnerabilidades conocidas.
+
+Infraestructura de concurrencia y jobs
+Migrarsidekiqa ≥7.0 yredisgem a ≥5.0. Ajustar configuración de colas y middleware.
+
+Subirpumaa 7.0.x, revisar configuración de workers/threads.
+
+Clientes HTTP y SOAP
+Actualizarfaradaya 2.x (cambios de middleware/adapters).
+
+Subirhttpartya 0.23.x ysavona 2.15.x. Validar compatibilidad de APIs externas.
+
+Librerías core y parsing
+Actualizaractivesupporta 7.2.2.2 (última estable antes de salto mayor).
+
+Pinnearnokogiria ≥1.18.x para seguridad.
+
+Higiene continua
+Habilitar Dependabot con PRs automáticas y pipeline CI para evitar acumulación de alertas.
+
+Agregar monitoreo de errores (sentry-rubyo alternativa).
+
+bancard-mpos-service (API)760bancard-mpos-service (API)
+Tipo:API
+
+Stack:Ruby 3.1.0 →(No aplica equivalencia JRuby ↔ Ruby; runtime MRI)
+
+Framework:Angus 0.0.14
+
+Dependencias:45directas /143totales (resueltas)
+
+Alertas Dependabot:43(15altas/críticas )
+
+Última actualización en producción:5-jun-2024
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+RuntimeEOL(Ruby 3.1 quedó sin soporte de seguridad enmar-2025), ecosistema base muy desfasado (rack 1.6,sidekiq 5,redis 3), uso de librería deprecada (sentry-raven),>30alertas y>12 mesessin deploy a prod.VersionLog+1
+
+Notas técnicas
+Runtime:Ruby3.1.xestáEOL(fin de vida) desde marzo de 2025; no recibe fixes de seguridad. Recomendada migración aRuby 3.3(o 3.4 si viable).VersionLog+1
+
+Framework / stack Angus:angus 0.0.14+angus-authentication 0.0.3anclanrack ~> 1.5; esto bloquea actualización a Rack 2/3 y hereda CVEs/limitaciones de la línea 1.x. Último rack1.6.13data de 2020; líneas vigentes hoy son2.2.x / 3.x.RubyGems
+
+Background jobs:sidekiq 5.2.8estáEOL(mantenedor soporta como regla general la mayor vigente y la anterior; con 7/8 lanzadas, 5 quedó fuera). Línea actual:8.0.x.GitHub+1
+
+Errores / APM:Uso desentry-raven(SDKdeprecado). Migrar asentry-rubysiguiendo guía oficial.Sentry Docs+1
+
+HTTP & clientes:faraday 0.17.3(serie 0.x) yhttparty 0.14.0muy antiguos frente a las ramas estables actuales (Faraday 2.13.x,HTTParty 0.23.x).RubyGems+1
+
+Parser XML/HTML:nokogiri 1.15.5; rama estable actual1.18.x.RubyGems
+
+App server:puma 6.0.2(última estable7.0.2).RubyGems
+
+Cliente Redis:redis 3.3.5(rama actual5.4.x).RubyGems
+
+Otras observaciones delGemfile.lock: presencia derspec/webmock(suite de tests),rubocop/solargraph(tooling),mysql2como adaptador de base de datos.
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13→3.2.0(MAJOR) — requiere adaptación y probablemente cambios en Angus/angus-authentication para soltar el pin~> 1.5.RubyGems
+
+sidekiq:5.2.8→8.0.7(MAJOR,EOLen 5.x).RubyGems+1
+
+redis (gem):3.3.5→5.4.1(MAJOR).RubyGems
+
+puma:6.0.2→7.0.2(MAJOR).RubyGems
+
+faraday:0.17.3→2.13.4(MAJOR).RubyGems
+
+httparty:0.14.0→0.23.1(MINOR*pre-1.0 puede traer cambios incompatibles).RubyGems
+
+activesupport:7.0.4→8.0.2.1o7.2.2.2(recomendado saltar a laúltima estable;MINORdentro de 7.x,MAJORsi 8.x).RubyGems
+
+nokogiri:1.15.5→1.18.9(MINOR).RubyGems
+
+savon:2.11.2→2.15.1(MINOR).RubyGems
+
+mysql2:0.5.4→0.5.6(PATCH).RubyGems
+
+sentry-raven:3.1.2→ reemplazar porsentry-ruby(EOL/DEPRECADO).Sentry Docs
+
+Recomendaciones de actualización (orden sugerido)
+Saneamiento urgente de plataforma (seguridad básica)
+Migrar runtime a Ruby 3.3(o 3.4 si está estable en su entorno CI/CD). Alinear imagen/base y toolchain.Motivo:3.1 estáEOL.VersionLog+1
+
+Reemplazarsentry-ravenporsentry-rubysiguiendo laMigration Guide(configuración y API cambian).Sentry Docs
+
+Desbloqueo de ecosistema web
+Actualizar Angus/angus-authenticationparaeliminar el pin arack ~> 1.5. Si no existe versión compatible, planificarfork internooparchepara soportarRack ≥ 2.2y luegoRack 3.x.Motivo:rack 1.6 es de 2020 y limita upgrades/mitigaciones.RubyGems
+
+Actualización de infraestructura de concurrencia
+Sidekiq 5 → 7/8(idealmente8.x). Revisar breaking changes (config Redis, middleware, colas, metrics).Actualizar gemredisa 5.xy validar timeouts/pools.RubyGems
+
+Servidor de aplicación y red
+Puma 6.0 → 7.0yRack 3.x(una vez desbloqueado). Ajustar configuración de threads/workers yrackupsi aplica.RubyGems
+
+Clientes HTTP y SOAP
+Faraday 0.17 → 2.13(API cambia: adapters/middleware),HTTParty 0.14 → 0.23,Savon 2.11 → 2.15. Plan de pruebas sobre llamadas externas y timeouts/reintentos.RubyGems+2RubyGems+2
+
+Biblioteca de utilidades / base Rails
+Actualizaractivesupportal último release mantenido (7.2.2.2 o 8.0.2.1, según compatibilidad con Angus y el resto). Validarzeitwerk, i18n y extensiones.RubyGems
+
+Librerías nativas y parsing
+Nokogiri 1.15 → 1.18ymysql2 0.5.4 → 0.5.6para arrastrar fixes de seguridad/estabilidad.RubyGems+1
+
+Higiene continua
+Activaractualizaciones semanalesde dependencias y pipeline deDependabot+ CI.
+
+Revisar y cerraralertas altas/críticas(15) priorizando aquellas de superficie HTTP/Rack/Sidekiq.
+
+bancard-notification-service (API)760bancard-notification-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.5.0→ equivalente aRuby 3.1
+
+Framework:Angus(no usa Rails)
+
+Dependencias:41directas /108totales (resueltas)
+
+Alertas Dependabot:28(10altas/críticas )
+
+Última actualización en producción:18-sep-2024
+
+Riesgo (rúbrica unificada):Alto
+Detalle rúbrica aplicada:runtimesoportado(JRuby 9.4 ~ Ruby 3.1) → impacto bajo; frameworkAngus(no EOL, pero ecosistema más acotado) → impacto medio;base app/middleware desfasada(Rack 1.6, Sidekiq 5, Redis 3) → impacto alto;10vulnerabilidades altas/críticas → impacto medio; ~12 mesesdesde la última puesta en prod → impacto medio. Resultado agregado:Alto.
+
+Notas técnicas
+ORM y JDBC:ActiveRecord 7.0.4.3+activerecord-jdbc-adapter 70.1(alineado con AR 7.0). Presencia depg 1.5.4además del adapter JDBC; revisar consistencia (ideal usar JDBC puro bajo JRuby).
+
+Servidor y middleware:Puma 6.4.2(correcto en Ruby 3.1, pero por detrás de 7.x).Rack 1.6.13es muy antiguo y limita upgrades de la capa web y seguridad.
+
+Jobs y almacenamiento:Sidekiq 5.2.8(tres majors atrás) +Redis 3.3.5(dos majors atrás).
+
+Observabilidad:sentry-raven 3.1.2(EOL)— requiere migración asentry-ruby5.x(ysentry-railssolo si se incorpora Rails, no aplica en Angus).
+
+Build & tests:Rake 13.1.0,RSpec 3.13.0(núcleo actualizado a 3.13; se puede ajustar a 3.13.1).
+
+HTTP client:Faraday 2.12.0(ya en la major actual; mantener en 2.x).
+
+Criptografía/SSL:no se observajruby-opensslexplícito en el lock; verificar si lo provee la plataforma o algún bundle transitorio.
+
+📊 Dependencias críticas (versión actual → “última” objetivo, tipo de upgrade)
+rack:1.6.13→3.2.1(MAJOR)
+
+puma:6.4.2→7.0.2(MAJOR)
+
+sidekiq:5.2.8→8.x(MAJOR)
+
+redis:3.3.5→5.5.x(MAJOR)
+
+rack-protection:2.2.4→3.1.x(MAJOR)(alinear con Rack 3)
+
+rack-test:0.8.3→2.1.x(MAJOR)
+
+rake:13.1.0→13.3.0(MINOR)
+
+rspec-core / rspec-expectations / rspec-mocks:3.13.0→3.13.1(PATCH)
+
+json:2.7.1→2.13.2(MINOR)
+
+sentry-raven:3.1.2→reemplazar porsentry-ruby5.x(EOL → migración)
+
+activerecord:7.0.4.3→7.1.x(MINOR)(solo si elactiverecord-jdbc-adaptercompatible está disponible; validar matriz JRuby 9.4 + JDBC)
+
+activerecord-jdbc-adapter:70.1→(alinear con la rama compatible si se sube a AR 7.1)
+
+Recomendaciones de actualización (orden sugerido)
+Base de plataforma (seguridad y compat):
+MigrarRack 1.6 → 3.x(requiere ajustes de middlewares y test helpers comorack-test).
+
+ActualizarPuma 6 → 7y revisar configuración de thread pool/bindings.
+
+Jobs y Redis:
+MigrarSidekiq 5 → 8(hay cambios en middlewares y APIs) yRedis 3 → 5(ajustar cliente y timeouts).
+
+Observabilidad:
+Reemplazarsentry-ravenporsentry-ruby(nuevo SDK, nueva configuración de breadcrumbs, sampling y transporte).
+
+Build & tests:
+Rake 13.3,RSpec 3.13.1(ajustes mínimos); actualizar helpers dependientes derack-testtras el salto a Rack 3.
+
+ORM (opcional / fase siguiente):
+Evaluar subida aActiveRecord 7.1.xsi existeactiverecord-jdbc-adaptercompatible en JRuby 9.4; probar en rama con suite completa.
+
+Higiene de dependencias:
+Verificar necesidad depg1.5.4bajo JRuby cuando ya se usa JDBC; si no es requerida, eliminarla para evitar conflictos.
+
+bancard-payment-link-portal (Portal)760bancard-payment-link-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby (MRI)2.7.8→EOL
+
+Framework:Rails 6.1.0
+
+Dependencias:40directas /101totales (resueltas)
+
+Alertas Dependabot:232(118altas/críticas )
+
+Última actualización en producción:8-mar-2024
+
+Riesgo (rúbrica unificada):Crítico
+Motivos (rúbrica):runtimeEOL(puntúa alto), framework desfasado (6.1), base de servidor/middleware atrás (Puma 4 / Rack 2),muchasalertas críticas (>30), ~18 meses desde la última puesta en prod. El conjunto supera claramente el umbral deCrítico.
+
+Notas técnicas
+Runtime:Ruby 2.7 está fuera de soporte → urge migrar (3.2/3.3).
+
+Rails:6.1.0; conviene planificar salto a7.1(o8.0si la matriz de gemas lo permite).
+
+Servidor/Middleware:Puma 4.3.8,Rack 2.2.8(ambos por detrás de los estándares actuales).
+
+Observabilidad:sentry-raven 2.13.0(deprecado/EOL) → migrar asentry-ruby(+sentry-rails).
+
+Front/Assets:Webpacker 4.3.0(EOL).Sprockets 4.2.1 / sprockets-rails 3.4.2vigentes, pero es recomendable modernizar el pipeline (propshaft/importmap o jsbundling-rails).
+
+Testing/Build:rspec-rails 5.0.2,rspec-core 3.10.x,rake 13.0.6(todos con margen de upgrade).
+
+Parsers/Seguridad:json 1.8.6(muy antiguo),nokogiri 1.13.10(con margen de upgrade).
+
+Jobs/Cache:apareceredis 3.3.5; no se ve sidekiq/resque en el lock.
+
+DB adapters:no figuramysql2/pg/sqlite3en el lock (posible uso indirecto o portal sin DB propia).
+
+📊 Dependencias críticas (versión actual → última “objetivo”, tipo de upgrade)
+ruby (runtime):2.7.8→3.2 / 3.3(MAJOR, desbloquea mejoras de perf/GC y compatibilidad moderna).
+
+rails:6.1.0→7.1.x / 8.0.x(MAJOR).
+
+puma:4.3.8→7.0.2(MAJOR).
+
+rack:2.2.8→3.2.1(MAJOR).
+
+redis:3.3.5→5.5.x(MAJOR).
+
+rspec-rails:5.0.2→6.1.x(MAJOR).
+
+rspec-core:3.10.1→3.13.1(MINOR/PATCH).
+
+rake:13.0.6→13.3.0(MINOR).
+
+json:1.8.6→2.13.2(MAJOR).
+
+nokogiri:1.13.10→1.17.x(MINOR).
+
+sentry-raven:2.13.0→reemplazar porsentry-ruby5.x(EOL → migración).
+
+webpacker:4.3.0→EOL→reemplazarporjsbundling-rails/importmap-rails+propshaft.
+
+Recomendaciones de actualización (orden sugerido)
+Base de plataforma (bloque 1):
+MigrarRuby 2.7 → 3.2/3.3.
+
+ActualizarPuma 4 → 7yRack 2 → 3(ajustar middlewares/tests).
+
+Framework & Front (bloque 2):
+Rails 6.1 → 7.1(o 8.0 si la matriz de gemas lo permite).
+
+EliminarWebpacker; adoptarjsbundling-rails(esbuild/rollup) oimportmap-rails+propshaft.
+
+Observabilidad (bloque 3):
+Reemplazarsentry-ravenporsentry-ruby(+sentry-rails), mapeando DSN, sampling y breadcrumbs.
+
+Seguridad y compat (bloque 4):
+jsona 2.13,redisa 5.5.x,nokogiria 1.17.x.
+
+Tests/Build (bloque 5):
+rspec-rails 5 → 6,rspec-core 3.10 → 3.13.1,rake 13.0.6 → 13.3.
+
+Revisión funcional (bloque 6):
+Confirmar si el portalno usa DB; si usa, fijar y auditar adaptador (mysql2/pg).
+
+Si hay jobs, evaluar incorporarsidekiq 8.xconredis 5.x.
+
+bancard-payment-link-service (API)760bancard-payment-link-service (API)
+Tipo:API
+
+Stack:JRuby 9.3.14.0 →equivale a Ruby 2.6.8
+
+Framework:Angus
+
+Dependencias:48directas /235totales (resueltas)
+
+Alertas Dependabot:46(23altas/críticas )
+
+Última actualización en producción:4-jul-2024
+
+Riesgo (rúbrica unificada):Crítico (9/10)
+Runtime EOL (Ruby 2.6 está fuera de soporte desde 2022, JRuby 9.3.x sigue arrastrando esa base). Framework Angus anclarack < 2. Uso desentry-raven(SDK deprecado). Dependencias clave desfasadas (puma 4.3, httparty 0.14, mysql2 0.5.3, etc.). 23 alertas altas/críticas.
+
+Notas técnicas
+Runtime:JRuby 9.3.x mapea a Ruby 2.6, que quedó EOL en marzo 2022. JRuby 9.4 (Ruby 3.1) es la línea soportada; conviene migrar de inmediato.
+
+Framework:Angus y angus-authentication mantienen pin arack < 2, bloqueando migración a versiones seguras de rack (2.x/3.x).
+
+Errores/APM:Usasentry-raven 2.13.0, SDKdeprecado. Reemplazar porsentry-ruby.
+
+Background jobs:Sidekiq aparece con constraint>=(probable 5.x/6.x). Versiones <7 ya no tienen soporte oficial.
+
+App server:puma 4.3.8-java(2020). Versión actual estable es 7.x, con fixes de seguridad y soporte JRuby.
+
+Networking:faradayaparece con constraint abierto;httparty 0.14.0es muy antiguo (actual 0.23.x).
+
+Base de datos:mysql2 0.5.3(última estable 0.5.6).
+
+Parsing:nokogiriaparece con constraint abierto, sin fijar versión. Última estable es 1.18.x.
+
+SOAP:savon 2.13.0(actual 2.15.x).
+
+Observabilidad/tests:no aparecen gems modernas de monitoreo aparte de Sentry, ni suites amplias de pruebas de integración.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:<2(~1.6.x efectivo) →3.2.0(MAJOR).
+
+puma:4.3.8→7.0.2(MAJOR, incluye fixes críticos).
+
+sidekiq:(probable 5.x/6.x) →8.0.x(MAJOR, EOL en <7).
+
+redis gem:constraint abierto (probable 3.x) →5.4.x(MAJOR).
+
+sentry-raven:2.13.0→ reemplazar porsentry-ruby 5.22+(EOL/DEPRECADO).
+
+faraday:constraint abierto (~0.x/1.x) →2.13.4(MAJOR).
+
+httparty:0.14.0→0.23.1(MINOR, pero API cambió desde 0.15+).
+
+mysql2:0.5.3→0.5.6(PATCH).
+
+nokogiri:constraint abierto →1.18.9(MINOR).
+
+savon:2.13.0→2.15.1(MINOR).
+
+activesupport:indirecto (probable 5.x/6.x por dependencia Angus) →7.2.2.2o8.0.2.1(MAJOR).
+
+Recomendaciones de actualización (orden sugerido)
+Bloque crítico de seguridad
+Migrar aJRuby 9.4.x(Ruby 3.1) o superior (ideal 9.5.x cuando madure).
+
+Reemplazarsentry-ravenporsentry-ruby.
+
+Subirpumaa ≥7.0 y fijarnokogiri≥1.18.
+
+Desbloqueo del stack web
+Evaluar fork/upgrade de Angus para soltarrack <2.
+
+Migrar a Rack 2.x/3.x.
+
+Background jobs e infraestructura
+Migrarsidekiqa ≥7.0 yredisgem a ≥5.0. Validar colas, middlewares y configuración.
+
+Clientes de red y DB
+Actualizarfaradaya 2.x yhttpartya 0.23.x. Revisar código que depende de adapters y timeouts.
+
+Subirmysql2a 0.5.6.
+
+Actualizarsavona 2.15.1.
+
+Higiene continua
+Configurar Dependabot con merges semanales.
+
+Resolver de inmediato las 23 alertas altas/críticas.
+
+Revisar cobertura de tests de integración.
+
+bancard-pix-portal (Portal)760bancard-pix-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.1.1
+
+Framework:Rails
+
+Dependencias:46 directas / 151 totales (resueltas)
+
+Alertas Dependabot:42 ( 7 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a) 42 alertas (umbral “>30”), (b) runtime Ruby 3.1 enEOLdesde marzo-2025, (c) servicio nunca desplegado a prod → riesgo operativo y de seguridad. Según la rúbrica, cae en 8–10.endoflife.date
+
+Notas técnicas
+Runtime:Ruby 3.1 está fuera de soporte (EOL) — solo recibe fixes de seguridad hasta 31-mar-2025; hoy (17-sep-2025) ya no tiene soporte activo. Requiere plan de upgrade a Ruby ≥3.2 (ideal 3.3/3.4).endoflife.date
+
+Rails:el proyecto usaRails 7.1.2. Hay parches de seguridad7.1.5.2recientes; también existenRails 7.2.2.2y8.0.2.1. Nota: Rails 8requiere Ruby ≥3.2.Reinteractive+3Ruby on Rails+3Ruby on Rails Guides+3
+
+Rack / servidor HTTP:rack 3.0.10(hay línea 3.1/3.2);puma 6.4.0(última serie 7.0.x). Actualizar reduce superficie de CVEs recientes y alinea con defaults de Rails nuevos.RubyGems+1
+
+Frontend/assets:usapropshaft 0.8.0(actual 1.2.x). No hay Webpacker (bien: deprecado en Rails modernos).RubyGems
+
+HTTP/Parsing/Email:faraday 2.9.0(2.13.x disponible),nokogiri 1.16.4linux (1.18.x),mail 2.8.1(último estable). Considerar bumps por fixes y scanners.RubyGems+2RubyGems+2
+
+Tooling:Bundler 2.5.18(desde elGemfile.lock). Recomendado subir a la última 2.5/2.7 estable antes del sweep de dependencias.index.rubygems.org
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rails:7.1.2 → 7.1.5.2 (PATCH) — aplicar de inmediato por seguridad. Alternativa contemplada a medio plazo: 7.2.2.2 (MINOR) / 8.0.2.1 (MAJOR, requiere Ruby ≥3.2).Reinteractive+3Ruby on Rails+3Ruby on Rails Guides+3
+
+rack:3.0.10 → 3.1.7 / 3.2.0 (MINOR/MAJOR menordentro de 3.x).RubyGems
+
+puma:6.4.0 → 7.0.2 (MAJOR) — revisar configuración (threads/workers, hooks) y notas de migración.RubyGems
+
+propshaft:0.8.0 → 1.2.1 (MAJOR) — mejoras y fixes del pipeline de assets.RubyGems
+
+faraday:2.9.0 → 2.13.x (MINOR) — incluye fixes y mejoras de adapters.RubyGems
+
+nokogiri:1.16.4-x86_64-linux → 1.18.9+ (**MINOR/MINOR+) — varias actualizaciones de libxml2/libxslt y seguridad.RubyGems+1
+
+stimulus-rails:1.3.0 → 1.3.4 (PATCH).
+
+turbo-rails:2.0.5 → 2.0.16 (PATCH/MINOR).
+
+bootsnap:1.17.0 → 1.18.6 (MINOR).RubyGems
+
+“Últimas” referencian el estado público de RubyGems/Rails al 17-sep-2025 (UTC-3).
+Recomendaciones de actualización (orden sugerido)
+Bloque 0 — Higiene y parches rápidos (1 PR por tema):
+SubirRails 7.1.2 → 7.1.5.2(security patch).
+
+Actualizarfaraday 2.9→2.13,nokogiri 1.16→1.18.x,turbo-rails 2.0.5→2.0.16,stimulus-rails 1.3.0→1.3.4,bootsnap 1.17→1.18.6. Ejecutarbundle update --patch/--minordirigido y correr suite.RubyGems+3Ruby on Rails+3RubyGems+3
+
+Bloque 1 — Runtime soportado:
+Plan de upgrade deRuby 3.1 → 3.3 (o 3.4)para salir de EOL. Alinear CI/CD e imágenes base (Docker).endoflife.date
+
+Bloque 2 — Base de plataforma web:
+Tras Ruby ≥3.2, evaluarRails 7.2.2.2(minor con mejoras) o salto directo aRails 8.0.2.1si la app es simple (revisar cambios de defaults, Zeitwerk, Active Storage, propshaft).Rails 8 requiere Ruby ≥3.2.Ruby on Rails Guides+2Ruby on Rails Guides+2
+
+Bloque 3 — Rack/Servidor:
+Actualizarrack 3.0.10 → 3.1/3.2ypuma 6.4 → 7.0.x. Revisar configuración (threads,workers,preload_app!) y healthchecks.RubyGems+1
+
+Bloque 4 — Assets:
+propshaft 0.8 → 1.2.x; repasarconfig/assetsy integraciones (CSS/JS bundling).RubyGems
+
+Bloque 5 — Dependabot:
+Re-habilitar y limpiar las42 alertaspriorizando las7 altas/críticas; dejar reglas de actualización automática (patch/minor) y semver-ranges más amplios para libs periféricas.
+
+bancard-pix-service (API)760bancard-pix-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.5.0 → compatibilidad Ruby 3.1 (JRuby 9.4.x implementa Ruby 3.1; línea 9.4 en mantenimiento)jruby.org+1
+
+Framework:Rails
+
+Dependencias:42 directas / 147 totales (resueltas)
+
+Alertas Dependabot:36 ( 6 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a) >30 alertas (36), (b) primera puesta en producción pendiente (“nunca”), (c) varias bases del stack muy atrás (por ej.,faraday 0.17.x,httparty 0.14.x,rack 2.2.x), y (d) versión de Rails en 7.0.x con múltiples parches de seguridad posteriores. Según la rúbrica, esto cae en 8–10.
+
+Notas técnicas
+JRuby 9.4.xestá soportado y apunta aRuby 3.1; la línea 9.4 se mantiene (security/bugfixes) y hoy tiene releases recientes (9.4.14.0). Sugerido: fijar siempre laúltima 9.4.xestable.jruby.org+1
+
+Rails 7.0.8.1en el proyecto; existen ramas7.2.2.2y8.0.2.1con parches de seguridad al 13-ago-2025. Si se permanece en 7.x, apuntar a 7.2.2.2; alternativamente evaluar salto a 8.0.x.Ruby on Rails+1
+
+rack 2.2.8.1es funcional, pero la línea estable actual es3.2.x; modernizar middleware y configuraciones para compatibilidad con 3.x.RubyGems
+
+puma 6.4.2 (java)detrás de7.0.2(incluye artefacto java). Ajustar flags y configuración de threads/workers.RubyGems
+
+sidekiq 7.2.0va por8.0.xcon cambios de API y requisitos de cliente Redis; planificar migración coordinada.RubyGems
+
+HTTP stackmuy desfasado:
+faraday 0.17.3→ 2.13.x (cambios de namespaces y middleware).RubyGems
+
+httparty 0.14.0→ 0.23.1 (muchos cambios acumulados).RubyGems
+
+Cliente Redis:
+redis 5.1.0tiene 5.4.1 estable.RubyGems
+
+redis-client 0.19.1va por 0.25.x.RubyGems
+
+Nokogiri: 1.16.2 presente; última 1.18.10 (incluye builds “java”).RubyGems
+
+Bundleren lockfile: 2.4.17 (ok).
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:2.2.8.1 → 3.2.1 (MAJOR) — migrar middlewares/uso de env y headers.RubyGems
+
+puma:6.4.2-java → 7.0.2 (MAJOR) — revisar configuración y boot en JRuby.RubyGems
+
+sidekiq:7.2.0 → 8.0.7 (MAJOR) — cambios en API y dependencia de redis/redis-client.RubyGems
+
+faraday:0.17.3 → 2.13.4 (MAJOR) — adapters/middleware cambiaron de namespace.RubyGems
+
+httparty:0.14.0 → 0.23.1 (MINORcon breaking acumulados) — revisar timeouts/parsers.RubyGems
+
+rails:7.0.8.1 → 7.2.2.2 (MINOR) ó 8.0.2.1 (MAJOR) — parches de seguridad y cambios de framework.RubyGems+1
+
+redis (gem):5.1.0 → 5.4.1 (MINOR) — validar compatibilidad con Sidekiq 8.RubyGems
+
+redis-client:0.19.1 → 0.25.3 (MINOR) — mejoras de conexión y timeouts.RubyGems
+
+nokogiri:1.16.2 → 1.18.10 (MINOR) — parches de seguridad/rendimiento.RubyGems
+
+mysql2:0.5.5 → 0.5.6 (PATCH) — fixes menores.RubyGems
+
+“Última disponible” verificada en RubyGems al 17-sep-2025.
+Recomendaciones de actualización (orden sugerido)
+Toolchain y runtime (seguro):
+SubirJRuby 9.4.xa la última patch (9.4.14.0 a la fecha) y mantener Bundler ≥ 2.5 si es posible; ajustar CI/JVM flags.jruby.org
+
+Modernización del stack HTTP y de clientes externos:
+Migrarfaraday 0.17 → 2.x(actualizar adapters y middleware) yhttparty 0.14 → 0.23.x; cubrir con pruebas de integración a servicios externos.RubyGems+1
+
+Servidor web y base Rack:
+Actualizarpuma 6.4 → 7.xy planificar salto derack 2.2 → 3.x; validar compatibilidad de cualquier middleware Angus/propio.RubyGems+1
+
+Jobs y Redis (coordinado):
+Migrarsidekiq 7.2 → 8.xjunto conredis 5.4.xyredis-client ≥0.25; revisar inicialización, middlewares y métricas.RubyGems+2RubyGems+2
+
+Framework:
+ElevarRails 7.0.8.1 → 7.2.2.2(camino conservador) o evaluarRails 8.0.2.1si hay capacidad de pruebas; cubrir parches de seguridad recientes.RubyGems+1
+
+Mantenimiento general:
+Actualizarnokogiriymysql2a las últimas; ejecutarbundle audit/Dependabot para cerrar CVEs pendientes.RubyGems+1
+
+bancard-qr-arg-service (API)760bancard-qr-arg-service (API)
+Tipo:API
+
+Stack:JRuby 10.0.1 → compatibilidad Ruby 3.4 (JRuby 10 implementa Ruby 3.4; recién lanzada, aún con parches frecuentes)
+
+Framework:Angus
+
+Dependencias:40 directas / 93 totales (resueltas)
+
+Alertas Dependabot:19 ( 9 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Alto
+Puntúa en 5–7 porque: (a) runtime soportado (JRuby 10.0.1 ↔ Ruby 3.4) pero muy reciente y potencialmente inestable, (b) librerías base muy desfasadas (rack 1.6,sidekiq 5.x,redis 3.x,faraday 0.17), (c) 19 alertas con 9 críticas, (d) sin despliegues a prod hasta ahora.
+
+Notas técnicas
+Runtime:JRuby 10.0.1 está alineado con Ruby 3.4, pero es muy nuevo; conviene fijar la última 10.x estable para estabilidad.
+
+Stack web:
+rack 1.6.13es de 2017–2020; la línea estable es 3.2.x. Migración mayor imprescindible.
+
+puma 6.6.0está relativamente reciente, pero la serie estable es 7.0.x.
+
+FrameworkAngus 0.0.14no recibe actualizaciones frecuentes; depende fuertemente de rack 1.x, lo cual complica upgrades.
+
+Jobs y Redis:
+sidekiq 5.2.8(2019) → estable en 8.x. Cambios profundos de API y requisitos de Redis.
+
+redis 3.3.5(2016) → línea estable en 5.4.x. Necesaria coordinación con Sidekiq nuevo.
+
+redis-client 0.25.2está al día, pero convive con la gemredisvieja.
+
+HTTP stack:
+faraday 0.17.3(2019) → actual 2.13.x. Gran refactor de middleware/adapters.
+
+httparty 0.14.0(2016) → actual 0.23.x. Múltiples cambios acumulados.
+
+Observabilidad:sentry-ruby 5.26.0está vigente, reemplazo correcto desentry-raven.
+
+Otros:
+nokogiri 1.18.9está al día.
+
+rake 13.3.0última estable.
+
+rspec 3.9.0(2020) → actual 3.13.x.
+
+mail 2.8.1última estable.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.0 (MAJOR)
+
+puma:6.6.0 → 7.0.2 (MAJOR)
+
+sidekiq:5.2.8 → 8.0.7 (MAJOR)
+
+redis (gem):3.3.5 → 5.4.1 (MAJOR)
+
+faraday:0.17.3 → 2.13.4 (MAJOR)
+
+httparty:0.14.0 → 0.23.1 (MINOR, con breaking acumulados)
+
+rspec:3.9.0 → 3.13.1 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y toolchain
+Fijar JRuby 10.x a la última release estable; Bundler 2.5.1 ya está bien.
+
+Validar compatibilidad de Angus con JRuby 10.
+
+Stack web (bloque mayor):
+Migrarrack 1.6 → 3.x. Implica revisar/migrar middleware de Angus y dependencias internas.
+
+Subirpuma 6.6 → 7.x. Ajustar configuración (threads/workers).
+
+Jobs y Redis (coordinado):
+Migrarsidekiq 5.x → 8.xjunto aredis 5.x.
+
+Revisar compatibilidad deredis-clienty migrar inicialización.
+
+HTTP stack:
+Actualizarfaraday 0.17 → 2.xyhttparty 0.14 → 0.23.x.
+
+Revisar adapters, middleware y timeouts.
+
+Testing y mantenimiento:
+Subirrspec 3.9 → 3.13.xpara soporte de Ruby 3.4 y sintaxis moderna.
+
+Mantenernokogiri,mail,sentry-rubyal día.
+
+Dependabot:
+Atacar las 9 alertas críticas primero (probablemente enrack,sidekiq,redis,faraday).
+
+bancard-reversal-service (API)760bancard-reversal-service (API)
+Tipo:API
+
+Stack:JRuby 9.3.14.0 → compatibilidad Ruby 2.6 (JRuby 9.3.x implementa Ruby 2.6)
+
+Framework:Angus
+
+Dependencias:32 directas / 70 totales (resueltas)
+
+Alertas Dependabot:39 ( 20 altas/críticas )
+
+Última actualización en producción:05-jul-2024
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a) runtime Ruby 2.6 (EOL desde mar-2022, JRuby 9.3 ya sin soporte activo), (b) dependencias base muy desfasadas (rack 1.6,puma 4.x,sidekiq 5.x,redis 3.x,faraday 0.17), (c) uso desentry-raven(deprecado), (d) 39 alertas (20 críticas).
+
+Notas técnicas
+Runtime:JRuby 9.3.x implementa Ruby 2.6 → Ruby 2.6 estáfuera de soporte; JRuby 9.3 ya en mantenimiento mínimo. Migrar a JRuby 9.4.x (Ruby 3.1) o JRuby 10.x (Ruby 3.4).
+
+Core web stack:
+rack 1.6.11(2019) → línea actual 3.2.x. Migración mayor y cambios en middlewares.
+
+puma 4.2.1-java(2019) → estable 7.0.2. Cambios en configuración de workers y threads.
+
+angusdepende de Rack 1.x, lo cual complica el salto.
+
+Jobs/Redis:
+sidekiq 5.2.7(2019) → estable 8.x, cambios de API, requiere Redis moderno.
+
+redis 3.3.5(2016) → estable 5.4.x. Incompatible con features de Sidekiq nuevo.
+
+HTTP stack:
+faraday 0.17.3(2019) → estable 2.13.x, con API de middleware reorganizada.
+
+Observabilidad:
+sentry-raven 2.13.0estádeprecado, reemplazo oficial:sentry-ruby.
+
+Framework/librerías Rails:
+activesupport 5.2.3yactiverecord 5.2.3→ hoy estables en 7.2.x.
+
+Tooling:
+rake 12.3.3→ última 13.3.0.
+
+rspec 3.9.0→ última 3.13.x.
+
+Otros:
+mail 2.7.1→ 2.8.1 (última estable).
+
+nokogirino figura, probablemente se use vía dependencias indirectas.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.11 → 3.2.0 (MAJOR)
+
+puma:4.2.1-java → 7.0.2 (MAJOR)
+
+sidekiq:5.2.7 → 8.0.7 (MAJOR)
+
+redis (gem):3.3.5 → 5.4.1 (MAJOR)
+
+faraday:0.17.3 → 2.13.4 (MAJOR)
+
+sentry-raven:2.13.0 → reemplazar porsentry-ruby(EOL)
+
+activesupport:5.2.3 → 7.2.2.2 (MAJOR)
+
+activerecord:5.2.3 → 7.2.2.2 (MAJOR)
+
+rspec:3.9.0 → 3.13.1 (MINOR)
+
+rake:12.3.3 → 13.3.0 (MINOR)
+
+mail:2.7.1 → 2.8.1 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y toolchain:
+Migrar JRuby 9.3.x → 9.4.x (Ruby 3.1) o planear 10.x (Ruby 3.4).
+
+Actualizar Bundler ≥ 2.5.x.
+
+Stack web:
+Migrarrack 1.6 → 3.x.
+
+Subirpuma 4.x → 7.x, revisar configuración.
+
+Validar compatibilidad de Angus con Rack 3 o evaluar fork/mantenimiento.
+
+Jobs y Redis (coordinado):
+Migrarsidekiq 5.x → 8.xjunto aredis 5.x.
+
+Revisar inicialización de jobs y middlewares.
+
+Observabilidad:
+Sustituirsentry-ravenporsentry-ruby.
+
+Validar reporting y filtros de eventos.
+
+Framework/librerías Rails:
+Subiractivesupport/activerecord5.2 → 7.2.x.
+
+Revisar migraciones de DB, adaptadores JDBC.
+
+HTTP stack:
+Actualizarfaraday 0.17 → 2.x.
+
+Adaptar middlewares/adapters.
+
+Mantenimiento general:
+Subirrake,rspec,maila últimas versiones.
+
+Ejecutarbundle audity limpiar Dependabot (39 alertas, priorizar 20 críticas).
+
+bancard-s4-service (API)760bancard-s4-service (API)
+Tipo:API
+
+Stack:Ruby 3.1.4
+
+Framework:Angus
+
+Dependencias:25 directas / 84 totales (resueltas)
+
+Alertas Dependabot:29 ( 11 altas/críticas )
+
+Última actualización en producción:12-dic-2024
+
+Riesgo (rúbrica unificada):Alto
+RuntimeEOL(Ruby 3.1 dejó de recibir soporte el31-mar-2025), base web desfasada (rack 1.6.x), jobs/Redis antiguos (sidekiq 5.x / redis 3.x), y >10 alertas altas. Aunque el servicio tuvo despliegue <12 meses, el EOL del runtime y el gap del stack lo ubican en5–7.endoflife.date+1
+
+Notas técnicas
+Runtime:Ruby3.1se encuentraEOL(fin de soporte 31-mar-2025). Requiere plan paraRuby ≥3.2(ideal 3.3/3.4).endoflife.date+1
+
+Core web:rack 1.6.13(2020) — la línea estable actual es3.2.x(salto mayor, cambios de middleware).RubyGems
+
+Servidor:puma 6.4.0— la serie vigente es7.0.3(incluye buildjava). Revisar configuración dethreads/workersal migrar.RubyGems
+
+Jobs/Redis:sidekiq 5.2.8(2019) — estable8.0.7;redis 3.3.5(2017) — estable5.4.1. La migración a Sidekiq 8 exige cliente Redis moderno y cambios de API.RubyGems+1
+
+HTTP:faraday 2.8.1(actual2.13.4); actualizar para fixes y compatibilidad de adapters.RubyGems
+
+Observabilidad:Se usasentry-raven 3.1.2(SDKdeprecado); migrar asentry-ruby+ integraciones (sentry-sidekiq,sentry-rack).Sentry Docs
+
+Rails libs auxiliares:activesupport/activerecord 7.1.2— últimas de mantenimiento7.1.5.2/ rama estable7.2.2.2.RubyGems
+
+DB:mysql2 0.5.5(hay0.5.6patch).
+
+Tooling:bundler 2.3.26en el lockfile; considerar subir a 2.5.x para mejor resolución.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.1 (MAJOR) — refactor de middlewares yenv/headers.RubyGems
+
+puma:6.4.0 → 7.0.3 (MAJOR) — revisar configuración (threads/workers,preload_app!).RubyGems
+
+sidekiq:5.2.8 → 8.0.7 (MAJOR) — cambios de API y requisitos de Redis.RubyGems
+
+redis (gem):3.3.5 → 5.4.1 (MAJOR) — alinear con Sidekiq 8; evaluarredis-client.RubyGems
+
+sentry-raven:3.1.2 → reemplazar porsentry-ruby(+sentry-sidekiq) (EOL/DEPRECADO).Sentry Docs
+
+faraday:2.8.1 → 2.13.4 (MINOR) — mejoras y fixes.RubyGems
+
+activesupport:7.1.2 → 7.2.2.2 (MINOR).RubyGems
+
+activerecord:7.1.2 → 7.2.2.2 (MINOR).RubyGems
+
+rspec:3.12.0 → 3.13.1 (MINOR).RubyGems
+
+rake:13.1.0 → 13.3.0 (MINOR).RubyGems
+
+mysql2:0.5.5 → 0.5.6 (PATCH).
+
+“Última disponible” verificada en RubyGems al 17-sep-2025.
+Recomendaciones de actualización (orden sugerido)
+Runtime (bloque rápido):
+Plan deRuby 3.1 → 3.3(o 3.4). Actualizar imágenes/base Docker y CI. Cerrar brecha EOL del runtime.endoflife.date
+
+Observabilidad:
+Sustituirsentry-raven→sentry-rubyy agregarsentry-sidekiq/sentry-rack. Validar scrub de PII (send_default_pii=falsepor defecto).Sentry Docs
+
+HTTP y librerías menores (bajo riesgo):
+faraday 2.8 → 2.13,rake 13.1 → 13.3,rspec 3.12 → 3.13,mysql2 0.5.5 → 0.5.6. Ejecutarbundle update --minor/--patchdirigido + suite.RubyGems+2RubyGems+2
+
+Jobs y Redis (coordinado):
+MigrarSidekiq 5.x → 8.xjunto conredis 5.4.x; revisar inicialización, middlewares y métricas. Rollout controlado (canary).RubyGems+1
+
+Base web / compatibilidad Angus:
+Diseñar el saltorack 1.6 → 3.x. Ver si Angus o gems internas fijanrack ~>1.x; si es necesario, preparar PRs/forks internos para compatibilidad con Rack 3.
+
+Subirpuma 6.4 → 7.0.xy ajustar configuración (threads,workers, healthchecks).RubyGems+1
+
+Librerías Rails auxiliares (opcional, tras runtime):
+Elevaractivesupport/activerecord 7.1 → 7.2.2.2para incorporar parches de seguridad/performance.RubyGems
+
+Dependabot / seguridad:
+Abordar las11 altas/críticasprimero; habilitar actualizaciones automáticaspatch/minory estrecharallow/ignorepara librerías periféricas.
+
+bancard-selling-portal (Portal)760bancard-selling-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 2.6.3 →EOL desde mar-2022
+
+Framework:Rails 6.1.7.6
+
+Dependencias:31 directas / 95 totales (resueltas)
+
+Alertas Dependabot:168 ( 81 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa 10/10: runtimeEOL, framework 6.1.x (con soporte limitado hasta jun-2024), librerías base muy desfasadas (puma 4.x,redis 3.x,faraday 0.17,webpackerdeprecado,sentry-ravenEOL), 168 alertas (81 críticas) y sin historial de despliegue en producción.
+
+Notas técnicas
+Runtime:Ruby 2.6 estáfuera de soportedesde marzo 2022. Requiere plan de migración a Ruby 3.2 o 3.3.
+
+Framework:Rails 6.1.7.6 tuvo soporte extendido hasta junio 2024. Hoy la rama estable es Rails 7.2.2.2.
+
+Web stack:
+rack 2.2.8→ línea estable 3.2.x.
+
+puma 4.1.0(2019) → estable 7.0.3.
+
+Assets:webpacker 4.2.2estádeprecado; Rails recomienda migrar ajsbundling-rails+cssbundling-rails.
+
+Jobs/Redis:
+sidekiqno aparece directo, peroredis 3.3.5(2017) indica dependencia desfasada. Última versión estable: 5.4.x.
+
+HTTP stack:
+faraday 0.17.3(2019) → estable 2.13.4. Cambios de middleware significativos.
+
+Observabilidad:
+sentry-raven 2.13.0→EOL, debe migrarse asentry-ruby.
+
+Assets y CSS:
+sprockets 4.2.1vigente, pero depende de compatibilidad con Rails 7.x.
+
+Tooling:
+rake 12.3.3→ última estable 13.3.0.
+
+Bundler en lockfile:2.1.4→ actualizar a ≥2.5.x.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+Ruby:2.6.3 → 3.2/3.3 (MAJOR / EOL)
+
+Rails:6.1.7.6 → 7.2.2.2 (MAJOR)
+
+rack:2.2.8 → 3.2.0 (MAJOR)
+
+puma:4.1.0 → 7.0.3 (MAJOR)
+
+redis:3.3.5 → 5.4.1 (MAJOR)
+
+webpacker:4.2.2 → reemplazar porjsbundling-rails+cssbundling-rails(EOL)
+
+faraday:0.17.3 → 2.13.4 (MAJOR)
+
+sentry-raven:2.13.0 →sentry-ruby(EOL)
+
+rake:12.3.3 → 13.3.0 (MINOR)
+
+mail:2.8.1 → 2.8.1 (ya al día).
+
+nokogiri:1.13.10 → 1.16.7 (MINOR).
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y framework:
+Migrar de Ruby 2.6 → Ruby 3.2/3.3.
+
+Actualizar Rails 6.1 → 7.2.x con revisión de migraciones, assets y dependencias internas.
+
+Stack web:
+Migrarrack 2.x → 3.x.
+
+Subirpuma 4.x → 7.x. Ajustar configuración de threads/workers.
+
+Assets:
+Eliminarwebpacker. Adoptarjsbundling-rails+cssbundling-rails.
+
+Revisar integraciones consprockets.
+
+Jobs/Redis:
+Migrarredis 3.x → 5.x.
+
+Revisar compatibilidad con cualquier lib de jobs usada (ej. Sidekiq).
+
+Observabilidad:
+Sustituirsentry-raven→sentry-ruby.
+
+HTTP y networking:
+Migrarfaraday 0.17 → 2.x. Revisar inicialización de middleware.
+
+Mantenimiento general:
+Actualizarrake,nokogiri.
+
+Subir Bundler ≥2.5.
+
+Resolver todas las 168 alertas Dependabot, priorizando las 81 críticas.
+
+bancard-selling-service (API)760bancard-selling-service (API)
+Tipo:API
+
+Stack:JRuby 9.2.7.0 → compatibilidad Ruby 2.5 (JRuby 9.2.x implementa Ruby 2.5)
+
+Framework:Angus
+
+Dependencias:53 directas / 140 totales (resueltas)
+
+Alertas Dependabot:50 ( 26 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: runtime Ruby 2.5EOL desde 2021, JRuby 9.2sin soporte, framework Angus dependiente derack 1.6, librerías clave muy desfasadas (sidekiq 5.x,redis 3.x,faraday 0.17,httparty 0.14,activesupport/activerecord 5.2), uso desentry-ravendeprecado, y 50 alertas (26 críticas).
+
+Notas técnicas
+Runtime:JRuby 9.2.x implementa Ruby 2.5 (EOL desde 2021). Requiere plan de migración a JRuby 9.4 (Ruby 3.1) o JRuby 10 (Ruby 3.4).
+
+Core web stack:
+rack 1.6.13(2020) → línea estable 3.2.x. Salto mayor y breaking changes en middlewares.
+
+puma 4.3.12-java(2020) → última 7.0.3. Cambios en configuración de workers y threads.
+
+Jobs/Redis:
+sidekiq 5.2.8(2019) → estable 8.x, requiere Redis ≥5.
+
+redis 3.3.5(2017) → estable 5.4.1.
+
+HTTP stack:
+faraday 0.17.3(2019) → 2.13.4, API reorganizada.
+
+httparty 0.14.0(2016) → 0.23.1, cambios acumulados.
+
+Observabilidad:
+sentry-raven 2.13.0deprecado → reemplazo oficialsentry-ruby.
+
+Framework auxiliar:
+activesupportyactiverecord 5.2.3→ última estable 7.2.2.2.
+
+Tooling:
+bundler 2.0.2(antiguo) → subir a ≥2.5.
+
+rake 13.1.0vigente (última 13.3.0).
+
+rspec 3.9.0→ última 3.13.1.
+
+Otros:
+nokogiri 1.12.5-java→ última 1.16.7.
+
+mail 2.8.1ya al día.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.1 (MAJOR)
+
+puma:4.3.12-java → 7.0.3 (MAJOR)
+
+sidekiq:5.2.8 → 8.0.7 (MAJOR)
+
+redis:3.3.5 → 5.4.1 (MAJOR)
+
+faraday:0.17.3 → 2.13.4 (MAJOR)
+
+httparty:0.14.0 → 0.23.1 (MINOR/MAJOR acumulado)
+
+sentry-raven:2.13.0 → reemplazar porsentry-ruby(EOL)
+
+activesupport:5.2.3 → 7.2.2.2 (MAJOR)
+
+activerecord:5.2.3 → 7.2.2.2 (MAJOR)
+
+nokogiri:1.12.5-java → 1.16.7 (MINOR)
+
+rspec:3.9.0 → 3.13.1 (MINOR)
+
+rake:13.1.0 → 13.3.0 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y toolchain:
+Migrar JRuby 9.2 (Ruby 2.5 EOL) → JRuby 9.4 (Ruby 3.1) o 10.x (Ruby 3.4).
+
+Actualizar Bundler ≥2.5 para resolver mejor dependencias.
+
+Stack web:
+Migrarrack 1.6 → 3.xy adaptar middlewares (Angus requiere compatibilidad o fork).
+
+Subirpuma 4.x → 7.x.
+
+Jobs/Redis (coordinado):
+Migrarsidekiq 5.x → 8.xjunto conredis 5.x.
+
+Revisar middlewares, programación de jobs y métricas.
+
+Observabilidad:
+Sustituirsentry-ravenporsentry-ruby+sentry-sidekiq/sentry-rack.
+
+Framework auxiliar:
+Subiractivesupport/activerecord 5.2 → 7.2.x.
+
+Revisar compatibilidad con adaptadores JDBC y migraciones.
+
+HTTP stack:
+Migrarfaraday 0.17 → 2.x(adapters renombrados).
+
+Subirhttparty 0.14 → 0.23.x.
+
+Mantenimiento general:
+Subirnokogiri,rspec,rake.
+
+Resolver 50 alertas Dependabot, priorizando 26 críticas.
+
+bancard-tpago-portal (Portal)760bancard-tpago-portal (Portal)
+Tipo:Portal
+
+Stack:Ruby 3.0.0 →EOL(Ruby 3.0 dejó de recibir parches de seguridad el 23-abr-2024, según endoflife.date).endoflife.date
+
+Framework:Rails (7.0.8 en el lock)
+
+Dependencias:65directas /154totales (resueltas)
+
+Alertas Dependabot:42(6altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Suma en el rango 8–10 por: (a)runtime EOL(Ruby 3.0), (b)42alertas (umbral “>30”), (c)sin despliegues a prod.
+
+Notas técnicas
+Bundler:13.0.6 en el lock.
+
+Rails 7.0.x: ramafuera de ventana de seguridad; las ramas soportadas hoy son 7.2.x (seguridad) y 8.0.x (activa). Recomiendo apuntar a 7.2.2.2 como primer paso estable.endoflife.date+1
+
+Rack:2.2.8 (lock) — línea 2.2 aún recibe parches (2.2.17), pero el ecosistema moderno migra aRack 3.x. Rails ≥7.1 soporta Rack 3, así que el salto convienejunto conel upgrade de Rails.RubyGems
+
+Puma:5.6.7 (lock) — rama vigente7.0.x. Upgrade mayor recomendado por fixes de rendimiento/seguridad.
+
+Turbo/Stimulus (Hotwire):turbo-rails1.6.0 (lock) frente a2.0.xactual;stimulus-rails1.2.1 → 1.3.x (minor).
+
+Clientes y utilitarios:
+redis4.8.1 (lock) → serie5.xactual (API renovada).RubyGems
+
+faraday2.5.2 → 2.13.x (minor).
+
+nokogiri1.14.3 → 1.18.x (múltiples fixes de seguridad).RubyGems
+
+rspec-rails6.0.1 → 8.0.x (requiere Rails≥7.1).RubyGems
+
+jwt2.7.1 →3.1.x(major con guías de migración).RubyGems
+
+No se detectan gems deprecadas típicas (p.ej.,webpackerosentry-raven). Si aparecen en el repo fuera del lock, reemplazarsentry-ravenporsentry-ruby.Sentry Docs
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+Rails (railties/activesupport/activerecord):7.0.8 →7.2.2.2(MINORcon cambios; desbloquea Rack 3 y soporte de seguridad).RubyGems+1
+
+rack:2.2.8 →3.2.0(MAJOR) — hacer tras subir a Rails≥7.1.RubyGems
+
+puma:5.6.7 →7.0.2(MAJOR) — revisar configuración (threads, workers,preload_app!).
+
+turbo-rails:1.6.0 →2.0.11(MAJOR) — cambios en helpers/streaming.
+
+stimulus-rails:1.2.1 →1.3.4(MINOR).
+
+redis (gem):4.8.1 →5.4.1(MAJOR) — revisar inicialización y timeouts.RubyGems
+
+faraday:2.5.2 →2.13.4(MINOR) — middleware/adapters actualizados.
+
+nokogiri:1.14.3 →1.18.10(MINOR) — incluye CVE fixes.RubyGems
+
+rspec-rails:6.0.1 →8.0.2(MAJOR) — requiere Rails actualizado.RubyGems
+
+jwt:2.7.1 →3.1.2(MAJOR) — ver breaking changes.RubyGems
+
+mail:2.7.1 →2.8.1(MINOR) — mejoras de compatibilidad.RubyGems
+
+rake:13.0.6 →13.3.0(MINOR).GitHub
+
+Las “últimas” se basan en RubyGems/guías oficiales al17-sep-2025.
+Recomendaciones de actualización (orden sugerido)
+Saneamiento de runtime y toolchain
+MigrarRuby 3.0.0 → 3.3.x(o 3.4.x si CI lo permite). Cierra elEOLy mejora rendimiento GC/JIT. Ajustar imagen base ygem update --system.endoflife.date+1
+
+Upgrade del framework (bloque coordinado)
+SubirRails 7.0.8 → 7.2.2.2en un PR dedicado; ejecutar suite y corregir deprecations.
+
+En el mismo ciclo o siguiente, migrarrack 2.2 → 3.x(si no hay gems que fijen~>2.2). Revisar middlewares (rack-attack, CORS, session store).RubyGems+1
+
+Servidor de aplicaciones y HTTP
+ActualizarPuma 5.6 → 7.0.x; revisarworkers,threads,fork_worker. Validar readiness/liveness si hay Kubernetes.
+
+ActualizarFaradaya 2.13.x y revalidar middleware (timeouts, retries).
+
+Front-end Rails (Hotwire)
+Actualizarturbo-rails 1.6 → 2.0.xystimulus-rails 1.2 → 1.3.x; probar navegaciones Turbo, streams y controllers Stimulus.
+
+Persistencia/cache y utilitarios
+redis 4.8 → 5.x(o considerarredis-clientsi alguna lib lo exige). Reconfigurar pool/timeouts y monitoreo de conexiones.RubyGems
+
+nokogiria 1.18.x ymail2.8.1 por fixes de seguridad.RubyGems+1
+
+Pruebas y CI
+Subirrspec-rails 6 → 8,rake 13.0 → 13.3y estabilizar la suite en Rails 7.2.RubyGems+1
+
+Cierre de seguridad
+Atacar primero las6 alertas altas/críticasde Dependabot y luego el resto hasta limpiar las42.
+
+bancard-transfer-service (API)760bancard-transfer-service (API)
+Tipo:API
+
+Stack:JRuby 9.2.8.0 → compatibilidad Ruby 2.5 (JRuby 9.2.x implementa Ruby 2.5,EOL desde 2021)
+
+Framework:Angus
+
+Dependencias:30 directas / 90 totales (resueltas)
+
+Alertas Dependabot:67 ( 35 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a) runtime Ruby 2.5EOL, (b) framework Angus atado a Rack 1.x, (c) dependencias base muy desfasadas (rack 1.6,puma 4.x,sidekiq 5.x,redis 3.x,faraday 0.17), (d) uso desentry-raven(EOL), y (e) 67 alertas (35 críticas).
+
+Notas técnicas
+Runtime:JRuby 9.2 implementa Ruby 2.5 →fuera de soportedesde 2021. Migración urgente a JRuby 9.4 (Ruby 3.1) o JRuby 10 (Ruby 3.4).
+
+Stack web:
+rack 1.6.13(2020) → línea estable 3.2.x.
+
+puma 4.3.1-java(2020) → estable 7.0.3. Cambios de configuración de workers/threads.
+
+Angus 0.0.14 depende de Rack 1.x → será necesario parchear o mantener un fork para soportar Rack 3.x.
+
+Jobs y Redis:
+sidekiq 5.2.8(2019) → estable 8.0.7, requiere Redis 5+.
+
+redis 3.3.5(2017) → estable 5.4.1.
+
+HTTP stack:
+faraday 0.17.3(2019) → 2.13.x, con cambios de API en middleware.
+
+httparty 0.18.1(2020) → actual 0.23.x.
+
+Observabilidad:
+sentry-raven 2.13.0está deprecado. Reemplazo:sentry-ruby.
+
+Rails libs auxiliares:
+activesupportyactiverecord 5.2.4.1(2020) → última estable 7.2.2.2.
+
+Tooling:
+Bundler 2.0.2 (viejo).
+
+rake 12.3.3→ última 13.3.0.
+
+rspec 3.9.0→ última 3.13.1.
+
+Otros:
+nokogiri 1.11.1-java(2021) → última 1.16.7.
+
+mail 2.7.1→ 2.8.1.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.1 (MAJOR)
+
+puma:4.3.1-java → 7.0.3 (MAJOR)
+
+sidekiq:5.2.8 → 8.0.7 (MAJOR)
+
+redis:3.3.5 → 5.4.1 (MAJOR)
+
+faraday:0.17.3 → 2.13.4 (MAJOR)
+
+httparty:0.18.1 → 0.23.1 (MINOR/MAJOR acumulado)
+
+sentry-raven:2.13.0 → reemplazar porsentry-ruby(EOL)
+
+activesupport:5.2.4.1 → 7.2.2.2 (MAJOR)
+
+activerecord:5.2.4.1 → 7.2.2.2 (MAJOR)
+
+nokogiri:1.11.1-java → 1.16.7 (MINOR)
+
+rspec:3.9.0 → 3.13.1 (MINOR)
+
+rake:12.3.3 → 13.3.0 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y toolchain:
+Migrar JRuby 9.2 (Ruby 2.5) → JRuby 9.4 (Ruby 3.1) o 10.x (Ruby 3.4).
+
+Subir Bundler a ≥2.5.
+
+Stack web:
+Migrarrack 1.6 → 3.xy revisar compatibilidad de Angus (posible fork o parche).
+
+Actualizarpuma 4.x → 7.x.
+
+Jobs y Redis (coordinado):
+Migrarsidekiq 5.x → 8.xjunto aredis 5.x.
+
+Revisar configuración y middlewares de jobs.
+
+Observabilidad:
+Sustituirsentry-raven→sentry-ruby+ integraciones (sentry-sidekiq,sentry-rack).
+
+Framework/librerías Rails auxiliares:
+Migraractivesupportyactiverecord5.2 → 7.2.x.
+
+Revisar compatibilidad con adaptadores JDBC.
+
+HTTP stack:
+Subirfaradaya 2.x, adaptar middleware/adapters.
+
+Actualizarhttparty 0.18 → 0.23.x.
+
+Mantenimiento general:
+Subirnokogiri,mail,rspec,rake.
+
+Resolver las 67 alertas Dependabot, priorizando 35 críticas.
+
+bancard-vpos-portal (Portal)760bancard-vpos-portal (Portal)
+Tipo:Portal
+
+Stack:JRuby 9.2.x → compatibilidad Ruby 2.5 (EOL desde 2021)
+
+Framework:Sinatra
+
+Dependencias:27 directas / 85 totales (resueltas)
+
+Alertas Dependabot:36 ( 17 altas/críticas )
+
+Última actualización en producción:nunca
+
+Riesgo (rúbrica unificada):Crítico
+Se ubica en esta categoría por: (a) runtime Ruby 2.5 fuera de soporte, (b) framework base Sinatra 2.0 desfasado, (c) dependencias clave muy antiguas (rack 1.6,puma 3.x,faraday 0.9,sentry-raven), (d) 36 alertas de seguridad con 17 críticas, (e) sin despliegue histórico a producción.
+
+Notas técnicas
+Runtime:JRuby 9.2 (Ruby 2.5) EOL. Migración urgente a JRuby 9.4 (Ruby 3.1) o JRuby 10 (Ruby 3.4).
+
+Framework:Sinatra 2.0.5 → última estable 3.2.x. Implica salto mayor con breaking changes en DSL y middlewares.
+
+Stack web:
+rack 1.6.13(2020) → estable 3.2.1.
+
+puma 3.12.0-java(2019) → estable 7.0.3. Configuración de threads/workers debe actualizarse.
+
+HTTP stack:
+faraday 0.9.2(2015) → 2.13.4. Requiere reescribir adapters/middleware.
+
+httparty 0.16.4(2017) → 0.23.1.
+
+Observabilidad:
+sentry-raven 2.7.4está deprecado. Debe migrarse asentry-ruby.
+
+Rails libs auxiliares usadas por Sinatra:
+activesupport 4.2.11(2019,EOL). Última estable 7.2.2.2.
+
+Tooling:
+Bundler 1.17.2 muy desfasado.
+
+rake 12.3.2→ última 13.3.0.
+
+rspec 3.7.0→ última 3.13.1.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.1 (MAJOR)
+
+puma:3.12.0-java → 7.0.3 (MAJOR)
+
+sinatra:2.0.5 → 3.2.0 (MAJOR)
+
+faraday:0.9.2 → 2.13.4 (MAJOR)
+
+httparty:0.16.4 → 0.23.1 (MINOR acumulado)
+
+sentry-raven:2.7.4 → reemplazar porsentry-ruby(EOL)
+
+activesupport:4.2.11 → 7.2.2.2 (MAJOR/EOL)
+
+rspec:3.7.0 → 3.13.1 (MINOR)
+
+rake:12.3.2 → 13.3.0 (MINOR)
+
+Recomendaciones de actualización (orden sugerido)
+Runtime y toolchain:
+Migrar JRuby 9.2 (Ruby 2.5) → JRuby 9.4 (Ruby 3.1).
+
+Subir Bundler ≥2.5 para resolver dependencias modernas.
+
+Framework web:
+Actualizar Sinatra 2.0 → 3.x.
+
+Migrarrack 1.6 → 3.xen conjunto.
+
+Revisar middlewares custom y configuraciones de DSL.
+
+Servidor de aplicaciones:
+Migrarpuma 3.x → 7.x. Ajustar flags (workers,threads,preload_app!).
+
+Observabilidad:
+Sustituirsentry-raven→sentry-ruby.
+
+Revisar integraciones con Rack y Sinatra.
+
+HTTP stack:
+Actualizarfaradaya 2.x, adaptando middlewares.
+
+Subirhttpartya 0.23.x.
+
+Dependencias Rails auxiliares:
+Migraractivesupport 4.2 → 7.2.x.
+
+Verificar compatibilidad con gems que extienden AS.
+
+Mantenimiento general:
+Actualizarrspec,rakey dependencias de patch.
+
+Resolver 36 alertas Dependabot, priorizando las 17 críticas.
+
+bancard-vpos-service (API)760bancard-vpos-service (API)
+Tipo:API
+
+Stack:JRuby 9.4.1.0 → compatibilidad Ruby 3.1 (JRuby 9.4.x implementa Ruby 3.1)
+
+Framework:Picasso (stack basado en Sinatra; en el lock figurasinatra 1.4.8)
+
+Dependencias:63directas /147totales (resueltas)
+
+Alertas Dependabot:34(14altas/críticas )
+
+Última actualización en producción:06-ago-2024
+
+Riesgo (rúbrica unificada):Crítico
+Puntúa alto por: (a)>30 alertas(34), (b) runtime Ruby3.1 en EOLdesde 2025-03, (c) bases del stack muy desfasadas (rack 1.6,sidekiq 5.x,redis 3.x,faraday 0.17), (d) >12 meses desde el último despliegue a prod.
+
+Notas técnicas
+Runtime:JRuby 9.4.x (Ruby 3.1). Ruby 3.1 está fuera de soporte; conviene plan de upgrade aRuby ≥3.2(ideal 3.3/3.4) y mantener JRuby en la última 9.4.x/10.x estable.
+
+Web stack:
+rack 1.6.13(línea actual del ecosistema: 3.x) → salto mayor con cambios en middlewares yenv.
+
+puma 6.4.0 (java)— línea estable 7.x; revisar configuración (threads,workers,preload_app!) al migrar.
+
+Sinatra 1.4.8está varias mayores atrás (el servicio usa Picasso, que históricamente monta Sinatra); si se usa indirectamente, habrá que validar compatibilidad con Rack 3.
+
+Jobs/Redis:sidekiq 5.2.8(→ 8.x) yredis 3.3.5(→ 5.x) requieren migración coordinada por cambios de API/cliente.
+
+HTTP/Clientes:faraday 0.17.3(API de middleware cambió en 2.x) yhttparty 0.14.0(muchos cambios acumulados).
+
+Observabilidad:ya usasentry-ruby 5.21.0(bien; no haysentry-raven).
+
+ORM/auxiliares Rails:activesupport/activerecord 7.0.4— hay ramas 7.1/7.2 con fixes; si se mantienen, actualizar en conjunto.
+
+XML/HTML:nokogiri 1.18.8(linux-gnu) — recomendable subir a la última 1.18.x por seguridad.
+
+Bundler:2.4.7 en el lock.
+
+📊 Dependencias críticas (versión actual → última, tipo de upgrade)
+rack:1.6.13 → 3.2.x (MAJOR) — migrar middlewares y compatibilidad Picasso/Sinatra.
+
+puma:6.4.0-java → 7.0.x (MAJOR) — revisar configuración y healthchecks.
+
+sidekiq:5.2.8 → 8.0.x (MAJOR) — cambios de API y requisitos de Redis.
+
+redis (gem):3.3.5 → 5.4.x (MAJOR) — considerar tambiénredis-clientsegún dependencias.
+
+faraday:0.17.3 → 2.13.x (MAJOR) — adapters/middlewares renombrados.
+
+httparty:0.14.0 → 0.23.x (MINORcon breaking acumulados).
+
+sinatra:1.4.8 → 4.1.x (MAJOR) — si aplica por uso directo/indirecto.
+
+activesupport:7.0.4 → 7.2.2.x (MINOR/MAJOR según salto) — aplicar junto aactiverecord.
+
+activerecord:7.0.4 → 7.2.2.x (MINOR/MAJOR según salto) — coordinar migraciones/conexión JDBC.
+
+jwt:2.7.1 → 3.1.x (MAJOR) — revisar métodos de decodificación/verificación.
+
+nokogiri:1.18.8 → 1.18.x última (PATCH/MINOR) — parches de seguridad.
+
+mail:2.7.1 → 2.8.1 (MINOR).
+
+rake:13.1.0 → 13.3.0 (MINOR).
+
+rspec:3.12.0 → 3.13.x (MINOR).
+
+Las “últimas” se refieren al estado público de RubyGems a septiembre-2025.
+Recomendaciones de actualización (orden sugerido)
+Runtime y toolchain (bloque corto):
+Plan deRuby 3.1 → 3.3(o 3.4) yJRuby 9.4.x → última patch(o JRuby 10.x si viable).
+
+Actualizar Bundler (≥2.5) para mejor resolución del árbol y compatibilidad con gems modernas.
+
+Stack web (coordinado):
+rack 1.6 → 3.x: identificar y adaptar middlewares (Picasso/Sinatra/propios).
+
+puma 6.4 → 7.x: ajustarthreads/workers,preload_app!, readiness/liveness.
+
+Jobs + Redis (en el mismo ciclo):
+sidekiq 5.x → 8.x+redis 3.x → 5.x. Revisar inicialización, middlewares, reintentos y programación. Tests de compatibilidad y colas en staging.
+
+HTTP/Clientes externos:
+faraday 0.17 → 2.x(migrar adapters/middleware y manejo de errores).
+
+httparty 0.14 → 0.23.x(timeouts, parsers, logging).
+
+Capa Rails auxiliar (si se usa):
+Elevaractivesupport/activerecord 7.0 → 7.2.xen conjunto; validar adaptadores JDBC y migraciones.
+
+Seguridad y librerías de base:
+Subirjwt,nokogiri,maila últimas; ejecutarbundle audity limpiar CVEs.
+
+Dependabot y hardening:
+Resolver primero las14 alertas altas/críticas, luego el resto hasta limpiar las34.
+
+Configurar reglas de auto-update parapatch/minory alertas semanales.

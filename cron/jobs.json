@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "d4755542-b64c-4067-90b1-4e1076b31990",
+      "name": "morning-intelligence",
+      "enabled": true,
+      "createdAtMs": 1771973997595,
+      "updatedAtMs": 1772306972846,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Montevideo"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute Morning Intelligence Workflow (minimal payload).\n\nMANDATORY FIRST STEP: Read and follow SYSTEM instructions from:\n- /home/manpac/.openclaw/workspace/skills/morning-intelligence/SYSTEM.md\n\nHard constraints (do not reinterpret):\n- Do NOT change schedule/timezone/enabled (cron-managed).\n- Do NOT change sections/features.\n- Obey delivery constraints exactly as written in SYSTEM.md (explicit channel_id, News Extension standalone to 1477319018992898171, retry once, no fallback).\n- Obey dedupe/checkpoint rules exactly as written in SYSTEM.md (skip repost if stage=ok).\n\nThen execute the workflow and deliver messages as specified.",
+        "thinking": "low",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1475961144416931931"
+      },
+      "state": {
+        "nextRunAtMs": 1772362800000,
+        "lastRunAtMs": 1772306800893,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 171953,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "brokia-deadline-alerts",
+      "name": "brokia-deadline-alerts",
+      "enabled": true,
+      "createdAtMs": 1772312086457,
+      "updatedAtMs": 1772312086457,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "America/Montevideo"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run Brokia thesis deadline T-7 check from checklist and send Slack alerts only when due.\\n\\nSteps:\\n1) Read: /home/manpac/.openclaw/workspace/brokia/thesis-hub/02_ACADEMIC_CHECKLIST.md\\n2) Execute: python3 /home/manpac/.openclaw/workspace/scripts/brokia_deadline_checklist_alert.py\\n3) Use dedupe checkpoint: /home/manpac/.openclaw/workspace/checkpoints/brokia/deadlines-YYYY-MM-DD.json\\n4) Send alerts to Slack channel mapping 'brokia-ai-alerts' from /home/manpac/.openclaw/workspace/CHANNELS.md\\n5) Do NOT alert EXCLUDED/MAL dates listed in checklist.",
+        "thinking": "low",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "slack",
+        "to": "brokia-ai-alerts"
+      },
+      "state": {
+        "nextRunAtMs": 1772366400000
+      }
+    },
+    {
+      "id": "brokia-weekly-planning",
+      "name": "brokia-weekly-planning",
+      "enabled": true,
+      "createdAtMs": 1772313102057,
+      "updatedAtMs": 1772313102057,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * 1",
+        "tz": "America/Montevideo"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Brokia — Weekly Planning (execution)\n\nHard rules:\n- Do NOT modify other cron jobs.\n\nSteps:\n1) Read:\n   - /home/manpac/.openclaw/workspace/brokia/thesis-hub/01_BRIEF.md\n   - /home/manpac/.openclaw/workspace/brokia/thesis-hub/02_ACADEMIC_CHECKLIST.md\n   - /home/manpac/.openclaw/workspace/brokia/thesis-hub/03_ROADMAP.md\n   - /home/manpac/.openclaw/workspace/brokia/thesis-hub/04_BACKLOG.md\n2) Execute script (writes checkpoint + updates backlog + posts to Slack+Discord):\n   python3 /home/manpac/.openclaw/workspace/scripts/brokia_weekly_planning.py\n3) Reply with a one-line status: weekly plan posted + checkpoint path.",
+        "thinking": "low",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1476311753305362564"
+      },
+      "state": {
+        "nextRunAtMs": 1772456400000
+      }
+    }
+  ]
+}

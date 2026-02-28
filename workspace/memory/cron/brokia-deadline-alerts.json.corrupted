@@ -1,0 +1,70 @@
+{
+  "name": "brokia-deadline-alerts",
+  "schedule": "0 8 * * *",
+  "timezone": "America/Montevideo",
+  "enabled": true,
+  "payload": {
+    "type": "agentTurn",
+    "task": "Execute brokia-deadline-alerts: T-7 Deadline Monitoring for Brokia thesis.
+
+STEPS:
+
+1. Execute the producer script:
+   /home/manpac/.openclaw/workspace/skills/brokia-deadline-alerts/scripts/run.sh
+
+   The script will:
+   - Run preflight checks
+   - Query Google Calendar (tachipachi9797@gmail.com) for next 14 days
+   - Filter events occurring exactly 7 days from today (T-7)
+   - Format Slack message and write to /tmp/brokia-alert-YYYY-MM-DD.txt
+   - Write checkpoint to checkpoints/brokia/deadlines-YYYY-MM-DD.json (alert_sent=false initially)
+
+2. Check if alert file exists and is non-empty:
+   ALERT_FILE="/tmp/brokia-alert-$(date +%Y-%m-%d).txt"
+   If [[ -s "$ALERT_FILE" ]]; then proceed to Slack delivery.
+
+3. Send to Slack via message tool (gateway):
+   - Read contents of $ALERT_FILE
+   - Use: message action=send channel=slack target=brokia-ai-alerts
+   - If channel_not_found error, retry with target=C0AFK08BFR8
+   - Capture the slack_ts from response if available
+
+4. Update checkpoint based on send result:
+   CHECKPOINT_FILE="/home/manpac/.openclaw/workspace/checkpoints/brokia/deadlines-$(date +%Y-%m-%d).json"
+   
+   IF send succeeded:
+   - Use jq to update: .alerts_generated[].alert_sent = true
+   - Set .alerts_generated[].slack_ts = <returned_timestamp_or_current_time>
+   - Set .dedupe.already_sent_today = true
+   - Remove any .error field if present
+   - Log: "Slack delivery confirmed"
+   
+   IF send failed:
+   - Use jq to add: .error = "Slack delivery failed: <error_message>"
+   - Keep .alerts_generated[].alert_sent = false
+   - Keep .dedupe.already_sent_today = false
+   - Log: "Slack delivery failed"
+
+5. Confirm completion with summary:
+   - Script status (success/error)
+   - Events found (T-7)
+   - Alerts pending
+   - Slack delivered: yes/no
+   - Checkpoint file path
+   - Any errors encountered",
+    "label": "brokia-t7"
+  },
+  "metadata": {
+    "version": "2.0",
+    "created": "2026-02-25",
+    "updated": "2026-02-25",
+    "skill": "/home/manpac/.openclaw/workspace/skills/brokia-deadline-alerts",
+    "script": "/home/manpac/.openclaw/workspace/skills/brokia-deadline-alerts/scripts/run.sh",
+    "slack_channel": "brokia-ai-alerts",
+    "slack_channel_id": "C0AFK08BFR8",
+    "checkpoint_dir": "/home/manpac/.openclaw/workspace/checkpoints/brokia",
+    "google_account": "tachipachi9797@gmail.com",
+    "delivery_method": "gateway_message_tool",
+    "notes": "Script is producer-only. Slack delivery performed by agentTurn via message tool."
+  }
+}

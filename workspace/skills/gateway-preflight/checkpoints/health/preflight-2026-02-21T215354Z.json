@@ -1,0 +1,29 @@
+{
+  "skill": "gateway-preflight",
+  "timestamp": "2026-02-21T21:54:04Z",
+  "status": "PASS",
+  "signature": "null",
+  "debounced": false,
+  "checks": {
+    "device_scopes": "pass",
+    "log_errors": "pass",
+    "gateway_status": "pass",
+    "gateway_reachable": "pass",
+    "pending_requests": "pass"
+  },
+  "evidence": {
+    "device_scopes": "2 paired device(s) have operator.write scope",
+    "log_errors": "no recent pairing errors in logs",
+    "gateway_status": "status clean",
+    "gateway_reachable": "curl succeeded",
+    "pending_requests": "no pending/repair requests"
+  },
+  "details": {
+    "pending_excerpt": "",
+    "devices_excerpt": "Paired (2);│ 2032da1e138f763dd5c6fae02d8 │ operator   │ operator.admin, operator.approvals, operator.  │ operator   │            │;│ 0dc79f61433be1ecf4a61b195c8 │            │ pairing, operator.read, operator.write         │            │            │;│ faf493f49037ce108adc8f85dc4 │ operator   │ operator.admin, operator.approvals, operator.  │ operator   │            │;│ b327c42be6804435a9c9979e1c9 │            │ pairing, operator.write                   ",
+    "status_excerpt": "Failed to discover vLLM models: TypeError: fetch failed Failed to discover vLLM models: TypeError: fetch failed OpenClaw status  Overview ┌─────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────┐ │ "
+  },
+  "next_steps": [
+    "All checks passed; no action needed."
+  ]
+}

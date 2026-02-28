@@ -1,0 +1,931 @@
+TITLE: Rediseño App de Comercios - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4185227265
+SOURCE: 4185227265__Redisen╠âo_App_de_Comercios_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para elRediseño de la App de Comercios, a cargo de Lucas Torres,,y Marcelo Cáceres.
+Las horas estimadas son:
+Fecha de Inicio:TBD
+Fecha de Entrega:TBD
+Configuraciones Iniciales
+Tarea
+
+Estimación (hs)
+
+Jira
+
+Definir paleta de colores (theme) para modo Claro y Oscuro y condicionar las vistas en base a la configuración del usuario.
+Por defecto que tome el sistema operativo
+
+El usuario va a poder elegir la opción de arriba o un modo en específico
+
+4
+
+https://bancard.atlassian.net/browse/EV-374?atlOrigin=eyJpIjoiNTNjZGQxNDM2MTg4NDI4Mjg2YTgyNzg3NzhlMTZhZTUiLCJwIjoiaiJ9
+
+[Frontend] Investigar que tenemos que hacer al momento de cambiar de usuario en el mismo dispositivo
+
+https://bancard.atlassian.net/browse/EV-375?atlOrigin=eyJpIjoiYTk4ODljOGI0NTZiNDdiM2ExOGVhMzA5MDNiNTIzZWMiLCJwIjoiaiJ9
+
+[Frontend] Reestructuración de endpoints
+Reestructuración de RTKQuery en solo 2 createApis
+
+24
+
+[Frontend] Instalación e implementación de Unistyles para aplicar theming y diseños condicionales
+
+12
+
+Total Desarrollo
+
+Home,Menu y Notificaciones
+Tarea
+
+Estimación (hs)
+
+[Frontend] Implementar vista de clientesin Servicio Activo
+
+8
+
+https://bancard.atlassian.net/browse/EV-363?atlOrigin=eyJpIjoiN2Y5ODdhYjE0MDAxNDI5ODg1NzViNDc4ZjgzNGYxZGQiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista de cliente conServicio Activo pero sin movimientos
+Abre uploader nativo para cargar imagen
+
+4
+
+https://bancard.atlassian.net/browse/EV-364?atlOrigin=eyJpIjoiY2IxMzBlZWFhZjdlNGQxYjhhZTRkZWZjNDRjZTVmYzIiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deHOME. Debe incluir:
+Opción para desplegar Menú Hamburguesa → Despliega menú lateral
+
+Logo de Bancard (B )
+
+Logo de Whatsapp → abre whatsapp business para comunicarse con soporte de Bancard
+
+Campana para abrir menú de notificaciones → Despliega menú de notificaciones
+
+Resúmen de ventas del día → Despliega el total en Gs. de las ventas del día
+
+Lista de ventas del día → Lista todas las ventas del día
+
+Botón de Solicitar Asistencia → comunica telefónicamente con soporte de Bancard
+
+Boton de cobrar → Lleva a flujo de cobro
+
+Próxima transferencia → Monto de la próxima transferencia
+
+Fecha estimada de Próxima transferencia
+
+16
+
+https://bancard.atlassian.net/browse/EV-365?atlOrigin=eyJpIjoiZjhiYzhjNTg4ODNiNGFlNjg0NjlhMGU4ZGIyYjg2OGIiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista dedetalle de movimiento
+
+8
+
+https://bancard.atlassian.net/browse/EV-366?atlOrigin=eyJpIjoiNGQ5OGJhN2VmZDNkNDcwNDhmNjlkN2YxYjNkYjE5NzkiLCJwIjoiaiJ9
+
+[Backend] Crear puente desde commerces-app-service para traer detalle de movimientos
+
+4
+
+https://bancard.atlassian.net/browse/EV-367?atlOrigin=eyJpIjoiOTI3NDA0NTFlNGE2NDVmZDkwMDU2NTE5OTlmNjk2MmEiLCJwIjoiaiJ9
+
+[Frontend] ImplementarMenú hambrguesa+ investigación del dropdown dentro del menu
+Implementar bottom sheet de sucursales
+
+Implementar bottom sheet de comercios
+
+Si tiene solo una sucursal / comercio, que el dropdown quede estático
+
+16
+
+https://bancard.atlassian.net/browse/EV-368?atlOrigin=eyJpIjoiNDRjYjNlMTA0NmE0NGNhYTkzN2I2ZTU5YjdlYWUxYjAiLCJwIjoiaiJ9
+
+[Backend] Investigar si hay que implementar algo del lado del backend para el cambio de comercio
+
+4
+
+https://bancard.atlassian.net/browse/EV-369?atlOrigin=eyJpIjoiYWI2Mzc1ZjI0YzU0NDcxOTgwOGM4MWQ4NjRmYmYxZGQiLCJwIjoiaiJ9
+
+[Backend] Crear puente en commerces-app-service para obtener la lista de comercios
+
+https://bancard.atlassian.net/browse/EV-376?atlOrigin=eyJpIjoiOTkyOTkyYzgzYzQwNGZiZDk4MTllMTAzZjA2OWE3MDgiLCJwIjoiaiJ9
+
+DEFINIR NOTIFICACIONES
+
+Total Desarrollo
+
+Login y Recuperar Contraseña
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] CrearSplash Screenpara cuando carga la app
+Esto requiere investigación y utilizar librerías externas que soporten animaciones
+
+16
+
+https://bancard.atlassian.net/browse/EV-354?atlOrigin=eyJpIjoiZGU3OGIwYjY5NTY3NGEwZGJhOTU5N2RmMDg3Y2E2MzciLCJwIjoiaiJ9
+
+[Frontend]Implementar vista de Login
+Si el usuario ya se logueó desde este dispositivo, cargamos el mail al abrir la app
+
+Agregar opción de Recuperar contraseña
+
+Botón de registro
+
+Links de Ayuda, Términos de uso y Políticas de Privacidad.
+
+Agregar validaciones cuando el ingreso de los datos es incorrecto
+
+12
+
+https://bancard.atlassian.net/browse/EV-355?atlOrigin=eyJpIjoiYWQwYTRhYTFiY2VkNDJmOWFjYzFhNjdiMTFlYzJmNjUiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista dehabilitar biometríacuando el usuario no lo tiene habilitado.
+Esto se muestra solo una vez en caso de que el usuario no lo tenga activado
+
+6
+
+https://bancard.atlassian.net/browse/EV-356?atlOrigin=eyJpIjoiZTFkYjEyMTc2YmRiNDFkZmE5NzczNmMxYTZlMmM3MTQiLCJwIjoiaiJ9
+
+Permitir 3 intentos de logueo → Revisar endpoints de auth
+
+8
+
+https://bancard.atlassian.net/browse/EV-357?atlOrigin=eyJpIjoiZGUyZTdlOTE0NTIyNDhiOWJiYTkyYWNlNzQ4NmU5ZmIiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deusuario bloqueado con opción de recuperar contraseña
+Esta vista es cuando el usuario es bloqueado por 3 intentos fallidos, pero aún permitimos que se loguee
+
+4
+
+https://bancard.atlassian.net/browse/EV-358?atlOrigin=eyJpIjoiYTE4ZTY4NDYyNDdlNDNkMmE3MmQ1MTgzNjg0ZDg3Y2MiLCJwIjoiaiJ9
+
+[Frontend] Implementarvista cuando usuario intenta loguearse por más de que ya estuviese bloqueado
+
+4
+
+https://bancard.atlassian.net/browse/EV-359?atlOrigin=eyJpIjoiZjk5NDBkOGU5YTc5NDE4NmIzOGMxYjcyZjQ5ZmQ0YmEiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deRecuperar Contraseña
+El usuario va a poder ingresar tu mail para que se le envíe el mail con el link de recuperación
+
+Agregar opción de reenviar mail cada 60 segundos
+
+Se le enviará un mail al usuario con un link para recuperar contraseña. Ese link va a dirigir al usuario a la vista deRecuperar contraseña
+
+8
+
+https://bancard.atlassian.net/browse/EV-360?atlOrigin=eyJpIjoiOWVhZmZhMjU0MmZlNDYwZmJmZGVmMWE1NzA4ZDhkOTYiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deIngresar Código enviado por sms para Recuperar Contraseña
+El usuario va a ser redirigido a esta vista desde el mail
+
+Se le enviará un mensaje de texto al teléfono asociado a la cuenta
+
+El usuario podrá reenviar el mensaje cada 60 segundos
+
+Agregar contador y mensajes de éxito y error.
+
+12
+
+[Frontend] Implementar vista deCrear nueva contraseña
+Crear indicadores dinámicos que se actualicen en base a lo que el usuario escribe
+
+Permitir la opción de mostrar / ocultar contraseña
+
+Agregar mensaje de error si no coinciden
+
+20
+
+https://bancard.atlassian.net/browse/PRAB-40?atlOrigin=eyJpIjoiNDU3Njk5ZWRhNmJjNDJjZmJmZDVjNjk1NmNmMmY1MDIiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deNueva contraseña creada
+Incluir botón de Iniciar sesión en la app que redirigirá al usuario al inicio.
+
+4
+
+https://bancard.atlassian.net/browse/PRAB-42?atlOrigin=eyJpIjoiYTNmZGY2YjlhYTI0NDZlZWJiYTNlMTA3YWZjOTMwOTYiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista de usuario bloqueado porfalta de datos
+
+4
+
+https://bancard.atlassian.net/browse/EV-361?atlOrigin=eyJpIjoiNmJlNjFkZmMwMmVmNDk1OTgyY2ZhOGVhNGZhNTg2NTIiLCJwIjoiaiJ9
+
+Dispositivo Seguro
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] Implementar vista deRegistrar Dispositivoen primer inicio de sesión de un usuario
+Esta vista es únicamente para el primer registro de un dispositivo
+
+Una vez seleccionado Registrar dispositivo se le enviará un mail al usuario con un OTP
+
+4
+
+[Frontend] Implementar vista deRegistrar Dispositivocuando el usuario ingresa con un nuevo Dispositivo
+Esta vista se muestra cuando la cuenta ya tiene un dispositivo asociado
+
+Una vez seleccionado Registrar dispositivo se le enviará un mail al usuario con un OTP
+
+4
+
+[Frontend] Implementar vista deIngreso de OTPpara confirmar registro de dispositivo
+Considerar validaciones de ingreso correcto / incorrecto
+
+Agregar mensajes de error
+
+Crear contador para volver a enviar OTP luego de 60 segundos
+
+12
+
+[Frontend] Implementar vista para ingresarnombre de dispositivo
+Este campo es opcional
+
+Una vez ingresado y aceptado, el usuario es redirigido a la pantalla de inicio de la app
+
+8
+
+[Frontend] Implementar vista deRegistrar Dispositivocuando se cumplieron los 60 días de su primer registro
+
+4
+
+[Frontend] Implementar vista deLista de Dispositivos Seguros
+Crear empty state
+
+20
+
+[Frontend] Implementarpop up de confirmaciónpara la eliminación de un Dispositivo Seguro
+
+8
+
+[Backend] Crear puente en commerces-app-services para registrar un dispositivo seguro
+
+[Backend] Crear puente en commerces-app-services para listar dispositivos seguros
+
+[Backend] Crear puente en commerces-app-services para enviar OTP de registro
+
+[Backend] Crear puente en commerces-app-services para validar OTP de registro de OTP
+
+[Backend] Crear puente en commerces-app-services para actualizar dispositivo seguro
+
+[Backend] Crear puente en commerces-app-services para eliminar dispositivo seguro
+
+Cobrar
+Tarea
+
+Estimación
+
+Jira
+
+Tareas Generales
+
+[Frontend] Implementar vistapara insertar un monto a cobrar
+Permitir al usuario seleccionar entre Dólares y Guaraníes
+
+En el caso que seleccionen dólares, enviar directo a PIX
+
+12
+
+https://bancard.atlassian.net/browse/EV-378?atlOrigin=eyJpIjoiNDkzOGVjZGU3ZTRiNDAzMmI4ZjU1ZWYxZDQ3ZTQ1OWIiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista paraElegir Método de Cobro
+Si es la primera vez que cobra, desplegar bottom sheet de selección de sucursales
+
+Listar todas las opciones de cobro disponibles
+
+Permitir al usuario navegar entre sucursales (solo si tiene más de una sucursal)
+
+Por defecto, se mostrará la última sucursal en la que se realizó un cobro
+
+24
+
+https://bancard.atlassian.net/browse/PRAB-41?atlOrigin=eyJpIjoiNjcyMDU4OGMyMjNmNGE3Mjk1NjFlNmVkZDdhMmIzOGUiLCJwIjoiaiJ9
+
+[Frontend] Implementarbottom sheet para seleccionar sucursal
+Permitir al usuario buscar por nombre de sucursal
+
+8
+
+[Frontend] Implementar vista con animación deGenerando Pago
+
+16
+
+[Frontend] Implementar vista dePago Exitoso
+
+12
+
+[Frontend] Implementar vista dePago Rechazado / Fallido
+
+12
+
+QR Bancard
+
+[Frontend] Implementar vista dePago con QR
+Añadir opción nativa de compartir
+
+12
+
+https://bancard.atlassian.net/browse/EV-382?atlOrigin=eyJpIjoiMzc1OWY5ZWJhODJiNDUwOThhNDY1NGUyOGIxZTFiZDYiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deQR expirado
+Permitir la opción de volver a generar QR
+
+6
+
+https://bancard.atlassian.net/browse/EV-383?atlOrigin=eyJpIjoiNGUyN2M0MWExMDI5NDEwNzlmYzA4NDJiMmViMDcxYWYiLCJwIjoiaiJ9
+
+[Frontend] Implementar vistas de animación, pago exitoso y pago fallido
+
+4
+
+https://bancard.atlassian.net/browse/EV-384?atlOrigin=eyJpIjoiNGQwODM2MzRhMWE1NGE3MmIzMmVlYWViNDllYjg4ZTYiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deComprobante de TC
+
+20
+
+https://bancard.atlassian.net/browse/EV-385?atlOrigin=eyJpIjoiNWFlZDA4MjAzZTlkNDFmMTgyNTIxN2E3Mzc1NWNmYmUiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deComprobante de TD
+
+12
+
+https://bancard.atlassian.net/browse/EV-386?atlOrigin=eyJpIjoiODIzNTRhYTBmMmY2NDE5YmE2NTE4MGFkNGExMDdiOGEiLCJwIjoiaiJ9
+
+[Backend] Implementar método para traer información de los pagos para generar el comprobante
+
+Pago con Tarjeta de Débito y en Cuotas
+
+[Frontend] Crear vista paraSelección de Cuotaspara pagos en cuotas
+
+10
+
+https://bancard.atlassian.net/browse/EV-387?atlOrigin=eyJpIjoiNDlhYzE2MjY2OWIwNDBmZGE0NjE4MjEzOTk2MGNhZTAiLCJwIjoiaiJ9
+
+[Frontend] Llamar al flujo del SDK de Paygoal
+Procesar respuesta
+
+Desplegar vistas de carga y pago exitoso / fallido
+
+12
+
+https://bancard.atlassian.net/browse/EV-388?atlOrigin=eyJpIjoiMGRhMWEwMzcyNGY5NDZkMjllNDQ0Y2EyMjRjN2I5YTUiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista de QR sin monto fijo
+
+4
+
+Ver tema facturación electrónica
+
+PIX
+
+[Frontend] Implementar vista paraIngreso de Datos del Comprador de PIX
+Agregar animación de Validación de CPF en botón de confirmar
+
+Agregar validación para campo CPF y mensaje de error
+
+12
+
+https://bancard.atlassian.net/browse/EV-389?atlOrigin=eyJpIjoiOGQzYjJkYTczODdjNDU3MTljNDQ1YmQxZjQxNDE2MDAiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deQR para pagos con PIX
+Añadir función de Compartir nativa
+
+8
+
+https://bancard.atlassian.net/browse/EV-390?atlOrigin=eyJpIjoiYjhmNzA1MjMwNmE0NGNhZWEzNGNmYmEwZDhkMTgwMGUiLCJwIjoiaiJ9
+
+[Frontend] Implementar vistas de animación, pago exitoso y pago fallido
+
+4
+
+https://bancard.atlassian.net/browse/EV-377?atlOrigin=eyJpIjoiZjg4NTRmODAyMzlhNDBkMDg2YWRlM2UwYmUyZDU3MGIiLCJwIjoiaiJ9
+
+[Frontend] Implementar vista deComprobante de PIX
+Incluir opción nativa para Compartir comprobante
+
+Incluir opción para generar Factura Electrónica
+
+12
+
+TPago
+
+[Frontend] Implementarvistas de cargacon animación
+
+4
+
+[Frontend] Implementar vista de Link de Pago
+Incluir opción de copiar link
+
+incluir opción nativa de compartir link
+
+Implementar cambio a mensaje cuando el link eslink de pago copiado
+
+12
+
+[Frontend] Implementar vista de Link de Pago sin monto fijo
+
+4
+
+Facturación Electrónica
+
+[Frontend] Implementar vista deIngreso de Datos de Factura
+
+30
+
+[Frontend] Implementar vista deconfirmación de Factura Enviada
+
+12
+
+[Backend] Implementar método para Enviar datos de Factura en commerces-app-service
+
+Movimientos
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] Implementar vista deMovimientos / Ventas
+Incluir pestañas de Ventas y Transferencias
+
+24
+
+[Frontend] Implementar vista con Empty State
+
+6
+
+[Frontend] Implementar función deFiltraren la vista de Movimientos / Ventas
+Esta vista se abre como una bottom sheet
+
+Incluir mensaje para cuando no se encuentran movimientos
+
+12
+
+[Frontend] Implementar vista deDetalles de Movimientos
+
+8
+
+[Backend] Integración con Clickhouse para obtener todos los movimientos - TBD
+
+[Backend] Integración con Clickhouse para obtener detalle de los movimientos - TBD
+
+[Frontend] Implementar vista deAcreditaciones
+Implementar funcionalidad para cargar más acreditaciones
+
+24
+
+[Frontend] Vamos a tener detalle de acreditaciones?
+
+Facturación Electrónica
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] Implementar vista para usuario queno tiene Facturación Electrónicacontratada
+Agregar enlace de “Ver más información”
+
+Agregar botón de “Solicitar Factura Electrónica”
+
+10
+
+[Frontend] Implementar vista deSolicitud de Factura enviada
+Agregar opción de Volver al incio
+
+4
+
+[Backend] Implementar método para consultar si el usuario tiene el servicio de Facturación Electrónica Contratada en commerces-app-service
+
+[Backend] Implementar método para solicitar servicio de Facturación Electrónica
+
+[Frontend] Implementar vista de cliente con el servicio deFacturación Electrónica contratado pero sin Facturas creadas
+Agregar opción de crear nueva factura
+
+4
+
+[Backend] Implementar método para consultar facturas del cliente en commerce-app-service
+
+[Frontend] Implementar vista de formulario paracrear nueva factura
+Implementar botón paracrear un nuevo conceptopara la factura. El usuario puede agregar y eliminar cuantos quiera.
+
+Al hacer click en enviar Factura, se envía la información de la factura a invoices-service
+
+Siempre tiene que haber al menos 1 concepto
+
+32
+
+[Backend] Implementar método para enviar datos de la factura a invoices-services en commerce-app-service
+
+[Frontend] Implementar vista paraConfirmar datos previo a enviar la factura
+Incluir variante con montos adicionales
+
+Incluir botón para volver atrás
+
+16
+
+[Frontend] Implementar vista deFactura Enviada
+Agregar opción nativa de compartir factura
+
+Agregar funcionalidad para volver al inicio de Facturación electrónica
+
+8
+
+[Frontend] Implementar vista conListado de Facturascuando un cliente tiene facturas creadas
+Permitir la opción de cargar de a X facturas → a definir
+
+Permitir la opción de crear una factura
+
+Permitir la opción de filtrar por fechas
+
+12
+
+[Frontend] Implementarfiltrado por fecha
+Incluir empty state
+
+6
+
+[Frontend] Implementar vista deDetalle de Factura
+Incluir opción de Compartir
+
+Incluir opción de Descargar PDF (A confirmar)
+
+Inlcuir opción de Anular Factura
+
+Incluir variante de Factura Anulada
+
+10
+
+[Frontend] Implementar funcionalidad para descargar Factura como PDF
+
+A definir
+
+[Frontend] Implementar vista de Anulación de Factura Electrónica
+Listar distintas opciones
+
+Permitir al usuario ingresar otro motivo como texto
+
+12
+
+[Backend] Implementar método para enviar solicitud de anulación de factura
+
+[Frontend] Implementaranimación de Anulación de Factura
+
+4
+
+[Frontend] Implementar vista deAnulación exitosa con detalle
+
+8
+
+Soporte
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend]Implementar vista de soporte
+Desplegar lista de tickets en base a filtrado
+
+Incluir menú de filtrado
+
+Incluir botón de “Nuevo Ticket”
+
+16
+
+[Frontend]Implementar vista de filtrados
+Inlcuir filtros por estado y por tipo de ayuda
+
+16
+
+[Frontend] Implementarvista de detalle de ticket
+Implementarvariante con archivos adjuntos
+
+10
+
+[Frontend] Implementar bottom sheet para elegirtipo de Soporte a solicitar
+Implementarfunción de buscador
+
+16
+
+[Frontend] - Solicitar Bovina - Implementar vista paraelegir modelo de bovina
+
+16
+
+[Frontend] - Solicitar Bovina - Implementar vista paraincluir detalles de solicitud
+
+24
+
+[Frontend] - Solicitar Bovina - Implementar vista paraconfirmar solicitud de bovina
+
+12
+
+[Frontend] - Solicitar Bovina - Implementar vista deéxito de solicitud de Bovina
+Incluir botón de volver a Soporte
+
+8
+
+[Frontend] - Solicitar Anulación - Implementar vista desolicitud de anulación
+
+24
+
+[Frontend] - Solicitar Anulación - Implementar vista deConfirmación de solicitud
+
+8
+
+[Frontend] - Solicitar Anulación - Implementar vista deéxito de solicitud de Anulación
+Incluir botón para volver a Soporte
+
+12
+
+[Frontend] - Solicitar Cargador - Implementar vista paraelegir modelo de cargador
+
+18
+
+[Frontend] - Solicitar Cargador - Implementar vista paraingresar detalles de cargador
+
+24
+
+[Frontend] - Solicitar Cargador - Implementar vista deConfirmación de solicitud de cargador
+
+12
+
+[Frontend] - Solicitar Cargador - Implementar vista deéxito de solicitud de cargador
+Incluir botón de volver a soporte
+
+12
+
+[Frontend] - Tengo un problema con mi pos - Implementar vista paraelegir modelo de pos
+
+18
+
+[Frontend] - Tengo un problema con mi pos - Implementar vista paraingresar detalles del problema
+
+24
+
+[Frontend] - Tengo un problema con mi pos - Implementar vista deconfirmación de solicitud de problema
+
+16
+
+[Frontend] - Tengo un problema con mi pos - Implementar vista deéxito de ingreso de solicitud
+
+12
+
+[Frontend] - Conciliación con diferencia - Implementarformulario de Conciliación con diferencia
+Implementar selector de sucursales
+
+Implementar selector de fecha
+
+Implementar carga de archivos
+
+40
+
+[Frontend] - Conciliación con diferencia - Implementar vista deconfirmación de solicitud
+
+18
+
+[Frontend] - Conciliación con diferencia - Implementar vista deéxito de solicitud
+
+12
+
+[Frontend] - Soporte de vPos - Implementar vista dedetalle de solicitud
+Implementar selector de sucursales
+
+Implementar selector de fecha
+
+Implementar carga de archivos
+
+24
+
+[Frontend] - Soporte de vPos - Implementar vista deconfirmación de solicitud de soporte
+
+12
+
+[Frontend] - Soporte de vPos - Implementar vista deéxito de envío de solicitud
+
+8
+
+[Frontend] - Soporte de QR - Implementar vista desoporte de QR
+Implementar selector de sucursales
+
+Implementar selector de fechas
+
+Implementar carga de archivos
+
+24
+
+[Frontend] - Soporte de QR - Implementar vista deconfirmación de solicitud
+
+12
+
+[Frontend] - Soporte de QR - Implementar vista deéxito de envío de formulario
+
+8
+
+[Frontend] - Soporte de TPago - Implementar vista deformulario de soporte de TPago
+Implementar selector de sucursales
+
+Implementar selector de fechas
+
+Implementar carga de archivos
+
+24
+
+[Frontend] - Soporte de TPago - Implementar vista deconfirmación de solicitud de TPago
+
+12
+
+[Frontend] - Soporte de TPago - Implementar vista deéxito de envío de formulario
+
+8
+
+[Frontend] - Soporte de IC - Implementar vista deingreso de detalles de solicitud
+Implementar selector de sucursales
+
+Implementar selector de fechas
+
+Implementar carga de archivos
+
+18
+
+[Frontend] - Soporte de IC - Implementar vista deconfirmación de solicitud de IC
+
+12
+
+[Frontend] - Soporte IC - Implementar vista de éxito deenvío de solicitud
+
+8
+
+[Frontend] - Otros (Soporte Técnico) - Implementar vista deingreso de detalles de solicitud de soporte técnico
+Implementar selector de sucursales
+
+Implementar selector de fechas
+
+Implementar carga de archivos
+
+18
+
+[Frontend] - Otros (Soporte Técnico) - Implementarvista de confirmación de solicitud
+
+12
+
+[Frontend] - Otros (Soporte Técnico) - Implementar vista deéxito de envío de formulario
+
+8
+
+Gestión de Usuario
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] - Gestión de Usuarios - Implementar vista conlista de Usuarios
+Incluir buscador
+
+Implementar vista de empty state cuando labúsqueda no coincide con el input del usuario
+
+Incluir filtrado por Rol
+
+Incluir opción de crear usuario
+
+32
+
+[Frontend] - Gestión de Usuarios - Implementar vista deDetalle de Usuario
+Tener en cuenta restricciones de que usuario puede acceder a estas vistas y editar
+
+12
+
+[Frontend] - Gestión de Usuarios - Implementar modal deeliminación de Usuario
+
+8
+
+[Frontend] - Gestión de Usuarios - Implementarmodal de Calendariopara seleccionar fecha de nacimiento del usuario
+
+20
+
+[Frontend] - Gestión de Usuarios - Implementar vista deEdición de Detalles de Usuario
+Tener en cuenta restricciones de que usuario puede acceder a estas vistas y editar
+
+Implementar para los distintos roles asignados
+
+40
+
+[Frontend] - Gestión de Usuarios - Implementar vista deCrear Usuario
+Incluir selectores de fecha, seco y rol
+
+16
+
+[Frontend] - Gestión de Usuarios - Implementar vista deSolicitud de Usuario SuperAdmin
+
+8
+
+[Frontend] - Gestión de Usuarios - Implementar vista deConfirmación de solicitud para creación de Usuario Super Admin
+
+12
+
+[Frontend] - Gestión de Usuarios - Implementar vista deSolicitud enviada
+
+8
+
+[Frontend] - Gestión de Usuarios - Implementar vista deEditar Permisos de Rol de Usuario
+Falta la de usuario general?
+
+32
+
+[Frontend] - Gestión de Usuarios - Implementar vista deResumen de Usuario creado
+
+12
+
+[Frontend] - Gestión de Usuarios - Implementar vista deConfirmación de Usuariocreado
+
+8
+
+Mi Cuenta
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] - Mi Cuenta - Implementar vista deDetalles de Mi Cuenta
+Incluir cambio entre pestaña de Datos de Acceso y Rol
+
+36
+
+[Frontend] - Mi Cuenta - Implementar vista deDetalles de Rol
+Incluir opción de Editar rol, que navega al usuario al flujo de Gestión de Usuarios
+
+12
+
+[Frontend] - Mi Cuenta - Implementar vista deEditar Perfil
+
+14
+
+[Frontend] - Mi Cuenta - Implementar bottom sheet deIngresar Contraseñacuando el usuario cambia email y/o número de teléfono
+
+12
+
+[Frontend] - Mi Cuenta - Implementar vista deActualización de Datos personales exitosa
+
+2
+
+[Frontend] - Mi Cuenta - Implementar vistaIngresar contraseña actual previo a Ingresar Nueva Contraseña
+
+12
+
+[Frontend] - Mi Cuenta - Implementar vista deIngresar Nueva Contraseña
+Incluir validaciones
+
+Actualizar vista a medida que usuario tipea
+
+Incluir opción de ver contraseña
+
+30
+
+[Frontend] - Mi Cuenta - Implementar vista deActualización de Contraseña exitosa
+
+2
+
+[Frontend] - Mi Cuenta - Implementar bottom sheet paraactivar / desactivar biometría
+
+12
+
+Licencias
+Tarea
+
+Estimación
+
+Jira
+
+[Frontend] - Licencias - Implementar vista deCelulares Tokefón
+
+36
+
+[Frontend] - Licencias - Implementar vista deDetalles de Usuario
+Implementar funcionalidad para Activar celular
+
+Implementar funcionalidad para Desactivar celular
+
+20
+
+[Frontend] - Licencias - Implementar pop up paraingresar nuevo nombre a dispositivo
+
+12
+
+[Backend] - Implementar funcionalidad en commerce-app-services para Activar y Desactivar celular tokefon

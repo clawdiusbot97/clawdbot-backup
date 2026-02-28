@@ -1,0 +1,16 @@
+TITLE: Proceso de Desarrollo
+DOMAIN: General
+PRIORITY: Media
+ID: 2269675523
+SOURCE: 2269675523__Proceso_de_Desarrollo.json
+
+---
+
+Ahora que sos parte de Bancard, es hora de hablar de cómo hacemos las cosas por acá, especialmente en desarrollo. Esta parte del onboarding es como un mapa: te vamos a mostrar las herramientas, los procesos y todo lo que necesitas para trabajar bien en nuestros proyectos.
+Primero, vamos a ver las tecnologías con las que trabajamos, desde los lenguajes de programación hasta cómo protegemos nuestros datos, todo tiene su porqué en Bancard.
+Luego, te vamos a contar sobre nuestro estilo de trabajo. Somos un equipo grande, y para que todo marche bien, seguimos un método ágil. Te vamos a mostrar cómo configuramos nuestros ambientes de desarrollo, staging y producción, para que sepas dónde y cómo hacer tu magia.
+Lo más importante es que acá en Bancard trabajamos juntos. Aunque somos muchos, cada uno aporta algo único. Por eso, la comunicación y el apoyo son claves. En esta sección, vas a aprender cómo colaboramos entre todos y cómo nos aseguramos de que todo lo que hacemos esté bien organizado y sea de calidad.
+Así que, prepárate para empezar 😎 Vas a aprender un montón y también vas a tener la oportunidad de aportar tus ideas y habilidades 🚀
+
+https://docs.google.com/presentation/d/1mgK7uaLlQPvZuZ17K0ZD7ORi-ANmpcMSXcr2sZeFoOg/edit#slide=id.g22abaddedca_0_68Siguiente Paso →
+Hosts Configuration

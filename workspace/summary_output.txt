@@ -1,0 +1,36 @@
+# Nightly Summary — 2026-02-22
+
+## Health
+_No output_
+
+## Cost
+# Cost Guard — 2026-02-22
+
+- Error-like events: **41**
+- Timed entries observed: **3**
+
+## Suggested actions
+- Increase cache TTL for local_llm if repeated prompts.
+- Reduce max_tokens for nightly prompts (128-192).
+- Skip heavy jobs when thresholds not met.
+
+## ⚠️ Spike detected
+SPIKE: true
+- Error volume above threshold.
+
+## Backlog
+# Backlog Top 3
+
+Fallback (no LLM):
+- Consolidar cron duplicados morning briefing.
+- Migrar Slack deliveries a channel IDs en todos los jobs.
+- Añadir tests smoke para nightly ops.
+
+
+## Trends
+_No output_
+
+## Inbox
+# Inbox Digest
+
+Skipped: no new relevant emails/signals found.

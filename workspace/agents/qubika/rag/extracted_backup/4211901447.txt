@@ -1,0 +1,65 @@
+TITLE: Habilitar campo de cuotas para tarjetas internacionales / intracountries - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4211901447
+SOURCE: 4211901447__Habilitar_campo_de_cuotas_para_tarjetas_internacionales___intracountries_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la funcionalidad dehabilitar campo de cuotas para tarjetas internacionales / intracountries, a cargo de.
+Las horas estimadas son:5 días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Eliminar condicional para ocultar el input de cuotas cuando es internacional
+Mostrar en la etiqueta de “Cuotas” que solo aplica para Paraguay.
+
+3
+
+payment-link-portal
+
+Validar que en pagos con tarjetas catastradas y pagos ocasionales se corran las mismas validaciones.
+
+6
+
+payment-link-portal
+
+Validar que se envían los datos correctos al servicio y que no afecte a las suscripciones.
+
+6
+
+payment-link-portal /
+payment-link-service
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+18
+
+Total Desarrollo
+
+33
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+5
+
+Total Desarrollo + Gestión
+
+38

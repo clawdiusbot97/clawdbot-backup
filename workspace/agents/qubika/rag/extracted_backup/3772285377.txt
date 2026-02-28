@@ -1,0 +1,75 @@
+TITLE: Refactor TPago - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3772285377
+SOURCE: 3772285377__Refactor_TPago_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para el refactor del menú principal de TPago, a cargo de.
+Las horas estimadas son:200
+Fecha de Inicio:Miércoles
+Fecha estimada de Entrega:Lunes
+Tarea
+
+Estimación (hs)
+
+Actualizar filtro de Planes
+Este filtro deberá desplegar los primeros 10 planes que se traigan en la query, y deberá tener la opción de buscar por nombre, desplegando resultados a medida que el usuario escriba.
+
+40
+
+Actualizar estilo de paginado al nuevo diseño
+Investigar si podemos agregar una gema @pagy para trabajar con el paginado.
+
+24
+
+Actualizar estilo de los filtros
+
+16
+
+Agregar columna de selección múltiple de pagos
+Requiere investigación y también incluye lógica de los checkbox
+
+16
+
+Crear lógica para manejar los checkbox
+Investigar si se puede lograr con una gema o buscamos algo más custom
+
+16
+
+Crear lógica para reintento de pagos
+
+24
+
+Agregar filtro de Estado
+
+8
+
+Agregar columna de Amount
+
+8
+
+Actualización de Tabla
+Estilos, nombres de columnas, colores
+
+16
+
+Desplegar cambios y gestionar correcciones
+Corregir PRs según feedback.
+Realizar el deployment.
+Asegurar estabilidad tras la implementación.
+
+16
+
+Total Desarrollo
+
+174
+
+Gestión 15%
+
+26
+
+Desarrollo + Gestion
+
+200

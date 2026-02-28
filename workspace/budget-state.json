@@ -1,0 +1,17 @@
+{
+  "openrouter_alert_sent": false,
+  "openrouter_hardstop_sent": false,
+  "codex_alert_sent": false,
+  "codex_hardstop_sent": false,
+  "paused": false,
+  "last_report": "2026-02-17 codex=$5.0855 openrouter=$0.2636 paused=False",
+  "openrouter_cost_today": 0.263584,
+  "codex_cost_today": 5.085479,
+  "openrouter_total_today": 0.263584,
+  "codex_total_today": 5.085479,
+  "totals": {
+    "date_utc": "2026-02-17",
+    "openai-codex": 5.085479,
+    "openrouter": 0.263584
+  }
+}

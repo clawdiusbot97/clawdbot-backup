@@ -1,0 +1,89 @@
+TITLE: Actualización de tarjetas vencidas en el proceso de cobro de suscripciones - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4230610945
+SOURCE: 4230610945__Actualizacio╠ün_de_tarjetas_vencidas_en_el_proceso_de_cobro_de_suscripciones_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la funcionalidad de actualizar tarjetas vencidas(de forma asíncrona) durante el proceso de cobro de suscripciones, a cargo de.
+Las horas estimadas son:62 ~ 10 días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Crear lógica y servicio para llamar al servicio RPG.
+Nuevo archivo YML
+
+Nueva capa de service
+
+Nueva capa de lógica
+
+10
+
+payment-link-service
+
+Crear una nueva tabla para auditoría de actualización de tarjetas.
+
+3
+
+payment-link-service
+
+Crear proceso asíncrono que llame al servicio RPG, actualize la tarjeta y re-intente el pago.
+Crear registros de log en la tabla cuando se actualiza la tarjeta.
+
+Loggear el proceso en un logger nuevo
+
+20
+
+payment-link-service
+
+Modificar lógica de obtener configuraciones para aceptar listas y separar por comas los valores.
+
+6
+
+payment-link-service
+
+Verificar si el pago falló por tarjeta vencida, clave cambiada o tarjeta perdida. Encolar la tarea en caso afirmativo.
+Solo aplica para tarjetas de crédito de Paraguay.
+
+Crear configuración en la base de datos de tipo array que contega los tipos de errores
+
+6
+
+payment-link-service
+
+Salida a Staging
+Integración de los flujos
+
+Tests
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+10
+
+Total Desarrollo
+
+55
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+7
+
+Total Desarrollo + Gestión
+
+62

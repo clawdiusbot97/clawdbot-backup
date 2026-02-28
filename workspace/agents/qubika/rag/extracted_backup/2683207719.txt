@@ -1,0 +1,15 @@
+TITLE: Lecciones aprendidas / piques
+DOMAIN: General
+PRIORITY: Media
+ID: 2683207719
+SOURCE: 2683207719__Lecciones_aprendidas___piques.json
+
+---
+
+Como desbloquear un usuario
+En caso de que un usuario de los portales/servicios quede bloqueado (Por ejemplo, en el portal de comercios):
+Conectarse por un cliente sql a la base de datos de auth (https://github.com/bancardsa/bancard-configurations/blob/master/bancard-auth-service/staging/common/database.yml)
+Buscar el usuario en la base (con el mail que corresponda)
+sql
+Y para desbloquearlo tirar el siguiente update:
+sql(Cambiando el user_id por el id resultado de la consulta anterior)

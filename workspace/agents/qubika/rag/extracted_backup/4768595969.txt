@@ -1,0 +1,118 @@
+TITLE: Duplicate of QR HUB - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4768595969
+SOURCE: 4768595969__Duplicate_of_QR_HUB_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para las tareas de Unificación de los QR para la iniciativa de QR Hub.
+
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+Encode y Decode
+
+Modificar método de generación de QR para incluir datos de qr-hub
+
+bancard-commons
+
+40
+
+Modificar método de decodificación de QR para incluir datos de qr-hub
+
+bancard-commons
+
+40
+
+Billing Proxy
+
+Modificar endpoint de decode_qr_code para devolver datos opcionales de qr-hub
+
+bancard-billing-service-public-proxy
+
+16
+
+Payment Link
+
+Deshabilitar QR al momento de salir de la vista
+
+tpago-portal
+
+6
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+payment-link-service
+
+8
+
+Selling
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+selling-service
+
+8
+
+Modificar endpoint de cancelación de QR para cancelar también en qr-hub
+
+selling-service
+
+8
+
+Vpos
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+vpos-service
+
+8
+
+Epos
+
+Modificar endpoint de creación de QR para agregar datos de qr-hub
+
+epos-service
+
+16
+
+Modificar endpoint de cancelación de QR para cancelar también en qr-hub
+
+epos-service
+
+8
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+Incluye todos los servicios y portales involucrados
+
+40
+
+Total desarrollo
+
+198
+
+Total gestión 10%
+
+20
+
+Total
+
+218

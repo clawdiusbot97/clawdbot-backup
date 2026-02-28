@@ -1,0 +1,14 @@
+{
+  "action": "clarify",
+  "id": "FEATURE-20260225-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "🔧 Pipeline Step: clarify\n   Item: FEATURE-20260225-001 (feature)\n   Title: Asistente virtual con voz personalizada configurable\n   Current Status: NEW\n   implementation_approved: true\n   needs_clarification: true\n   clarification_status: PENDING\n\n🧠 Delegando a wi-clarify.sh...\n🧠 Generando Clarification Report...\n   ID: FEATURE-20260225-001\n   Type: feature\n   Title: Asistente virtual con voz personalizada configurable\n\n✅ Clarification Report generado: /home/manpac/.openclaw/workspace/brokia/workitems/reports/FEATURE-20260225-001/clarification.md\n\n📋 Estado actualizado:\n   clarification_status: ASKED\n\n🎯 Próximo paso:\n   1. Review el reporte: cat /home/manpac/.openclaw/workspace/brokia/workitems/reports/FEATURE-20260225-001/clarification.md\n   2. Confirmar plan: ./scripts/wi-confirm.sh --id FEATURE-20260225-001 --plan A|B|C\n\n📝 clarification_status: PENDING → ASKED\n\n📋 Estado principal se mantiene: NEW\n\n⏳ Esperando confirmación del jefe:\n   ./scripts/wi-confirm.sh --id FEATURE-20260225-001 --plan <A|B|C>\n\n🎯 Pipeline step 'clarify' completado para FEATURE-20260225-001\n",
+  "stderr": "",
+  "duration_ms": 113,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T21:51:46.548Z",
+  "finished_at": "2026-02-25T21:51:46.661Z",
+  "id_validation": "strict"
+}

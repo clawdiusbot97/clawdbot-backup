@@ -1,0 +1,1 @@
+{"prompt": "Categorize \"Uber Trip\" into: food, transport, shopping, health, services, entertainment, other. Reply with only the category.", "response": "transport", "backend": "ollama", "timestamp": 1771462595.5163825, "ttl": 86400}

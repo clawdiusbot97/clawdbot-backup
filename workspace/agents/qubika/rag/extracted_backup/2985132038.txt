@@ -1,0 +1,89 @@
+TITLE: Número de Referencia e Historial de Pagos - Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2985132038
+SOURCE: 2985132038__Nu╠ümero_de_Referencia_e_Historial_de_Pagos_-_Estimacio╠ün.json
+
+---
+
+Estimación para las funcionalidades de # de Referencia e Historial de Transacciones.
+Fecha estimada para la entrega de # de Referencia (Laura y Joel) →
+Fecha estimada par ala entrega de Historial de Transacciones (Laura) →
+Épica
+
+Tarea
+
+Estimación (hs)
+
+Responsable
+
+Entrega
+
+Número de Referencia
+
+Agregar campo id_reference a la tabla de suscribers
+
+8
+
+Agregar campo id_reference a la tabla de payments
+
+8
+
+Agregar opción al usuario para que pueda incluir el número de referencia desde la API - payment-link-service y en external-commerce-service
+
+12
+
+Agregar campo "Numero de Referencia" al form de la suscripción, link genérico y link con monto
+
+40
+
+[Investigar] Borrar el valor del campo al copiar el link de suscripción
+
+-
+
+Ver con Jose
+
+Habilitar la opción de filtrar por número de referencia en la sección de movimientos
+
+12
+
+Habilitar la opción de filtrar por numero de referencia en la sección de suscripciones
+
+12
+
+Habilitar la opción de editar el campo Número de Referencia en la pantalla de suscriptores
+
+12
+
+Habilitar la opción de editar el campo de Numero de referencia en la pantalla de movimientos
+
+18
+
+[Investigar] Actualización en tiempo real de link de pagos
+
+12
+
+Historial de Transacciones
+
+Agregar funcionalidad para acceder a la vista de Histórico de Pago desde la vista de link con suscripción
+
+4
+
+Maquetado de pantalla de Histórico de Pago
+
+40
+
+Agregar funcionalidad para seleccionar multiples pagos
+
+16
+
+Agregar funcionalidad para reintentar pagos
+
+24
+
+[investigación] Modificar data set existente para que se acople a los datos requeridos
+
+A investigar
+Va a depender si podemos reutilizar un dataset existente, o si tenemos que crear uno desde 0.
+
+Antes del

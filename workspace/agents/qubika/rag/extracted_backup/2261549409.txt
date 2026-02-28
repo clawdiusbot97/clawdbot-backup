@@ -1,0 +1,107 @@
+TITLE: Cómo es el flujo de Deploy con Docker?
+DOMAIN: 2) Docker
+PRIORITY: Alta
+ID: 2261549409
+SOURCE: 2261549409__Co╠ümo_es_el_flujo_de_Deploy_con_Docker_.json
+
+---
+
+Introducción
+Este documento es una guía detallada de los procesos internos que ocurren al ejecutar un deploy para un servicio de Bancard dockerizado. El mismo servirá como modelo para obtener un mejor entendimiento del paso a paso de este flujo.
+Proceso delbuild
+Comienzo: Push a GitHub
+
+Jobs: tests
+
+Jobs: provide
+
+Script: provide
+
+Dockerfiles: .base
+
+Dockerfiles: .prod
+
+Final: Push de la imagen a DockerHub
+
+Proceso deldeploy
+Bancard-docker
+
+Client
+
+Registry Api
+
+Client .run
+
+Proceso delbuild
+Comienzo: Push a GitHub
+Al pushear nuestros cambios a GitHub y crear la PR, circle CI ejecutará losjobs. Estos se encuentran definidos en.circleci/config.ymlpara cualquier servicio. Hay 2 tipos de jobs definidos: tests y provide. Analizaremos en profundidad sus contenidos y forma de ejecución, pero introduciremos una convención general:testsse ejecutará siempre, para todo tipo de push a GitHub.Providecorrerá siempre y cuando la branch a la que estemos pusheando seamaster, develop, sandboxo que su nombre comience confeature/(la branch de una nueva iniciativa) oprovide/(así forzando que se corra el provide). La explicación de estosfiltrosviene de estas líneas en elconfig.ymlde, por ejemplo, vpos-service:
+
+Jobs: tests
+Entraremos más en profundidad sobre qué sucede al momento en que circle CI ejecuta el jobstests.Para ello, veamos un ejemplo devpos-service, en el archivoconfig.ymlque se encuentra en la carpeta.circleci:
+Lo primero es indicar las imágenes para docker (jruby y mysql). Seguido de esto ejecutará una serie de pasos (steps) los cuales se basan en configurar e instalar correctamente las gemas y dependencias del servicio. El procedimiento es el mismo que se ejecuta localmente: levantará el contenedor para luego ejecutar unbundle exec rspec(como se observa en el último run). Para esto ejecutará antes unapt-get updatee instalarámysql-client, moverá las clavessshpúblicas y privadas a sus respectivos directorios dentro del proyecto así como también la configuración desshy copiará e instalará las dependencias del gemfile.lock, obteniéndolas de la memoria caché. Casi al final vemos que copia todos los archivos y directorios .sample quitándoles esa terminación por su nombre original (por ejemplo, dedatabase.sample.ymladatabase.yml) y seteaBANCARD_SERVICES_ENVpara crear las bases de test.Finalizará ejecutando elbundle exec rspecque correrá los tests del servicio.
+
+Jobs: provide
+Analizaremos ahora el funcionamiento del jobsprovide. Para ello veremos nuevamente un ejemplo del config.yml devpos-service:
+
+El flujo aquí es casi idéntico al del jobtestshasta el momento en que ejecuta el run dedocker login. Como podemos observar en la imagen, este login está utilizando dos variables de entorno:$DOCKERHUB_USERNAMEy$DOCKERHUB_PASSWORD. Estas variables de entorno salen de la configuración del sitio de circle CI, más específicamente se encuentran definidas dentro deEnvironment Variablesdel submenúProject Settingsde cualquier servicio, como se muestra en la siguiente imagen:
+Si por algún motivo estas variables no estuvieran definidas, elprovidefallaría. Seguido de esto notamos otra línea nueva en elconfig.yml: run > docker/provide. Esta línea ejecutará un script que se encuentra en el directoriodockerdel servicio. Se le pasan las siguientes variables:
+config-environment: si el push es a master, entoncesproduction. Si es a sandbox, entoncessandbox.Sino,staging.
+
+config-branch:master, por defecto.
+
+project-branch: la branch a la que pusheamos nuestro commit. (ej: master, develop, feature/preauthorizations, etc).
+
+tag: adelantándonos, este será el nombre de laimagengenerada por circle CI. Si la branch comienza confeature/oprovide/, le quitara eso y el tag será el resto. Sino, el tag será el nombre de la branch.
+
+Script: provide
+El script recibe los parámetros y en base a eso setea esos valores en variables internas del script dentro de un case, como veremos en la siguiente imagen. A los parámetros anteriores se les suma laclave ssh(por defecto será “id_rsa”):
+Seguido de esto el script corre una serie de if else en los que, si ciertas variables no tienen valor, se les asignará uno por defecto. Hay 2 variables que son requeridas: Config branch y Project branch. Si estas se encuentran vacías el script saldrá con un mensaje de error.
+
+Casi por finalizar, el script ejecutará dos builds utilizando losDockerfilesque se encuentran en el mismo directorio del script:Dockerfile.baseyDockerfile.prod. Con el primero sentamos los cimientos, y con el segundo agregaremos todos los detalles restantes de lo que será la imagen docker que luego usaremos para deployar. Sigamos viendo los comandos en el script del ejemplo:
+Como podremos observar, primero llama aDockerfile.basepasándole como parámetro laclave sshpública y privada. También le pasa comotag(-t) de la imagen el nombre del proyecto desde el cual estamos corriendo el script (en nuestro caso eltagesmoove/bancard-vpos-service-base).
+
+Dockerfiles: .base
+Ahora analicemos el Dockerfile.base de este proceso. Aquí la imagen de ejemplo:
+Como cualquier Dockerfile, lo primero es indicar a partir de qué imagen queremosbuildearnuestro contenedor. En nuestro ejemplo será a partir de una imagen de jruby, más específicamente la versión 1.7.27-jre. Setea las 2 variables que recibe desde el script comoSSH_PRV_KEYySSH_PUB_KEY. A partir de aquí correrá los respectivosrunsen orden. Comienza creando en el root path un directorio.shhen donde guardará las claves que se recibieron como parámetros en sus respectivos archivos de configuración. Seguido de esto corre unapt-get updateen donde instalará telnet y vim, entre otros ajustes de configuración. Agrega al directorio.shhun nuevo subdirectorio llamadoknown_hostsen donde se setearáhttp://github.com.Por último, copia la zona horaria de Asunción al directorio/etc/localtimey crea 2 nuevos directorios para los logs de mizuno y de sidekiq.
+
+Dockerfiles: .prod
+Seguimos con el último Dockerfile de este proceso:Dockerfile.prod. Veamos nuestro ejemplo:
+Es importante notar la importancia de la primera línea de este Dockerfile: le estamos indicando a docker que genere una imagen a partir de la imagen que generamos anteriormente con elDockerfile.base. Seguido de esto, setea las variables que recibe como parámetros desde el script. También genera las variablePROJECT_NAMEla cual setea con el nombre del servicio,PROJECT_LOCATIONla cual setea comohome/PROJECT_NAMEyBASE_CONFIG_FILES_PATHen la cual setea el path debancard-configurations. Seguido de esto corre dosgit clonestambién muy importantes: el primero clona el repositorio bancard-configurations y el segundo el repositorio del servicio al cual estamos buildeando la imagen. Notar que en estos comandos se utilizan variables que recibe o genera el propio Dockerfile. Setea luego el workdir, copia scripts de inicialización para la configuración de mizuno y sidekiq, corresedspara colocar en los scripts de inicialización el path de los archivos de configuración y el ambiente, ejecuta ungem instally unbundle instally por último elimina del root path el directorio.sshcon todos sus subdirectorios y archivos. La explicación de esto es que como ya clono todo para elbuildeode la imagen, no necesita más esasclaves sshpúblicas y privadas.
+
+Push de la imagen a DockerHub
+Por último, y como vemos en la imagen de ejemplo a continuación, la última línea de este script lo que hará es pushear esta imagen a DockerHub, con nombremoove/bancard-vpos-service:TAG-DE-LA-IMAGEN-BUILDEADA:
+Con esto queda finalizado el proceso delbuildeode la imagen para el deploy.
+
+Proceso deldeploy
+Bancard-docker
+Ahora el flujo sigue en otro proyecto específico:bancard-docker. Esto es igual para todo servicio bancard que queramos deployar. Iremos ahora dentro del directoriobinal archivobancard-deploy:
+Aquí podemos observar la raíz de los parámetros que se muestran cuando entramos al servidor de deploy y ejecutamos el comando:./bin/bancard-deploy -p <nombre-del-proyecto> -e <enviroment> -t <nombre de la imagen>(más información sobre esto en el apartadodeploydeestedocumento). Como vemos en la imagen, se utiliza la gemaTrolloppara listar las opciones en un hash (notar opciones requeridas y opciones no requeridas con sus respectivos valoresdefault). Luego de esto, se extraen las mismas del hash y se envían como parámetros para crear una instancia de Cliente, a la cual luego corremos llamando al método.run
+
+Client
+Observemos ahora el métodoinitializede la claseClient:
+Como primera línea, llama al métodoload_env_vars. Veamos ahora este método:
+
+Este método abrirá el archivo.enven modoread, desde el cual sacará las variables de entorno para el deploy. Si el método openraiseaunaexception, no hará nada (observar el comentario ‘...be quiet’).
+Seguido de esto y volviendo alinitialize, se setean todas las variables que se reciben como parámetros. Para la variableloggersse llama al método el cual genera un logger, setea el formato y finalmente lo devuelve.
+Para la variablehostsse ejecuta el métodohosts. Veámoslo:
+Este método lo que hace es obtener todos los nodes de los hosts del servicio, que se encuentran en la rutaconfig/bancard_vpos_service. Una vez que los obtiene, va a seleccionar únicamente el que se corresponda con la variablehostque seteamos anteriormente a la llamada de este método. Si al finalizar este procesonodesestá vacío,raisearáun error y saldrá con exit. Sino, devuelvenodes.
+Devuelta en elinitialize, para la variabledeployment_planse ejecuta este if else: si task tiene valor asignado, se ejecuta el métododeployment_plan_for_task. Sino, se ejecuta el métododeployment_plan_for_all. Veamos el primer método:
+Aquí lo que generamos es un hashdeployment_planque contendrá la keytaskla cual como valor tiene un array vacío. Luego iterando en los nodoshosts, agregaremos solamente si ese nodo contiene a la task que es key del arreglo. Finalmente, devolvemos este hash.
+Veamos ahora el segundo método:
+Aquí comenzamos con un hash ahora vacío pero del mismo nombre. Iteramos de nuevo por todos los nodos dehostsy luego por cadatask de ese host.Si está vacío el hash deployment plan en esa keytask,agregamos el valor dehost.Si no lo está, entonces asignamos un array con ese valor. Finalmente y al igual que el otro método, devolvemos el hashdeployment_planque luego seteamos en su respectiva variable.
+Volviendo ahora alinitializey como último método, para la variableregistry_apicrearemos una instancia de la claseRegistry Apipasándole como parámetro los valores de dos variables de entorno.
+
+Registry Api
+Veamos el métodoinitializede la claseRegistry Api:
+Aquí lo que haremos es primero setear como usuario y contraseña los valores recibidos como parámetro. Seguidamente, paramos la uri en base a la constante URL de Docker Hub. Finalmente creamos la conexión HTTP hacía usando elhostyportde esta uri, y tambien seteando el parámetrouse_sslde la conexión creada entrue.
+
+Client: .run
+Finalmente, luego de instanciarclient, corremos el métodorun.Veamos que es lo que hace:
+Observamos que en la primera línea, setea en la info del logger llamando al métododata, de la clasetrademark. Lo que devuelve este método es el arte ASCII que luego veremos en consola cuando entramos por ssh al servidor de deploybancard-deploy, el cual se ve de la siguiente forma:
+Seguido de esto, llama al métodorequire_confirmationel cual seteara en loggers la información a confirmar por el usuario que este efectuando el deploy. Veamos el método:
+Observamos que llama al otro métododeploy_infoel cual setea y devuelve la información a confirmar. Todo lo que este método carga luego se desplegará así en pantalla:
+Seguidamente y volviendo alrun, iterará el hashdeployment_planpor task (value) y hosts (key). Si ese hosts se encuentra vacío, imprimirá un warning y seguirá con la siguiente key del hash. Si no está vacío, entonces setea en el loggers la información de exactamentequéyadóndeestamos deployando. Esto se imprimirá luego de este modo en consola (ejemplo de un deploy al portal de comercios):
+(Como dato curioso, el código que aparece cuando hacemos el set en loggers “\u001b[35m” no es más que los colores ansi para imprimir en la consola. Más información sobre estoaquí.)
+
+Finalmente, por cada iteración llamará al métododeploy_commandel cual devolverá un string que contiene la información para correr la gemacenturion. Esta es una gema que se utiliza especialmente para deploys con servicios dockerizados. En el serviciobancard-docker, en la rutaconfig/centurionencontraremos varios.rakepor cada servicio de bancard dockerizado. Dentro encontraremos la configuración propia de centurion para deploys con docker. Con esto queda finalizado el proceso de deploy.
+Diagrama de flujo

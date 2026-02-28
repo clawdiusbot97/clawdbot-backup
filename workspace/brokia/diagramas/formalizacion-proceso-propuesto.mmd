@@ -1,0 +1,73 @@
+%% Formalization Process (Digital Confirmation)
+%% Brokia - Propuesta de solución
+
+%% Define swimlanes
+%%| Client | Broker | Brokia System | WhatsApp API | Database |
+
+flowchart LR
+    subgraph CLIENT["Client"]
+        C1[Receive WhatsApp<br/>Message]
+        C2[Review Proposal]
+        C3{Response}
+        C3A["Accept:<br/>ACEPTO SEGURO"]
+        C3B[Reject]
+        C3C[Ask Questions]
+    end
+    
+    subgraph BROKER["Broker"]
+        B1[Monitor<br/>Pending]
+        B2[Manual<br/>Intervention]
+    end
+    
+    subgraph SYSTEM["Brokia System"]
+        S1[Generate<br/>Structured Proposal]
+        S2[Prepare<br/>WhatsApp Message]
+        S3[Send via<br/>WhatsApp API]
+        S4[Monitor<br/>Response]
+        S5{Check<br/>Response}
+        S5A[Process<br/>Acceptance]
+        S5B[Escalate<br/>Rejection]
+        S5C[Escalate<br/>Questions]
+        S6[Create<br/>Snapshot]
+        S7[Store in<br/>Database]
+        S8[Generate<br/>PDF Summary]
+    end
+    
+    subgraph WHATSAPP["WhatsApp API"]
+        W1[Deliver<br/>Message]
+        W2[Receive<br/>Reply]
+    end
+    
+    subgraph DB["Database"]
+        D1[Save<br/>Snapshot]
+        D2[Immutable<br/>Record]
+        D3[Retrieve for<br/>Renewal]
+        D4[Compare<br/>Proposals]
+    end
+
+    %% Main flow
+    S1 --> S2 --> S3 --> W1 --> C1
+    C1 --> C2 --> C3
+    C3 -->|"ACEPTO SEGURO"| C3A --> W2 --> S4 --> S5
+    C3 -->|"RECHAZO"| C3B --> B1 --> B2
+    C3 -->|"PREGUNTA"| C3C --> B1 --> B2
+    
+    S5 -->|Accept| S5A --> S6 --> S7 --> D1
+    S5 -->|Reject| S5B
+    S5 -->|Question| S5C
+    
+    D1 --> D2
+    
+    %% Renewal flow
+    D3 --> D4
+    
+    %% Styling for value-add steps
+    classDef highlight fill:#fffaa0,stroke:#f5a623,stroke-width:3px
+    classDef database fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    classDef api fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    classDef decision fill:#ffebee,stroke:#c62828,stroke-width:2px
+    
+    class S6,S7,D1,D2,D3,D4 highlight
+    class D1,D2,D3,D4 database
+    class S3,W1,W2 api
+    class C3,S5 decision

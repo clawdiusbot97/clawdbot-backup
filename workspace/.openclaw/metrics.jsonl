@@ -1,0 +1,39 @@
+{"ts":"2026-02-24T16:38:22Z","request_id":"test-req-001","session_id":"test-sess-abc","agent_id":"main","provider":"openrouter","model":"kimi-k2.5","tier":"balanced","input_tokens":1200,"output_tokens":450,"latency_ms":2300,"cost_est_usd":0.0005,"cache_hit":false,"retry_count":0,"status":"ok","error_code":null}
+{"ts":"2026-02-24T16:45:16Z","request_id":"test-req-002","session_id":"sess-xyz","agent_id":"main","provider":"openrouter","model":"openrouter/minimax/minimax-m2.1","tier":"balanced","input_tokens":2000,"output_tokens":800,"latency_ms":1500,"cost_est_usd":0.0003,"cache_hit":false,"retry_count":0,"status":"ok","error_code":null}
+{"ts":"2026-02-24T17:27:27Z","type":"routing","request_id":"req-1771954047-31822","session_id":"sess-researcher-1771954047","agent_id":"researcher","chosen_model":"openrouter/minimax/minimax-m2.1","requested_model":"openrouter/minimax/minimax-m2.1","route_reason":"researcher_quick","llm_calls":0}
+{
+  "ts": "2026-02-24T18:17:20Z",
+  "type": "routing",
+  "request_id": "req-1771957040-4548",
+  "session_id": "sess-researcher-1771957040",
+  "agent_id": "researcher",
+  "chosen_model": "openrouter/moonshotai/kimi-k2.5",
+  "requested_model": "openrouter/minimax/minimax-m2.1",
+  "route_reason": "researcher_deep_research",
+  "llm_calls": 0
+}
+{"ts":"2026-02-24T18:20:51Z","type":"routing","request_id":"req-1771957251-5987","agent_id":"builder","chosen_model":"openai-codex/gpt-5.3-codex","route_reason":"routing_disabled_passthrough","llm_calls":0}
+{
+  "ts": "2026-02-24T18:23:10Z",
+  "type": "routing",
+  "request_id": "req-1771957390-8989",
+  "session_id": "sess-builder-1771957390",
+  "agent_id": "builder",
+  "chosen_model": "openai-codex/gpt-5.3-codex",
+  "requested_model": "openrouter/deepseek/deepseek-v3.2",
+  "route_reason": "builder_real_code_edit",
+  "llm_calls": 0
+}
+{"ts":"2026-02-24T18:23:24Z","type":"routing","request_id":"req-test-builder-1771957404","session_id":"agent:builder:subagent:027af86b-29b3-4112-acd0-85ab2a0af884","agent_id":"builder","chosen_model":"openai-codex/gpt-5.3-codex","requested_model":"openrouter/deepseek/deepseek-v3.2","route_reason":"builder_code_edit","llm_calls":0}
+{"ts":"2026-02-24T18:24:15Z","type":"execution","request_id":"req-exec-builder-1771957455","session_id":"agent:builder:subagent:027af86b-29b3-4112-acd0-85ab2a0af884","agent_id":"builder","model":"openai-codex/gpt-5.3-codex","provider":"openai-codex","input_tokens":150,"output_tokens":50,"cost_est_usd":0.0015,"status":"ok","route_reason":"builder_code_edit"}
+{
+  "ts": "2026-02-24T19:46:24Z",
+  "type": "routing",
+  "request_id": "req-1771962384-19645",
+  "session_id": "sess-builder-1771962384",
+  "agent_id": "builder",
+  "chosen_model": "openai-codex/gpt-5.3-codex",
+  "requested_model": "openrouter/deepseek/deepseek-v3.2",
+  "route_reason": "builder_real_code_edit",
+  "llm_calls": 0
+}

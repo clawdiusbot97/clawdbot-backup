@@ -1,0 +1,14 @@
+# Corrections Log
+# Append-only JSON Lines format
+# Fields:
+#   ts: ISO8601 timestamp
+#   context: string (e.g., "openclaw", "qubika", "general")
+#   rule_text: the rule/preference stated
+#   source_snippet: optional, the problematic output being corrected
+#   count_key: stable key for repetition tracking (hash or canonical string)
+#
+# Example:
+# {"ts":"2026-02-24T19:10:00Z","context":"general","rule_text":"Always use single quotes in Ruby","source_snippet":"puts \"hello\"","count_key":"ruby-quote-style"}
+{"ts":"2026-02-24T19:10:32Z","context":"qubika","rule_text":"Always use single quotes in Ruby unless interpolating","source_snippet":"puts \"hello\"","count_key":"always-use-single-quotes-in-ruby-unless-interpolating-"}
+{"ts":"2026-02-24T19:10:32Z","context":"qubika","rule_text":"Always use single quotes in Ruby unless interpolating","source_snippet":"","count_key":"always-use-single-quotes-in-ruby-unless-interpolating-"}
+{"ts":"2026-02-24T19:10:32Z","context":"qubika","rule_text":"Always use single quotes in Ruby unless interpolating","source_snippet":"","count_key":"always-use-single-quotes-in-ruby-unless-interpolating-"}

@@ -1,0 +1,32 @@
+TITLE: Mandato de Gambling (CVV y 3DS en VPos) - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3891298305
+SOURCE: 3891298305__Mandato_de_Gambling_(CVV_y_3DS_en_VPos)_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para los cambios relacionados a los requerimientos en VPos en cuanto a las transacciones de Gambling, a cargo de.
+Las horas estimadas son: 40
+Fecha de Inicio:Martes
+Fecha de Entrega:Miércoles
+La tarea de la primera fila es dependiente de unos cambios del lado de Bancard, que es un endpoint que nos avisa si necesitamos enviar un cvv aparte.
+Tarea
+
+Estimación (hs)
+
+Durante el flujo de pago con token chequear en el endpoint RPG si requiere CVV (Llamado a RPG Middleware desde VPos Service)
+
+10 (8 + 2 testing)
+
+Agregar formulario de CVV únicamente en flujos de pago con token que lo requieran (VPos Portal)
+
+20 (16 + 4 testing)
+
+Modificar llamado a jpos de pago con token, para incluir CVV (Vpos Service)
+
+10 (8 + 2 testing)
+
+Total Desarrollo
+
+40

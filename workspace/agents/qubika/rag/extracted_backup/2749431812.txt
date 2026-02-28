@@ -1,0 +1,76 @@
+TITLE: Tpago flujo Stripe
+DOMAIN: General
+PRIORITY: Media
+ID: 2749431812
+SOURCE: 2749431812__Tpago_flujo_Stripe.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+PM
+
+Technical Reference
+
+FS Developer
+
+FS Developer
+
+Paola
+
+Product Owner (Bancard)
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+https://bancard.atlassian.net/wiki/spaces/PRYLDP/pages/30156722/Releases+TPAGO
+
+Jira Board
+
+https://bancard.atlassian.net/jira/software/c/projects/PRYLDP/issues
+
+Slack Channel
+
+M. Teams Channel
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Minutes
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+Minutes
+
+Owner
+
+Client Demo
+
+Cadence
+
+Minutes
+
+Owner

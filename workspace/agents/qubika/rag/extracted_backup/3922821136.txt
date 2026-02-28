@@ -1,0 +1,89 @@
+TITLE: Herramientas para el Proceso de Desarrollo: Bito y Cursor
+DOMAIN: General
+PRIORITY: Media
+ID: 3922821136
+SOURCE: 3922821136__Herramientas_para_el_Proceso_de_Desarrollo__Bito_y_Cursor.json
+
+---
+
+En el marco de la mejora continua de nuestros procesos de desarrollo, incorporaremos dos herramientas clave:BitoyCursor. A continuación se detallan sus características, objetivos de uso, funcionamiento y el cumplimiento de estándares de seguridad.
+Bitohttps://bito.ai/
+¿Qué es?
+Bito es una herramienta basada en inteligencia artificial diseñada para integrarse directamente en entornos de desarrollo como Visual Studio Code o Cursor. Su objetivo principal es asistir en larevisión de código, permitiendo detectar problemas, sugerir mejoras y mantener la calidad del software de forma continua. Además, puede integrarse en pipelines de integración continua (CI) en GitHub para realizar revisiones automáticas y dejar comentarios directamente en los pull requests.
+Objetivo de uso
+Bito se utilizará para:
+Revisión automatizada de código.
+
+Generación y explicación de código.
+
+Documentación automatizada.
+
+Análisis de código y sugerencias de mejora.
+
+Automatización de tareas repetitivas dentro del entorno de desarrollo.
+
+Integración con GitHub para revisión de PRs en la CI.
+
+¿Cómo funciona?
+Bito se instala como una extensión en el editor de código y permite interactuar con un asistente basado en IA entrenado en buenas prácticas de desarrollo. Ofrece sugerencias en tiempo real, revisa bloques de código y permite consultas técnicas directamente desde el IDE. También se puede configurar como parte del flujo de CI en GitHub para analizar los cambios propuestos y dejar comentarios automatizados durante el proceso de revisión.
+Cursorhttps://www.cursor.com/
+¿Qué es?
+Cursor es un editor de código potenciado por inteligencia artificial, con un enfoque colaborativo y de copiloto para el desarrollo. Está construido sobre Visual Studio Code e integra funcionalidades avanzadas de asistencia para escribir, refactorizar y entender código rápidamente.
+Objetivo de uso
+Cursor se empleará para:
+Asistencia activa en la escritura y comprensión de código.
+
+Refactorización inteligente.
+
+Navegación eficiente del código y sugerencias contextuales.
+
+Colaboración fluida entre desarrolladores dentro del mismo entorno.
+
+¿Cómo funciona?
+Cursor utiliza modelos de lenguaje avanzados para analizar el código fuente y ofrecer ayuda contextual. A diferencia de otros editores, su motor está optimizado para interactuar activamente con el desarrollador, permitiendo incluso modificar múltiples archivos según instrucciones.
+Cumplimiento de Requisitos de Qubika
+Ambas herramientas cumplen con los más altos estándares de seguridad y privacidad, incluyendo:
+Cumplimiento Regulatorio
+Cumplen con los requisitos deISO 27001.
+
+Alineadas con los estándaresSOC 2 Type 2para seguridad y confidencialidad.
+
+Cumplen con regulaciones de privacidad y protección de datos comoGDPRyCCPA.
+
+Cuentan con certificaciones o evaluaciones de seguridad de terceros.
+
+Seguridad de los Datos
+Los datos ingresados estánencriptados en tránsito y en reposo.
+
+Cuentan con políticas claras deretención y eliminación de datos.
+
+Permitencontroles de acceso y roles de usuariopara limitar visualización o modificaciones.
+
+Privacidad y Control de la Información
+Ofrecen la opción de que los datosno se utilicen para entrenamiento de modelos.
+
+Proveen unapolítica de privacidad transparente y accesible.
+
+Informan con claridad sobreubicación y almacenamiento de los datos(por ejemplo, servidores en la UE o EE.UU.).
+
+Control de Acceso y Auditoría
+Permitenauditorías de acceso y registro de actividad.
+
+Ofrecen opciones deautenticación multifactor (MFA).
+
+Soportanpolíticas de acceso granular(por roles o permisos específicos).
+
+Evaluación de Riesgos
+Han sido evaluadas yaprobadas como parte del programa de seguridad de la informaciónde la compañía.
+
+Cuentan con unplan de respuesta ante incidentes.
+
+Se han realizadopruebas de penetración o vulnerabilidadcuando corresponde (por ejemplo, si aplican a subdominios de la organización).
+
+Relación Costo-Beneficio y Eficiencia
+Su uso aportabeneficios claros en eficiencia y productividad, acorde al riesgo asumido.
+
+Se ha realizado unanálisis de costo-beneficioque justifica su incorporación.
+
+Importante:Aunque Bito y Cursor ofrecen funcionalidades avanzadas que mejoran y facilitan el desarrollo de software, es fundamental aclarar quesu uso no garantiza al 100% el cumplimiento de buenas prácticas ni la ausencia de erroresen las implementaciones. Estas herramientas son un apoyo valioso en el proceso, perodeben complementarse siempre con revisiones de código realizadas por los parescomo parte del flujo de trabajo habitual.
+Para cualquier duda o consulta técnica sobre la implementación o uso de estas herramientas, pueden comunicarse con el equipo de ingeniería o el área de seguridad.

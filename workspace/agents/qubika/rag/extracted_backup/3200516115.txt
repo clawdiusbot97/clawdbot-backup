@@ -1,0 +1,44 @@
+TITLE: Trazabilidad en Audit-service
+DOMAIN: General
+PRIORITY: Media
+ID: 3200516115
+SOURCE: 3200516115__Trazabilidad_en_Audit-service.json
+
+---
+
+Eventos que vamos a trazar
+Evento
+
+Portal
+
+API
+
+Adelantar Pago
+
+✅
+
+✅
+
+Borrado de Suscripciones
+
+✅
+
+✅
+
+Pago Manual
+
+✅
+
+🚫
+
+Actualización de Suscripciones
+
+✅
+
+✅
+
+Borrado de Tarjeta del Usuario
+
+✅
+
+🚫

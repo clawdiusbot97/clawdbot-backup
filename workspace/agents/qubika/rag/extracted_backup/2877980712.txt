@@ -1,0 +1,39 @@
+TITLE: Extracciones en App Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2877980712
+SOURCE: 2877980712__Extracciones_en_App_Tasking_y_Estimacio╠ün.json
+
+---
+
+Épica
+
+Tarea
+
+Estimación (días)
+
+Extracciones en App
+
+Operación para generar un cashout
+
+3
+
+Operación para reversar un cashout
+
+3
+
+Operación para obtener información de un cashout
+
+1
+
+Operación para obtener el status de un cashout
+
+1
+
+Operación para obtener reporte de cashouts
+
+2
+
+Modificación de datos de producto para añadir datos necesarios para cashouts
+
+3

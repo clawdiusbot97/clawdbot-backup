@@ -1,0 +1,526 @@
+TITLE: Ruby Upgrade - Estimaciones
+DOMAIN: General
+PRIORITY: Media
+ID: 4463099933
+SOURCE: 4463099933__Ruby_Upgrade_-_Estimaciones.json
+
+---
+
+bancard-code-health
+Repositorios
+
+Salto
+
+Estimación
+
+Crear portal Bancard CodeHealth base + trackeo de servicios
+
+36 horas
+
+Hacer trackeo de las gemas
+
+16 horas
+
+Diseñar gráficos generales
+
+16 horas
+
+32 horas
+0,9 semanas de 35 horas
+
+bancard-notification-engine
+Repositorio
+
+Salto
+
+Estimación
+
+bancard-constants
+
+8 horas
+
+bancard-loggers
+
+12 horas
+
+bancard-commons
+
+20 horas
+
+angus-sdoc
+
+8 horas
+
+bancard-notification-engine
+
+2.5.1 → 3.0
+
+24 horas
+
+bancard-notification-engine
+
+3.0 → 3.4
+
+24 horas
+
+88 horas
+2,5 semanas de 35 horas
+
+bancard-reversal-service
+Repositorio
+
+Salto
+
+Estimación
+
+angus
+
+24 horas
+
+angus-remote
+
+2 ramas:
+gems-upgrade
+
+baas
+
+22 horas
+
+picasso
+
+2 ramas:
+- master-gems-upgrade
+- angus-gems-upgrade
+
+32 horas
+
+picasso-remote
+
+28 horas
+
+bancard-picasso-listing
+
+24 horas
+
+picasso-sdoc
+
+12 horas
+
+angus-sdoc
+
+8 horas
+
+bancard-baas
+
+12 horas
+
+bancard-constants
+
+0 horas
+
+bancard-loggers
+
+0 horas
+
+bancard-stubs
+
+rama:
+- refactor
+
+8 horas
+
+picasso-seeds
+
+Remover esta gema
+
+2 horas
+
+bancard-commons
+
+0 horas
+
+bancard-reversal-service
+
+2.5.3 → 2.7
+
+16 horas
+
+bancard-reversal-service
+
+2.7 → 3.0
+
+16 horas
+
+bancard-reversal-service
+
+3.0 → 3.2
+
+10 horas
+
+bancard-reversal-service
+
+3.2 → 3.4
+
+10 horas
+
+216 horas
+6,1 semanas de 35 horas
+
+bancard-selling-portal
+Repositorio
+
+Salto / Descripción
+
+Estimación
+
+bancard-commerce-suite-ui
+
+20 horas
+
+bancard-baas
+
+0 horas
+
+angus-remote
+
+0 horas
+
+picasso-remote
+
+0 horas
+
+bancard-picasso-dory
+
+24 horas
+
+picasso-sdoc
+
+0 horas
+
+bancard-loggers
+
+0 horas
+
+bancard-stubs
+
+rama:
+refactor
+
+0 horas
+
+bancard-constants
+
+0 horas
+
+bancard-selling-portal package.json
+
+Investigar y actualizar librerias js y ver como probar que funcione correctamente. (Es el primer proyecto al que se le va a actualizar las librerias de js)
+
+35 horas
+
+Hay que tener en cuenta que comparte sesion con payment-link-portal y con commerce-suite
+
+7 horas
+
+bancard-selling-portal
+
+2.6.3 → 3.0
+
+20 horas
+
+bancard-selling-portal
+
+3.0 → 3.2
+
+10 horas
+
+bancard-selling-portal
+
+3.2 → 3.4
+
+10 horas
+
+126 horas
+3,6semanas de 35 horas
+
+bancard-external-commerce-service
+Repositorio
+
+Salto / Descripción
+
+Estimación
+
+bancard-commerce-suite-ui
+
+20 horas
+
+angus
+
+0 horas
+
+angus-remote
+
+(usa baas)
+
+0 horas
+
+angus-sdoc
+
+0 horas
+
+bancard-picasso
+
+gems-upgrade
+
+0 horas
+
+picasso-sdoc
+
+0 horas
+
+bancard-loggers
+
+0 horas
+
+baas
+
+0 horas
+
+bancard-constants
+
+0 horas
+
+picasso-remote
+
+0 horas
+
+bancard-stubs
+
+refactor
+
+0 horas
+
+bancard-loggers
+
+0 horas
+
+picasso-seeds
+
+eliminarla
+
+1 hora
+
+bancard-commons
+
+0 horas
+
+bancard-pix-service-client
+
+14 horas
+
+bancard-external-commerce-service
+
+2.6.10 → 3.0
+
+20 horas
+
+bancard-external-commerce-service
+
+3.0 → 3.2
+
+10 horas
+
+bancard-external-commerce-service
+
+3.2 → 3.4
+
+10 horas
+
+75 horas
+2,14 semanas de 35 horas
+
+bancard-auth-portal
+Repositorio
+
+Salto / Descripción
+
+Estimación
+
+angus-remote
+
+(Cambiar a donde apunta la versión de la gema)
+
+1 hora
+
+bancard-loggers
+
+0 horas
+
+bancard-loggers
+
+0 horas
+
+slim
+
+Casi no tiene mantenimiento
+
+-
+
+sinatra
+
+Casi no tiene mantenimiento
+
+-
+
+bureaucrat
+
+2012 EOL
+
+-
+
+rusen
+
+2015
+
+-
+
+bancard-auth-portal
+
+2.5.0 → 3.0
+
+-
+
+bancard-auth-portal
+
+3.0 → 3.2
+
+-
+
+bancard-auth-portal
+
+3.2 → 3.4
+
+-
+
+- horas
+- semanas de 35 horas
+
+No vale la pena actualizar bancard-auth-portal
+bancard-auth-portal-v2
+
+Framework deprecado
+
+Slim (vistas) deprecado
+
+Cambiar el framework implica reescribir vistas y logica.
+
+Sustituir gemas por otras no deprecadas
+
+Recomendación:
+Rehacer el portal desde cero, replicando exactamente el mismo funcionamiento sobre una base de código nueva.
+
+90 horas (con deploy)
+
+bancard-selling-service
+Repositorio
+
+Salto / Descripción
+
+Estimación
+
+angus
+
+0 horas
+
+angus-remote
+
+branch baas
+
+1 hora
+
+bancard-picasso
+
+branch gems-upgrade
+
+0 horas
+
+picasso-sdoc
+
+0 horas
+
+picasso-remote
+
+0 horas
+
+bancard-picasso-listing
+
+branch gems-upgrade
+
+0 horas
+
+baas
+
+0 horas
+
+bancard-constants
+
+0 horas
+
+bancard-stubs
+
+branch refactor
+
+0 horas
+
+bancard-loggers
+
+0 horas
+
+bancard-deploy-tasks
+
+eliminar
+
+0 horas
+
+bancard-commons
+
+0 horas
+
+picasso-seeds
+
+eliminar
+
+0 horas
+
+bancard-external-services
+
+35 horas
+
+bancard-picasso-dory
+
+0 horas
+
+pruebas exploratorias
+
+6 horas
+
+bancard-selling-service
+
+2.6.10 → 3.0
+
+30 horas
+
+bancard-selling-service
+
+3.0 → 3.2
+
+17 horas
+
+bancard-selling-service
+
+3.2 → 3.4
+
+17 horas
+
+106 horas
+3 semanas de 35 horas

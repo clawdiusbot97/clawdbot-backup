@@ -1,0 +1,98 @@
+TITLE: Tasking y Estimación - Comercio / Sucursal en Decodificación QR
+DOMAIN: General
+PRIORITY: Media
+ID: 3156836392
+SOURCE: 3156836392__Tasking_y_Estimacio╠ün_-_Comercio___Sucursal_en_Decodificacio╠ün_QR.json
+
+---
+
+Esta iniciativa tiene que partir de la base de VisaQR en commerce-service por el MCC
+El total para esta iniciativa son176hs.
+Luego de terminado el desarrollo, se estiman 10hs más por semana, hasta el pase a producción
+Tarea
+
+Estimación
+
+Portal / Servicio
+
+Setup de Proyecto
+Sujeto al responsable del desarrollo
+
+4
+
+billing-proxy
+
+Integrarse con operación get_commerce_branch de commerce-service para obtener la sucursal
+
+36
+
+billing-proxy
+
+Integrarse con operación get_commerce de commerce-service para obtener el comercio
+
+12
+
+billing-proxy
+
+Agregar en el additional data de la operación de decode_qr_decode el codigo de comercio, código de sucursal y MCC
+
+12
+
+billing-proxy
+
+Agregar modulo de consumo de comercios/sucursales precargados en Redis
+
+20
+
+billing-proxy
+
+Eliminar lógica de precarga de comercios/sucursales
+
+8
+
+selling-service
+
+Agregar modulo de precarga de comercios/sucursales en Redis con un job asíncrono
+Consultar comercios y sucursales en lotes.
+
+24
+
+commerce-service
+
+Agregar lógica para actualización de datos precargados en Redis ante la creación/modificación/eliminación de comercios/sucursales
+
+32
+
+commerce-service
+
+Modificar configuración para consumir comercios/sucursales del nuevo Redis
+Quitar lógica de guardado en caso de no encontrar el dato en Redis.
+
+4
+
+selling-service
+
+Modificar configuración para consumir comercios/sucursales del nuevo Redis
+Quitar lógica de guardado en caso de no encontrar el dato en Redis.
+
+4
+
+external-commerce-service
+
+Desarrollo
+
+156
+
+Gestión 15% (no afecta fecha entrega)
+
+20
+
+Total
+
+176
+
+Soporte
+
+10
+
+por semana hasta pase a producción

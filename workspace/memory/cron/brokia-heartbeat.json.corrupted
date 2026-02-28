@@ -1,0 +1,50 @@
+{
+  "name": "brokia-heartbeat",
+  "schedule": "0 */6 * * *",
+  "timezone": "America/Montevideo",
+  "enabled": true,
+  "payload": {
+    "type": "agentTurn",
+    "task": "Execute brokia-heartbeat: NO-LLM health check for Brokia Google/Slack delivery.
+
+STEPS:
+
+1. Run the heartbeat script:
+   /home/manpac/.openclaw/workspace/skills/brokia-heartbeat/scripts/run.sh
+
+   The script checks (NO-LLM, shell only):
+   - gog auth list contains calendar,gmail for tachipachi9797@gmail.com
+   - gog calendar events --today -j -a ACCOUNT succeeds
+   - Writes checkpoint: checkpoints/brokia/heartbeat-YYYY-MM-DDTHH.json
+   - On failure: writes /tmp/brokia-heartbeat-error.txt and exits non-zero
+
+2. Check script exit code:
+   IF exit 0: 
+   - Do nothing (silent success, no Slack noise)
+   - Log: "Brokia heartbeat OK"
+   
+   IF exit non-zero AND /tmp/brokia-heartbeat-error.txt exists:
+   - Read error file contents
+   - Send to Slack via gateway message tool:
+     * channel=slack
+     * target=brokia-ai-alerts (fallback to C0AFK08BFR8 if channel_not_found)
+   - Log: "Brokia heartbeat failure alert sent to Slack"
+
+3. Confirm completion:
+   - Script exit code
+   - Checkpoint file path
+   - Slack alert sent: yes/no",
+    "label": "brokia-hb"
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-02-25",
+    "skill": "/home/manpac/.openclaw/workspace/skills/brokia-heartbeat",
+    "script": "/home/manpac/.openclaw/workspace/skills/brokia-heartbeat/scripts/run.sh",
+    "slack_channel": "brokia-ai-alerts",
+    "slack_channel_id": "C0AFK08BFR8",
+    "checkpoint_dir": "/home/manpac/.openclaw/workspace/checkpoints/brokia",
+    "google_account": "tachipachi9797@gmail.com",
+    "notes": "NO-LLM heartbeat. Runs every 6 hours. Alerts only on failure."
+  }
+}

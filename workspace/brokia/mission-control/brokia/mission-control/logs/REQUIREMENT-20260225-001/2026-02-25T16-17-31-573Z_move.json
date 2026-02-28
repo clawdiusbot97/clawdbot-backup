@@ -1,0 +1,13 @@
+{
+  "action": "move",
+  "id": "REQUIREMENT-20260225-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Movido: REQUIREMENT-20260225-001\n   Status: RESEARCHED → DECIDED\n   Folder: /home/manpac/.openclaw/workspace/brokia/workitems/active/decided\n",
+  "stderr": "",
+  "duration_ms": 47,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T16:17:31.526Z",
+  "finished_at": "2026-02-25T16:17:31.573Z"
+}

@@ -1,0 +1,47 @@
+TITLE: Anulaciones en App Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3028942876
+SOURCE: 3028942876__Anulaciones_en_App_Tasking_y_Estimacio╠ün.json
+
+---
+
+Épica
+
+Tarea
+
+Estimación (horas)
+
+Anulaciones en App
+
+Análisis de tareas e impacto
+
+8
+
+Operación para solicitar una anulación
+
+24
+
+Operación para listar solicitudes de anulación (solo anulaciones de boca web)
+
+36
+
+Operación para obtener datos de una anulación
+
+16
+
+Operación para devolución de url y qr para términos y condiciones
+
+16
+
+Modificar endpoint de permisos para poder obtener permisos de anulaciones
+
+4
+
+Configuraciones y deploy a staging
+
+2
+
+Reuniones de seguimiento
+
+4

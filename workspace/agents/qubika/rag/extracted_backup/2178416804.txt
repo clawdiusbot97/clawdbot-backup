@@ -1,0 +1,34 @@
+TITLE: Meeting notes
+DOMAIN: General
+PRIORITY: Media
+ID: 2178416804
+SOURCE: 2178416804__Meeting_notes.json
+
+---
+
+Date
+
+Participants
+List meeting participants using their @ mention names
+
+@ mention a person to add them as an attendee and they will be notified.
+
+Goals
+List goals for this meeting (e.g., Set design priorities for FY19)
+
+Discussion topics
+Time
+
+Item
+
+Presenter
+
+Notes
+
+Add notes for each discussion topic
+
+Action items
+Add action items to close the loop on open questions or discussion topics:
+incompleteDecisions
+Type /decision to record the decisions you make in this meeting:
+147df9c9-81c8-46d7-bb33-003564b0b11460c2913c-2bf3-4cab-982a-5abd4512bfd6DECIDED

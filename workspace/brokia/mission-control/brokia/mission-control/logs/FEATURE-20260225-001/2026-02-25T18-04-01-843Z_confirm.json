@@ -1,0 +1,13 @@
+{
+  "action": "confirm",
+  "id": "FEATURE-20260225-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ CONFIRMACIÓN DE PLAN\n\nItem: FEATURE-20260225-001\nTitle: Test feature\nType: feature\nPlan seleccionado: B\n\n✅ Item actualizado:\n   needs_clarification: false\n   clarification_status: CONFIRMED\n   proposed_actions: [B]\n\n🎯 Plan B (Brainstorm) confirmado\n\nEl item está listo para análisis rápido de alternativas.\nNota: Para ejecutar, usar research con foco en trade-offs.\n\n📋 Ahora wi-watch.sh puede procesar este item automáticamente.\n",
+  "stderr": "",
+  "duration_ms": 94,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T18:04:01.749Z",
+  "finished_at": "2026-02-25T18:04:01.843Z"
+}

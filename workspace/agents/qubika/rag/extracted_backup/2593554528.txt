@@ -1,0 +1,130 @@
+TITLE: SPI Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 2593554528
+SOURCE: 2593554528__SPI_Estimation.json
+
+---
+
+CONFLUENCE:https://jira.bancardnet.dom/confluence/display/PRYINPA/Flujo+QR+-+Mooveit
+JIRA:https://jira.bancardnet.dom/projects/PRYINPA/issues/PRYINPA-1?filter=allissues
+G Sheet:https://docs.google.com/spreadsheets/d/16HDK_bWPC3XjPYdoYtRvgg1oMP6FhEv6Z-XIwgNcUU4/edit#gid=0
+PROYECTO
+
+TAREA
+
+NOTAS
+
+ESTIMACIÓN (hrs)
+
+selling-service
+
+Agregar columnaqr_sourceypos_boxa la tablapayment_hooks
+
+8hs
+
+selling-service
+
+Recibir como parámetro los camposqr_sourceypos_boxen la operación degenerate_qr_expressy almacenar en la base.
+
+El campo qr_source debe ser opcional y puede tener los valores:
+QR-BCpara el caso de los QRs actuales
+
+QR-SPIpara los QRs de transferencia
+
+En el caso de no recibir el campoqr_source, se debe usarQR-BCpor defecto.
+
+En el caso de los QRs ya creados y que tendrán el campoqr_sourceennil, se deberá considerar que son del tipoQR-BC.
+
+El campo pos_box debe ser opcional y puede tener los valorestrueyfalse. En caso de que el parámetro no sea enviado, por defecto esfalse.
+
+16hs
+
+selling-service
+
+Modificar respuestas de payment_hook para incluir los datosqr_sourceypos_box.
+
+16hs
+
+selling-service
+
+Modificar callback al comercio
+
+Modificar callback al comercio luego de confirmado un pago con QrExpress para enviaraccount_type = TRen el caso de que el QR sea del tipo SPI, es decir, que tenga el campoqr_sourceenQR-SPI.
+
+16hs
+
+selling-service
+
+Desarrollar un endpoint para confirmación de QRs SPI.
+
+La operación de confirmación de QRs SPI debe utilizar la gema de integración con servicios RPG para comunicarse con el servicio.
+
+Uno de los parámetros del servicio RPG dependera del valor de la columna pos_box del payment_hook:
+pos_box=true  -> MET001 ME01NROLOT=1
+pos_box=false -> MET001 ME01NROLOT=0
+
+32hs
+
+selling-service
+
+Agregar restricciones relacionadas a ambos tipos de QRs
+
+Si se intenta confirmar un QR con el endpoint de QR-BC pero es un QR-SDI, se debe retornar error.
+
+Si se intenta revertir un QR con el endpoint de QR-BC pero es un QR-SDI, se debe retornar error.
+
+Si se intenta confirmar un QR con el endpoint de QR-SDI pero es un QR-BC, se debe retornar error.
+
+24hs
+
+bancard-external-rpg-services
+
+Crear gema de integración con servicios RPG
+
+Requiere previa investigación.
+
+16hs
+
+bancard-external-rpg-services
+
+Agregar integración con operación de confirmación de QR-SPI
+
+32hs
+
+external-commerce-service
+
+Recibir como parámetro los camposqr_sourceypos_boxen la operación degenerate_qr_express.
+
+El campo qr_source debe ser opcional y puede tener los valores:
+QR-BCpara el caso de los QRs actuales
+
+QR-SPIpara los QRs de transferencia
+
+En el caso de no recibir el campoqr_source, se debe usarQR-BCpor defecto.
+
+El campo pos_box debe ser opcional y puede tener los valorestrueyfalse. En caso de que el parámetro no sea enviado, por defecto esfalse.
+
+16hs
+
+billing-proxy
+
+Agregar campoqr_sourcea la respuesta deldecode_qr_code
+
+16hs
+
+billing-proxy
+
+Desarrollar un endpoint para confirmación de QRs SPI contra selling-service.
+
+Si es un QR de selling y a su vez es QR-SDI, debe llamar al nuevo endpoint de selling-service.
+
+24hs
+
+research
+
+Investigar herramientas para integrar una app Ruby a un servicio RPG.
+
+16hs
+
+Total: 232

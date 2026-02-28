@@ -1,0 +1,31 @@
+{
+  "id": "002",
+  "nombre": "Anulación de póliza",
+  "descripcion": "Proceso de anulación de póliza que comienza cuando el cliente solicita cancelar su póliza y finaliza cuando la anulación queda confirmada por la compañía y registrada internamente. Pasos: 1) Recepción de solicitud (WhatsApp, llamada). 2) Relevamiento de datos de la póliza en portal de la compañía (fecha inicio, premio anual, plan de pagos, cuotas abonadas, siniestros, deuda). 3) Cálculo económico (tabla de términos cortos): automático en portales de BSE, SURA, Mapfre, Porto; manual en Sancor o HDI usando tablas y cálculos manuales. 4) Comunicación con cliente para confirmar anulación, especialmente si hay saldo pendiente o recupero. 5) Gestión formal con compañía (portal, mail, formulario). 6) Emisión de documentación (factura de cancelación, nota de crédito). 7) Registro interno (guardar mail, PDF).",
+  "sistemas_usados": [
+    "BSE portal",
+    "SURA portal",
+    "Mapfre portal",
+    "Porto portal",
+    "Sancor portal",
+    "HDI portal",
+    "SBI portal",
+    "Plantillas personalizadas (Excel/Sheets)",
+    "WhatsApp",
+    "Llamada telefónica",
+    "Correo electrónico"
+  ],
+  "tiempos": {
+    "P50_min": 5,
+    "P90_min": 10
+  },
+  "frecuencia_mensual": 5,
+  "carga": 2,
+  "riesgo": 2,
+  "retrabajo_porcentaje": 5,
+  "proceso_padre": "100",
+  "vinculos": [],
+  "fecha_creacion": "2026-02-21T01:16:00Z",
+  "entrevistador": "OpenClaw Orchestrator",
+  "notas": "Subproceso mixto: cálculos automáticos en algunas compañías, manuales en otras. Requiere consulta de tablas de términos cortos y validaciones manuales. Documentación crítica para registro."
+}

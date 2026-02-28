@@ -1,0 +1,53 @@
+=== read_compact log ===
+Timestamp: 2026-02-22T11:35:15+00:00
+File: /home/manpac/.openclaw/workspace/dashboard/morning-briefing-template.md
+Offset: 1
+Limit: 
+Lines: 44
+Chars: 1263
+
+=== OUTPUT ===
+# Morning Briefing Template
+
+1) 🗓️ Header
+- Date (local)
+- Focus: <today’s main outcome>
+
+2) ✅ Yesterday (max 3 bullets)
+- Completed outcomes or notable progress.
+- If unknown: `No tracked updates found.`
+
+3) 🎯 Today Top 3 (max 3 bullets)
+- Outcome bullets, each starts with a verb.
+
+4) 🧩 Active Projects (max 5 bullets)
+- Status + next milestone.
+- Include Brokia only if active tasks/deadlines exist.
+
+5) 🧠 Pending Decisions (max 3)
+- Yes/No or A/B questions.
+
+6) 🌍 Curated News (World) (max 3 links)
+- Short headline + link.
+
+7) 💻 Curated Tech News (max 3 links)
+- Short headline + link.
+
+8) 🔥 Tech on X (Twitter) (max 3 links)
+- Relevant trend/thread + link, avoid spammy accounts.
+
+9) 🏰 Random Historical Fact
+- 1 paragraph, <80 words.
+
+10) 🎵 Today Music Discovery (3 picks)
+- Rock en español (AR/UY vibe)
+- Oldies (70s/80s/90s)
+- House/Tech House
+- Format: `Artist — Track (why it fits)` + link if available.
+
+11) 💸 Usage Snapshot (short)
+- Current main session usage (from `session_status`): context %, in/out tokens (latest), and quick risk note (Low/Medium/High).
+- Top cost driver from last run (if visible): main/researcher/other.
+
+Footer:
+`Reply with: ADD <task> | DONE <task-id> | DECIDE <A/B> | MORE <section>`

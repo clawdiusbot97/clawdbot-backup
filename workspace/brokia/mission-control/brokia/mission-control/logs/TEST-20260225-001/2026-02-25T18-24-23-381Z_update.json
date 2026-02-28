@@ -1,0 +1,14 @@
+{
+  "action": "update",
+  "id": "TEST-20260225-001",
+  "success": false,
+  "blocked_by_guardrail": false,
+  "stdout": "❌ Error: No se encontró TEST-20260225-001.md\n",
+  "stderr": "Command failed: brokia/workitems/scripts/wi-update.sh '--id' 'TEST-20260225-001' '--set-owner' 'ops'\n",
+  "duration_ms": 54,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T18:24:23.327Z",
+  "finished_at": "2026-02-25T18:24:23.381Z",
+  "id_validation": "strict"
+}

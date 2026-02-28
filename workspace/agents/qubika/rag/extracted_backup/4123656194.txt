@@ -1,0 +1,222 @@
+TITLE: Pagos Agendados Tasking and Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 4123656194
+SOURCE: 4123656194__Pagos_Agendados_Tasking_and_Estimation.json
+
+---
+
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+App IC Mobile
+
+Análisis de tareas e impacto
+
+8
+
+Agregar configuraciones para nuevo nodo de billing-service para aislar el proceso
+
+infra
+
+8
+
+Crear tabla y modelo de pagos agendados (scheduled_payments)
+product_id
+
+amount
+
+commerce_code
+
+commerce_branch_code
+
+currency
+
+is_top_product
+
+frequency_type
+
+frequency_config
+
+status
+
+next_execution_date
+
+last_execution_date
+
+customer_fields
+
+customer_temporary_fields
+
+bill_identifier
+
+additional_data_fields
+
+frequency
+
+mean_of_payment
+
+account_number
+
+entity_code
+
+masked_pan
+
+commission_bill_ssn
+
+commission_bill_name
+
+commission_bill_email
+
+created_at
+
+updated_at
+
+deleted
+
+deleted_at
+
+Indices por:
+next_execution_date, status
+
+commerce_code, product_id
+
+customer_fields, product_id
+
+is_top_product
+
+billing-service
+
+4
+
+Crear tabla y modelo de ejecuciones (scheduled_payments_execution)
+scheduled_payment_id
+
+executed_at
+
+status
+
+transaction_id
+
+error_message
+
+error_details
+
+amount_processed
+
+created_at
+
+updated_at
+
+Indices por:
+scheduled_payment_id
+
+executed_at
+
+status
+
+Claves foraneas:
+scheduled_payment_id
+
+billing-service
+
+4
+
+Endpoint para registrar pago agendado
+Campos variables
+
+Identificador del producto
+
+Datos de factura (pago de comisiones = true)
+
+Cuenta desde donde se debitará el importe
+
+Frecuencia de débito
+
+Tener en cuenta validaciones de campos variables
+La petición toma en cuenta credenciales de la entidad
+Restricciones:https://bancard.atlassian.net/wiki/spaces/PAG/pages/1507918541/4.+Documentaci+n+y+Tasking#%F0%9F%94%92-Restricciones-para-registrar-un-pago-agendado
+
+billing-service
+
+24
+
+Endpoint para actualizar pago agendado
+
+billing-service
+
+8
+
+Endpoint para cancelar pago agendado
+Borrado lógico, queda registro en la base
+
+Se registra la fecha de cancelación
+
+billing-service
+
+8
+
+Endpoint para obtener detalles de un pago agendado
+
+billing-service
+
+8
+
+Endpoint para listar pagos agendados por entidad
+
+billing-service
+
+16
+
+Agregar nueva columna en products para identificar si permite agendamiento
+
+billing-service
+
+4
+
+Proceso asíncrono para procesar pagos agendados
+Se ejecuta todos los dias a las 03:00 AM
+
+2 colas, una para productos top facturadores (prioridad), otra para los demas
+
+No se deben reintentar pagos si los mismos fallan (se vuelven a correr en el siguiente período)
+
+billing-service
+
+32
+
+Endpoint para listar productos que permiten pagos agendados
+
+billing-service
+
+8
+
+Añadir comunicación con servidor FTP para enviar archivo de resultado del proceso
+Separación por carpetas por entidad
+
+Se diferencia por credenciales
+
+billing-service
+
+24
+
+Configuraciones y deploy
+
+8
+
+Total desarrollo
+
+156
+
+Total gestión
+
+15.6
+
+Total
+
+171.6

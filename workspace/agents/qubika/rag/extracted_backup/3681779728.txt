@@ -1,0 +1,65 @@
+TITLE: Saturación de Memoria - external-commerce-service
+DOMAIN: General
+PRIORITY: Media
+ID: 3681779728
+SOURCE: 3681779728__Saturacio╠ün_de_Memoria_-_external-commerce-service.json
+
+---
+
+1. Introducción
+Hemos detectado queexternal-commerce-servicepresenta problemas de saturación de memoria, lo que provoca una degradación progresiva en su rendimiento. Cuando el servicio alcanza el tope de memoria, elgarbage collectorcomienza a ralentizarse, lo que eventualmente genera fallas en el servicio.
+Para entender mejor la situación, realizamos un análisis del uso de memoria en un servicio similar (billing-service-public-proxy) y en los nodos deexternal-commerce-serviceque manejan el flujo de QR.
+2. Análisis Comparativo: billing-service-public-proxy
+Como referencia, analizamos el uso de memoria enbilling-service-public-proxy, un servicio que comparte ciertas similitudes conexternal-commerce-serviceen cuanto a tecnologías y herramientas utilizadas. Sin embargo, es importante aclarar que el consumo de memoria depende del tráfico recibido y de las operaciones que implementa cada servicio, por lo que no se pueden extrapolar los resultados directamente.
+2.1. Datos del Nodo Analizado (billpublic-srv-prd-2)
+Memoria total:13.34 GiB
+
+Configuración de hilos:24 (mínimo) - 128 (máximo)
+
+Uso máximo de memoria del servicio Ruby:2.8 GB
+
+Uso máximo total de memoria en el servidor:7 GB
+
+2.2. Observaciones
+En este servicio, el uso de memoria alcanza un valor máximo estable de 7 GB, quedando margen suficiente dentro de los 13.34 GiB disponibles en el nodo. A diferencia deexternal-commerce-service, no se presentan problemas de saturación.
+3. Análisis del Uso de Memoria en External-Commerce-Service
+Ahora analizamos los dos nodos que manejan el flujo de QR enexternal-commerce-servicepara comparar su comportamiento respecto al servicio anterior.
+3.1. Nodo 1: externalcom-srv-prd-1
+Memoria total:7.45 GiB (casi la mitad de la memoria debilling-proxy).
+
+Configuración de hilos:24 (mínimo) - 128 (máximo) (idéntica abilling-proxy).
+
+Uso de memoria:No alcanza un máximo estable porque el servicio llega al límite de memoria del nodo antes de estabilizarse, provocando errores y caídas.
+
+3.2. Nodo 2: externalcom-srv-prd-2
+Presenta exactamente las mismas características y problemas queexternalcom-srv-prd-1.
+
+4. Análisis de la Memoria en Otros Servicios de Referencia
+Para poner en contexto la cantidad de memoria asignada aexternal-commerce-service, analizamos otros servicios que también manejan tráfico QR:
+Servicio
+
+Memoria por Nodo
+
+selling-Service
+
+20 GiB
+
+commerce-service
+
+15 GiB
+
+external-commerce-service
+
+7.45 GiB
+
+Se puede ver queexternal-commerce-servicetiene una asignación de memoria considerablemente menor en comparación con otros servicios que manejan flujos similares.
+5. Recomendaciones
+5.1. Aumento de Memoria
+Nuestra recomendación principal para solucionar este problema de manera rápida y efectiva esaumentar la memoria de los nodos deexternal-commerce-servicea al menos 15 GiB. Este cambio tendrá un impacto inmediato en la estabilidad del servicio y no requiere modificaciones de código ni pruebas de QA.
+5.2. Ajuste en la Configuración de Hilos
+Actualmente, el servicio tiene una configuración de hasta 128 hilos, lo cual consideramos excesivo para la carga de tráfico que maneja en este momento. Recomendamosreducir la cantidad de hilos a un máximo de 64 por nodo, lo que permitirá un mejor balance entre uso de memoria y rendimiento del servicio.
+5.3. Actualización de Gemas para Mejor Gestión de Memoria
+Los cambios en las gemas ya fueron implementados y están listos para ser desplegados enstaging. Dado que estos cambios afectan el framework de comunicación entre servicios, requerirán pruebas de QA antes de implementarse en producción. Si bien este cambio ya se realizó encommerce-suitesin inconvenientes, recomendamos realizar pruebas exploratorias para asegurarnos de que no haya impactos inesperados.
+6. Conclusión
+Los problemas de memoria enexternal-commerce-serviceestán directamente relacionados con la baja cantidad de memoria asignada en comparación con la configuración de hilos y el tráfico que maneja. La solución más rápida y efectiva esaumentar la memoria de los nodos a 15 GiB y reducir la cantidad de hilos a 64, mientras avanzamos con la actualización de gemas y su correspondiente QA.
+Con estos ajustes, esperamos mejorar significativamente la estabilidad del servicio y reducir los errores causados por la saturación de memoria.

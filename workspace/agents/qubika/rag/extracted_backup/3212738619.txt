@@ -1,0 +1,138 @@
+TITLE: DBA en TPago Fase 2 - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3212738619
+SOURCE: 3212738619__DBA_en_TPago_Fase_2_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Fase 2 DBA en TPago
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Cambios en el formato del archivo de la fase 1
+
+32
+
+payment-link-service
+
+Agregar archivo de formato de fase 2 al zip de los ejemplos
+
+2
+
+payment-link-service
+
+Agregar select en vista DBA para indicar si se va a subir un único plan o múltiples planes.
+
+8
+
+payment-link-portal
+
+Modificar la lógica de la operación process upload para llamar al nuevo endpoint de payment-link-service si se quieren subir múltiples planes.
+
+20
+
+payment-link-portal
+
+Agregar a la vista de listado de suscripciones los filtros de número de referencia, cédula y correo.
+
+18
+
+payment-link-portal
+
+Agregar filtros en el dataset de las suscripciones para las nuevas columnas.
+
+24
+
+payment-link-service
+
+Crear endpoint para generar múltiples DBA subscription links.
+
+20
+
+payment-link-service
+
+Implementar tarea asíncrona para generar múltiples links de suscripción en base a un archivo dba.
+
+34
+
+payment-link-service
+
+Renombrar tabla de dba_migration_error_logs
+
+2
+
+payment-link-service
+
+Loguear todo el proceso de migración de DBA en lugar de solo los errores en la tabla dba_migrations_logs
+
+16
+
+payment-link-service
+
+Total desarrollo
+
+176
+
+Total Gestión (15%)
+Reuniones de seguimiento, tasking, técnicas, etc..
+
+27
+
+Total
+
+203
+
+notePreguntas
+Preguntas
+
+Nuevo formato adicional para el archivo de migración
+Deberíamos permitir ambos formatos, el viejo para soportar varios suscriptores de un mismo plan, y el formato nuevo que se está proponiendo, para así no empeorar la experiencia de usuario del primero caso.
+Para esto proponemos que el portal muestre un select box y que el usuario elija la opción que quiere migrar. Vamos a modificar el endpoint para que procese esta nueva versión y según lo identificado en el portal es al endpoint que llamamos.
+
+Realizar un procesamiento por lotes
+Una vez enviados los contratos a la tabla temporal o al archivo temporal, se pide procesarlos por lotes. La cantidad de contratos por lote será configurable y se tomara desde un archivo yml. La cantidad de contratos inicialmente será de 500.
+
+Necesitamos explicación
+
+Para ayudar a validar los tiempos, se pide indicar el tiempo de duración del proceso al final del archivo log.
+
+Como resultado del proceso de migración, se devolverá el archivo de migración procesado pero agregando las siguientes columnas:
+Suscripción: queda cargada con el valor del link de suscripción.
+
+Link Alias: valor para el link alias asociado al suscriptor.
+
+Mensaje de error: que solo tiene valor en caso de error. Por ejemplo: Número de contrato no encontrado.
+
+Aplicar el formato de respuesta con archivo a los siguientes servicios:
+Respuesta de una consulta de migración vía API.
+
+Archivo descargable de detalles de migración en el portal.
+
+Para poder manejar las suscripciones migradas y considerando también las suscripciones existentes, se pide agregar a la vista de listado de suscripciones los filtros de número de referencia, cédula y correo.
+Filtrando por correo y cédula
+Para poder utilizar los filtros de cédula y correo, se pide obtener el id del usuario utilizando el siguiente servicio expuesto por auth_service:
+
+no es necesario usar este endpoint
+
+Ajustes en el histórico de migraciones
+Como ahora las suscripciones pueden crearse por filas del archivo de migración, se pide reflejar este ajuste a la tabla de históricos Ahora mismo los datos de una migración se almacenan en la tabla dba_migrations_details y los contratos con errores en la tabla dba_migrations_error_logs. Se pide ajustar esto para llevar los datos de las suscripciones creadas a la tabla de errores y en está tabla almacenar todos los registros de la migración y no solo los errores.
+
+No deberíamos guardar datos quje no son errores en una tabla de errores.
+
+Lo mejor sería crear una tabla nueva y referenciarla a la otra, así como hacemos con migration_error_logs.
+
+Tabla de detalles por suscriptor
+Como ahora tenemos pensando devolver a los comercios un archivo de resultado de migración, donde ya no se cuenta un una suscripción a nivel global, se pide considerar reutilizar esta tabla para almacenar los detalles de procesamiento por contrato. Esto es por cada fila del archivo de migración, tener una columna que refleje los datos tomados del archivo yagregar las columnasde “link_alias”, “link de suscripción”.
+Tomar en esta listatodos los contratos, no solo los que tengan errores.
+
+mismo caso que el punto de arriba, tal vez podemos loguearla en la tabla nueva
+
+Detalles de la migración.
+En el modelo actual de detalles, una migración corresponde a una sola suscripción. Para tener en cuenta los ajustes de la fase 2, se pide contemplar llevar los datos de la suscripción a la tabla “dba_migrations_error_logs”
+En el caso de está tabla las columnas podrían quedar de la misma manera, pero considerar que la columna “link_id” puede quedarvacíoen caso de utilizarse el modelo de migración de la fase 2.
+
+En vez de que quede vacío podemos crear un dba_migration_details por cada link, y ahí quedan guardados los datos de cada link / migración.

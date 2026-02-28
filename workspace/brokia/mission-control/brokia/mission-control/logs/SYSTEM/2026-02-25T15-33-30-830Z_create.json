@@ -1,0 +1,13 @@
+{
+  "action": "create",
+  "id": "SYSTEM",
+  "success": false,
+  "blocked_by_guardrail": false,
+  "stdout": "",
+  "stderr": "sed: -e expression #2, char 40: unknown option to `s'\n",
+  "duration_ms": 28,
+  "provider": "unknown",
+  "model": "unknown",
+  "started_at": "2026-02-25T15:33:30.802Z",
+  "finished_at": "2026-02-25T15:33:30.830Z"
+}

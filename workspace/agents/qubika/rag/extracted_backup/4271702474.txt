@@ -1,0 +1,201 @@
+TITLE: Portales
+DOMAIN: General
+PRIORITY: Media
+ID: 4271702474
+SOURCE: 4271702474__Portales.json
+
+---
+
+Tabla de Contenidos
+Introducción
+
+Estructura de Archivos
+
+Configuración del Dockerfile
+
+Configuración de Docker Compose
+
+Configuración de devcontainer.json
+
+Scripts de Configuración
+
+Mejores Prácticas
+
+Troubleshooting
+
+Introducción
+Los DevContainers son una solución que permite crear entornos de desarrollo consistentes y reproducibles usando contenedores Docker. Esta configuración garantiza que todos los miembros del equipo trabajen en el mismo entorno, eliminando el problema de "funciona en mi máquina".
+Beneficios de usar DevContainers:
+Consistencia: Mismo entorno para todos los desarrolladores
+
+Aislamiento: No contamina el sistema host
+
+Reproducibilidad: Fácil setup en nuevas máquinas
+
+Versionado: El entorno está versionado junto con el código
+
+En general, usar este Pull Request como base:Pull Requestde los cambios, es la versión que está aplicada en commerce-portal.
+Estructura de Archivos
+La configuración de DevContainers se encuentra en la carpeta.devcontainer/en la raíz del proyecto:
+wide760Configuración del Dockerfile
+dockerfilewide760Explicación paso a paso:
+ARG RUBY_VERSION=3.4.3: Define la versión de Ruby como variable de construcción. Esta versión debe coincidir exactamente con la especificada en.ruby-version.
+
+FROMghcr.io/rails/devcontainer/images/ruby:$RUBY_VERSION: Utiliza la imagen oficial de Rails DevContainer que incluye:
+Ruby preinstalado
+
+Bundler
+
+Node.js
+
+Herramientas de desarrollo comunes
+
+Configuración optimizada para desarrollo
+
+RUN sudo apt-get update && sudo apt-get install -y redis: Instala Redis como dependencia del sistema, necesario para poder utilizar el comandoredis-cli
+
+¿Por qué usar la imagen oficial de Rails?
+Está optimizada para desarrollo Rails
+
+Incluye todas las dependencias necesarias
+
+Se mantiene actualizada por el equipo de Rails
+
+Reduce el tiempo de construcción del contenedor
+
+Configuración de Docker Compose
+yamlwide760Servicioredis:
+image: redis:latest: Usa la imagen oficial de Redis
+
+ports: Expone el puerto 6379 para conexiones externas
+
+restart: unless-stopped: Reinicia automáticamente si falla
+
+volumes: Persiste los datos de Redis en./db/redis_data
+
+¿Por qué usar Docker Compose?
+Servicios múltiples: Permite definir servicios adicionales (Redis, PostgreSQL, etc.)
+
+Networking automático: Los servicios pueden comunicarse entre sí
+
+Volúmenes persistentes: Los datos se mantienen entre reinicios
+
+Configuración declarativa: Todo está definido en un archivo YAML
+
+Configuración de devcontainer.json
+jsonwide760Explicación de cada configuración:
+Configuración básica:
+name: Nombre descriptivo del DevContainer
+
+dockerComposeFile: Archivo de Docker Compose a usar
+
+service: Servicio específico del compose a usar como DevContainer
+
+workspaceFolder: Directorio de trabajo dentro del contenedor
+
+Features (Características adicionales):
+github-cli: Instala GitHub CLI para operaciones con repositorios
+
+docker-outside-of-docker: Permite usar Docker desde dentro del contenedor
+
+zsh: Instala y configura Zsh como shell por defecto
+
+Customizations (Personalizaciones):
+extensions: Lista de extensiones de VS Code que se instalan automáticamente:
+karunamurti.haml: Soporte para HAML
+
+shopify.ruby-lsp: Language Server Protocol para Ruby
+
+kaiwood.endwise: Auto-completado deenden Ruby
+
+eamodio.gitlens: Mejoras para Git
+
+rubocop.vscode-rubocop: Linter de Ruby
+
+shanehofstetter.rails-i18n: Soporte para la internacionalización de Rails
+
+sndst00m.vscode-native-svg-preview: Preview de archivos SVG
+
+ms-azuretools.vscode-containers: Herramientas para contenedores
+
+postCreateCommand:
+bin/setup --skip-server: Ejecuta el script de configuración después de crear el contenedor
+--skip-server: No inicia el servidor automáticamente.
+
+--overwrite-config: Flag opcional para sobreescribir archivos de configuracion una vez levantado el devcontainer.
+
+Scripts de Configuración
+Scriptbin/setup
+rubywide760¿Qué hace este script?
+Instala dependencias: Verifica si Bundler está actualizado y ejecutabundle install
+
+Copia archivos de configuración: Copia archivos.samplea sus versiones finales
+
+Limpia archivos temporales: Elimina logs y archivos temporales antiguos
+
+Inicia el servidor: Ejecutabin/dev(definido enProcfile.dev)
+
+Procfile.dev
+wide760Define los procesos que se ejecutan en desarrollo:
+web: Servidor Rails
+
+css: Watcher de Tailwind CSS para compilación automática
+
+Mejores Prácticas
+1. Versionado de Dependencias
+Mantén.ruby-versionsincronizado con el Dockerfile
+
+Especifica versiones exactas enGemfile.lock
+
+Usa imágenes base estables y versionadas
+
+2. Configuración de Archivos
+Usa archivos.samplepara configuraciones sensibles
+
+Documenta las variables de entorno necesarias
+
+Incluye.dockerignorepara optimizar el build
+
+3. Extensiones de VS Code
+Instala solo las extensiones necesarias para el proyecto
+
+Mantén la lista actualizada y documentada
+
+Considera extensiones específicas del stack tecnológico
+
+4. Volúmenes y Persistencia
+Usa volúmenes para datos que deben persistir (bases de datos, logs)
+
+Optimiza concachedpara mejor rendimiento en macOS/Windows
+
+Evita montar directorios innecesarios
+
+5. Comandos de Post-Creación
+Haz los comandos idempotentes (que se puedan ejecutar múltiples veces)
+
+Proporciona feedback claro al usuario
+
+Maneja errores graciosamente
+
+Troubleshooting
+Problemas Comunes
+1. Puerto ya en uso
+bashwide7602. Extensiones no se instalan
+Verificar que las extensiones existan en el marketplace
+
+Revisar la sintaxis del JSON
+
+Reconstruir el contenedor
+
+Comandos Útiles
+bashwide760Conclusión
+Esta configuración de DevContainers proporciona un entorno de desarrollo robusto y consistente para proyectos Rails. La combinación de Docker, Docker Compose y las características específicas de DevContainers garantiza que todos los miembros del equipo trabajen en el mismo entorno, reduciendo problemas de configuración y mejorando la productividad.
+La configuración es modular y extensible, permitiendo agregar nuevos servicios o características según las necesidades del proyecto. El uso de scripts automatizados y archivos de configuración versionados asegura que el setup sea reproducible y mantenible.
+
+Prompt para generar README.md
+Para generar el archivo de README.md del proyecto, se debe usar el siguiente prompt, que ya genera una estructura estandar y con bastante detalle.
+Por las dudas, hay que revisar lo generado por cualquier detalle que se deba corregir.
+wide760
+
+EL PROMPT ANTERIOR:
+wide760

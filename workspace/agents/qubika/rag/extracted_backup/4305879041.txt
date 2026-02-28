@@ -1,0 +1,112 @@
+TITLE: Reporte de suscripciones a las que pertenece un usuario  - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4305879041
+SOURCE: 4305879041__Reporte_de_suscripciones_a_las_que_pertenece_un_usuario__-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la funcionalidad de listas las suscripciones y los movimientos pertenecientes a un usuario por.
+Las horas estimadas son:122 ~ 17 días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+Nota: Joel sale de licencia delalpor eso la fecha de entrega va a quedar desfasada para su vuelta. Igualmente, se va a intentar acelerar el desarrollo para poder entregar antes de su salida.
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Crear un nuevo endpoint y lógica que permita obtener todas las suscripciones asociadas a un usuario con su último pago.
+Con paginado y filtros.
+
+21
+
+payment-link-service
+
+Crear un módulo que maneje los identificadores globales de los usuarios.
+Método que recibe un usuario y genera el identificador global(con prefijo adelante para saber qué tipo de usuario es)
+
+Método que recibe un identificador global y devuelve el tipo de usuario que es.
+
+4
+
+payment-link-service
+
+Modificar la respuesta del endpoint de resumen de suscripciones para agregar el identificador global del usuario.
+
+4
+
+payment-link-service
+
+Crear nueva vista que contenga los datos del usuario y tabla con sus suscripciones asociadas.
+Permitir filtros de suscripciones como su descripción (LIKE), número de referencia (LIKE) y fecha de creación (EQ).
+
+Consumir endpoint para traer las suscripciones asociadas a un usuario.
+
+Ciertas columnas redireccionan a vistas ya existentes como (vista única de suscripción e histórico de pago de un suscriptor).
+
+28
+
+payment-link-portal
+
+Solucionar error con la botón de redirección a página previa.
+Al ir entrando a páginas anidadas, el botón de redirección solo lleva a la vista anterior y desaparece.
+
+Es urgente solucionarlo ya que vamos a agregar mas vistas anidadas.
+
+14
+
+payment-link-portal
+
+Redireccionar al histórico de pagos desde el dato de cobro prog.
+
+Y redireccionar a la vista nueva desde el nombre y mail del usuario.
+
+2
+
+payment-link-portal
+
+Mapear/Agregar el global id del usuario en la respuesta del endpoint de reporte de suscripciones.
+
+4
+
+external-commerce-service
+
+Crear nuevo endpoint para obtener el reporte de suscripciones asociadas a un usuario.
+Recibe el identificador global del usuario(identificador con prefijo indicando qué tipo de usuario es), paginado y filtros.
+
+21
+
+external-commerce-service
+
+Salida a Staging
+Integración de los flujos
+
+Tests
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+14
+
+Total Desarrollo
+
+112
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+10
+
+Total Desarrollo + Gestión
+
+122

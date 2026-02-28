@@ -1,0 +1,52 @@
+TITLE: Habilitar Cobro en GS - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3184656426
+SOURCE: 3184656426__Habilitar_Cobro_en_GS_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento lista las tareas con la estimación para lograr el soporte de Guaraníes en el portal de PIX.
+Tarea
+
+Estimación (hs)
+
+Agregar un selector de moneda en la pantalla de selección de pago.
+
+16
+
+Verificar formato del monto agregado en el form
+
+10
+
+Modificar Voucher
+
+4
+
+Modificar impresión del Voucher
+
+4
+
+Modificar vista de resultado de pago
+
+4
+
+Modificar el reporte de pagos para visualizar moneda y filtro de moneda
+
+10
+
+Total Desarrollo
+
+48
+
+Gestion
+
+5
+
+Soporte Post Producción
+
+20
+
+Total
+
+73

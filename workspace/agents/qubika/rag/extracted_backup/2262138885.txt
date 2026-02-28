@@ -1,0 +1,12 @@
+TITLE: Presentación General del Proyecto Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 2262138885
+SOURCE: 2262138885__Presentacio╠ün_General_del_Proyecto_Bancard.json
+
+---
+
+Como comentamos antes, Bancard es un cliente que cuenta con múltiples aplicaciones y servicios. A continuación, dejamos una presentación con un panorama general de todos ellos, como funciona cada uno, y como se relacionan entre sí.
+
+https://docs.google.com/presentation/d/1-L414YwcgeJ3JpXchAvL7cCLque-iIxvvDAaboGT9C8/edit#slide=id.g1331d3f45a_1_91Siguiente Paso →
+Proceso de Management

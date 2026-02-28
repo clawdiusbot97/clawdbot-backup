@@ -1,0 +1,15 @@
+TITLE: POS
+DOMAIN: General
+PRIORITY: Media
+ID: 2595061764
+SOURCE: 2595061764__POS.json
+
+---
+
+A continuación pasos a seguir para instalar aplicación Infonet Cobranzas enPOSde Bancard
+Instructivo:
+https://drive.google.com/file/d/1w9v5BDMgNyP_hQ70rrrKX2W4gDd_mqaZ/view?usp=share_link
+F20 archivo de instalacion:
+https://drive.google.com/file/d/1NGvNZJGwCLwyuK325CotVUD1Uutb-Kbn/view?usp=share_link
+F300 archivo de instalacion:
+https://drive.google.com/file/d/1ww2b7n04jbOKMCFOJcn9-0aQxgrGHRRq/view?usp=share_link

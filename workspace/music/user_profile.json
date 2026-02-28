@@ -1,0 +1,192 @@
+{
+  "user_id": "manu",
+  "top_genres": [
+    "rock",
+    "electronic",
+    "oldies",
+    "reggaeton",
+    "folklore_rioplatense"
+  ],
+  "top_subgenres": [
+    "rock rioplatense",
+    "classic rock",
+    "house",
+    "techno",
+    "new wave",
+    "post-punk",
+    "soul/funk/disco",
+    "milonga campera"
+  ],
+  "preferred_subgenres": {
+    "electronic": [
+      "house",
+      "techno",
+      "minimal"
+    ],
+    "rock": [
+      "rioplatense",
+      "classic rock",
+      "alternative 90s",
+      "new wave/post-punk"
+    ],
+    "oldies": [
+      "classic rock",
+      "soul/funk/disco",
+      "new wave"
+    ],
+    "folklore_rioplatense": [
+      "milonga campera",
+      "cifra",
+      "estilo pampeano",
+      "chamarrita narrativa",
+      "zamba/chacarera narrativa"
+    ]
+  },
+  "preferred_eras": [
+    "70s",
+    "80s",
+    "90s",
+    "2000s",
+    "folklore tradicional rioplatense"
+  ],
+  "preferred_bpm_range": {
+    "electronic": [120, 132],
+    "rock": [90, 145],
+    "oldies": [95, 128],
+    "folklore_rioplatense": [70, 116]
+  },
+  "preferred_groove_types": [
+    "rolling",
+    "driving",
+    "hypnotic",
+    "funky",
+    "campero narrativo"
+  ],
+  "preferred_low_end_profile": [
+    "rolling bass",
+    "mid bass",
+    "acústico orgánico"
+  ],
+  "energy_preference": {
+    "default": 7,
+    "dancefloor": 8,
+    "listening": 6,
+    "folklore": 5
+  },
+  "dancefloor_bias": "medium-high",
+  "mood_bias": [
+    "nostalgic",
+    "euphoric",
+    "dark-groovy",
+    "gauchesco narrativo"
+  ],
+  "preferred_guitar_tone": [
+    "crunch",
+    "overdrive",
+    "classic analog",
+    "acústico criollo"
+  ],
+  "aggression_tolerance": "medium",
+  "vocal_preference": [
+    "melodic",
+    "gritty",
+    "relato sobrio"
+  ],
+  "structure_preference": [
+    "verse-chorus",
+    "riff-based",
+    "progressive build",
+    "narrativa lineal"
+  ],
+  "experimentation_tolerance": "medium",
+  "folklore_profile": {
+    "core_theme": "historias gauchescas del Río de la Plata",
+    "focus_countries": ["uruguay", "argentina"],
+    "strong_identification": [
+      "milonga campera",
+      "alfredo zitarrosa",
+      "los olimarenos",
+      "atahualpa yupanqui"
+    ],
+    "lyric_preferences": [
+      "frontera",
+      "oficio rural",
+      "honor",
+      "payada",
+      "nostalgia de campaña"
+    ]
+  },
+  "negative_patterns": [
+    "overly generic EDM drops",
+    "formulaic pop-reggaeton without groove identity",
+    "folklore sin narrativa ni identidad rioplatense"
+  ],
+  "liked_artists_high": [
+    "Traumer",
+    "La Vela Puerca",
+    "No Te Va Gustar",
+    "Cuarteto de Nos",
+    "Trotsky Vengaran",
+    "Buenos Muchachos",
+    "Once Tiros",
+    "Soda Stereo",
+    "Cerati",
+    "Patricio Rey y sus Redonditos de Ricota",
+    "Indio Solari",
+    "Divididos",
+    "Sumo",
+    "Las Pelotas",
+    "Seru Giran",
+    "Charly Garcia",
+    "Earth, Wind & Fire",
+    "Bee Gees",
+    "Kool & The Gang",
+    "The Beatles",
+    "The Rolling Stones",
+    "Led Zeppelin",
+    "Pink Floyd",
+    "Queen",
+    "Fleetwood Mac",
+    "The Who",
+    "Creedence Clearwater Revival",
+    "The Cure",
+    "Depeche Mode",
+    "The Police",
+    "Los Abuelos de la Nada",
+    "Fito Paez",
+    "Alfredo Zitarrosa",
+    "Los Olimarenos",
+    "Atahualpa Yupanqui"
+  ],
+  "liked_artists_medium": [
+    "ANOTR",
+    "Tale Of Us",
+    "Buitres",
+    "Peyote Asesino",
+    "Snake",
+    "Babasónicos",
+    "Catupecu Machu",
+    "El Mató a un Policía Motorizado",
+    "Stevie Wonder",
+    "Chic",
+    "The Doors",
+    "Los Rodríguez",
+    "Enanitos Verdes",
+    "Jose Larralde",
+    "Jorge Cafrune",
+    "Horacio Guarany",
+    "Suma Paz",
+    "Argentino Luna",
+    "Hernan Figueroa Reyes",
+    "Jose Carbajal",
+    "Numa Moraes",
+    "Larbanois & Carrero"
+  ],
+  "neutral_artists": [
+    "Chris Stussy",
+    "Ricardo Villalobos",
+    "Charlotte de Witte",
+    "Hablan por la Espalda"
+  ],
+  "last_updated": "2026-02-19T04:40:00Z"
+}

@@ -1,0 +1,97 @@
+TITLE: 📘 Guía de Configuración de Proyectos en Sentry
+DOMAIN: 5) Observabilidad
+PRIORITY: Media
+ID: 4313743470
+SOURCE: 4313743470__≡ƒôÿ_Gui╠üa_de_Configuracio╠ün_de_Proyectos_en_Sentry.json
+
+---
+
+🧩 1. Crear o editar el proyecto
+EnGeneral Settings:
+Nombre del proyecto:
+➜ Debe ser igual al nombre del repositorio,sin la palabra “bancard”.
+Ejemplo:
+Repositorio →bancard-payment-link-service
+
+Proyecto en Sentry →payment-link-service
+
+Subject Prefix:
+➜ Debe ser igual al nombre del proyecto en mayúsculas y entre corchetes.
+Ejemplo:
+[PAYMENT-LINK-SERVICE]
+
+Project Teams:
+➜ Asignar el proyecto al equipo#bancard.
+
+Alert Settings → Subject Template:
+➜ Usar la siguiente plantilla:
+
+Resto de la configuración:
+➜ Dejar todo con los valores por defecto.
+
+🚨 2. Crear las alertas obligatorias
+Cada proyecto debe tenerdos alertasconfiguradas:
+First Time Error
+
+High Frequency Error
+
+Podés duplicarlas desde otro proyecto y solo cambiar los valores que se indican.
+Pasos:
+Ir aAlerts.
+
+En otra alerta existente (de otro proyecto), hacer clic en⋯ → Duplicate.
+
+En la sección1. Select an environment and project:
+Dejarproductioncomo único ambiente.
+
+Seleccionar el proyecto correspondiente (ej.payment-link-service).
+
+En la sección5. Add a name and owner:
+Reemplazar el nombre del proyecto en el campoName.
+
+Mantener el resto igual (por ejemplo:
+payment-link-service First Time Erroro
+payment-link-service High Frequency Error (10+ in 5m)).
+
+Asignar elTeam: #bancard.
+
+✅ 3. Checklist de verificación
+Elemento
+
+Valor esperado
+
+Project name
+
+sin “bancard”
+
+Subject Prefix
+
+[NOMBRE-DEL-PROYECTO]
+
+Team asignado
+
+#bancard
+
+Subject Template
+
+[${tag:environment}] - $title
+
+Alert 1
+
+First Time Error
+
+Alert 2
+
+High Frequency Error
+
+Ambiente
+
+production
+
+Action interval
+
+30 min
+
+Destinatario
+
+#bancard

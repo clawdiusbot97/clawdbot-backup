@@ -1,0 +1,34 @@
+TITLE: Deuda técnica Payment-link-portal
+DOMAIN: General
+PRIORITY: Media
+ID: 4219404404
+SOURCE: 4219404404__Deuda_te╠ücnica_Payment-link-portal.json
+
+---
+
+Unificar estilos de modales en payment-link-portal.
+Descripción: En el rediseño de Tpago se introdujeron nuevos estilos de botones, pero no todos los modales fueron actualizados. Hoy conviven botones antiguos y nuevos, generando inconsistencia visual.
+
+La tarea es revisar y unificar todos los modales al estilo nuevo para mantener coherencia.
+
+Mostrar pantalla de carga en todos los cambios de vistas.
+Descripción: Actualmente, cuando el usuario hace clic en una operación de la sidebar, se muestra una pantalla de carga mientras se procesa la redirección.
+
+El problema es que este comportamiento no es uniforme: en otras redirecciones de la aplicación (por ejemplo, al navegar mediante botones, links internos o acciones fuera de la sidebar) la pantalla de carga no aparece, aun cuando el tiempo de respuesta es similar.
+
+Esta inconsistencia genera una experiencia de usuario desigual, ya que en algunos flujos el usuario percibe que la aplicación está trabajando, mientras que en otros puede pensar que la acción no se ejecutó o que la aplicación se congeló.
+
+Unificar paginado en todas las páginas
+Descripción: Cuando se realizó el rediseño del portal, se solicitó que la pantalla de resumen de suscripciones tuviera un paginado con un estilo distinto al existente. Para cumplir con ese requisito, se incorporó una gema diferente a la que usaban los paginados anteriores, ya que la que estaba en uso no facilitaba el desarrollo.
+En ese momento, no se destinó tiempo para actualizar los paginados anteriores, porque no era una prioridad dentro del alcance del rediseño. Y como resultado, hoy conviven dos implementaciones de paginado en el portal:
+
+(Paginado nuevo)
+
+(Paginado viejo)
+
+Esta coexistencia genera inconsistencias visuales y de comportamiento, lo que puede confundir a los usuarios. La tarea pendiente es unificar todos los paginados bajo la nueva implementación y estilo, asegurando una experiencia uniforme y un código más simple de mantener.
+
+Cuando el reporte summary excede cierto límite, procesar la descarga por detrás
+Descripción: La pantalla de resumen de suscriptores permite descargar un reporte con filtros de fecha, estado, etc. Actualmente, la descarga se procesa de forma síncrona, lo que puede generar demoras o fallos cuando el volumen de datos es grande.
+
+La tarea es implementar un procesamiento asíncrono (como en otros reportes), de modo que cuando el archivo exceda un tamaño determinado (definirlo a partir de pruebas de rendimiento) se procese con Sidekiq y se envíe por mail al usuario que lo solicitó.

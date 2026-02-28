@@ -1,0 +1,29 @@
+{
+  "id": "001",
+  "nombre": "Cotización multicompañía de vehículo",
+  "descripcion": "Proceso de cotización de vehículo (nuevo o renovación) que incluye: 1. Recibir solicitud del cliente. 2. Recopilar y validar datos del riesgo (marca, modelo, año, versión, uso, zona de circulación, CI, fecha nacimiento). 3. Ingresar manualmente a portales web de múltiples aseguradoras (≈ 5–7). 4. Cargar datos en cada portal. 5. Obtener precios y condiciones. 6. Registrar resultados en Excel/Sheets. 7. Construir cuadro comparativo. 8. Enviar al cliente por WhatsApp (imagen o PDF). 9. Explicar opciones si es necesario. Salida: cuadro comparativo de precios y coberturas listo para decisión, registro informal en Excel (no versionado formal).",
+  "sistemas_usados": [
+    "Mapfre",
+    "Porto Seguro",
+    "Banco de Seguros del Estado (BSE)",
+    "SURA",
+    "Sancor Seguros",
+    "HDI Seguros",
+    "Google Sheets",
+    "WhatsApp",
+    "Llamada telefónica"
+  ],
+  "tiempos": {
+    "P50_min": 20,
+    "P90_min": 40
+  },
+  "frecuencia_mensual": 150,
+  "carga": 4,
+  "riesgo": 5,
+  "retrabajo_porcentaje": 15,
+  "proceso_padre": "100",
+  "vinculos": [],
+  "fecha_creacion": "2026-02-21T00:56:00Z",
+  "entrevistador": "OpenClaw Orchestrator",
+  "notas": "Subproceso manual, repetitivo, con alto riesgo y carga. Oportunidad de automatización de ingreso a portales y generación de cuadro comparativo."
+}

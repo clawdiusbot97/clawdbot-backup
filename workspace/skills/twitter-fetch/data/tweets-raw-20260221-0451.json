@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260221-0451",
+  "fetched_at": "2026-02-21T04:51:23.226372+00:00",
+  "config": {
+    "nitter_base_url": "https://nitter.net",
+    "include_retweets": false,
+    "using_searches": true
+  },
+  "tweets": [],
+  "stats": {
+    "total_fetched": 0,
+    "per_source": {
+      "tech news": 0,
+      "AI": 0,
+      "software engineering": 0,
+      "finance news": 0,
+      "investing": 0,
+      "Uruguay economy": 0,
+      "history": 0,
+      "medieval history": 0,
+      "geopolitics": 0,
+      "breaking news": 0,
+      "Uruguay news": 0,
+      "world news": 0
+    },
+    "errors": []
+  }
+}

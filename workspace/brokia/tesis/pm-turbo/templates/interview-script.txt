@@ -1,0 +1,170 @@
+# Guión Entrevista Corredores - Brokia
+
+**Duración:** 30 minutos  
+**Objetivo:** Validar dolor, cuantificar tiempo, entender herramientas actuales  
+**Notas:** Grabar con permiso, o tomar notas en tiempo real
+
+---
+
+## INTRODUCCIÓN (2 min)
+
+"Gracias por tu tiempo. Te cuento rápido: estoy haciendo una investigación para mi tesis sobre correduría de seguros, junto con Juan Manuel [APELLIDO]. No te voy a vender nada, no hay producto —quiero entender cómo trabajás hoy y qué te frustra.
+
+Todo lo que me digas es anónimo. Si te parece, puedo compartirte después un resumen de lo que encuentro, que capaz te da algún insight sobre herramientas que usan otros corredores.
+
+¿Te parece si arrancamos? Primero, contame: ¿hace cuánto sos corredor y qué tipo de seguros manejás más?"
+
+---
+
+## SECCIÓN 1: CONTEXTO (3 min)
+
+| Pregunta | Por qué la hacemos | Qué escuchar |
+|----------|-------------------|--------------|
+| ¿Hace cuánto sos corredor? | Validar experiencia | Más de 3 años = mejor |
+| ¿Trabajás solo o en una red/agencia? | Entender estructura | Solo vs empleado vs parte de red |
+| ¿Qué tipo de seguros más vendés? | Focus del negocio | Auto = nuestro target inicial |
+| ¿Cuántas cotizaciones hacés por día aprox? | Cuantificar volumen | Número real, no estimado |
+
+---
+
+## SECCIÓN 2: PROCESO DE COTIZACIÓN (10 min)
+
+**Transición:** *"Quiero meterme en el proceso de cotización. Pensá en la última cotización que hiciste de seguro de auto. Contame paso a paso cómo fue."*
+
+### Preguntas de profundización:
+
+1. **"¿Cómo te llega el pedido?"**
+   - WhatsApp, llamada, email, referencia?
+   - ¿Qué información te da el cliente inicialmente?
+
+2. **"¿Qué hacés primero?"**
+   - ¿Abrís un sistema? ¿Un Excel? ¿WhatsApp?
+   - ¿Cuánto tiempo te lleva reunir los datos del cliente?
+
+3. **"¿A cuántas aseguradoras contactás habitualmente?"**
+   - ¿Por qué esas y no otras?
+   - ¿Cómo les pedís la cotización a cada una?
+
+4. **"¿Cómo te responden?"**
+   - ¿Rápido? ¿Demoran?
+   - ¿En qué formato te llega la propuesta?
+
+5. **"¿Cómo armás la propuesta para el cliente?"**
+   - ¿Todo junto en un PDF? ¿Le mandás opciones sueltas?
+   - ¿Cuánto tiempo te lleva eso?
+
+### Cierre de sección:
+**"Si tuvieras que estimar, ¿cuántos minutos te llevó toda esa cotización desde que te pidieron hasta que le mandaste al cliente?"**
+
+Obtener número. Si duda: *"Tranqui, es una estimación. ¿Entre 15 y 30? ¿Más de 30?"*
+
+---
+
+## SECCIÓN 3: HERRAMIENTAS ACTUALES (5 min)
+
+**Transición:** *"Contame qué herramientas usás en el día a día para esto."*
+
+| Pregunta | Qué buscamos |
+|----------|--------------|
+| ¿Usás algún software específico de correduría? | SYC, sistemas propios, etc. |
+| ¿Excel? ¿Para qué? | Qué procesos son manuales |
+| ¿WhatsApp Business? ¿Email? | Canales de comunicación |
+| ¿Tenés base de datos de clientes? ¿Cómo la manejás? | CRM o caos |
+
+**Pregunta clave:** *"Si pudieras cambiar UNA sola cosa de cómo hacés las cotizaciones hoy, ¿qué sería?"*
+
+---
+
+## SECCIÓN 4: DOLIÓN Y DISPOSICIÓN A PAGAR (7 min)
+
+**Transición:** *"Ahora quiero meterme en lo incómodo."*
+
+### Preguntas:
+
+1. **"En una escala de 1 a 10, ¿cuánto te molesta el proceso de cotización actual? 1 = no me molesta, 10 = me vuelve loco"**
+   - Si ≥7: *"¿Qué es lo peor?"*
+   - Si <5: *"¿Por qué no te molesta más?"*
+
+2. **"¿Alguna vez perdés una venta por demora en la cotización?"**
+   - ¿Con qué frecuencia?
+   - ¿Cuánto representa en dinero aproximadamente?
+
+3. **"¿Pagás por alguna herramienta hoy para esto?"**
+   - Si sí: ¿cuánto? ¿vale la pena?
+   - Si no: ¿por qué no?
+
+4. **"Si existiera una herramienta que te ahorrara la mitad del tiempo en cotizaciones, ¿considerarías pagar por ella?"**
+   - Si sí: *"¿Cuánto te parecería razonable por mes?"*
+   - Si no: *"¿Por qué?"* → entender objeción
+
+5. **"¿Quién tomaría la decisión de comprar una herramienta así en tu caso? ¿Vos, tu jefe, la red?"**
+
+---
+
+## SECCIÓN 5: CIERRE (3 min)
+
+**"Últimas dos preguntas:
+
+1. **"¿Conocés a otros corredores que puedan estar abiertos a charlar conmigo? Me ayudaría tener más perspectivas."**
+
+2. **"¿Qué me estoy olvidando de preguntar? ¿Qué crees que es importante que sepa sobre el día a día de un corredor?"**
+
+**"Muchísimas gracias por tu tiempo. Te paso mi email/WhatsApp, en un par de semanas te mando un resumen de lo que encontramos —capaz te da alguna idea útil."**
+
+---
+
+## TEMPLATE DE NOTAS POST-ENTREVISTA
+
+Copiar y completar inmediatamente después de la entrevista:
+
+```markdown
+## Entrevista: [Nombre Corredor]
+**Fecha:** [DD/MM/AAAA]  
+**Duración:** [XX] min  
+**Medio:** [Zoom/WhatsApp/llamada/presencial]
+
+### Perfil
+- Años de experiencia: [X]
+- Estructura: [Solo/Red/Agencia]
+- Focus principal: [Auto/Hogar/etc]
+- Cotizaciones/día estimadas: [X]
+
+### Tiempo cotización
+- Minutos estimados por cotización: [XX]
+- Aseguradoras contactadas promedio: [X]
+- Mayor dolor reportado: [detalle]
+- Escala dolor (1-10): [X]
+
+### Herramientas actuales
+- Software específico: [Sí/No - cuál]
+- Excel: [Para qué]
+- WhatsApp/Email: [Proceso]
+- Base de datos clientes: [Cómo la maneja]
+
+### Disposición a pagar
+- ¿Pagaría por herramienta?: [Sí/No/Tal vez]
+- Precio mencionado:$[X]"  
+- ¿Perdió ventas por demora?: [Sí/No - frecuencia]
+- Decision maker: [Él/Jefe/Red]
+
+### Insights clave
+- [Insight 1]
+- [Insight 2]
+
+### Flags
+- [Algo que no cuadre, duda, etc.]
+
+### Next steps
+- [Enviar resumen, contactar referido, etc.]
+```
+
+---
+
+## CHECKLIST POST-ENTREVISTA
+
+- [ ] Completar template de notas (máximo 30 min después)
+- [ ] Guardar archivo en `evidence/dayX/interview-[nombre].md`
+- [ ] Extraer número clave (tiempo por cotización)
+- [ ] Identificar 1-2 insights accionables
+- [ ] Si prometí enviar resumen: agendar recordatorio
+- [ ] Si me dio referido: agregar a lista de contactos

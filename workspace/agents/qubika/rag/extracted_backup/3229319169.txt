@@ -1,0 +1,66 @@
+TITLE: Desarrollo 3ds VPOS-PCI - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3229319169
+SOURCE: 3229319169__Desarrollo_3ds_VPOS-PCI_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento contiene el tasking y la estimación para la iniciativaDesarrollo 3DS en VPos PCI
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Agregar nuevos parametros opcionales a la operaciónpay_pci_encrypted_buy(autorizacion y preautorizacion)
+
+4
+
+vpos-service
+
+Agregar nuevos parametros opcionales a la operaciónconfirm_pci_preauthorization(confirmar preautorizacion)
+
+4
+
+vpos-service
+
+Flujo de autoizacion:
+Llamar a un nuevo endpoint jpos compras para buy encrypted (será igual al que ya se usa hoy pero con los parámetros nuevos) (operaciónpay_pci_encrypted_buy)
+
+16
+
+vpos-service
+
+Flujo de preautorizacion:
+Agregar nuevos parámetros para la llamada del rpg vprg005. (operaciónpay_pci_encrypted_buy)
+
+8
+
+vpos-service
+
+Flujo de confirmar preautorizacion:
+Agregar nuevos parámetros para la llamada del rpg vprg005 (operaciónconfirm_pci_preauthorization)
+
+8
+
+vpos-service
+
+Quitar operación y todo lo relacionado apay_pci_buyque no se utiliza mas. Representations, service, tests, etc.
+
+4
+
+vpos-service
+
+notePreguntas
+Preguntas
+
+Nuevo endpoint de jpos. En qué casos debe utilizarse el nuevo y en qué casos se mantiene el actual?
+El nuevo se utiliza para pci buy encrypted.
+Ese mismo endpoint que se usa hoy en día en pci buy encrypted también se usa para el flujo de multibuy, esto se mantiene, solo se modifica el endpoint de pci buy encrypted por el nuevo que básicamente será el mismo pero la url diferente y tendrá los parámetros nuevos de 3ds.
+
+Nuevo endpoint jpos y programa VPRG005: ante los nuevos parámetros que se le envían. Hay nuevos códigos de respuesta? Debe agregarse alguna lógica nueva? Modificarse algún dato en la base de datos?
+No hay lógica nueva con respecto a la respuesta ni modificar algún dato de la base de datos
+
+programa VPRG005: largo de los nuevos parámetros de entrada? Se modifican parámetros de salida?
+Sobre los parámetros de entrada hoy les actualizamos los largos de los campos, y no se modifican los parámetros de salida, las respuestas seguirán siendo iguales a las existentes hoy en día

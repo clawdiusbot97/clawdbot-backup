@@ -1,0 +1,67 @@
+TITLE: Deploy a producción PIX Service
+DOMAIN: 4) Servicios
+PRIORITY: Media
+ID: 2979037185
+SOURCE: 2979037185__Deploy_a_produccio╠ün_PIX_Service.json
+
+---
+
+Feature Branch
+feature/pix-service
+Proyectos involucrados
+bancard-pix-service
+
+…
+
+Consideraciones Generales
+
+o
+
+Necesita cambios en la configuración
+
+Necesita conexión con servicios externos (Coordinar con Denis).
+
+Necesita conexión con otros servidores (Revisar conectividad y coordinar con Denis).
+
+Necesita ejecutar migraciones en la db (Coordinar con DBA).
+
+Necesita Buckets de S4
+
+Necesita cargar imágenes o datos estáticos
+
+Cambios en la configuración
+PR config Staging: <LINK A PR>
+PR config Producción: <LINK A PR>
+Migraciones a ejecutar
+<Listado de todas las migraciones que se deben ejecutar>
+sqlDatos a insertar
+<Listado de datos que se necesitan insertar en tablas para que funcione la iniciativa>
+Commerce Service:
+CREACION DEL SERVICIO:
+CREACION DE LA ROLE_CATEGORY:
+CREACION DEL ROLE CAJERO PIX:
+CREACION DE PERMISSIONS:
+CREACION DE ROLE_PERMISSIONS:
+Así quedaron los inserts:
+Pull requests a develop/master
+
+Checklist deoendencias
+Redis version 6+ para compatibilidad con sidekiq
+MySQL 8
+
+Checklist
+ver que funcionen los logs. Ubicaciones de los logs. Puma, bancard loggers, external services, etc.
+
+conexión a internet para pegarle a rendix
+
+conectividad con pix-portal endpoint notify
+
+credenciales de aplicacion para pix-service y pix-portal para autenticar requests entre servicios
+
+Revisar conectividad con S4 y crear el bucket de reportes con el nombrepix_reports
+
+probar salida a internet desde contenedor pix-service para pegarle a rendix.
+
+probar conectividad con auth-service, comerce-service, sentry.
+
+configurar proxy dmz /pix/notifications para que apunte al proxy de servicios al puerto de pix service

@@ -1,0 +1,41 @@
+TITLE: QR en POS
+DOMAIN: General
+PRIORITY: Media
+ID: 2975039533
+SOURCE: 2975039533__QR_en_POS.json
+
+---
+
+Equipo
+
+Nombre
+
+Rol
+
+Technical Leader
+
+Project Manager
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+Fecha de Inicio
+
+Fecha de Fin
+
+Indefinido
+
+Comunicación + Herramientas
+
+Confluence Space
+
+Jira Board
+
+Slack Channel
+
+#bancard-qr-argentino
+
+M. Teams Channel

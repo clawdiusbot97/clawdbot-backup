@@ -1,0 +1,145 @@
+TITLE: VisaQR Daily Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2860351504
+SOURCE: 2860351504__VisaQR_Daily_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Ayer:
+Hoy: Terminando unos detalles en PQRA-25. Luego va a continuar con PQRA-26 y PQRA-31 relacionadas a MPos.
+Viendo con Pachu las tareas en las que está trabajando.
+Blockers?: .
+
+Ayer: Trabajando en validación del endpoint de sucursales. Ya está pronto el PR, falta approve.
+Viendo un error que tiene Bruno en selling-portal.
+Hoy: Comenzó con tarea PQRA-26.
+Blockers?: .
+
+Ayer: Corrigiendo tests para PQRA-22. Ya quedó pronta la PR, faltan approve.
+Viendo un blocker que tiene al levantar selling-portal, que no se renderizan las vistas.
+Va a fijarse a ver como está payment-link-portal a ver si puede replicar, y sino hablar con Jose para que le de una mano.
+Hoy:
+Blockers?: .
+
+Ayer: Trabajando en ticket para agregar endpoint de confirmación de HST. Esperando por Victor a que le pase la response.
+Hoy:
+Blockers?: .
+
+Ayer: Trabajando en validación del endpoint de sucursales. Ya está pronto el PR, falta approve.
+Viendo un error que tiene Bruno en selling-portal.
+Hoy: Comenzó con tarea PQRA-26.
+Blockers?: .
+
+Ayer: Corrigiendo tests para PQRA-22. Ya quedó pronta la PR, faltan approve.
+Viendo un blocker que tiene al levantar selling-portal, que no se renderizan las vistas.
+Va a fijarse a ver como está payment-link-portal a ver si puede replicar, y sino hablar con Jose para que le de una mano.
+Hoy:
+Blockers?: .
+
+Ayer: Trabajando en ticket para agregar endpoint de confirmación de HST. Esperando por Victor a que le pase la response.
+Hoy:
+Blockers?: .
+
+Ayer: Terminó con PR-21 y creó PR. Se juntó cona ver la tarea que tiene asignada.
+Ahora está terminando con PR-25 y deja el PR creado.
+Una vez que estén estas dos tareas aprobadas se va a poder probar el flujo entero.
+Hoy:
+Blockers?: .
+
+Ayer: Terminó con tareas relacionadas a las terminales PR-31. Trabajando en PR-126.
+Hoy:
+Blockers?: .
+
+Ayer: Terminó con PR-22 y subió PR. Ahora empezó a trabajar con PR-30 (Agregar el botón para actualizar QR en selling-portal)
+Hoy:
+Blockers?: .
+
+Ayer: Trabajando en PR-28
+Hoy:
+Blockers?: .
+
+Ayer:
+Hoy: Terminando con los tests de la confirmación de los tests en selling. Tickets 25 y 21
+Blockers?: .
+
+Ayer: Trabajando en el la tarea de los roles. Hay un error en HST que no esta creando bien los errores. Está trabajando en la solución para esto. Creo PRs.
+Hoy: Terminando la tarea de las terminales. Task-31
+Luego va a seguir con la 26https://bancard.atlassian.net/browse/PQRA-26?atlOrigin=eyJpIjoiZDk5MjI0ODMxMzdhNGQyZjhmOTAwM2ZjMTNkZTYyY2YiLCJwIjoiaiJ9
+Blockers?: .
+
+Ayer: Trabajando en PR-22, está trabajando con los tests, con un problema al enviar la generación del QR a bancard-commons
+Trabajó en el deploy del viernes con Tonga, y ayudando a Pachu en una PR.
+Hoy:
+Blockers?: .
+
+Ayer:
+Hoy:
+Blockers?: .
+
+Ayer:
+Hoy:
+Blockers?: .
+
+Ayer:
+Hoy:
+Blockers?: .
+
+Ayer:
+Hoy:
+Blockers?: .
+
+Ayer: Trabajando en la los endpoint de confirmación.
+Hoy: Ver si puede armar reunión con Ariel para sacarse dudas.
+Blockers?: PR-25 - esperando por unas cosas de bruno para poder seguir.
+
+Ayer: Terminó con cambios en bd. Listo el PR, falta approve.
+Hoy: Va a empezar con la tarea PQRA-31. Tiene que validar unos detalles antes de empezar.
+Blockers?:
+
+Ayer: Terminando PQRA-114 (endpoints para borrar y obtener terminal). Quedó PR subida.
+Hoy: Haciendo correcciones en una pr para obtener el merchant.
+Al terminar va a seguir con PQRA-22
+Blockers?:
+
+Ayer: Terminó con PQRA-21 y pasó a revisión
+Hoy: Empezó a trabajar con PQRA-25.
+Blockers?:
+
+1incompleteHablar con Victor sobre puntos faltantes del PQRA-25
+
+Ayer: Terminó con ticket de agregado a operaciones.
+Hoy: Va a pasar PRs de las tareas que cerró.
+Blockers?:
+
+2incompletePreguntarle a Victor de donde sacamos los merchants.
+
+Ayer: Trabajando en PQRA-113. Subió PRS
+Hoy: Trabajando en PQRA-22 (cambiar QR en TPago)
+Blockers?:
+
+Ayer: Viendo unos tests que estaban fallando del code y decode.
+Hoy: Hablar con Victor sobre unos tags que no están en la codificación pero si en la decodificación.
+La idea es terminar esto hoy y empezar con selling.
+Revisó también algunos PR
+Blockers?:
+
+Ayer: Trabajando en tarea de agregar consulta de las config. Cambiando unas librerías (httparty por rest tool) para seguir con el standard de external-services
+Hoy: idem ayer
+Blockers?:
+
+Ayer: Trabajando con los tests del code y decode de los QR. Quedan algunos para ajustar. Sumó cambios de Victor, quedaron algunas dudas para hablar con él.
+Hoy: Va a hablar Victor para ver un tema sobre los tags de los QR y ya quedaría pronto.
+Blockers?:
+
+Ayer: Trabajando en el update de las terminales en external-services
+Hoy: Al terminal va a pasar a als tareas de consultas de status y config
+Blockers?:

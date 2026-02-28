@@ -1,0 +1,580 @@
+TITLE: Tasking y Estimación PIX
+DOMAIN: General
+PRIORITY: Media
+ID: 2817523733
+SOURCE: 2817523733__Tasking_y_Estimacio╠ün_PIX.json
+
+---
+
+Este es el tasking y la estimación para la iniciativa PIX.
+Este tasking incluye tanto el desarrollo del setup, el flujo de generación de pagos, la sección de mostrar ventas y la landing page con el flujo de onboarding.
+La idea es hacer un proceso ágil de desarrollo y validación, por lo tanto también un período de QA y bug fixing, que va a realizarse en conjunto con el desarrollo, para poder ir detectando amenazas y bugs en etapas previas del proceso y así evitar errores graves al final del proyecto. Esto va a permitir entregar un producto de mayor calidad, y disminuir considerablemente los bugs que puedan aparecer en la entrega, como también poder alertarnos si hay que hacer algún cambio de lógica o flujo en etapas tempranas, donde es más fácil y tiene menos impacto el revertir cambios.
+
+Se agregan también unas horas de management, que no afectan el plazo de entrega, son principalmente para temas de facturación
+
+Las tareas marcadas en amarillo, son las tareas en las que el equipo está trabajando (en revisión o en curso)
+
+Tablero Jira
+Fullstack Developers:
+
+Tarea
+
+Estimación (días)
+
+Estimación )h
+
+Proyecto
+
+1
+Generación de Pagos
+
+El 74
+
+2
+Crear rol para gestión de pagos con PIX
+Incluye agregar el rol en pantalla de administración de usuarios
+
+1
+
+8
+
+commerce-services
+
+3
+Habilitar producto PIX en sección “Mis Productos” según permisos
+
+1
+
+8
+
+commerce-suite
+
+4
+Agregar producto PIX en sección “Productos no Contratados” si no tiene PIX contratado
+( )
+
+1
+
+8
+
+commerce-suite
+
+5
+Investigación de Rails API, Open API y RSwag
+
+4
+
+32
+
+6
+Setup inicial y creación de proyecto de bancard-pix-portal
+Configurar sentry, docker-compose, github actions, rubocop, solargraph
+
+2
+
+16
+
+bancard-pix-portal
+
+7
+Setup inicial y creación de proyecto de bancard-pix-services
+Configurar sentry, docker-compose, github actions, rubocop, solargraph
+
+2
+
+16
+
+bancard-pix-service
+
+8
+Configuración de RSwag
+
+2
+
+16
+
+bancard-pix-service
+
+9
+Agregar bancard-pix-portal en bancard-docker
+
+1
+
+8
+
+bancard-docker
+
+10
+Agregar bancard-pix-service en bancard-docker
+
+1
+
+8
+
+bancard-docker
+
+11
+Agregar bancard-pix-portal en bancard-configurations
+
+1
+
+8
+
+bancard-configurations
+
+12
+Agregar bancard-pix-service en bancard-configurations
+
+1
+
+8
+
+bancard-configurations
+
+13
+Investigar conexión con RPG
+
+2
+
+16
+
+14
+Hacer benchmark para evaluar Ruby vs JRuby
+
+2
+
+16
+
+15
+Modificar la vista de login para usuarios deslogueados para que muestre el logo de pix
+
+1
+
+8
+
+commerce-suite
+
+16
+Agregar header con logo PIX, botones para nuevo QR y transacciones y menu desplegable (volver a portal, cerrar sesión)
+
+2
+
+16
+
+bancard-pix-portal
+
+17
+Pantalla para carga de datos de transacción (vista)
+
+3
+
+24
+
+bancard-pix-portal
+
+18
+Llamar a bancard-pix-service para la creación del qr de la transacción
+
+2
+
+16
+
+bancard-pix-portal
+
+19
+Pantalla para mostrar QR (websocket para confirmación)
+Agregar botón de cancelar
+
+3
+
+24
+
+bancard-pix-portal
+
+20
+Llamar a bancard-pix-service para cancelar el QR
+
+1
+
+8
+
+bancard-pix-portal
+
+21
+Pantalla para visualizar transacciones dentro de producto PIX
+
+6
+
+48
+
+bancard-pix-portal
+
+22
+Pantalla del Voucher cuando se recibe la confirmación. Incluir opciones de descargar y enviar por mail.
+Cambiar QR por voucher
+
+6
+
+48
+
+bancard-pix-portal
+
+23
+Agregar endpoint para recibir la notificación del resultado de la transacción
+
+3
+
+24
+
+bancard-pix-portal
+
+24
+Integración con servicio de login de PIX
+
+2
+
+16
+
+external-services
+
+25
+Integración con servicio de creación de QR de PIX
+
+3
+
+24
+
+external-services
+
+26
+Integración con servicio de cancelación de QR de PIX
+
+3
+
+24
+
+external-services
+
+27
+Integración con servicio de exchange de PIX
+
+2
+
+16
+
+external-services
+
+28
+Integración con RPG para consulta de contratos.
+Para esta integración se va a usar la gema desarrollada para comunicarse directo desde Ruby a un RPG
+
+4
+
+32
+
+gema-ruby-rpg
+
+29
+Integración con RPG para registrar el pago.
+Para esta integración se va a usar la gema desarrollada para comunicarse directo desde Ruby a un RPG
+
+2
+
+16
+
+gema-ruby-rpg
+
+30
+Crear modelo de payment hooks
+Incluye modelos, tablas, factory
+
+1
+
+8
+
+bancard-pix-service
+
+31
+Crear modelo de payments
+Incluye modelos, tablas, factory
+
+1
+
+8
+
+bancard-pix-service
+
+32
+Crear modelo de applications
+Incluye modelos, tablas, factory
+Agregar columna merchantId
+
+1
+
+8
+
+bancard-pix-service
+
+33
+Crear endpoint de callback para PIX
+Llamar al endpoint del portal bancard-pix-portal para aplicar la confirmación
+Llamar al RPG para registrar el pago.
+{
+"SaleId": 6060,
+"ControlNumber": "your _control_number...",
+"Currency": "USD",
+"PriceNationalCurrency": 7.80,
+"PriceInForeignCurrency": 1.54,
+"Status" :3,
+"SalesDate": "2023-11-14T14:10:29.293-03:00"
+}
+
+3
+
+24
+
+bancard-pix-service
+
+34
+Crear endpoint para crear un QR hook
+Llamar a RPG para validar los contratos del comercio
+
+3
+
+24
+
+bancard-pix-service
+
+35
+Crear endpoint para obtener reporte de pagos
+
+3
+
+24
+
+bancard-pix-service
+
+36
+Crear endpoint para cancelar QR hook
+
+2
+
+16
+
+bancard-pix-service
+
+37
+Configurar máquina de staging para bancard-pix-portal
+
+0.5
+
+4
+
+infrastructura
+
+38
+Configurar máquina de staging para bancard-pix-service
+
+0.5
+
+4
+
+infrastructura
+
+39
+Configurar proxy dmz de staging para bancard-pix-portal
+Configurar regla para que el endpoint de callback le pegue al servicio
+
+0.5
+
+4
+
+infrastructura
+
+40
+Configurar proxy de servicios de staging para bancard-pix-service
+
+0.5
+
+4
+
+infrastructura
+
+41
+Configurar máquina de producción para bancard-pix-portal
+
+1
+
+8
+
+infrastructura
+
+42
+Configurar máquina de producción para bancard-pix-service
+
+1
+
+8
+
+infrastructura
+
+43
+Configurar proxy dmz de producción para bancard-pix-portal
+Configurar regla para que el endpoint de callback le pegue al servicio
+
+1
+
+8
+
+infrastructura
+
+44
+Configurar proxy de servicios de producción para bancard-pix-service
+
+1
+
+8
+
+infrastructura
+
+45
+Mostrar Ventas
+
+15 días
+
+46
+Revisar procesamiento de transacciones para ver que va a pasar con PIX. La moneda va a ser dólares (primera vez) y el medio de pago PIX. Validar si acepta decimales.
+
+2
+
+16
+
+commerce-services
+
+47
+Creación de tabla para almacenar datos de deposito de transacciones PIX
+
+1
+
+8
+
+commerce-services
+
+48
+Modificación de proceso de comisiones para incluir el detalle de las transacciones PIX con fecha de acreditación
+
+3
+
+24
+
+commerce-services
+
+49
+Validar los datasets que tenemos actualmente para las transacciones para ver si es necesario crear dataset nuevo o utilizar los ya existentes aplicando filtros.
+Hoy en día para el filtro por medio de pago no usa el campo de la tabla transactions que indica el medio de pago, sino que utiliza diferentes datasets. Revisar si es posible y que tan dificil es generalizar eso para que el medio de pago se mande como un campo mas en el q de filtrado.
+
+3
+
+24
+
+commerce-service y commerce-suite
+
+50
+Modificación de pantalla de “Ventas” para incluir medio de pago PIX
+
+2
+
+16
+
+commerce-suite
+
+51
+Modificación de pantalla de “Ventas” para permitir mostrar diferentes monedas
+
+2
+
+16
+
+commerce-suite
+
+52
+Revisar pantallas de Mis transacciones (todos los reportes) para que no rompan por el tipo de moneda USD/PYG
+
+2
+
+16
+
+commerce-suite
+
+53
+Modificar pantalla de “Resumen” para mostrar total en dólares.
+Hay que agregar otra gráfica para dólares. Analizar si podemos cambiar los gráficos por alguna librería mas moderna.
+
+3
+
+24
+
+commerce-suite
+
+54
+Onboarding de Producto
+
+4 días
+
+55
+Alta de producto PIX en configuraciones.
+
+1
+
+8
+
+commerce-services
+
+56
+Creción de Landing Page para producto PIX (falta figma)
+En la landing page, cuando el comercio NO esta logueado, pedir información básica y crear Lead (identico a VentasQR cuando no esta logueado).
+Validar como va a funcionar en el caso de un comercio existente.
+RESPUESTA: Seguir el mismo esquema que para productos que no dan el alta automática. Por ejemplo débitos automáticos, etc.
+
+3
+
+24
+
+commerce-suite
+
+57
+Total Desarrollo
+
+93 d
+
+744
+
+58
+QA + Bug fixing (20%)
+
+18 d
+
+144
+
+59
+Total desarrollo + QA + Bug Fixing
+
+111 días
+
+888
+
+60
+Management 10% (no afecta plazo de entrega)
+
+11 días
+
+88
+
+61
+Total + Management (para facturación)
+
+122
+
+976
+
+El total de tiempo de desarrollo estimado para la Iniciativa PIX es de 976 horas. Comenzando la primera semana de enero y teniendo en cuenta feriados, licencias y posibles licencias la fecha estimada de fin, para 2 desarrolladores (y) es la semana del1 de Abril.

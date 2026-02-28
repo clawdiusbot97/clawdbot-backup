@@ -1,0 +1,54 @@
+=== read_compact log ===
+Timestamp: 2026-02-21T23:21:00+00:00
+File: /home/manpac/.openclaw/workspace/dashboard/agents.md
+Offset: 1
+Limit: 
+Lines: 45
+Chars: 1362
+
+=== OUTPUT ===
+# Agent Dashboard — Agents
+
+Last updated: 2026-02-18
+
+## main
+- Role: Orchestrator (routing, coordination, synthesis)
+- Current task: _none_
+- Queue: _none_
+- Last completed: 2026-02-18 08:04 America/Montevideo — Orchestrated daily morning briefing (researcher + writer + telegram send)
+
+## researcher
+- Role: Research (world news, tech news, X links, historical fact, music picks)
+- Current task: _none_
+- Queue: _none_
+- Last completed: 2026-02-18 08:00 America/Montevideo — Sections 9-10 (historical fact, music picks) for morning briefing; web search unavailable for news sections
+
+## writer
+- Role: Writing polish / formatting
+- Current task: _none_
+- Queue: _none_
+- Last completed: 2026-02-18 08:03 America/Montevideo — Polished morning briefing draft for conciseness, clarity, formatting
+
+## builder
+- Role: Technical design / implementation
+- Current task: _none_
+- Queue: _none_
+- Last completed: 2026-02-17 12:27 America/Montevideo — Dashboard V2 (sidebar agents, live refresh, filters, approval badges)
+
+## chief
+- Role: Planning / prioritization / tracking
+- Current task: _none_
+- Queue: _none_
+- Last completed: _none_
+
+## ops
+- Role: Reliability / security / runbooks
+- Current task: _none_
+- Queue: _none_
+- Last completed: _none_
+
+## brokia
+- Role: Brokia domain support
+- Current task: _none_
+- Queue: _none_
+- Last completed: _none_

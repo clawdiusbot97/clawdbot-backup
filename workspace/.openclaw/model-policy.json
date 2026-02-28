@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "schema": "openclaw.model-policy.v1",
+  "updated_at": "2026-02-24T16:35:00Z",
+  "allowlist": [
+    "openrouter/moonshotai/kimi-k2.5",
+    "openrouter/deepseek/deepseek-v3.2",
+    "openrouter/minimax/minimax-m2.1",
+    "openai-codex/gpt-5.3-codex"
+  ],
+  "denylist": [
+    ":free",
+    "stepfun/step-3.5-flash:free"
+  ],
+  "fallback_ladder": {
+    "default": ["openrouter/minimax/minimax-m2.1", "openrouter/deepseek/deepseek-v3.2"],
+    "balanced": ["openrouter/deepseek/deepseek-v3.2", "openrouter/moonshotai/kimi-k2.5"],
+    "premium": ["openrouter/moonshotai/kimi-k2.5", "openai-codex/gpt-5.3-codex"],
+    "critical": ["openai-codex/gpt-5.3-codex", "openrouter/moonshotai/kimi-k2.5"]
+  },
+  "agent_tiers": {
+    "main": "balanced",
+    "researcher": "default",
+    "writer": "default",
+    "builder": "critical",
+    "chief": "balanced",
+    "ops": "balanced",
+    "brokia": "balanced",
+    "qubika": "balanced",
+    "orchestrator-kimi": "balanced"
+  },
+  "enforcement": {
+    "mode": "hard_block",
+    "auto_fallback": true,
+    "log_violations": true,
+    "alert_channel": "telegram"
+  }
+}

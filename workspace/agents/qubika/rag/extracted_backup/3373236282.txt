@@ -1,0 +1,83 @@
+TITLE: Migración de Suscriptores - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3373236282
+SOURCE: 3373236282__Migracio╠ün_de_Suscriptores_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Épica
+
+Tarea
+
+Servicio/Portal
+
+Estimación (horas)
+
+Migración suscriptores
+
+Agregar botón para apertura de modal de migración
+
+payment-link-portal
+
+2
+
+Modal para migración (crear link nuevo o migrar a existente, listado de links del comercio, agregar botón al crear para ir a link nuevo)
+
+payment-link-portal
+
+26
+
+Llamada a endpoint de migración
+
+payment-link-portal
+
+8
+
+Llamada a endpoint de creación de nuevo link con migración de suscriptores
+
+payment-link-portal
+
+8
+
+Endpoint para migrar suscriptor/es
+
+payment-link-service
+
+24
+
+Revisar endpoint de reporte de suscriptores para agregar columnas de filtrado por link alias
+
+payment-link-service
+
+12
+
+Endpoint para listar suscriptores de un link dado su alias
+
+external-commerce-service
+
+8
+
+Endpoint para migrar suscriptores
+
+external-commerce-service
+
+16
+
+Configuraciones y deploy
+
+-
+
+2
+
+Total desarrollo
+
+106
+
+Total gestión(15%)
+
+16
+
+Total
+
+122

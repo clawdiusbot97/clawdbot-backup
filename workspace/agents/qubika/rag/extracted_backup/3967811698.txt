@@ -1,0 +1,72 @@
+TITLE: Vpos 3.0 'cybersource'
+DOMAIN: General
+PRIORITY: Media
+ID: 3967811698
+SOURCE: 3967811698__Vpos_3.0_'cybersource'.json
+
+---
+
+Tarea
+
+Horas
+
+Proyecto
+
+Crear ‘cajita’ de vpos 3.0 ‘cybersource’ en seccion de mis productos en la vista de mis productos (con sección soporte).
+
+16hs
+
+commerce-suite
+
+Crear la landing (opportunity product) para contratar este nuevo producto vpos 3.0
+pendiente logos, precios y ‘landing’ (textos?) de marketing
+
+24hs
+
+commerce-suite
+
+Para la seccion soporte, crear el producto y pasarlo al controller genérico. Simular lo que hoy en día esta para vpos 2.0 pero para el nuevo producto
+
+16hs
+
+commerce-suite
+
+Crear vista al entrar a la configuracion del nuevo producto vpos 3.0. simular vista rediseño nueva de tpago portal (sidebar fija + centro cambiable)
+
+commerce-suite
+
+crear en menú sidebar 'Comercios habilitados' → esta vista mostrará una tabla con datos de sucursales del comercio que esté logueado. Para obtener estos datos consumiremos otro servicio RPG. tambien manejar datos tanto de sandbox como de produccion.
+
+commerce-suite
+
+crear en menú sidebar ‘integracion con api’ → contendrá sección para credenciales pub/priv, tanto para sandbox como prod (pestañas switcheables). para obtener estas credenciales consumiremos servicio RPG. Tambien tendrá una pestaña ‘documentación’ con texto,t arjetas de prueba, etc
+
+commerce-suite
+
+crear en menú sidebar 'movimientos' → tabla para filtrar los movimientos hechos con cybersource. consumiremos un dataset de vpos-service para obtener estos datos. la tabla tendra datos de un pago cybersource. ademas, tendrá filtros sobre los datos numero de boleta, fecha, codigo de autorizacion, medio de pago y sucursal. SOLO SE MOSTRARAN PAGOS CYBERSOURCE APROBADOS. también tendra opcion de descargar un .csv con los datos mostrados en la tabla.
+
+commerce-suite
+
+Crear endpoint para consumir servicio RPG que obtiene claves pub/priv para comercio cybersource (sandbox y prod)
+
+16hs
+
+commerce-service
+
+Crear endpoint para consumir servicio RPG que obtiene comercios habilitados de cybersource para un comercio dado.
+
+16hs
+
+commerce-service
+
+Crear endpoint para dataset de nueva tabla cybersource, para el reporte de movimientos.
+
+20hs
+
+commerce-service
+
+Crear nueva tabla cybersource donde persistir transacciones de cybersource. las columnas serán: nro boleta, transaction id de cybersource, transaction id de commerce service. consulta que otros datos se necesitan para la tabla nueva.
+
+4hs
+
+commerce-service

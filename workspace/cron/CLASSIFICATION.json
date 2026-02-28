@@ -1,0 +1,242 @@
+[
+  {
+    "id": "b8ea6237-5df6-41cf-af52-988abd5dd906",
+    "name": "daily-morning-briefing-telegram",
+    "enabled": true,
+    "category": "briefing",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "d4e94385-56b9-4879-90e2-3c12b56ab9ac",
+    "name": "healthcheck:security-audit",
+    "enabled": false,
+    "category": "health",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "a0b97d5d-aeb3-4f9a-a48f-f6db38c642df",
+    "name": "healthcheck:update-status",
+    "enabled": false,
+    "category": "health",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "59355241-f710-4002-b044-c6a5ac7d3351",
+    "name": "llm-budget-guardian",
+    "enabled": false,
+    "category": "budget",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "b625c33f-a9e5-46c2-92b6-946b5ccc8dc2",
+    "name": "daily-morning-briefing",
+    "enabled": false,
+    "category": "briefing",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "f7ba2a8c-6339-4041-bac9-7e29f3f92383",
+    "name": "daily-research-scout",
+    "enabled": false,
+    "category": "daily",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "60d2b522-1e7c-45de-a74c-090afc6a78be",
+    "name": "weekly-newsletter-metrics",
+    "enabled": true,
+    "category": "newsletter",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "075106a5-eb3c-40dd-875f-fd2229927ddd",
+    "name": "brokia-calendar-alerts-daily",
+    "enabled": true,
+    "category": "brokia",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "92783453-921f-4847-a288-c9fc430cba45",
+    "name": "brokia-doc-diario-sync",
+    "enabled": true,
+    "category": "brokia",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "8c7f2ba1-a3a0-48c0-b788-407aa4286763",
+    "name": "brokia-doc-maestro-weekly-sync",
+    "enabled": true,
+    "category": "brokia",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "fac822a3-7c2b-4b09-8181-acf586903840",
+    "name": "qubika-daily-focus",
+    "enabled": true,
+    "category": "qubika",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "62497b07-d021-4655-9340-1cd82badcc45",
+    "name": "qubika-deadline-check",
+    "enabled": true,
+    "category": "qubika",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "fd9aeac4-275f-4b27-b051-39f10ea849cd",
+    "name": "Daily Newsletter Digest",
+    "enabled": true,
+    "category": "newsletter",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "2f57ee48-16b1-4a33-9ba1-d3728fa59fcc",
+    "name": "Twitter RSS Digest",
+    "enabled": false,
+    "category": "twitter",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "c93c5864-931c-4f16-b4ac-907702222853",
+    "name": "nightly_healthcheck",
+    "enabled": true,
+    "category": "health",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "5ee30706-284b-4406-9512-91782b68672b",
+    "name": "nightly_cost_guard",
+    "enabled": true,
+    "category": "nightly",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "1179b115-83d0-47d6-830f-0687d53d343a",
+    "name": "nightly_backlog_groomer",
+    "enabled": true,
+    "category": "nightly",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "80625409-f748-4bb7-89e7-f8952123c3af",
+    "name": "nightly_trends_gate",
+    "enabled": true,
+    "category": "nightly",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "c8dfb239-ed97-4d74-80f5-0a403561fdd1",
+    "name": "nightly_inbox_triage",
+    "enabled": true,
+    "category": "nightly",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "6ed083c2-ac56-42dc-a18d-7ecf4d41ae7f",
+    "name": "nightly_summary",
+    "enabled": true,
+    "category": "nightly",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "2888925e-a492-481e-bedb-db9fd615e403",
+    "name": "itau-daily-spend-analysis",
+    "enabled": true,
+    "category": "daily",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "02789295-9d14-479c-a9ef-d3c93bef2d4c",
+    "name": "music-trends-scout-5am",
+    "enabled": true,
+    "category": "music",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "09c8db11-a8c2-4091-b6c2-b0a8c68fc4a9",
+    "name": "music-radar-extended-weekly",
+    "enabled": true,
+    "category": "music",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "74e0f30c-8f1e-4866-894c-fcaf6cb0ca93",
+    "name": "Weekly Improvements Review",
+    "enabled": true,
+    "category": "weekly",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "7c6a920b-ed3f-4701-ba09-65202d3c6026",
+    "name": "life-story-daily-question",
+    "enabled": true,
+    "category": "daily",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "db0fe015-9d14-4522-acf2-8775a2b4b97e",
+    "name": "Morning Twitter Briefing",
+    "enabled": true,
+    "category": "briefing",
+    "decision": "PAUSE",
+    "reason": "Duplicate/legacy/overlapping or currently failing"
+  },
+  {
+    "id": "3c8b8a9a-c9ac-4df2-b817-8f3551f15c7b",
+    "name": "daily-openclaw-update",
+    "enabled": true,
+    "category": "daily",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "dedba884-eb8d-42de-b637-fc345356a632",
+    "name": "daily-openclaw-backup",
+    "enabled": true,
+    "category": "daily",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "efa06a4f-bfc8-449f-995a-c5cac0f56ba7",
+    "name": "openclaw-healthcheck",
+    "enabled": true,
+    "category": "health",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  },
+  {
+    "id": "7e76d0c9-97e3-4d00-aa4d-c24064519f9e",
+    "name": "briefing_sources_fetch",
+    "enabled": true,
+    "category": "briefing",
+    "decision": "KEEP",
+    "reason": "Part of operational pipeline"
+  }
+]

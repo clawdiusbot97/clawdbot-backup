@@ -1,0 +1,18 @@
+TITLE: Guía de Proyectos
+DOMAIN: General
+PRIORITY: Media
+ID: 2794684453
+SOURCE: 2794684453__Gui╠üa_de_Proyectos.json
+
+---
+
+Bancardcuenta con distintos tipos de proyectos. Losservicios,que contienen la lógica del negocio y losportalesque se encargan de presentar la lógica de los servicios en plataformas para los usuarios.
+
+Servicios de Bancard
+
+Portales de Bancard
+
+Ambientes en Bancard
+
+Empecemos con nuestros servicios! ↓
+Servicios de Bancard

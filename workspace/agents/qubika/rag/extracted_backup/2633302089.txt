@@ -1,0 +1,69 @@
+TITLE: Estimación Nuevos Facturadores
+DOMAIN: General
+PRIORITY: Media
+ID: 2633302089
+SOURCE: 2633302089__Estimacio╠ün_Nuevos_Facturadores.json
+
+---
+
+La idea es reflejar en la App de IC, cuando tenemos nuevos facturadores, provenientes del C4C. Para este caso, se realizará un nuevo modelo que se alimentará en base a sentencias SQL (no hay que exponer un endpoint).
+
+Importante:
+Los productos del nuevo modelo de facturadores nuevos (el product_id), ya tienen que estar creados en la tabla Products de billing y su brand correspondiente.
+
+No se considera un CRUD para la nueva tabla.
+
+Estimación y tasking
+Modulo
+
+Detalle
+
+Estimación (hrs)
+
+billing-service
+
+Nuevo modelo (new_billers) que contendrá los nuevos facturadores.
+Las columnas a considerar son:
+id, product_id, created_at
+
+8
+
+billing-service
+
+endpoint para retornar los facturadores nuevos y el total de los mismos
+
+16
+
+nuevo-backend
+
+endpoint para que llame al nuevo endpoint de billing
+
+12
+
+app
+
+Crear en la pantalla principal un componente que muestre la cantidad de facturadores nuevos y todos.
+Cuando se presiona “Nuevos”, ir a la pantalla donde se muestran esos facturadores nuevos
+
+16
+
+app
+
+Consultar endpoint para obtener la cantidad de facturadores nuevos y el listado de los mismos
+
+12
+
+app
+
+Pantalla donde se listen los facturadores nuevos. Ejemplo:
+Cuando se presiona un facturador, hacer el curso normal que tenemos al seleccionar un facturador ya existente (para realizar un pago)
+
+16
+
+Cotingencia
+
+12
+
+Total
+
+92

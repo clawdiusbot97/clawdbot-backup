@@ -1,0 +1,47 @@
+TITLE: Redis Cluster
+DOMAIN: 8) Infraestructura
+PRIORITY: Media
+ID: 2855600176
+SOURCE: 2855600176__Redis_Cluster.json
+
+---
+
+Team
+
+Name
+
+Role
+
+Project Manager
+
+FS Developer
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+N/A
+
+Jira Board
+
+N/A
+
+Slack Channel
+
+#bancard-cluster-redis
+
+M. Teams Channel
+
+N/A

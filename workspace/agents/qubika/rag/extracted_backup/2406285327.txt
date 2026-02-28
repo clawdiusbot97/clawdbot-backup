@@ -1,0 +1,29 @@
+TITLE: auth-service
+DOMAIN: General
+PRIORITY: Media
+ID: 2406285327
+SOURCE: 2406285327__auth-service.json
+
+---
+
+Points to Consider
+En la creación de usuarios en el C4C, podría quedar mas de un usuario (IndividualAccount) creado con mismo email pero diferente user_id.
+
+El baas_token de auth se comparte entre servicios ya que solo se guarda en el redis identificado por el email del usuario. Actualmente esto ya genera conflicto cuando un usuario utiliza tanto la app de MPOS como la de Pago Movil. Este error se va a mantener con el cambio nuevo e incluso se podría agravar si se utiliza esa forma de autenticación desde otros aplicativos.
+
+Los mails de activación y recuperación de contraseña son genéricos y el usuario va a recibir exactamente el mismo mail si se registra de cualquier servicio de bancard. Algo a considerar es crear mails customizados por servicio o que indiquen a que servicio pertenece.
+
+Points to Discuss
+En billing-service se utiliza el endpoint get_user_by_email de auth. Habría que mandar el origin? Solo se usa para las operacionescreate_transfer_request,create_transfer_payment.
+
+En bportal hay que agregar el origin en los endpoints que corresponda.
+
+En commerce-service se utiliza la operaciónget_users(q)sin enviar el user_id, solo el email. Con los nuevos cambios podría darse que hayan mas de un usuario con el mismo email. Como resolvemos? Recibimos un parametro de origin opcional en la operaciónget_usersde auth? Enviamos desde commerce-service el service_code para filtrar?
+
+Required Changes
+Run migrations 29, 30, 31 and 32
+
+Insert services on staging database
+sql
+Insert services on production database
+sql

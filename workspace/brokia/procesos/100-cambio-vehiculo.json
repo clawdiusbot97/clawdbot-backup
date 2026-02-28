@@ -1,0 +1,33 @@
+{
+  "id": "100",
+  "nombre": "Cambio de vehículo",
+  "descripcion": "Proceso que comienza cuando el cliente informa que cambió o va a cambiar su vehículo y finaliza cuando: 1) El nuevo vehículo queda asegurado. 2) La póliza anterior queda correctamente modificada o anulada. 3) El impacto económico queda resuelto. Combina análisis comercial + gestión operativa + evaluación financiera. Incluye ejecución de Subproceso 001 (Cotización multicompañía) y Subproceso 002 (Anulación de póliza), comparación integral de tres escenarios (Endoso en compañía actual, Anular ahora + emitir nueva póliza, Mantener actual hasta vencimiento + cambiar luego), presentación al cliente y ejecución operativa final.",
+  "sistemas_usados": [
+    "BSE portal",
+    "SURA portal",
+    "Mapfre portal",
+    "Porto portal",
+    "Sancor portal",
+    "HDI portal",
+    "SBI portal",
+    "Plantillas personalizadas (Excel/Sheets): Planilla de cálculos HDI, Planilla Sancor",
+    "Tablas de anulación de escala términos cortos (imágenes en Drive)",
+    "Google Sheets/Excel para comparación de escenarios",
+    "WhatsApp",
+    "Llamada telefónica",
+    "Correo electrónico"
+  ],
+  "tiempos": {
+    "P50_min": 40,
+    "P90_min": 55
+  },
+  "frecuencia_mensual": 3,
+  "carga": 4,
+  "riesgo": 4,
+  "retrabajo_porcentaje": 20,
+  "subprocesos_incluidos": ["001", "002"],
+  "vinculos": [],
+  "fecha_creacion": "2026-02-21T02:22:00Z",
+  "entrevistador": "OpenClaw Orchestrator",
+  "notas": "Proceso complejo que requiere evaluación profesional. Siempre ejecuta ambos subprocesos (001 y 002) para evaluar todos los escenarios posibles. Documentación de tablas y plantillas en Drive: https://drive.google.com/drive/u/1/folders/104928951904308297058"
+}

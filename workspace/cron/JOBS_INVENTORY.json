@@ -1,0 +1,918 @@
+[
+  {
+    "id": "memory-weekly-maintenance-001",
+    "name": "memory:weekly-maintenance",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 9 * * 1",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "_local_script",
+    "sessionTarget": "none",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "target": "2017549847"
+    },
+    "state": {},
+    "createdAtMs": 1771776000000,
+    "updatedAtMs": 1771776000000,
+    "notify": true,
+    "timeoutSeconds": 60,
+    "thinking": "none",
+    "scriptPath": "/home/manpac/.openclaw/workspace/memory/scripts/weekly-maintenance.sh"
+  },
+  {
+    "id": "b8ea6237-5df6-41cf-af52-988abd5dd906",
+    "name": "daily-morning-briefing-telegram",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 8 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce"
+    },
+    "state": {
+      "lastRunAtMs": 1771717335640,
+      "lastStatus": "error",
+      "lastDurationMs": 58112,
+      "consecutiveErrors": 2,
+      "lastError": "cron delivery target is missing",
+      "nextRunAtMs": 1771758000000
+    },
+    "createdAtMs": 1771304988482,
+    "updatedAtMs": 1771718834675,
+    "notify": true,
+    "timeoutSeconds": 240,
+    "thinking": "low"
+  },
+  {
+    "id": "d4e94385-56b9-4879-90e2-3c12b56ab9ac",
+    "name": "healthcheck:security-audit",
+    "enabled": false,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 8 * * 0",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {},
+    "createdAtMs": 1771327833204,
+    "updatedAtMs": 1771690678850,
+    "notify": true,
+    "timeoutSeconds": 180,
+    "thinking": "low"
+  },
+  {
+    "id": "a0b97d5d-aeb3-4f9a-a48f-f6db38c642df",
+    "name": "healthcheck:update-status",
+    "enabled": false,
+    "schedule": {
+      "kind": "cron",
+      "expr": "40 8 * * 0",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {},
+    "createdAtMs": 1771327837661,
+    "updatedAtMs": 1771690698029,
+    "notify": true,
+    "timeoutSeconds": 120,
+    "thinking": "low"
+  },
+  {
+    "id": "59355241-f710-4002-b044-c6a5ac7d3351",
+    "name": "llm-budget-guardian",
+    "enabled": false,
+    "schedule": {
+      "kind": "every",
+      "everyMs": 3600000,
+      "anchorMs": 1771349285718
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/minimax/minimax-m2.1",
+    "delivery": {
+      "mode": "announce"
+    },
+    "state": {
+      "lastRunAtMs": 1771363685723,
+      "lastStatus": "error",
+      "lastDurationMs": 14780,
+      "consecutiveErrors": 1,
+      "lastError": "Unsupported channel: whatsapp"
+    },
+    "createdAtMs": 1771346078735,
+    "updatedAtMs": 1771365412812,
+    "notify": true,
+    "timeoutSeconds": 180,
+    "thinking": "low"
+  },
+  {
+    "id": "b625c33f-a9e5-46c2-92b6-946b5ccc8dc2",
+    "name": "daily-morning-briefing",
+    "enabled": false,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 8 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5248435389"
+    },
+    "state": {
+      "lastRunAtMs": 1771671600014,
+      "lastStatus": "error",
+      "lastDurationMs": 107,
+      "consecutiveErrors": 3,
+      "lastError": "Error: Unknown model: openrouter/deepseek-v3.2"
+    },
+    "createdAtMs": 1771358480885,
+    "updatedAtMs": 1771690654230,
+    "notify": true,
+    "timeoutSeconds": 180,
+    "thinking": null
+  },
+  {
+    "id": "f7ba2a8c-6339-4041-bac9-7e29f3f92383",
+    "name": "daily-research-scout",
+    "enabled": false,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 7 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "lastRunAtMs": 1771668000012,
+      "lastStatus": "ok",
+      "lastDurationMs": 828285,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771360366909,
+    "updatedAtMs": 1771690709574,
+    "notify": false,
+    "timeoutSeconds": 900,
+    "thinking": null
+  },
+  {
+    "id": "60d2b522-1e7c-45de-a74c-090afc6a78be",
+    "name": "weekly-newsletter-metrics",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 19 * * 0",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5295394319"
+    },
+    "state": {
+      "nextRunAtMs": 1771797600000
+    },
+    "createdAtMs": 1771360390814,
+    "updatedAtMs": 1771592792238,
+    "notify": true,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "075106a5-eb3c-40dd-875f-fd2229927ddd",
+    "name": "brokia-calendar-alerts-daily",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "10 7 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {
+      "nextRunAtMs": 1771755000000,
+      "lastRunAtMs": 1771668828402,
+      "lastStatus": "ok",
+      "lastDurationMs": 279865,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771363525326,
+    "updatedAtMs": 1771669108267,
+    "notify": true,
+    "timeoutSeconds": 300,
+    "thinking": null
+  },
+  {
+    "id": "92783453-921f-4847-a288-c9fc430cba45",
+    "name": "brokia-doc-diario-sync",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 21 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771720200000,
+      "lastRunAtMs": 1771633800017,
+      "lastStatus": "ok",
+      "lastDurationMs": 60565,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771364367313,
+    "updatedAtMs": 1771633860582,
+    "notify": false,
+    "timeoutSeconds": 600,
+    "thinking": null
+  },
+  {
+    "id": "8c7f2ba1-a3a0-48c0-b788-407aa4286763",
+    "name": "brokia-doc-maestro-weekly-sync",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 22 * * 0",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771808400000
+    },
+    "createdAtMs": 1771365225995,
+    "updatedAtMs": 1771365225995,
+    "notify": false,
+    "timeoutSeconds": 900,
+    "thinking": null
+  },
+  {
+    "id": "fac822a3-7c2b-4b09-8181-acf586903840",
+    "name": "qubika-daily-focus",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 8 * * 1,4",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {
+      "nextRunAtMs": 1771846200000,
+      "lastRunAtMs": 1771587000026,
+      "lastStatus": "error",
+      "lastDurationMs": 24143,
+      "consecutiveErrors": 1,
+      "lastError": "cron announce delivery failed"
+    },
+    "createdAtMs": 1771370069994,
+    "updatedAtMs": 1771612244614,
+    "notify": true,
+    "timeoutSeconds": 360,
+    "thinking": null
+  },
+  {
+    "id": "62497b07-d021-4655-9340-1cd82badcc45",
+    "name": "qubika-deadline-check",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 17 * * 1-5",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {
+      "nextRunAtMs": 1771878600000,
+      "lastRunAtMs": 1771619400008,
+      "lastStatus": "error",
+      "lastDurationMs": 201,
+      "consecutiveErrors": 3,
+      "lastError": "Error: Unknown model: openai-codex/deepseek-v3.2"
+    },
+    "createdAtMs": 1771370070013,
+    "updatedAtMs": 1771619400209,
+    "notify": true,
+    "timeoutSeconds": 300,
+    "thinking": null
+  },
+  {
+    "id": "fd9aeac4-275f-4b27-b051-39f10ea849cd",
+    "name": "Daily Newsletter Digest",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 9 * * *",
+      "tz": "UTC"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/minimax/minimax-m2.1",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5295394319"
+    },
+    "state": {
+      "nextRunAtMs": 1771750800000,
+      "lastRunAtMs": 1771664400010,
+      "lastStatus": "error",
+      "lastDurationMs": 39331,
+      "consecutiveErrors": 2,
+      "lastError": "cron announce delivery failed"
+    },
+    "createdAtMs": 1771417045753,
+    "updatedAtMs": 1771664439341,
+    "notify": false,
+    "timeoutSeconds": 300,
+    "thinking": null
+  },
+  {
+    "id": "2f57ee48-16b1-4a33-9ba1-d3728fa59fcc",
+    "name": "Twitter RSS Digest",
+    "enabled": false,
+    "schedule": {
+      "kind": "every",
+      "everyMs": 43200000,
+      "anchorMs": 1771442468015
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/deepseek/deepseek-v3.2",
+    "delivery": {
+      "mode": "none",
+      "channel": "telegram",
+      "to": "-5095009832"
+    },
+    "state": {
+      "lastRunAtMs": 1771629173982,
+      "lastStatus": "ok",
+      "lastDurationMs": 232389,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771442468015,
+    "updatedAtMs": 1771650485677,
+    "notify": false,
+    "timeoutSeconds": 300,
+    "thinking": null
+  },
+  {
+    "id": "c93c5864-931c-4f16-b4ac-907702222853",
+    "name": "nightly_healthcheck",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 2 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/minimax/minimax-m2.1",
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771736400000,
+      "lastRunAtMs": 1771650000010,
+      "lastStatus": "ok",
+      "lastDurationMs": 191524,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771462621710,
+    "updatedAtMs": 1771650191534,
+    "notify": false,
+    "timeoutSeconds": 90,
+    "thinking": "low"
+  },
+  {
+    "id": "5ee30706-284b-4406-9512-91782b68672b",
+    "name": "nightly_cost_guard",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "10 2 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771737000000,
+      "lastRunAtMs": 1771650600012,
+      "lastStatus": "ok",
+      "lastDurationMs": 53856,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771469723863,
+    "updatedAtMs": 1771650653868,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "1179b115-83d0-47d6-830f-0687d53d343a",
+    "name": "nightly_backlog_groomer",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "20 2 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771737600000,
+      "lastRunAtMs": 1771709888257,
+      "lastStatus": "ok",
+      "lastDurationMs": 71394,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771469732402,
+    "updatedAtMs": 1771709959651,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "80625409-f748-4bb7-89e7-f8952123c3af",
+    "name": "nightly_trends_gate",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "40 2 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771738800000,
+      "lastRunAtMs": 1771652400009,
+      "lastStatus": "ok",
+      "lastDurationMs": 262773,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771469739066,
+    "updatedAtMs": 1771652662782,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "c8dfb239-ed97-4d74-80f5-0a403561fdd1",
+    "name": "nightly_inbox_triage",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "10 3 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771740600000,
+      "lastRunAtMs": 1771654200010,
+      "lastStatus": "ok",
+      "lastDurationMs": 168035,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771469744793,
+    "updatedAtMs": 1771654368045,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "6ed083c2-ac56-42dc-a18d-7ecf4d41ae7f",
+    "name": "nightly_summary",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 3 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {
+      "nextRunAtMs": 1771741800000,
+      "lastRunAtMs": 1771655400010,
+      "lastStatus": "error",
+      "lastDurationMs": 269494,
+      "consecutiveErrors": 1,
+      "lastError": "cron announce delivery failed"
+    },
+    "createdAtMs": 1771469752903,
+    "updatedAtMs": 1771655669504,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "2888925e-a492-481e-bedb-db9fd615e403",
+    "name": "itau-daily-spend-analysis",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 8 * * 1-5",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "2017549847"
+    },
+    "state": {
+      "nextRunAtMs": 1771846200000,
+      "lastRunAtMs": 1771587024169,
+      "lastStatus": "error",
+      "lastDurationMs": 600001,
+      "consecutiveErrors": 1,
+      "lastError": "Error: cron: job execution timed out"
+    },
+    "createdAtMs": 1771470113405,
+    "updatedAtMs": 1771612275870,
+    "notify": false,
+    "timeoutSeconds": 120,
+    "thinking": null
+  },
+  {
+    "id": "02789295-9d14-479c-a9ef-d3c93bef2d4c",
+    "name": "music-trends-scout-5am",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 5 * * 1,3,5",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5291576044"
+    },
+    "state": {
+      "nextRunAtMs": 1771833600000,
+      "lastRunAtMs": 1771574400053,
+      "lastStatus": "ok",
+      "lastDurationMs": 337033,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771472162683,
+    "updatedAtMs": 1771612128262,
+    "notify": false,
+    "timeoutSeconds": 900,
+    "thinking": null
+  },
+  {
+    "id": "09c8db11-a8c2-4091-b6c2-b0a8c68fc4a9",
+    "name": "music-radar-extended-weekly",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 11 * * 0",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5291576044"
+    },
+    "state": {
+      "nextRunAtMs": 1771768800000
+    },
+    "createdAtMs": 1771476292868,
+    "updatedAtMs": 1771592771964,
+    "notify": false,
+    "timeoutSeconds": 700,
+    "thinking": null
+  },
+  {
+    "id": "74e0f30c-8f1e-4866-894c-fcaf6cb0ca93",
+    "name": "Weekly Improvements Review",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 0 * * 1",
+      "tz": "UTC"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5248435389"
+    },
+    "state": {
+      "nextRunAtMs": 1771804800000
+    },
+    "createdAtMs": 1771564970887,
+    "updatedAtMs": 1771592901765,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "7c6a920b-ed3f-4701-ba09-65202d3c6026",
+    "name": "life-story-daily-question",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 14 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "main",
+    "model": null,
+    "delivery": {},
+    "state": {
+      "nextRunAtMs": 1771781400000,
+      "lastRunAtMs": 1771695000020,
+      "lastStatus": "ok",
+      "lastDurationMs": 107243,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771591686745,
+    "updatedAtMs": 1771695107263,
+    "notify": false,
+    "timeoutSeconds": null,
+    "thinking": null
+  },
+  {
+    "id": "db0fe015-9d14-4522-acf2-8775a2b4b97e",
+    "name": "Morning Twitter Briefing",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 8 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/deepseek/deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5095009832"
+    },
+    "state": {
+      "nextRunAtMs": 1771758000000,
+      "lastRunAtMs": 1771690112261,
+      "lastStatus": "error",
+      "lastDurationMs": 92497,
+      "lastError": "cron announce delivery failed",
+      "consecutiveErrors": 2
+    },
+    "createdAtMs": 1771650226413,
+    "updatedAtMs": 1771690204758,
+    "notify": false,
+    "timeoutSeconds": 600,
+    "thinking": null
+  },
+  {
+    "id": "3c8b8a9a-c9ac-4df2-b817-8f3551f15c7b",
+    "name": "daily-openclaw-update",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 4 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/deepseek/deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5130387079"
+    },
+    "state": {
+      "nextRunAtMs": 1771743600000
+    },
+    "createdAtMs": 1771650429929,
+    "updatedAtMs": 1771650429929,
+    "notify": false,
+    "timeoutSeconds": 1800,
+    "thinking": null
+  },
+  {
+    "id": "dedba884-eb8d-42de-b637-fc345356a632",
+    "name": "daily-openclaw-backup",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "30 4 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": null,
+    "sessionTarget": "isolated",
+    "model": "openrouter/deepseek/deepseek-v3.2",
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "to": "-5130387079"
+    },
+    "state": {
+      "nextRunAtMs": 1771745400000,
+      "lastRunAtMs": 1771659000014,
+      "lastStatus": "error",
+      "lastDurationMs": 424919,
+      "lastError": "cron announce delivery failed",
+      "consecutiveErrors": 1
+    },
+    "createdAtMs": 1771650930698,
+    "updatedAtMs": 1771695966761,
+    "notify": false,
+    "timeoutSeconds": 1200,
+    "thinking": null
+  },
+  {
+    "id": "efa06a4f-bfc8-449f-995a-c5cac0f56ba7",
+    "name": "openclaw-healthcheck",
+    "enabled": true,
+    "schedule": {
+      "kind": "every",
+      "everyMs": 21600000,
+      "anchorMs": 1771688709478
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": "openrouter/minimax/minimax-m2.1",
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771731909478,
+      "lastRunAtMs": 1771712109488,
+      "lastStatus": "ok",
+      "lastDurationMs": 11601,
+      "consecutiveErrors": 0
+    },
+    "createdAtMs": 1771688709478,
+    "updatedAtMs": 1771712121089,
+    "notify": false,
+    "timeoutSeconds": 90,
+    "thinking": "low"
+  },
+  {
+    "id": "7e76d0c9-97e3-4d00-aa4d-c24064519f9e",
+    "name": "briefing_sources_fetch",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "50 7 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "main",
+    "sessionTarget": "isolated",
+    "model": null,
+    "delivery": {
+      "mode": "none"
+    },
+    "state": {
+      "nextRunAtMs": 1771757400000
+    },
+    "createdAtMs": 1771718723676,
+    "updatedAtMs": 1771718834675,
+    "notify": false,
+    "timeoutSeconds": 600,
+    "thinking": "low"
+  },
+  {
+    "id": "llm-metrics-daily-report",
+    "name": "llm-metrics:daily-report",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 8 * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "_local_script",
+    "sessionTarget": "none",
+    "model": null,
+    "delivery": {
+      "mode": "announce",
+      "channel": "telegram",
+      "target": "2017549847"
+    },
+    "state": {},
+    "createdAtMs": 1771762800000,
+    "updatedAtMs": 1771762800000,
+    "notify": true,
+    "timeoutSeconds": 60,
+    "thinking": "none"
+  },
+  {
+    "id": "llm-metrics-hourly-spike-check",
+    "name": "llm-metrics:hourly-spike-check",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "5 * * * *",
+      "tz": "America/Montevideo"
+    },
+    "agentId": "_local_script",
+    "sessionTarget": "none",
+    "model": null,
+    "delivery": {
+      "mode": "conditional_alert",
+      "channel": "telegram",
+      "target": "2017549847",
+      "alertOnExitCode": 2
+    },
+    "state": {},
+    "createdAtMs": 1771762800000,
+    "updatedAtMs": 1771762800000,
+    "notify": false,
+    "timeoutSeconds": 30,
+    "thinking": "none"
+  }
+]

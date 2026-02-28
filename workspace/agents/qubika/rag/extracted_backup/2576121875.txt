@@ -1,0 +1,43 @@
+TITLE: Registro de horas en Kubrick
+DOMAIN: General
+PRIORITY: Media
+ID: 2576121875
+SOURCE: 2576121875__Registro_de_horas_en_Kubrick.json
+
+---
+
+El registro de las horas en Kubrick desempeña un papel de vital importancia en la gestión de nuestro equipo. De manera semanal, el equipo de gestión compila un informe que recopila las horas trabajadas por todo el equipo para su posterior envío al cliente. Por consiguiente, resultaesencialque todas las horas trabajadas estén debidamente registradas al finalizar la semana.
+Al registrar las horas dedicadas a las tareas asignadas, se recomienda encarecidamente llevar un registro simultáneo y en tiempo real dentro de Kubrick. Esta práctica no solo evita la acumulación de horas para su registro en el último día de la semana, sino que también contribuye a generar informes más precisos acerca del uso del tiempo invertido en cada tarea. Esto, a su vez, facilita el análisis y asegura la exactitud de los informes.
+El registro de las horas debe ser realizado en inglés.
+
+Descripción
+En el caso de estar trabajando en un ticket de Jira, el formato adecuado para la descripción es el siguiente:[ID] - Descripción de la tarea. En el caso de tratarse de una tarea que no cuenta con un ticket en Jira (como las dailies o la generación de documentación para el equipo), el formato adecuado será el siguiente:[General] - Descripción de la tarea.
+Proyecto
+Cada registro debe estar vinculado al proyecto correspondiente. Si en algún caso no está claro a qué proyecto debe asociarse una entrada, se recomienda consultar con el PM.
+En lo que respecta a las reuniones e instanciasgrupalesque no puedan ser atribuidas a un proyecto específico, se utilizará el proyecto denominado:Team Activities [Internal Syncs, 1:1, Team Issues], que se encuentra dentro del clienteBancard.
+Es importante tener en cuenta que existe un proyecto con dicho nombre para todos los clientes de Qubika.
+Tag
+El uso de tags es obligatorio y debe reflejar el tipo de tarea realizada. Los tags disponibles son los siguientes:
+Una guía para los casos mas comunes es la siguiente:
+Desarrollo:Development
+
+QA de una feature:QA
+
+Corrección de feature o bug:Development (bug)
+
+Code Review:Development (Code Review)
+
+Reunion, videollamada, huddle:Communication/Management
+
+Ejemplos
+Desarrollo
+[General] - Descripción de la tarea
+En este caso el registro seria:
+[PCEPA-46] - Search filter by service
+Reunion / Videollamada / Huddle
+[General] - Nombre de reunion
+Tarea sin ticket
+[General] - Descripción de la tarea
+Este fue el último paso del Módulo 1 del Onboarding deBancard. Muchas gracias por el interés y tiempo dedicado en él.
+Siguiente Módulo→
+Proceso de Desarrollo

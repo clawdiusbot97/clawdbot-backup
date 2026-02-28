@@ -1,0 +1,9 @@
+{
+  "tech_ai": ["karpathy", "swyx", "paulg", "rauchg", "AravSrinivas"],
+  "tech_news": ["theinformation", "TechCrunch", "semafor", "benthompson", "CaseyNewton"],
+  "finance_macro": ["LynAldenContact", "KobeissiLetter", "RaoulGMI", "MebFaber", "charliebilello"],
+  "history_ideas": ["HardcoreHistory", "nfergus", "peterfrankopan", "HistoryInPics", "themarginalian"],
+  "uruguay_news": ["ObservadorUY", "elpaisuy", "BUSQUEDAonline", "portalmvd", "ladiaria"],
+  "uruguay_macro": ["BancoCentral_Uy", "ExanteUruguay"],
+  "uruguay_politics": ["LuisLacallePou", "OrsiYamandu", "CosseCarolina", "AndresOjedaOk"]
+}

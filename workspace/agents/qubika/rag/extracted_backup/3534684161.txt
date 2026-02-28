@@ -1,0 +1,107 @@
+TITLE: VPos - Mejoras UX - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3534684161
+SOURCE: 3534684161__VPos_-_Mejoras_UX_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación paraVPos - Mejoras UX, a cargo de.
+Las horas estimadas rondan entre138 y 146, dependiendo en la opción elegida en el módulo de Vista Previa del Portal.
+Fecha estimada de entrega:Miércoles, comenzando:Lunes
+Módulo
+
+Tarea
+
+Estimación (hs)
+
+Flujo de Catastros
+
+Exploración
+
+4
+
+Traspaso de piezas del formulario CI al formulario de tarjetas
+
+6
+
+Armado de las pre-consultas para determinar el tipo de tarjeta
+
+6
+
+Pruebas locales
+
+4
+
+Flujo de comisiones
+
+Cambios visuales del formulario de “recibir factura por costo del servicio” + estilizado de checkbox
+
+8
+
+Pruebas locales
+
+4
+
+Formulario de Pago
+
+Limitar ancho del iframe (320 a 540px, 90% de la vista siempre que se pueda) y acoplamiento de los campos en vistas mobile
+
+4
+
+Integracion del tooltip de CVV (Falta imagen de la tarjeta para tooltip)
+
+6
+
+Ocultar el campo cuotas si se trata de una tarjeta de crédito
+
+4
+
+Pruebas
+
+2
+
+Restricción de marcas de tarjeta
+
+Tabulado de las marcas disponibles para cada cliente y CRUD correspondiente
+
+16
+
+Filtrado y desplegado de las marcas disponibles
+
+6
+
+Mostrar siempre logos Visa y MasterCard, filtrar el resto
+
+4
+
+Pruebas
+
+4
+
+Vista Previa del Portal
+
+Opción 1: Renderizado de la vista en un paso posterior a la configuración de colores + pruebas
+
+20
+
+Opción 2: Refactor de las configuraciones de color y simulación del portal + pruebas
+
+28
+
+Llamar el iframe usando presets o detalle de los colores via API + pruebas
+
+20
+
+Total Desarrollo
+
+120 - 128
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+18
+
+Total Desarrollo + Gestión
+
+138 - 146

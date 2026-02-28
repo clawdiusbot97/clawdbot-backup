@@ -1,0 +1,49 @@
+TITLE: Monto en los reintentos de pagos y días de cobros 29, 30, 31 - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3754295297
+SOURCE: 3754295297__Monto_en_los_reintentos_de_pagos_y_di╠üas_de_cobros_29,_30,_31_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación paraTPago, a cargo dey.
+Resumen del Cambio en el Proceso de Cobro de Planes
+Actualmente, Tpago solo permite seleccionar fechas de cobro entre el 1 y el 28 de cada mes debido a la variabilidad en la cantidad de días por mes. Se ha decidido habilitar los días 29, 30 y 31 para dar mayor flexibilidad.
+Nueva regla:
+Si la fecha seleccionada no existe en un mes específico (ejemplo: 31 de febrero), se cobrará el último día disponible del mes.
+
+No se optará por cobrar el 1 del mes siguiente para evitar dobles cobros y sobrecarga el día 1.
+
+Ajuste en el proceso:
+Se debe validar si el día de ejecución del proceso es el último del mes.
+
+Si es el último día hábil, se encolarán los suscriptores con fecha de cobro en los días 29, 30 y 31 para ser procesados ese mismo día.
+
+Las horas estimadas son: 40
+Fecha de comienzo:
+Fecha de entrega:
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Modificación en método de retry para enviar amount de link a pay_with_registered_card y agregar parámetro opcional en dicho método
+
+8
+
+payment-link-service
+
+Modificación en procesos de cobro de links para tomar en cuenta dias posteriores al dia de debito si la fecha de hoy es fin de mes
+
+24
+
+payment-link-service
+
+Code review, deploy a staging, revisión de errores
+
+8
+
+Total Desarrollo
+
+40

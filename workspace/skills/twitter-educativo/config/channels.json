@@ -1,0 +1,14 @@
+{
+  "slack": {
+    "channel": "#twitter-news",
+    "require_mention": false
+  },
+  "telegram": {
+    "group": "twitter-news",
+    "group_id": null
+  },
+  "archive": {
+    "store_digests": true,
+    "archive_path": "digests/archive"
+  }
+}

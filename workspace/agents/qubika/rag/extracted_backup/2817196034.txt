@@ -1,0 +1,57 @@
+TITLE: Retrospective
+DOMAIN: General
+PRIORITY: Media
+ID: 2817196034
+SOURCE: 2817196034__Retrospective.json
+
+---
+
+Overview
+Reflect back on what you and your team learned and what motivates the group to succeed by following the instructions for the4Ls Retrospective Play.
+Team
+
+e.g., Team All-Stars
+
+Team members
+
+@ mention team members
+
+Date
+
+Type // to add a date
+
+Retrospective period
+
+e.g., Q3
+
+4Ls retrospective
+Milestones
+
+Loved
+
+Longed for
+
+Loathed
+
+Learned
+
+List what you loved about your work
+
+List what you wished you had while working
+
+List what you didn't like about your work
+
+List what you learned
+
+Action plan
+Action
+
+Owner
+
+Due date
+
+Action items
+
+@ owner
+
+Type // to add a date

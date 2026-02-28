@@ -1,0 +1,73 @@
+TITLE: VPN Configuration (DEPRECATED)
+DOMAIN: 8) Infraestructura
+PRIORITY: Baja
+ID: 2544730189
+SOURCE: 2544730189__VPN_Configuration_(DEPRECATED).json
+
+---
+
+This document will explain how to configure the native MacOS VPN to have access to Bancard services and servers.
+
+Table of Contents
+17Prerequisites
+VPN user (ask the tech lead or team lead)
+
+Shared Secret:mooveit2023
+
+Steps for MacOS Monterey
+Go to the Mac System Preferences:
+
+Go to the Network section:
+
+Create a new service:
+
+Configure the interface, VPN type and Service Name as follows:
+Interface:VPN
+VPN Type:Cisco IPSec
+Service Name:Bancard VPN (IPSec)
+You can choose the service name, this is just a suggestion.
+
+Configure the VPN:
+For this step, you will need a VPN user. Ask the tech lead or team lead for one.
+Server Address:201.217.159.98
+Account Name:<VPN user>
+Password:<VPN user password>
+
+Go to Authentication Settings:
+
+Configure the machine authentication:
+For this step, you will need the Shared Secret. Ask the tech lead or team lead.
+Shared Secret:<Shared Secret>
+Group Name:group5
+
+Ensure to enable the option to show VPN status in the menu bar:
+
+Apply the changes.
+
+Now, you will be able to connect to the VPN from the menu bar as shown in the following image:
+
+MISSION ACCOMPLISHED!
+
+Steps for MacOS Ventura
+Go to the Mac System Preferences:
+
+Go to the Network section:
+
+Add a new VPN configuration, remember to select the Cisco IPSec option:
+
+Configure the VPN, including the authentication:
+For this step, you will need a VPN user and the shared secret. Ask the tech lead or team lead.
+Display Name:Bancard VPN (IPSec)
+You can choose the service name, this is just a suggestion.
+Server address:201.217.159.98
+Account Name:<VPN user>
+Password:<VPN user password>
+Authentication Type:Shared Secret
+Authentication Shared Secret:<Shared Secret>
+Authentication Group Name:group5
+
+Ensure to enable the option to show VPN status in the menu bar:
+
+Now, you will be able to connect to the VPN from the menu bar as shown in the following image:
+
+MISSION ACCOMPLISHED!

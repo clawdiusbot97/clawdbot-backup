@@ -1,0 +1,4 @@
+# Music History — De-duplication Canonical Source
+# Format: JSON Lines (one track per line)
+# Fields: timestamp, artist, title, source (morning_intel|manual|subagent), notes
+

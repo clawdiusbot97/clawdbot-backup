@@ -1,0 +1,61 @@
+TITLE: Project Status Report 7/10/2024 - 18/10/2024
+DOMAIN: General
+PRIORITY: Media
+ID: 3414327316
+SOURCE: 3414327316__Project_Status_Report_7_10_2024_-_18_10_2024.json
+
+---
+
+noteBancard | Date: 7/10/2024 - 18/10/2024
+Bancard | Date: 7/10/2024 - 18/10/2024
+
+Sprint Goal
+What do we want to accomplish with this sprint?
+
+Decisions
+Outline what kind of approaches were considered and the benefits and drawbacks of each. What decisions did we make, and why?
+Example
+
+Progress updates
+Initiative
+
+Task Name
+
+Status
+
+Scope
+
+ETA
+
+Comments
+
+TPago
+
+TO DO/IN PROGRESSBlue/BLOCKEDRed/WAITING FOR FEEDBACKYellow/DONEGreen
+
+OUT OF SCOPEPurple/SCOPE CREEPPurple
+
+Risk Management - Follow-up Actions
+
+Description
+
+Severity
+
+Impact
+
+Owner
+
+Plan
+
+Status
+
+LOWBlue/MEDIUMYellow/HIGHRed
+
+LOWBlue/MEDIUMYellow/HIGHRed
+
+IDENTIFIED/ASSESSEDBlue/MITIGATEDYellow/CLOSEDGreen
+
+Next steps
+33incompleteWhat should we do next?SET A STATUS
+Other documents
+Example

@@ -1,0 +1,241 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #dbe3ea;
+  background: #0f1419;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #0f1419; }
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.topbar-actions { display: flex; gap: 8px; }
+
+h1, h2, h3, h4 { margin: 0 0 10px; }
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  background: #1e6fff;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.1); }
+
+.muted { color: #9badbf; font-size: 0.9rem; }
+.error { background: #522; color: #ffd3d3; padding: 8px 10px; border-radius: 8px; margin-bottom: 12px; }
+
+.grid { display: grid; gap: 12px; }
+.cards { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 12px; }
+.table-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.task-columns { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.briefing-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 12px; }
+
+.card {
+  background: #18212b;
+  border: 1px solid #253242;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.stat-value { font-size: 1.4rem; font-weight: 700; margin-top: 6px; }
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 12px;
+}
+
+.sidebar {
+  align-self: start;
+  position: sticky;
+  top: 10px;
+}
+
+.sidebar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.agent-list {
+  display: grid;
+  gap: 8px;
+}
+
+.agent-card {
+  text-align: left;
+  width: 100%;
+  background: #141d27;
+  border: 1px solid #2a3a4c;
+  padding: 10px;
+}
+
+.agent-card-active {
+  border-color: #4f8fff;
+  box-shadow: 0 0 0 1px #4f8fff33 inset;
+}
+
+.agent-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.tab {
+  background: #1b2733;
+  border: 1px solid #2a3a4c;
+}
+
+.tab.active {
+  background: #2e77ff;
+  border-color: #4f8fff;
+}
+
+.panel { min-height: 300px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.section-meta {
+  text-align: right;
+}
+
+.stack { display: grid; gap: 10px; }
+
+ul { margin: 8px 0 0 18px; padding: 0; }
+li { margin: 8px 0; }
+code { color: #9fd3ff; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+}
+
+.badge-working {
+  background: #16301f;
+  border-color: #2e8f54;
+  color: #8de6b1;
+}
+
+.badge-idle {
+  background: #202833;
+  border-color: #42546b;
+  color: #a9bad0;
+}
+
+.badge-needs-input {
+  background: #382813;
+  border-color: #c7862a;
+  color: #ffcf84;
+}
+
+.badge-completed {
+  background: #102734;
+  border-color: #2f7fae;
+  color: #9ddcff;
+}
+
+.task-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.task-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: #dbe3ea;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+}
+
+.drawer {
+  width: min(540px, 100%);
+  height: 100%;
+  overflow: auto;
+  border-radius: 0;
+  padding: 16px;
+}
+
+.drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-section { margin-top: 12px; }
+
+.modal {
+  margin: auto;
+  width: min(680px, 95%);
+}
+
+.field { display: grid; gap: 6px; margin: 10px 0; }
+.field input, .field textarea {
+  background: #0f1419;
+  border: 1px solid #2a3a4c;
+  color: #dbe3ea;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.actions { display: flex; justify-content: flex-end; gap: 8px; }
+
+@media (max-width: 1000px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}

@@ -1,0 +1,9 @@
+TITLE: Bancard Team Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2675015701
+SOURCE: 2675015701__Bancard_Team_Sync.json
+
+---
+
+Page allocated to support Bancard’s weekly sync

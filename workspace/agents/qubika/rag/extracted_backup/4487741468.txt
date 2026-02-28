@@ -1,0 +1,56 @@
+TITLE: Migrar Cardinal 3DS a Cybersource 3DS
+DOMAIN: General
+PRIORITY: Media
+ID: 4487741468
+SOURCE: 4487741468__Migrar_Cardinal_3DS_a_Cybersource_3DS.json
+
+---
+
+Migrar Cardinal 3DS a Cybersource 3DS - Definiciones, exploración y tasking
+Alcance:
+Tpago:
+Pago Ocasional Sin Login (luego de Kount positivo)
+
+Pago Ocasional con Login (Formulario de tarjeta)
+
+Flujo stripe (Configurable, apagado al momento de escribir este doc)
+
+Catastro de tarjetas
+
+VPos:
+Alias Token
+
+Single y multi
+
+Preautorización y pago convencional
+
+Formulario de pago
+
+Formulario de catastro
+
+Documentación:
+Cybersource 3DS Developer Guide
+
+Cybersource 3DS API DOCS
+
+API Params reference
+
+Cybersource 3DS Ruby SDK
+
+Diagrama de secuencia
+
+API URL:
+TEST: POSThttps://apitest.cybersource.com
+
+PROD: POSThttps://api.cybersource.com
+
+Desglose de tareas:
+Agregar Setup Step
+
+Migrar el proceso de Device Data Collection
+
+Cambiar Lookup por Payer Authentication Check Enrollment Service
+
+Migrar el proceso de step-up Iframe
+
+Migrar el proceso de authentication

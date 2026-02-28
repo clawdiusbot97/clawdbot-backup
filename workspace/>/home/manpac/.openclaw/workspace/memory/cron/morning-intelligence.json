@@ -1,0 +1,26 @@
+{
+  "name": "morning-intelligence",
+  "schedule": "0 8 * * *",
+  "timezone": "America/Montevideo",
+  "enabled": true,
+  "payload": {
+    "type": "agentTurn",
+    "task": "Execute Morning Intelligence Workflow v1.0 for today.\n\nOBJECTIVE: Generate and deliver morning briefing to Discord channels.\n\nDATA COLLECTION (use researcher subagent if needed):\n1. Fetch AI/Tech/Startup news (headlines + why they matter)\n2. Fetch global events ONLY if impacting: Technology, Markets, Regulation, Macroeconomy (exclude generic world news)\n3. Fetch 1 meaningful historical event for today (On This Day)\n4. Read Gmail inbox: unread OR last 24h, max 10 emails\n   - Classify: newsletters vs Itaú finance emails\n5. Read /home/manpac/.openclaw/workspace/dashboard/personal_tasks.md\n\nMUSIC GENERATION:\n1. Read /home/manpac/.openclaw/workspace/dashboard/music_profile.md\n2. Read /home/manpac/.openclaw/workspace/dashboard/music_history.jsonl for de-duplication\n3. Generate 6-8 music recommendations:\n   - 5-6 electronic (tech house / minimal / deep house, reference: Tuccillo 'The Waves')\n   - 1-2 adjacent picks\n   - Strict de-dupe: no artist or track already in history\n   - Prefer niche/underground, avoid mainstream/chart pop\n4. For each: Track — Artist, 1 reason (why it matches), 1 listening context\n5. Append each recommendation to music_history.jsonl as JSONL:\n   {\"timestamp\":\"YYYY-MM-DDTHH:MM:SSZ\",\"artist\":\"...\",\"title\":\"...\",\"source\":\"morning_intel\",\"notes\":\"\"}\n\nDISCORD DELIVERY (in order):\n\nChannel 1: briefings (1475961144416931931)\n# 🌅 Morning Intel — YYYY-MM-DD\n---\n## 🚀 AI / Tech & Global Signals\n[for each: what happened / why it matters / implications]\n---\n## 📜 On This Day\n[event + long-term significance]\n---\n## 📝 Your Tasks\n### Pending ...\n### In Progress ...\n---\n## 🤖 What I Can Execute Today\n[3-5 concrete actions]\n\nChannel 2: newsletters (1475961125257351423)\n# 📰 Newsletter Digest — YYYY-MM-DD\n[synthesize insights, group by topic, avoid listing every email]\nIf none: 'No new newsletters in the last 24h.'\n\nChannel 3: finance (1475961220216520887) - ONLY if Itaú emails exist\n# 💳 Finance Snapshot — YYYY-MM-DD\n[visible totals, notable expenses, unusual changes]\nIf attachment-only: state clearly\n\nChannel 4: music (1475961199207251968)\n# 🎧 Music Radar — YYYY-MM-DD\n[6-8 recommendations with artist, reason, context]\n\nRULES:\n- Use Discord Markdown (no tables, use bullet lists)\n- Split messages if exceeding Discord limits\n- Generate all content first, then send in order\n- DO NOT use Codex models\n- Prefer cost-efficient OpenRouter models\n- Respect token caps\n\nOUTPUT: Confirm delivery to all channels.",
+    "label": "morning-intel"
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-02-24",
+    "channels": {
+      "briefings": "1475961144416931931",
+      "newsletters": "1475961125257351423",
+      "finance": "1475961220216520887",
+      "music": "1475961199207251968"
+    },
+    "files": {
+      "personal_tasks": "/home/manpac/.openclaw/workspace/dashboard/personal_tasks.md",
+      "music_profile": "/home/manpac/.openclaw/workspace/dashboard/music_profile.md",
+      "music_history": "/home/manpac/.openclaw/workspace/dashboard/music_history.jsonl"
+    }
+  }
+}

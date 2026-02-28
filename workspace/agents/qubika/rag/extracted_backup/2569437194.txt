@@ -1,0 +1,38 @@
+TITLE: Mobile
+DOMAIN: General
+PRIORITY: Media
+ID: 2569437194
+SOURCE: 2569437194__Mobile.json
+
+---
+
+Sección dedicada a las aplicaciones Mobile de Bancard
+Aplicaciones:
+Portal de Comercios (React Native)
+Infonet Cobranzas (Android)
+Preguntas frecuentes
+¿Como registro mis horas?
+
+¿Como instalo una VPN?
+
+¿Como debo generar un PR?
+
+¿Como estimar tareas?
+
+¿Como utilizar el board?
+
+Desarrolladores
+
+Nicolas Lehrer
+
+Eduardo Alvarez
+
+Facundo Verdugo
+
+Federico Martinez (Tech Lead RN)
+
+Jeasmine Ñahui (Tech Lead Android)
+
+Ignacio Jorge (Tech Lead Backend)
+
+Pablo Garin (Team Leader)

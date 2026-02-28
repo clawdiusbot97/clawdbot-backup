@@ -1,0 +1,59 @@
+TITLE: [Ruby Upgrade] Status Qubika 14 de Noviembre
+DOMAIN: General
+PRIORITY: Media
+ID: 2778071079
+SOURCE: 2778071079__[Ruby_Upgrade]_Status_Qubika_14_de_Noviembre.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Investigando problema con duplicados. Revisando este tema con Carlos y Luis
+Today: Deployar tickets que están mergeados.
+Blockers?
+
+29completeHacer seguimiento de bug de datos.
+
+Yesterday: Terminando con PR-199. Viendo y solucionando problemas locales.
+Today: Seguir con PR-199 intentando liquidar antes de la weekly y luego seguir con PR-106.
+Blockers?
+
+30incomplete
+
+Yesterday: Repasando issues relacionados al PR-147 (Facturador). Revisando bugs en sprint de bugs conocidos y mejoras. Rechazó algunos que no estaban sucediendo
+Today: Va a trabajar con los tickets en staging luego del deploy. Esperando reu para priorizar errores conocidos y mejoras.
+Blockers?
+
+31incompleteHay que hacerle segumiento a Luis por el PR-217 para ver si es tema de datos32completeVer con que seguir y priorizar bugs de sprint mejoras y errores conocidos
+
+Yesterday: Trabajando en la adición que solicitó Marcelo y estuve revisando
+Today: Revisando bien el error del 242 que tiene que ver con ruby-upgrade.
+Blockers?
+
+Yesterday: Trabajando con ticket PR-210.
+Today: Encontró problema con filtro de roles. Va a probar y ver si con esto soluciona todo.
+Blockers?
+
+Yesterday: Solucionando y revisando PR de datos adicionales.
+Today: Continúa con PR-161
+Blockers?
+
+33incompleteHacer seguimiento a Luis por PR-161 (tema c4c)
+
+Yesterday: PR-217. Puro reproducir el error pero seguramente sea un tema de datos.
+Today: Va a tomar el PR-215 mientras no se puede solucionar el PR-217.
+Blockers? Error 500 al pegarle al pegarle a commerce-service
+
+34incompleteHacer seguimiento a Luis para ver si es tema de datos
+
+Yesterday: Viendo PR-81, que tenía un error de Picasso-error.
+Today: Habló con Luis y le dio la solución. Queda pendiente hacer una última prueba.
+Blockers?
+
+35incomplete

@@ -1,0 +1,14 @@
+{
+  "action": "workitems_get",
+  "id": "SYSTEM",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Export completado: brokia/workitems/index/workitems.json\n   Items: 3\n   Total cost: $0 USD/mes\n",
+  "stderr": "",
+  "duration_ms": 396,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-26T05:03:38.903Z",
+  "finished_at": "2026-02-26T05:03:39.299Z",
+  "id_validation": "fallback"
+}

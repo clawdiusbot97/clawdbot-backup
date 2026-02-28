@@ -1,0 +1,19 @@
+{
+  "asked": {},
+  "lastQuestionDate": "2026-02-20",
+  "dailyQuestions": [],
+  "interviewStarted": true,
+  "currentSection": "origins",
+  "sections": {
+    "origins": { "name": "Part I: Origins & Early Years", "completed": false, "questionsAsked": ["¿Cuál es tu primer recuerdo de la infancia y qué detalles recuerdas más vívidamente?"] },
+    "family": { "name": "Part II: Family & Roots", "completed": false, "questionsAsked": [] },
+    "education": { "name": "Part III: Education & Learning", "completed": false, "questionsAsked": [] },
+    "work": { "name": "Part IV: Work & Vocation", "completed": false, "questionsAsked": [] },
+    "values": { "name": "Part V: Core Values & Beliefs", "completed": false, "questionsAsked": [] },
+    "pivotal": { "name": "Part VI: Pivotal Moments", "completed": false, "questionsAsked": [] },
+    "relationships": { "name": "Part VII: Relationships & Love", "completed": false, "questionsAsked": [] },
+    "achievements": { "name": "Part VIII: Achievements & Contributions", "completed": false, "questionsAsked": [] },
+    "regrets": { "name": "Part IX: Regrets, Losses & What Remains", "completed": false, "questionsAsked": [] },
+    "future": { "name": "Part X: The Present & The Future", "completed": false, "questionsAsked": [] }
+  }
+}

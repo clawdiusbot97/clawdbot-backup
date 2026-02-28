@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "d4755542-b64c-4067-90b1-4e1076b31990",
+      "name": "morning-intelligence",
+      "enabled": true,
+      "createdAtMs": 1771973997595,
+      "updatedAtMs": 1772306972846,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Montevideo"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute Morning Intelligence Workflow (minimal payload).\n\nMANDATORY FIRST STEP: Read and follow SYSTEM instructions from:\n- /home/manpac/.openclaw/workspace/skills/morning-intelligence/SYSTEM.md\n\nHard constraints (do not reinterpret):\n- Do NOT change schedule/timezone/enabled (cron-managed).\n- Do NOT change sections/features.\n- Obey delivery constraints exactly as written in SYSTEM.md (explicit channel_id, News Extension standalone to 1477319018992898171, retry once, no fallback).\n- Obey dedupe/checkpoint rules exactly as written in SYSTEM.md (skip repost if stage=ok).\n\nThen execute the workflow and deliver messages as specified.",
+        "thinking": "low",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1475961144416931931"
+      },
+      "state": {
+        "nextRunAtMs": 1772362800000,
+        "lastRunAtMs": 1772306800893,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 171953,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    }
+  ]
+}

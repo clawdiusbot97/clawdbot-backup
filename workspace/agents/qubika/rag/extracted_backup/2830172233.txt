@@ -1,0 +1,102 @@
+TITLE: PIX Daily Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2830172233
+SOURCE: 2830172233__PIX_Daily_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer:
+Hoy: Integrando las funciones.
+Va a también intentar dejar todo lo de nginx pronto para poder levantar la maquina de stg.
+Blockers:
+
+Ayer: Viendo y corrigiendo los comentarios que le dejó Nacho en la PR.
+Hoy:
+Blockers:
+
+Ayer:
+Hoy: Terminó con los arreglos visuales y continuó trabajando con los errores de pix-portal en staging para poder levantarlo.
+Blockers:
+
+Ayer: Viendo servicio RPG con Joaco y pudieron levantar el proyecto java dockerizado corriendo en todas las máquinas / procesadores
+Hoy:
+Blockers:
+
+Ayer:
+Hoy: Trabajando sobre el calendario del datepicker del filtro de los pagos.
+Van a trabajar con gasti para poder integrar el portal con el servidor, para poder empezar a hacer las consultas.
+Blockers:
+
+Ayer:
+Hoy: Emprolijando las ramas y armando PRs. Necesita approves para poder deployar.
+Integrando external-services con pix.
+Luego se van a juntar con Juli para integrar portal y servicio.
+Blockers:
+
+Ayer:
+Hoy: Revisando la configuración de nginx, para poder terminar de configurar la máquina de STG. Está esperando por permisos de escritura o que alguien lo haga por el.
+Blockers: Esperando permisos de escritura.
+
+Ayer:
+Hoy: Trabajando con la creación del endpoint para crear un QR Hook PRYPIX-59. Terminando unas configuraciones de docker y github actions. Luego va a subir los cambios.
+Blockers:
+
+Ayer:
+Hoy: Trabajando en el deploy a staging de pix-portal. Está prontó pero viendo algunos detalles dentro de la rama provide. Luego de esto ya quedaría pronto.
+Blockers:
+
+Ayer:
+Hoy: Trabajando con la creación del endpoint para crear un QR Hook
+Blockers:
+
+Ayer:
+Hoy: Logró hacer andar la descarga de PDFs. Hay que ver luego si funciona también mobile. Para esto tenemos que deployar a stg y probar desde un android e ios.
+Van a ver también con gasti para estandarizar las configuraciones que van a hacer para PIX-client.
+Blockers:
+
+Ayer: Acomodando el repo para poder hacer PRs más chicas. Quedaron PRs creadas de lo que fueron avanzando hasta ahora.
+Hoy: Viendo si puede comunicarse con la api de pix para poder si funciona la creación del QR generado desde PIX.
+Viendo un problema con la dockerización. Al parecer es algo genérico con los servicios y no particular de PIX-service.
+Empezando con el modelo de payments, que es la notificación de pix a ver si qr pasó o fallo.
+Blockers:
+
+Ayer:
+Hoy:
+Blockers:
+
+Ayer: Terminó parte de crear el modelo y endpoint de payment hook (guarda los datos). Falta la integración con PIX
+Hoy:
+Blockers:
+
+Ayer: Mejoras en la UI del flujo de compra.
+Hoy: Falta terminar unos detalles y quedaría pronto.
+Blockers:
+
+Ayer: Trabajando con muestra de los errores.
+Hoy:
+Blockers:
+
+Ayer:
+Hoy: Termino de desbloquearse con lo que tenía pendiente de ActionCable para interactuar con el websocket. Va a hacer pruebas locales para luego replicar contra la api de pix.
+Blockers?:
+
+Ayer: Trabajando en el servicio modelando, creando los servicios, agregando una gema para documentar los endpoints.
+Hoy: Viendo un poco lo de rpg y la info que estuvimos viendo de las gemas, para lograr la conexión con el RPG
+Blockers?:

@@ -1,0 +1,163 @@
+TITLE: Friday Sessions
+DOMAIN: General
+PRIORITY: Media
+ID: 4865785942
+SOURCE: 4865785942__Friday_Sessions.json
+
+---
+
+📘 Friday Session – Reglas de Funcionamiento
+1️⃣ Propósito del espacio
+Friday Session es un espacio semanal del equipo para:
+Aprender juntos
+
+Compartir conocimiento del sistema
+
+Mejorar nuestras prácticas técnicas
+
+Pensar arquitectura y diseño
+
+Fortalecer vínculos y cultura técnica
+
+No es:
+Una reunión de status
+
+Una retro formal
+
+Un espacio para resolver urgencias operativas (o si pero en excepciones muy puntuales)
+
+2️⃣ Frecuencia y duración
+Frecuencia: semanal
+
+Duración: 60 minutos
+
+Inicio y cierre puntual
+
+Si el contenido termina antes, se libera el espacio
+
+3️⃣ Asistencia y cultura
+La asistencia esculturalmente obligatoria.
+
+Se fomenta fuertemente la cámara prendida.
+
+Se espera participación activa.
+
+La Friday Session no es un espacio pasivo.
+4️⃣ Formatos posibles
+🐛 Random Bug Resolution
+
+🗺 Team Knowledge Map
+
+🏗 Rails Pattern
+
+🔧 Live Refactor Session
+
+☕ Architecture Coffee
+
+🛠 Tool Swap
+
+🎭 Tech Debate
+
+🎤 Guest Friday
+
+🎮 Friday Challenge
+
+📰 Tech News
+
+Cada formato tiene distinto nivel de preparación.
+5️⃣ Nivel de preparación esperado
+Se definen tres niveles para balancear carga y profundidad.
+🔹 Bajo (20–30 minutos de preparación)
+🛠 Tool Swap
+
+📰 Tech News
+
+☕ Architecture Coffee (cuando es disparador simple sin material formal)
+
+🔹 Medio (30–60 minutos de preparación)
+🐛 Random Bug Resolution
+
+🔧 Live Refactor Session
+
+🎭 Tech Debate
+
+☕ Architecture Coffee (cuando requiere contexto más trabajado)
+
+🔹 Alto (60–120 minutos de preparación)
+🗺 Team Knowledge Map
+
+🏗 Rails Pattern
+
+🎮 Friday Challenge
+
+🎤 Guest Friday
+
+⚠️ Importante:
+No todas las sesiones requieren PPT. En la mayoría alcanza con código, ejemplos, preguntas bien estructuradas o material simple.
+6️⃣ Asignación y rotación
+La coordinación general la lleva Tech Core.
+
+Se asignan responsables con anticipación.
+
+Se busca equilibrio en la rotación.
+
+Si alguien está sobrecargado, puede intercambiar turno.
+
+Las sesiones pueden tener:
+Responsable asignado (facilitador formal)
+
+Formato más orgánico (cuando aplica)
+
+7️⃣ Dueño de la sesión
+Cuando hay responsable asignado:
+Actúa como facilitador.
+
+Maneja tiempos.
+
+Modera participación.
+
+Cierra con breve resumen final (1–2 minutos).
+
+Si no hay responsable asignado:
+La conversación es más orgánica.
+
+Alguien designado puede moderar si es necesario.
+
+8️⃣ Dinámica de participación
+Para evitar pasividad:
+🔸 Límite de exposición
+Ningún bloque de exposición debería superar los30–35 minutossin interacción.
+🔸 Ronda “obligatoria” (Debates y Architecture Coffee)
+En estos formatos:
+Se realiza una ronda donde cada persona debe intervenir al menos una vez (aunque sea muy brevemente).
+
+🔸 Preguntas dirigidas
+El facilitador puede invitar participación directa:
+“¿Cómo lo harías vos?”
+“¿Qué riesgo ves acá?”
+La intención es distribuir la voz, no incomodar.
+🔸 Hipótesis antes de solución
+En sesiones prácticas (Bug, Refactor):
+Se discuten hipótesis antes de mostrar la solución (si ya se tiene preparada).
+
+El objetivo es que no participen siempre los mismos.
+9️⃣ Impacto en decisiones técnicas
+Dependiendo del formato, la sesión puede:
+Ser exploratoria.
+
+Derivar en un guideline interno.
+
+Generar una acción concreta.
+
+Si surge una conclusión relevante:
+Se sugiere documentar brevemente.
+
+Se define si requiere seguimiento y el responsable de ese seguimiento.
+
+🔟 Cancelaciones
+La sesión solo se cancela si:
+Hay una urgencia crítica real.
+
+No hay responsable asignado y no se puede reorganizar.
+
+El objetivo es sostener el espacio en el tiempo.

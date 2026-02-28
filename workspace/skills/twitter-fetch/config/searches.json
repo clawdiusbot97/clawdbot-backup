@@ -1,0 +1,68 @@
+{
+  "searches": [
+    {
+      "query": "tech news",
+      "category": "tech",
+      "max_tweets": 15
+    },
+    {
+      "query": "AI",
+      "category": "tech",
+      "max_tweets": 10
+    },
+    {
+      "query": "software engineering",
+      "category": "tech",
+      "max_tweets": 10
+    },
+    {
+      "query": "finance news",
+      "category": "finance",
+      "max_tweets": 15
+    },
+    {
+      "query": "investing",
+      "category": "finance",
+      "max_tweets": 10
+    },
+    {
+      "query": "Uruguay economy",
+      "category": "finance",
+      "max_tweets": 5
+    },
+    {
+      "query": "history",
+      "category": "history",
+      "max_tweets": 10
+    },
+    {
+      "query": "medieval history",
+      "category": "history",
+      "max_tweets": 5
+    },
+    {
+      "query": "geopolitics",
+      "category": "history",
+      "max_tweets": 5
+    },
+    {
+      "query": "breaking news",
+      "category": "news",
+      "max_tweets": 10
+    },
+    {
+      "query": "Uruguay news",
+      "category": "news",
+      "max_tweets": 5
+    },
+    {
+      "query": "world news",
+      "category": "news",
+      "max_tweets": 10
+    }
+  ],
+  "nitter_base_url": "https://nitter.privacyredirect.net",
+  "include_retweets": false,
+  "total_max_tweets": 100,
+  "max_tweets_per_query": 20
+}

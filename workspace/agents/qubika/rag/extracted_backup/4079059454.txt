@@ -1,0 +1,126 @@
+TITLE: Nuevo Portal para el Portal de Comercios - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4079059454
+SOURCE: 4079059454__Nuevo_Portal_para_el_Portal_de_Comercios_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento detalla el plan de trabajo y estimación de tareas para reorganizar los portales actuales de la suite de comercios, con el objetivo de mejorar la mantenibilidad, escalabilidad y experiencia de desarrollo.
+🔁 Contexto actual
+commerce-suitees el portal legado que contiene tanto vistas de comercios como de Boca Web.
+
+Boca Web se va a migrarsin rediseñoa un nuevo portal llamadoepos-portal.
+
+Se creócommerce-portal, un nuevo portal que reemplazará gradualmente acommerce-suite.
+
+🎯 Objetivos
+Migrar progresivamente las vistas decommerce-suiteacommerce-portal.
+
+Desdecommerce-portal, redireccionar inicialmente haciacommerce-suitepara acceder a vistas aún no migradas.
+
+Actualizar e implementar nuevas vistas directamente encommerce-portal.
+
+Apagarcommerce-suiteuna vez que toda la funcionalidad esté en el nuevo portal.
+
+Migrar Boca Web al nuevoepos-portaltal como está, separándolo definitivamente decommerce-suite
+
+🧭 Plan de transición
+Desarrollar la estructura base decommerce-portalyepos-portal.
+
+Montar las vistas nuevas de comercio directamente encommerce-portal.
+
+Para vistas aún no migradas, usarcommerce-portalcomo entrypoint, redireccionando haciacommerce-suite.
+
+Migrar Boca Web completa aepos-portalsin rediseño.
+
+Desacoplar y apagarcommerce-suiteuna vez que todos los módulos estén migrados y validados.
+
+Las horas estimadas son:262
+Observaciones adicionales
+Este plan no contiene tareas de rediseño, solo de arquitectura
+
+Las tareas de rediseño fueron enviadas en otro mail
+
+Vamos a tener que planificar el órden de ejecución de las tareas en base a este portal para evitar conflictos en el desarrollo y retrabajo.
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Crear nuevo portal para InfoNet Cobranzas con Rails 8, Dynatrace, OpenTellemetry y Caché de commerce-services + migrar todas las vistas que tenemos hoy en día.
+
+40
+
+epos-portal
+
+Crear y hacer el setup de commerce-portal con Rails 8, Dynatrace, OpenTellemetry y cambios en Bancard Docker relacionados al deploy.
+
+16
+
+commerce-portal
+
+Cambios en nginx con el ruteo de un portal a otro a medida que vayamos avanzando con el desarrollo de las vistas.
+
+8
+
+nginx config
+
+Crear header (falta definir las dos opciones que le pasamos a luis, pero estimamos por la que demore más que sería el header con opciones distintas)
+Diseño del header
+
+El header va a routear a commerce-suite para las vistas viejas y a commerce-portal para las nuevas
+
+Agregar lógica de permisos para cada vista / usuario / producto
+
+32
+
+commerce-suite / commerce-portal
+
+Crear sidebar en commerce-portal y embeber las vistas de commerce-suite mientras no estén desarrolladas.
+Diseño de la vista
+
+El sidebar va a routear a commerce-suite para las vistas viejas y a commerce-portal para las nuevas
+
+Agregar lógica de permisos para cada vista / usuario
+
+80
+
+commerce-suite / commerce-portal
+
+Renderizar vistas de commerce-suite sin header ni sidebar en commerce-portal
+En cada ruta que no esté definida en el portal nuevo armar un iframe que te redireccione al portal viejo.
+
+40 (a revisar, puede ser menos o mas, miercolesvamos a hacer una prueba de concepto)
+
+commerce-suite / commerce-portal
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+16
+
+Total Desarrollo
+
+232
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+30
+
+Total Desarrollo + Gestión
+
+262

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "schema": "openclaw.router.v1",
+  "description": "LOCAL cost routing - no LLM calls (0 tokens)",
+  "updated_at": "2026-02-24T17:25:00Z",
+  "default_model": "openrouter/minimax/minimax-m2.1",
+  "rules": [
+    {
+      "agent": "writer",
+      "model": "openrouter/minimax/minimax-m2.1",
+      "reason": "writer_always_frugal",
+      "regex_patterns": [],
+      "case_sensitive": false
+    },
+    {
+      "agent": "researcher",
+      "default_model": "openrouter/minimax/minimax-m2.1",
+      "premium_model": "openrouter/moonshotai/kimi-k2.5",
+      "match_any": [
+        "benchmark",
+        "compare",
+        "sources?",
+        "market scan",
+        "competitor",
+        "industry report",
+        "research paper",
+        "white.?paper",
+        "analysis.*deep",
+        "survey"
+      ],
+      "case_sensitive": false,
+      "reason_frugal": "researcher_quick",
+      "reason_premium": "researcher_deep_research"
+    },
+    {
+      "agent": "builder",
+      "frugal_model": "openrouter/deepseek/deepseek-v3.2",
+      "premium_model": "openai-codex/gpt-5.3-codex",
+      "match_any": [
+        "---",
+        "\\+\\+\\+",
+        "@@",
+        "\\.rb\\b",
+        "\\.py\\b",
+        "\\.js\\b",
+        "\\.go\\b",
+        "\\.ts\\b",
+        "stacktrace",
+        "error:",
+        "line \\d+",
+        "test.*fail",
+        "fix.*this.*code",
+        "patch\\b",
+        "unified diff"
+      ],
+      "case_sensitive": false,
+      "reason_frugal": "builder_planning_or_explanation",
+      "reason_premium": "builder_real_code_edit"
+    },
+    {
+      "agent": "chief",
+      "model": "openrouter/deepseek/deepseek-v3.2",
+      "reason": "chief_balanced",
+      "regex_patterns": [],
+      "case_sensitive": false
+    },
+    {
+      "agent": "ops",
+      "model": "openrouter/deepseek/deepseek-v3.2",
+      "reason": "ops_balanced",
+      "regex_patterns": [],
+      "case_sensitive": false
+    },
+    {
+      "agent": "brokia",
+      "model": "openrouter/deepseek/deepseek-v3.2",
+      "reason": "brokia_balanced",
+      "regex_patterns": [],
+      "case_sensitive": false
+    },
+    {
+      "agent": "qubika",
+      "model": "openrouter/deepseek/deepseek-v3.2",
+      "reason": "qubika_balanced",
+      "regex_patterns": [],
+      "case_sensitive": false
+    }
+  ],
+  "fallback": {
+    "model": "openrouter/minimax/minimax-m2.1",
+    "reason": "fallback_default"
+  },
+  "metadata": {
+    "llm_calls": 0,
+    "token_cost": 0,
+    "method": "regex_heuristics"
+  }
+}

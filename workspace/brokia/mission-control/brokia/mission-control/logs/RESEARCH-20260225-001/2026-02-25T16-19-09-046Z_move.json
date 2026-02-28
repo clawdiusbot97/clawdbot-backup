@@ -1,0 +1,13 @@
+{
+  "action": "move",
+  "id": "RESEARCH-20260225-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Movido: RESEARCH-20260225-001\n   Status: RESEARCHING → NEW\n   Folder: /home/manpac/.openclaw/workspace/brokia/workitems/inbox\n",
+  "stderr": "",
+  "duration_ms": 53,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-25T16:19:08.993Z",
+  "finished_at": "2026-02-25T16:19:09.046Z"
+}

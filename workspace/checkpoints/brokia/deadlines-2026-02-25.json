@@ -1,0 +1,23 @@
+{
+  "schema": "brokia-deadlines-v1",
+  "generated_at": "2026-02-25T02:37:05+00:00",
+  "query_range": {
+    "start": "2026-02-26",
+    "end": "2026-03-11"
+  },
+  "alerts_generated": [
+    {
+      "event_id": "08kd6lut7n0g3bqs297s9t6umo",
+      "summary": "[TEST] Brokia T-7 alert pipeline",
+      "date": "2026-03-04",
+      "days_until": 7,
+      "suggested_action": "Action: verify Slack delivery + checkpoint dedupe.",
+      "alert_sent": false,
+      "slack_ts": null
+    }
+  ],
+  "dedupe": {
+    "key": "{event_id}:{YYYY-MM-DD}",
+    "already_sent_today": false
+  }
+}

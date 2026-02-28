@@ -1,0 +1,60 @@
+TITLE: Flujo de QR en Facturación Electrónica en VPos - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4010999810
+SOURCE: 4010999810__Flujo_de_QR_en_Facturacio╠ün_Electro╠ünica_en_VPos_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para agregar Facturación Electrónica en el Flujo de QR en VPos, a cargo de.
+Las horas estimadas son:36 horas ~ 4.5 días
+Fecha estimada de inicio:Lúnes
+Fecha estimada de Entrega:Lúnes
+
+Tarea
+
+Estimación (hs)
+
+vpos
+
+Luego de enviar el pago para autorizar en endpoint de confirmación de QR (confirm_qr_buy), encolar la generación de la factura.
+Comentarios:
+Si la generación de factura falla, no se genera la factura pero el pago permanece efectuado. El comercio deberá realizar la factura desde el portal de FE.
+Guardar en la tabla nueva el nro de factura y CDC.
+
+18
+
+vpos
+
+Confirmar que el callback al comercio ya tiene la informacion del resultado de la generacion de factura..
+Comentarios:
+En el caso de que no se haya hecho el flujo de FE, no agregar el bloque en el callback, ni siquiera vacío.
+
+En una revisión previa vimos que a priori ese código se puede reutilizar sin problemas
+
+1
+
+vpos
+
+En la operación de “confirm_qr_buy“ devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+
+4
+
+billing-proxy
+
+En la operación de “confirm_qr_buy“ devolver como parámetro opcional, los datos de billing.
+Comentarios:
+Estos parámetros solo se deben devolver si el comercio los pide.
+Se contemplan en éstas horas el setup del nuevo proyecto y un breve onboarding
+
+8
+
+Creación y correción de PRs, y deploy a Staging
+
+5
+
+Total Desarrollo
+
+36

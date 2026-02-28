@@ -1,0 +1,14 @@
+{
+  "action": "create_export",
+  "id": "IDEA-20260226-001",
+  "success": true,
+  "blocked_by_guardrail": false,
+  "stdout": "✅ Export completado: brokia/workitems/index/workitems.json\n   Items: 4\n   Total cost: $0 USD/mes\n",
+  "stderr": "",
+  "duration_ms": 524,
+  "provider": "openai-codex",
+  "model": "openai-codex/gpt-5.3-codex",
+  "started_at": "2026-02-26T05:03:39.574Z",
+  "finished_at": "2026-02-26T05:03:40.098Z",
+  "id_validation": "strict"
+}

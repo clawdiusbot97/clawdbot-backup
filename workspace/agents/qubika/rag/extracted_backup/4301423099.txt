@@ -1,0 +1,148 @@
+TITLE: Creación de suscripción a partir de un suscriptor existente - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4301423099
+SOURCE: 4301423099__Creacio╠ün_de_suscripcio╠ün_a_partir_de_un_suscriptor_existente_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para las funcionalidades deClonación desde vista de resumen de suscriptoresy deClonación desde la vista de Creación de Suscripción.
+Clonación desde vista de resumen de suscriptores
+Las horas estimadas son: 42hs ~ 7 días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+Clonación desde la vista de Creación de Suscripción
+Las horas estimadas son: 42hs ~ 6.6 (7) días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+Nota: En base a las estimaciones de estas dos tareas, Joel estaría entregando la segunda el 17 de Noviembre, que es la semana planificada para el ccc, no habría margen para QA, y tampoco se está considerando el tiempo de bug fixing que pueda surgir de la primera tarea.
+Creemos que lo más sensato es llegar únicamente con la de la tarea deClonación desde la vista de resumen de suscriptoresy evaluar llegar a la segunda si las tareas se llegan a completar antes.
+
+Clonación desde la vista de resumen de suscriptores
+Tarea
+
+Estimación (hs)
+
+Servicio/Portal
+
+Crear endpoint para crear suscriptor a partir de uno existente via API.
+Recibe datos de suscripción y un identificador de suscriptor.
+
+12
+
+external-commerce-service
+
+Agregar nueva opción para cuando hay un solo suscriptor seleccionado.
+La opción es “Añadir suscriptor adicional”.
+
+Validar que solo sea un suscriptor el seleccionado para mostrar.
+
+4
+
+payment-link-portal
+
+Crear modal para crear suscripción desde un suscriptor.
+Formulario para crear la suscripción con valdiaciones.
+
+Crear endpoint en controller para crear suscripción y nuevo suscriptor
+
+Redirigir a la nueva suscripción
+
+20
+
+payment-link-portal
+
+Salida a Staging
+Integración de los flujos
+
+Tests
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+6
+
+Total Desarrollo
+
+42
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+6
+
+Total Desarrollo + Gestión
+
+48
+
+Clonación desde la vista de creación de suscripción
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Agregar nueva opción en formulario de creación de suscripción.
+Que diga “Pagar con un cliente existente”
+
+3
+
+payment-link-portal
+
+Agregar nuevo filtro en dataset de suscripciones para permitir filtrar por las que tienen suscriptores.
+
+3
+
+payment-link-service
+
+Crear modal que se active al seleccionar la nueva opción.
+Dos inputs, uno para suscripción y otro para suscriptores.
+
+El segundo input se “llena“ cuando el primero esté seleccionado.
+
+21
+
+payment-link-portal
+
+Modificar controller de creación de suscripción para aceptar datos del suscriptor a clonar.
+
+3
+
+payment-link-portal
+
+Salida a Staging
+Integración de los flujos
+
+Tests
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+6
+
+Total Desarrollo
+
+36
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+4
+
+Total Desarrollo + Gestión
+
+40

@@ -1,0 +1,31 @@
+TITLE: Ruby RPG
+DOMAIN: General
+PRIORITY: Media
+ID: 2869198854
+SOURCE: 2869198854__Ruby_RPG.json
+
+---
+
+Este documento recopila toda la información recolectada hasta el momento para lograr la conexión con el RPG del AS400 desde Ruby.
+Existen varios caminos posibles para implementar esto, pero el documento se enfocará en los que fueron más comentados y probados.
+
+Conexión directa con el RPG utilizando gema “ibm_db”
+
+para esta implementación, necesitaremos tener instalada la siguiente gema:
+ibm_db(gema oficial de ibm, que sirve de driver para conectarse con el RPG directo)
+https://rubygems.org/gems/ibm_db/versions/3.0.4?locale=en
+snippet de ejemplo (IMPORTANTE! este codigo esta incompleto, es decir, no se logra el ultimo paso que seria capturar bien la response. pero la llamada al RPG funciona y se hace satisfactoriamente. para mas info leer los comentarios del codigo.):
+extra: el store procedure que estamos llamando acá ejecuta un programa en el RPG que recibe un string “HOLA” y devuelve un string “CHAU”. este programa particularmente NO almacena ningun dato en base de datos.
+rubyConexión al RPG mediante gema xml_service y uso de gema ibm_db como ‘adapter’ para la conexion a la db2 mediante active record.
+
+para esta implementación necesitaremos instalar:
+ibm_db(gema oficial de ibm, que sirve de driver para conectarse con el RPG directo)
+https://rubygems.org/gems/ibm_db/versions/3.0.4?locale=en
+xml_service(gema hecha para comunicarse con el RPG a traves del uso de xml’s)
+https://rubygems.org/gems/xmlservice/versions/1.3.3?locale=en
+snippet de ejemplo (este código si funciona al 100%):
+extra: el store procedure que estamos llamando acá ejecuta un programa en el RPG que recibe un string “HOLA” y devuelve un string “CHAU”. este programa particularmente NO almacena ningun dato en base de datos.
+rubyLINKS E INFORMACIÓN EXTRA:
+llamada a otro store procedure con gema ibm_db que ejecuta un programa que guarda datos en la base, pero no devuelve nada. podriamos ver igual de probarlo para tambien intentar parsear una response que sea success pero vacía, cosa de no centrarnos en un unico tipo de programa rpg:
+
+rubydoc de ibm oficial para python, con varios snippets de ejemplos que ayudan a entender como se arma el flujo de una llamada:https://www.ibm.com/docs/en/db2/11.5?topic=applications-python-sqlalchemy-django-framework

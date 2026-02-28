@@ -1,0 +1,30 @@
+LLM Daily Report — 2026-02-24 UTC
+=====================================
+Total Cost:         1335010{COST_FMT}
+Total Calls:        2
+Total Tokens:       4450 (3200 in + 1250 out)
+Top Agent:          main ($0.0007999999999999999, 2 calls)
+Top Model:          kimi-k2.5 ($0.0005, 1 calls)
+Premium Ratio:      0.0%
+
+COST BY AGENT
+-------------
+"- main: $0.0007999999999999999 (2 calls)"
+
+COST BY MODEL
+-------------
+"- kimi-k2.5: $0.0005 (1 calls)"
+"- openrouter/minimax/minimax-m2.1: $0.0003 (1 calls)"
+
+TOP 10 EXPENSIVE REQUESTS
+-------------------------
+"- [2026-02-24T16:38:22Z] main/kimi-k2.5: $0.0005 (test-req-001)"
+"- [2026-02-24T16:45:16Z] main/openrouter/minimax/minimax-m2.1: $0.0003 (test-req-002)"
+
+METADATA
+--------
+Report generated: 2026-02-24T17:06:09Z UTC
+Metrics source: /home/manpac/.openclaw/workspace/.openclaw/metrics.jsonl
+Report file: /home/manpac/.openclaw/workspace/.openclaw/reports/2026-02-24-llm-metrics.txt
+LLM calls used: 0
+Token consumption: 0

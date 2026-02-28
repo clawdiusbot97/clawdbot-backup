@@ -1,0 +1,205 @@
+TITLE: Reingeniería de Pantallas - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2865102875
+SOURCE: 2865102875__Reingenieri╠üa_de_Pantallas_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+En este documento tenemos la estimación para laFase 1del Rediseño de TPago, donde incluimos las pantallas de Suscripciones (Resumen, Planes, Movimientos y Clientes)
+Puntos a tener en cuenta:
+Están incluídas:
+Header y Menú de Navegación
+
+Suscripciones - Resumen
+Pagos Procesados
+
+Suscripciones - Planes
+Crear Nuevo Plan
+
+Detalles de Plan
+
+Suscripciones - Movimientos
+
+Suscripciones - Clientes
+Resumen de Cliente
+
+No están incluidas:
+Sección de Movimientos
+
+Sección Mi Cuenta
+
+Sección de Integrar con API (no hay diseño)
+
+En estas pantallas que no están incluidas, vamos a mostrar el diseño viejo de TPago
+Las vistas mobile no están incluidas en la estimación
+
+Esto se debe a que no tenemos los diseños. Son pantallas complicadas que necesitan una referencia para no afectar la experiencia de usuario (Ver con Pao si Bancard se va a encargar de los diseños, o ver la alternativa de sumar a alguien del equipo de UX / UI de Qubika)
+En el caso de tener los diseños mobile, esta fase de desarrollo puede hacerse al final del proyecto, ya que es re armar las pantallas para esta vista y puede dejarse para el final para no afectar la estimación inicial.
+En esta estimación se incluye también una etapa de QA y Bug Fixing. La idea es realizar un desarrollo ágil, con iteraciones de 2 a 3 semanas, donde se desarrolla y se valida con QA, para prevenir errores graves al final del proyecto y que se puedan ir atacando en la etapa de desarrollo. Esto va a mejorar la calidad de la aplicación y prevenirnos errores tediosos en la entrega final, dejando un proyecto más limpio y escalable. No certifica que no hayan bugs al final del proyecto, pero si va a reducir la cantidad considerablemente y ahorrarnos mucho re-trabajo a futuro
+
+Se incluyen horas de management (tema de facturación) pero no va a afectar a la entrega final del proyecto.
+
+Una vez terminada esta etapa de desarrollo, faltan los puntos de la Fase 2 (incluídos en el documento de Pao). La idea de esta primera etapa es hacer refactor de lo visual (frontend) intentando tocar la menos cantidad de lógica posible. Para la fase 2, se plantearon mejoras y cambios en el backend, que aún se están por definir, como también las vistas mobile y las secciones que están marcadas como “No inlcuídas”
+
+Épica
+
+Tarea
+
+Estimación (días)
+
+[Rediseño] Header y Pantalla de Navegación
+
+Crear maquetado para la barra de navegación
+
+6
+
+Agregar funcionalidad de Copiar Link al botón "Copiar Link"
+
+2
+
+Crear maquetado para el header
+
+3
+
+Agregar Loader para esperas y transiciones
+
+3
+
+[Rediseño][Suscripciones] Pantalla de Resumen
+
+Crear maquetado de pantalla de Resumen de Suscripciones
+
+4
+
+Crear Filtro para fechas
+
+3
+
+Crear maquetado de pantalla Pagos Procesados
+
+8
+
+Agregar acción a filtro seleccionados
+
+10
+
+Crear acción para filtro de Nombre de Plan
+
+6
+
+Crear acción para filtro de Estado
+
+2
+
+Crear acción para búsqueda
+
+2
+
+Crear acción para exportar en archivo .csv
+
+2
+
+[Rediseño][Suscripciones] Pantalla de Planes
+
+Optimizar endpoint de Consultar Planes
+
+2
+
+Hacer el maquetado de la pantalla de Planes
+
+4
+
+Crear funcionalidad para el botón de "Copiar Link"
+
+1
+
+Agregar funcionalidad al botón de "Exportar Planes"
+
+4
+
+Crear sección para agregar nuevo Plan
+
+4
+
+Crear sección para ver detalles de Plan
+
+3
+
+[Pantalla Detalles de Plan] Agregar funcionalidad al botón de Inactivar Plan
+
+2
+
+[Pantalla Detalles de Plan] Agregar funcionalidad para exportar lista de Suscripciones
+
+1
+
+[Rediseño][Suscripciones] Pantalla de Movimientos
+
+Maquetar pantalla de Movimientos
+
+5
+
+Optimizar el endpoint para consultar pagos
+
+8
+
+Crear la funcionalidad para buscar movimientos por Nombre, CI e Email
+
+2
+
+Agregar funcionalidad para usuarios seleccionados
+
+5
+
+Crear funcionalidad para exportar todos los movimientos
+
+2
+
+[Rediseño][Suscripciones] Pantalla de Clientes
+
+[Pantalla Detalles de Plan] Agregar funcionalidad al campo ID Registro para abrir pantalla de Resumen de Cliente
+
+1
+
+Maquetar pantalla de Clientes
+
+5
+
+Crear funcionalidad para exportar lista de clientes
+
+2
+
+Agregar funcionalidad a campo de búsqueda
+
+2
+
+Maquetar pantalla "Resumen de cliente"
+
+8
+
+[Pantalla Resumen de Cliente] Agregar funcionalidad al botón de inactivar usuario
+
+2
+
+Total tiempo de desarrollo
+
+112
+
+QA y Bug Fixing (20%)
+
+22
+
+Total
+
+134
+
+Management 15% (para temas de facturación, no afecta la duración del proyecto)
+
+20
+
+Total a facturar
+
+154
+
+La fecha apróximada de fin de desarrollo para esta primera etapa es la semana del 13 de Mayo, teniendo en cuenta feriados y fines de semana.

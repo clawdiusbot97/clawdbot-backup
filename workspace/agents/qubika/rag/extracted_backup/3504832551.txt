@@ -1,0 +1,43 @@
+TITLE: Linea Virtual - Dudas Iniciales
+DOMAIN: General
+PRIORITY: Media
+ID: 3504832551
+SOURCE: 3504832551__Linea_Virtual_-_Dudas_Iniciales.json
+
+---
+
+Pregunta
+
+Respuestas (Victor)
+
+Necesitamos confirmar las vistas, al menos alguna, para poder comenzar a trabajar en ellas.
+
+Esperando por Producto
+
+Hoy en día hay comercios que tienen su propia cuenta de sobregiro gestionada directamente con la entidad. Para la consulta de saldos y movimientos, vamos a tener dos flujos diferentes dependiendo de si la cuenta es de Bolsillo IC o si es directo con una entidad?
+
+Creo que vamos a tener dos vistas, esto es por la dudas, ya que visión banco era el único que tenía este esquema pero no está mas operativo pero igual forma es un servicio que se tiene disponible y se debe mantener la compatibilidad hacia atras
+
+En el caso de que la respuesta de arriba sea SI, las secciones de SALDO en el portal de infonet cobranzas van a verse diferente dependiendo el caso? Porque en las vistas del documento aparece terminología que tal vez solo aplica para la línea virtual.
+
+-
+
+Hoy en día, al momento de la consulta de saldo nos fijamos en el account_id del comercio o sucursal que está almacenado en la tabla de comercios y sucursales. Con ese account_id consultamos los datos de la cuenta contra billing-service y eso nos devuelve entre otras cosas el banco, etc. La idea para las cuentas de Billetera IC es almacenarlas también en billing-service como accounts? De esa forma podríamos diferenciar cuando un comercio tiene una cuenta de entidad o cuenta de linea virtual y tratar a las cuentas de Billetera IC como cuentas comunes de forma de poder centralizar la lógica en billing-service. Esto también nos permitiría centralizar la lógica de consulta de saldo también en billing, donde se hace hoy en día para las cuentas normales.
+
+Si, la idea es guardarla como accounts, se va a crear una entidad solo para este caso
+
+Es necesario que nosotros almacenemos en nuestros servicios un registro de los comercios que utilizan línea virtual? O solo con tener marcada la cuenta como una cuenta de línea virtual en billing sería suficiente?
+
+Con la nueva entidad vamos a poder distinguir
+
+Al momento del PAGO de un servicio en boca, tenemos que hacer validación del estado de la cuenta de Linea Virtual? O simplemente intentamos el pago y el jpos va a rechazar si la cuenta no tiene saldo disponible?
+
+Si, el jpos se va a encargar de hacer la validación del saldo
+
+Según el diagrama, nos van a proveer endpoints para la consulta del estado de un a línea virtual y saldos. Eso va a ser un solo endpoint para todo?
+
+Creo que van a ser dos endpoints
+
+Nos van a disponibilizar un endpoint para la consulta de movimientos de la línea virtual?
+
+Si, vamos a disponibilizar un endpoint nuevo para esto

@@ -1,0 +1,18 @@
+# 03 — Roadmap
+
+## Fase 1 — Orden documental
+- Hub creado en `brokia/thesis-hub/`.
+- Checklist académica separada de notas de producto/tesis.
+
+## Fase 2 — Alertas operativas
+- Script diario de verificación T-7:
+  - `/home/manpac/.openclaw/workspace/scripts/brokia_deadline_checklist_alert.py`
+- Dedupe diario por checkpoint:
+  - `checkpoints/brokia/deadlines-YYYY-MM-DD.json`
+
+## Fase 3 — Cierre de incógnitas
+- Confirmar fecha exacta de entrega final (septiembre 2026).
+- Confirmar hora de hitos condicionales.
+
+## INBOX
+- Definir responsable académico para aprobar cambios en checklist.

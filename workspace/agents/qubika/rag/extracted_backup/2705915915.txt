@@ -1,0 +1,153 @@
+TITLE: CFT JPOS Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2705915915
+SOURCE: 2705915915__CFT_JPOS_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Bug de billing de service solucionado
+Today: Esta todo deployado, hay que esperar a que prueben
+Blockers?
+
+14completeVer bug de billing service
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Se deployó billing y se rompió lo de las reversas
+Today: Tratando de solucionar eso, y aun queda pendiente de subirse a staging la provide epos.
+Blockers? El error de billing es mini blocker
+
+13incompleteVer bug de billing service
+
+Yesterday: Viernes terminó la tarea y quedó mergeada.
+Today: Resta deployar lo de epos. Están viendo ese tema del deploy. Hay un problema con los pagos después de deployar billing. Investigando ese error.
+Blockers? El error de billing es mini blocker
+
+Yesterday: Viendo la rama provide. Para staging. Armó el provide.
+Today: Bruno va a estar ayudando con el tema de SQL.
+Blockers? No.
+
+12incomplete
+
+Yesterday: Avanzando con el ticket que tomó.
+Today: Va a seguir con ese ticket, va a quedar listo entre hoy y mañana.
+Blockers? No.
+
+Yesterday:
+Today:
+Blockers? No.
+
+Yesterday: Revisando lo que está en staging.
+Today: Le va a escribir a Ariel para ver si lo puede subir.
+Blockers? No.
+
+11incomplete
+
+Yesterday: Sin updates
+Today: Esta full con Ruby.
+Blockers? No.
+
+Yesterday: Actualizando las ramas y dejando las PRs.
+Today: Armar una provide para subir a staging.
+Blockers? No.
+
+10incompleteQueda la tarea de Nacho que se va a terminar hoy.
+
+Yesterday: -
+Today: Sin mucho update. Estuvo mergeando los PRs de billing y vportal.
+Blockers? No.
+
+Yesterday: -
+Today: Falta el último ticket y el que tiene Nacho. Falta lo de external-service
+Blockers? No.
+
+9incomplete
+
+Yesterday: -
+Today: Sin mucho update. Enfocado en Ruby.
+Blockers? No.
+
+Yesterday: Terminando agregar los campos y probando eso. Se estan mandando.
+Today: Corregir tests, agregar algunos extras, para que quede ahí testeado. Va a meter sync con Nacho para tomar el ticket restante.
+Blockers? No.
+
+8incomplete
+
+Yesterday: No hay mucho update.
+Today: Buscar approves y va apushear los cambios.
+Blockers? No.
+
+Yesterday: Terminando la parte de billing. Corrigió los test de los cambios. Falta subirlo a staging y probarlo ahí.
+Today: Arranco la parte de epos de cashouts.
+Blockers? No.
+
+7incomplete
+
+Yesterday: Trato de mergear cosas pendientes. Esta medio bloqueado.
+Today: Necesita unos permisos para borrar unos commits, de parte de Pablito y Nacho.
+Blockers? No.
+
+Yesterday: Ya tendría terminado la parte de billing pero aún no se pudo probar.
+Today: Hoy no estuvo la VPN, está terminado pero sin probar. Dejar asi billing y arrancar con epos.
+Blockers? No.
+
+6incomplete
+
+Yesterday: Estuvo actualización de Ruby.
+Today: Hoy va a dejar billing y bportal mergeado en develop.
+Blockers? No.
+
+Yesterday: Uniformed payment ya estaria.
+Today: Está con la otra parte de billing a ver si se termina hoy.
+Blockers? No.
+
+5completeCoordinar reunión con Ariel para el martes y Sprint review con cliente el viernes (Seba)
+
+Yesterday: Revisando el flujo de los pagos para ir avanzando.
+Today: Cerrando billing y bportal.
+Blockers? No.
+
+Yesterday: Repasando el flujo, hay dos partes de lo que son los pagos.
+Today: Agregando datos en el pago uninformed, estuvo agregando eso.
+Blockers? No.
+
+4completeCoordinar reunión con Ariel para el martes y Sprint review con cliente el viernes (Seba)
+
+Yesterday: Pendiente de solucionar los comentarios en la PR.
+Today: Si hoy eso no sale, sale mañana temprano.
+Blockers?
+
+Yesterday: Está todo el set up de billing, estuvo agregando los datos y haciendo pruebas.
+Today: Termina el ticket de extracciones y retoma tareas de Datos.
+Blockers? No.
+
+3incompleteCoordinar reunión con Ariel para el martes y Sprint review con cliente el viernes (Seba)
+
+Yesterday: Dejo listo la actualización de vportal
+Today: Revisando ese commit y mergeando vportal y billing a develop.
+Blockers? No.
+
+Yesterday:
+Today: Levantando billing y no se pudo avanzar mucho. Avanzando con v portal.
+Blockers? No.
+
+2incomplete
+
+Today: Hoy está terminando lo de vportal. Asi avanza Bruno.
+
+Yesterday: Jueves fue el contexto de la iniciativa.
+Today: Tratando de levantar el ambiente local.
+Blockers? No.
+
+1incomplete

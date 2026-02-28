@@ -1,0 +1,64 @@
+TITLE: PIX - Tareas Mayo y Futuro
+DOMAIN: General
+PRIORITY: Media
+ID: 3085828120
+SOURCE: 3085828120__PIX_-_Tareas_Mayo_y_Futuro.json
+
+---
+
+En este documento están listadas las horas trabajadas en Mayo hasta la fecha, con un total de 184 horas.
+A esto, hay que sumarle el trabajo de la fechahasta la salida en producciónde:
+
+Horas totales trabajadas en Mayo hasta la fecha
+
+184 horas
+
+Tarea
+
+PRYPIX-150Agregar status a los vouchers. Consultar traducciones. Agregar hover en el reporte de ventas con el status detallado.
+
+PRYPIX-152Los saldos insuficientes están Hardcodeados
+
+PRYPIX-153Al apretar el boton de crear QR los campos CPF y monto cambian su formato para poder enviar los valores bien formateados al portal. Ver si hay manera de evitar ese cambio en la vista pero manteniendo bien el formato y los valores que se envían al portal.
+
+PRYPIX-154Si la primera creación de QR falla, la segunda multiplica el monto x10
+
+PRYPIX-155[Portal de Comercios] Manejo de administración de usuarios en commerce suite
+
+PRYPIX-156Agregar timer para la expiración del QR
+
+PRYPIX-157[Vouchers] Error 404 al acceder a los Vouchers. Revisar permisos.
+
+PRYPIX-158Manejo de multiples webhooks por QR
+
+PRYPIX-159Agregar status a los vouchers. Consultar traducciones. Agregar hover en el reporte de ventas con el status detallado.
+
+PRYPIX-160Agregar monto sumarizado en el reporte de ventas.
+
+PRYPIX-163[Frontend] - Filtro Fecha
+
+PRYPIX-175Usuarios con rol cajero pueden ver todos los pagos de un comercio al acceder a /pix/sales.
+
+PRYPIX-179[RPG] No están llegando el valor de los montos a registrarse en el RPG. Llegan con valor 0
+
+PRYPIX-181[Backend] - Filtros
+
+PRYPIX-183[Frontend] - Mejora en el placeholder email
+
+Horas restantes por trabajar
+
+40 horas de desarrollopor semanahasta la salida en producción
+
+Tareas
+
+Soporte
+
+Mejoras
+
+Bugfixing
+
+Pruebas con Rendimento
+
+Puesta y deploy a Producción
+
+Pruebas QA (tickets, bug fixes, exploratory)

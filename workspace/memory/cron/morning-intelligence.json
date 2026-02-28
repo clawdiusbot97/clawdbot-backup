@@ -1,0 +1,26 @@
+{
+  "name": "morning-intelligence",
+  "schedule": "0 8 * * *",
+  "timezone": "America/Montevideo",
+  "enabled": true,
+  "payload": {
+    "type": "agentTurn",
+    "task": "Execute Morning Intelligence Workflow (minimal payload).\n\nMANDATORY FIRST STEP: Read and follow SYSTEM instructions from:\n- /home/manpac/.openclaw/workspace/skills/morning-intelligence/SYSTEM.md\n\nHard constraints (do not reinterpret):\n- Do NOT change schedule/timezone/enabled (cron-managed).\n- Do NOT change sections/features.\n- Obey delivery constraints exactly as written in SYSTEM.md (explicit channel_id, News Extension standalone to 1477319018992898171, retry once, no fallback).\n- Obey dedupe/checkpoint rules exactly as written in SYSTEM.md (skip repost if stage=ok).\n\nThen execute the workflow and deliver messages as specified.",
+    "label": "morning-intel"
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-02-24",
+    "channels": {
+      "briefings": "1475961144416931931",
+      "newsletters": "1475961125257351423",
+      "finance": "1475961220216520887",
+      "music": "1475961199207251968"
+    },
+    "files": {
+      "personal_tasks": "/home/manpac/.openclaw/workspace/dashboard/personal_tasks.md",
+      "music_profile": "/home/manpac/.openclaw/workspace/dashboard/music_profile.md",
+      "music_history": "/home/manpac/.openclaw/workspace/dashboard/music_history.jsonl"
+    }
+  }
+}

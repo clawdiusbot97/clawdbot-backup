@@ -1,0 +1,18 @@
+=== read_compact log ===
+Timestamp: 2026-02-22T11:42:11+00:00
+File: /home/manpac/.openclaw/workspace/dashboard/briefing-config.md
+Offset: 1
+Limit: 
+Lines: 9
+Chars: 288
+
+=== OUTPUT ===
+# Morning Briefing Config
+
+- schedule: `0 8 * * *`
+- timezone: `America/Montevideo`
+- target channel: `telegram`
+- telegram target: 2017549847  <!-- e.g., @username or numeric chat id -->
+- enabled: `true`
+
+If `telegram target` is not set, briefing run should log the issue and skip send.

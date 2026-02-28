@@ -1,0 +1,48 @@
+TITLE: Onboarding - General
+DOMAIN: 6) Onboarding
+PRIORITY: Alta
+ID: 2261417989
+SOURCE: 2261417989__Onboarding_-_General.json
+
+---
+
+Contenido
+Módulo 1 - Onboarding Bancard
+Bienvenido/a a Bancard!
+
+Presentación General del Proyecto Bancard
+
+Proceso de Management
+
+Registro de horas en Kubrick
+
+Módulo 2 - Proceso de Desarrollo
+Proceso de Desarrollo
+
+Hosts Configuration
+
+WARP VPN Configuration
+
+Git Branching
+
+Configuración de Reminders en GitHub
+
+Guía de Acceso a Sentry
+
+Projects Setup
+
+Stack Overflow Guideline
+
+Módulo 3 - Guía de Proyectos
+Guía de Proyectos
+
+Servicios de Bancard
+
+Portales de Bancard
+
+Ambientes en Bancard
+
+Módulo 4 - Ejercicio Práctico
+Ejercicio Práctico: Añadir Promociones a Links de Pago
+
+Primer Paso→Bienvenido/a a Bancard!

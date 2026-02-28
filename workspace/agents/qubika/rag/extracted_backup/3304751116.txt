@@ -1,0 +1,165 @@
+TITLE: Iniciando un nuevo proyecto Angus
+DOMAIN: General
+PRIORITY: Media
+ID: 3304751116
+SOURCE: 3304751116__Iniciando_un_nuevo_proyecto_Angus.json
+
+---
+
+Requisitos:
+Ruby >= 3.1
+
+MySQL Client (Descargaraquipara macOS)
+
+Docker Desktop (Descargaraqui)
+
+Permiso de lectura en los repositorios de Bancard
+
+Clave ssh (ed25519) registrada en GitHub
+
+Creación del Repositorio en Git Hub:
+Crear un nuevo repositorio en la organizaciónbancardsa.
+
+Deja el repositorio vacío, no uses ninguna plantilla.
+
+Configura las reglas del repositorio de la siguiente manera (Settings/Rulesets → Branch Rules):
+Main:
+Target branch es simplemente 'main'
+
+Tildar 'Restrict Deletions'
+
+Tildar 'Require a pull request before merging' con las opciones:
+2RequiredApprovals
+
+Dismiss stale pull request approvals when new commits are pushed
+
+Require approval of the most recent reviewable push
+
+Require conversation resolution before merging
+
+Tildar 'Block Force Pushes'
+
+Más tarde volveremos para completar las reglas, una vez corramos las GH actions por primera vez
+
+Develop:
+Target branch es simplemente 'develop'
+
+Se repiten todas las reglas de master
+
+Ramas Feature:
+Target branch serán todas aquellas de la forma 'feature/*'
+
+Se repiten todas las reglas de master y develop
+
+Configurar las reglas generales (Settings/General)
+La rama base debe ser develop
+
+En Pull Requests habilitar la opción 'Automatically delete head branches'
+
+Creación del proyecto - Angus:
+En tu propio sistema corre el comandogem install angus
+
+En el directorio donde quieras tu nuevo proyecto corre el comandoangus new my_app
+
+Distinto de Rails, las apps de Angus no se inicializan como repositorios de git
+Corre el comandogit initen la carpeta del proyecto
+
+Corregit remote add my_github_repository
+
+El contenido disponible ahora mismo será la base del resto del proyecto. Puedes crear las ramasmain,developy la primera ramafeature/project-setup, y pushear las referencias a tu repositorio.
+
+Todas las PRs del proceso de setup deben hacerse hacia project-setup
+
+Adicionalmente deja preparado tuconfig.rude la siguiente manera
+
+Agregaremos al gemfile las siguientes gemas para utilizar las versiones correspondientes de las mismas:
+
+Para MySQL es importante tener en cuenta que, en los ambientes de Bancard, usamos JRuby y será necesario diferenciar qué gema va a gestionar la comunicación con la DB
+Notar que la versión deactive-recorddebe coincidir con la deactiverecord-jdbmysql-adapter
+Copia los archivos de configuración pertinentes para tu proyecto. Puedes usar de ejemplo los servicios ya vigentes:
+Todos los archivos irán a la carpetaconfig
+
+puma.rb - inicialización de Puma. En este archivo definirás también el puerto por el que saldrá la app
+
+service_configuration.yml alojará configuraciones varias para el proyecto. Puedes comenzar con lo requerido para Sentry y Baas
+
+services.yml Aloja las direcciones de los servicios del ecosistema bancard con las claves que identifican a tu proyecto. Por el momento puedes rellenar con la configuración a continuación.
+En el futuro tendrás que reemplazar las claves pública y privada por unas que representen tu proyecto en específico.
+
+logger.yml Define los distintos loggers que ayudarán a monitorear el comportamiento de la app
+
+database.yml define la conexión a la base de datos de tu servicio
+
+Analiza qué otros archivos vas a requerir para tu proyecto en específico
+
+Vamos a agregar también un inicializador para nuestro I18n:
+
+En el Gemfile agrega la gemai18ny correbundle install, luego agrega el archivo:
+config/initializers/i18n.rb
+Y finalmente agregamos el primer locale:
+config/locales/es.yml
+Como último paso agregaremos el lector de configuraciones para poder utilizar lo que coloquemos enservice_configuration.ymldesde dentro de la app.
+
+Instala la gemayewpara lectura de archivos yml
+Luego crea el siguiente archivo
+config/initializers/configuration.yml
+Creación del proyecto - Primer Endpoint:
+Si bien Angus tiene una funcionalidad de Scaffold para fabricar endpoints completos, es recomendable fabricarlos a mano siguiendoesta guía.
+Corre el comandoangus servery desde Postman intenta alcanzar el endpoint de documentación y tu nuevo servicio.
+Doc:localhost:XXXX/my_app/doc/0.1
+Creación del proyecto - Dockerización:
+A partir de este punto se requiere tener instalado docker y docker-compose, o Docker Desktop que incluye ambos.
+docker-compose.yml:
+
+Define los contenedores, sus versiones y cómo interactúan entre si. Recuerda definir en el service qué puerto vas a utilizar, en la propiedadcommand.
+Dependiendo de los requisitos de tu proyecto puede que necesites un contenedor de sidekiq.
+Dockerfile:
+
+Para todos los servicios utilizamos jruby en los servidores on premise de Bancard. Si actualizas la versión de Ruby más allá del 3.1 es imperativo revisar qué version de jruby le corresponde y actualizarla
+local-entrypoint.sh
+
+Es el entrypoint que utilizaremos para levantar el contenedor 'service'
+wait-for-it.sh:
+
+Este archivo es una rutina que permite al contenedor de la DB inicializarse por completo antes de enviarle una primera conexión
+En principio con estos 4 archivos ya sería suficiente para levantar el proyecto completo, pero para ahorrarnos el manejo directo de nuestros contenedores el tech core preparó una serie de scripts que hacen casi todo por nosotros.
+bin/run
+
+Inicializa todos los contenedores, con todas las variables y reemplaza todos los archivos que se van a requerir.
+--pruneborrará los archivos de configuración viejos para reemplazarlos por el .sample más reciente
+--prune-forceademás limpiará los archivos de redis y mysql
+bin/destroy
+
+Da de baja los contenedores vigentes del proyecto
+--db remueve la data de mysql
+--redis remueve la data de redis
+-a/--all remueve ambas
+bin/restart
+
+Reinicia el entorno vigente y todos sus contenedores con configuraciones idéntivas
+bin/terminal
+
+Da acceso a la terminal deservice
+A estas alturas el objetivo es que bin/run levante todos los contenedores y, acorde al puerto que hayas definido en tus configuraciones, puedas hacer un llamado al primer endpoint que configuraste en el paso anterior.
+Configuración de Middlewares:
+Sentry:
+Para comunicarnos con sentry utilizaremos la gema 'sentry-ruby'. Agrega la siguiente línea al Gemfile y correbundle install
+Corre bundle install.
+
+Luego debes ir a Sentry, crear el nuevo proyecto y tomar de las instrucciones de set-up la IP correspondiente al monitor de este proyecto. Luego agrégala en el archivo service_configuration.yml
+Es recomendable tener la opción ‘enable' en ‘false’ durante el desarrollo, para no interactuar innecesariamente con el servidor, pero en este caso la dejaremos en 'true’ para verificar su correcto funcionamiento.
+Modifica el archivoservices/my_app.rb
+Nota la invocación deBancard::Loggerses nueva y no tenemos listo el código necesario para que funcione.
+Para ello deberemos incluir la gemasentry-rubypara poder utilizar Sentry, y la gemabancard-loggerspara gestionar el Logger.
+
+Actualiza el Gemfile y correbundle install
+ruby
+Y finalmente agregamos los require al pie del archivoservices/my_app.rb
+Baas:
+Para poder utilizar bancard-baas, necesitaremos requerir más piezas del ecosistema Bancard:
+Agregar al Gemfile:
+Y agregamos el middleware de Baas a nuestra aplicación:
+Enbypassed_pathsde deben listar todos los endpoints que se considera que no necesitan ser autenticados por Baas.
+En este paso además debemos crear nuevas credenciales que identifiquen a nuestro proyecto.
+Utilizar el endpoint de Authhttps://10.100.14.73:4480/auth/api/0.2/application_credentialspara crear las application_credentials. Anotarlas y reemplazar las public y private keys en todos los servicios listados enservices.ymlque las necesiten.
+– WIP --

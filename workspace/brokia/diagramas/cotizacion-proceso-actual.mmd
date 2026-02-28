@@ -1,0 +1,55 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'primaryTextColor': '#cc0000', 'primaryBorderColor': '#cc0000', 'lineColor': '#666666', 'secondaryColor': '#ccffcc', 'tertiaryColor': '#ccccff'}}}%%
+flowchart TB
+    subgraph CLIENT["CLIENTE"]
+        C1["📱 Contacta por WhatsApp/Llamada"]
+        C2["📋 Recibe tabla comparativa"]
+        C3["💬 Discute opciones"]
+        C4["✅ Confirma selección"]
+    end
+    
+    subgraph BROKER["BROKER (Brokia)"]
+        B1["📝 Recopila datos del vehículo"]
+        B2{"¿ID requerido?"}
+        B3["💻 Ingresa a portal de aseguradora"]
+        B4["⏱️ Ingresa datos manualmente (7x)"]
+        B5["📊 Registra precios en Excel/Sheets"]
+        B6["📋 Construye tabla comparativa"]
+        B7["📤 Envía tabla por WhatsApp"]
+    end
+    
+    subgraph SYSTEMS["SISTEMAS"]
+        S1["🌐 Portal Aseguradora 1"]
+        S2["🌐 Portal Aseguradora 2"]
+        S3["🌐 ...Portal Aseguradora 7"]
+        S4["📄 Excel/Google Sheets"]
+        S5["💬 WhatsApp"]
+    end
+
+    %% Flow connections
+    C1 --> B1
+    B1 --> B2
+    B2 -- "Sí" --> B3
+    B2 -- "No" --> B3
+    B3 --> B4
+    B4 --> B5
+    B5 --> S4
+    B5 --> S1
+    B5 --> S2
+    B5 --> S3
+    
+    %% Multiple insurers loop representation
+    B4 ==手动重复7次==> S1
+    B4 ==手动重复7次==> S2
+    B4 ==手动重复7次==> S3
+    
+    B6 --> B7
+    B7 --> C2
+    C2 --> C3
+    C3 --> C4
+
+    %% Styling for pain points
+    style B1 fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+    style B4 fill:#ffcccc,stroke:#dc3545,stroke-width:3px
+    style B5 fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+    style B6 fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+    style C3 stroke:#666666,stroke-dasharray:5 5

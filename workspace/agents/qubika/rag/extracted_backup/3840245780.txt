@@ -1,0 +1,109 @@
+TITLE: Solución al NO cambio de hora
+DOMAIN: General
+PRIORITY: Media
+ID: 3840245780
+SOURCE: 3840245780__Solucio╠ün_al_NO_cambio_de_hora.json
+
+---
+
+Proyecto
+
+Status
+
+bancard-auth-portal
+
+en develop
+
+bancard-auth-service
+
+en develop
+
+bancard-billing-service-public-proxy
+
+en develop
+
+bancard-billing-service
+
+en develop
+
+bancard-bportal
+
+bancard-commerce-service
+
+en develop
+
+bancard-commerce-suite
+
+en develop
+
+bancard-commerces-app-service
+
+en develop
+
+bancard-epos-service
+
+en develop
+
+bancard-epos-service-public-proxy
+
+en develop
+
+bancard-external-commerce-service
+
+en develop
+
+bancard-infonet-cobranzas-app-service
+
+en develop
+
+bancard-invoices-portal
+
+en develop
+
+bancard-invoices-service
+
+en develop
+
+bancard-mpos-service
+
+en develop
+
+bancard-payment-link-portal
+
+en develop
+
+bancard-payment-link-service
+
+en develop
+
+bancard-pix-portal
+
+en develop
+
+bancard-pix-service
+
+en develop
+
+bancard-reversal-service
+
+en develop
+
+bancard-s4-service
+
+bancard-selling-portal
+
+bancard-selling-service
+
+en develop
+
+bancard-tpago-portal
+
+en develop
+
+bancard-vpos-portal
+
+en develop
+
+bancard-vpos-service
+
+en develop

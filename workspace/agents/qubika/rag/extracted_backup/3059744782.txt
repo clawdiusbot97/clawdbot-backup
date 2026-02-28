@@ -1,0 +1,42 @@
+TITLE: Caché en VisaQR - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3059744782
+SOURCE: 3059744782__Cache╠ü_en_VisaQR_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Responsable:/ 6h por día
+Fecha de Inicio:
+Fecha de Fin:
+Tarea
+
+Estimación (hs)
+
+Analizar que volumen de datos tenemos hoy en día
+
+4
+
+Agregar valores al caché de commerce-branches
+
+2
+
+Hacer que la operación get_merchant use Dory
+
+2
+
+Consultar si la operación get_merchant usa el caché, y sino hacer la llamada a commerce
+
+4
+
+Hacer endpoint en commerce-service para devolver listado de merchants
+
+8
+
+Hacer precarga de merchants en selling-service
+
+8
+
+Total
+
+28h

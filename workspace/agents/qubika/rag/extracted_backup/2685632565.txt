@@ -1,0 +1,41 @@
+TITLE: SPI - Team Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2685632565
+SOURCE: 2685632565__SPI_-_Team_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+/date
+
+@lorem
+
+Yesterday:
+Today:
+Blockers?
+
+2incomplete
+
+@ipsum
+
+Yesterday:
+Today:
+Blockers?
+
+3incomplete
+
+@dolor
+
+Yesterday:
+Today:
+Blockers?
+
+4incomplete

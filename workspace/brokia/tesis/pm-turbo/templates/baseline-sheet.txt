@@ -1,0 +1,73 @@
+# TEMPLATE GOOGLE SHEET - Baseline Juan Manuel
+
+## Instrucciones de uso
+1. Crear Google Sheet nuevo
+2. Copiar estas columnas
+3. Compartir con juanmanuel@[PLACEHOLDER]
+4. Enviar mensaje: "Link a la planilla: [URL] - Completar fila por cada cotización"
+
+---
+
+## Estructura de columnas
+
+| Columna | Nombre | Tipo | Descripción | Ejemplo |
+|---------|--------|------|-------------|---------|
+| A | Fecha | Fecha | DD/MM/AAAA | 26/02/2025 |
+| B | Hora inicio | Hora | HH:MM cuando cliente pide cotización | 09:15 |
+| C | Cliente tipo | Texto | Nuevo / Renovación / Endoso | Nuevo |
+| D | Tipo seguro | Texto | Auto / Hogar / Vida / Otro | Auto |
+| E | Aseguradora 1 | Texto | Nombre primera aseguradora | Sura |
+| F | Aseguradora 2 | Texto | Nombre segunda (si aplica) | Mapfre |
+| G | Aseguradora 3 | Texto | Nombre tercera (si aplica) | (vacío) |
+| H | Total aseguradoras | Número | Cuántas contactaste | 2 |
+| I | Hora fin | Hora | HH:MM cuando enviaste opciones al cliente | 10:30 |
+| J | Minutos totales | Número | Calculado: I - B | 75 |
+| K | Minutos por aseguradora | Número | J / H | 37.5 |
+| L | Cotización cerrada | Sí/No | ¿El cliente contrató? | Sí |
+| L | Observaciones | Texto | Frustraciones, interrupciones, etc. | "Tarde 20 min en conseguir datos del cliente" |
+
+---
+
+## Reglas de llenado (2 líneas)
+
+1. **Una fila = Una cotización** (un cliente, un pedido, un resultado)
+2. **Cronómetro real:** Mirá el reloj cuando el cliente te pide y cuando le enviás opciones; escribí esas horas exactas
+
+---
+
+## Fórmulas de Google Sheets (copiar y pegar)
+
+- **Columna J (Minutos totales):** `=IF(AND(B2<>"",I2<>""), (I2-B2)*1440, "")`
+- **Columna K (Minutos por aseguradora):** `=IF(AND(J2<>"",H2>0), J2/H2, "")`
+
+Nota: Formato de hora debe ser HH:MM
+
+---
+
+## Ejemplo de filas completadas
+
+| Fecha | Hora inicio | Cliente tipo | Tipo seguro | Aseguradora 1 | Aseguradora 2 | Aseguradora 3 | Total | Hora fin | Min totales | Min/aseg | Cerró? | Observaciones |
+|-------|-------------|--------------|-------------|---------------|---------------|---------------|-------|----------|-------------|----------|--------|---------------|
+| 26/02/2025 | 09:15 | Nuevo | Auto | Sura | Mapfre | - | 2 | 10:05 | 50 | 25 | Sí | Cliente tenía todos los datos listos |
+| 26/02/2025 | 11:00 | Renovación | Auto | Sura | - | - | 1 | 11:35 | 35 | 35 | No | Demoré en conseguir la factura del auto |
+| 26/02/2025 | 14:20 | Nuevo | Auto | Sura | Mapfre | Portelo | 3 | 15:50 | 90 | 30 | Pendiente | El cliente quería comparar 3 opciones |
+
+---
+
+## Link a template pre-armado (opcional)
+
+Si querés usar un Sheet ya armado:
+1. Crear sheet con esta estructura
+2. File → Share → Get link → Anyone with link can edit
+3. Pegar link aquí: [PLACEHOLDER: URL DEL SHEET]
+
+---
+
+## Checklist para Juan Manuel
+
+Al final del día de baseline, verificá:
+- [ ] Completé al menos 8-10 filas
+- [ ] Todas las filas tienen Hora inicio y Hora fin
+- [ ] Anoté observaciones en las que me frustro
+- [ ] El sheet tiene permisos para verlo desde otra cuenta
+- [ ] Avisé a Manuel por WhatsApp que terminé

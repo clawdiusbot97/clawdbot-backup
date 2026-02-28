@@ -1,0 +1,12 @@
+TITLE: Facturación Electrónica - Desglose de tareas
+DOMAIN: General
+PRIORITY: Media
+ID: 3066495017
+SOURCE: 3066495017__Facturacio╠ün_Electro╠ünica_-_Desglose_de_tareas.json
+
+---
+
+:info:atlassian-info#DEEBFFDesglose de tareas para facturación electrónica. La idea de este documento es analizar bien cada pantalla con sus tareas correspondientes y los posibles riesgos que estas pueden llegar a tener, para poder desde el momento cero, mitigar o contemplar cualquier inconveniente que pueda atrasarnos en el desarrollo de dicha iniciativa
+Selección de producto: Esta vista es donde el usuario va a seleccionar el producto a contratar. En este caso, el de Facturación Electrónica.
+
+Habilitar el cobro con tarjetas:

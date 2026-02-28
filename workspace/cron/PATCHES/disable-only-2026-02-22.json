@@ -1,0 +1,50 @@
+[
+  {
+    "id": "d4e94385-56b9-4879-90e2-3c12b56ab9ac",
+    "name": "healthcheck:security-audit",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "a0b97d5d-aeb3-4f9a-a48f-f6db38c642df",
+    "name": "healthcheck:update-status",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "59355241-f710-4002-b044-c6a5ac7d3351",
+    "name": "llm-budget-guardian",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "b625c33f-a9e5-46c2-92b6-946b5ccc8dc2",
+    "name": "daily-morning-briefing",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "f7ba2a8c-6339-4041-bac9-7e29f3f92383",
+    "name": "daily-research-scout",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "60d2b522-1e7c-45de-a74c-090afc6a78be",
+    "name": "weekly-newsletter-metrics",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "2888925e-a492-481e-bedb-db9fd615e403",
+    "name": "itau-daily-spend-analysis",
+    "action": "disable",
+    "enabled": false
+  },
+  {
+    "id": "db0fe015-9d14-4522-acf2-8775a2b4b97e",
+    "name": "Morning Twitter Briefing",
+    "action": "disable",
+    "enabled": false
+  }
+]

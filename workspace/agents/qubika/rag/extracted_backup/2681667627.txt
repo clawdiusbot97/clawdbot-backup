@@ -1,0 +1,60 @@
+TITLE: Template Iniciativa - Kick Off
+DOMAIN: General
+PRIORITY: Media
+ID: 2681667627
+SOURCE: 2681667627__Template_Iniciativa_-_Kick_Off.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+Slack Channel
+
+M. Teams Channel
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Minutes
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+Minutes
+
+Owner
+
+Client Demo
+
+Cadence
+
+Minutes
+
+Owner

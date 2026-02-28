@@ -1,0 +1,180 @@
+TITLE: Definiciones de funcionalidades de suscripción - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2903343117
+SOURCE: 2903343117__Definiciones_de_funcionalidades_de_suscripcio╠ün_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Estas son las estimaciones para las nuevas funcionalidades de Pagos Manuales, Actualización de Suscripciones y Borrado de Suscripciones.
+Funcionalidad
+
+Tarea
+
+Estimación (hs)
+
+Estimación (días)
+
+Servicio / Portal
+
+Pagos Manuales
+
+Crear el endpoint para crear Pagos Adelantados
+Crea un nuevo registro en la tabla de pagos con el nuevo estado “Adelanto de Pago“.
+
+Debe actualizar la última fecha de pago
+
+No debe de pasar por el proceso de cobro.
+
+36
+
+6
+
+payment-link-service
+
+Modificar la tabla de susbcriber_pauses para indicar que una pausa es por pagos adelantados
+
+12
+
+2
+
+payment-link-service
+
+Modificar el endpoint updateSuscriber para enviar si la pausa es por adelanto de pago o no.
+
+18
+
+3
+
+payment-link-service
+
+No debe de mostrar como pausado al suscriptor
+No se debería mostrar como pausado pero si buscar una forma de identificar si el pago fue adelantado para no confundir al usuario (ver con Carlos)
+
+24
+
+4
+
+payment-link-portal
+
+Habilitar funcionalidad para portal y API.
+Crear endpoint en external-commerce-service para adelantar el pago y pausar el suscriptor
+
+18
+
+3
+
+external-commerce-service
+
+Registrar el pago manual en audit.
+
+ver con jhona
+
+ver con jhona
+
+audit-service
+
+Agregar botón y modal para crear adelanto de pago
+
+12
+
+2
+
+payment-link-portal
+
+Actualización de Suscripciones
+
+Modificar el endpoint para que permita actualizar el campo descripción y fecha de fin de cobro
+Utilizar el mismo servicio de actualización de monto.
+
+Solo se van a editar los campos que tengan info, los que se dejen en blanco no deben modificarse
+
+24
+
+3
+
+payment-link-service
+
+Modificar el endpoint en external-commerce-service que permita actualizar el campo descripción y fecha de fin de cobro
+
+24
+
+3
+
+external-commerce-service
+
+Agregar opción para editar la suscripción en payment-link-portal.
+Agregar el lápiz para el edit
+
+La edición de los campos va a ser inline (no vamos a abrir un modal)
+
+40
+
+5
+
+payment-link-portal
+
+Registrar la actualización en audit.
+
+ver con jhona
+
+ver con jhona
+
+audit-service
+
+Borrado de Suscripciones
+
+Modificar el endpoint de actualizar suscriptor para deshabilitarlo.
+
+8
+
+1
+
+payment-link-service
+
+Al momento de darse de alta, reactivar el mismo suscriptor.
+Investigar como se vincula la suscripción con el usuario para dar de alta esa suscripción
+
+Si el usuario se da de alta con otra tarjeta, hay que actualizar el user_card_id
+
+24
+
+3
+
+Registrar la actualización en audit.
+
+ver con jhona
+
+ver con jhona
+
+audit-service
+
+Total Desarrollo
+
+360
+
+45
+
+QA y Bug Fixing 20%
+
+72
+
+9
+
+Total
+
+432hs
+
+54d
+
+Management 15% (para facturación)
+
+64
+
+8
+
+Total Desarrollo + Management (para facturación, no afecta fecha de entrega)
+
+496hs
+
+62d

@@ -1,0 +1,69 @@
+{
+  "date": "2026-02-28",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "U.S. + Israel launch major strikes on Iran; Iran retaliates across region",
+        "source": "Reuters (+ AP live)",
+        "url": "https://www.reuters.com/world/iran-crisis-live-explosions-tehran-israel-announces-strike-2026-02-28/",
+        "backup_url": "https://apnews.com/live/live-updates-israel-iran-february-28-2026"
+      },
+      {
+        "category": "Markets",
+        "title": "Iran war throws oil market into biggest crisis in decades",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/markets/commodities/iran-war-throws-oil-market-into-biggest-crisis-decades-2026-02-28/"
+      },
+      {
+        "category": "Markets",
+        "title": "OPEC+ may consider larger oil output boost after Iran strike",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/energy/opec-may-consider-larger-oil-output-boost-sources-say-after-iran-strike-2026-02-28/"
+      },
+      {
+        "category": "Policy",
+        "title": "EU says member states may use existing funds for abortion travel",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/video/world-news/"
+      },
+      {
+        "category": "Disaster",
+        "title": "Floods in Evros River basin damage over 60,000 ha of farmland",
+        "source": "The Watchers",
+        "url": "https://watchers.news/2026/02/28/floods-evros-river-basin-damage-60-000-ha-150-000-acres-farmland-greece-february-2026/"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Gobierno anunció nuevas medidas económicas: congela supergás y focaliza descuento del IVA",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/Gobierno-anuncio-nuevas-medidas-economicas-congela-supergas-y-focaliza-descuento-del-IVA-uc821983"
+      },
+      {
+        "title": "Ministerio de Economía anuncia cumplimiento de metas fiscales 2025 y ratifica objetivos 2026",
+        "source": "Búsqueda",
+        "url": "https://www.busqueda.com.uy/economia/ministerio-economia-anuncia-cumplimiento-metas-fiscales-2025-y-ratifica-objetivos-2026-n5410752"
+      },
+      {
+        "title": "Uruguay recorta las tasas en 100pb hasta el 6,5%",
+        "source": "Central Banking",
+        "url": "https://www.centralbanking.com/es-la/bancos-centrales/politica-monetaria/decisiones-de-politica-monetaria/7974887/uruguay-recorta-las-tasas-en-100pb-hasta-el-65"
+      },
+      {
+        "title": "Uruguay celebra la aplicación del acuerdo UE-Mercosur",
+        "source": "Yahoo Noticias",
+        "url": "https://es-us.noticias.yahoo.com/uruguay-celebra-aplicaci%C3%B3n-acuerdo-ue-234056489.html"
+      },
+      {
+        "title": "Un año de Gobierno de Yamandú Orsi: balance y desafíos",
+        "source": "SWI swissinfo",
+        "url": "https://www.swissinfo.ch/spa/un-a%C3%B1o-de-gobierno-de-yamand%C3%BA-orsi%3A-entre-la-incertidumbre-global-y-la-b%C3%BAsqueda-de-balance/91015041"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 11,
+  "generated_at": "2026-02-28T17:57:00Z"
+}

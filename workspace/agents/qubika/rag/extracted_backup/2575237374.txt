@@ -1,0 +1,61 @@
+TITLE: Estimación de tareas
+DOMAIN: General
+PRIORITY: Media
+ID: 2575237374
+SOURCE: 2575237374__Estimacio╠ün_de_tareas.json
+
+---
+
+A continuación se presenta una lista de los diferentes valores de puntos que los equipos utilizarán para estimar el esfuerzo y, junto a cada uno de ellos, una descripción de lo que se necesitaría para lograr una tarea asignada a ese valor:
+
+1 Story point- Atomic modification that involves changing a line of code. Examples are:
+Modify a label text
+
+Modify a variable or constant
+
+Some small code refactor (or code improvement)
+
+2 Story points- Simple UI modification that doesn’t involve or affect existing UI tests. Examples are:
+Change a button style
+
+Change a small UI component style
+
+Simple code modification that doesn’t involve (or involves minor modifications on)  existing Unit/UI tests.
+
+3 Story points- Small UI modifications that involve or affect existing UI tests. Examples are:
+Change a screen layout distribution that affects UI Tests
+
+Add or delete information displayed in a UI component
+
+Create an empty state
+
+Small code modification that involves existing unit tests. Examples are:
+Modify a business entity such as adding a new field for supporting simple behavior
+
+Add or modify business rules or plain implementations which wrap simple behavior
+
+5 Story points- Generate a new UI component that involves creating UI tests, and displaying data that is already in the app (easy access), this can involve app multi-stack communication.
+Write code to retrieve data such as a DataManager, Service (network interaction)
+
+8 Story points- Complex business logic and transaction support which could include data retrieving from network or external services, DB operations/modifications under complex logic conditions, queries, or general strategies. It may also include the consideration of edgy cases, the creation of unit tests, and handling different app states.
+
+13 Story points- Extremely complicated task to be addressed as an individual. Must be divided. In general, it can involve multiple layers:
+Database interaction
+
+Network interaction
+
+External services interaction and/or integration
+
+UI/UX and/or Unit tests
+
+Complicated data validations
+
+Complicated algorithms
+
+Complicated business rules
+
+Services design and scaffolding
+
+Strong UI/UX design guidelines
+
+Extensive documentation consumption or production

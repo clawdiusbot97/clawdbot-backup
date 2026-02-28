@@ -1,0 +1,47 @@
+TITLE: QBK-107 - Agregar el dato del track2 en la confirmación de qr de hst
+DOMAIN: General
+PRIORITY: Media
+ID: 3348365333
+SOURCE: 3348365333__QBK-107_-_Agregar_el_dato_del_track2_en_la_confirmacio╠ün_de_qr_de_hst.json
+
+---
+
+La tarea consiste en agregar un nuevo requerimiento para procesar un campo adicional de forma opcional llamadotrack2en la confirmación de un código QR de HST. Eltrack2estará anidado dentro del campoencToken, que ya está siendo recibido encriptado en el campoencryptedDatadel JSON.
+
+Desglose de la tarea:
+Datos actuales recibidos:
+El campoencTokenya contiene la siguiente información:
+algorithm: Algoritmo de encriptación usado, en este casoaes-gcm256.
+
+iv: Vector de inicialización para la encriptación.
+
+encryptedData: Datos encriptados que contienen la información, incluyendo ahora el nuevo campotrack2.
+
+MACLength: Longitud del código de autenticación de mensaje (MAC).
+
+Nuevo campo:
+El nuevo campo opcionaltrack2se incluirá en los datos encriptados que ya se reciben bajo el campoencryptedData.
+
+El formato del contenido encriptado incluirá:
+token: Un identificador del token.
+
+expirationMonthyexpirationYear: Mes y año de expiración del token.
+
+track2: Información adicional opcional.
+
+JSON actualizado:
+La estructura que ahora contendrá el nuevo campotrack2será similar al siguiente ejemplo:
+
+jsonDentro del campo encriptadoencryptedData, el valor incluirá algo como:
+
+Branch:
+Debes partir de la ramafeature/fix-visa-qr, ya que incluye algunas mejoras relacionadas que pueden ser útiles para esta tarea.
+
+Pasos a seguir:
+Decodificar el campoencryptedDatapara verificar si el campotrack2está presente.
+
+Modificar la lógicaque maneja el campoencTokenpara gestionar el nuevo campotrack2de forma opcional. Es decir, sitrack2está presente, procesarlo, y si no, continuar normalmente.
+
+Actualizar la documentacióny pruebas unitarias para incluir el manejo de este nuevo campo en el flujo de confirmación del QR.
+
+Este ajuste permitirá que, en el futuro, el campotrack2pueda ser procesado cuando sea enviado dentro del token encriptado.

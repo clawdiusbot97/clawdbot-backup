@@ -1,0 +1,23 @@
+# 05 — Sources (evidencia)
+
+## Rutas usadas
+- `/home/manpac/.openclaw/workspace/CHANNELS.md`  
+  Evidencia: canal Slack `brokia-ai-alerts` para alertas Brokia/ORT.
+
+- `/home/manpac/.openclaw/workspace/brokia/documentacion/Bitacora-Clawdbot-Brokia.md`  
+  Evidencia: marco de bitácora académica/operativa y calendario ORT como ancla temporal.
+
+- `/home/manpac/.openclaw/workspace/brokia/documentacion/diario/Bitacora-2026-02-17.md`  
+  Evidencia: referencia explícita a calendarización ORT para hitos académicos.
+
+- `/home/manpac/.openclaw/workspace/brokia/documentacion/diario/Bitacora-2026-02-19.md`  
+  Evidencia: criterio de exclusión de eventos no relevantes para tesis.
+
+- `/home/manpac/.openclaw/workspace/skills/brokia-deadline-alerts/SKILL.md`  
+  Evidencia: patrón T-7, formato de alerta y esquema de checkpoint.
+
+- `/home/manpac/.openclaw/workspace/brokia/tesis/problem-plan-14dias.md`  
+  Evidencia: contexto operativo de la línea de tesis/problema.
+
+## INBOX
+- Adjuntar evidencia oficial (documento académico) con fechas definitivas 2026 cuando esté disponible.
