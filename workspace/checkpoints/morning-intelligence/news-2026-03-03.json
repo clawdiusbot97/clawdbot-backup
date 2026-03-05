@@ -1,0 +1,73 @@
+{
+  "date": "2026-03-03",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Iran conflict disrupts global shipping as tankers are stranded, damaged",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/energy/iran-conflict-disrupts-global-shipping-tankers-are-stranded-damaged-2026-03-02/",
+        "category": "Geopolitics",
+        "date": "2026-03-02"
+      },
+      {
+        "title": "Middle East oil shipping costs surge as US-Iran conflict intensifies",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/middle-east-oil-shipping-costs-surge-all-time-high-us-iran-conflict-intensifies-2026-03-02/",
+        "category": "Markets",
+        "date": "2026-03-02"
+      },
+      {
+        "title": "OPEC debates oil output boost even as US war on Iran disrupts shipments",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/energy/opec-debates-oil-output-boost-us-war-iran-disrupts-shipments-2026-03-01/",
+        "category": "Markets",
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Fed minutes could highlight shift in balance of risks as policymakers put rates on hold",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/fed-minutes-could-highlight-shift-balance-risks-policymakers-put-rates-hold-2026-02-18/",
+        "category": "Policy",
+        "date": "2026-02-18"
+      },
+      {
+        "title": "6.1 magnitude earthquake strikes off Indonesia's Northern Sumatra",
+        "source": "Anadolu Agency",
+        "url": "https://www.aa.com.tr/en/world/61-magnitude-earthquake-strikes-off-indonesia-s-northern-sumatra/3847538",
+        "category": "Disaster",
+        "date": "2026-03-03"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Orsi presenta al Parlamento balance del primer año de gobierno y anuncia proyecto de crear el Ministerio de Justicia",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/orsi-presenta-al-parlamento-balance-del-primer-ano-gobierno-y-anuncia-proyecto-crear-el-ministerio-justicia-n1001229"
+      },
+      {
+        "title": "El dólar subió en Uruguay y se acercó a los $ 39 en una jornada marcada por la incertidumbre global",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/dolar-sube-uruguay-y-se-acerca-los-39-la-incertidumbre-global-n6036056"
+      },
+      {
+        "title": "La economía uruguaya arranca 2026 sin señales claras de repunte según índice CERES",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/economia-y-empresas/la-economia-uruguaya-arranca-2026-senales-claras-repunte-segun-indice-ceres-n6033522"
+      },
+      {
+        "title": "Tiempo fresco de mañana, caluroso de tarde y lluvias aisladas en varias zonas del país",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/tiempo-fresco-manana-caluroso-tarde-y-lluvias-aisladas-varias-zonas-del-pais-n1001327"
+      },
+      {
+        "title": "Lo que se sabe sobre el cierre de la liguilla del carnaval, la noche de fallos y la rueda de triunfadores",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/cultura-y-espectaculos/lo-que-se-sabe-el-cierre-la-liguilla-del-carnaval-la-noche-fallos-y-la-rueda-triunfadores-n6035888"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-03-03T11:00:00Z"
+}

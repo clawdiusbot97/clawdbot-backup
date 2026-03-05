@@ -1,19 +1,15 @@
 'use client';
 
-import { CSS } from '@dnd-kit/utilities';
-import { useDraggable } from '@dnd-kit/core';
 import { WorkItem } from '@/types/workitem';
-import { Card } from '@/components/ui/Card';
-import { cn } from '@/components/ui/cn';
 
 interface WorkItemCardProps {
   item: WorkItem;
   onClick?: (item: WorkItem) => void;
-  canDrag?: boolean;
-  isDragging?: boolean;
+  draggable?: boolean;
+  onDragStart?: (item: WorkItem) => void;
+  onDragEnd?: () => void;
   runState?: { agent: string };
   onBlockedDragAttempt?: (item: WorkItem) => void;
-  displayId?: string;
 }
 
 function formatRelativeTime(dateString: string): string {
@@ -33,48 +29,30 @@ function formatRelativeTime(dateString: string): string {
 
 function getPriorityColor(priority: string): string {
   switch (priority) {
-    case 'p0': return 'bg-rose-950/80 text-rose-200 border-rose-700/70';
-    case 'p1': return 'bg-orange-950/80 text-orange-200 border-orange-700/70';
-    case 'p2': return 'bg-amber-950/80 text-amber-200 border-amber-700/70';
-    case 'p3': return 'bg-sky-950/80 text-sky-200 border-sky-700/70';
-    default: return 'bg-slate-900 text-slate-300 border-slate-700';
+    case 'p0': return 'bg-red-100 text-red-800 border-red-200';
+    case 'p1': return 'bg-orange-100 text-orange-800 border-orange-200';
+    case 'p2': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+    case 'p3': return 'bg-blue-100 text-blue-800 border-blue-200';
+    default: return 'bg-gray-100 text-gray-800 border-gray-200';
   }
 }
 
 function getTypeBadgeColor(type: string): string {
   switch (type) {
-    case 'idea': return 'bg-violet-600/20 text-violet-300 border border-violet-500/40';
-    case 'research': return 'bg-cyan-600/20 text-cyan-300 border border-cyan-500/40';
-    case 'requirement': return 'bg-blue-600/20 text-blue-300 border border-blue-500/40';
-    case 'feature': return 'bg-emerald-600/20 text-emerald-300 border border-emerald-500/40';
-    case 'risk': return 'bg-rose-600/20 text-rose-300 border border-rose-500/40';
-    case 'decision': return 'bg-fuchsia-600/20 text-fuchsia-300 border border-fuchsia-500/40';
-    case 'solution': return 'bg-amber-600/20 text-amber-300 border border-amber-500/40';
-    default: return 'bg-slate-800 text-slate-300 border border-slate-700';
+    case 'idea': return 'bg-purple-100 text-purple-800';
+    case 'research': return 'bg-blue-100 text-blue-800';
+    case 'experiment': return 'bg-green-100 text-green-800';
+    case 'spike': return 'bg-pink-100 text-pink-800';
+    case 'story': return 'bg-indigo-100 text-indigo-800';
+    case 'task': return 'bg-gray-100 text-gray-800';
+    case 'epic': return 'bg-amber-100 text-amber-800';
+    default: return 'bg-gray-100 text-gray-800';
   }
 }
 
-export function WorkItemCard({
-  item,
-  onClick,
-  canDrag = false,
-  isDragging = false,
-  runState,
-  onBlockedDragAttempt,
-  displayId,
-}: WorkItemCardProps) {
+export function WorkItemCard({ item, onClick, draggable = false, onDragStart, onDragEnd }: WorkItemCardProps) {
   const visibleTags = item.tags.slice(0, 6);
   const hiddenTagCount = Math.max(0, item.tags.length - 6);
-
-  const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: item.id,
-    data: { item },
-    disabled: !canDrag,
-  });
-
-  const style = {
-    transform: CSS.Translate.toString(transform),
-  };
 
   const reportIcons = [
     { key: 'clarification', label: 'C', active: item.reports.clarification },
@@ -84,23 +62,17 @@ export function WorkItemCard({
     { key: 'arch', label: 'A', active: item.reports.arch },
   ] as const;
 
-  const displayIdLabel = displayId ?? item.id;
-
   return (
-    <Card
-      ref={setNodeRef}
-      style={style}
-      className={cn(
-        'cursor-pointer p-3 transition hover:border-indigo-400/60 hover:bg-slate-900',
-        canDrag && 'active:cursor-grabbing',
-        isDragging && 'opacity-40'
-      )}
+    <div
+      className={`bg-white rounded-lg border border-gray-200 p-3 hover:shadow-md transition-shadow cursor-pointer ${
+        draggable ? 'active:cursor-grabbing' : ''
+      }`}
       onClick={() => onClick?.(item)}
-      onPointerDown={() => {
-        if (!canDrag && runState) {
-          onBlockedDragAttempt?.(item);
-        }
-      }}
+      role="button"
+      tabIndex={0}
+      draggable={draggable}
+      onDragStart={() => onDragStart?.(item)}
+      onDragEnd={onDragEnd}
       onKeyDown={(event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
@@ -108,73 +80,55 @@ export function WorkItemCard({
         }
       }}
     >
-      <div className="mb-2 flex items-start justify-between gap-2">
-        <div>
-          <p className="font-mono text-[11px] uppercase tracking-widest text-slate-500">{displayIdLabel}</p>
-          <p className="text-xs text-slate-400">{item.id}</p>
-        </div>
-        <div className="flex items-center gap-1">
-          {canDrag && (
-            <span
-              className="cursor-grab rounded border border-slate-700 bg-slate-800 px-1 py-0.5 text-[10px] text-slate-300 active:cursor-grabbing"
-              title="Drag to move"
-              {...attributes}
-              {...listeners}
-            >
-              ::
-            </span>
-          )}
-          {runState && (
-            <span className="animate-pulse rounded-full border border-amber-500/60 bg-amber-900/60 px-2 py-0.5 text-[10px] font-medium text-amber-200" title={`Taken by ${runState.agent}`}>
-              Running · {runState.agent}
-            </span>
-          )}
-          <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ${getTypeBadgeColor(item.type)}`}>
-            {item.type}
-          </span>
-        </div>
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <span className="text-xs font-mono text-gray-500 truncate" title={item.id}>
+          {item.id}
+        </span>
+        <span className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${getTypeBadgeColor(item.type)}`}>
+          {item.type}
+        </span>
       </div>
 
-      <h3 className="mb-3 line-clamp-2 text-sm font-medium text-slate-100" title={item.title}>
+      <h3 className="text-sm font-medium text-gray-900 mb-3 line-clamp-2" title={item.title}>
         {item.title}
       </h3>
 
-      <div className="mb-2 flex items-center gap-2">
-        <span className={`rounded border px-2 py-0.5 text-xs ${getPriorityColor(item.priority)}`}>
+      <div className="flex items-center gap-2 mb-2">
+        <span className={`text-xs px-2 py-0.5 rounded border ${getPriorityColor(item.priority)}`}>
           {item.priority}
         </span>
-        <span className="truncate text-xs text-slate-400" title={item.owner}>
+        <span className="text-xs text-gray-600 truncate" title={item.owner}>
           @{item.owner}
         </span>
       </div>
 
       {item.tags.length > 0 && (
-        <div className="mb-2 flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 mb-2">
           {visibleTags.map((tag) => (
             <span
               key={tag}
-              className="rounded border border-slate-700 bg-slate-800 px-1.5 py-0.5 text-xs text-slate-300"
+              className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-600 rounded"
             >
               {tag}
             </span>
           ))}
           {hiddenTagCount > 0 && (
-            <span className="rounded border border-slate-700 bg-slate-800 px-1.5 py-0.5 text-xs text-slate-400">
+            <span className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded">
               +{hiddenTagCount}
             </span>
           )}
         </div>
       )}
 
-      <div className="flex items-center justify-between border-t border-slate-800 pt-2">
-        <span className="text-xs text-slate-500">
+      <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+        <span className="text-xs text-gray-400">
           {formatRelativeTime(item.updated_at)}
         </span>
 
         <div className="flex items-center gap-1.5">
           {item.needs_clarification && (
             <span
-              className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[8px] font-bold text-black"
+              className="w-4 h-4 rounded-full bg-yellow-400 flex items-center justify-center text-[8px] text-white font-bold"
               title="Needs clarification"
             >
               ?
@@ -182,21 +136,21 @@ export function WorkItemCard({
           )}
           {item.implementation_approved && (
             <span
-              className="flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500 text-[8px] font-bold text-white"
+              className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center text-[8px] text-white font-bold"
               title="Implementation approved"
             >
               ✓
             </span>
           )}
 
-          <div className="ml-1 flex items-center gap-0.5">
+          <div className="flex items-center gap-0.5 ml-1">
             {reportIcons.map((report) => (
               <span
                 key={report.key}
-                className={`flex h-3 w-3 items-center justify-center rounded text-[6px] font-bold ${
+                className={`w-3 h-3 rounded text-[6px] flex items-center justify-center font-bold ${
                   report.active
                     ? 'bg-indigo-500 text-white'
-                    : 'bg-slate-700 text-slate-400'
+                    : 'bg-gray-200 text-gray-400'
                 }`}
                 title={`${report.key} report`}
               >
@@ -206,6 +160,6 @@ export function WorkItemCard({
           </div>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }

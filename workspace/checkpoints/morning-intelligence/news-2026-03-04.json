@@ -1,0 +1,60 @@
+{
+  "date": "2026-03-04",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "US/Israel–Iran conflict escalates",
+        "category": "Geopolitics",
+        "primary": "https://www.reuters.com/world/middle-east/us-assault-iran-ahead-schedule-says-us-middle-east-commander-2026-03-04/",
+        "backup": "https://www.bbc.com/news/live/cy0dp1l57nxt"
+      },
+      {
+        "title": "Global stocks react to oil shock fears",
+        "category": "Markets",
+        "primary": "https://www.reuters.com/world/china/global-markets-global-markets-2026-03-04/"
+      },
+      {
+        "title": "Oil jumps on conflict escalation / shipping risk",
+        "category": "Markets",
+        "primary": "https://www.reuters.com/business/energy/oil-jumps-us-iran-conflict-escalates-disrupts-shipping-2026-03-01/"
+      },
+      {
+        "title": "US tariff lawsuits sent back to trade court",
+        "category": "Policy",
+        "primary": "https://www.reuters.com/world/us-tariff-lawsuits-returned-trade-court-determine-next-steps-2026-03-02/"
+      },
+      {
+        "title": "Magnitude 5.8 earthquake hits Japan",
+        "category": "Disaster",
+        "primary": "https://www.reuters.com/business/environment/magnitude-58-earthquake-strikes-japan-gfz-says-2026-03-01/"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "BCU cuts policy rate to 5.75%",
+        "primary": "https://www.bcu.gub.uy/Comunicaciones/Paginas/Detalle-Noticia.aspx?noticia=497&title=El-Banco-Central-del-Uruguay-reduce-la-tasa-de-inter%C3%A9s-en-75-puntos-b%C3%A1sicos-hasta-5,75%"
+      },
+      {
+        "title": "Inumet issues yellow alert for storms/heavy rain",
+        "primary": "https://www.elpais.com.uy/informacion/servicios/alerta-inumet-tormentas-puntualmente-fuertes-y-lluvias-abundantes-las-zonas-afectadas-4-3-2026",
+        "backup": "https://www.elobservador.com.uy/nacional/rige-una-alerta-amarilla-inumet-tormentas-puntualmente-fuertes-las-localidades-afectadas-n6036265"
+      },
+      {
+        "title": "Forged-passport case: three foreigners convicted",
+        "primary": "https://en.mercopress.com/2026/03/04/three-foreigners-convicted-in-uruguay-for-attempting-to-obtain-a-passport-with-forgeries"
+      },
+      {
+        "title": "Government seeks Ministry of Justice & Human Rights",
+        "primary": "https://www.abc.com.py/internacionales/2026/03/02/el-gobierno-de-uruguay-busca-crear-un-ministerio-de-justicia-y-derechos-humanos/"
+      },
+      {
+        "title": "BCU measures to reduce dollar usage discussed",
+        "primary": "https://www.bloomberglinea.com.br/internacional/no-uruguai-banco-central-prepara-medidas-para-reduzir-o-uso-do-dolar-na-economia/"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 11,
+  "generated_at": "2026-03-04T11:00:00Z"
+}

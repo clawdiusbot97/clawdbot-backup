@@ -1,0 +1,223 @@
+bjbj
+ORTsf
+Presentaci
+n de Proyecto
+ginas: 5
+Versi
+n: 2025
+Objetivo
+El objetivo de este documento es presentar el proyecto que el equipo desea realizar en el Laboratorio de Ingenier
+a de Software ORTsf como proyecto final de la carrera.
+Vigencia:  01-06-2027
+Nota: esta propuesta debe ser avalada por al menos un docente del laboratorio antes de ser presentada al comit
+ de selecci
+n de proyectos.  El laboratorio puede asistir al equipo en su redacci
+n si as
+ lo desean.
+Cuando complete el formulario, remueva todos los comentarios que figuran en it
+lica.
+INTEGRANTES DEL EQUIPO (nombre y n
+mero de estudiante):
+CARRERA:
+Ingenier
+                  Licenciatura: 
+     		Ambas: 
+Nota: 
+en caso de que se trate con un cliente 
+real
+ (persona o empresa) se deber
+ adjuntar una carta firmada por una persona de contacto donde declara su inter
+s en trabajar con el equipo en esta problem
+tica.
+En caso de que sea un emprendimiento del equipo deben contar con el aval del CIE (Centro de Innovaci
+n y Emprendimientos) de ORT y con el apoyo de un experto del dominio acredit
+ndose esto mediante carta firmada por el mismo.
+MARQUE CON UNA CRUZ EL CASILLERO QUE CORRESPONDA:
+EMPRENDIMIENTO
+PROPIO
+PROYECTO PARA UNA PERSONA O UNA EMPRESA
+NOMBRE DEL PROYECTO  
+PRIORIDAD DENTRO DE LAS PREFERENCIAS DEL EQUIPO:  __ (1, 2, 3)
+TIPO DE PROYECTO: (Seleccionar una opci
+Desarrollo
+Desarrollo de soluci
+n a medida (solicitado por el cliente)
+Desarrollo de producto o soluci
+Dise
+o de servicio con soporte tecnol
+gico
+Investigaci
+	Metodolog
+as y procedimientos
+	Nuevas tecnolog
+          Desarrollo de prototipos
+Otros (especificar):
+NOMBRE DEL CLIENTE O EXPERTO DEL DOMINIO: 
+CONTACTO EN EL CLIENTE O EXPERTO DEL DOMINIO (Nombre, tel
+fono y mail de contacto):
+DESCRIPCION DEL CLIENTE O EXPERTO DEL DOMINIO
+(Breve descripci
+n de empresa cliente, productos/servicios ofrecidos por el cliente.)
+(Importante: como se mencion
+ anteriormente es requerido la entrega de una carta firmada por el cliente o experto del dominio. Hay un modelo disponible)
+DESCRIPCION (Breve descripci
+n del problema que se quiere resolver):
+Tip: Es un problema concreto de un cliente o mercado real.
+REQUERIMIENTOS (Descripci
+n de los principales requerimientos del proyecto y/o del producto):
+Tip: El producto muestra innovaci
+n, es decir, modifica procesos, usa / integra tecnolog
+a en forma diferente a lo habitual, usa tecnolog
+a nueva. 
+IMPACTO DEL PROYECTO PARA EL CLIENTE (Refiere a la importancia que el cliente asigna al proyecto, y a las eventuales consecuencias del 
+xito o su fracaso). 
+(En caso de contar con un experto del dominio se deber
+ explicar el inter
+s que puede tener el mismo en el producto o servicio a dise
+Tip: Se valorar
+ el impacto general que tendr
+ en el cliente / experto, mercado o sociedad. 
+TECNOLOGIAS a UTILIZAR (En caso de ya estar definida)
+Tip: Las tecnolog
+as seleccionadas fueron justificadas adecuadamente.  Se manejaron alternativas para cada decisi
+cnica asociada a la soluci
+n, y existe un criterio expl
+cito para fundamentar las decisiones.  Esas decisiones est
+n documentadas, y hay evidencia de bibliograf
+a, prototipos y dem
+s material utilizado para ello.
+EXPERIENCIA DEL EQUIPO CON ESTAS TECNOLOGIAS
+DIFICULTADES PREVISIBLES DEL PROYECTO
+Tip: identificaci
+n breve de riesgos
+MOTIVACION DEL EQUIPO PARA ESTE PROYECTO
+Tip: Describir que los motiva a realizar el proyecto en donde pueden presentar argumentos acad
+micos, de proyecci
+n profesional, personales, etc.
+    		 
+Presentaci
+n de Proyecto 
+ Laboratorio de Ingenier
+a de Software (ORTsf)
+Universidad ORT Uruguay                                                  
+	                           	P
+gina 
+ PAGE 
+ de 
+ NUMPAGES \*Arabic 
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+scssscssS
+h1~'
+h1~'
+h1~'
+h1~'
+hSGB
+hSGB
+hSGB
+hSGB
+yt1~'
+h	l{
+hSGB
+hSGB
+hSGB
+hSGB
+zhzTT@zhzhz
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+}dN3
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+w_GG7
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+gddE
+gddE
+t[K[2[
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+hSGB
+xl]D-
+hSGB
+hSGB
+hSGB
+hSGB
+gdh@
+gddE
+gddE
+"	#v
+yt1~'
+[Content_Types].xml
+_rels/.rels
+theme/theme/themeManager.xml
+sQ}#
+theme/theme/theme1.xml
+{o,)
+;6,%E
+qf83
+V4Gj\
+'}q1
+Ixs1rqG
+<d8W8!9QH
+g>R(z
+M^x6
+ C.,
+Z.j~f
+,kB0%
+tKs]x<}:
+cqY_
+m,Skq
+Zpu?Vr
+JxuP
+	0xe
+,?"CD
+theme/theme/_rels/themeManager.xml.rels
+6?$Q
+K(M&$R(.1
+[Content_Types].xmlPK
+_rels/.relsPK
+theme/theme/themeManager.xmlPK
+theme/theme/theme1.xmlPK
+theme/theme/_rels/themeManager.xml.relsPK
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<a:clrMap xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/>
+ORTsf
+Mariel Feder
+Normal
+Rafael Bentancur
+Microsoft Office Word
+KPMG
+ORTsf
+ORTsf
+tulo
+Title
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><b:Sources SelectedStyle="\APASixthEditionOfficeOnline.xsl" StyleName="APA" Version="6" xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns="http://schemas.openxmlformats.org/officeDocument/2006/bibliography"></b:Sources>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ds:datastoreItem ds:itemID="{DE52CAEA-6D89-4217-8987-948DD53D6150}" xmlns:ds="http://schemas.openxmlformats.org/officeDocument/2006/customXml"><ds:schemaRefs><ds:schemaRef ds:uri="http://schemas.openxmlformats.org/officeDocument/2006/bibliography"/></ds:schemaRefs></ds:datastoreItem>
+Documento de Microsoft Word 97-2003
+MSWordDoc
+Word.Document.8

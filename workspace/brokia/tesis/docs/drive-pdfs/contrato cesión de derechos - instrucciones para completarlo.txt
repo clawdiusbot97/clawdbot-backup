@@ -1,0 +1,30 @@
+Contrato de cesión de derechos - Instrucciones
+Introducción
+La propiedad intelectual de carácter patrimonial de un trabajo de fin de carrera, que es lo que se puede comercializar, es propiedad de la Universidad.  Pero los cede a quien decida quien propone la idea (el equipo, una empresa o emprendedor).
+Para ello se firma un contrato entre la Universidad, representada por el Decano de la Facultad de Ingeniería, y quienes reciben la cesión de derechos.  Hay varios modelos de contrato, que aplican según cada caso, y que se adjuntan.
+Contrato de cesión de derechos emprendimiento 2025-05
+Contrato de cesión de derechos x % - 2024-05
+Contrato de cesión de derechos 100% - 2024-05
+Cambios requeridos
+Hay una serie de datos que deben ingresar los estudiantes, y que mencionamos a continuación.
+Partes intervinientes
+En el contrato se ponen los nombres, números de documento y domicilio de TODOS Y CADA UNO de ellos: estudiantes, representante de la empresa (si corresponde).  La Universidad no firma contratos que incluyan solamente a una parte de un equipo de estudiantes.
+Si la cesión la recibe una empresa, la persona que firme en su nombre debe tener la autorización legal para hacerlo. En el contrato se pone nombre legal, RUT y dirección de la empresa, y el nombre y número de documento de la persona que firma por ella.  También se agrega a los estudiantes en calidad de autores de la obra.
+Antecedentes
+Aquí va la carrera que cursan y el nombre del proyecto tal cual figura en el fallo del Comité que se los asignó.
+Condiciones económicas
+Solo para los casos en que se use el formato de “cesión parcial”.
+Referencias
+Se ingresan: nombre de la carrera y nombre del tutor.
+Firmas
+Incluyan sus firmas y aclaraciones de firma, y en caso de que corresponda, la firma y aclaración de la persona que firma por la empresa.  Puede ser una imagen con la firma.
+Anexo A - Detalle de la obra
+Se copia el contenido del formulario de anteproyecto que se presentó a la Facultad para su aprobación.  Son las secciones correspondientes a “Descripción” (que iría en “Situación actual”) y “Requerimientos” (que iría en “Solución Propuesta”.  En la sección “Entregables” iría una lista de lo que se entrega.  Por ejemplo, copia de la tesis, repositorio de código, documentación técnica, casos de prueba, etc. No debería extenderse por más de una carilla.
+Nombre del archivo
+Les pedimos que el nombre del archivo indique año y mes de comienzo de la tesis y el nombre del proyecto.  
+También precisamos que nos indiquen un integrante del equipo (correo electrónico) al que podamos contactar en caso de que haya que hacer cambios al documento o cualquier otra gestión asociada. Pónganlo al final del nombre del archivo.  
+Entonces, con esos dos datos, quedaría así “2024-03 MiProyecto micorreo@xxx.com”.
+Próximos pasos
+Luego de completar el formulario cualquiera de los estudiantes lo sube a Aulas, a la tarea creada a esos efectos, antes del vencimiento.
+ORTsf lo revisa y eventualmente le notifica por correo al referente del equipo si tienen que corregirlo.  En ese caso, luego de que hicieran los ajustes, lo vuelven a subir a la misma tarea de Aulas.
+Cuando queda pronto nosotros (ORTsf) se lo pasamos al Decanato para que firme el Decano y les avisen a ustedes que ya pueden contar con su copia y la de la empresa.

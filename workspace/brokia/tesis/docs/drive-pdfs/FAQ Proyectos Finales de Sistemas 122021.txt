@@ -1,0 +1,159 @@
+Preguntas frecuentes – Proyecto de fin de carrera - ORTsf
+16/12/2021
+¿Dónde puedo dirigirme personalmente para evacuar dudas sobre el Proyecto final?
+Con el Asesor de proyectos finales de carreras de Sistemas. En forma presencial
+en la Oficina 412 después de las 18:00 horas (se sugiere coordinar previamente) o vía
+Teams .
+¿Qué tipos de proyectos se pueden realizar?
+- Desarrollo de productos
+- Desarrollo a medida
+- Prueba de concepto, prototipo
+- Validación de resultados teóricos
+- Formación de empresas
+¿Quiénes proponen los proyectos?
+- Las empresas
+- Los alumnos (emprendimientos propios o sociedades con empresas)
+- Investigadores
+¿Quiénes avalan las propuestas de Proyectos realizadas?
+Siempre son avaladas por docentes del laboratorio
+¿Cuál es el alcance del proyecto?
+- Se define en acuerdo con el cliente durante el proyecto.
+- El proyecto debe tener valor académico
+- Innovador: producto, procesos, tecnología, integración.
+¿Quién es el responsable de darle valor académico al proyecto?
+El tutor
+Si voy a realizar un emprendimiento con el grupo ¿por qué preciso tener un cliente?
+La figura del cliente pretende ayudarlos a ustedes a definir el alcance de su
+producto. Debe ser una persona que conozca del ámbito de funcionamiento
+del producto. Su misión será orientarlos cuando tengan que priorizar alguna
+funcionalidad sobre otra, o descartar alguna funcionalidad.
+¿Tenemos que entregarle el producto final a ese cliente?
+Esto está explicado más adelante, cuando se explica la cesión de derechos
+patrimoniales del proyecto. En el caso de proyectos en asociación con
+empresas se entiende que existe interés de parte de ella de continuar con el
+sistema.
+Si voy a realizar un emprendimiento, ¿debo tener un plan de negocios?
+Enviar la idea emprendedora al CIE vía formulario web a los efectos de contar
+con el aval correspondiente. Será imprescindible la presentación previa de la idea para
+poder realizar posteriormente los Talleres Emprendedores.
+1
+
+¿Cuál es la duración del proyecto?
+- Ingeniería en Sistemas 1 año
+- Licenciatura en Sistemas 6 meses
+¿Cuándo se inician los proyectos?
+Marzo y agosto, coincidiendo con el comienzo de las clases de cada semestre.
+¿Cuál es la dedicación esperada?
+De 15 a 20 horas semanales por alumno
+¿Con que formato se presentan las propuestas o ideas?
+Existe un formulario en Aulas y en la página del laboratorio en la web de la
+Facultad. También se publica en el grupo de MS Teams.
+¿Cuándo se deben presentar las propuestas? ¿Cuál es la fecha final para presentar
+las propuestas?
+La fecha de presentación se establece en la carta inicial de cada carrera, al
+comienzo de cada semestre. Se puede empezar a trabajar en ellas desde el semestre
+inmediatamente anterior, por ejemplo.
+¿Cuántas opciones de proyectos se deben presentar?
+Dos, si se toman proyectos presentados por la Facultad o emprendimientos.
+Uno si es una asociación con una empresa.
+¿Existe apoyo para emprendedores en ORT?
+Si, a través del CIE. Es independiente del ciclo académico.
+¿Cómo se forman los equipos del proyecto?
+Son autoseleccionados. Existe un foro para estudiantes que no tengan
+compañero.
+¿Cuál es el número de integrantes?
+De 3 a 5. En condiciones excepcionales se aceptan grupos de 2 alumnos.
+Excepcionalmente se aceptan trabajos individuales bajo una modalidad diferente que
+denominamos Consultoría
+¿Quién desarrolla el rol de cliente?
+En el caso de los proyectos propuestos por alumnos son ellos mismos quienes
+tienen que proponer una persona para ese rol. En los demás casos viene dado por
+quien propone el proyecto. En caso de que no exista un cliente real, por ejemplo,
+cuando se está desarrollando un emprendimiento para crear un producto, deben
+realizarse actividades para validar cada etapa.
+¿Quién selecciona el proyecto a realizar?
+El Comité de Selección que emite un acta. Lo integra el Decano y el
+Coordinador de cada carrera.
+¿Cuándo se realiza la asignación de tutores y comienzo formal?
+2
+
+Una vez que sale el fallo del Comité de Selección. El laboratorio asigna el tutor
+y da así comienzo formal al proyecto.
+¿Con que criterios se asignan los tutores?
+Afinidad con el dominio del problema.
+¿Quiénes califican el proyecto?
+Es calificado solamente luego de la entrega final, por un tribunal compuesto por
+2 docentes externos al laboratorio, uno de ellos extranjero.
+¿En qué formato se entrega el proyecto?
+Existen los documentos 302, 303 y 306 de la Universidad que regulan el
+formato de las entregas.
+¿De qué forma se hace la defensa?
+La defensa es oral y pública.
+¿Existen calificaciones (notas) intermedias durante el proyecto?
+No, sólo se califica la entrega final luego de la defensa oral y pública. Sin
+embargo, el Laboratorio determina, en base al desempeño en las revisiones y a la
+opinión del tutor, si un equipo o alguno de sus integrantes puede pasar a la defensa
+final.
+¿Qué apoyo existe para los proyectos?
+- Tutor de equipo
+- Tutor de rol
+- “Clubes” por rol
+- Aulas
+- Proyectos terminados en Biblioteca
+- Capacitación inicial
+- Salones para reuniones y laboratorios
+- Revisiones
+¿Antes de la defensa final tengo algún punto de control?
+Si, las revisiones. Permiten que los equipos reciban retroalimentación
+(fortalezas, sugerencias, puntos a mejorar). No es una instancia de calificación
+al grupo.
+¿Cuántas revisiones tiene el proyecto?
+Tres en ingeniería y dos en Licenciatura.
+¿Cuál es el resultado de las revisiones?
+Reciben retroalimentación sobre fortalezas, oportunidades de mejora y
+sugerencias.
+¿De quién es la propiedad intelectual del proyecto?
+De los alumnos, pero los derechos patrimoniales son de la Universidad, que
+siempre la cede a quien se determine en el acuerdo entre alumnos y clientes. En el
+3
+
+caso de proyectos propuestos por empresas, es de orden que se cedan a la empresa;
+en los emprendimientos de alumnos, en principio se cede a los alumnos.
+¿Se puede usar el producto obtenido fuera de ORT?
+Sí, siempre y cuando se firme un contrato de cesión de derechos.
+¿Existe alguna plantilla para realizar el contrato de cesión de derechos?
+Sí, en Aulas.
+¿Qué tipo de cesiones de derechos existen?
+- Cesión parcial.
+- Cesión total.
+¿Quiénes firman el contrato de cesión de derechos?
+Por ORT, el Decano de la Facultad de Ingeniería. Por la otra parte, quien
+reciba los derechos (todos los integrantes del grupo, o un representante legal de su
+cliente, etc.)
+¿Una parte del grupo puede quedarse con los derechos?
+No, en caso en que la cesión se realice al equipo, la Universidad los cede a
+todos y cada uno de los integrantes.
+¿Es obligatorio publicar el proyecto en la Biblioteca al momento de terminarlo?
+Si, pero es posible solicitar reserva de hasta 2 años, sin publicar en biblioteca.
+¿Pueden formarse grupos con alumnos de Licenciatura y de Ingeniería?
+Pueden. El alumno de Licenciatura se inscribe al comienzo o en el 2º semestre
+del proyecto. Realiza un proyecto de un año de duración.
+Me dijeron que se evalúa más la forma de trabajo que el resultado final. ¿Es cierto?
+No, es tan importante el producto resultante como el proceso seguido para
+construirlo.
+¿Es cierto que los integrantes de los equipos terminan peleados entre sí?
+En nuestra experiencia de más de 20 años los casos de equipos con
+problemas graves se cuentan con los dedos de una mano. Sin embargo, al tratarse de
+largos períodos de convivencia pueden surgir discrepancias, discusiones, que son
+naturales en cualquier grupo humano que está comprometido con un objetivo. El Tutor
+de Grupo es quien entendemos debe conocer esas situaciones de modo de ayudarlos
+a superarlas.
+¿Qué pasa si no nos llevamos bien con el tutor?
+La Coordinación del laboratorio está siempre disponible para recibir los
+comentarios que el grupo entienda convenientes e interviene para resolver la
+situación.
+
+FIN
+4
+
+

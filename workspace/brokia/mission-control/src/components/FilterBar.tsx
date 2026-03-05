@@ -1,11 +1,6 @@
 'use client';
 
 import { Filters } from '@/types/workitem';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { Field } from '@/components/ui/Field';
-import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/Select';
 
 interface FilterBarProps {
   filters: Filters;
@@ -15,8 +10,6 @@ interface FilterBarProps {
   availableTags: string[];
   onRefresh: () => void;
   isLoading: boolean;
-  showDropped: boolean;
-  onShowDroppedChange: (value: boolean) => void;
 }
 
 export function FilterBar({
@@ -27,8 +20,6 @@ export function FilterBar({
   availableTags,
   onRefresh,
   isLoading,
-  showDropped,
-  onShowDroppedChange,
 }: FilterBarProps) {
   const updateFilter = <K extends keyof Filters>(key: K, value: Filters[K]) => {
     onFiltersChange({ ...filters, [key]: value });
@@ -48,66 +39,81 @@ export function FilterBar({
       owner: '',
       tag: '',
       needsClarification: false,
-      showDropped: false,
     });
   };
 
   return (
-    <Card className="mb-4 p-4">
+    <div className="bg-white rounded-lg border border-gray-200 p-4 mb-4">
       <div className="flex flex-wrap items-center gap-3">
         {/* Search */}
         <div className="flex-1 min-w-[200px]">
-          <Field label="Search">
-            <Input
-              type="text"
-              placeholder="ID or title..."
-              value={filters.search}
-              onChange={(e) => updateFilter('search', e.target.value)}
-              className="py-1.5"
-            />
-          </Field>
+          <label className="block text-xs font-medium text-gray-500 mb-1">
+            Search
+          </label>
+          <input
+            type="text"
+            placeholder="ID or title..."
+            value={filters.search}
+            onChange={(e) => updateFilter('search', e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
         </div>
 
         {/* Type filter */}
         <div className="min-w-[120px]">
-          <Field label="Type">
-            <Select value={filters.type} onChange={(e) => updateFilter('type', e.target.value)} className="py-1.5">
-              <option value="">All types</option>
-              {availableTypes.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </Select>
-          </Field>
+          <label className="block text-xs font-medium text-gray-500 mb-1">
+            Type
+          </label>
+          <select
+            value={filters.type}
+            onChange={(e) => updateFilter('type', e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          >
+            <option value="">All types</option>
+            {availableTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Owner filter */}
         <div className="min-w-[120px]">
-          <Field label="Owner">
-            <Select value={filters.owner} onChange={(e) => updateFilter('owner', e.target.value)} className="py-1.5">
-              <option value="">All owners</option>
-              {availableOwners.map((owner) => (
-                <option key={owner} value={owner}>
-                  @{owner}
-                </option>
-              ))}
-            </Select>
-          </Field>
+          <label className="block text-xs font-medium text-gray-500 mb-1">
+            Owner
+          </label>
+          <select
+            value={filters.owner}
+            onChange={(e) => updateFilter('owner', e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          >
+            <option value="">All owners</option>
+            {availableOwners.map((owner) => (
+              <option key={owner} value={owner}>
+                @{owner}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Tag filter */}
         <div className="min-w-[120px]">
-          <Field label="Tag">
-            <Select value={filters.tag} onChange={(e) => updateFilter('tag', e.target.value)} className="py-1.5">
-              <option value="">All tags</option>
-              {availableTags.map((tag) => (
-                <option key={tag} value={tag}>
-                  {tag}
-                </option>
-              ))}
-            </Select>
-          </Field>
+          <label className="block text-xs font-medium text-gray-500 mb-1">
+            Tag
+          </label>
+          <select
+            value={filters.tag}
+            onChange={(e) => updateFilter('tag', e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          >
+            <option value="">All tags</option>
+            {availableTags.map((tag) => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Needs clarification toggle */}
@@ -117,44 +123,43 @@ export function FilterBar({
               type="checkbox"
               checked={filters.needsClarification}
               onChange={(e) => updateFilter('needsClarification', e.target.checked)}
-              className="h-4 w-4 rounded border-slate-600 bg-slate-900 text-indigo-500 focus:ring-indigo-500"
+              className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
-            <span className="text-sm text-slate-300">Needs clarification</span>
-          </label>
-        </div>
-        <div className="flex items-end">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={showDropped}
-              onChange={(e) => onShowDroppedChange(e.target.checked)}
-              className="h-4 w-4 rounded border-slate-600 bg-slate-900 text-indigo-500 focus:ring-indigo-500"
-            />
-            <span className="text-sm text-slate-300">Show dropped</span>
+            <span className="text-sm text-gray-700">Needs clarification</span>
           </label>
         </div>
 
         {/* Actions */}
         <div className="flex items-end gap-2 ml-auto">
           {hasActiveFilters && (
-            <Button
+            <button
               onClick={clearFilters}
-              variant="ghost"
-              size="sm"
+              className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
             >
               Clear
-            </Button>
+            </button>
           )}
-          <Button
+          <button
             onClick={onRefresh}
-            loading={isLoading}
-            size="sm"
-            variant="primary"
+            disabled={isLoading}
+            className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
           >
-            {isLoading ? 'Loading...' : 'Refresh'}
-          </Button>
+            {isLoading ? (
+              <>
+                <span className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                Loading...
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Refresh
+              </>
+            )}
+          </button>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }

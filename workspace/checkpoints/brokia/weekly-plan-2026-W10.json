@@ -1,0 +1,54 @@
+{
+  "schema": "brokia-weekly-plan-v1",
+  "generated_at": "2026-03-02T10:00:11.237020-03:00",
+  "tz": "America/Montevideo",
+  "week": "2026-W10",
+  "phase": "Phase 2 — Anteproyecto build",
+  "objectives": [
+    "Cerrar la definición de problema + métrica base para que el anteproyecto sea defendible.",
+    "Completar borrador de anteproyecto v1 (objetivos, metodología, alcance, cronograma).",
+    "Resolver incógnitas académicas críticas (final septiembre 2026 + horas de hitos condicionales)."
+  ],
+  "tasks": [
+    {
+      "title": "Redactar 1-pager de problema (versión anteproyecto) y enlazar evidencia en 05_SOURCES.md",
+      "owner": "Manu"
+    },
+    {
+      "title": "Confirmar con JM 3 fricciones operativas + estimación de tiempos (inputs para baseline)",
+      "owner": "JM"
+    },
+    {
+      "title": "Agendar/realizar 1 entrevista adicional (si aplica) y registrar hallazgos en bitácora",
+      "owner": "Rodrigo"
+    },
+    {
+      "title": "Armar anteproyecto v1 (estructura + metodología + alcance) en doc de tesis (ruta a definir)",
+      "owner": "Manu"
+    },
+    {
+      "title": "Confirmar requisitos/fechas con CIE/ORT (hora 13/04, condiciones 22/04, final sep 2026) y actualizar checklist",
+      "owner": "Rodrigo"
+    }
+  ],
+  "main_risk": "Llegar a 26/03 sin anteproyecto coherente por falta de evidencia y/o requisitos formales.",
+  "dependency": "Confirmación oficial de fecha final septiembre 2026 (día/hora) o indicación explícita de que sigue TBD.",
+  "inputs": {
+    "brief": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/01_BRIEF.md",
+    "academic_checklist": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/02_ACADEMIC_CHECKLIST.md",
+    "roadmap": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/03_ROADMAP.md",
+    "backlog": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/04_BACKLOG.md"
+  },
+  "posts": {
+    "discord": {
+      "target": "1476311753305362564",
+      "sent": true,
+      "result": "✅ Sent via Discord. Message ID: 1478014097709596793"
+    },
+    "slack": {
+      "target": "brokia-ai-alerts",
+      "sent": false,
+      "result": "Error: An API error occurred: channel_not_found"
+    }
+  }
+}

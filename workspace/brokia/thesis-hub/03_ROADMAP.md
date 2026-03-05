@@ -113,6 +113,33 @@
 
 ---
 
+## Mapa conceptual → Plan de validación (próximas acciones, sin fechas)
+
+Propósito: transformar el mapa conceptual del ecosistema en un backlog de validación de **2 semanas** que alimente el anteproyecto (problema medible + innovación + factibilidad).
+
+Próximas 5 tareas (concretas) + responsables:
+1) **Revisión del mapa conceptual (global, no centrado en JM)**
+   - Responsable: Manu
+   - Entregable: marcar qué partes están “respaldadas por evidencia” vs “INBOX” en `brokia/thesis-hub/11_ECOSYSTEM_CONCEPT_MAP.md`.
+
+2) **Levantamiento de flujo de renovaciones (patrones industria)**
+   - Responsable: Rodrigo
+   - Entregable: 2 notas breves de entrevista (corredores que no sean JM) enfocadas en renovaciones: pasos, artefactos, cuellos de botella, métricas.
+
+3) **Levantamiento de flujo de siniestros (perspectiva correduría)**
+   - Responsable: Rodrigo
+   - Entregable: 1–2 notas de entrevista (no JM) + resumen de 1 página del flujo (aviso/FNOL → resolución).
+
+4) **Diseño de medición de línea base para el Clúster 1 (captura estructurada)**
+   - Responsable: Manu
+   - Entregable: planilla mínima de métricas (definiciones + cómo recolectar) alineada con `ANTE_PROYECTO_ACADEMIC_CORE_V1.md`.
+
+5) **Alineación del entorno de validación (qué se puede pilotear sin riesgo)**
+   - Responsable: JM
+   - Entregable: lista de 10 casos reales que puedan usarse para línea base/post‑medición + restricciones (PII, canales, qué se puede registrar).
+
+---
+
 ## INBOX (preguntas abiertas que bloquean planificación fina)
 - Confirmar fecha exacta (día/hora) de entrega final de septiembre 2026.
 - Confirmar si 13/04/2026 (asignación) tiene hora oficial.

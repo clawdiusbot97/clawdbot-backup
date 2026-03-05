@@ -126,5 +126,4 @@ export interface Filters {
   owner: string;
   tag: string;
   needsClarification: boolean;
-  showDropped: boolean;
 }

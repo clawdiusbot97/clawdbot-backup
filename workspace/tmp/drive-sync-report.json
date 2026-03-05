@@ -1,0 +1,41 @@
+{
+  "listed": 11,
+  "downloaded_ok": 11,
+  "download_failures": [],
+  "deduped_final_files": 11,
+  "synced_final": 11,
+  "converted_ok": 6,
+  "conversion_failures": [
+    {
+      "id": "1vf2gOZGZmAmlPJ5gC4xtlZ26bkryza8I",
+      "file": "/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/Aprobación de propuesta de proyecto.docx",
+      "step": "doc/docx->pdf",
+      "error": "libreoffice/soffice not installed (no sudo available)"
+    },
+    {
+      "id": "1s_tFGOKycIou5y1R6tjmVBD7G3PDbeRq",
+      "file": "/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/ALUMNOS - proyectos elegidos.doc",
+      "step": "doc/docx->pdf",
+      "error": "libreoffice/soffice not installed (no sudo available)"
+    },
+    {
+      "id": "1YrDXZ6sOThemM7Zmw_2m86My5OI44Hj5",
+      "file": "/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/PresentacionProyectosAlumnos 2025.doc",
+      "step": "doc/docx->pdf",
+      "error": "libreoffice/soffice not installed (no sudo available)"
+    },
+    {
+      "id": "1SRzme1srUJA6mJ5ACEdUgimNenOH1gSt",
+      "file": "/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/Carta de Confidencialidad_MODELO.docx",
+      "step": "doc/docx->pdf",
+      "error": "libreoffice/soffice not installed (no sudo available)"
+    },
+    {
+      "id": "13-xhrJbOLs-JRAsQb-5ZabVFUKEw2Nhz",
+      "file": "/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/Formulario adicional para proyecto emprendedores.docx",
+      "step": "doc/docx->pdf",
+      "error": "libreoffice/soffice not installed (no sudo available)"
+    }
+  ],
+  "dest": "/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs"
+}

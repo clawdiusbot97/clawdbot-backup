@@ -1,0 +1,65 @@
+{
+  "nextPageToken": "[TOKEN]",
+  "threads": [
+    {
+      "id": "19cad23affeaee37",
+      "date": "2026-03-02 06:01",
+      "from": "The New York Times <nytdirect@nytimes.com>",
+      "subject": "The World: What now?",
+      "labels": [
+        "UNREAD",
+        "CATEGORY_UPDATES",
+        "INBOX"
+      ],
+      "messageCount": 1
+    },
+    {
+      "id": "19caaceb0244de74",
+      "date": "2026-03-01 19:09",
+      "from": "History Facts <hello@historyfacts.com>",
+      "subject": "Why old photos were brown",
+      "labels": [
+        "UNREAD",
+        "CATEGORY_UPDATES",
+        "INBOX"
+      ],
+      "messageCount": 1
+    },
+    {
+      "id": "19caa0063c7b18e9",
+      "date": "2026-03-01 15:06",
+      "from": "NYT Games <nytimes@e.newyorktimes.com>",
+      "subject": "Sale: Get 5 locked games for 75% off.",
+      "labels": [
+        "CATEGORY_PROMOTIONS",
+        "UNREAD",
+        "INBOX"
+      ],
+      "messageCount": 1
+    },
+    {
+      "id": "19ca980c05840011",
+      "date": "2026-03-01 13:04",
+      "from": "The New York Times <nytdirect@nytimes.com>",
+      "subject": "The Morning: Killing Iran’s leader",
+      "labels": [
+        "UNREAD",
+        "CATEGORY_UPDATES",
+        "INBOX"
+      ],
+      "messageCount": 1
+    },
+    {
+      "id": "19ca943399aa2dcc",
+      "date": "2026-03-01 11:58",
+      "from": "The Hustle <news@thehustle.co>",
+      "subject": "The job shop on steroids outperforming China",
+      "labels": [
+        "UNREAD",
+        "CATEGORY_UPDATES",
+        "INBOX"
+      ],
+      "messageCount": 1
+    }
+  ]
+}

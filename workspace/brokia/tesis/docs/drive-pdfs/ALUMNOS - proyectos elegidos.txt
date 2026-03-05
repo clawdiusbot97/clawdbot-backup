@@ -1,0 +1,112 @@
+bjbjTSTS
+694i694i
+Formulario para Presentaci
+n de Proyectos
+Ingenier
+a en Sistemas 	Licenciatura en An
+lisis de Sistemas:
+Integrantes del grupo
+				
+ de estudiante
+Apellidos y nombres
+Firma
+Promedio (3 decimales)
+Proyectos seleccionados
+Nombre del Proyecto
+(el t
+tulo que figura en la descripci
+cnica)
+Nombre del docente que aprueba
+LOS ESTUDIANTES RECONOCEN HABER LE
+DO LA CARTA DONDE SE ESTABLECEN LAS CONDICIONES PARA LA REALIZACI
+N DE SU TESIS.
+LOS ESTUDIANTES RECONOCEN ESTAR INFORMADOS SOBRE EL PROCEDIMIENTO PARA LA CESI
+N DE LA PROPIEDAD INTELECTUAL DE CAR
+CTER PATRIMONIAL DEL PROYECTO QUE SE LES ASIGNE.
+nnnnnnnnnYGG
+h>b{
+h>b{
+h>b{
+h>b{
+h>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+h>b{
+h>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+h>b{
+h>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+gd>b{
+[Content_Types].xml
+_rels/.rels
+theme/theme/themeManager.xml
+sQ}#
+theme/theme/theme1.xml
+"GJK
+z)P -zh
+qf83
+1][/
+jk1"
+Q$$<h
+([xC
+&biH
+xozl
+N+<Ps
+K\*[
+KO=cc
+\${3>4q
+m6nE(
+J5;<
+hNC+
+>w0h
+ud9c
+p!GZ
+L~Ad
+Ae$}
+PxzSq]
+n6	m
+qU_o
+cq]_
+fZYEUMw
+theme/theme/_rels/themeManager.xml.rels
+6?$Q
+K(M&$R(.1
+[Content_Types].xmlPK
+_rels/.relsPK
+theme/theme/themeManager.xmlPK
+theme/theme/theme1.xmlPK
+theme/theme/_rels/themeManager.xml.relsPK
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<a:clrMap xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/>
+Formulario de Presentaci
+n de Proyectos
+Martin Solari
+Normal
+Rafael Bentancur
+Microsoft Office Word
+Formulario de Presentaci
+n de Proyectos
+tulo
+Documento de Microsoft Word 97-2003
+MSWordDoc
+Word.Document.8

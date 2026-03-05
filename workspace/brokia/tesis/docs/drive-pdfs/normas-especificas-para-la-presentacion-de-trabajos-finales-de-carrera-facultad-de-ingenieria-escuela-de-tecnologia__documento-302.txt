@@ -1,0 +1,680 @@
+30/10/2020
+
+NORMAS ESPECÍFICAS PARA LA PRESENTACIÓN
+DE TRABAJOS FINALES DE CARRERA (TFDC)
+FACULTAD DE INGENIERÍA - ESCUELA DE TECNOLOGÍA
+Documento 302-ET
+
+Índice
+1. Objetivos, proceso y documentos relacionados............................................................................................ 2
+2. Requisitos generales ................................................................................................................................. 2
+2.1 Extensión ........................................................................................................................................... 2
+2.2 Paginación ....................................................................................................................................... 2
+2.3 Márgenes ......................................................................................................................................... 3
+2.4 Espaciado......................................................................................................................................... 3
+2.5 Tipos de letras y formatos .................................................................................................................. 4
+2.6 Pie de tablas gráficos, figuras o ecuaciones ........................................................................................ 4
+2.7 Notas al pie ...................................................................................................................................... 4
+3. Bibliografía utilizada. ............................................................................................................................... 4
+4. Estructura de la obra ................................................................................................................................. 5
+4.1 Portada – obligatoria ......................................................................................................................... 5
+4.2 Declaración de autoría – obligatoria ................................................................................................... 5
+4.3 Dedicatoria - opcional ...................................................................................................................... 5
+4.4 Agradecimientos – opcional ............................................................................................................... 5
+4.5 Abstract - obligatorio ....................................................................................................................... 6
+4.6 Palabras clave - obligatorio ............................................................................................................... 6
+4.7 Índice - obligatorio ........................................................................................................................... 6
+4.8 Cuerpo de la obra – obligatorio .......................................................................................................... 6
+4.9 Glosario – opcional ........................................................................................................................... 6
+4.10 Bibliografía - obligatoria ................................................................................................................... 6
+4.11 Anexos - opcionales ......................................................................................................................... 6
+5. Formato de entrega del TFDC .............................................................................................................................. 7
+ANEXO 1................................................................................................................................................................... 8
+ANEXO 2................................................................................................................................................................... 9
+ANEXO 3 ................................................................................................................................................................. 10
+ANEXO 4 ................................................................................................................................................................. 11
+ANEXO 5 ................................................................................................................................................................. 12
+ANEXO 6 ................................................................................................................. ¡Error! Marcador no definido.
+ANEXO 7 ................................................................................................................. ¡Error! Marcador no definido.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+1
+
+1. Objetivos, proceso y documentos relacionados
+En este documento se especifica la estructura, el formato y otros elementos de los trabajos finales de la
+carrera. Es necesario que los trabajos cumplan con estos aspectos para asegurar su integridad, archivo y
+catalogación. La estructura y el formato gráfico se especifican para facilitar el acceso a la obra y mantener
+consistencia entre todos los trabajos.
+Para revisar y corregir el formato, se utiliza la lista de verificación del documento 303, que recomendamos
+que Ud. lea y use como elemento de control antes de entregar su trabajo. En el documento 303 se indican los
+diferentes ítems que se examinan, el nivel de importancia de cada ítem y el grado de cumplimiento. Contiene
+también una columna de observaciones, que aclara las correcciones realizadas.
+En la entrega del trabajo, se realiza primero una corrección de formato donde se indican los eventuales
+errores o incumplimientos. La corrección de formato se devuelve a los autores, para que realicen las
+correcciones necesarias y procedan a la entrega final.
+Los errores de formato se clasifican según un nivel de gravedad, que va desde A (sin errores) a D (con
+errores graves, que afectan la identificación o la integridad). Un trabajo no debería tener errores de nivel D
+en su entrega final.
+En el Anexo 6 se presenta una guía de verificación adicional, que puede ayudar a completar con éxito los
+aspectos de formato del trabajo.
+
+2. Requisitos generales
+Los trabajos finales deben ser entregados en formato PDF, en forma digital, en gestion.ort.edu.uy
+Para realizar el trabajo, se puede utilizar sin modificaciones la plantilla de apoyo “Plantilla
+proyecto_AP2020.dot”, que está publicada en Aulas en el siguiente
+link: https://aulas.ort.edu.uy/course/view.php?id=2380&section=4.
+.
+Algunos aspectos generales:
+• La denominación del título, carrera, Facultad y de la Universidad deben coincidir con las
+denominaciones oficiales (que Ud. puede confirmar en su Coordinación en caso de dudas).
+• El título del trabajo debe ser representativo del contenido. Si utiliza siglas, explíquelas (pues los
+buscadores no encontrarán su trabajo a partir de la sigla).
+• El trabajo no debe tener faltas de ortografía (use la verificación ortográfica del procesador de texto).
+• Inicie cada capítulo en una página nueva.
+• Si hace correcciones en alguna página del trabajo, asegure que la página corregida siga cumpliendo los
+estándares de formato.
+
+2.1 Extensión
+Máximo 350 páginas incluidos los anexos.
+2.2 Paginación
+• El tamaño de página debe ser A4. Cuando sea necesario, pueden incluirse planos, diagramas, etc. en
+tamaño A3, pero siempre dentro del mismo documento electrónico.
+• Todo el trabajo debe ser paginado en una sola secuencia. Si incluye anexos, debe paginarlos en la misma
+secuencia de páginas. Cuente la portada como página 1, pero no imprima el número en ella.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+2
+
+• Al numerar las páginas del cuerpo o de los anexos, recuerde que todas las páginas se numeran, incluyendo
+las que contienen tablas e ilustraciones y las páginas que se dejan en blanco intencionalmente.
+• Los números de página se colocan en el ángulo inferior derecho.
+• Coloque solamente el número de página. No use la palabra “página” antes de la numeración de las
+páginas, ni el sistema 1/40, 2/40…, ni la abreviatura “pag.”, “p.” u otros caracteres gráficos..
+• Use el mismo tipo de letra para todos los números de página.
+• No utiliza encabezados ni pies de página (excepto por el número de página),
+
+2.3 Márgenes
+• Deje 2,5 cm. de margen como mínimo para el texto en cada borde de la hoja (izquierdo, derecho, superior
+e inferior).
+• Deje 1,5 cm de margen como mínimo para el número de página.
+La plantilla siguiente le ayudará a cumplir estos estándares:
+Nombre de la plantilla: “Plantillaproyecto_AP2020.dot”, ubicada en Aulas:
+https://aulas.ort.edu.uy/course/view.php?id=2380&section=4
+.
+2.4 Espaciado
+• Los párrafos deben tener Interlineado sencillo, Espaciado anterior 0p y posterior 12p (Ilustración 1).
+• Los títulos (de cualquier nivel) deben tener Interlineado sencillo, Espaciado anterior 12p y posterior
+12p (Ilustración 2).
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+3
+
+2.5 Tipos de letras y formatos
+• No use tipo de letra cursiva (o itálica), excepto para las palabras aisladas de idiomas diferentes del
+español, o al citar literalmente a otros autores. En trabajos que requieren otros tipos de letra por su
+naturaleza, utilice los estándares indicados por su Facultad o Departamento. La planilla antes referida
+contempla los estándares.
+• El tamaño de la letra para el texto normal deberá ser de 12 puntos. En la portada y los títulos puede usar
+otros tamaños superiores.
+• Se debe usar el mismo tipo de letra en todo el trabajo, incluyendo las páginas preliminares y
+referencias bibliográficas. Para escribir código de programación puede usar otro tipo de letra, que ayude a
+diferenciarlo del texto en español.
+• En tablas e ilustraciones puede usar tamaños de letra inferiores a 12 puntos, siempre que mantenga la
+legibilidad.
+2.6 Pie de tablas gráficos, figuras o ecuaciones
+Las tablas, gráficos, figuras, ecuaciones y otros elementos se deben numerar correlativamente para todo el
+documento, por cada tipo de elemento referenciado (p.ej. Figura 1, Figura 2, ….; Tabla 1, Tabla 2, ….). En
+cada elemento se indica el tipo, el número y una breve explicación acerca de su contenido.
+Ejemplo:
+Tabla 7. Distribución de la población observada según edad
+se refiere a la séptima tabla del documento.
+Al hacer referencias en el texto a las tablas, gráficos, figuras o ecuaciones, se menciona el número del
+elemento. Por ejemplo:
+En la Tabla 7 podemos observar…
+De la Ecuación 9 se deduce que…
+
+2.7 Notas al pie
+Pueden usarse notas al pie para aclaraciones o ampliaciones al texto que no son de interés general para todos
+los lectores. No utilice las notas al pie para citar bibliografía.
+
+3. Bibliografía utilizada.
+En los trabajos de carreras técnicas no se exige el manejo académico de citas bibliográficas. Sin embargo, si
+utiliza en su trabajo materiales producidos por otros, es obligatorio reconocerlo en el texto de su trabajo.
+Recuerde también incluir ese material en la lista final de referencias (sección “Bibliografía”).
+La sección de “Bibliografía” debe incluir el autor, el título, la fuente (libro, revista, dirección de Internet) y la
+fecha de publicación de cada elemento utilizado, En el caso de fuentes de Internet, se debe indicar la fecha en
+que se recuperó la información utilizada.
+Puede utilizar el formato especificado por IEEE para esta lista, como se indica en el anexo 7. Recomendamos
+presentar esta lista por orden alfabético de autores.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+4
+
+4. Estructura de la obra
+La obra se estructura en Portada, Declaración de autoría, Dedicatoria (opcional), Agradecimientos
+(opcional), Abstract, Palabras clave, Índice, Índice de tablas (opcional), Índice de ilustraciones (opcional),
+Cuerpo de la obra, Bibliografía utilizada y Anexos.
+La ausencia de elementos obligatorios de la estructura de la obra implica que el trabajo global sea
+calificado con un nivel D de incumplimiento.
+Cada una de las partes enumeradas debe comenzar en una página nueva.
+4.1 Portada – obligatoria
+La portada debe presentar, centrados, los siguientes elementos:
+• La leyenda “Universidad ORT Uruguay” (sin comillas)
+• El nombre completo y correcto de la Facultad (Facultad de Ingeniería).
+• El título del trabajo, que no debe incluir siglas, y si así fuera estas deberán estar explicadas (p. ej. SIGO:
+Sistema Integral de Gestión Odontológica).
+• El subtítulo (si existe)
+• La leyenda “Entregado como requisito para la obtención del título de (nombre del título)” (sin comillas)
+(p.ej. Analista Programador)
+• Autores (nombre, apellido y número de estudiante de cada uno) (ej. Sebastián Ayala - 96025).
+• Tutor (nombre y apellido) (p. ej. Juan Pérez)
+• Año de la entrega (p. ej. 2020).
+(Véase un ejemplo de portada en el ANEXO 3)
+Nota: La portada es un elemento clave de identificación. El nombre de la universidad, facultad y del título
+que se otorga deben ser las denominaciones oficiales exactas, correspondientes al plan de estudios que se
+completa con el trabajo final. Estos son elementos fundamentales de identificación, lo mismo que los
+nombres, apellidos, y el año de entrega.
+4.2 Declaración de autoría – obligatoria
+De acuerdo a lo establecido en el ANEXO 2. Incrustar las firmas escaneadas, poner aclaración de firma y la
+fecha del día de la firma.
+.
+4.3 Dedicatoria - opcional
+No es obligatorio incluir esta sección. Si lo hace, no utilizar letra cursiva y asegurar que los nombres que
+mencione sean correctos.
+
+4.4 Agradecimientos – opcional
+No es obligatorio incluir esta sección. Se trata de un breve reconocimiento a personas o instituciones que de
+diversas maneras han ayudado en la elaboración del trabajo.
+En caso de incluir agradecimientos, asegúrese de usar los nombres correctos y completos de las instituciones
+y las personas que cite aquí.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+5
+
+4.5 Abstract - obligatorio
+Consiste de un resumen del contenido del trabajo, que se usa para difusión y para que el lector potencial sepa
+en qué consiste el trabajo sin necesidad de leerlo completamente. Puede tener una extensión máxima de 400
+palabras. Debe ser coherente con el contenido del trabajo final. El documento 306 puede ayudar a producir
+un resumen correcto.
+4.6 Palabras clave - obligatorio
+Conjunto de palabras que están directamente relacionadas con el contenido de la obra, que además deberán
+ser incluidas en las propiedades del archivo PDF para facilitar que el documento sea indexado correctamente
+por los buscadores, facilitando así su uso y recuperación.
+4.7 Índice - obligatorio
+Es obligatorio incluir un índice donde deben figurar todas las partes, capítulos y subcapítulos del texto, cada
+una titulada con las mismas palabras que en el cuerpo de la obra, indicando la página correcta en que se
+encuentra, incluyendo las referencias bibliográficas y los anexos. (Véase un ejemplo de índice en el ANEXO
+5). En el Índice se ponen todos aquellos ítems que aparecen luego del mismo, pero no aquellos que lo
+preceden. Es decir, aparecen en el Índice los capítulos del cuerpo de la obra como primeros elementos.
+Además de este índice principal, es deseable incluir un Índice de tablas (opcional), y un Índice de
+ilustraciones (opcional) en el mismo formato que el índice principal.
+4.8 Cuerpo de la obra – obligatorio
+Debe estar dividido en capítulos, para facilitar una exposición coherente y una mejor comprensión del lector.
+4.9 Glosario – opcional
+Cuando se utilizan siglas, abreviaturas, o símbolos para variables, es recomendable incluir un Glosario con
+sus definiciones, para facilitar el uso del trabajo final. Si se utiliza un Glosario, ordenarlo alfabéticamente por
+la sigla, abreviatura o símbolo.
+
+4.10 Bibliografía - obligatoria
+La bibliografía es todo aquel documento o fuente que utilizó para realizar el trabajo, como p. ej. libros,
+revistas, páginas web, libros digitales. Incluirlas en esta sección por orden alfabético, indicando autor, título,
+la fuente (libro, revista, dirección de Internet) y la fecha de publicación. En el caso de fuentes de Internet, se
+debe indicar además la fecha en que se recuperó la información utilizada. Puede utilizar el formato IEEE
+para esta lista, como se resume en el anexo 7.
+
+4.11 Anexos - opcionales
+Los anexos contienen material complementario de su trabajo, que se separa del cuerpo de la obra para mayor
+claridad, o para ser referenciados por separado. Su paginado debe continuar la secuencia del resto del trabajo.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+6
+
+5. Formato de entrega del TFDC
+El componente monográfico (documento escrito) se entrega en formato PDF, en versión electrónica, en un
+medio digital legible por ordenador de escritorio, según los detalles que disponga la Coordinación de la
+carrera. El trabajo completo puede incluir otros elementos (código de programación, archivos de datos, etc.)
+que se tratarán según indique la Coordinación.
+El documento electrónico PDF debe tener asociadas las propiedades o metadatos (autores, título, tema, y
+palabras clave), que deben coincidir con la portada del trabajo. En el ANEXO 1 se trata la generación de
+archivos PDF a partir de procesadores de texto, y se explica la forma de asociar estas propiedades al
+documento PDF.
+La dimensión de las páginas en el documento electrónico PDF debe ser A4, permitiéndose algunas páginas o
+secciones en formato A3 (por ejemplo, para diagramas de gran complejidad), siempre que todas las secciones
+(incluso con páginas de diferente tamaño) integren un único archivo PDF y todas las páginas, sin importar su
+tamaño, estén numeradas en secuencia correcta.
+El nombre del archivo PDF debe seguir la convención que se indica en el ANEXO 4 - MEDIO DIGITAL DE
+ENTREGA.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+7
+
+ANEXO 1
+Este anexo trata sobre cómo generar archivos PDF desde procesadores de texto y cómo completar las
+propiedades del archivo generado.
+Los buscadores de Internet indexan las propiedades del documento, y las tienen en cuenta en sus búsquedas. Si
+se desea que el documento aparezca en las búsquedas que indiquen palabras clave relevantes, se deben crear
+correctamente estas propiedades.
+El documento correspondiente al componente monográfico se genera en PDF desde el procesador de texto. En
+Word 2007 y posteriores se utilizan los comandos Archivo /Guardar como (colocar cursor sobre la opción
+Guardar como, y luego elegir la opción de formato PDF). Otros procesadores de texto tienen opciones similares
+para generar archivos en formato PDF.
+Las propiedades del documento (título, autor, tema, palabras clave) se toman desde el documento del procesador
+de texto, en el momento de la generación del PDF. Los autores, título y palabras clave deben corresponder con
+la portada y el contenido del proyecto.
+Antes de generar el documento PDF desde el procesador de texto, se debe verificar que las propiedades del
+documento de procesador de texto (es decir, título, tema, autor y palabras clave) corresponden al trabajo. Estas
+propiedades, en Word 2007, se acceden desde el menú general (extremo superior izquierdo, globo de colores)
+seleccionando Preparar / Propiedades. El título y los autores en las propiedades del documento se deben
+corresponder con la portada; las palabras clave son aquellas que correspondan al tema del trabajo.
+Luego de generar el documento en PDF, se recomienda abrirlo en el lector correspondiente (p.ej. Adobe Reader)
+y verificar las propiedades generadas, por medio de los menúes Archivo / Propiedades / Descripción (o bien File
+/ Properties/Description si se usa la versión en inglés), para asegurar que los valores de título, tema, autores y
+palabras clave son los correctos. Si el documento se genera con una impresora PDF puede ser necesario, según
+el software utilizado, ingresar las propiedades previamente a la impresión.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+8
+
+ANEXO 2
+Este anexo trata sobre cómo redactar la declaración de autoría. Debe constar del siguiente texto:
+Nosotros, [nombres de los autores], declaramos que el trabajo que se presenta en esa obra es de nuestra propia
+mano. Podemos asegurar que:
+• La obra fue producida en su totalidad mientras realizábamos [nombre de la actividad curricular que
+origina la obra];
+• Cuando hemos consultado el trabajo publicado por otros, lo hemos atribuido con claridad;
+• Cuando hemos citado obras de otros, hemos indicado las fuentes. Con excepción de estas citas, la obra es
+enteramente nuestra;
+• En la obra, hemos acusado recibo de las ayudas recibidas;
+• Cuando la obra se basa en trabajo realizado conjuntamente con otros, hemos explicado claramente qué
+fue contribuido por otros, y qué fue contribuido por nosotros;
+• Ninguna parte de este trabajo ha sido publicada previamente a su entrega, excepto donde se han realizado
+las aclaraciones correspondientes.
+
+[Firma del
+alumno]
+insertadas
+gráficamente
+
+[Firma del
+alumno]
+insertadas
+gráficamente
+
+[Firma del
+alumno]
+insertadas
+gráficamente
+
+[aclaración de
+firma]
+[Fecha del día de
+entrega]
+
+[aclaración de
+firma]
+[Fecha del día de
+entrega]
+
+[aclaración de
+firma]
+[Fecha del día
+entrega]
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+9
+
+ANEXO 3
+Este anexo detalla los datos que debe tener la PORTADA (en este orden):
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+10
+
+ANEXO 4
+Medio Digital de entrega
+La entrega se realiza en un medio digital legible por ordenador de escritorio. El medio debe contener un archivo
+PDF, con la obra completa.
+El nombre del archivo debe corresponder a la siguiente convención:
+<Fecha de entrega en formato AAAAMMDD><Código de la carrera><Número de estudiante 1><Número de
+estudiante 2><Número de estudiante 3>
+El código de la carrera Analista Programador es AP.
+Un ejemplo en donde los números de estudiantes son: 123456, 123457 y 123458, la entrega es el 10/11/2020,
+sería: 20201110-AP-123456-123457-123458.pdf
+Por ejemplo, si se trata de un único estudiante cuyo código es 123459, y entrega el 25/11/2020, el nombre del
+archivo sería: 20201125-AP-123459.pdf
+En caso de que existan dudas sobre si un medio digital resulta apropiado, se debe consultar a la Coordinación.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+11
+
+ANEXO 5
+Este anexo muestra un ejemplo de índice del documento
+En el Índice se ponen todos aquellos ítems que aparecen luego del mismo
+Índice
+1. Introducción ....................................................................................................................... 14
+1.1. Descripción de la empresa cliente .............................................................................. 14
+1.1.1. Descripción general ......................................................................................... 14
+1.1.2. Tipo de cursos brindados ................................................................................. 14
+1.2. Descripción del proyecto ........................................................................................... 15
+1.2.1. Objetivos del proyecto ..................................................................................... 15
+1.2.2. Integrantes del equipo ...................................................................................... 16
+2. Análisis estratégico de la empresa y su entorno ................................................................ 21
+2.1. Análisis del entorno ................................................................................................... 22
+2.2. Análisis del modelo de negocio ................................................................................. 24
+2.3. Conclusiones y lecciones aprendidas ........................................................................ 25
+3. Aporte de valor al negocio................................................................................................. 26
+3.1. Problemática existente ............................................................................................... 26
+3.2. Solución planteada ..................................................................................................... 28
+3.3. Conclusiones .............................................................................................................. 36
+4. Especificación de requerimientos ...................................................................................... 37
+4.1. Introducción ............................................................................................................... 37
+4.2. Descripción General................................................................................................... 40
+4.3. Requerimientos Funcionales ...................................................................................... 41
+4.3.1. Componente web ............................................................................................. 41
+4.3.2. Adaptación móvil............................................................................................. 61
+4.4. Requerimientos no funcionales .................................................................................. 61
+5. Descripción de la solución de software ............................................................................. 64
+5.1. Descripción funcional del producto ........................................................................... 64
+5.2. Etapa de desarrollo..................................................................................................... 67
+5.3.1. Introducción ..................................................................................................... 67
+5.3.2. Tecnología ....................................................................................................... 68
+5.3. Conclusiones y lecciones ........................................................................................... 92
+6. Gestión del Proyecto.......................................................................................................... 93
+6.1. Introducción ............................................................................................................... 93
+6.2. Metodología ............................................................................................................... 93
+6.3. Cronograma.............................................................................................................. 100
+6.4. Métricas.................................................................................................................... 116
+6.5. Conclusiones y lecciones aprendidas ....................................................................... 136
+7. Conclusiones, lecciones aprendidas y trabajo a futuro .................................................... 138
+7.1. Conclusiones y lecciones aprendidas ....................................................................... 138
+7.2. Trabajo a futuro........................................................................................................ 139
+Glosario ....................................................................................................................... 141
+Referencias bibliográficas ............................................................................................... 142
+Bibliografía ...................................................................................................................... 143
+Anexos
+....................................................................................................................... 144
+Anexo 1: Análisis de las 5 fuerzas de Porter ................................................................... 144
+Anexo 2: Análisis del modelo Canvas de negocio .......................................................... 153
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+12
+
+ANEXO 6
+Este anexo le da pautas para la realización del trabajo final desde el comienzo del mismo.
+Correctores de formato:
+• Shirley Alamón – alamon@ort.edu.uy
+• Ana Terra – terra@ort.edu.uy
+Antes de comenzar el trabajo:
+• Dispongo de los estándares de presentación
+• Dispongo de los estándares de citación bibliográfica del IEEE
+• Conozco el proceso general de corrección académica y de verificación de formato de presentación
+del trabajo.
+• La integración de mi grupo se ajusta a las condiciones establecidas para los trabajos finales de mi
+carrera.
+Durante la realización del trabajo:
+• Mantengo una lista de las fuentes o referencias que se van usando en el trabajo.
+• Si hago referencia a un material, verifico que corresponde efectivamente a la obra citada.
+• Recojo los nombres oficiales de instituciones, organizaciones, empresas, y me aseguro que tengo los
+nombres, cargos y otros datos correctos de cualquier persona que cite en el trabajo o en los
+agradecimientos.
+• Consulto las dudas que se presenten acerca del formato del documento con las personas a cargo de la
+corrección de formato.
+Antes de grabar la versión final del trabajo verifico que:
+• La portada incluye todos los ítems necesarios y son correctos.
+• El título del trabajo no tiene errores de ortografía y refleja el contenido del trabajo.
+• El abstract no tiene errores de ortografía y refleja el contenido del trabajo.
+• La estructura del trabajo corresponde a la establecida (portada, agradecimientos, declaración de
+autoría, dedicatoria, agradecimientos, abstract, índice, cuerpo de la obra dividido en capítulos,
+bibliografía y anexos). Los agradecimientos, la dedicatoria y los anexos son opcionales.
+• El índice refleja exactamente los títulos de cada componente de la obra y la página en que está
+ubicado.
+• Los tipos de letra, márgenes y paginación utilizados cumplen con lo especificado en este documento.
+• No hay errores de ortografía en el texto del cuerpo, anexos, tablas ni ilustraciones.
+• Las citas bibliográficas y las Referencias bibliográficas contienen los elementos necesarios. Si
+decidió usar el sistema del IEEE, lo cumple.
+• Controlo el formato con la lista de verificación del documento 303.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+13
+
+ANEXO 7
+
+Resumen de formato de la IEEE
+Periodicals
+Basic Format:
+[1] J. K. Author, “Name of paper,” Abbrev. Title of Periodical, vol. x, no. x, pp. xxx-xxx, Abbrev. Month, year.
+Examples:
+[1] R. E. Kalman, “New results in linear filtering and prediction theory,” J. Basic Eng., ser. D, vol. 83, pp. 95108, Mar. 1961.
+[2] J. U. Buncombe, “Infrared navigation—Part I: Theory,” IEEE Trans. Aerosp. Electron. Syst., vol. AES-4,
+pp. 352–377, Sept. 1944.
+Books
+Basic Format:
+[1] J. K. Author, “Title of chapter in the book,” in Title of His Published Book, xth ed. City of Publisher,
+Country if not USA: Abbrev. of Publisher, year, ch. x, sec. x, pp. xxx–xxx.
+Examples:
+[1] B. Klaus and P. Horn, Robot Vision. Cambridge, MA: MIT Press, 1986.
+[2] L. Stein, “Random patterns,” in Computers and You, J. S. Brake, Ed. New York: Wiley, 1994, pp. 55-70.
+[3] R. L. Myer, “Parametric oscillators and nonlinear materials,” in Nonlinear Optics, vol. 4, P. G. Harper and
+B. S. Wherret, Eds. San Francisco, CA: Academic, 1977, pp. 47-160.
+[4] M. Abramowitz and I. A. Stegun, Eds., Handbook of Mathematical Functions (Applied Mathematics Series
+55). Washington, DC: NBS, 1964, pp. 32-33.
+Reports
+La forma general para citar informes técnicos es colocar el nombre y la ubicación de la empresa o institución
+después del autor y el título y dar el número y la fecha del informe al final de la referencia.
+Basic Format:
+[1] J. K. Author, “Title of report,” Abbrev. Name of Co., City of Co., Abbrev. State, Rep. xxx, year.
+Examples:
+[1] E. E. Reber, R. L. Michell, and C. J. Carter, “Oxygen absorption in the earth’s atmosphere,” Aerospace
+Corp., Los Angeles, CA, Tech. Rep. TR-0200 (4230-46)-3, Nov. 1988.
+[2] J. H. Davis and J. R. Cogdell, “Calibration program for the 16-foot antenna,” Elect. Eng. Res. Lab., Univ.
+Texas, Austin, Tech. Memo. NGL-006-69-3, Nov. 15, 1987.
+[3] R. E. Haskell and C. T. Case, “Transient signal propagation in lossless isotropic plasmas,” USAF Cambridge
+Res. Labs., Cambridge, MA, Rep. ARCRL-66-234 (II), 1994, vol. 2.
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+14
+
+Handbooks
+Basic Format:
+[1] Name of Manual/Handbook, x ed., Abbrev. Name of Co., City of Co., Abbrev. State, year, pp. xxx-xxx.
+Examples:
+[1] Transmission Systems for Communications, 3rd ed., Western Electric Co., Winston-Salem, NC, 1985, pp.
+44–60.
+[2] Motorola Semiconductor Data Manual, Motorola Semiconductor Products Inc., Phoenix, AZ, 1989
+
+Published Conference Proceedings
+La forma general para citar las actas de la conferencia es incluir el autor y el título del artículo, seguido del
+nombre (y la ubicación, si se da) de la conferencia en cursiva utilizando estas abreviaturas estándar.
+NOTA: Todos los artículos publicados de conferencias o actas tienen números de página.
+Basic Format:
+[1] J. K. Author, “Title of paper,” in Unabbreviated Name of Conf., City of Conf., Abbrev. State (if given), year,
+pp. xxx-xxx.
+Examples:
+[1] G. R. Faulhaber, “Design of service systems with priority reservation,” in Conf. Rec. 1995 IEEE Int. Conf.
+Communications, pp. 3–8. *** If the year is given in the conference title, it may be omitted from the end of
+the reference as shown here.***
+[2] S. P. Bingulac, “On the compatibility of adaptive controllers,” in Proc. 4th Annu. Allerton Conf. Circuit and
+System Theory, New York, 1994, pp. 8–16.
+Papers Presented at Conferences
+Basic Format:
+[1] J. K. Author, “Title of paper,” presented at the Unabbrev. Name of Conf., City of Conf., Abbrev. State, year.
+Examples:
+[1] M. Mayer, presented at the 4th Congr. Permanent Magnets, Grenoble, France, Mar. 1995.
+[2] J. G. Kreifeldt, “An analysis of surface-detected EMG as an amplitude-modulated noise,” presented at the
+1989 Int. Conf. Medicine and Biological Engineering, Chicago, IL.
+Patents
+Basic Format:
+[1] J. K. Author, “Title of patent,” U.S. Patent x xxx xxx, Abbrev. Month, day, year.
+Example:
+[1] J. P. Wilkinson, “Nonlinear resonant circuit devices,” U.S. Patent 3 624 125, July 16, 1990.
+NOTA: Utilice "fecha de emisión" si se dan varias fechas.
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+15
+
+Theses (M.S.) and Dissertations (Ph.D.)
+Basic Format:
+[1] J. K. Author, “Title of thesis,” M.S. thesis, Abbrev. Dept., Abbrev. Univ., City of Univ., Abbrev. State, year.
+[2] J. K. Author, “Title of dissertation,” Ph.D. dissertation, Abbrev. Dept., Abbrev. Univ., City of Univ.,
+Abbrev. State, year.
+Examples:
+[1] J. O. Williams, “Narrow-band analyzer,” Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge,
+MA, 1993.
+[2] N. Kawasaki, “Parametric study of thermal and chemical nonequilibrium nozzle flow,” M.S. thesis, Dept.
+Electron. Eng., Osaka Univ., Osaka, Japan, 1993.
+Unpublished
+Estos son los dos tipos más comunes de referencias inéditas.
+Basic Format :
+[1] J. K. Author, private communication, Abbrev. Month, year.
+[2] J. K. Author, “Title of paper,” unpublished.
+Examples:
+[1] A. Harrison, private communication, May 1995.
+[2] B. Smith, “An approach to graphs of linear forms,” unpublished.
+[3] A. Brahms, “Representation error for real numbers in binary computer arithmetic,” IEEE Computer Group
+Repository, Paper R-67-85.
+Standards
+Basic Format:
+[1] Title of Standard, Standard number, date.
+Examples:
+[1] IEEE Criteria for Class IE Electric Systems, IEEE Standard 308, 1969.
+[2] Letter Symbols for Quantities, ANSI Standard Y10.5-1968.
+On-Line Sources
+Books, Monographs
+Basic Format:
+[1] J. K. Author. (year, month day). Title (edition) [Type of medium]. Available: http://www.(URL)
+Example:
+[1] J. Jones. (1991, May 10). Networks (2nd ed.) [Online]. Available: http://www.atm.com
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+16
+
+Journal Articles
+Basic Format:
+[1] J. K. Author. (year, month day). Title. Journal [Type of medium]. volume(issue), paging if given. Available:
+http://www.(URL)
+Example:
+[1] M. Semilof. (1996, July 15). Driving commerce to the Web—Corporate Intranets and the Internet: Lines
+blur.
+Communications
+Week
+[Online].
+6(19).
+Available:
+http://www.techweb.com/se/directlink.cgi?CWK19960715S0005
+Magazine Articles
+Basic Format:
+[1] J. K. Author. (year, month day). Title. Magazine [Type of medium]. paging if given. Available:
+http://www.(URL)
+Examples:
+[1] A. Stuart, Ed. (1996, Dec. 3). Business in the wake of the Web. WebMaster Mag. [Online]. Available:
+http://www.cio.com/cgi-bin/gate2?~
+[2] L. Brigman (1997, Feb.). The never-ending
+Papers Presented at Conferences
+Basic Format:
+[1] J. K. Author. Title. presented at Conference title. [Type of Medium]. Available: site/path/file
+Example:
+[1] Process Software Corp., MA. Intranets: Internet technologies deployed behind the firewall for corporate
+productivity.
+presented
+at
+INET’96
+Annu.
+Meeting
+[Online].
+Available:
+http://www.process.com/Intranets/wp2.htp
+
+Reports and Handbooks
+Basic Format:
+[1] J. K. Author. (year, month). Title. Company. City, State or Country. [Type of Medium]. Available:
+site/path/file
+Examples:
+[1] S. L. Talleen. (1996, Aug.). The IntraNet Architecture: Managing information in the new paradigm. Amdahl
+Corp, CA. [Online]. Available: http://www.amdahl.com/doc/products/bsg/intra/infra/html
+[2] Netscape Communications Corp. (1997, Dec.). The new way to share workgroup information. [Online].
+Available: http://home.netscape.com/comprod/a
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+17
+
+U.S. Government Documents
+Basic Format:
+[1] Legislative body. Number of Congress, Session. (year, month day). Number of bill or resolution, Title.
+[Type of medium]. Available: site/path/file
+Example:
+[1] U.S. House. 102nd Congress, 1st Session. (1991, Jan. 11). H. Con. Res. 1, Sense of the Congress on
+Approval of Military Action. [Online]. Available: LEXIS Library: GENFED File: BILLS
+Patents
+Basic Format:
+[1] Name of the invention, by inventor’s name. (year, month day). Patent Number [Type of medium]. Available:
+site/path/file
+Example:
+[1] Musical toothbrush with adjustable neck and mirror, by L.M.R. Brooks. (1992, May 19). Patent D 326 189
+[Online]. Available: NEXIS Library: LEXPAT File: DESIGN
+Websites
+Basic Format:
+[1] Nombre de la página (empresa o Autor), “Nombre del artículo entre paréntesis”, mes año, [Online].
+Available: site/path/file
+Example:
+[1] Universidad ORT Uruguay, “Tener en cuenta el impacto social, ambiental y económico; un desafío de todos
+los días”, octubre 2020, [Online]. Available: https://www.ort.edu.uy/105002/32/tener-en-cuenta-el-impactosocial-ambiental-y-economico-un-desafio-de-todos-los-dias.html
+
+Los formatos del IEEE se pueden consultar en:
+- IEEE Periodicals Transactions/Journals Department, “IEEE editorial style manual,” [Online]. Available:
+https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/style_references_manual.pdf
+
+Normas específicas para la presentación de trabajos finales de carrera (TFDC) Facultad de Ingeniería –
+Escuela de Tecnología – Documento 302 ET
+Universidad ORT Uruguay
+
+18
+
+

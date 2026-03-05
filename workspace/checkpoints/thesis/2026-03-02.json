@@ -1,0 +1,18 @@
+{
+  "date": "2026-03-02",
+  "stage": "ok",
+  "findings_count": 7,
+  "has_cache_reuse": false,
+  "delivery_mode": "dry-run",
+  "delivery_error": null,
+  "generated_at": "2026-03-02T11:00:00Z",
+  "sources": [
+    "https://parseur.com/blog/agentic-document-extraction",
+    "https://awesomeagents.ai/tools/best-ai-voice-generators-2026/",
+    "https://newsroom.ibm.com/2026-02-24-deepgram-and-ibm-introduce-advanced-voice-capabilities-for-enterprise-ai",
+    "https://www.vertafore.com/resources/blog/2026-insurance-agency-trends",
+    "https://www.reinsurancene.ws/gen-ai-could-unlock-50-70bn-in-insurance-revenue-estimates-mckinsey-company/",
+    "https://insurance-edge.net/2026/02/23/from-automation-to-agency-what-insurers-need-to-understand-about-scaling-ai-agents/",
+    "https://www.businessinsurance.com/insurers-look-beyond-efficiency-to-risk-management-in-ai-use-2/"
+  ]
+}

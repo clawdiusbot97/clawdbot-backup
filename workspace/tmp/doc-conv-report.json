@@ -1,0 +1,35 @@
+{
+  "ok": [],
+  "fail": [
+    {
+      "id": "1vf2gOZGZmAmlPJ5gC4xtlZ26bkryza8I",
+      "name": "Aprobación de propuesta de proyecto.docx",
+      "step": "download_export",
+      "error": "--format \"txt\" not supported for non-Google Workspace files (mimeType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"); file can only be downloaded as-is\ninvalid --format \"html\" (use pdf|csv|xlsx|pptx|txt|png|docx)\n--format \"pdf\" not supported for non-Google Workspace files (mimeType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"); file can only be downloaded as-is"
+    },
+    {
+      "id": "1s_tFGOKycIou5y1R6tjmVBD7G3PDbeRq",
+      "name": "ALUMNOS - proyectos elegidos.doc",
+      "step": "download_export",
+      "error": "--format \"txt\" not supported for non-Google Workspace files (mimeType=\"application/msword\"); file can only be downloaded as-is\ninvalid --format \"html\" (use pdf|csv|xlsx|pptx|txt|png|docx)\n--format \"pdf\" not supported for non-Google Workspace files (mimeType=\"application/msword\"); file can only be downloaded as-is"
+    },
+    {
+      "id": "1YrDXZ6sOThemM7Zmw_2m86My5OI44Hj5",
+      "name": "PresentacionProyectosAlumnos 2025.doc",
+      "step": "download_export",
+      "error": "--format \"txt\" not supported for non-Google Workspace files (mimeType=\"application/msword\"); file can only be downloaded as-is\ninvalid --format \"html\" (use pdf|csv|xlsx|pptx|txt|png|docx)\n--format \"pdf\" not supported for non-Google Workspace files (mimeType=\"application/msword\"); file can only be downloaded as-is"
+    },
+    {
+      "id": "1SRzme1srUJA6mJ5ACEdUgimNenOH1gSt",
+      "name": "Carta de Confidencialidad_MODELO.docx",
+      "step": "download_export",
+      "error": "--format \"txt\" not supported for non-Google Workspace files (mimeType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"); file can only be downloaded as-is\ninvalid --format \"html\" (use pdf|csv|xlsx|pptx|txt|png|docx)\n--format \"pdf\" not supported for non-Google Workspace files (mimeType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"); file can only be downloaded as-is"
+    },
+    {
+      "id": "13-xhrJbOLs-JRAsQb-5ZabVFUKEw2Nhz",
+      "name": "Formulario adicional para proyecto emprendedores.docx",
+      "step": "download_export",
+      "error": "--format \"txt\" not supported for non-Google Workspace files (mimeType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"); file can only be downloaded as-is\ninvalid --format \"html\" (use pdf|csv|xlsx|pptx|txt|png|docx)\n--format \"pdf\" not supported for non-Google Workspace files (mimeType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"); file can only be downloaded as-is"
+    }
+  ]
+}

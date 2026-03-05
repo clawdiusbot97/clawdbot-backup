@@ -1,0 +1,124 @@
+# Brokia — Anteproyecto v1 (SOT) — ORT 2026
+
+> Source of Truth (hub): estructura + placeholders para automatización/gap analysis.
+> Regla: **no contenido inventado**. Cada sección incluye un placeholder + bloque de comentarios con requisitos y citas.
+
+---
+
+## 0) Metadata / Tracking
+
+PLACEHOLDER: (estado, versión, responsables, links)
+
+
+
+---
+
+## 1) Paquete obligatorio de entrega (checklist de artefactos)
+
+PLACEHOLDER: (lista de archivos a adjuntar + links a dónde están guardados)
+
+
+
+---
+
+## 2) Portada
+
+PLACEHOLDER: (completar datos de portada según normas ORT)
+
+
+
+---
+
+## 3) Declaración de autoría
+
+PLACEHOLDER: (texto + firmas escaneadas + aclaración + fecha)
+
+
+
+---
+
+## 4) Dedicatoria (opcional)
+
+PLACEHOLDER: (opcional)
+
+
+
+---
+
+## 5) Agradecimientos (opcional)
+
+PLACEHOLDER: (opcional)
+
+
+
+---
+
+## 6) Abstract (obligatorio)
+
+PLACEHOLDER: (resumen)
+
+
+
+---
+
+## 7) Palabras clave (obligatorio)
+
+PLACEHOLDER: (keywords)
+
+
+
+---
+
+## 8) Índice (obligatorio)
+
+PLACEHOLDER: (generar tabla de contenidos)
+
+
+
+---
+
+## 9) Cuerpo del anteproyecto
+
+PLACEHOLDER: (capítulos/secciones del anteproyecto)
+
+
+
+### 9.1 Contexto / problema
+
+PLACEHOLDER
+
+
+
+### 9.2 Objetivos
+
+PLACEHOLDER
+
+### 9.3 Alcance
+
+PLACEHOLDER
+
+### 9.4 Metodología / plan
+
+PLACEHOLDER
+
+---
+
+## 10) Referencias bibliográficas (obligatoria)
+
+PLACEHOLDER: (lista IEEE)
+
+
+
+---
+
+## 11) Anexos (opcionales, pero permitidos)
+
+PLACEHOLDER: (anexos si aplica)
+
+
+
+---
+
+## 12) Checklist de formato (pre-flight)
+
+PLACEHOLDER: (marcar OK/NO)

@@ -1,0 +1,214 @@
+Montevideo, 23 de enero de 2026
+Estimado/a estudiante de Proyecto de Ingeniería en Sistemas:
+El proyecto se rige en su totalidad por los Documentos 302-FI, 303, 304, 306 y 307 publicados en la
+web institucional de la universidad (https://www.ort.edu.uy/reglamentos).
+Para proyectos de desarrollo (Software Factory o emprendedor), el Ing. Rafael Bentancur se encuentra a su
+disposición para asesorarle vía canal de Teams: link
+Para proyectos de investigación, el Dr. Gerardo Matturro se encuentra a su disposición para asesorarle vía
+canal de Teams o correo (matturro@fi365.ort.edu.uy)
+Toda la información se encuentra en Aulas/ Proyecto Final Sistemas: link
+
+CALENDARIO
+• Charla informativa: 03/02/2026 19 h (PRESENCIAL)
+• Fecha límite para presentación de ideas para proyectos emprendedores: 12/02/2025 a través de
+formulario web.
+• Taller de Software Factory – obligatorio para los estudiantes que realicen proyecto de la industria:
+− Clases: 05/02, 09/02 y 11/02 de 19:00 a 21:00 h - PRESENCIAL
+• Reuniones de tutoría - emprendimientos: a coordinar con el docente
+• Taller de Proyecto Emprendedor - obligatorio para estudiantes que presentaron ideas de proyectos
+emprendedores. Acceso a Aulas: Link
+− Clases: 24/02, 26/02, 03/03 de 18:30 a 20:30 h
+− Docente: Enrique Topolansky
+− Reuniones de tutoría: a coordinar con la docente
+• Presentación de proyectos (Feria de Proyectos): 26/02/2026 (horario a confirmar)
+• Entrega de anteproyecto (en Gestión): fecha límite 26/03/2026 hasta 21 h
+• Asignación de proyectos: 13/04/2026
+− En el caso de que las propuestas presentadas por un equipo no hayan sido aprobadas, dispondrán
+como fecha límite hasta el 22/04/2026 para formular y entregar una nueva propuesta.
+• Informe de avance del proyecto por parte del tutor
+− Entrega: 30/09/2026
+• Revisiones y presentaciones
+− Proyectos de investigación: revisiones (1-2): a coordinar con el tutor- investigador
+− Proyectos de desarrollo: presentaciones orales (3): a coordinar con el laboratorio
+• Entrega del proyecto
+− Primera instancia (en Gestión):
+• Entrega: 01/03/2027 hasta 21 h
+• Defensa: 05/04/2027 al 08/04/2027
+− Segunda instancia (en Gestión, solo quienes no aprobaron la primera instancia)
+• Entrega: 31/05/2027 hasta 21 h
+• Entrega definitiva (en Aulas): incluye las correcciones indicadas por los correctores en la defensa y
+la corrección de formato. Luego de realizada la defensa, recibirán vía correo la fecha pautada
+Saludos cordiales,
+A/P Víctor Paulós Greco
+Secretario Docente
+Facultad de Ingeniería
+
+Ing. Eduardo Mangarelli
+Decano
+Facultad de Ingeniería
+
+Requisitos obligatorios para entrega de anteproyecto
+✓ Formulario de Presentación de Proyectos (en Aulas).
+✓ Formulario con descripción funcional de cada propuesta de proyecto (“Formulario para Presentación de
+Proyectos (descripción funcional)” (en Aulas).
+✓ Copia del correo electrónico (en PDF), con el visto bueno del docente del laboratorio para la presentación
+de cada uno de los proyectos elegidos.
+✓ Formulario adicional para proyectos emprendedores (en Aulas, si corresponde), más la documentación
+exigida por el CIE.
+✓ Para proyectos propios presentados por el equipo con empresas, entregar carta de autorización firmada
+(en Aulas), mediante acuerdo directo con el equipo, sea su primera o segunda opción.
+✓ Entrega de certificado de escolaridad de cada integrante del equipo (se solicita por Gestión)
+✓ Entrega de curriculum vitae de cada integrante del equipo
+
+La asignación de proyecto no será realizada si falta alguno de los ítems mencionados
+anteriormente. Las propuestas del equipo serán consideradas una vez que la entrega de
+anteproyecto este completa.
+La entrega del anteproyecto deberá ser realizada por un integrante de cada equipo, pero es
+indispensable que estén todos inscriptos a la instancia.
+
+Presentación de propuestas de proyectos de fin de carrera
+Objetivos del proyecto
+La realización del proyecto de fin de carrera tiene como objetivos:
+•
+
+Aplicar los conocimientos adquiridos durante la carrera en un contexto real.
+
+•
+
+Fomentar la interacción de los participantes (estudiantes y docentes) con la industria.
+
+•
+
+Permitir a los estudiantes generar experiencia en dominios de aplicación no tradicionales y en
+tecnologías novedosas, que aporten a su desarrollo profesional.
+Alentar el trabajo en proyectos con dimensiones en alcance y número de personas similares a
+proyectos similares en la industria.
+Desarrollar la capacidad de reconocer y seleccionar prácticas de ingeniería de software y/o de
+sistemas de información apropiadas a las características de cada proyecto.
+Desarrollar el intercambio de experiencias y conocimiento entre los estudiantes y tutores con amplia
+experiencia en el desarrollo de proyectos.
+En algunos casos, brindar la oportunidad a los estudiantes de participar en las líneas de investigación
+de los laboratorios o de las cátedras.
+Permitir a los estudiantes iniciar sus propios emprendimientos en la pre incubadora.
+
+•
+•
+•
+•
+•
+
+Tipos de proyectos
+Las propuestas pueden estar dentro de cuatro categorías:
+1) Proyectos emprendedores
+Son emprendimientos propios presentados por los estudiantes. En la propuesta se debe demostrar
+que se realizará un proyecto con alguna oportunidad de mercado. El Taller de Proyecto Emprendedor
+(obligatorio) consiste en validar la idea con el apoyo del CIE en cuatro dimensiones: técnica, mercado,
+económica y legal. Previo a presentar la propuesta de proyecto los estudiantes deberán contar con
+la aprobación del Centro de Innovación y Emprendimientos (CIE) de la Universidad (carta firmada).
+Pasos a seguir:
+1. Presentar la idea.
+2. Realizar el Taller de Proyecto Emprendedor (es obligatorio para su realización haber enviado la
+idea previamente):
+3. Postular la propuesta emprendedora en la entrega del Anteproyecto. Para que la propuesta sea
+considerada, además de la aprobación del CIE deberá contar con el aval firmado del laboratorio.
+4. Pre incubación: Según normas y reglamentos del CIE.
+2) Proyectos con la industria - empresa presentada por el equipo
+Son proyectos que tienen una empresa real como destinatario. Estos proyectos deben ser interesantes
+desde el punto de vista académico, ya sea por el tipo de proyecto, problema que resuelve o la
+aplicación de tecnología que utilicen. El laboratorio podrá recibir proyectos de este tipo presentados
+por estudiantes, en cuyo caso deberá haber una carta de la empresa manifestando su interés en su
+
+realización.
+3) Proyectos con la industria - empresa presentada en la feria de proyectos
+Ídem punto 2. No se requiere la carta de la empresa.
+4) Proyectos de investigación
+Están orientados al apoyo de las líneas de investigación de las cátedras de la facultad. Su objetivo
+debe ser siempre lograr la divulgación de conocimiento. Los formatos de publicación pueden ser
+productos de software, monografía, artículos o combinaciones. Estos proyectos son planteados por
+las cátedras. Estos proyectos funcionan por fuera del marco del Laboratorio de Software Factory
+
+Consultas sobre proyectos
+Para coordinar reuniones, por favor enviar un correo electrónico solicitando la reunión e indicando posibles
+horarios.
+•
+
+Asesor de proyectos finales de carrera: Teams
+
+•
+
+Laboratorio de proyectos: Rafael Bentancur - rafael.bentancur@fi365.ort.edu.uy
+
+•
+
+Proyectos emprendedores: Centro de Innovación y emprendimientos - cie@ort.edu.uy
+
+•
+
+Proyectos de investigación: Gerardo Matturro - matturro@fi365.ort.edu.uy
+
+Integración de equipos
+Los proyectos serán realizados en equipos autoseleccionados de estudiantes. La cantidad de estudiantes por
+equipo debe determinarse en función de los requerimientos y las preferencias de los candidatos. El
+laboratorio avalará la integración de los equipos y los proyectos que estos seleccionen. Finalmente, los
+equipos recibirán la aprobación del Comité de Asignación de Proyectos.
+
+Mecanismo de presentación de proyectos
+1) Presentación: el laboratorio y cátedras presentarán la lista de proyectos que se pueden elegir. Además
+los estudiantes podrán presentar sus propios proyectos.
+2) Selección: finalizada la presentación por parte de las cátedras y la Feria de Proyectos, y de acuerdo
+con el calendario establecido en la primera página de este documento, habrá un período para que
+los estudiantes elijan los proyectos, realicen las consultas necesarias o propongan nuevos proyectos.
+Las propuestas deberán ser discutidas y aceptadas por el Laboratorio o investigador
+correspondiente.
+3) Presentación de anteproyecto: los estudiantes deberán entregar la documentación requerida.
+
+Descripción de etapas
+Entrega de anteproyecto:
+
+El Formulario de Presentación de Proyectos debe incluir los datos de cada integrante del equipo.
+Se deberá detallar los nombres de las propuestas de proyecto indicando su orden de preferencia. Cada
+propuesta deberá contener el nombre del proyecto y la aprobación de un responsable del laboratorio o
+cátedra, considerando los siguientes criterios:
+En todos los casos el Formulario de Presentación de Proyectos deberá estar acompañado por las propuestas
+que el equipo elaboró y que el laboratorio o cátedra aprobó.
+−
+
+−
+−
+
+−
+
+En caso de que el equipo elija como primera opción una propuesta de una empresa de las presentadas
+en la Feria, se debe presentar una segunda propuesta para contemplar el caso en que el Comité de
+Asignación de Proyectos asigne la primera opción a otro equipo. La segunda propuesta puede ser de
+cualquier tipo de proyecto.
+En caso de que el equipo tenga como primera preferencia una propuesta para una empresa que el
+propio equipo consiguió no es necesario presentar una propuesta alternativa.
+En caso de que el equipo tenga como primera opción una propuesta para un proyecto del tipo
+Emprendedor, se debe presentar una segunda propuesta. La segunda propuesta podrá ser para otro
+tipo de proyecto. Para el proyecto Emprendedor, se deberá adjuntar el formulario de “Aprobación del
+Taller de Proyectos emprendedores” firmado por quien avala el proyecto (el docente del Taller).
+Para proyectos de investigación presentados por una cátedra o equipo de investigación no es
+necesario presentar una propuesta alternativa.
+
+Asignación de Proyectos:
+A partir de la fecha de entrega indicada en esta misma carta, el Comité de Asignación de Proyectos dispondrá
+de un período para asignar uno para cada equipo. En el caso que ninguna de las propuestas presentadas por
+un equipo haya sido asignada o que la documentación presentada no esté completa, el equipo tendrá un
+plazo para hacer una nueva propuesta. Estas nuevas propuestas tendrán que pasar nuevamente por las
+aprobaciones previas y también por el Comité de Asignación de Proyectos.
+Entrega final de proyecto:
+El proyecto se entrega en línea por Gestión. Los trabajos realizados para el proyecto quedarán en biblioteca
+para consulta. Existe la posibilidad de que se solicite confidencialidad , en cuyo caso la documentación no se
+publica hasta cumplidos dos años. De ser así, solicitarlo por carta, según el modelo publicado en Aulas (link) y
+enviarla a Agostina Izquierdo (izquierdo_a@fi365.ort.edu.uy)
+Corrección y defensa:
+La corrección y defensa del Proyecto serán realizadas en ORT, con el equipamiento de hardware y software
+que ésta dispone. Toda alteración de esta regla deberá ser solicitada y aprobada por escrito por el Decano
+de la Facultad de Ingeniería y anexada a la entrega del Proyecto.
+
+Derechos:
+La cesión de la propiedad intelectual de carácter patrimonial está regulada por el art. 9 del Reglamento
+Estudiantil. Existe un procedimiento para ceder esos derechos que está disponible en Aulas (link).
+
+

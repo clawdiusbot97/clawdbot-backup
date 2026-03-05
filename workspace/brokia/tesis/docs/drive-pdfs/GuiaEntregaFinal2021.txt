@@ -1,0 +1,459 @@
+INS-16
+
+ORTsf
+
+Instructivo para la entrega
+final de proyectos
+
+Páginas:11
+Versión: 6.0
+
+Objetivo
+El objetivo de este documento es brindar a los alumnos una guía para la
+documentación de la entrega final de Proyectos – Laboratorio de Ingeniería
+de Software.
+
+Alcance
+Este documento es aplicable a los equipos de proyecto del Laboratorio de
+Ingeniería de Software.
+
+Realizado por: Laboratorio de Ingeniería de Software
+Revisado por: Laboratorio de Ingeniería de Software
+
+Vigencia: 2021-2022
+Actualización: Diciembre 2020
+
+Archivo: GuiaEntregaFinal2021
+
+Instructivo para la entrega final de proyectos
+
+1
+
+Índice
+INSTANCIAS DE REVISIÓN ...................................................................................................... 3
+PRE-ENTREGA ............................................................................................................................ 3
+ENRULADO ........................................................................ ¡ERROR! MARCADOR NO DEFINIDO.
+ENTREGA FINAL .......................................................................................................................... 4
+CONTENIDO DEL DOCUMENTO ............................................................................................. 5
+GUÍA PARA LA ESTRUCTURA ...................................................................................................... 5
+Portada .................................................................................................................................. 5
+[Agradecimientos] ................................................................................................................ 6
+Resumen (abstract) ............................................................................................................. 6
+Índice...................................................................................................................................... 6
+Introducción........................................................................................................................... 6
+Planteamiento del problema............................................................................................... 6
+Descripción de la solución .................................................................................................. 6
+Proceso de desarrollo ......................................................................................................... 7
+Conclusiones ........................................................................................................................ 8
+Bibliografía ............................................................................................................................ 8
+[Anexos] ................................................................................................................................. 8
+ESTILO Y FORMATO DEL DOCUMENTO ............................................................................. 9
+GUÍAS GENERALES ..................................................................................................................... 9
+SUGERENCIAS DE ESTILO .......................................................................................................... 9
+LISTA DE VERIFICACIÓN............................................................................................................ 10
+ESTÁNDAR PARA EL MEDIO ELECTRÓNICO .................................................................. 11
+ARCHIVOS DE DOCUMENTO ..................................................................................................... 11
+CARÁTULA DEL CD/DVD ................................................. ¡ERROR! MARCADOR NO DEFINIDO.
+
+Instructivo para la entrega final de proyectos
+
+2
+
+Objetivo
+El objetivo de este documento es brindar a los alumnos una guía para elaborar la
+documentación de la entrega final de proyectos de fin de carrera.
+
+Alcance
+Este documento es aplicable a los equipos de proyecto del Laboratorio de Ingeniería de
+Software
+
+Instancias de revisión de la entrega final
+Al finalizar el proyecto los grupos deben elaborar un documento que sintetice el
+conocimiento generado por el mismo. Este documento se publicará en la biblioteca de la
+Universidad. Para facilitar su lectura el documento debe seguir ciertos estándares que
+afectan su estructura y contenido. Estos se detallan más adelante.
+El grupo puede solicitar apoyo al tutor, los correctores del proyecto y los bibliotecarios
+de la Universidad durante la elaboración del documento. Se proveen además varias
+instancias de revisión para que el grupo pueda mejorar esta publicación académica.
+Instancia de revisión
+Pre-entrega
+Informe final
+
+Revisor
+Tutor
+Tribunal (contenido
+académico)
+corrector de formato (ORT)
+Correcciones a la entrega Biblioteca
+Final
+
+Pre-entrega
+•
+•
+•
+•
+
+El tutor es responsable de revisar la publicación académica que se realiza al
+final del proyecto.
+En una fecha fijada por la coordinación del laboratorio y/o acordada por el grupo
+con el tutor se debe enviar por medio electrónico un documento único para ser
+revisado.
+El tutor puede hacer recomendaciones sobre la estructura o el contenido del
+documento. Estas recomendaciones deben ser incorporadas por el grupo antes
+de la entrega del informe.
+El tutor debe comunicar en forma explícita a la Cátedra si la documentación fue
+revisada y si el grupo pasa a la defensa.
+
+Informe final
+•
+
+Consiste en un documento que es entregado en la fecha indicada en la carta
+inicial a través de la plataforma que se indique oportunamente. Ese documento
+es luego enviado por el Laboratorio a los correctores externos (tribunal) para la
+
+Instructivo para la entrega final de proyectos
+
+3
+
+•
+
+•
+•
+•
+
+evaluación académica del proyecto. Este documento es utilizado por los
+correctores durante la defensa.
+Toda la documentación debe cumplir con el Doc. 302, 303 de la Universidad.
+Será revisada en los aspectos formales por el corrector de formato designado
+por ORT. En caso de discrepancia entre esos documentos oficiales de ORT y las
+pautas contenidas en este documento, los documentos de la Universidad tienen
+preponderancia.
+Todos los estudiantes deben realizar su inscripción en el sistema de Gestión
+antes de la fecha de entrega del informe.
+Le entrega (envío) del documento la hace cualquiera de los estudiantes que
+integran el equipo, y es suficiente que la haga uno solo de ellos.
+Los nombres de los archivos de documento que comprenden la entrega deben
+respetar las reglas que se definen en el apartado: Archivo de Documentos.
+
+Entrega Final
+•
+•
+•
+•
+•
+•
+
+Una vez finalizada la defensa el grupo debe realizar los cambios a la
+documentación que hayan sido indicados por el tribunal y por el corrector de
+formato.
+En esta instancia se prepara la documentación definitiva que será catalogada y
+será publicada (depende de la calificación) en la web de la biblioteca de la
+Universidad.
+El número total de páginas del trabajo no debe superar 350 páginas (incluyendo
+los anexos).
+La fecha y plataforma donde se debe entregar el documento corregido se indica
+oportunamente luego de la defensa.
+Esta entrega final debe realizarse aún en caso de que no haya sido necesario
+realizar correcciones al trabajo.
+Esta entrega no requiere inscripción previa.
+
+Instructivo para la entrega final de proyectos
+
+4
+
+Contenido del documento
+A continuación, se brinda una guía para la estructura de las entregas final. El objetivo de
+estas guías es producir un documento que sea conciso, fácil de leer y a la vez
+descriptivo del trabajo realizado. Se cuenta con una plantilla Word que respeta esta
+estructura tanto en contenido como en formato.
+Esta guía debe tomarse como referencia; no es necesario seguirla punto a punto. El
+objetivo que se pretende lograr es que el tribunal y demás lectores puedan comprender
+el trabajo que se desarrolló. Al igual que con otros elementos del proceso de SF, se
+puede adaptar esta documentación según el criterio del equipo y del tutor.
+Debido a que el informe final debe cumplir con las guías establecidas por el Doc. 302
+303 y demás, es importante que estudien la forma en que se va a estructurar. Desde el
+inicio de la elaboración del documento se debe prestar atención a las sugerencias que
+se encuentran en la siguiente sección de este documento.
+Las secciones que se describen a continuación (salvo los anexos) forman el cuerpo
+central del trabajo. El mismo debe de ser auto contenido, lo que significa que con leer
+solamente el cuerpo el lector debería poder entender los principales elementos del
+proyecto. Se sugiere que el cuerpo principal para memorias de proyectos de grado
+tenga entre 20 y 80 páginas. El documento completo, incluyendo anexos, no puede
+superar las 350 páginas.
+Es fundamental que la documentación entregada incluya correctamente las referencias
+a otros autores mediante citas en el texto y bibliografía, en el formato establecido por la
+Facultad en los documentos de referencia. Este aspecto es esencial en cualquier
+trabajo escrito y en especial en el ámbito académico. Para poder cumplir con este punto
+el grupo debe recolectar las referencias durante el transcurso del proyecto utilizando
+herramientas adecuadas de registro y formateo.
+
+Guía para la estructura
+Portada
+La portada del proyecto debe incluir la información de la Universidad, carrera e
+integrantes del equipo. Se deben utilizar las denominaciones oficiales definidas por la
+Universidad.
+• “Universidad ORT Uruguay” (sin comillas)
+• Nombre completo de la Facultad o Instituto.
+• Título, [subtítulo]. El título debe ser descriptivo. El subtítulo aclara el resultado
+del proyecto.
+• “Entregado como requisito para la obtención del título de (nombre del título
+obtenido en la carrera)” (sin comillas)
+• Autores (nombre, apellido y número de estudiante de cada uno). Tutor (nombre y
+apellido).
+• Año de la entrega (no confundir con el año de comienzo de la tesis)
+
+Instructivo para la entrega final de proyectos
+
+5
+
+[Agradecimientos]
+Resumen (abstract)
+Es una descripción resumida del contenido del documento. El resumen debe indicar al
+lector si el contenido le puede resultar de interés. Debe incluir en forma breve los
+objetivos, metodología y conclusiones del proyecto. El resumen debe ser auto contenido
+y tener en el texto todas las palabras clave que sean relevantes para buscar el proyecto.
+La Facultad provee una guía para elaborar el resumen, que está publicada junto con
+este documento. Este resumen no debería ocupar más de una carilla.
+
+Índice
+El índice es obligatorio y debe ser un espejo del documento. Debe incluir todos los
+capítulos, subcapítulos y subtítulos del documento con el número de página
+correspondiente.
+
+Introducción
+Esta sección sirve como introducción al material que el lector está a punto de leer.
+Intenta describir en forma global el propósito, contexto y estado del proyecto.
+• Entorno conceptual de SF
+• Descripción del cliente
+• Descripción del problema desde el punto de vista del negocio
+• Resultados esperados del proyecto (a nivel conceptual)
+• Integrantes del equipo y motivación para realizar este proyecto
+• Estructura del documento (brevemente se explica el contenido de cada capítulo)
+
+Planteamiento del problema
+Esta sección se utiliza para plantear el problema que el proyecto intenta resolver y su
+contexto. Se describen los destinatarios del resultado (usuarios, clientes y otros
+involucrados), los principales requerimientos y restricciones que se establecieron para la
+solución.
+• Contexto del problema
+• Tipos de usuarios y necesidades
+• Objetivos generales del producto o servicio
+• Requerimientos
+• Características de calidad
+• Supuestos y restricciones
+
+Descripción de la solución
+En esta sección se describe la solución obtenida. Según el tipo de proyecto pueden
+utilizarse varias vistas para describir técnicamente dicha solución. Si el proyecto tiene
+resultados de investigación u otros productos requeridos por el cliente también deben
+describirse.
+• Descripción funcional del producto
+• Descripción técnica del producto
+• Vistas arquitectónicas
+• Resultados de investigación
+• Descripción de otros productos o servicios resultantes
+
+Instructivo para la entrega final de proyectos
+
+6
+
+Proceso de desarrollo
+Esta sección describe el proceso seguido para la resolución del problema. En algunos
+proyectos la definición de un proceso de desarrollo o alguna de sus etapas puede tener
+mucha relevancia. En ese caso debe puede requerir un capítulo independiente. Para
+cada punto se debe hacer un análisis de las dificultades encontradas y las acciones
+tomadas.
+• Proceso y ciclo de vida
+o Enfoque general de calidad
+o Ciclo de vida
+o Metodologías de referencia
+o Descripción general del proceso
+o Medición y seguimiento del proceso
+o Evolución del proceso durante el proyecto
+• Gestión de proyecto
+o Estrategias de gestión
+o Planificación temporal y de recursos
+o Seguimiento y evaluación de iteraciones
+o Comunicación y coordinación del equipo
+o Gestión del riesgo
+o Análisis de problemas de gestión
+• Ingeniería de requerimientos
+o Técnicas y resultados de investigación y especificación
+o Justificación de la estrategia de relevamiento
+o Conceptualización del problema y su contexto
+o Criterios de la priorización de los requerimientos
+o Prototipos realizados (si es aplicable).
+o Estructura utilizada para la especificación
+o Validaciones realizadas a la especificación.
+• Diseño arquitectónico
+o Características de calidad consideradas
+o Descripción y fundamentación de la arquitectura
+o Vistas arquitectónicas. Principales mecanismos y tecnologías
+o Prototipos arquitectónicos realizados (si es aplicable)
+o Validaciones realizadas a la arquitectura
+o Estrategia de Desarrollo, plan de versiones arquitectónicas
+• Construcción de versiones
+o Resumen de los principales paquetes o módulos implementados
+o Herramientas y ambientes utilizados para el desarrollo
+o Pruebas unitarias realizadas.
+• Aseguramiento de la calidad
+o Descripción y justificación del proceso de SQA
+o Detalle de actividades: pruebas, revisiones, mediciones, estándares, etc.
+o Productos resultantes de las actividades de SQA
+o Métricas del producto y proceso
+• Gestión de la configuración
+o Identificación de elementos de la configuración
+o Establecimiento del repositorio
+o Control de versiones
+o Ciclo de control y seguimiento de los cambios
+
+Instructivo para la entrega final de proyectos
+
+7
+
+Conclusiones
+En esta sección se exponen las conclusiones del trabajo realizado. Se debe destacar
+las lecciones aprendidas durante el proyecto y los puntos que establecen campos de
+trabajo para el futuro.
+• Conclusiones generales
+• Resumen de los productos resultantes en función de los objetivos trazados
+• Detalle de las lecciones aprendidas
+• Líneas de trabajo para el futuro
+
+Bibliografía
+Referencias a artículos, libros, sitios Web y cualquier otro tipo de publicación utilizada
+que no es de su autoría y que es citada en el documento o que fue utilizada durante el
+proyecto. El formato para la bibliografía y para las citas debe ser consistente con el
+propuesto por el Doc. 302 y 303.
+
+[Anexos]
+Los anexos normalmente se utilizan para incluir información más detallada o
+complementaria a la que conforma el cuerpo central. El lector solamente debería recurrir
+a los anexos si desea profundizar sobre algún tema. No es necesario incluir todos los
+documentos generados por el proyecto como anexos, solo los que aporten información
+relevante. Generalmente no es necesario incluir el código fuente, salvo para soluciones
+técnicas importantes.
+
+Instructivo para la entrega final de proyectos
+
+8
+
+Estilo y formato del documento
+Guías generales
+A continuación, se brinda un resumen con los algunos puntos de estilo y formato a tener
+en cuenta en la elaboración de la entrega. Se debe verificar el cumplimiento de las
+guías establecidas por el Doc. 302 y 303.
+1. El documento debe tener un título y subtítulo descriptivos y un resumen bien
+redactado. Estos elementos son importantes para que el trabajo pueda ser
+encontrado y utilizado por otros lectores en el futuro.
+2. Se debe tener en cuenta que quien lea sus documentos no tiene por qué estar
+familiarizado con su proyecto ni con el Laboratorio de Ingeniería de Software. Por
+esto es importante utilizar un capítulo de introducción.
+3. Toda referencia a trabajos realizados por otros autores debe estar debidamente
+documentado (citas directas o bibliografía). Si la cita es literal se debe diferenciar del
+texto normal y poner la referencia en el mismo lugar donde ser realiza.
+4. Se pueden incluir porciones (textos y diagramas) del material perteneciente al
+Laboratorio, siempre y cuando se citen debidamente.
+5. Se pueden usar diagramas, gráficas, imágenes, tablas u otros elementos para
+mostrar información no textual. Estos elementos deben tener un epígrafe y deben
+estar numerados para poder ser referenciados desde el texto principal. Siempre que
+aparecen elementos no textuales se debe desarrollar la lectura y conclusiones que
+se obtiene de los mismos en el documento. Evitar la “gráfica basura”. Por ejemplo,
+no hacer un diagrama de torta ni una gráfica de barras para mostrar solo tres datos.
+6. Para escribir una sigla, la primera vez que se utiliza, hacerlo con una nota al pie o
+una explicación entre paréntesis. En adelante, usar directamente la sigla. Se puede
+incluir un Glosario en el cual se explica cómo se compone la sigla y además de que
+se trata. Cuando se habla de un elemento expresado en siglas en plural no se pone
+una “s” luego de la sigla.
+7. En general no se debe incluir código fuente del proyecto en la entrega. Solamente
+se deben incluir aquellos segmentos que se consideren necesarios para la mejor
+comprensión del trabajo, o para destacar algún algoritmo complejo. Al mostrar
+código fuente hacerlo con un tipo de letra distinto al texto, preferentemente un tipo
+de letra de tamaño fijo (por ejemplo: Courier).
+8. Los Anexos se deben utilizar como un medio para ampliar la información del cuerpo
+principal del trabajo. Es importante que el lector solo tenga que recurrir a ellos
+cuando desee profundizar sobre algún aspecto o detalle del cuerpo principal del
+trabajo.
+
+Sugerencias de estilo
+
+Instructivo para la entrega final de proyectos
+
+9
+
+Se debe tener presente que este trabajo quedará en biblioteca como muestra del
+trabajo del proyecto. Es una carta de presentación importante para los alumnos en su
+vida profesional. Además, puede ser utilizado por otras personas como referencia. Por
+todo esto es importante poner los medios para asegurar la calidad del trabajo final.
+Como se trata de un documento académico es recomendable utilizar un lenguaje simple
+y formal. Evitar las oraciones largas. Considere que hay expresiones que no son
+apropiadas para el lenguaje escrito. Por ejemplo: no utilice la expresión “como ser”. En
+su lugar, escribir simplemente “como” o bien “como, por ejemplo,...” No abusar de los
+verbos “ofrecer”, “proveer” o “brindar” al describir funciones.
+No hay otra forma de mejorar la escritura que leer el documento varias veces. Es
+recomendable que lo haga más de una persona. Esto permite coordinar el estilo de
+escritura de distintos autores y a la vez detectar mejoras.
+
+Lista de verificación
+•
+•
+•
+•
+•
+•
+•
+
+Verificar que no existan faltas de ortografía.
+Revisar el paginado continuo de todo el documento. Cada capítulo debe comenzar
+en una nueva página.
+Verificar que los tiempos verbales sean coherentes en las distintas secciones del
+documento.
+Verificar que la voz que se utiliza sea coherente en las distintas secciones del
+documento (se recomienda utilizar tercera persona).
+Redactar en tono formal. No usar expresiones coloquiales o del lenguaje oral.
+Revisar que el título sea descriptivo y que el texto del resumen incluya todas las
+palabras clave que pueden utilizarse para buscar el trabajo.
+Documentar debidamente todas las citas y referencias bibliográficas como libros,
+artículos y links de Internet, etc.
+
+Comentario final muy mportante
+La Facultad designa un corrector para que analice específicamente que el formato del
+trabajo cumple con las guías publicadas. Este corrector emite un fallo donde se hacen
+correcciones que deberán ser corregidas al momento de la entrega final (después de la
+defensa).
+Si el trabajo no cumple con todas las correcciones marcadas será rechazado y no se
+publicará el acta del proyecto hasta que se hagan.
+
+Instructivo para la entrega final de proyectos
+
+10
+
+Estándar para el medio electrónico
+Archivos de documento
+Los archivos de documento de la entrega del enrulado y de la entrega final deben
+generarse utilizando MS Word o formato PDF, debiéndose almacenar en dos directorios
+distintos con nombre \entregaDoc y \entregaPDF.
+Debe incluirse, dentro de lo posible, toda la documentación de la entrega en un solo
+archivo el cual se denominará siguiendo el siguiente esquema:
+• “Entrega_nombreDelGrupo.doc” y “Entrega_nombreDelGrupo.pdf”.
+• En caso de que no sea posible incluir toda la documentación en un solo archivo se
+puede entregar un archivo que contenga el cuerpo central nombrado de la siguiente
+forma:
+Entrega_nombreDelGrupo_CC.doc, y
+Entrega_nombreDelGrupo_CC.pdf
+y uno más documentos correspondientes a los anexos nombrados de la siguiente
+forma:
+Entrega_nombreDelGrupo_Anexo_?.doc
+Entrega_nombreDelGrupo_Anexo_?.pdf
+(donde el ? corresponde al número del anexo).
+•
+
+En caso de que la documentación contenga anexos generados con otras
+aplicaciones (IDE por ejemplo) se debe incluir un subdirectorio con el nombre del
+anexo en el cual se incluyan los archivos de la aplicación.
+
+Instructivo para la entrega final de proyectos
+
+11
+
+

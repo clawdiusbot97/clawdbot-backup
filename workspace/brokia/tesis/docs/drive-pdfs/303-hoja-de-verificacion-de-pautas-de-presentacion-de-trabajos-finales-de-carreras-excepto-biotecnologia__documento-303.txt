@@ -1,0 +1,417 @@
+26/09/2019
+
+HOJA DE VERIFICACIÓN DE FORMATO
+DE TRABAJOS FINALES DE CARRERAS DE LA FACULTAD DE INGENIERÍA
+(EXCEPTO BIOTECNOLOGÍA)
+Documento 303-FI
+Estas pautas especifican los aspectos gráficos y de estructura del trabajo que deben ser revisados por los Tribunales al corregir los
+trabajos finales impresos. Si estas pautas no se cumplen en los plazos estipulados, el trabajo no puede ser aprobado. Un integrante del
+Tribunal deberá verificar el cumplimiento de las pautas al evaluar el trabajo y firmar al pie de esta hoja, que se adjunta al acta.
+La revisión de la presentación por parte del Tribunal debe considerar esta hoja de verificación junto con el documento 302-FI; en caso
+de diferencias, predomina el documento 302-FI. Se categorizarán las disconformidades según los niveles que a continuación se detallan.
+Para cada uno de los aspectos a tomar en cuenta se indica el nivel correspondiente. El nivel de cumplimiento global del trabajo será
+el correspondiente al del más severo constatado, o A si cumple con todos los requisitos obligatorios.
+Criterio general para los niveles de conformidad con las pautas de formato
+A
+
+Cumple con el formato especificado
+
+B
+
+Leves incumplimientos de formato, a ser corregidos en la entrega final
+
+C
+D
+
+Moderados problemas de formato que deberán corregirse para la entrega final. La aprobación del trabajo final puede estar
+sujeta a la resolución de los problemas de formato
+Serios problemas de formato que deberán corregirse en la entrega final. La aprobación del trabajo final está sujeta a la
+resolución de los problemas de formato. En caso de que estos errores no sean corregidos para la entrega final, la nota de
+aprobación será inferior a 85.
+
+Nivel de Cumplimiento Global del Trabajo
+(marcar lo que corresponda)
+
+Autores del trabajo
+
+A
+
+B
+
+C
+
+D
+
+Nro. de estudiante
+
+Carrera:
+
+Hoja de verificación de pautas de presentación de trabajos finales de carreras de la Facultad de Ingeniería – excepto
+Biotecnología - Documento 303 - FI
+Universidad ORT Uruguay
+
+1
+
+Trabajo en formato
+electrónico
+
+Tipo de letra y
+Formatos
+
+Máximo 350 sin incluir anexos
+Formato PDF. Las propiedades del archivo PDF
+coinciden con la portada (título, autores,
+palabras clave etc.). Asignar D si el formato no
+es PDF o si las propiedades son distintas. C se
+utiliza en caso de diferencias leves (p ej se usa ““en vez de “:”) que no afectan la identificación.
+No usa tipo de letra cursiva (o itálica), excepto
+para las palabras de idiomas diferentes del
+español, o al citar literalmente otros autores. En
+trabajos que requieren otros tipos de letra por su
+naturaleza, utiliza los estándares de su Facultad
+o Departamento. El tamaño de la letra para el
+texto normal deberá ser de 12 puntos según lo
+define el procesador de texto utilizado. En la
+portada y los títulos puede usar otros tamaños
+superiores.
+Se debe usar el mismo tipo de letra en todo
+el trabajo, incluyendo las páginas preliminares
+y referencias bibliográficas.
+En tablas e ilustraciones puede usar tamaños de
+letra inferiores a 12 puntos, siempre que
+mantenga la legibilidad.
+
+Cumple
+(SI/NO/Parcial)
+
+Cantidad de hojas
+
+Pauta
+
+Nivel
+
+Elemento
+
+Comentarios **
+
+C
+
+C-D
+
+B
+
+Legibilidad
+
+El texto y las imágenes son legibles
+
+B-C
+
+Numeración de
+páginas
+
+En ángulo inferior derecho. Sólo el número sin
+ningún otro carácter o grafismo
+
+B
+
+Márgenes
+
+2.5 cm (aproximadamente) o superior.
+
+B
+
+Encabezamientos
+
+No tiene encabezamientos de página.
+
+C
+
+Pie de página
+
+No tiene pies de página (excepto el número de
+página).
+
+C
+
+Hoja de verificación de pautas de presentación de trabajos finales de carreras de la Facultad de Ingeniería – excepto
+Biotecnología - Documento 303 - FI
+Universidad ORT Uruguay
+
+2
+
+Espaciado
+
+Portada
+
+Título del trabajo
+
+Tamaño de página A4 (excepcionalmente
+pueden incluirse planos, dibujos, etc. en tamaño
+A3, todo en un único documento)
+Todo el trabajo debe ser paginado en una sola
+secuencia. Si incluye anexos, no es obligatorio
+paginarlos; si lo hace, continua la misma
+secuencia de páginas.
+Cuenta la portada como página 1, pero no
+imprime el número en ella.
+Todas las páginas del cuerpo o de los anexos,
+están numeradas, incluyendo las que contienen
+tablas e ilustraciones y las páginas que se dejan
+en blanco intencionalmente.
+Los números de página se encuentran en el
+ángulo inferior derecho.
+No usa la palabra “página” antes de la
+numeración de las páginas, ni el sistema
+1/40, 2/40…, ni la abreviatura “pag.”, “p.” u
+otros caracteres gráficos; solamente el número
+de página.
+Usa el mismo tipo de letra para todos los
+números de página.
+
+Comentarios **
+
+B
+
+Deja doble espacio después de cada título y/o
+subtítulo y entre párrafos del texto.
+
+B
+
+Contiene el nombre de la universidad
+(Universidad ORT Uruguay)
+
+D
+
+Contiene el nombre correcto de la Facultad
+(Facultad de Ingeniería)
+
+D
+
+Contiene el título del trabajo
+
+D
+
+El título del trabajo no incluye siglas excepto
+las de uso común en el campo
+El subtítulo del trabajo (si existe) no incluye
+siglas excepto las de uso común en el campo
+Contiene la leyenda “Entregado como requisito
+para la obtención del título de <nombre del
+título>” (sin comillas)
+El título corresponde a la denominación oficial
+exacta
+Contiene nombres y códigos de los alumnos
+autores del trabajo
+Contiene nombre del tutor (solamente nombre y
+apellido; no se incluyen títulos profesionales o
+grados académicos)
+
+Cumple
+(SI/NO/Parcial)
+
+Paginación
+
+Pauta
+
+Nivel
+
+Elemento
+
+C
+C
+
+D
+
+D
+D
+
+Contiene el año de entrega del trabajo
+
+D
+
+Debe ser descriptivo del contenido. Ejemplo
+incorrecto: SIGO
+Ejemplo correcto: SIGO: Sistema Integral de
+Gestión Odontológica (Incluye una sigla, pero
+explica su significado)
+
+B-C
+
+Hoja de verificación de pautas de presentación de trabajos finales de carreras de la Facultad de Ingeniería – excepto
+Biotecnología - Documento 303 - FI
+Universidad ORT Uruguay
+
+3
+
+Cumple
+(SI/NO/Parcial)
+
+Pauta
+
+Nivel
+
+Elemento
+
+Comentarios **
+
+Verificar que el trabajo esté compuesto, en
+orden, por los siguientes elementos. Asignar D
+si falta un elemento no opcional o está fuera
+de orden.
+
+Estructura del
+trabajo (refiere a
+la presencia de
+estos componentes
+del trabajo en el
+orden correcto)
+
+Contenido del
+resumen o abstract
+Uso del lenguaje:
+redacción, sintaxis,
+ortografía,
+gramática
+
+Capítulos y
+encabezamientos
+
+Referencias
+bibliográficas
+
+a) Portada
+
+D
+
+b) Declaración de Autoría.
+
+D
+
+c) Agradecimientos (opcional).
+
+D
+
+d) Abstract.
+
+D
+
+e) Palabras Clave: conjunto de palabras que
+están directamente relacionadas con el
+contenido de la obra, que además deberán ser
+incluidas en las propiedades del documento
+PDF, para facilitar su indexación por los
+buscadores.
+f) Índice de la obra (obligatorio)
+Índice de tablas (opcional)
+Índice de ilustraciones ( opcional)
+g) Cuerpo de la obra, dividido en capítulos
+para facilitar su comprensión.
+h) Lista de referencias bibliográficas (debe
+seguir el formato IEEE).
+g) Todos los Anexos que se mencionan en el
+cuerpo del texto (el uso de Anexos es, en
+general, opcional); sus páginas deben estar
+numeradas según la secuencia de numeración
+del trabajo.
+Debe presentar claramente el contenido del
+trabajo, en especial los resultados y
+conclusiones. No debe superar las 400
+palabras.
+
+D
+
+BD
+D
+D
+
+D
+
+B-C
+
+De acuerdo con la formación que se espera de
+un egresado de la carrera; en todos los casos se
+espera una correcta ortografía
+
+BD
+
+Deben estar numerados en secuencia (1, 1.1,
+etc.).
+
+C
+
+Si el trabajo tiene capítulos, cada capítulo se
+inicia en una nueva página.
+
+B
+
+La lista de referencias se presenta según el
+estilo IEEE. Cada referencia de la lista contiene
+datos bibliográficos suficientes para identificar
+y localizar la fuente citada.
+
+B-D
+
+Hoja de verificación de pautas de presentación de trabajos finales de carreras de la Facultad de Ingeniería – excepto
+Biotecnología - Documento 303 - FI
+Universidad ORT Uruguay
+
+4
+
+Medio digital de
+entrega
+
+En el trabajo, se citan las fuentes referenciadas
+con el estilo correcto de citaciones (IEEE). Si se
+adaptó material de otros autores, se establece
+que el material fue adaptado y se cita
+correctamente la fuente.
+Medio digital legible en ordenador de
+escritorio. Nombre del archivo PDF sigue la
+convención del Anexo 4 de documento
+302-FI
+
+Cumple
+(SI/NO/Parcial)
+
+Citaciones
+
+Pauta
+
+Nivel
+
+Elemento
+
+Comentarios **
+
+B-D
+
+C
+
+Otros
+Incumplimientos
+moderados
+
+C
+
+Otros
+Incumplimientos
+leves
+
+B
+
+** Obligatorios, en caso de que no cumpla con requisitos de nivel C o D.
+Para los niveles de cumplimiento C y D, por favor incluya comentarios dando algunos ejemplos y referencias a páginas donde esto
+ocurre. Estos comentarios serán sólo ilustrativos; no se pretende que sean exhaustivos. Los autores, para levantar la observación, deberán
+realizar una revisión completa del trabajo y enviar un documento con control de cambios indicando claramente cómo han levantado las
+observaciones.
+
+Por el tribunal,
+Firma del corrector:-------------------------------------------------------------------- Fecha:---------------------------------Aclaración de firma: :--------------------------------------------------------------------
+
+Hoja de verificación de pautas de presentación de trabajos finales de carreras de la Facultad de Ingeniería – excepto
+Biotecnología - Documento 303 - FI
+Universidad ORT Uruguay
+
+5
+
+

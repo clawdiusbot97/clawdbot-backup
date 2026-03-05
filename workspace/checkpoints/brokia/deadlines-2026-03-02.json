@@ -1,0 +1,29 @@
+{
+  "schema": "brokia-deadlines-v1",
+  "generated_at": "2026-03-02T09:00:24.670087-03:00",
+  "tz": "America/Montevideo",
+  "source_checklist": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/02_ACADEMIC_CHECKLIST.md",
+  "excluded_mal": [
+    {
+      "date": "2027-03-01",
+      "summary": "EXCLUDED/MAL"
+    },
+    {
+      "date": "2027-04-05",
+      "summary": "08/04/2027 - EXCLUDED/MAL"
+    },
+    {
+      "date": "2027-05-31",
+      "summary": "EXCLUDED/MAL"
+    },
+    {
+      "date": "2026-09-30",
+      "summary": "EXCLUDED/MAL (ignore until confirmed)"
+    }
+  ],
+  "alerts_generated": [],
+  "dedupe": {
+    "checkpoint_file": "/home/manpac/.openclaw/workspace/checkpoints/brokia/deadlines-2026-03-02.json",
+    "keys_seen": []
+  }
+}

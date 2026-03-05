@@ -46,6 +46,7 @@ TELEGRAM_GROUP_ID = "-5130387079"  # Clawdius - Backups
 EXCLUDE_PATTERNS = [
     "**/__pycache__",
     "**/.git",
+    "**/.git/**",  # exclude nested git dirs (submodules, vendored repos)
     "**/node_modules",
     "**/venv",
     "**/.venv",
@@ -196,6 +197,12 @@ def collect_critical_files(temp_dir: Path) -> Tuple[List[Path], List[str]]:
         
         # Check exclude patterns
         rel_path = item.relative_to(WORKSPACE)
+
+        # Hard guard: never include nested git metadata (Path.match is sometimes
+        # surprising across Python versions / edge-cases like .git files).
+        if ".git" in rel_path.parts:
+            continue
+
         skip = False
         for pattern in EXCLUDE_PATTERNS:
             if rel_path.match(pattern):

@@ -1,0 +1,381 @@
+1º/03/2012
+
+ORIENTACIÓN PARA TÍTULOS, RESÚMENES O ABSTRACTS E INFORMES
+DE CORRECCIÓN DE TRABAJOS FINALES DE CARRERA
+Documento 306
+
+OBJETIVO DE ESTE DOCUMENTO: (i) Orientar a los tutores y correctores para interactuar con los
+alumnos y evaluar títulos y resúmenes (abstracts) de los trabajos finales de carrera; (ii) Proponer guías para
+redactar los informes de corrección de trabajos finales.
+NOTA: Los ejemplos se basan en casos reales. Sin embargo, los textos han sido modificados para ajustarse al
+propósito de este documento.
+
+1. TÍTULO DEL TRABAJO
+Imaginemos un usuario que busca trabajos sobre un tema en una base bibliográfica. Su primer resultado
+será, probablemente, una lísta de títulos en la pantalla de resultados de la búsqueda. A partir de cada título, el
+usuario debe decidir si el trabajo corresponde o no a lo que está buscando.
+Desde el punto de vista del autor, si se desea alcanzar al público objetivo del trabajo es necesario que el
+título corresponda al trabajo realizado. El título debería ser conciso y transmitir en qué consiste el trabajo, en
+términos de su probable público objetivo.
+Muchas veces el título es lo primero (o único) que analiza un lector potencial para decidir si va a
+recuperar y leer el trabajo. Por lo tanto, es muy importante que el título describa el contenido lo mejor
+posible.
+Ejemplos de títulos adecuados:
+Análisis por técnicas genómicas para certificación de seguridad de productos alimenticios de exportación
+Articulación entre Cancillería y Ministerio de Industria, Energía y Minería en el marco de la política
+energética nacional 2005-2030
+Comercialización de quesos “TalarCrem” a Emiratos Árabes Unidos y Chile
+Cómo aprenden los buenos alumnos de liceos insertos en contextos desfavorables
+Investigación de técnicas de control de tensión en sistemas eléctricos de potencia
+Visualización de eventos acústicos
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Página 1
+
+En general, conviene evitar el uso de siglas en los títulos, excepto cuando se trata de convenciones
+universalmente utilizadas en el campo del conocimiento del trabajo.
+Cuando el título es un nombre propio, un código o una sigla, como por ejemplo el nombre de fantasía de una
+firma, producto o servicio, es imprescindible tener un subtítulo explicativo. En los siguientes ejemplos, sin el
+subtítulo sería difícil adivinar de qué trata el trabajo.
+Uso correcto de subtítulos
+Beagle: guía de información ciudadana
+EasyPee: Dispositivo urinario femenino desechable
+El discurso docente: Obstáculo para la comunicación en el aula
+Electrónica automotriz: Diagnóstico remoto de la ECU
+Las mujeres de Lucrecia: Análisis fílmico de tres largometrajes de Lucrecia Martel
+SGEPES: sistema de gestión de la Escuela Policial de Estudios Superiores
+Quizás el tutor debería preguntar a los autores si el nombre propio en el título aporta algo al lector, por más
+que sea una tradición incluir el nombre en algunas áreas.
+En el otro extremo, cuando el subtítulo es demasiado largo, o no es suficientemente concreto, se diluye su
+utilidad. El subtítulo no debería ser un resumen del trabajo ni un alegato, como en los ejemplos siguientes:
+Uso incorrecto de subtítulos (demasiada información)
+Advertencia: Un análisis sobre las apropiaciones de sentido, usos y gratificaciones de los fumadores
+jóvenes en relación a las campañas antitabaco pautadas en el packaging de los cigarrillos durante el
+período 2006-2008.
+Canal 5: Del dicho al hecho. En la carencia de objetivos fundacionales para la televisión estatal,
+su funcionamiento se da en las antípodas de un discurso oficial con objetivos de pluralismo sin
+consecuencias.
+El problema más común en los títulos es que no tengan información suficiente:
+Títulos inadecuados por falta de información
+Cities for export
+DVD Station
+Encontrate
+Estudio de soluciones ERP
+Robotejo
+Sistema de ordenamiento: Zona Camping
+En el último caso se utilizó un subtítulo, que lamentablemente no agrega información adicional.
+Otro aspecto importante es asegurar la consistencia entre el título, el contenido y el resumen. Observar el
+ejemplo siguiente:
+Página 2
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Título: Haciendo memoria somos arte y parte
+Subtítulo: El museo ¿archivo de antigüedades o instrumento en la búsqueda de identidad individual y
+colectiva?
+Resumen:
+El presente trabajo de investigación ofrece el estudio de caso de una institución educativa dando cuenta
+del proceso de asesoría y acompañamiento a la gestión producido para el diagnóstico y la elaboración
+de un plan de mejora organizacional. Desde el punto de vista de su naturaleza es un museo de historia;
+desde la óptica de su estructura funcional es un centro educativo de educación no formal.
+Quien reciba únicamente el título tendrá dificultades para identificar incluso el campo de conocimiento que
+trata el trabajo. El eventual “gancho” del título y subtítulo no ayuda al lector, que necesita saber en qué
+consiste el trabajo. Recién al llegar al resumen nos damos cuenta que se trata de un estudio de caso de un
+museo de historia en una institución educativa.
+Un título más adecuado al contenido podría ser: “El museo de historia en la institución educativa: un estudio
+de caso. ¿Antigüedad o identidad?”.
+2. RESUMEN O ABSTRACT
+El resumen (o abstract) es un punto intermedio entre el título y el texto completo. Comprime la información
+del trabajo, en un espacio que oscila entre un párrafo largo y una página, dependiendo del tipo de trabajo.
+Luego de leer el resumen, el lector debería tener una idea razonablemente buena del contenido del trabajo,
+sin necesidad de leer el texto completo que puede tener centenares de páginas.
+En los trabajos de fin de carrera se debe incluir un resumen informativo, que actúa como un sustituto
+comprimido del trabajo completo. En este tipo de resumen, los autores presentan sus resultados y
+conclusiones, los métodos y argumentos utilizados, y ofrecen información completa sobre el trabajo.
+El resumen debería permitir comprender rápidamente:
+- Cuál es el tema, problema o situación analizada
+- Por qué tiene interés o relevancia
+- Qué se hizo en el trabajo (métodos y procedimientos) – lo que se analizó, produjo o estudió y de qué
+manera.
+- Qué resultados se obtuvieron de dicho trabajo
+- Qué conclusiones se extraen de los resultados
+Hay diferentes tipos de trabajos finales. Sin embargo, la estructura sugerida (problema o situación,
+métodos y procedimientos, resultados y conclusiones) se puede aplicar de manera bastante general a
+muchos campos de conocimiento, con las variantes del caso. Una cátedra puede decidir plantear su propio
+checklist o estructura recomendada para los resúmenes, a partir de este esquema general, considerando las
+características de los trabajos finales del área y las costumbres académicas de la disciplina.
+El resumen tiene vida propia; debe considerarse como un documento independiente, que en muchos casos
+circula por separado del trabajo final. Muchas bases bibliográficas utilizan el resumen como herramienta
+fundamental (o incluso única) de despliegue de resultados, para que el lector decida si desea acceder al
+contenido completo; a menudo, las decisiones iniciales de aceptación de trabajos a conferencias se realizan a
+partir del resumen.
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Página 3
+
+El resumen debería utilizar los términos o palabras clave que corresponden al contenido del trabajo, para
+asegurar que aparece en las búsquedas que sean relevantes a dicho contenido.
+Finalmente, el resumen debería evitar vaguedades y ser suficientemente concreto. No deberían usarse
+términos indefinidos para describir lo que se hizo, o los resultados obtenidos.
+Ejemplos de indefiniciones en el abstract y alternativas sugeridas:
+Muchos experimentos → 17 experimentos
+Entrevistas a varios periodistas → 4 entrevistas a periodistas
+La mayoría de los casos → 56 % de los casos
+Alta rentabilidad → 25 % de rentabilidad anual
+Se debe asegurar especialmente que los métodos, resultados y conclusiones sustanciales del trabajo estén
+resumidos en el abstract, porque probablemente son el elemento de interés principal para quien pretende
+recuperar el artículo completo.
+LISTA DE VERIFICACIÓN PARA EL RESUMEN O ABSTRACT:
+1. Sigue la estructura básica indicada: problema o tema estudiado, justificación y relevancia, métodos y
+procedimientos, resultados y conclusiones (o, alternativamente, la estructura especificada por la cátedra
+para el tipo específico de trabajo).
+2. El contenido del abstract es consistente con el del trabajo. Utiliza los términos o palabras clave
+correspondientes al contenido del trabajo.
+3. Resume toda la información sustancial del trabajo, incluyendo en particular los métodos y
+conclusiones.
+4. No contiene términos vagos o indefinidos, ni omite aspectos importantes del trabajo.
+5. Se ajusta a la extensión máxima indicada en el documento de formato.
+A continuación se presentan algunos ejemplos de resúmenes o abstracts de trabajos que se pueden considerar
+adecuados, en función de las consideraciones antedichas.
+Ejemplos de resúmenes o abstracts adecuados
+(i) Proyecto final en el área de Sistemas
+El sistema SaaS de Administración y Venta On-Line es un sistema Web desarrollado en PHP con base
+de datos MySQL, diseñado para facilitar la digitalización de la información en la Distribuidora [nombre
+omitido], en Maldonado. Se desarrolla a partir de un relevamiento de los requisitos planteados por la
+Distribuidora.
+El sistema consta de dos aplicaciones: el portal y el sistema de administración. El portal de la
+distribuidora, denominado “front-end”, alberga su sitio institucional, donde los clientes pueden realizar
+compras. El sistema de administración, denominado “back-end”, es utilizado por los funcionarios de la
+distribuidora para ingresar compras, facturar ventas, emitir listas de precios, controlar stock y administrar
+las cuentas de proveedores y clientes.
+El sistema está diseñado para correr sobre un servidor web, usando el framework Simphony Project sobre
+PHP del lado del servidor y el framework jQuery del lado del cliente. Se utiliza el mapeo relacional de
+objetos Doctrine para la abstracción de datos.
+Página 4
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Aunque el diseño y desarrollo de la aplicación están realizados a la medida del proceso de negocios de
+una distribuidora en particular, la arquitectura permite generalizar el sistema de modo de poderlo ofrecer
+a otras distribuidoras. Debido a que el producto puede ser arrendado como un servicio, se eligió el
+nombre SaaS (Software as a Service) para denominarlo.
+(ii) Monografía de Estudios Internacionales
+Esta monografía trata la influencia de las restricciones no arancelarias aplicadas por Argentina al sector
+textil / vestimenta uruguayo entre 2008 y 2010. Se toma como estudio de caso a la firma [nombre
+omitido], que debió enfrentar dichas restricciones.
+El trabajo recopila información de prensa y realiza una investigación sobre el tema planteado. Se
+incluyen 7 entrevistas a informantes calificados en el Ministerio de Relaciones Exteriores, el Ministerio
+de Industrias, la Cámara de Industrias y firmas de asesoramiento en comercio exterior.
+El trabajo puede ser de interés ante futuros conflictos comerciales de similar naturaleza, pues se enfatiza
+las estrategias que desarrollaron los diferentes actores para encontrar soluciones a las dificultades
+político-comerciales.
+Se presenta una exposición que resume los conceptos básicos a estudiar, detallando y analizando
+la problemática de las restricciones. Luego se exponen diferentes soluciones posibles a la querella
+planteada, exponiendo los mecanismos de resolución de controversias y los actores que involucran.
+En conclusión, se demuestra que las restricciones no arancelarias afectan al sector textil / vestimenta
+uruguayo, limitando sus ventas y generando incertidumbre. En el caso analizado, la firma optó por
+modificar su estrategia comercial en vez de utilizar los mecanismos institucionales para resolver el
+conflicto.
+En contraste con los anteriores, los siguientes ejemplos presentan abstracts o resúmenes inadecuados. Luego
+de cada ejemplo se indican algunos de los elementos que deberían ser corregidos o ajustados.
+Ejemplo inadecuado 1. El objetivo de este estudio es indagar los perfiles sociodemográficos y laborales,
+así como las perspectivas de los individuos que habitualmente buscan empleo a través de Buscojobs, y
+lograr así una aproximación a las posibilidades y oportunidades del reclutamiento a través de portales de
+trabajo on-line en Uruguay.
+Con esta finalidad se realizó una encuesta on-line a 3.000 usuarios de Buscojobs, que es un intermediario
+con marcada presencia en nuestro medio cuya cartera incluye a 127.000 candidatos.
+Por qué este abstract es inadecuado: No se presentan los resultados del estudio ni las conclusiones
+obtenidas. Deberían incluirse para completar el abstract.
+Ejemplo inadecuado 2. El siguiente proyecto hace la presentación de un sistema de Gestión de Stock y
+Conciliación de Comisiones, a realizar para una empresa dedicada al rubro de telefonía celular.
+Por qué este abstract es inadecuado: No contiene suficiente información sobre los métodos, resultados
+o conclusiones del trabajo. Deberían incluirse para completar el abstract.
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Página 5
+
+Ejemplo inadecuado 3. Una educación equitativa debería ofrecer igualdad de oportunidades a todos los
+integrantes de la sociedad sin importar la clase social, religión o raza, y constituir una herramienta para la
+igualdad social.
+El enfoque sistémico de las organizaciones considera que entorno y organización constituyen un todo:
+los cambios políticos, culturales, económicos y sociales que experimenta el primero influyen en la
+organización y a su vez ésta influye en ese entorno siempre cambiante.
+Tedesco se refiere al desajuste que existe entre el contexto social y la escuela. Menciona que la crisis que
+se ha producido radicaría en lo difícil que es conducir la educación formal sin saber precisamente cómo
+se relaciona con otras instituciones sociales.
+Como resultado de esos cambios ocurridos, se ha incorporado un público muy heterogéneo en las
+instituciones de enseñanza, que requiere un tratamiento diferenciado, donde los docentes deberían contar
+con herramientas pedagógicas para enfrentar dicha situación.
+Nuestro trabajo de investigación estuvo dedicado a estudiar el fenómeno que algunos autores llaman
+deserción, abandono, repetición, sobreedad, desafiliación, fracaso escolar y organizaciones expulsoras y
+los factores que influyen en el mismo.
+Dicho fenómeno preocupa al sistema educativo por las consecuencias que puede ocasionar en lo social,
+cultural, o económico. La deserción es un punto clave en las agendas del sistema educativo. Todas las
+distintas administraciones han tratado de buscar soluciones al problema, que continúa existiendo e
+incluso ha aumentado en algunos niveles.
+El estudio se desarrolla en un centro educativo de la Educación Media Superior, que registra desde hace
+cinco años elevados niveles de deserción en el segundo año de Bachillerato.
+El trabajo se insertó dentro de la metodología del estudio de casos, integrando la investigación
+cualitativa, por considerar que sería la más adecuada para la problemática que se deseaba abordar, ya que
+como producto final obtenemos una serie de conclusiones que permiten un análisis crítico y reflexivo de
+la realidad.
+Si bien las soluciones al fenómeno estudiado deben surgir del propio sistema educativo, el estudio nos
+señaló los factores internos a la organización en que la misma puede incidir para disminuir el problema
+en cuestión.
+Por qué este abstract es inadecuado: Se trata de una introducción, más que de un resumen.
+Aproximadamente dos terceras partes del texto se dedican a justificar la relevancia del estudio, lo
+que resulta exagerado. Se indica el método utilizado (investigación cualitativa) , pero no se presentan
+las personas entrevistadas o los textos examinados, ni otra información sobre la técnica usada. No se
+presenta ninguna conclusión. El resumen debería ser reescrito para reducir la justificación a un máximo
+de un párrafo, y ofrecer información completa sobre el objeto de estudio, los métodos utilizados
+y su alcance (por ejemplo, los actores entrevistados y la técnica de entrevista). Finalmente, sería
+imprescindible incluir las conclusiones principales del estudio.
+3. INFORME DEL CORRECTOR
+El informe de corrección resume la evaluación del trabajo final, realizada por el corrector o el Tribunal.
+Tiene dos objetivos inmediatos: (i) comunicar la evaluación realizada y justificar la calificación otorgada,
+y (ii) acompañar al trabajo final, permitiendo que el lector se entere de las deficiencias o puntos fuertes del
+trabajo. Como el informe puede ser leído por futuros estudiantes que preparan su propio trabajo final, este
+segundo objetivo es relevante desde el punto de vista formativo.
+Página 6
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+La evaluación se realiza desde el punto de vista de los objetivos del trabajo de fin de carrera, y tiene en
+cuenta aspectos profesionales, científicos, disciplinares o de comunicación escrita, según se plantean para
+cada tipo de trabajo.
+El informe del corrector debería destacar las fortalezas y debilidades del trabajo que justifican la calificación
+asignada. El informe no debería ser una mera descripción del trabajo, ni tampoco un resumen alternativo al
+abstract de los autores.
+Es útil que el informe analice el trabajo en el mismo orden sugerido para el abstract o resumen: evaluar la
+presentación del problema o tema, los métodos y procedimientos, los resultados y conclusiones. El informe
+puede también considerar otros aspectos – por ejemplo la redacción, las fuentes utilizadas, el rigor, la
+cantidad de trabajo, la innovación, el ajuste a normas técnicas- según los objetivos planteados para el trabajo
+final.
+Teniendo en cuenta los dos objetivos planteados, el informe puede realizar otros comentarios ampliatorios o
+expositivos: señalar enfoques alternativos al adoptado, discusiones vigentes vinculadas con el tema, fuentes
+adicionales que se pueden considerar, y cualquier otro elemento que ayude a comprender la evaluación y
+justificar la calificación otorgada.
+Para poder corregir consistentemente los trabajos finales, es necesario construir (en la cátedra o en el
+departamento responsable) un conjunto de objetivos para el trabajo, junto con los estándares mínimos de
+aprobación y criterios compartidos para la corrección. Estos elementos deberían ser estables en el tiempo,
+conocidos y difundidos entre los alumnos, y adecuados al perfil de egreso planteado para la carrera.
+Los informes de corrección deberían hacer referencia explícita a los estándares del trabajo final – sus
+objetivos de integración de capacidades y conocimientos, de exploración profesional o de la disciplina, la
+aplicación y conocimiento de normas profesionales y éticas, la aplicación de métodos, el trabajo riguroso,
+el esfuerzo suficiente, el conocimiento de la documentación y fuentes relevantes, la fundamentación de las
+conclusiones, o la producción de conocimiento (en el caso de postgrado), entre otros posibles.
+Finalmente, el contenido y el tono del informe deben estar de acuerdo con la calificación otorgada al
+trabajo. Se recomienda que las cátedras desarrollen rúbricas para los informes y las calificaciones, según las
+características de cada tipo de trabajo final.
+Como criterio general se sugiere:
+Rango de calificación del trabajo
+
+Contenido y tono del informe de corrección
+
+85/100 o superior
+
+Fortalezas específicas, destaques del trabajo, aspectos mejorables o
+extensiones posibles
+
+75/100 a 85/100
+
+Mezcla de fortalezas y debilidades, relacionada a los estándares
+para el trabajo final, en consonancia con la calificación.
+
+70/100 a 75/100
+
+Debe destacar debilidades específicas y analizar el cumplimiento de
+los estándares mínimos de aprobación.
+
+Eliminado
+
+Debe destacar las deficiencias del trabajo con respecto a los
+estándares mínimos para la aprobación.
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Página 7
+
+A continuación se exponen algunos ejemplos adecuados e inadecuados de informes de corrección.
+Ejemplos adecuados de informes de corrección
+(i) Trabajo final de Comunicación Audiovisual (90 puntos). Título: “La fotografía cinematográfica y su
+función expresiva en Persona”
+El trabajo se inicia ofreciendo un marco teórico sobre la fotografía y el lenguaje cinematográficos.
+Aunque los conceptos manejados son correctos, por momentos se abunda en explicaciones de términos
+y funciones de la cámara y la fotografía que resultan innecesarios para el perfil del lector del trabajo. Se
+incluye un resumen de los inicios del cine y del origen de la fotografía como forma de contextualización;
+sin embargo este resumen no se utiliza en la parte analítica del trabajo.
+El centro de la obra, que es el análisis de la fotografía en Persona, tiene matices de excelencia que denotan
+el trabajo y la comprensión por parte de la estudiante del marco teórico y su aplicación al objeto fílmico.
+Es destacable la precisión con que observa la incidencia de la luz en la puesta en escena, anotando detalles
+específicos que realzan la labor del director y del fotógrafo, al servicio de la construcción del relato.
+Por lo expuesto, teniendo en cuenta que no existen precedentes de análisis fotográfico al nivel de este
+trabajo, el tribunal resuelve aprobar el proyecto final con una calificación de 90 puntos.
+(ii) Monografía de Arquitectura (72 puntos). Título: “El remedio al impacto: el urbanismo después de la
+Segunda Guerra Mundial”
+El trabajo desarrolla un tema muy ambicioso, cuyo alcance debería haber más acotado. En efecto, el
+título planteado alcanzaría hasta el presente. La lectura del abstract podría llevar a confusión, al hablar
+del “paisaje desolado” que signa las “últimas décadas del siglo pasado” debido a “los enfrentamientos
+bélicos que dominaron la escena europea luego de la Segunda Guerra Mundial”. Esta falta de precisión
+sobre el período estudiado se verifica también hacia atrás, en la medida que diferentes capítulos rastrean
+antecedentes de la época de entreguerras o aún de la Primera Guerra Mundial, sin que el lector logre saber
+exactamente qué lugar ocupan en el desarrollo temático.
+Una vez asumida la idea de que el trabajo se orienta al urbanismo de la inmediata segunda post-guerra,
+el planteo del tema se vuelve más adecuado al proponer cuatro modalidades diferentes para dar mayor
+precisión al término usual de “Reconstrucción”. Las categorías propuestas son “Remodelación”,
+“Rehabilitación”, “Reciclaje” y “Reestructuración”. Sin embargo, este esquema conceptual -que sería
+bastante completo aunque las categorías se puedan superponer en casos concretos- no se asume en su
+totalidad; se utilizan denominaciones como “reconstrucción simbólica”, que parecerían dejar de lado el
+esquema de categorías elegido.
+El material bibliográfico que se utiliza en el tratamiento de los casos es relevante. Es interesante la
+selección realizada en cada caso para ilustrar los conceptos, aunque algunos casos no se vinculan
+directamente al tema elegido; por ejemplo, se tratan las escuelas en Gran Bretaña, que no sería un tema
+urbanístico. Es interesante el tratamiento de un tema poco trillado, como las Villes Nouvelles de la Región
+Parisiense; las propuestas de Le Corbusier para Firminy son de fines de la década de 1950.
+Las fichas construidas para cada caso resultan un aporte; es de lamentar que el tamaño de la escritura y de
+los esquemas no permita una lectura cómoda.
+En definitiva se trata de un trabajo muy ambicioso con un planteo interesante, que luego se resuelve de
+manera desprolija: impreciso manejo de períodos, contenidos que no se ajustan estrictamente al título y
+esquema planteado, y desarrollos temáticos discutibles.
+
+Página 8
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Ejemplos inadecuados de informes de corrección
+Ejemplo inadecuado 1. (Aprobado con 75) Trabajo aceptable. Alcanza objetivos planteados por el
+cliente. Proyecto desarrollado en Genexus utilizando en la etapa de análisis la metodología de Yourdon.
+Por qué este informe es inadecuado: No se hace referencia a ninguna debilidad del trabajo a pesar de
+haber calificado con 75 puntos. El informe describe métodos y herramientas utilizadas, pero no hace
+referencia a su relevancia para la corrección o calificación otorgada.
+Ejemplo inadecuado 2. (Aprobado con 86). El documento integra la implementación de un estudio
+diagnóstico y el diseño de un plan de mejora realizados en un centro público de ciclo básico de la capital
+del país.
+Se trata de una investigación cualitativa centrada en un estudio de caso. Las técnicas utilizadas fueron la
+entrevista en profundidad, encuestas y grupos foco.
+El estudio diagnóstico realizado identifica a la dimensión pedagógico-didáctica como la más
+comprometida, asociándola a tres factores: (i) falta de herramientas adecuadas; (ii) problemas
+extracurriculares, y (iii) baja motivación.
+El plan de mejora elaborado tiene como objetivo general colaborar con el PIU mediante el diseño e
+implementación de un plan de integración curricular de las TIC. La propuesta incluye también una
+planilla para el seguimiento de las actividades previstas.
+Por qué este informe es inadecuado: El informe no presenta ningún juicio de evaluación sobre los
+métodos, resultados ni conclusiones obtenidas. Podría perfectamente ser un abstract o resumen del
+trabajo.
+
+Orientación para títulos, resúmenes o abstracts e informes de corrección de trabajos finales de carrera- Documento 306
+Universidad ORT Uruguay
+
+Página 9
+
+

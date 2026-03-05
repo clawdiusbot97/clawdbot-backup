@@ -1,0 +1,8 @@
+{
+  "date": "2026-03-01",
+  "generated_at": "2026-03-01T11:07:06.518583Z",
+  "cache_used": false,
+  "delivery_mode": "dry-run",
+  "stage": "ok",
+  "notes": "dry-run wrote outbox; no external send performed"
+}

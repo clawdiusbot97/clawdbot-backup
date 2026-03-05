@@ -1,0 +1,57 @@
+# 05 — Sources (evidencia)
+
+## Drive sync (via gog)
+- Folder ID: `10F6gIoVj5b1njYA01N1pnWJ2pWsgFJv2`
+- Account: `tachipachi9797@gmail.com` (gog)
+- Access: **OK** (drive/docs scopes present)
+- Counts: listed=11 downloaded_ok=11 synced_final=11 converted_ok=6 conversion_failures=5
+
+### Drive folder inventory (name | mimeType | id | modifiedTime)
+- Aprobación de propuesta de proyecto.docx | application/vnd.openxmlformats-officedocument.wordprocessingml.document | 1vf2gOZGZmAmlPJ5gC4xtlZ26bkryza8I | 2026-02-26T23:13:45.000Z
+- ALUMNOS - proyectos elegidos.doc | application/msword | 1s_tFGOKycIou5y1R6tjmVBD7G3PDbeRq | 2026-02-26T23:13:44.000Z
+- PresentacionProyectosAlumnos 2025.doc | application/msword | 1YrDXZ6sOThemM7Zmw_2m86My5OI44Hj5 | 2026-02-26T23:13:43.000Z
+- FAQ Proyectos Finales de Sistemas 122021.pdf | application/pdf | 1TfAad-2Bv8clp2mdguE58xHSH00dKene | 2026-02-26T23:12:14.000Z
+- Carta de Confidencialidad_MODELO.docx | application/vnd.openxmlformats-officedocument.wordprocessingml.document | 1SRzme1srUJA6mJ5ACEdUgimNenOH1gSt | 2026-02-26T23:10:34.000Z
+- 304-normas-para-el-desarrollo-de-trabajos-finales-de-carrera__documento-304.pdf | application/pdf | 1DSGTs81jc40bkX__WX5Flao2Ho9-sybk | 2026-02-17T17:49:44.000Z
+- Carta PY ID MARZO 26.pdf | application/pdf | 14FiVRoOpGZRgYOROomDtp9bLmEqkfB_G | 2026-02-17T17:49:44.000Z
+- Formulario adicional para proyecto emprendedores.docx | application/vnd.openxmlformats-officedocument.wordprocessingml.document | 13-xhrJbOLs-JRAsQb-5ZabVFUKEw2Nhz | 2026-02-17T17:49:44.000Z
+- Proyectos emprendedores.pdf | application/pdf | 1Jb8pxnxG6PnRBR6MR3SxcaqkJC4fr-pF | 2026-02-17T17:49:44.000Z
+- 303-hoja-de-verificacion-de-pautas-de-presentacion-de-trabajos-finales-de-carreras-excepto-biotecnologia__documento-303.pdf | application/pdf | 1cey5hucDJwNkM4ziGFmLIYzKgLBn7HWQ | 2026-02-17T17:49:44.000Z
+- 302-normas-especificas-para-la-presentacion-de-trabajos-finales-de-carrera-facultad-de-ingenieria-excepto-biotecnologia__documento-302.pdf | application/pdf | 1Amcc7p2a2UWMLZB700y0dMBPhD3leWXy | 2026-02-17T17:49:44.000Z
+
+### Conversion failures (needs libreoffice/soffice)
+- id=1vf2gOZGZmAmlPJ5gC4xtlZ26bkryza8I step=doc/docx->pdf file=/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/Aprobación de propuesta de proyecto.docx
+- id=1s_tFGOKycIou5y1R6tjmVBD7G3PDbeRq step=doc/docx->pdf file=/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/ALUMNOS - proyectos elegidos.doc
+- id=1YrDXZ6sOThemM7Zmw_2m86My5OI44Hj5 step=doc/docx->pdf file=/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/PresentacionProyectosAlumnos 2025.doc
+- id=1SRzme1srUJA6mJ5ACEdUgimNenOH1gSt step=doc/docx->pdf file=/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/Carta de Confidencialidad_MODELO.docx
+- id=13-xhrJbOLs-JRAsQb-5ZabVFUKEw2Nhz step=doc/docx->pdf file=/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/Formulario adicional para proyecto emprendedores.docx
+
+## Local mirror inventory
+Root: `/home/manpac/.openclaw/workspace/brokia/tesis/docs/drive-pdfs/`
+
+### Inventory (filename → size bytes → mtime UTC)
+- `302-normas-especificas-para-la-presentacion-de-trabajos-finales-de-carrera-facultad-de-ingenieria-excepto-biotecnologia__documento-302.pdf` → 303784 → 2026-02-28T21:54:15Z
+- `302-normas-especificas-para-la-presentacion-de-trabajos-finales-de-carrera-facultad-de-ingenieria-excepto-biotecnologia__documento-302.txt` → 38723 → 2026-02-28T21:54:15Z
+- `303-hoja-de-verificacion-de-pautas-de-presentacion-de-trabajos-finales-de-carreras-excepto-biotecnologia__documento-303.pdf` → 99261 → 2026-02-28T21:54:13Z
+- `303-hoja-de-verificacion-de-pautas-de-presentacion-de-trabajos-finales-de-carreras-excepto-biotecnologia__documento-303.txt` → 9437 → 2026-02-28T21:54:15Z
+- `304-normas-para-el-desarrollo-de-trabajos-finales-de-carrera__documento-304.pdf` → 265753 → 2026-02-28T21:54:04Z
+- `304-normas-para-el-desarrollo-de-trabajos-finales-de-carrera__documento-304.txt` → 11860 → 2026-02-28T21:54:15Z
+- `ALUMNOS - proyectos elegidos.doc` → 34304 → 2026-02-28T21:53:56Z
+- `Aprobación de propuesta de proyecto.docx` → 12939 → 2026-02-28T21:53:54Z
+- `Carta PY ID MARZO 26.pdf` → 334783 → 2026-02-28T21:54:06Z
+- `Carta PY ID MARZO 26.txt` → 11841 → 2026-02-28T21:54:15Z
+- `Carta de Confidencialidad_MODELO.docx` → 13410 → 2026-02-28T21:54:02Z
+- `FAQ Proyectos Finales de Sistemas 122021.pdf` → 157419 → 2026-02-28T21:54:00Z
+- `FAQ Proyectos Finales de Sistemas 122021.txt` → 7894 → 2026-02-28T21:54:15Z
+- `Formulario adicional para proyecto emprendedores.docx` → 20021 → 2026-02-28T21:54:08Z
+- `PresentacionProyectosAlumnos 2025.doc` → 48640 → 2026-02-28T21:53:58Z
+- `Proyectos emprendedores.pdf` → 93484 → 2026-02-28T21:54:10Z
+- `Proyectos emprendedores.txt` → 635 → 2026-02-28T21:54:15Z
+
+
+- DOC/DOCX → PDF → .txt: **blocked** (libreoffice/soffice not installed; no sudo available in this runtime)
+
+## Conversions
+- PDFs → .txt: via `pdftotext`
+- DOCX → .txt: via `python-docx` inside venv `/home/manpac/.openclaw/workspace/.venv-docconv` (no LibreOffice)
+- DOC → .txt: **lossy** via `strings` (best-effort; formatting may be unusable)

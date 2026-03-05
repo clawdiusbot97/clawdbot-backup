@@ -6,7 +6,7 @@
       "name": "morning-intelligence",
       "enabled": true,
       "createdAtMs": 1771973997595,
-      "updatedAtMs": 1772306972846,
+      "updatedAtMs": 1772622463380,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -26,11 +26,11 @@
         "to": "1475961144416931931"
       },
       "state": {
-        "nextRunAtMs": 1772362800000,
-        "lastRunAtMs": 1772306800893,
+        "nextRunAtMs": 1772708400000,
+        "lastRunAtMs": 1772622000004,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 171953,
+        "lastDurationMs": 463376,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -41,7 +41,7 @@
       "name": "brokia-deadline-alerts",
       "enabled": true,
       "createdAtMs": 1772312086457,
-      "updatedAtMs": 1772312086457,
+      "updatedAtMs": 1772625616961,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -61,7 +61,14 @@
         "to": "brokia-ai-alerts"
       },
       "state": {
-        "nextRunAtMs": 1772366400000
+        "nextRunAtMs": 1772712000000,
+        "lastRunAtMs": 1772625600003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 16958,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -69,7 +76,7 @@
       "name": "brokia-weekly-planning",
       "enabled": true,
       "createdAtMs": 1772313102057,
-      "updatedAtMs": 1772313102057,
+      "updatedAtMs": 1772557278911,
       "schedule": {
         "kind": "cron",
         "expr": "0 10 * * 1",
@@ -89,7 +96,80 @@
         "to": "1476311753305362564"
       },
       "state": {
-        "nextRunAtMs": 1772456400000
+        "nextRunAtMs": 1773061200000,
+        "lastRunAtMs": 1772557267878,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 11033,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "3b44fa94-57f7-4666-93f1-f0fa70206b0f",
+      "name": "daily-backup",
+      "enabled": true,
+      "createdAtMs": 1772315991427,
+      "updatedAtMs": 1772610300053,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "tz": "America/Montevideo"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run skill daily-backup using ~/.openclaw/backup.env and push to GitHub.",
+        "timeoutSeconds": 900
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772695800000,
+        "lastRunAtMs": 1772609400005,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 900048,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1772695800002
+      }
+    },
+    {
+      "id": "brokia-intel-radar-001",
+      "name": "brokia-intel-radar",
+      "enabled": true,
+      "createdAtMs": 1772649843672,
+      "updatedAtMs": 1772651013926,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 9 * * 1,3,5",
+        "tz": "America/Montevideo"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Brokia Radar — Competitive + Positioning (STRICT)\n\nObjective:\n- Produce a short competitive + positioning radar for Brokia.\n- Focus ONLY on: conversational CRMs, WhatsApp business tooling, chat-to-work / ticket automation, conversation intelligence.\n- Output MUST be <= 10 bullets total.\n- No invented numbers. No long lists of links.\n\nSeeds (run web_search for each):\n1) WhatsApp CRM interactive messages buttons lists carousel\n2) conversation governance decisions audit trail from chat\n3) insurance broker WhatsApp workflow follow up documentation\n\nProcess:\n1) Run 3 web_search queries above (count<=5 each). Extract only what’s relevant to positioning.\n2) If there are no clear new findings (nothing that changes messaging / risk / opportunity), do NOT send to Discord. Return NO_REPLY.\n3) Otherwise, compose a Discord-ready message with this exact structure:\n\nTITLE: Brokia Radar — Competitive + Positioning (YYYY-MM-DD)\n\n- Mercado (max 2 bullets):\n- Posicionamiento observado (max 3 bullets):\n- Riesgos de confusión para Brokia (max 3 bullets):\n- Oportunidades para nuestro mensaje (max 2 bullets):\n\nAcciones sugeridas (1–2 bullets):\n- ...\n\n4) Send it to Discord channelId 1478821189584424991 using the message tool:\nmessage(action=\"send\", channel=\"discord\", target=\"1478821189584424991\", message=<your message>)\n5) After sending, return NO_REPLY.",
+        "thinking": "low",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1772799300000,
+        "lastRunAtMs": 1772650923246,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 90680,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     }
   ]
