@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-05",
+  "stage": "ok",
+  "delivered_at": "2026-03-05T11:05:24Z",
+  "findings_count": 9,
+  "generated_at": "2026-03-05T11:03:50Z",
+  "findings": [
+    {
+      "title": "ExStrucTiny: schema-variable structured IE benchmark",
+      "links": ["https://arxiv.org/abs/2602.12203"]
+    },
+    {
+      "title": "LLMStructBench: benchmarking structured extraction with LLMs",
+      "links": ["https://arxiv.org/abs/2602.14743"]
+    },
+    {
+      "title": "ExtractBench: PDF→JSON benchmark + methodology",
+      "links": ["https://arxiv.org/html/2602.12247v2"]
+    },
+    {
+      "title": "BEMEval-Doc2Schema benchmark",
+      "links": ["https://arxiv.org/abs/2602.16926"]
+    },
+    {
+      "title": "Qwen3-TTS (open source)",
+      "links": ["https://github.com/QwenLM/Qwen3-TTS", "https://qwen.ai/blog?id=qwen3tts-0115"]
+    },
+    {
+      "title": "Open-source STT benchmarks (2026)",
+      "links": ["https://northflank.com/blog/best-open-source-speech-to-text-stt-model-in-2026-benchmarks"]
+    },
+    {
+      "title": "Agentic AI reshaping insurance (Microsoft)",
+      "links": ["https://www.microsoft.com/en-us/industry/blog/financial-services/2026/02/18/from-bottlenecks-to-breakthroughs-how-agentic-ai-is-reshaping-insurance/"]
+    },
+    {
+      "title": "State of claims automation in 2026 (Regure)",
+      "links": ["https://www.getregure.com/blog/claims-automation-trends-2026/"]
+    },
+    {
+      "title": "Aon unveils AI claims platform",
+      "links": ["https://www.insurancebusinessmag.com/us/news/technology/aon-unveils-ai-claims-platform-556117.aspx"]
+    }
+  ]
+}

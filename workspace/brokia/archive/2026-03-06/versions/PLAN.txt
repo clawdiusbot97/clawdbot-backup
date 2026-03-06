@@ -1,0 +1,6 @@
+Found 18 version-groups, 4 files to archive.
+
+MOVE brokia/analisis-problema/conteo-top3-gate1-v0.1.md  (keep brokia/analisis-problema/conteo-top3-gate1-v0.2.md)
+MOVE brokia/encuestas/encuesta-validacion-cliente-gate1b-v0.1.md  (keep brokia/encuestas/encuesta-validacion-cliente-gate1b-v0.2.md)
+MOVE brokia/entrevistas/guion-entrevista-gate1-v0.1.md  (keep brokia/entrevistas/guion-entrevista-gate1-v0.2.md)
+MOVE brokia/entrevistas/plantilla-registro-entrevista-v0.1.md  (keep brokia/entrevistas/plantilla-registro-entrevista-v0.2.md)

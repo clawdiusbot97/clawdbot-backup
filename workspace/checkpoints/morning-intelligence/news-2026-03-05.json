@@ -1,0 +1,58 @@
+{
+  "date": "2026-03-05",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Escalada EE.UU./Israel–Irán",
+        "category": "Geopolitics",
+        "primary": "https://www.reuters.com/business/aerospace-defense/israel-us-launch-strikes-iran-2026-02-28/"
+      },
+      {
+        "title": "Riesgo Hormuz mantiene el petróleo elevado",
+        "category": "Markets",
+        "primary": "https://www.reuters.com/business/energy/oil-seen-elevated-hormuz-risks-intensify-amid-iran-conflict-analysts-say-2026-03-04/"
+      },
+      {
+        "title": "China pide alto el fuego tras ataques",
+        "category": "Policy",
+        "primary": "https://www.reuters.com/world/asia-pacific/china-urges-immediate-ceasefire-after-us-israel-strike-iran-2026-03-01/"
+      },
+      {
+        "title": "Descarrilamiento de tren de alta velocidad en España (reportes)",
+        "category": "Disaster",
+        "primary": "https://www.cbsnews.com/tag/disaster/"
+      },
+      {
+        "title": "OpenAI supera US$25B de revenue anualizado",
+        "category": "Tech/AI",
+        "primary": "https://www.reuters.com/technology/openai-tops-25-billion-annualized-revenue-last-month-information-reports-2026-03-05/"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "BCU recorta la tasa de política a 5,75%",
+        "primary": "https://en.mercopress.com/2026/03/04/uruguay-cuts-policy-rate-to-5.75-after-external-shock-with-inflation-still-below-target"
+      },
+      {
+        "title": "Uruguay ratifica primero el acuerdo UE–Mercosur",
+        "primary": "https://efe.com/en/latest-news/2026-02-26/uruguay-becomes-first-country-to-ratify-eu-mercosur-agreement/"
+      },
+      {
+        "title": "Entra en vigor el FTA Mercosur–Singapur (Uruguay–Singapur)",
+        "primary": "https://en.mercopress.com/uruguay"
+      },
+      {
+        "title": "Uruguay busca reducir deuda en dólares (más emisión en pesos)",
+        "primary": "https://www.reuters.com/markets/us/uruguay-will-push-ahead-with-pivot-away-dollar-debt-says-finance-minister-2026-02-16/"
+      },
+      {
+        "title": "Montevideo busca hasta US$300M para agua/infra",
+        "primary": "https://www.bnamericas.com/en/news/montevideo-seeks-us300mn-funding-for-water-and-infra-projects"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-03-05T11:05:02Z"
+}
