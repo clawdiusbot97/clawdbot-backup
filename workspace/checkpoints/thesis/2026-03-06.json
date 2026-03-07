@@ -1,0 +1,15 @@
+{
+  "date": "2026-03-06",
+  "stage": "ok",
+  "generated_at": "2026-03-06T11:00:00Z",
+  "source_count": 7,
+  "findings": [
+    {"title":"OCR or Not? Rethinking Document Information Extraction in the MLLMs era","links":["https://arxivlens.com/paperview/details/ocr-or-not-rethinking-document-information-extraction-in-the-mllms-era-with-real-world-large-scale-datasets-4331-a4a0cd3e"]},
+    {"title":"OmniDocBench: Benchmarking Diverse PDF Document Parsing with Comprehensive Annotations","links":["https://arxiv.org/html/2412.07626v1"]},
+    {"title":"pdf-benchmark: A Benchmark of PDF Information Extraction Tools","links":["https://github.com/gipplab/pdf-benchmark"]},
+    {"title":"TEN VAD","links":["https://github.com/TEN-framework/ten-vad"]},
+    {"title":"Building Voice Agents with NVIDIA Open Models","links":["https://www.daily.co/blog/building-voice-agents-with-nvidia-open-models/"]},
+    {"title":"AI Agents Are Now Running the Back Office at Insurance Giants","links":["https://www.pymnts.com/artificial-intelligence-2/2026/ai-agents-are-now-running-the-back-office-at-insurance-giants/"]},
+    {"title":"Agentic AI Use Cases in the Insurance Industry","links":["https://earnix.com/blog/agentic-ai-insurance/"]}
+  ]
+}

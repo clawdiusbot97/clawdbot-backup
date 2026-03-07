@@ -1,0 +1,55 @@
+{
+  "date": "2026-03-06",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Escalada EE.UU./Israel vs Irán",
+        "category": "Geopolitics",
+        "links": [
+          "https://www.reuters.com/world/iran-crisis-live-explosions-tehran-israel-announces-strike-2026-02-28/",
+          "https://apnews.com/live/iran-us-israel-hezbollah-strikes-03-02-2026",
+          "https://www.bbc.com/news/articles/cx2dyz6p3weo"
+        ]
+      },
+      {
+        "title": "ONU: conflicto en Medio Oriente",
+        "category": "Policy",
+        "links": [
+          "https://news.un.org/en/story/2026/03/1167076"
+        ]
+      },
+      {
+        "title": "Ola de ataques rusos (live)",
+        "category": "Geopolitics",
+        "links": [
+          "https://www.bbc.co.uk/news/live/cg70jylp32gt"
+        ]
+      },
+      {
+        "title": "Broadcom proyecta >US$100B en chips IA para 2027",
+        "category": "Tech/AI",
+        "links": [
+          "https://www.reuters.com/technology/broadcom-forecasts-second-quarter-revenue-above-estimates-2026-03-04/"
+        ]
+      },
+      {
+        "title": "Reuters World (índice)",
+        "category": "Policy",
+        "links": [
+          "https://www.reuters.com/world/"
+        ]
+      }
+    ],
+    "uruguay": [
+      {"title": "Uruguay headlines (fallback: El País)", "links": ["https://www.elpais.com.uy/"]},
+      {"title": "Uruguay headlines (fallback: El Observador)", "links": ["https://www.elobservador.com.uy/"]},
+      {"title": "Uruguay headlines (fallback: Montevideo Portal)", "links": ["https://www.montevideo.com.uy/"]},
+      {"title": "Uruguay headlines (fallback: Subrayado)", "links": ["https://www.subrayado.com.uy/"]},
+      {"title": "Uruguay official (fallback: Presidencia)", "links": ["https://www.presidencia.gub.uy/"]}
+    ],
+    "watch": []
+  },
+  "sources_count": 11,
+  "generated_at": "2026-03-06T11:00:00Z"
+}
