@@ -6,7 +6,7 @@
       "name": "morning-intelligence",
       "enabled": true,
       "createdAtMs": 1771973997595,
-      "updatedAtMs": 1772795224223,
+      "updatedAtMs": 1772881506039,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -26,11 +26,11 @@
         "to": "1475961144416931931"
       },
       "state": {
-        "nextRunAtMs": 1772881200000,
-        "lastRunAtMs": 1772794800005,
+        "nextRunAtMs": 1772967600000,
+        "lastRunAtMs": 1772881200003,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 424218,
+        "lastDurationMs": 306036,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -41,7 +41,7 @@
       "name": "brokia-deadline-alerts",
       "enabled": true,
       "createdAtMs": 1772312086457,
-      "updatedAtMs": 1772798425283,
+      "updatedAtMs": 1772884821713,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -61,11 +61,11 @@
         "to": "brokia-ai-alerts"
       },
       "state": {
-        "nextRunAtMs": 1772884800000,
-        "lastRunAtMs": 1772798400005,
+        "nextRunAtMs": 1772971200000,
+        "lastRunAtMs": 1772884800003,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 25278,
+        "lastDurationMs": 21710,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -111,7 +111,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772315991427,
-      "updatedAtMs": 1772782496783,
+      "updatedAtMs": 1772868900548,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -129,15 +129,15 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1772868600000,
-        "lastRunAtMs": 1772782200004,
+        "nextRunAtMs": 1772955000000,
+        "lastRunAtMs": 1772868600006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 296779,
+        "lastDurationMs": 300542,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1772868600002
+        "runningAtMs": 1772955000003
       }
     },
     {

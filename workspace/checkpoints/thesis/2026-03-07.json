@@ -1,0 +1,11 @@
+{
+  "date": "2026-03-07",
+  "stage": "ok",
+  "findings_count": 6,
+  "generated_at": "2026-03-07T11:00:00Z",
+  "delivery": {
+    "intended_channel_id": "1476311753305362564",
+    "status": "not_sent",
+    "reason": "Cron wrapper requested: do not send externally; provide destination note instead."
+  }
+}

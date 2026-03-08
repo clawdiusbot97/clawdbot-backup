@@ -1,0 +1,78 @@
+{
+  "date": "2026-03-07",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "US/Israel–Iran escalation and regional retaliation",
+        "source": "Reuters",
+        "date": "2026-02-28",
+        "url": "https://www.reuters.com/world/iran-crisis-live-explosions-tehran-israel-announces-strike-2026-02-28/"
+      },
+      {
+        "category": "Policy",
+        "title": "UN live coverage: expanding Middle East confrontation disrupting airspace/transport",
+        "source": "UN News",
+        "date": "2026-03-04",
+        "url": "https://news.un.org/en/story/2026/03/1167076"
+      },
+      {
+        "category": "Markets",
+        "title": "Rare earths: Japan, France, Canada explore alternatives to US-led trade bloc (headline feed)",
+        "source": "Reuters",
+        "date": "2026-03-07",
+        "url": "https://www.reuters.com/business/"
+      },
+      {
+        "category": "Policy",
+        "title": "FATF focus on stablecoins and unhosted wallets (weekly regulation wrap)",
+        "source": "BBVA Research (Weekly Update)",
+        "date": "2026-03-06",
+        "url": "https://www.bbvaresearch.com/en/publicaciones/global-financial-regulation-weekly-update-march-6-2026/"
+      },
+      {
+        "category": "Tech/AI",
+        "title": "Reuters Live/top pages remain dominated by Iran conflict developments",
+        "source": "Reuters Live",
+        "date": "2026-03-07",
+        "url": "https://www.reuters.com/live/"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Orsi heads to China with a large delegation to deepen trade ties",
+        "source": "MercoPress",
+        "date": "2026-01-30",
+        "url": "https://en.mercopress.com/2026/01/30/uruguay-s-orsi-heads-to-china-with-large-delegation-to-deepen-trade-and-strategic-ties"
+      },
+      {
+        "title": "China–Uruguay joint statement / deepening strategic partnership",
+        "source": "FMPRC",
+        "date": "2026-02-03",
+        "url": "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202602/t20260203_11850201.html"
+      },
+      {
+        "title": "Orsi deepens ties with China (international coverage)",
+        "source": "Al Jazeera",
+        "date": "2026-02-03",
+        "url": "https://www.aljazeera.com/news/2026/2/3/uruguay-president-orsi-deepens-ties-with-chinas-xi-despite-trump-threats"
+      },
+      {
+        "title": "Central bank chief signals more rate cuts in 2026",
+        "source": "Bloomberg",
+        "date": "2025-12-26",
+        "url": "https://www.bloomberg.com/news/articles/2025-12-26/uruguay-central-bank-chief-signals-more-rate-cuts-in-2026"
+      },
+      {
+        "title": "Inflation snapshot + macro briefs",
+        "source": "Trading Economics / FocusEconomics",
+        "date": "2026-01-05..2026-02-04",
+        "url": "https://tradingeconomics.com/uruguay/inflation-cpi"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-03-07T11:00:00Z"
+}
