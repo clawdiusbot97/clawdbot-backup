@@ -1,0 +1,8 @@
+{
+  "date": "2025-03-09",
+  "stage": "ok",
+  "findings_count": 6,
+  "sections": ["insurtech", "agentic_ai", "fraud", "document_ai", "infra"],
+  "generated_at": "2025-03-09T11:00:00Z",
+  "sources_searched": ["insurtech AI", "voice AI agents", "document parsing RAG", "fraud detection deepfake", "private AI on-prem"]
+}

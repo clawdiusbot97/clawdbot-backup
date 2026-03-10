@@ -132,3 +132,25 @@
 ### Dependency to unblock
 - Confirmación oficial de fecha final septiembre 2026 (día/hora) o indicación explícita de que sigue TBD.
 
+---
+## Weekly Plan — 2026-W11
+**Detected phase:** Phase 2 — Anteproyecto build
+
+### Weekly objectives (3)
+1. Cerrar la definición de problema + métrica base para que el anteproyecto sea defendible.
+2. Completar borrador de anteproyecto v1 (objetivos, metodología, alcance, cronograma).
+3. Resolver incógnitas académicas críticas (final septiembre 2026 + horas de hitos condicionales).
+
+### Tasks (5)
+- [ ] (Manu) Redactar 1-pager de problema (versión anteproyecto) y enlazar evidencia en 05_SOURCES.md
+- [ ] (JM) Confirmar con JM 3 fricciones operativas + estimación de tiempos (inputs para baseline)
+- [ ] (Rodrigo) Agendar/realizar 1 entrevista adicional (si aplica) y registrar hallazgos en bitácora
+- [ ] (Manu) Armar anteproyecto v1 (estructura + metodología + alcance) en doc de tesis (ruta a definir)
+- [ ] (Rodrigo) Confirmar requisitos/fechas con CIE/ORT (hora 13/04, condiciones 22/04, final sep 2026) y actualizar checklist
+
+### Main risk
+- Llegar a 26/03 sin anteproyecto coherente por falta de evidencia y/o requisitos formales.
+
+### Dependency to unblock
+- Confirmación oficial de fecha final septiembre 2026 (día/hora) o indicación explícita de que sigue TBD.
+

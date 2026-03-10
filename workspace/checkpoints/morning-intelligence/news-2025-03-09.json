@@ -1,0 +1,23 @@
+{
+  "date": "2025-03-09",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {"title": "Russia launches major drone strikes on Kyiv", "source": "Reuters", "category": "Geopolitics"},
+      {"title": "US-China new tariffs on EVs and semiconductors", "source": "Reuters", "category": "Markets"},
+      {"title": "Israel-Hamas ceasefire talks stall in Doha", "source": "Reuters", "category": "Geopolitics"},
+      {"title": "Germany extends Russian gas contracts", "source": "Reuters", "category": "Markets"},
+      {"title": "Record floods devastate Pakistan", "source": "Reuters", "category": "Disaster"}
+    ],
+    "uruguay": [
+      {"title": "President Orsi convenes Council of Ministers", "source": "Prensa Latina", "category": "Policy"},
+      {"title": "IRONMAN 70.3 Punta del Este promotion", "source": "Comité Olímpico Uruguayo", "category": "Sports"},
+      {"title": "DLocal fintech platform updates", "source": "Industry", "category": "Tech"},
+      {"title": "Mercosur payment integration interest", "source": "Regional", "category": "Markets"},
+      {"title": "Plan Nacional de Seguridad announcements", "source": "Government", "category": "Policy"}
+    ],
+    "watch": ["Middle East conflict escalation", "Latam fintech funding rounds", "BRICS developments"]
+  },
+  "sources_count": 12,
+  "generated_at": "2025-03-09T11:00:00Z"
+}
