@@ -1,0 +1,87 @@
+{
+  "date": "2026-03-11",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "US-Israel-Iran Conflict Enters Day 11, Oil Surges to $104",
+        "source": "Reuters/AP",
+        "category": "Geopolitics",
+        "summary": "Operation Epic Fury continues with Iranian Supreme Leader assassinated. Iran retaliating with drones at Gulf states. Strait of Hormuz threatened—60% of world commerce at risk.",
+        "url": "https://www.reuters.com/world/middle-east/"
+      },
+      {
+        "title": "Trump Press Conference: Threatens 20x Retaliation if Hormuz Blocked",
+        "source": "Reuters",
+        "category": "Policy",
+        "summary": "Trump addressed Operation Epic Fury, warned Iran against blocking oil flows, and stated energy team has pre-planned responses to temporary disruptions.",
+        "url": "https://www.reuters.com/world/us/trump-says-he-will-hold-press-conference-monday-2026-03-09/"
+      },
+      {
+        "title": "OPEC+ to Increase Production 206K bpd from April",
+        "source": "EIA/Reuters",
+        "category": "Markets",
+        "summary": "OPEC+ responding to supply shock from Hormuz disruptions. Brent forecast $78.84 average for 2026; Q2 spike to $91 expected before normalization.",
+        "url": "https://www.reuters.com/business/energy/"
+      },
+      {
+        "title": "AMI Labs Raises $1.03B for World-Model AI",
+        "source": "TechCrunch/NYT",
+        "category": "Tech/AI",
+        "summary": "LeCun's post-Meta venture at $3.5B valuation. Goal: AI that understands physics/causality vs pattern matching. Nvidia, Bezos back the round.",
+        "url": "https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/"
+      },
+      {
+        "title": "Global Markets Down ~4% on Geopolitical Tensions",
+        "source": "Financial Times",
+        "category": "Markets",
+        "summary": "S&P 500 down from highs; Dow topped 50,000 on consumer sentiment. Gold/silver at records as safe-havens. Fed facing stagflation risks.",
+        "url": "https://www.ft.com/markets"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Dólar cierra en $40.21, suba del 4.12%",
+        "source": "BCU/Reuters",
+        "category": "Economy",
+        "summary": "Dólar escaló significativamente desde $38.62. Proyección BCU: $40.19 para fin 2026. Impacto importaciones y costos externos.",
+        "url": "https://www.reuters.com/business/"
+      },
+      {
+        "title": "PBI proyectado 1.87% para 2026 (revisión a la baja)",
+        "source": "Encuesta BCU",
+        "category": "Economy",
+        "summary": "Crecimiento revisado desde 2.47%. Inflación esperada 4.40% 2026. Economía en moderación con presiones externas.",
+        "url": "https://www.gub.uy/banco-central/"
+      },
+      {
+        "title": "Desempleo regional: Treinta y Tres en 13.8%",
+        "source": "INE",
+        "category": "Labor",
+        "summary": "Disparidades regionales marcadas. Informalidad nacional 21.2%, supera 40% en norte/noreste. Gobierno prioriza empleo juvenil.",
+        "url": "https://www.gub.uy/ine/"
+      },
+      {
+        "title": "Inicia cosecha de arroz en Rocha",
+        "source": "MGAP",
+        "category": "Agriculture",
+        "summary": "Sexto producto exportador del país. 95% destino exportación a 30+ países. Temporada 2024-25 récord 1.7M toneladas.",
+        "url": "https://www.gub.uy/ministerio-ganaderia-agricultura-pesca/"
+      },
+      {
+        "title": "Orsi mantiene agenda de seguridad y empleo",
+        "source": "Presidencia",
+        "category": "Policy",
+        "summary": "Gobierno enfocado en reducción de informalidad laboral y narcotráfico. Cooperación regional priorizada por fronteras.",
+        "url": "https://www.gub.uy/presidencia/"
+      }
+    ],
+    "watch": [
+      "OPEC+ policy decision April 5, 2026",
+      "Fed rates decision (stagflation watch)",
+      "Strait of Hormuz shipping insurance cancellations"
+    ]
+  },
+  "sources_count": 12,
+  "generated_at": "2026-03-11T11:00:00Z"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-03-11",
+  "stage": "ok",
+  "findings_count": 8,
+  "actionable_ideas_count": 5,
+  "sources": [
+    "TechCrunch",
+    "Reuters",
+    "NYT",
+    "Sedgwick",
+    "Deloitte",
+    "Fenwick",
+    "Sikich"
+  ],
+  "generated_at": "2026-03-11T11:00:00Z"
+}

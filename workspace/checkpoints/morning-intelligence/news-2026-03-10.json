@@ -1,0 +1,102 @@
+{
+  "date": "2026-03-10",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "US-Israel-Iran War Escalates: Operation Epic Fury Day 11",
+        "category": "Geopolitics",
+        "source": "Reuters/AP",
+        "timestamp": "2026-03-10",
+        "what_happened": "Conflict entered second week with 900+ initial strikes, 1,300+ deaths, Strait of Hormuz closure, oil >$100/barbell. Trump predicts 'quick end' but no ceasefire signals.",
+        "why_matters": "Major energy supply shock impacts global markets, inflation, and risk pricing for commercial insurance. Uruguay calling for de-escalation.",
+        "links": ["https://www.reuters.com/world/middle-east/iran-israel-war-march-2026"]
+      },
+      {
+        "title": "Iran Appoints Hardline Leader Mojtaba Khamenei",
+        "category": "Policy",
+        "source": "BBC/Reuters",
+        "timestamp": "2026-03-02",
+        "what_happened": "Late Supreme Leader's son appointed amid war. Trump threatens appointee 'will not last long.' Interim Council under Ali Larijani formed.",
+        "why_matters": "Leadership instability extends conflict timeline, increases regional proxy activity (Hezbollah already joined).",
+        "links": ["https://www.bbc.com/news/world-middle-east"]
+      },
+      {
+        "title": "Global Oil Prices Surge Above $100/Barrel",
+        "category": "Markets",
+        "source": "Financial Times",
+        "timestamp": "2026-03-09",
+        "what_happened": "Strait of Hormuz closure and Qatar LNG export halt caused energy price spike. European allies skeptical but may increase support.",
+        "why_matters": "Energy cost shock impacts transport, manufacturing, and insurance risk models. Inflationary pressure on LATAM import-dependent economies.",
+        "links": ["https://www.ft.com/markets/oil-prices-iran-war"]
+      },
+      {
+        "title": "Qatar Suspends LNG Exports",
+        "category": "Energy",
+        "source": "Reuters",
+        "timestamp": "2026-03-06",
+        "what_happened": "Major LNG supplier halted exports due to regional conflict. Saudi Aramco refineries also struck.",
+        "why_matters": "Winter energy security concerns for Europe, price spikes for Asia. Uruguay energy imports potentially impacted.",
+        "links": ["https://www.reuters.com/business/energy/qatar-lng-suspension"]
+      },
+      {
+        "title": "Democrats Scrutinize Prediction Markets on Strike Timing",
+        "category": "Policy",
+        "source": "AP",
+        "timestamp": "2026-03-08",
+        "what_happened": "Calls for oversight of betting platforms following suspected foreknowledge of US-Israeli strikes.",
+        "why_matters": "Regulatory scrutiny of prediction markets increasing. Potential spillover to crypto/fintech oversight.",
+        "links": ["https://apnews.com/article/prediction-markets-investigation"]
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Women's Day Protests Across Uruguay",
+        "source": "El Observador",
+        "timestamp": "2026-03-09",
+        "what_happened": "March 8 rallies focused on femicide opposition, public funding for gender violence laws, economic austerity impacts on women.",
+        "why_matters_uruguay": "Social policy pressure growing; Orsi administration may face demands for expanded gender-violence program funding.",
+        "links": ["https://www.elobservador.com.uy/womens-day-2026"]
+      },
+      {
+        "title": "President Orsi's First-Year Address",
+        "source": "Presidencia.gub.uy",
+        "timestamp": "2026-03-02",
+        "what_happened": "Defended economic stability, falling unemployment/crime, slight wage increases. Announced new justice ministry + security/health/transport projects.",
+        "why_matters_uruguay": "Political stability signal for investors. New ministry creates opportunity for insurtech gov contracts.",
+        "links": ["https://www.presidencia.gub.uy/discurso-orsi-2026"]
+      },
+      {
+        "title": "Foreign Income Tax Changes Effective Jan 2026",
+        "source": "DGI Uruguay",
+        "timestamp": "2026-01-01",
+        "what_happened": "Ley 20.446: foreign-sourced income now taxed at 12% for residents without tax holiday. Real estate investment threshold raised to ~USD 2M.",
+        "why_matters_uruguay": "Impacts expat/foreign resident insurance needs. Changes residency dynamics for international clients.",
+        "links": ["https://www.dgi.gub.uy/ley-20446"]
+      },
+      {
+        "title": "Chevron Approved for Offshore Seismic Survey",
+        "source": "Ministerio de Ambiente",
+        "timestamp": "2026-02-28",
+        "what_happened": "3D seismic survey authorized through April with environmental safeguards in Uruguayan waters.",
+        "why_matters_uruguay": "Potential oil/gas discovery could transform energy sector, insurable risk landscape for offshore operations.",
+        "links": ["https://www.gub.uy/ministerio-ambiente/chevron-seismic"]
+      },
+      {
+        "title": "Orsi Attending Chile Presidential Inauguration",
+        "source": "El Pais Uruguay",
+        "timestamp": "2026-03-11",
+        "what_happened": "President Orsi joining Milei (Argentina) and other regional leaders at Chilean ceremony March 11.",
+        "why_matters_uruguay": "Regional diplomacy continues despite tensions. Potential for LATAM economic cooperation discussions.",
+        "links": ["https://www.elpais.com.uy/orsi-chile-inauguracion"]
+      }
+    ],
+    "watch": [
+      "March 11: Chile presidential inauguration - regional leaders summit potential",
+      "March 10: Montevideo demonstration alert (US Embassy) - avoid downtown congestion",
+      "Ongoing: Middle East conflict trajectory - watch for Hormuz reopening signals"
+    ]
+  },
+  "sources_count": 12,
+  "generated_at": "2026-03-10T11:08:00Z"
+}

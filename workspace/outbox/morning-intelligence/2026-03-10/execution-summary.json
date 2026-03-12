@@ -1,0 +1,39 @@
+{
+  "job_id": "d4755542-b64c-4067-90b1-4e1076b31990",
+  "date": "2026-03-10",
+  "timings": {
+    "gmail_start": 1773140437774,
+    "gmail_end": 1773140437774,
+    "gmail_duration_ms": 0,
+    "web_start": 1773140483955,
+    "web_end": 1773140582087,
+    "web_duration_ms": 98132,
+    "render_start": 1773140582087,
+    "render_end": 1773140768855,
+    "render_duration_ms": 186768,
+    "delivery_start": 1773140768855,
+    "delivery_end": 1773140795000,
+    "delivery_duration_ms": 26145,
+    "total_duration_ms": 357226
+  },
+  "resources_used": {
+    "web_search_queries": 9,
+    "sources_total": 12,
+    "thesis_findings": 8,
+    "thesis_actionable_ideas": 5
+  },
+  "deliveries": [
+    {"channel": "briefings", "channel_id": "1475961144416931931", "message_id": "1480885123120369684", "status": "delivered"},
+    {"channel": "newsletters", "channel_id": "1475961125257351423", "message_id": "1480885126958157856", "status": "delivered"},
+    {"channel": "to-dos", "channel_id": "1475961183533273249", "message_id": "1480885130561196053", "status": "delivered"},
+    {"channel": "general", "channel_id": "1475957499642380523", "message_id": "1480885133845205045", "status": "delivered"},
+    {"channel": "thesis-intel", "channel_id": "1476311753305362564", "message_id": "1480885139918557285", "status": "delivered"},
+    {"channel": "news-extension", "channel_id": "1477319018992898171", "message_id": "1480885148152234064", "status": "delivered"}
+  ],
+  "files_written": [
+    "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-03-10.md",
+    "/home/manpac/.openclaw/workspace/checkpoints/thesis/2026-03-10.json",
+    "/home/manpac/.openclaw/workspace/checkpoints/morning-intelligence/news-2026-03-10.json"
+  ],
+  "status": "completed"
+}
