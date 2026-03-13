@@ -1,0 +1,11 @@
+{
+  "date": "2026-03-12",
+  "stage": "ok",
+  "findings_count": 8,
+  "actionable_ideas_count": 5,
+  "topics_covered": ["Document AI", "Voice AI", "Insurtech", "Fraud/Security", "Geopolitical Risk", "EU-Mercosur"],
+  "generated_at": "2026-03-12T11:08:00Z",
+  "delivery": {
+    "discord_channel_1476311753305362564": "ok"
+  }
+}

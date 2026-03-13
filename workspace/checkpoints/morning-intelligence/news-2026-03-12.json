@@ -1,0 +1,71 @@
+{
+  "date": "2026-03-12",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "US-Iran War Enters Week 2 — Strait of Hormuz Disrupted",
+        "category": "Geopolitics",
+        "source": "Reuters/BBC"
+      },
+      {
+        "title": "US-China Tech Tariff Escalation — 50% Duties, Rare Earth Retaliation",
+        "category": "Policy",
+        "source": "Reuters"
+      },
+      {
+        "title": "Russia Advances in Donetsk — Ceasefire Talks Stalled",
+        "category": "Geopolitics",
+        "source": "Reuters"
+      },
+      {
+        "title": "Israel-Hamas Truce Talks Collapse in Doha",
+        "category": "Geopolitics",
+        "source": "Reuters"
+      },
+      {
+        "title": "EU Migration Crisis — 100K+ Mediterranean Crossings in Early 2026",
+        "category": "Policy",
+        "source": "Reuters"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Security #1 Concern for Uruguayans — Udelar Poll",
+        "category": "Policy"
+      },
+      {
+        "title": "Uruguay & Argentina First to Ratify EU-Mercosur Pact",
+        "category": "Markets"
+      },
+      {
+        "title": "Uruguay Ambassador to China Highlights Five-Year Plan Ties",
+        "category": "Policy"
+      },
+      {
+        "title": "Uruguay Military Ranked #108 Globally (2026)",
+        "category": "Military"
+      },
+      {
+        "title": "Local: Car Accident Involving Former Big Brother Champion",
+        "category": "Culture"
+      }
+    ],
+    "watch": [
+      "NVIDIA GTC Conference (next week)",
+      "Brazil Senate Vote on EU-Mercosur",
+      "IEA Strategic Oil Release Timing",
+      "Fed Policy Signals"
+    ]
+  },
+  "sources_count": 5,
+  "generated_at": "2026-03-12T11:08:00Z",
+  "delivery": {
+    "channel_1475961144416931931": "ok",
+    "channel_1475961125257351423": "ok",
+    "channel_1475961183533273249": "ok",
+    "channel_1475957499642380523": "ok",
+    "channel_1477319018992898171": "ok",
+    "channel_1476311753305362564": "ok"
+  }
+}

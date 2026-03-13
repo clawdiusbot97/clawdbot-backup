@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+  username: <%= ENV.fetch("DB_USER") { "postgres" } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { "" } %>
+
+development:
+  <<: *default
+  database: brokia_mvp_development
+
+test:
+  <<: *default
+  database: brokia_mvp_test
+
+production:
+  <<: *default
+  database: brokia_mvp_production

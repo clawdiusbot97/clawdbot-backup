@@ -6,7 +6,7 @@
       "name": "morning-intelligence",
       "enabled": true,
       "createdAtMs": 1771973997595,
-      "updatedAtMs": 1773227231940,
+      "updatedAtMs": 1773313440340,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -26,11 +26,11 @@
         "to": "1475961144416931931"
       },
       "state": {
-        "nextRunAtMs": 1773313200000,
-        "lastRunAtMs": 1773226800004,
+        "nextRunAtMs": 1773399600000,
+        "lastRunAtMs": 1773313200002,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 431936,
+        "lastDurationMs": 240338,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -41,7 +41,7 @@
       "name": "brokia-deadline-alerts",
       "enabled": true,
       "createdAtMs": 1772312086457,
-      "updatedAtMs": 1773230520020,
+      "updatedAtMs": 1773316807373,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -61,14 +61,14 @@
         "to": "brokia-ai-alerts"
       },
       "state": {
-        "nextRunAtMs": 1773316800000,
-        "lastRunAtMs": 1773230400004,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 120016,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "cron: job execution timed out"
+        "nextRunAtMs": 1773403200000,
+        "lastRunAtMs": 1773316800003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 7370,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
       }
     },
     {
@@ -111,7 +111,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772315991427,
-      "updatedAtMs": 1773300666370,
+      "updatedAtMs": 1773387900026,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -129,14 +129,15 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773387000000,
-        "lastRunAtMs": 1773300600005,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 66365,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
+        "nextRunAtMs": 1773473400000,
+        "lastRunAtMs": 1773387000008,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 900018,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
       }
     },
     {
