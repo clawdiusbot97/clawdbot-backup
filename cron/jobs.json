@@ -6,7 +6,7 @@
       "name": "morning-intelligence",
       "enabled": true,
       "createdAtMs": 1771973997595,
-      "updatedAtMs": 1773313440340,
+      "updatedAtMs": 1773400002928,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -26,11 +26,11 @@
         "to": "1475961144416931931"
       },
       "state": {
-        "nextRunAtMs": 1773399600000,
-        "lastRunAtMs": 1773313200002,
+        "nextRunAtMs": 1773486000000,
+        "lastRunAtMs": 1773399600005,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 240338,
+        "lastDurationMs": 402923,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -41,7 +41,7 @@
       "name": "brokia-deadline-alerts",
       "enabled": true,
       "createdAtMs": 1772312086457,
-      "updatedAtMs": 1773316807373,
+      "updatedAtMs": 1773403243180,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -61,14 +61,14 @@
         "to": "brokia-ai-alerts"
       },
       "state": {
-        "nextRunAtMs": 1773403200000,
-        "lastRunAtMs": 1773316800003,
+        "nextRunAtMs": 1773489600000,
+        "lastRunAtMs": 1773403200008,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 7370,
-        "lastDeliveryStatus": "not-delivered",
+        "lastDurationMs": 43172,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": false
+        "lastDelivered": true
       }
     },
     {
@@ -136,8 +136,8 @@
         "lastDurationMs": 900018,
         "lastDeliveryStatus": "unknown",
         "consecutiveErrors": 1,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "lastErrorReason": "timeout",
+        "runningAtMs": 1773473400002
       }
     },
     {
@@ -145,7 +145,7 @@
       "name": "brokia-intel-radar",
       "enabled": true,
       "createdAtMs": 1772649843672,
-      "updatedAtMs": 1773231410478,
+      "updatedAtMs": 1773404160145,
       "schedule": {
         "kind": "cron",
         "expr": "15 9 * * 1,3,5",
@@ -163,11 +163,11 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773404100000,
-        "lastRunAtMs": 1773231300003,
+        "nextRunAtMs": 1773663300000,
+        "lastRunAtMs": 1773404100006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 110475,
+        "lastDurationMs": 60139,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0

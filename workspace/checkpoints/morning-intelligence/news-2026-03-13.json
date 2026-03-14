@@ -1,0 +1,67 @@
+{
+  "date": "2026-03-13",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "U.S.-Israel Military Campaign Against Iran Escalates",
+        "category": "Geopolitics",
+        "source": "DNB Global Outlook"
+      },
+      {
+        "title": "Gaza Peace Efforts Stalled Under Trump Initiative",
+        "category": "Geopolitics",
+        "source": "Reuters"
+      },
+      {
+        "title": "OPEC+ Extends Production Cuts Through 2026",
+        "category": "Markets",
+        "source": "Caspian Post"
+      },
+      {
+        "title": "Russia-Ukraine War Intensification",
+        "category": "Geopolitics",
+        "source": "Council on Foreign Relations"
+      },
+      {
+        "title": "Australia Grants Humanitarian Visas to Iranian Women Soccer Players",
+        "category": "Policy",
+        "source": "Reuters"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Central Bank Cuts Policy Rate to 5.75%",
+        "category": "Markets",
+        "source": "MercoPress"
+      },
+      {
+        "title": "President Orsi's First-Year Address",
+        "category": "Policy",
+        "source": "MercoPress"
+      },
+      {
+        "title": "Mercosur-Singapore FTA Activated",
+        "category": "Trade",
+        "source": "MercoPress"
+      },
+      {
+        "title": "Security and Cost of Living Top Concerns",
+        "category": "Social",
+        "source": "MercoPress"
+      },
+      {
+        "title": "Women's Day Protests Demand Gender Violence Funding",
+        "category": "Social",
+        "source": "MercoPress"
+      }
+    ],
+    "watch": [
+      "Canal 5 Noticias 5 broadcast March 13 6:30 PM GMT-3",
+      "Middle East conflict Uruguay foreign ministry statements",
+      "Central Bank next policy decision"
+    ]
+  },
+  "sources_count": 10,
+  "generated_at": "2026-03-13T11:00:00Z"
+}
