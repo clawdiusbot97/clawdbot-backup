@@ -1,0 +1,9 @@
+{
+  "date": "2026-03-15",
+  "stage": "ok",
+  "findings_count": 6,
+  "topics_covered": ["document_ai", "broker_copilots", "fraud_detection", "voice_ai", "data_residency", "agentic_ai"],
+  "delivery_channel": "1476311753305362564",
+  "delivery_status": "success",
+  "generated_at": "2026-03-15T11:06:00Z"
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-03-15",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {"title": "US-Iran War Escalates — Kharg Island Strikes", "category": "Geopolitics", "source": "Reuters/AP"},
+      {"title": "Iran Threatens US Bases; Missile Hits Baghdad Embassy", "category": "Geopolitics", "source": "Reuters/AP"},
+      {"title": "OpenAI Raises Record $110 Billion at $730B Valuation", "category": "Markets", "source": "TechCrunch"},
+      {"title": "Russia-Ukraine War Continues; EU Criticizes US Sanctions Waiver", "category": "Geopolitics", "source": "BBC"},
+      {"title": "Israel Expands Lebanon Operations vs Hezbollah", "category": "Geopolitics", "source": "Reuters"}
+    ],
+    "uruguay": [
+      {"title": "Uruguay Suspends IRPF Withholdings on Foreign Capital Gains", "category": "Policy", "source": "Bloomberg Tax"},
+      {"title": "Uruguay First to Ratify EU-Mercosur Trade Agreement", "category": "Trade", "source": "EFE"},
+      {"title": "Uruguay Urges Middle East De-escalation", "category": "Foreign Policy", "source": "Xinhua"},
+      {"title": "President Orsi's China Visit Strengthens Ties", "category": "Foreign Policy", "source": "FMPRC"},
+      {"title": "US Visa Suspension Affects Uruguay", "category": "Policy", "source": "MercoPress"}
+    ],
+    "watch": [
+      "US-Iran conflict potential escalation; Strait of Hormuz closure threats",
+      "Oil markets price movements; $200/barrel warnings from Iran",
+      "EU-Mercosur other nations ratification following Uruguay",
+      "Uruguay tax policy impact on foreign investment flows"
+    ]
+  },
+  "sources_count": 10,
+  "generated_at": "2026-03-15T11:05:00Z"
+}
