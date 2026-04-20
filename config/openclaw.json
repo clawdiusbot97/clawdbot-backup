@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.24",
-    "lastTouchedAt": "2026-02-25T15:10:26.668Z"
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-04-20T01:14:22.489Z"
   },
   "wizard": {
     "lastRunAt": "2026-02-25T15:10:26.636Z",
@@ -22,6 +22,10 @@
       "google-gemini-cli:manuel.pacheco@qubika.com": {
         "provider": "google-gemini-cli",
         "mode": "oauth"
+      },
+      "openai-codex:jmpacheco1997@gmail.com": {
+        "provider": "openai-codex",
+        "mode": "oauth"
       }
     }
   },
@@ -38,12 +42,7 @@
         ]
       },
       "models": {
-        "openrouter/moonshotai/kimi-k2.5": {},
-        "openai-codex/gpt-5.3-codex-spark": {},
-        "openai-codex/gpt-5.3-codex": {},
-        "openai-codex/gpt-5.2-codex": {},
-        "openai-codex/gpt-5.2": {},
-        "openai-codex/gpt-5.1-codex-mini": {}
+        "openai-codex/gpt-5.4": {}
       },
       "workspace": "/home/manpac/.openclaw/workspace",
       "memorySearch": {
@@ -276,13 +275,17 @@
       "dmPolicy": "pairing",
       "botToken": "${OPENCLAW_TELEGRAM_BOT_TOKEN}",
       "groupPolicy": "allowlist",
-      "streaming": "partial"
+      "streaming": {
+        "mode": "partial"
+      }
     },
     "discord": {
       "enabled": true,
       "token": "${OPENCLAW_DISCORD_TOKEN}",
       "groupPolicy": "allowlist",
-      "streaming": "off"
+      "streaming": {
+        "mode": "off"
+      }
     },
     "slack": {
       "mode": "socket",
@@ -292,8 +295,10 @@
       "appToken": "${OPENCLAW_SLACK_APP_TOKEN}",
       "userTokenReadOnly": true,
       "groupPolicy": "allowlist",
-      "streaming": "partial",
-      "nativeStreaming": true,
+      "streaming": {
+        "mode": "partial",
+        "nativeTransport": true
+      },
       "channels": {
         "brokia-ai-briefing": {
           "requireMention": false
@@ -313,7 +318,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+      "token": "[TOKEN]"
     },
     "tailscale": {
       "mode": "off",
@@ -360,6 +365,15 @@
         "enabled": true
       },
       "google-gemini-cli-auth": {
+        "enabled": true
+      },
+      "google": {
+        "enabled": true
+      },
+      "openrouter": {
+        "enabled": true
+      },
+      "openai": {
         "enabled": true
       }
     }

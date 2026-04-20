@@ -1,0 +1,25 @@
+{
+  "date": "2026-03-16",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {"title": "US-Iran War Escalates: Strait of Hormuz Closed", "source": "Reuters/AP", "category": "Geopolitics", "score": 10},
+      {"title": "NVIDIA Unveils Vera Rubin AI Platform at GTC 2026", "source": "Oplexa", "category": "Tech/AI", "score": 8},
+      {"title": "IEA Releases 400M Barrels from Emergency Stocks", "source": "Reuters", "category": "Markets", "score": 9},
+      {"title": "China Economy Surprises with Strong Start to 2026", "source": "Taipei Times", "category": "Markets", "score": 7},
+      {"title": "Trump Threatens to Delay China Trip Over Hormuz", "source": "AP", "category": "Geopolitics", "score": 8}
+    ],
+    "uruguay": [
+      {"title": "Colombia & Venezuela Request Full Mercosur Membership", "source": "Infobae", "category": "Policy", "score": 8},
+      {"title": "Uruguay Women's Hockey Beats Austria 3-0 at World Cup Qualifiers", "source": "The News Mill", "category": "Sports", "score": 5},
+      {"title": "Danubio vs Juventud Match Tonight in Montevideo", "source": "Fox Sports", "category": "Sports", "score": 3}
+    ],
+    "watch": [
+      "Mercosur membership vote for Colombia/Venezuela",
+      "Artemis II launch window (April 1-2)",
+      "Strait of Hormuz reopening developments"
+    ]
+  },
+  "sources_count": 15,
+  "generated_at": "2026-03-16T11:00:00Z"
+}

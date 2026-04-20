@@ -6,7 +6,7 @@
       "name": "morning-intelligence",
       "enabled": true,
       "createdAtMs": 1771973997595,
-      "updatedAtMs": 1773572713029,
+      "updatedAtMs": 1776596401502,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -26,14 +26,15 @@
         "to": "1475961144416931931"
       },
       "state": {
-        "nextRunAtMs": 1773658800000,
-        "lastRunAtMs": 1773572400007,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 313022,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1776682800000,
+        "lastRunAtMs": 1776596400018,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1484,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 35,
+        "lastErrorReason": "auth",
+        "lastError": "Error: All models failed (4): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | openrouter/moonshotai/kimi-k2.5: HTTP 401: User not found. (auth) | openrouter/deepseek/deepseek-v3.2: HTTP 401: User not found. (auth) | openrouter/minimax/minimax-m2.1: HTTP 401: User not found. (auth)"
       }
     },
     {
@@ -41,7 +42,7 @@
       "name": "brokia-deadline-alerts",
       "enabled": true,
       "createdAtMs": 1772312086457,
-      "updatedAtMs": 1773576081667,
+      "updatedAtMs": 1776600001547,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -61,14 +62,15 @@
         "to": "brokia-ai-alerts"
       },
       "state": {
-        "nextRunAtMs": 1773662400000,
-        "lastRunAtMs": 1773576000007,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 81660,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1776686400000,
+        "lastRunAtMs": 1776600000010,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1537,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 34,
+        "lastErrorReason": "auth",
+        "lastError": "Error: All models failed (4): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | openrouter/moonshotai/kimi-k2.5: HTTP 401: User not found. (auth) | openrouter/deepseek/deepseek-v3.2: HTTP 401: User not found. (auth) | openrouter/minimax/minimax-m2.1: HTTP 401: User not found. (auth)"
       }
     },
     {
@@ -76,7 +78,7 @@
       "name": "brokia-weekly-planning",
       "enabled": true,
       "createdAtMs": 1772313102057,
-      "updatedAtMs": 1773061239155,
+      "updatedAtMs": 1776085202516,
       "schedule": {
         "kind": "cron",
         "expr": "0 10 * * 1",
@@ -96,14 +98,15 @@
         "to": "1476311753305362564"
       },
       "state": {
-        "nextRunAtMs": 1773666000000,
-        "lastRunAtMs": 1773061200005,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 39150,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1776690000000,
+        "lastRunAtMs": 1776085200015,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 2501,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 4,
+        "lastErrorReason": "auth",
+        "lastError": "Error: All models failed (4): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | openrouter/moonshotai/kimi-k2.5: HTTP 401: User not found. (auth) | openrouter/deepseek/deepseek-v3.2: HTTP 401: User not found. (auth) | openrouter/minimax/minimax-m2.1: HTTP 401: User not found. (auth)"
       }
     },
     {
@@ -111,7 +114,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772315991427,
-      "updatedAtMs": 1773560115663,
+      "updatedAtMs": 1776583801269,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -129,15 +132,15 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773646200000,
-        "lastRunAtMs": 1773559800010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 315653,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true,
-        "runningAtMs": 1773646200002
+        "nextRunAtMs": 1776670200000,
+        "lastRunAtMs": 1776583800011,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1258,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 34,
+        "lastErrorReason": "auth",
+        "runningAtMs": 1776670200002
       }
     },
     {
@@ -145,7 +148,7 @@
       "name": "brokia-intel-radar",
       "enabled": true,
       "createdAtMs": 1772649843672,
-      "updatedAtMs": 1773404160145,
+      "updatedAtMs": 1776428101217,
       "schedule": {
         "kind": "cron",
         "expr": "15 9 * * 1,3,5",
@@ -163,14 +166,15 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773663300000,
-        "lastRunAtMs": 1773404100006,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 60139,
-        "lastDelivered": false,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1776687300000,
+        "lastRunAtMs": 1776428100009,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1208,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 14,
+        "lastErrorReason": "auth",
+        "lastError": "Error: All models failed (4): openai-codex/gpt-5.2: OAuth token refresh failed for openai-codex: Failed to refresh OAuth token for openai-codex. Please try again or re-authenticate. (auth) | openrouter/moonshotai/kimi-k2.5: HTTP 401: User not found. (auth) | openrouter/deepseek/deepseek-v3.2: HTTP 401: User not found. (auth) | openrouter/minimax/minimax-m2.1: HTTP 401: User not found. (auth)"
       }
     }
   ]
