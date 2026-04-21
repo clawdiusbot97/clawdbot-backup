@@ -1,0 +1,8 @@
+{
+  "date": "2026-04-20",
+  "stage": "error",
+  "message": "Failed to generate News Extension: SearXNG returned no usable item-level results (source+link+date) for Global News and Uruguay queries; cannot safely rank/select Top 5 per quality filter.",
+  "sections": {"global": [], "uruguay": [], "watch": []},
+  "sources_count": 0,
+  "generated_at": "2026-04-20T11:00:00Z"
+}
