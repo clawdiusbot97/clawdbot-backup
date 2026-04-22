@@ -1,0 +1,72 @@
+TITLE: Facturación Electrónica - Manejo de riesgos
+DOMAIN: General
+PRIORITY: Media
+ID: 3063349286
+SOURCE: 3063349286__Facturacio╠ün_Electro╠ünica_-_Manejo_de_riesgos.json
+
+---
+
+noteThis template is brought to you by Stiltsoft, an Atlassian platinum partner.
+This template is brought to you by Stiltsoft, an Atlassian platinum partner.
+
+Background
+Provide context on the project or initiative for which you need to assess risks. Include links to relevant research, pages, etc.
+
+Risks management
+Identify and prioritize risks based on their probability and severity. Then define what further actions you need to take to control the risks, and who needs to carry out these actions.
+Risk rating
+Choose your rating based on the likelihood of an event occurring (from most unlikely to most likely) and the severity of the issues that might arise if the event does occur (from trivial issues to major issues).
+LOW
+
+MEDIUM
+
+HIGH
+
+EXTREME
+
+Acceptable
+
+Ok to proceed
+
+As low as reasonably practicable
+
+Take mitigation efforts
+
+Generally unacceptable
+
+Seek support
+
+Intolerable
+
+Place event on hold
+
+Outline various risks (which can be color-coded depending on the type of risk) and then place them to the table to promote robust discussions and facilitate workshops.
+
+LIKELIHOOD
+
+SEVERITY
+
+ACCEPTABLE
+Little to no effect on event
+
+TOLERABLE
+Effects are felt, but not critical to outcome
+
+UNDESIRABLE
+Serious impact to the course of action and outcome
+
+INTOLERABLE
+Could result in disaster
+
+IMPROBABLE
+Risk is unlikely to occur
+
+POSSIBLE
+Risk will likely occur
+
+PROBABLE
+Risk will occur
+
+Action items
+Add action items to close the loop on open questions or concerns.
+1incomplete

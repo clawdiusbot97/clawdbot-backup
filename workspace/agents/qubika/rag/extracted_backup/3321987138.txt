@@ -1,0 +1,174 @@
+TITLE: vPOS Mejoras UX
+DOMAIN: General
+PRIORITY: Media
+ID: 3321987138
+SOURCE: 3321987138__vPOS_Mejoras_UX.json
+
+---
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Añadir estilos de forma a los inputs del iframe (bordes rounded, sharp, pill)
+
+Se agrega el dropdown select a la configuración de vpos en el portal.
+
+6
+
+Commerce suite (configuración)
+
+Añadir estilos de forma a los inputs del iframe (bordes rounded, sharp, pill)
+
+Agregar la lógica para aceptar esta configuración de los bordes a cada uno de los inputs.
+
+16
+
+vPOS portal (representación final)
+
+Añadir estilos de forma a los inputs del iframe (bordes rounded, sharp, pill)
+Determinar como manejar el guardado de estas configuraciones en la base de datos de vpos service.
+
+6
+
+vPOS service (base de datos)
+
+Tipo de Fuente para texto
+
+Se agrega el dropdown select a la configuración de vpos en el portal.
+
+Determinar que tipos de fuente queremos incluir **
+
+8
+
+Commerce Suite (configuración)
+
+Tipo de fuente para texto
+
+12
+
+vPOS portal (representación final)
+
+Tamaño de Fuente para texto
+Se agrega el dropdown select a la configuración de vpos en el portal.
+Determinar que tamaños de fuente queremos incluir **
+
+6
+
+Commerce Suite (configuración)
+
+Tamaño de fuente
+
+12
+
+vPOS portal (representación final)
+
+Tooltip para los tipos de tarjetas que acepta Bancard.
+
+En el input de número de tarjeta se debe mostrar en el lado derecho las tarjetas que se aceptan desde Bancard.
+En tamaño escritorio se muestran Visa, Mastercard y AMEX fijas, y en 4 posición se muestra una última que debe ir cambiando según un lapso de tiempo determinado.
+En tamaño mobile se muestra solo un logo de tarjeta que debe ir cambiando según determinado lapso de tiempo.
+
+En ambos casos al hacer hover sobre la opción que va cambiando se debe mostrar un tooltip con los logos de las tarjetas ocultas.
+
+24
+
+vPOS portal
+
+Añadir opción de configuración para la posición de los placeholder/labels de los inputs (Above o flotante)
+
+6
+
+Commerce Suite (condifuración)
+
+Tomar configuración de posición de los placeholders/labels y posicionarlos.
+Tomar en cuenta el comportamiento de los placeholders en stripe que se posicionan en la parte superior de los inputs cuando hay un focus en tal.
+
+24
+
+vPOS portal
+
+Agregar Tabs en la parte superior ‘Card’
+
+(Tener en cuenta que en el futuro se planea agregar otros medios de pago, como en stripe)
+
+8
+
+vPOS portal
+
+Color Danger
+
+Agregar configuración para determinar el color del texto cuando hay algún error.
+Dropdown con opciones *
+
+6
+
+Commerce Suite (configuración)
+
+Color Danger
+Tomar la configuración establecida para el texto de errores en el portal.
+
+16
+
+vPOS portal
+
+iconCardCvcColor
+Color del ícono del input CVC
+
+Agregar opciones para configurar el color de este ícono. **
+
+6
+
+Commerce Suite (configuración)
+
+iconCardCvcColor
+Color del ícono del input CVC
+Tomar la configuración establecida para este item
+
+8
+
+vPOS portal
+
+iconCardCvcErrorColor
+Color del ícono del input CVC cuando hay un error
+
+8
+
+vPOS portal
+
+Aceptar reglas en CSS puro por código para el comportamiento bajo los eventos hover y focus para las tabs de la parte superior.
+Se debe aceptar el CSS que el cliente envíe por código para la personalización de estos elementos en esos eventos.
+
+24
+
+vPOS portal
+
+Cambiar el flujo actual del proceso de catastro
+
+Remover el paso del botón ‘Siguiente’ y mostrar los inputs necesarios para el flujo completo de catastro en la misma vista.
+
+24
+
+vPOS portal
+
+Total Desarrollo
+
+190
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+28
+
+Total Desarrollo + Gestión
+
+218
+
+notePreguntas
+Preguntas
+
+¿Qué fuentes queremos incluir en las opciones para el iframe?
+
+Se debe definir el ícono del input CVC

@@ -1,0 +1,20 @@
+TITLE: Jira Board
+DOMAIN: General
+PRIORITY: Media
+ID: 2576154652
+SOURCE: 2576154652__Jira_Board.json
+
+---
+
+Por Hacer: Tareas sin realizar.
+
+En Curso: Tareas que están siendo realizadas
+
+Bloqueado: Tareas bloqueadas debido a falta de backend.
+
+En Revision: Tareas con un PR abierto en Github
+
+Listo: Tareas aprobadas en Github, en Staging
+
+Portal de Comercios
+Infonet Cobranzas

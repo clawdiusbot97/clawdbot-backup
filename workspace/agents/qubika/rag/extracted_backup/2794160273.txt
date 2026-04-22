@@ -1,0 +1,136 @@
+TITLE: Servicios de Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 2794160273
+SOURCE: 2794160273__Servicios_de_Bancard.json
+
+---
+
+Bancard cuenta con múltiples servicios que proveen soluciones para los distintos modelos de negocio que maneja.
+Servicio
+
+Funcionalidad
+
+Repositorio
+
+Audit-service
+
+Cada acción que se realiza en os portales se registra en audit como un log. Ej: “El usuario XX intentó loguearse al portal de comercios”
+
+Servicio responsable de mantener y servir información de auditoría
+
+Acciones de usuario
+
+Llamadas a API
+
+https://github.com/bancardsa/bancard-audit-service
+
+Auth-service
+
+Manejo de usuarios
+
+Manejo de autenticación de servicios y portales
+
+Base de datos MySQL (auth_service_production)
+
+https://github.com/bancardsa/bancard-auth-service
+
+Backend-service
+
+Servicio que da soporte al Backend administrativo de bancard
+
+Proxy entre servicios y backend administrativo
+
+https://github.com/bancardsa/bancard-backend-service
+
+Billing-service
+
+Consultar facturas
+
+Pagar una factura
+
+Especificación de los productos (ej: Recarga de minutos)
+
+https://github.com/bancardsa/bancard-billing-service
+
+Biller-service
+
+Para que Billing-service pueda consultar facturas y pagar. Los facturadores deben implementar una API.
+
+Biller implementa esta api para facturadores chicos y acepta la información de las facturas a través de un CSV
+
+https://github.com/bancardsa/bancard-biller-service
+
+Billing-service-public-proxy
+
+Interfaz pública de Billing para que entidades puedan utilizar en su home banking:
+Consulta de Facturas
+
+Pago de Facturas
+
+https://github.com/bancardsa/bancard-billing-service-public-proxy
+
+Commerce-service
+
+Manejo de comercios-entidades
+
+Se reciben transacciones desde el BUS y a partir de estas se crean los comercios, tipos de tarjetas
+
+https://github.com/bancardsa/bancard-commerce-service
+
+ePOS-service
+
+Servicio que da soporte a boca web
+
+Servicio de pago de facturas para bocas (Redes de cobranza como Abitad - RedPagos en Uruguay)
+
+https://github.com/bancardsa/bancard-epos-service
+
+Loyalty-service
+
+Servicio para hacer campañas de lealtad
+
+Principalmente para entidades
+
+https://github.com/bancardsa/bancard-loyalty-service
+
+mPOS-service
+
+Servicio que da soporte a la aplicación móvil MiniPOS
+
+Les permite a los comercios utilizar smartphone como un POS en cualquier lugar
+
+https://github.com/bancardsa/bancard-mpos-service
+
+Notifications-service
+
+Encargado de almacenar todas las transacciones de las tarjetas de crédito y débito
+
+Encargado de enviar notificaciones push
+
+https://github.com/bancardsa/bancard-notification-service
+
+Payment-link-service
+
+Allows commerces to create new payments without the need of hardware like cardscanners.
+
+The commerces will be able to generate payment links that can be shared to customers so they can make a payment only by opening the link.
+
+https://github.com/bancardsa/bancard-payment-link-service
+
+S4-service
+
+Servicio encargado de almacenar archivos (públicos y privados)
+
+https://github.com/bancardsa/bancard-s4-service
+
+selling-service
+
+vPOS-service
+
+Servicios que permiten a un comercio que un usuario pague sus productos a través de internet (Similar a Paypal)
+
+https://github.com/bancardsa/bancard-vpos-service
+
+Conocé nuestros portales↓
+Portales de Bancard

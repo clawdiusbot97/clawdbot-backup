@@ -1,0 +1,119 @@
+TITLE: Extracciones en POS con QR - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3242623368
+SOURCE: 3242623368__Extracciones_en_POS_con_QR_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para[doc de requerimientos de la iniciativa].
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Agregar el QR-WD como source válido en la generación del QR
+
+4
+
+external-commerce-services
+
+Agregar en el modelo de payment hook el QR-WD como source valido
+
+4
+
+selling-service
+
+Implementar comunicación con RPG para la consulta de comisión.
+
+16
+
+billing-proxy
+
+Agregar en el endpoint de decode, la comunicación con el RPG para la consulta de la comisión según la entidad.
+
+6
+
+billing-proxy
+
+Modificar respuesta de la decodificación para devolver como datos opcionales los montos desglosados de extracción y comisión.
+El campo “amount“ debe tener el monto de extracción + comisión si el usuario es quien paga la comisión, sino solo el monto de la extracción.
+
+6
+
+billing-proxy
+
+Agregar en el endpoint de confirmación, la comunicación con el RPG para la consulta de la comisión según la entidad. Enviar el monto de la comisión a selling-service.
+
+8
+
+billing-proxy
+
+Modificar endpoint de confirmación para recibir el monto de la comisión.
+
+6
+
+selling-service
+
+Agregar validación de que el medio de pago sea débito o débito en cuenta (solo para los QRs de extracción) sino debe fallar.
+
+4
+
+selling-service
+
+Al momento de la validación del medio de pago, si el medio de pago no es válido, notificar al comercio igualmente que el pago no se pudo realizar por esos motivos, y devolver respuesta acorde a la entidad.
+
+16
+
+selling-service
+
+Agregar en el llamado al JPOS el monto de la comisión.
+
+6
+
+selling-service
+
+Agregar el QR-source en la respuesta de la confirmación.
+
+4
+
+selling-service
+
+Agregar el tipo de QR en la respuesta de la confirmación de un QR.
+
+4
+
+billing-proxy
+
+Modificar el callback del POS para agregar los campos nuevos de QR-WD. Enviar 0 en esos campos si es un QR-BC o QR-Change.
+
+12
+
+selling-service
+
+Total Desarrollo
+
+96
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+14
+
+Total Desarrollo + Gestión
+
+110
+
+notePreguntas
+Preguntas
+
+Como quieren manejar el permiso para que el comercio cree QRs de vuelto. Hoy en día no tenemos esta validación para el QR de cambio.
+
+Para el caso de QR_Change es configurable que entidades soportan esas confirmaciones. Queremos lo mismo para QR vuelto?
+
+Como hacemos para saber si el medio de pago es débito o débito en cuenta? Alcanza con que el account type sea debit?
+
+El jpos que se va a usar va a ser el mismo que se usa para el qr_change y qr_bc?
+
+Queremos configurar un máximo para los retiros?

@@ -1,0 +1,41 @@
+TITLE: Template Daily
+DOMAIN: General
+PRIORITY: Media
+ID: 2675638290
+SOURCE: 2675638290__Template_Daily.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+/date
+
+@lorem
+
+Yesterday:
+Today:
+Blockers?
+
+2incomplete
+
+@ipsum
+
+Yesterday:
+Today:
+Blockers?
+
+3incomplete
+
+@dolor
+
+Yesterday:
+Today:
+Blockers?
+
+4incomplete

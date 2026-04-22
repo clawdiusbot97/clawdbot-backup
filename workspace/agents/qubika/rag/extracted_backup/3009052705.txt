@@ -1,0 +1,30 @@
+TITLE: Migraciones con Rails y ActiveRecord
+DOMAIN: 4) Servicios
+PRIORITY: Alta
+ID: 3009052705
+SOURCE: 3009052705__Migraciones_con_Rails_y_ActiveRecord.json
+
+---
+
+Pix Service está hecho con Rails. La manera en la que este framework maneja los cambios en el schema de la base de datos son las migraciones de ActiveRecord. Las mismas están escritas en lenguaje Ruby, utilizando un DSL que permite evitar el uso de SQL, haciendo que las migraciones sean agnósticas al motor de base de datos que se utilice.
+https://guides.rubyonrails.org/active_record_migrations.html
+Ya hemos realizado pruebas en el ambiente de Staging, apuntando al cluster MySQL (10.100.14.22) creando la base de datos y cargando el schema de pix service utilizando el comandodb:prepare
+Strong Migrations
+Instalamos en Pix Service una gema llamadaStrong Migrationscuya función es detectar migraciones inseguras en el ambiente development, evitando realizar operaciones potencialmente peligrosas para la base de datos. A su vez sugiere formas mas seguras para lograr el mismo objetivo.
+Ventajas
+Utilizar las migraciones de ActiveRecord tiene las siguientes ventajas:
+Automatización: posibilidad de automatizar la ejecución de migraciones en los deploys a staging y producción, evitando trabajo operativo manual reemplazándolo por scripts que pueden ser tasks de en Bancard Docker.
+
+Independiente del motor de base de datos
+
+Manejar el schema de BBDD exclusivamente a través de migraciones de ActiveRecord permite asegurar ambientes idénticos entre entornos de desarrollo, staging y producción. Evitar diferencias entre ambientes facilita la detección y corrección de errores.
+
+Facilidad de uso: Las migraciones de ActiveRecord proporcionan una interfaz de alto nivel para definir cambios en la estructura de la base de datos evitando tener que escribir consultas SQL complejas. Se utilizan directivas comocreate_table,add_columnyremove_columnpara modificar las tablas.
+
+Seguimiento de cambios: Las migraciones registran el historial de cambios en la estructura de la base de datos. Esto facilita revertir cambios o actualizar la base de datos a una versión anterior.
+
+Control de versiones: Las migraciones se pueden integrar con sistemas de control de versiones como Git. Esto permite un seguimiento más preciso de los cambios y facilita la reversión a versiones anteriores.
+
+Seguridad: Las migraciones de ActiveRecord ayudan a prevenir errores comunes al escribir SQL a mano. Esto reduce el riesgo de errores de sintaxis y otros problemas que pueden afectar la integridad de la base de datos.
+
+Permite utilizar sentencias SQL puro a través del métodoexecuteen el caso que la operación que se quiera hacer no sea soportada por el DSL.

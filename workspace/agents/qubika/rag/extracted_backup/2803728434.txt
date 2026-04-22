@@ -1,0 +1,172 @@
+TITLE: VisaQR - Tasking y Estimaciones
+DOMAIN: General
+PRIORITY: Media
+ID: 2803728434
+SOURCE: 2803728434__VisaQR_-_Tasking_y_Estimaciones.json
+
+---
+
+Tarea
+
+Estimación (días)
+
+Epica
+
+Crear el modelo de merchants en db
+
+1
+
+setup / onboarding
+
+Crear el modelo en terminales db de terminales
+
+1
+
+setup / onboarding
+
+Agregar la operación MerchantOnboarding para crear el merchant en HST (external-services)
+
+4
+
+setup / onboarding
+
+Modificar el endpoint de creación de comercio para que llame a HST para crear el merchant
+
+3
+
+setup / onboarding
+
+Agregar la operación para registrar terminal en external-services
+
+4
+
+setup / onboarding
+
+Agregar operación para consultar terminal en external-services
+
+4
+
+setup / onboarding
+
+Agregar operación para borrar terminal en external-services
+
+4
+
+setup / onboarding
+
+Agregar operación para actualizar terminal en external-services
+
+4
+
+setup / onboarding
+
+Agregar operación para consultar la configuración de la terminal en external-services
+
+4
+
+setup / onboarding
+
+Agregar operación para consultar el status de la terminal en external-services
+
+4
+
+setup / onboarding
+
+Crear endpoint en commerce-service para cargar terminales nuevas
+Tener en cuenta que hay que crear por defecto una terminal por comercio/sucursal para utilizar siempre que el QR no sea generado desde un POS
+
+2
+
+setup / onboarding
+
+Cargar merchants existentes a HST
+
+2
+
+setup / onboarding
+
+Cambiar formato QR en creación para que sea compatible con HST (bancard-commons)
+
+Nota: Asegurar compatibilidad hacia atras.
+
+6
+
+transaccional
+
+Modificar el decode de QRs para decodificar los nuevos QRs (bancard-commons)
+
+Nota: Asegurar compatibilidad hacia atras.
+
+6
+
+transaccional
+
+Cambios en generación de QR → Express y comercio con nueva info (selling-service)
+Los qr de comercio que ya están generados, no se regeneran, salvo que se llame al endpoint de generación.
+Los nuevos comercios ya generan con nuevos parametros
+
+4
+
+transaccional
+
+Cambiar QR en tpago para codificación y lectura de QR sea igual para todos
+
+4
+
+transaccional
+
+Cambios QR en mpos
+
+8
+
+transaccional
+
+Revisar TPago y MPos para ver impacto que tiene y que cambios habría que hacer para cambiar los flujos de confirmación
+
+1
+
+transaccional
+
+Agregar endpoint en selling-service para la confirmación
+
+4
+
+transaccional
+
+Agregar endpoint en payment-link-service para la confirmación O agregar validación en billing proxy para no confirmar pagos de Tpago por ese endpoint.
+
+3 o 1
+
+transaccional
+
+Agregar endpoint en mpos-service para la confirmación O agregar validación en billing proxy para no confirmar pagos de MPOS por ese endpoint.
+
+4 o 1
+
+transaccional
+
+Agregar endpoint billing-proxy para la confirmación de HST.
+
+3
+
+transaccional
+
+Configurar nginx para que cierto endpoint valide el certificado de autenticación
+
+transaccional
+
+Agregar opción para que merchant pueda actualizar QR desde VentasQR (validar)
+4 dias endpoint de regenerar qr comercio
+2 dias para agregar boton llaamr endpoint actualizar qr
+
+6
+
+transaccional
+
+Validar si esta registrada la terminal al momento de generar el QR
+
+2
+
+transaccional
+
+Total:88 días

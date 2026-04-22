@@ -1,0 +1,11 @@
+TITLE: Detalle de Máquinas Virtuales (VMs) de Bancard
+DOMAIN: 8) Infraestructura
+PRIORITY: Alta
+ID: 2261188632
+SOURCE: 2261188632__Detalle_de_Ma╠üquinas_Virtuales_(VMs)_de_Bancard.json
+
+---
+
+El siguiente documento contiene toda la información sobre los servidores de Bancard en todos los ambientes.
+Para acceder al documento en el primer link, es necesario estar conectado a la VPN.
+Link toDetalles de VMs de Bancard

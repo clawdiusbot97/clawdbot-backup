@@ -1,0 +1,35 @@
+TITLE: Cardinal 3D Secure
+DOMAIN: General
+PRIORITY: Media
+ID: 4021977089
+SOURCE: 4021977089__Cardinal_3D_Secure.json
+
+---
+
+Breve overview de proceso 3DS
+noteResumen hecho con IA
+Resumen hecho con IA
+
+El objetivo principal de 3D Secure es reducir el fraude en transacciones de e-commerce con tarjeta de crédito/débito, transfiriendo la responsabilidad del riesgo de fraude del comercio al emisor de la tarjeta.
+El proceso se puede dividir en las siguientes etapas, que a menudo se entrelazan:
+Device Data Collection (DDC):El comprador entra en la página de pago. Se carga un iframe oculto de Cardinal para recoger datos del dispositivo. Esta información incluye, entre otras cosas, el tipo de navegador, la resolución de la pantalla, la dirección IP, y detalles del sistema operativo. Se obtiene como resultado unSessionId
+
+Lookup:El comercio envía una solicitud a Cardinal con los datos de la transacción y elSessionIddel DDC. Cardinal contacta al directorio de esquemas de tarjetas para encontrar el ACS del emisor (Visa, Mastercard). ElLookupes el paso que determina si la transacción debe ser autenticada y, si es así, cuál es el siguiente paso. El resultado de esta búsqueda es lo que define el flujo de la transacción.
+
+Authenticate (decisión):
+Si la transacción es debajo riesgo, el ACS del emisor responde con una autenticación exitosa (flujo "frictionless"). El comercio procede con la autorización de la transacción.
+
+Si la transacción es dealto riesgo, el ACS responde que se requiere unChallenge.
+
+Challenge (si es necesario):El comercio inicia elChallenge, redirigiendo al comprador a la página del ACS para completar la verificación adicional. Una vez completado, el comprador es redirigido de vuelta al comercio con el resultado de la autenticación.
+
+Autorización:El comercio, con el resultado exitoso de la autenticación 3D Secure, procede a enviar la solicitud de autorización al procesador de pagos. Esta información de autenticación es enviada en la solicitud de autorización, lo que transfiere la responsabilidad de fraude al emisor de la tarjeta.
+
+Referencias
+https://app.diagrams.net/#G1YniFU4FFpyAKf6b983OaeJpLB7NblfRz#{"pageId"%3A"Q6Qj3vK8hR4XFauKPOTc"}
+
+https://bancard.atlassian.net/wiki/spaces/PRY/pages/1301741979/Servicios+transaccionales
+
+https://bancard.atlassian.net/wiki/spaces/P3ds2/pages/138838139/Servicios+jpos
+
+https://bancard.atlassian.net/wiki/spaces/TB/pages/1112506382/3DS+-+Tarjetas+de+pruebas

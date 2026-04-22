@@ -1,0 +1,15 @@
+TITLE: Meeting notes in space
+DOMAIN: General
+PRIORITY: Media
+ID: 3067052062
+SOURCE: 3067052062__Meeting_notes_in_space.json
+
+---
+
+2f432ee8-b221-4837-9059-975f1714b01fcom.atlassian.confluence.plugins.confluence-business-blueprints:meeting-notes-blueprintCreate meeting note
+Incomplete tasks from meetings
+BAN10space:BANincompletemeeting-notes
+Decisions from meetings
+space = "BAN" and label = "meeting-notes"
+All meeting notes
+2f432ee8-b221-4837-9059-975f1714b01fmeeting-notesSet meeting agendas, take notes, and share action items with your team.Meeting notesBANCreate meeting notemeeting-notes

@@ -1,0 +1,40 @@
+TITLE: Tasking and Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 2709487628
+SOURCE: 2709487628__Tasking_and_Estimation.json
+
+---
+
+Tarea
+
+Hrs.
+
+billing-service
+
+Agregar los atributos nuevoscustomer_fieldsybilling_identifiersal JSON enviado al transfer de JPOS para los pagos.
+
+20
+
+epos-service
+
+Agregar los atributos nuevoscustomer_fieldsybilling_identifiersal JSON enviado al transfer de JPOS para los pagos.
+
+20
+
+Agregar los atributos nuevoscustomer_fieldsybilling_identifiersal JSON enviado al transfer de JPOS para los cashouts.
+
+20
+
+external-services
+
+Modificar stubs del post_transfer en external-services en el caso de que la respuesta cambie.
+
+8
+
+Comentarios:
+El campo addl → srv_dta se va a seguir enviando tal cual está.
+
+El cambio, en ambos casos, hay que hacerlo para los pagos comunes y los anonymous_payments
+
+A la respuesta del Jpos se le agragarán los campos nuevos.

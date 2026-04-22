@@ -1,0 +1,156 @@
+TITLE: Optimización del Procesamiento de Transacciones
+DOMAIN: General
+PRIORITY: Media
+ID: 3126394894
+SOURCE: 3126394894__Optimizacio╠ün_del_Procesamiento_de_Transacciones.json
+
+---
+
+Introducción
+Contexto y Objetivo
+En el ecosistema de servicios de Bancard,commerce-servicees el servicio central encargado de nuclear todas las transacciones realizadas a través de los diversos servicios digitales. Este servicio recibe transacciones desde un bus de transacciones, las almacena en su formato original ("raw") en una tabla de base de datos, y posteriormente las procesa mediante un job asíncrono. Este job corre cada minuto en el entorno de producción, con una capacidad máxima de procesamiento de 1100 transacciones por minuto. Las transacciones procesadas son luego visibles para los usuarios a través del portal de comercios, proporcionando información crucial en tiempo real.
+Problemática
+Actualmente, el volumen de transacciones recibidas desde el bus de transacciones ha superado la capacidad máxima de procesamiento decommerce-service, excediendo las 1100 transacciones por minuto. Esta situación ha generado un desfase en el procesamiento de las mismaas, creando un retraso que se acumula progresivamente a lo largo del día. Como resultado, hacia el final de la tarde, el sistema presenta varias horas de atraso en el procesamiento. Aunque durante la noche el sistema logra ponerse al día, este ciclo de atraso y recuperación se repite diariamente, afectando la eficiencia operativa y la experiencia del usuario.
+El objetivo de este documento es analizar la problemática actual decommerce-service, proponer una solución para mejorar su performance y presentar los resultados obtenidos tras la implementación de dicha solución.
+Análisis del Problema
+Descripción del Problema
+commerce-service, encargado de procesar todas las transacciones, ha estado enfrentando un serio problema de rendimiento. Este servicio recibe más de 1100 transacciones por minuto desde el bus de transacciones, superando su capacidad máxima de procesamiento de 1100 transacciones por minuto. Como resultado, no todas las transacciones pueden ser procesadas en tiempo real, causando un incremento progresivo del retraso en el procesamiento a lo largo del día.
+Impacto
+El principal impacto de esta limitación es un desfase en la disponibilidad de las transacciones procesadas para los usuarios del portal de comercios. Este retraso, que puede extenderse a varias horas al final del día, afecta significativamente a los usuarios, quienes dependen de la información actualizada para tomar decisiones comerciales. Durante la noche, aunque el sistema logra ponerse al día, el ciclo de acumulación de retrasos y su posterior recuperación genera ineficiencias operativas diarias, perjudicando la experiencia de usuario y la confiabilidad del servicio.
+Causas Raíz
+El análisis detallado de las causas raíz del problema ha revelado varios factores contribuyentes:
+Capacidad de Procesamiento Limitada:El job asíncrono decommerce-servicetiene una capacidad fija de procesamiento de 1100 transacciones por minuto, la cual está siendo constantemente superada por el volumen actual de transacciones.
+
+Ineficiencia en el Procesamiento de Transacciones:El proceso de réplica de cada transacción es ineficiente y requiere una cantidad significativa de recursos. En situaciones donde los recursos necesarios no están disponibles, el sistema debe crearlos, lo que incrementa el tiempo y los recursos utilizados.
+
+Estructura de Almacenamiento y Acceso a la Base de Datos:El proceso actual realiza múltiples consultas a la base de datos para cada transacción, lo que no solo incrementa la latencia sino que también sobrecarga la base de datos, contribuyendo a la lentitud general del sistema.
+
+Falta de Optimización en el Código:Posibles ineficiencias en el código que maneja el procesamiento de las transacciones, que pueden incluir algoritmos subóptimos o falta de paralelización adecuada.
+
+Limitaciones en el Escalamiento Horizontal:El proceso no soporta concurrencia, lo que impide escalar el sistema de forma horizontal. Esto significa que no se pueden añadir más instancias del job para manejar un mayor volumen de transacciones de manera concurrente, limitando severamente la escalabilidad del proceso.
+
+Estas causas combinadas crean un entorno dondecommerce-serviceno puede mantener el ritmo del flujo de transacciones, resultando en un acumulado de transacciones no procesadas que afecta la disponibilidad de información actualizada para los usuarios del portal de comercios.
+Solución Propuesta
+Descripción de la Solución
+Para abordar las causas identificadas de falta de optimización en el código y los múltiples accesos a la base de datos por cada transacción procesada, se ha diseñado una solución centrada en dos aspectos principales:
+Carga Inicial de Recursos en Memoria:
+Proceso Inicial de Carga:En lugar de realizar consultas a la base de datos para cada transacción individualmente, se propone un proceso inicial que cargue todos los recursos necesarios en memoria. Este proceso se ejecutará antes de comenzar el procesamiento de las transacciones, permitiendo un acceso rápido y eficiente a los datos necesarios durante el procesamiento de cada transacción.
+
+Reducción de Consultas a la Base de Datos:Al tener los recursos cargados en memoria, se elimina la necesidad de múltiples accesos a la base de datos durante el procesamiento de cada transacción, reduciendo significativamente la latencia y la sobrecarga en la base de datos.
+
+Optimización del Código:
+Mejoras en Algoritmos:Se revisarán y optimizarán los algoritmos utilizados en el procesamiento de transacciones, asegurando que sean eficientes y que aprovechen al máximo los recursos disponibles.
+
+Eliminación de Cuellos de Botella:Se identificarán y eliminarán los cuellos de botella en el código, mejorando la eficiencia general del proceso.
+
+Implementación
+La implementación de la solución se llevará a cabo en varias etapas:
+Desarrollo del Proceso de Carga Inicial:
+Diseño y desarrollo del proceso de carga inicial de recursos en memoria.
+
+Pruebas exhaustivas para asegurar que todos los recursos necesarios son correctamente cargados y accesibles.
+
+Modificación del Proceso de Transacción:
+Modificación del código del job asíncrono para que utilice los recursos cargados en memoria en lugar de realizar consultas repetitivas a la base de datos.
+
+Optimización de los algoritmos y eliminación de cuellos de botella en el código.
+
+Pruebas y Validación:
+Pruebas de rendimiento para medir la eficiencia del nuevo proceso.
+
+Validación de que las transacciones son procesadas correctamente y en tiempo real.
+
+Despliegue en Producción:
+Despliegue de la solución en el entorno de producción, monitoreando el rendimiento y realizando ajustes según sea necesario.
+
+Al implementar esta solución, se espera mejorar significativamente la capacidad decommerce-servicepara procesar transacciones en tiempo real, eliminando los retrasos acumulativos y mejorando la experiencia del usuario en el portal de comercios.
+Resultados
+Evaluación del Rendimiento
+Para evaluar la mejora en el rendimiento decommerce-service, se compararon los tiempos de procesamiento de transacciones usando el proceso actual y el nuevo. Los lotes de transacciones utilizados para las pruebas son de 1100 transacciones y dichas pruebas fueron realizadas tanto en ambiente de desarrollo como ambiente de staging, mostrando resultados similares.
+A continuación se muestran los tiempos de procesamiento para la misma cantidad de transacciones en ambos procesos en el ambiente de staging.
+Proceso Actual
+Lote 1:81.42 segundos
+
+Lote 2:66.55 segundos
+
+Lote 3:64.57 segundos
+
+Lote 4:63.81 segundos
+
+Proceso Nuevo
+Lote 1:41.49 segundos
+
+Lote 2:31.63 segundos
+
+Lote 3:28.63 segundos
+
+Lote 4:27.02 segundos
+
+Comparación de Resultados
+La tabla siguiente resume los tiempos de procesamiento para cada lote:
+Lote
+
+Proceso Actual (seg)
+
+Proceso Nuevo (seg)
+
+Mejora (%)
+
+1
+
+81.42
+
+41.49
+
+49.06
+
+2
+
+66.55
+
+31.63
+
+52.46
+
+3
+
+64.57
+
+28.63
+
+55.65
+
+4
+
+63.81
+
+27.02
+
+57.66
+
+Beneficios Obtenidos
+Reducción del Tiempo de Procesamiento:El nuevo proceso ha demostrado una reducción significativa en el tiempo de procesamiento de transacciones, con mejoras que oscilan entre el 49% y el 58% según el lote procesado.
+
+Mayor Eficiencia:Al cargar los recursos necesarios en memoria y optimizar el código, se ha logrado una mayor eficiencia en el procesamiento de transacciones, reduciendo la latencia y la sobrecarga en la base de datos.
+
+Eliminación del Retraso Acumulativo:Con la mejora en el tiempo de procesamiento,commerce-serviceahora puede procesar más de 1100 transacciones por minuto en tiempo real, mitigando el retraso acumulativo que se presentaba anteriormente.
+
+Estos resultados demuestran que la solución implementada ha sido efectiva en mejorar significativamente el rendimiento decommerce-service, favoreciendo a que las transacciones se procesen en tiempo real y mejorando la experiencia del usuario en el portal de comercios.
+Conclusiones
+Resumen de Hallazgos
+El análisis exhaustivo del rendimiento decommerce-servicereveló una problemática significativa en el procesamiento de transacciones, causada por la incapacidad del sistema para manejar el volumen creciente de transacciones en tiempo real. Esta limitación resultó en retrasos acumulativos que afectaban la disponibilidad de información actualizada para los usuarios del portal de comercios.
+Beneficios
+La implementación de una solución centrada en la carga inicial de recursos en memoria y la optimización del código ha proporcionado los siguientes beneficios:
+Reducción Significativa del Tiempo de Procesamiento:Los tiempos de procesamiento de transacciones se han reducido en un promedio del 50%, mejorando la eficiencia operativa decommerce-service.
+
+Mitigación del Retraso Acumulativo:La solución mitigará el retraso acumulativo en el procesamiento de transacciones, favoreciendo que la información esté disponible en tiempo real para los usuarios del portal de comercios.
+
+Mejora en la Experiencia del Usuario:Los usuarios del portal de comercios podrán tener acceso a información actualizada de manera más rápida y confiable, mejorando su experiencia de uso.
+
+Recomendaciones
+Si bien la solución implementada mitiga la problemática actual y proporciona mejoras significativas en el rendimiento decommerce-service, es importante tener en cuenta que esta no es una solución de escalabilidad definitiva a largo plazo. Por lo tanto, se recomienda:
+Explorar Opciones de Escalabilidad Horizontal:Es fundamental explorar soluciones que permitan acommerce-serviceescalar horizontalmente y manejar la concurrencia de manera efectiva. Esto garantizará que el proceso tenga la capacidad de escalar de manera casi ilimitada para manejar volúmenes crecientes de transacciones en el futuro.
+
+Continuar con la Optimización y Monitoreo:Se recomienda continuar optimizando el código y monitoreando el rendimiento del sistema para identificar posibles cuellos de botella y áreas de mejora adicionales. Esto garantizará que ecommerce-servicesiga siendo eficiente y escalable a medida que evolucionen las necesidades.
+
+En conclusión, la implementación de la solución propuesta ha sido un paso importante para mejorar el rendimiento y la confiabilidad decommerce-service, sin embargo, es crucial seguir explorando soluciones que aborden la escalabilidad a largo plazo para garantizar el éxito continuo del sistema.

@@ -1,0 +1,90 @@
+TITLE: Ruby Upgrade - Estimación billing-dbs apuntando al Cluster
+DOMAIN: General
+PRIORITY: Media
+ID: 3163226116
+SOURCE: 3163226116__Ruby_Upgrade_-_Estimacio╠ün_billing-dbs_apuntando_al_Cluster.json
+
+---
+
+En este documento vamos a listar las horas que conlleva llevar los servicios de billing-dbs a que apunten al Cluster, también las pruebas requeridas, tiempo de desarrollo / bugs fixing y el pase a producción.
+El total es de 552 para todos los servicios, incluyendo QA y Desarrollo. Al no tener tareas claras aumentamos el margen de lo que pueden llevar estas tareas, más que nada las de bug fixing. En el caso que se requieran menos horas, no se facturarán.
+Las tareas que pueden surgir más que nada son:
+Errores de datos
+
+Errores de Percona que impliquen tiempos muertos
+
+Errores que haya que verificar en producción para confirmar que no sean conocidos
+
+Servicio
+
+Tarea
+
+Estimación
+
+billing-public-proxy
+
+Pruebas QA
+
+40
+
+Tareas Dev
+Apuntar al cluster en staging, bug fixing, pase a producción
+
+60
+
+auth-service
+
+Pruebas QA
+
+40
+
+Tareas Dev
+Apuntar al cluster en staging, bug fixing, pase a producción
+
+50
+
+biller-service
+
+Pruebas QA
+
+30
+
+Tareas Dev
+Apuntar al cluster en staging, bug fixing, pase a producción
+
+40
+
+mpos-service
+
+Pruebas QA
+
+40
+
+Tareas Dev
+Apuntar al cluster en staging, bug fixing, pase a producción
+
+40
+
+billing-service
+
+Pruebas QA
+pagos, facturas, registro de pagos en varios productos
+
+60
+
+Tareas Dev
+Apuntar al cluster en staging, bug fixing, pase a producción
+
+80
+
+Total Desarrollo + QA
+
+480
+
+Total Gestión
+
+72
+
+Total
+
+552

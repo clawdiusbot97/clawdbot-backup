@@ -1,0 +1,16 @@
+TITLE: S4 Service
+DOMAIN: 4) Servicios
+PRIORITY: Media
+ID: 2370109459
+SOURCE: 2370109459__S4_Service.json
+
+---
+
+Create a bucket
+Staging
+Producción
+Upload files
+With CURL
+Staging
+Producción
+By console

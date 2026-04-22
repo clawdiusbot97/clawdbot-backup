@@ -1,0 +1,41 @@
+TITLE: Deploy a producción - Nuevo Flujo Reseteo Password
+DOMAIN: 3) Auth
+PRIORITY: Media
+ID: 3067314177
+SOURCE: 3067314177__Deploy_a_produccio╠ün_-_Nuevo_Flujo_Reseteo_Password.json
+
+---
+
+Feature Branch
+Auth Service:
+feature/otp
+Proyectos involucrados
+bancard-auth-service
+
+bancard-auth-portal
+
+Consideraciones Generales
+
+o
+
+Necesita cambios en la configuración
+
+Necesita conexión con servicios externos (Coordinar con Denis).
+
+Necesita conexión con otros servidores (Revisar conectividad y coordinar con Denis).
+
+Necesita ejecutar migraciones en la db (Coordinar con DBA).
+
+Necesita ejecutar rake task
+
+Necesita Buckets de S4
+
+Necesita cargar imágenes o datos estáticos
+
+Migraciones a ejecutar
+<Listado de todas las migraciones que se deben ejecutar>
+sqlRake Task a ejecutar
+Auth Service:
+Ejecutar tareaupdate_services_requires_otp:update:
+nonePull requests a develop/master
+<link a pr en github>

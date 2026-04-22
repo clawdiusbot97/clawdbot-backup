@@ -1,0 +1,42 @@
+TITLE: MejorasQR - Deploy a producción
+DOMAIN: General
+PRIORITY: Media
+ID: 2975826339
+SOURCE: 2975826339__MejorasQR_-_Deploy_a_produccio╠ün.json
+
+---
+
+Feature Branch
+feature/mejoras-qr
+Proyectos involucrados
+bancard-selling-service
+
+bancard-commerce-service
+
+bancard-configurations
+
+Consideraciones Generales
+
+o
+
+Necesita cambios en la configuración
+
+Necesita conexión con servicios externos (Coordinar con Denis).
+
+Necesita conexión con otros servidores (Revisar conectividad y coordinar con Denis).
+
+Necesita ejecutar migraciones en la db (Coordinar con DBA).
+
+Necesita Buckets de S4
+
+Necesita cargar imágenes o datos estáticos
+
+Cambios en la configuración
+PR config Staging: <LINK A PR>
+PR config Producción: <LINK A PR>
+Migraciones a ejecutar
+<Listado de todas las migraciones que se deben ejecutar>
+sqlDatos a insertar
+<Listado de datos que se necesitan insertar en tablas para que funcione la iniciativa>
+sqlPull requests a develop/master
+<link a pr en github>

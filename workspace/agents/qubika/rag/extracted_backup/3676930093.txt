@@ -1,0 +1,116 @@
+TITLE: Pagos con QR de Productos en EPOS / Infonet Cobranzas Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3676930093
+SOURCE: 3676930093__Pagos_con_QR_de_Productos_en_EPOS___Infonet_Cobranzas_Tasking_y_Estimacio╠ün.json
+
+---
+
+Fecha estimada de entrega:Lunes
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+Pagos con QR
+
+Análisis de tareas e impacto
+
+8
+
+Crear tabla y modelos para medios de pago con QR (crédito, débito, cuenta)
+
+epos-service
+
+16
+
+Modificaciones en datasets para incluir nuevos datos de pagos con QR
+
+epos-service
+
+16
+
+Modificar endpoint de reportes para incluir nuevas calculations
+
+epos-service
+
+6
+
+Agregar tipo de comisión para pagos con QR y cambios en lógica de cálculo
+
+epos-service
+
+24
+
+Crear tabla y modelos de QRs
+
+epos-service
+
+16
+
+Modificar tabla y modelo de movements para agregar relación con payment hooks
+
+epos-service
+
+8
+
+Endpoint para generar un QR de producto
+
+epos-service
+
+32
+
+Endpoint para confirmar un pago con QR
+
+epos-service
+
+40
+
+Endpoint para obtener pago por payment hook
+
+epos-service
+
+16
+
+Añadir prefijo para QR-IC y agregar lógica de decode
+
+billing-service-public-proxy
+
+16
+
+Endpoint para generar un QR de producto
+
+infonet-cobranzas-app-service
+
+16
+
+Cambios en endpoint de reporte de movimientos para agregar nuevas calculations
+
+infonet-cobranzas-app-service
+
+6
+
+Endpoint para consultar pago por payment hook
+
+infonet-cobranzas-app-service
+
+8
+
+Configuraciones y deploy
+
+8
+
+Total Desarrollo:
+
+236
+
+Total Gestión (10%)
+
+23,6
+
+Total:
+
+259,6

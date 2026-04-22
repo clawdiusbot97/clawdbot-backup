@@ -1,0 +1,67 @@
+TITLE: Espacio de Listado de Facturadores que no anulan
+DOMAIN: General
+PRIORITY: Media
+ID: 3147104262
+SOURCE: 3147104262__Espacio_de_Listado_de_Facturadores_que_no_anulan.json
+
+---
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Agregar endpoint de index para los product_reversal_rules.
+Usar picasso listing.
+Reversal-service no usa Picasso Listing para nada, por ende esta tarea implica agregarlo, configurarlo y usarlo para esta tarea.
+
+32
+
+reversal-service
+
+Agregar endpoint para obtener laReversalCutOffTimeRuleactual.
+
+12
+
+reversal-service
+
+Agregar botón para ver listado de facturadores que no aceptan anulaciones en sección “Mis Operaciones” de InfoNet Cobranzas.
+Probar diseños de botón y texto para dar que aparente ser un botón y no una alerta.
+
+4
+
+commerce-suite
+
+Agregar botón para ver listado de facturadores que no aceptan anulaciones en sección “Anulaciones” del Portal de Comercios.
+Reutilizar botón de IC
+
+2
+
+commerce-suite
+
+Crear vista para listar todos los facturadores que no aceptan anulaciones en InfoNet Cobranzas
+Incluye agregar stubs de las dos nuevas operaciones en bancard-services-stubs.
+Incluye integración con reversal-service (no se usa todavía en el portal de comercios)
+
+30
+
+commerce-suite
+
+Crear vista para listar todos los facturadores que no aceptan anulaciones en Portal de Comercios
+
+Reutilizar partial creado para la vista de InfoNet Cobranzas
+
+8
+
+commerce-suite
+
+notePreguntas
+Las respuestas a estas preguntas no afectan en el tasking y la estimación, pero sirve para aclarar dudas que tenemos respecto al flujo de reversas.
+Preguntas
+Las respuestas a estas preguntas no afectan en el tasking y la estimación, pero sirve para aclarar dudas que tenemos respecto al flujo de reversas.
+
+rule_type solo puede serPROHIBITED_REVERSAL_RULE_TYPEoWITH_CUTOFF_RULE_TYPE. No hay un tipo de regla que indique algo así como “reversa libre“ Los productos que no tienen ningún tipo de restricción no están en la tabla?
+
+En reversal service SIEMPRE se valida el horario de restricción. Sin importar de que producto sea el pago que se quiere reversar:
+Eso está bien?

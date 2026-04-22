@@ -1,0 +1,82 @@
+TITLE: DBA Migration to Tpago
+DOMAIN: General
+PRIORITY: Media
+ID: 2743992321
+SOURCE: 2743992321__DBA_Migration_to_Tpago.json
+
+---
+
+Se desea incorporar la funcionalidad de Preautorizaciones en los servicios de VPOS PCI. Para ello, es necesario agregar nuevos servicios, tanto en la creación de una pre-autorización como en la confirmación de la misma.
+Team
+
+Name
+
+Role
+
+Project Manager
+
+FS Developer
+
+Technical Reference
+
+Paola Figueredo
+
+Product Owner (Bancard)
+
+Tentative Timeline
+
+Estimación Original
+
+TBD
+
+Start date
+
+End date
+
+TBD - Esperando por estimación original y fecha de inicio
+
+Comms + Management Tools
+
+Confluence Space
+
+https://jira.bancardnet.dom/confluence/display/PRYLDP/DBA+en+TPAGO
+
+Jira Board
+
+https://jira.bancardnet.dom/secure/RapidBoard.jspa?rapidView=463&projectKey=PRYLDP&selectedIssue=PRYLDP-574
+
+Slack Channel
+
+#bancard-tpago-dba
+
+M. Teams Channel
+
+[PRIVATE_URL_WITH_CREDENTIALS]
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Weekly on Monday, Tuesday and Thursday
+
+Minutes
+
+15
+
+Owner
+
+Client Demo
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-

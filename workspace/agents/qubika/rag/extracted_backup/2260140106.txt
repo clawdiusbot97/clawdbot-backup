@@ -1,0 +1,111 @@
+TITLE: Setup de Máquina Docker con CentOs
+DOMAIN: 2) Docker
+PRIORITY: Media
+ID: 2260140106
+SOURCE: 2260140106__Setup_de_Ma╠üquina_Docker_con_CentOs.json
+
+---
+
+Este documento tiene como objetivo servir de guía para el setup de una máquina CentOS 7 de producción para servicios con docker. Los pasos a seguir son, instalar y configurar docker, instalar y configurar nginx, y configurar puertos.
+Docker - Instalación y Configuración
+sudo yum install yum-utils device-mapper-persistent-data lvm2
+
+sudo yum-config-manager --add-repohttps://download.docker.com/linux/centos/docker-ce.repo
+
+sudo yum install docker-ce
+
+docker -v// verificamos que se haya instalado correctamente
+
+sudo usermod -aG docker[your_user]// agregamos usuario al grupo docker
+
+sudo systemctl enable docker
+
+sudo systemctl start docker
+
+sudo systemctl status docker// verificamos que se haya levantado correctamente
+
+Para que el punto 5 surta efecto se debe salir y volver a entrar al servidor.
+En caso que la máquina use un proxy http, se debe configurar las variables de ambiente para el servicio docker de la siguiente forma:
+sudo mkdir /etc/systemd/system/docker.service.d
+
+sudo vim /etc/systemd/system/docker.service.d/http-proxy.conf
+
+[Service]
+Environment="HTTP_PROXY=http://proxy.bancardnet.dom:8080" "NO_PROXY=localhost,http://example.com"
+Environment="HTTPS_PROXY=http://proxy.bancardnet.dom:8080"
+sudo systemctl daemon-reload// Reload de la configuración de systemd manager
+
+sudo systemctl show docker --property Environment// verificamos que se hayan seteado las variables de ambiente de docker correctamente
+
+sudo systemctl restart docker
+
+Nginx - Instalación y Configuración
+sudo yum update
+
+sudo yum install epel-release
+
+sudo yum install nginx
+
+nginx -v// verificamos que se haya instalado correctamente
+
+sudo usermod -aG docker nginx// agregamos usuario de nginx al grupo docker
+
+sudo systemctl enable nginx
+
+sudo systemctl start nginx
+
+sudo systemctl status nginx// verificamos que se haya levantado correctamente
+
+Para la configuración de nginx, se debe crear y/o modificar los siguientes archivos dentro de/etc/nginx/:
+nginx.conf
+
+sites-available/*.conf
+
+sites-enable/*.conf (links simbólicos a sites-available de los que se quiera habilitar)
+
+conf.d/*.conf
+
+si se usa ssl poner los certificados en el directorio: /ssl/
+
+sudo nginx -t // verificar que la configuración sea correcta
+
+sudo systemctl reload nginx
+
+Para dicha configuración, lo ideal es basarse en otra máquina que ya tenga configurado nginx con docker, como por ejemplo la de commerce-suite producción, o la de notification-service producción. Básicamente lo que se agrega nuevo para docker es crear un nuevo bloqueserverescuchando en el puerto 4499, con unproxy passaunix:/var/run/docker.sock.
+Puertos - Configuración
+Se pueden ver las reglas de iptables con el siguiente comando:
+sudo iptables -L -n // por defecto muestra la tablafilter
+
+En este paso, se deben agregar nuevas reglas para los nuevos puertos que abrimos al configurar nginx y que queramos habilitar. Por ejemplo se debe permitir el acceso al puerto 4499, el cual se corresponde con el puerto de la API de Docker configurado en el paso anterior. Para eso se debe agregar la siguiente regla a través del comandosudo vim /etc/sysconfig/iptables:
+
+# Rule for docker 4499 - Docker API
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 4499 -j ACCEPT
+
+Luego de modificar el archivo de configuración de iptables se debe ejecutar el comandosudo systemctl reload iptablespara que tome la configuración nueva.
+Redis - Configuración
+Esta instalación y configuración sólo será necesaria en las máquinas que tienen un servidor de redis. En estos casos debemos instalar redis y agregar dos pasos adicionales a la configuración.
+sudo yum update (esto actualiza todos los paquetes instalados, no hacer a menos que sea un server nuevo)
+
+sudo yum install epel-release// si no se hizo en la instalación de nginx
+
+sudo yum install redis
+
+redis-cli --version// verificamos que se haya instalado correctamente
+
+sudo systemctl enable redis
+
+sudo systemctl start redis
+
+sudo systemctl status redisoredis-cli ping// verificamos que haya levantado correctamente
+
+El primer paso para la configuración será agregar la siguiente regla a iptables (como se indica más arriba) para abrir el puerto 6379 correspondiente al redis:
+
+# Rule for redis 6379 - redis-server
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 6379 -j ACCEPT
+
+Luego de modificar el archivo de configuración de iptables se debe ejecutar el comandosudo systemctl reload iptablespara que tome la configuración nueva.
+Por otro lado, la configuración de Redis por defecto no permite las conexiones desde el exterior. Por lo tanto debemos modificar la configuración para que las permita.
+Para esto debemos utilizar el comandosudo vim /etc/redis.confy modificar la líneabind 127.0.0.1cambiando la misma porbind 0.0.0.0.
+Luego de modificar el archivo de configuración de redis se debe ejecutar el comandosudo systemctl restart redispara reiniciar el servicio y que tome la nueva configuración.
+
+MISSION ACCOMPLISHED!

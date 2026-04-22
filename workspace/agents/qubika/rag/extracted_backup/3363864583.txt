@@ -1,0 +1,173 @@
+TITLE: Zonas horarias en servicios Angus/Picasso
+DOMAIN: General
+PRIORITY: Media
+ID: 3363864583
+SOURCE: 3363864583__Zonas_horarias_en_servicios_Angus_Picasso.json
+
+---
+
+En este documento se explican las diferentes configuraciones disponibles respecto de las zonas horarias de los servicios Angus/Picasso. Cuales son las configuraciones recomendadas y como afecta cada una.
+Este análisis surge a raíz de un problema ocurrido en selling-service en el flujo de creación de QRs, en producción. El siguiente documento explica la situación:https://bancard.atlassian.net/wiki/spaces/PRYSRE/pages/583729203/RCA+20240904+-+Fallos+en+QRs
+Tipos de datos en MySQL
+Los servicios de Bancard guardan los datos de tipo fecha usando el tipo de datosDATETIMEde MySQL. Dicho tipo de dato no guarda información de la zona horaria. Es decir que la zona horaria no es información intrínseca del valor guardado, sino que queda a “libre interpretación” del cliente que consuma los datos.
+Por ejemplo, si uno se conecta a la base utilizando un cliente como puede ser MySQL Workbench y utiliza las funciones de fecha y hora nativas del motor de base de datos, comoNOW(),UNIX_TIMESTAMP(datetime)dichos resultados van a ser relativos a la zona horaria que tiene configurada la sesión (@@session.time_zone/@@time_zone). Por eso, el resultado de dichas funciones varía según la zona horaria configurada. Mientras tanto, si uno consulta una columna de tipoDATETIME, independientemente de la zona horaria configurada en la sesión, el resultado que obtiene es el mismo, ya que la zona horaria no es información que esté en el dato de tipoDATETIME.
+El tipo de datoTIMESTAMPse diferencia deDATETIMEen el sentido de que no guarda una fecha/hora sino que guarda un unix timestamp, el cual puede ser convertido a diferentes zonas horarias sin ambigüedades.
+Algunos links útiles que tratan el tema de zonas horarias y tipos de datos en MySQL:
+https://dev.mysql.com/doc/refman/8.4/en/time-zone-support.html
+
+https://dev.mysql.com/doc/refman/8.4/en/date-and-time-literals.html
+
+Active Record
+Para el caso de ActiveRecord, no importa la zona horaria configurada en la sesión de la conexión a la base de datos, ya que no utiliza las funciones que provee el motor de base de datos, sino que la interpretación de los datos de tipoDATETIMEse hace en la aplicación, y es configurable en qué zona horaria debe realizarse.
+Configuraciones de zona horaria en servicios Angus/Picasso
+Existen varios lugares donde se configuran zonas horarias en los servicios Angus/Picasso que corren en los servidores de staging y producción:
+Dockerfile.base:RUN cp /usr/share/zoneinfo/America/Asuncion /etc/localtime. Setea la zona horaria del sistema operativo del contenedor.
+
+database.yml: configuración del conector a la base de datos JDBC
+
+Variable de entornoJAVA_OPTS: Al correr el comandobundle exec pumadentro del archivodocker/init_templates/puma_*_service. Dicho archivo es llamado desde bancard_docker. El valor de la variable de entorno puede contener varias configuraciones. Entre ellas:-Duser.timezone=UTC.
+nonePodemos ver que esta configuración afecta la zona horaria que devuelven los llamados a métodos de la librería standard de Ruby, independientemente de la zona horaria que esté configurada a nivel sistema operativo.
+
+ActiveRecord::Base.default_timezone: los valores posibles son:utco:local. Las gemas Picasso y Angus lo configuran en:utcpor default. Esto afecta a como ActiveRecord lee y escribe los valores de tipo fecha/hora en la base de datos.
+
+Variable de entornoTZ: Se puede usar en elDockerfile.baseo en el comando que inicia el proceso puma. TODO: investigar funcionamiento.
+
+Configuración y comportamiento presente en la mayoría de servicios Angus/Picasso
+Sesiones de base de datos: están en zona horariaAmerica/Asuncion. Esta configuración afecta las funciones nativas del motor de base de datos. ActiveRecord no es susceptible a esta configuración.
+
+Valores de columnas de tipoDATETIME: se guardan valores enUTC. Esto genera que al usar funciones del motor de base de datos, los resultados no sean los esperados. Por ejemplo la funciónUNIX_TIMESTAMP(a_datetime)primero interpreta el valor dea_datetimecomo si fuera de Asuncion, lo convierte a UTC (suma 3 o 4 horas) y a partir de ahí calcula el timestamp.
+
+Dado que los servicios de Bancard guardan valores UTC en columnas de tipoDATETIME, sería lo correcto que las sesiones que se abren contra la base de datos también estuvieran en zona UTC. Sin embargo, esto no afecta a ActiveRecord ya que no hace uso de las funciones nativas del motor de base de datos.
+Las fechas y horas que devuelven las APIs también son en UTC, en formatoiso8601. Por ejemplo"2024-09-18T21:54:50Z". Habiendo dicho esto, pueden haber excepciones. Es importante revisar cada caso. A veces los endpoints expuestos a entidades y comercios, o también callbacks, pueden estar en zona horaria de Paraguay.
+
+Dockerfile.base: establece la zona horaria del contenedor en America/Asuncion.
+
+database.yml: establece America/Asuncion como la zona horaria del servidor de base de datos.
+
+JAVA_OPTS: establece America/Asuncion.
+
+ActiveRecord::Base.default_timezone: establece UTC.
+
+Configuración recomendada y comportamiento deseado
+Podemos ver que son varias las combinaciones posibles de configuración. En el siguiente cuadro, se ven los efectos de cada una.
+El objetivo es llevar a todos los servicios a compartir una misma configuración y que se utilice UTC siempre que sea posible.
+La configuración No1 es la que estaba cuando ocurrió el issue en selling-service descripto en el RCA más arriba.
+ElQrExpress.find_by(hook_alias: 'SMBOG28705')se usa de ejemplo, ya que suexpiration_datetimees el día06/10/2024 00:30:00. Dicha fecha/hora si se la considera en zona horaria de Paraguay, no existe. Lo correcto es considerarla en UTC, que equivale a05/10/2024 20:30 America/Asuncion
+
+database.yml
+
+JAVA_OPTS
+
+ActiveRecord::Base.default_timezone
+
+qr = QrExpress.find_by(hook_alias: 'SMBOG28705')
+
+qr.update(expiration_datetime: Time.current)
+
+comentario
+
+1
+America/Asuncion
+
+America/Asuncion
+
+:utc
+
+Excepción
+
+Escribe OK en la base, en UTC.
+
+Configuración que originó el bug en producción en selling-service.
+Funcionan bien todas las lecturas y escrituras excepto el ejemplo dado que ocasiona la excepción. La fecha/hora en la base es perfectamente válida. La aplicación falla en leer solamente este rango de horas (las horas que en PY no existen por el cambio a horario de verano).
+
+2
+America/Asuncion
+
+America/Asuncion
+
+:local
+
+Excepción
+
+Escribe y lee todo en zona horaria PY. Los datos preexistentes están en UTC. No es retrocompatible, desfasa todos los datos preexistentes al leer.
+
+-
+
+3
+America/Asuncion
+
+UTC
+
+:utc
+
+Excepción
+
+-
+
+-
+
+4
+America/Asuncion
+
+UTC
+
+:local
+
+Excepción
+
+-
+
+-
+
+5
+UTC
+
+America/Asuncion
+
+:utc
+
+Lee 20:30 UTC. Desfasa todos los datos leídos de la base hacia atrás.
+
+Escritura OK, en UTC.
+
+-
+
+6
+UTC
+
+America/Asuncion
+
+:local
+
+OK, pero los objetos DateTime están en PY.
+
+Escribe en la base la hora de PY. Atrasa 4 hs. Escribe una hora en el pasado, ya que en la base todo debe estar en UTC.
+
+-
+
+7
+UTC
+
+UTC
+
+:utc
+
+OK.
+
+Escribe y lee todo en UTC.
+
+Combinación recomendada.
+Debimos comprobar que no afecte filtros / parámetros de entrada de las requests. No tuvimos problemas en selling-service.
+
+8
+UTC
+
+UTC
+
+:local
+
+-
+
+-
+
+Es igual al anterior, ya que:localen este caso particular equivale a:utcpor las otras configuraciones.

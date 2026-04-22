@@ -1,0 +1,23 @@
+TITLE: Requerimientos
+DOMAIN: General
+PRIORITY: Media
+ID: 2851962998
+SOURCE: 2851962998__Requerimientos.json
+
+---
+
+Product Owner: Victor Alarcon
+
+Introducción
+La idea que tenemos es modificar un poco los bills_metadata relacionados con los productos, como asi los ws que exponen products, y que pueda soportar un tipo de component_type que puede ser combobox, datepicker y el value de ese component_type y que por defecto sea tipo input
+entonces inicialmente nuestros clientes pago movil, bportal, boca web y app de ic soporten estos tipos de component_type.
+
+Ejemplo
+Actualmente en la siguiente imagen, el cliente debe ver el hint y cargar 1 o 2
+Entonces, con este cambio, le va a salir un combobox en donde diga CI y Tarjeta y selecciona uno de ellos y en el servicio de consulta envia 1 o 2 de acuerdo a como selecciono
+Por defecto es input y va a mostrar como en el ejemplo, eso es para no afectar al 100% de una sola vez
+
+Particuaridades en el datepicker
+ya que algunos facturadores piden fecha por ejemplo y te piden asi yyyy/dd/mm
+otros en otro formato dd-mm-yyyy
+entonces con el calendario selecciona y hacia el servicio definimos como debe enviar

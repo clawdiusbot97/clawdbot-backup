@@ -1,0 +1,68 @@
+TITLE: Commerce Ruby Upgrade - Deploy a producción
+DOMAIN: 1) Deploy
+PRIORITY: Alta
+ID: 2826960897
+SOURCE: 2826960897__Commerce_Ruby_Upgrade_-_Deploy_a_produccio╠ün.json
+
+---
+
+Feature Branch
+feature/ruby_upgrade
+commerce-service
+
+commerce-suite
+
+feature/commerce-suite-upgrade
+payment-link-portal
+
+selling-portal
+
+feature/commerce_ruby_upgrade
+bancard-docker
+
+Proyectos involucrados
+bancard-commerce-service
+
+bancard-commerce-suite
+
+bancard-payment-link-portal
+
+bancard-selling-portal
+
+bancard-docker
+
+bancard-configurations
+
+Consideraciones Generales
+69incompleteNecesita conexión con servicios externos (Coordinar con Denis).70incompleteNecesita conexión con otros servidores (Revisar conectividad y coordinar con Denis).71completeNecesita ejecutar migraciones en la db (Coordinar con DBA).85incompleteNecesita migrar la DB al cluster de mysql 8.072incompleteNecesita Buckets de S4?73incompleteNecesita cargar imágenes o datos estáticos?
+Migraciones a ejecutar
+No aplica. Si es necesario migrar la base de datos al cluster de mysql 8.0
+
+Datos a insertar
+No aplica.
+
+Link a configuraciones
+https://github.com/bancardsa/bancard-configurations/pull/224
+
+Pull requests a develop
+https://github.com/bancardsa/bancard-commerce-suite/pull/280
+
+https://github.com/bancardsa/bancard-commerce-service/pull/340
+
+https://github.com/bancardsa/bancard-selling-portal/pull/9
+
+https://github.com/bancardsa/bancard-payment-link-portal/pull/126
+
+Pull requests a Master
+https://github.com/bancardsa/bancard-configurations/pull/224
+
+https://github.com/bancardsa/bancard-docker/pull/98
+Es necesario mergearlo recien al llevar a producción, ya que bancard-docker no distingue la configuración del webserver según el entorno
+
+https://github.com/bancardsa/bancard-commerce-suite/pull/402
+
+https://github.com/bancardsa/bancard-commerce-service/pull/341
+
+https://github.com/bancardsa/bancard-payment-link-portal/pull/127
+
+https://github.com/bancardsa/bancard-selling-portal/pull/10

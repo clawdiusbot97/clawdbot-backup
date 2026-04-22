@@ -1,0 +1,67 @@
+TITLE: [STEP 3] - Check Enrollment
+DOMAIN: General
+PRIORITY: Media
+ID: 4493017142
+SOURCE: 4493017142__[STEP_3]_-_Check_Enrollment.json
+
+---
+
+Check Enrollment viene a reemplazar el paso de LookUp. En este paso se verifica tres casos posibles:
+Frictionless Approve:Luz verde para autorizar el pago. No requiere Step 5.
+
+Authentication pending:Requiere un step 5, pero permite continuar con el proceso.
+
+Frictionless Rejected:Debe rechazar
+
+Frictionless Failed:Debe rechazar.
+
+Challenge Required:Se pide al usuario completar un formulario escribiendo un OTP enviado a un sms/email conocido por la emisora de su tarjeta. Requiere Step 5
+
+Request Params:
+URL: /risk/v1/authentications
+wide760Qué esclientReferenceInformation.code? Es un string de hasta 50 caracteres que identifica el pago. En nuestro caso puede ser el process_id/payment_hook.
+
+consumerAuthenticationRecference.referenceIdse recibió en el step 1.
+
+Importa el uso deconsumerAuthenticationInformation.returnUrl? Si. Enviaremos un endpoint de callback en ese value, para disparar via websocket una notificación al front-end.
+
+Cómo usamosconsumerAuthenticationInformation.transactionMode?
+Possible values:
+M: MOTO (Mail Order Telephone Order)
+
+R: Retail
+
+S: E-commerce (Seguro solo usemos este)
+
+P: Mobile Device
+
+T: Tablet
+
+los parámetros de domicilio y celular pueden enviarse vacíos si no se los tiene?
+Address puede ser opcional dependiendo de la configuración del merchant(Bancard)
+
+Celular no dice ser mandatorio. Puede que todo buyerInformation sea opcional
+
+Response:
+wide760
+Ejemplo de Ruby SDK:
+Enroll with Payment Authentication Example
+
+Parametros relevantes
+consumerAuthenticationInformation.challengeRequired- ‘Y'/’N' - Indica la necesidad de challenge
+
+consumerAuthenticationInformation.accessToken- String - JWT necesario para solicitar el Challenge Iframe
+
+consumerAuthenticationInformation.stepUpUrl- String - URL necesario para solicitar el Challenge Iframe
+
+Desarrollo:
+Con ExternalServices
+Reemplazar Infraestructura de Lookup por infraestructura de Check Enrollment en External Services.
+
+Adaptar Vpos Service y Payment Link Service Para utilizar Check Enrollment en lugar de Lookup.
+
+Con Ruby SDK
+Adaptar Vpos Service y Payment Link Service Para utilizar Check Enrollment via Ruby SDK en lugar de Lookup via External Services.
+
+En Común
+Recibir desde vpos-portal y tpago-portal el CheckEnrollment, y recibir parametros para continuar a autenticación o a Step 4.

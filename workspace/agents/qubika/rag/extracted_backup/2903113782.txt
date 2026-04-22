@@ -1,0 +1,30 @@
+TITLE: Reu victor <> Tonga
+DOMAIN: General
+PRIORITY: Media
+ID: 2903113782
+SOURCE: 2903113782__Reu_victor____Tonga.json
+
+---
+
+wideTopic
+
+Action item
+
+El tipo de encryptacion que vamos a usar para la confirmacion es
+`aes-gsm256` con valor inicial (algo asi entendi)
+`404142434445464748494A4B4C4D4E4F4F4E4D4C4B4A49484746454443424140`
+
+Juancito a hablar con victor sobre esto
+
+El departamento se va a pasar por la creacion de la sucursal y se va a guardar en merchant o sucursal
+
+Vamos a guardarlo en merchant
+
+En principio para lo que es visa qr no se necesita ese billing-number
+Tag 62 subtag 01 se puede ignorar mientras tanto
+
+se manda vacío
+
+Juntarnos para ver los valores que se van a enviar a JPOS
+
+Victor se va a juntar con su equipo para resolver esto, hacer seguimiento a victor

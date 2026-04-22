@@ -1,0 +1,21 @@
+TITLE: Configuración de Reminders en GitHub
+DOMAIN: 7) Repos
+PRIORITY: Media
+ID: 2580971535
+SOURCE: 2580971535__Configuracio╠ün_de_Reminders_en_GitHub.json
+
+---
+
+The purpose of this document is to provide guidance on configuring Github reminders, which is essential to ensure the smooth functioning of the development process. Code review plays a critical role in ensuring the quality and accuracy of the code, and timely completion of code reviews is crucial to meet project deadlines.
+Steps
+Go to the Github reminders section using thisLINK.
+
+Navigate to the reminders configuration section for the desired organization.
+
+Authorize Slack Workspace
+
+Select the Moove It workspace and configure the daily and real-time reminders according to individual preferences. Afterward, click on the button to create the reminder.
+
+MISSION ACCOMPLISHED!
+Siguiente Paso: Guía de Acceso a Sentry ↓
+Guía de Acceso a Sentry

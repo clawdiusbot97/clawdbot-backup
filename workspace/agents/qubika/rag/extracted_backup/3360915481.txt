@@ -1,0 +1,72 @@
+TITLE: Integración con Audit
+DOMAIN: General
+PRIORITY: Media
+ID: 3360915481
+SOURCE: 3360915481__Integracio╠ün_con_Audit.json
+
+---
+
+Descripción General
+La integración deaudit-serviceconauth-servicese implementó para rastrear eventos relacionados con solicitudes provenientes deBPortaly laapp de Pago Móvil. El desafío principal era que ambos servicios comparten el mismo valor deoriginen las solicitudes, lo que dificultaba diferenciar su origen para fines de auditoría.
+Para solucionar esto, se introdujo un mecanismo que permite identificar el origen de las solicitudes a partir de losendpoints de autenticación, donde se utiliza el parámetromobile_apppara almacenar esta información en Redis.
+Alcance
+Esta integración tiene como objetivo rastrear y diferenciar solicitudes de:
+BPortal: El portal web para usuarios.
+
+App de Pago Móvil: La aplicación móvil utilizada por los clientes.
+
+Actualmente, desde auth-service solo se están creandoeventsde audit-service. A futuro, se espera agregaruser-actions, que podrán ser visualizadas en el portal de comercios.
+Diferenciación de Solicitudes
+Desafío Inicial
+Hasta ahora, no existía una manera de diferenciar entre solicitudes provenientes de BPortal y la app de Pago Móvil, ya que ambas comparten el mismo valor deoriginen las requests. Esto hacía imposible determinar su origen para fines de auditoría y rastreo.
+Solución: Redis y Parámetromobile_app
+La única diferencia observable entre solicitudes de BPortal y la app de Pago Móvil es el uso del parámetromobile_appen losendpoints de autenticación. La solución implementada es la siguiente:
+Almacenamiento en Redis:
+Cuando llega una solicitud a los endpoints de autenticación y contiene el parámetromobile_app, se almacena enRedisbajo la siguiente clave:
+ruby
+Dondebaas_redis_store_prefix_keyesauth_service:baas, y un ejemplo de cómo quedaría la clave en Redis sería:
+
+Eliminación de Datos en Redis:
+Si una solicitud a los endpoints de autenticación no contiene el parámetromobile_app, se elimina cualquier valor previamente almacenado en Redis para ese email. Esto se debe a que un usuario no puede estar logueado simultáneamente en BPortal y en la app de Pago Móvil con el mismo email. Aquí es donde damos por entendido que la solicitud viene de un portal.
+
+Header de Autenticación Baas
+Elheader de autenticación Baasutilizado en las solicitudes tiene el siguiente formato:
+Un ejemplo sería:
+Este header se utiliza para obtener el email del usuario autenticado y, posteriormente, consultar en Redis si existe información relacionada con la app de Pago Móvil. Si no existe, entonces se obtienen del mismo header las credenciales de la aplicación relacionadas con el portal desde el cual se originó la solicitud.
+Endpoints Cubiertos
+La integración cubre los siguientes endpoints enauth-service:
+user_login: Inicio de sesión del usuario.
+Función: Almacena o elimina en Redis la información demobile_appy del dispositivo, asociada al email del usuario.
+
+Origen:
+Si incluyemobile_app: Proviene de la app de Pago Móvil.
+
+Si no incluyemobile_app: Puede provenir de BPortal o de cualquier otro portal.
+
+update_user_profile: Actualización del perfil del usuario.
+Función: Registra un evento de auditoría al actualizar el perfil.
+
+Identificación del Origen:
+Se utiliza el header Baas para identificar si la solicitud proviene del portal o de la app.
+
+finish_email_change: Cambio de email del usuario.
+Función: Registra un evento al completar el cambio de email.
+
+Identificación del Origen:
+Similar al anterior, se utiliza el header Baas.
+
+put_reset_password: Reseteo de contraseña desdeauth-portal.
+Función: Registra un evento al finalizar el flujo de reseteo de contraseña.
+
+Identificación del Origen:
+Las solicitudes a este endpoint no incluyen el header Baas.
+
+Estrategia:
+Se obtiene eluser IDde la solicitud.
+
+Con eluser ID, se obtiene elemaildel usuario.
+
+Se verifica en Redis si existe información asociada a ese email:
+Si existe: La solicitud proviene de la app de Pago Móvil.
+
+Si no existe: La solicitud proviene de un portal.

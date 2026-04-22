@@ -1,0 +1,24 @@
+TITLE: Configuración del proyecto nuevo - SRE
+DOMAIN: General
+PRIORITY: Media
+ID: 4281761851
+SOURCE: 4281761851__Configuracio╠ün_del_proyecto_nuevo_-_SRE.json
+
+---
+
+Desde la perspectiva de SRE existen varias iniciativas que deben ser implementadas en la primer versión de cada proyecto nuevo. A continuación las listamos y adjuntamos algunas indicaciones de cómo implementarlas.
+noneConfiguración de redis
+El redis debe configurarse conkeepalivedpara seguir un esquema activo-pasivo. De esta manera van a participar dos nodos de redis (el activo o master y el pasivo o slave) y una IP flotante que va a estar asignada al nodo master.
+En caso de un fallo en el nodo activo, el nodo pasivo tomará poseción de la IP flotante y la instancia slave de Redis será promovida a master.
+El set up requiere cambios en los repositorios del servicio, debancard-dockery enbancard-configurations. El detalle lo podemos veracá.
+Dockerización de nginx
+La dockerización de nginx aporta un control aislado de todo lo que tenga que ver con este componente. Esto permite gestionar la versión de nginx desde la imagen del contenedor, la configuración va a estar directamente en el contenedor también, y separada del server.
+Aquí es importante gestionar bien los archivos de configuración que son comúnes entre los servicios que corren en cada server.
+El repositorio va a tener una copia de los archivos que en el server está en/etc/nginx/conf.d/y una del archivo de configuración propio de cada servicio que el server tiene en/etc/nginx/sites-available/.
+Hay cambios que se aplican en el action, para buildear los certificados y la imagen de nginx, y es importante asegurar que a la hora de desplegar, se debe utilizar el flag-k nginxen el comandobancard-deploy.
+Más detallesacá.
+Mejoras en actions
+Los cambios en los actions se han hecho buscando mejoras en los tiempos y costos a la hora de buildear las imagenes que corresponden a cada proyecto.
+En una etapa inicial, se unificaron los archivosDockerfile.baseyDockerfile.proden los proyectos para crear una sola imagen, y se separar la creación de la imagen del servicio de la de los demás componentes (nginx, redis, etc), la vez de condicionar esta última para que solo se inicie al hacer push amastero adevelop
+Este cambio require modificaciones enDockerfile.base, eliminarDockerfile.prody modificar bastante los actions.
+Más detallesacá.

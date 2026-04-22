@@ -1,0 +1,68 @@
+TITLE: Iniciativas
+DOMAIN: General
+PRIORITY: Media
+ID: 2685108225
+SOURCE: 2685108225__Iniciativas.json
+
+---
+
+Este documento es un listado de todas las iniciativas que tenemos activas, con sus responsables, fechas de entrega y listado de tareas pendientes a gran escala. Esto nos sirve para proyectar a futuro como organizar el equipo.
+Ultimo PM →
+Iniciativa
+
+Miembros
+
+Referente BC
+
+Referente QBK
+
+QR hub
+
+Lucas Candia
+Victor Alarcón
+
+App de Comercios
+
+Luis Rojas
+Tania Lorenzo
+
+Pagos con Cuentas de Bancos Catastradas
+
+Lucas Candia
+
+Migración de 3DS de Cardinal a CyberSource
+
+Carlos Velazquez
+
+TPago
+
+Carlos Velazquez
+Paola Figueredo
+
+QR Hub / Germany
+
+Paola Figueredo
+Carlos Velazquez
+
+SRE
+
+Denis Cardozo
+
+BAU
+
+Jose Sanchez
+Gustavo Rodriguez
+
+Code health / vulnerabilidades / michi token
+
+Sebastian Medina
+
+QR Bepsa / RedN1
+
+Victor Alarcon
+Ruben Medina
+
+Evolución del Portal de Comercios
+
+Luis Rojas
+Gustavo Maciel

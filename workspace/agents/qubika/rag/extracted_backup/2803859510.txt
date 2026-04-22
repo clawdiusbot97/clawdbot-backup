@@ -1,0 +1,40 @@
+TITLE: Tasking - Aumentar limite de usuarios por tarjeta
+DOMAIN: General
+PRIORITY: Media
+ID: 2803859510
+SOURCE: 2803859510__Tasking_-_Aumentar_limite_de_usuarios_por_tarjeta.json
+
+---
+
+Tarea
+
+Estimación (hs)
+
+Crear nueva tabla en la base para las configuraciones (incluyendo config de limite de usuarios)
+
+2hs
+
+Modificar el endpoint de external-services para enviar el service code de TPago (crédito)
+
+12hs
+
+Modicar el llamado desde payment-link-service para cambiar el service code a external-services (crédito)
+
+12hs
+
+Obtener la config de la cantidad de tarjs desde payment-link-service
+Agregar validaciones
+Si valor de config es 0 → Validar que la tarjeta sea del usuario (desde jpos)
+
+Si valor de config es 1 o + → No importa si la tarjeta es del dueño o no
+
+Validar que no se registren mas usuarios a una ci del valor seteado en la config
+
+38hs
+
+Manejo de errores
+Avisar cuando se supera el límite de usuarios por tarjeta
+
+Avisar cuando el config es 0 que solo puede catastrarla el dueño
+
+3hs

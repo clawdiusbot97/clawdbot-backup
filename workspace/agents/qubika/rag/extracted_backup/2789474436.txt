@@ -1,0 +1,14 @@
+TITLE: Bienvenido/a a Bancard!
+DOMAIN: 6) Onboarding
+PRIORITY: Alta
+ID: 2789474436
+SOURCE: 2789474436__Bienvenido_a_a_Bancard!.json
+
+---
+
+Nos complace darte la bienvenida al equipo deBancard. Tu incorporación representa un paso importante para nosotros, ya que confiamos en tu habilidad y experiencia para contribuir al éxito continuo de este proyecto!
+En Bancard, valoramos la profesionalidad, el compromiso y la innovación. Estamos seguros de que te vas a encontrar con un ambiente que promueve el crecimiento profesional y el trabajo en equipo. La idea de este onboarding, es que durante las próximas semanas, te familiarices con nuestras operaciones, nuestras iniciativas, maneras de trabajar y con todas las personas que hacen que todo esto sea posible 💪🏻
+En este documento, vas a encontrar toda la información necesaria para empezar, incluyendo un panorama del proyecto, sus miembros, los procedimientos y procesos de gestión y desarrollo y tus primeros pasos en la organización. Por favor leelo detenidamente y no dudes en hacer preguntas siempre que lo necesites.
+Bienvenido(a) aBancard😎.
+Siguiente Paso→
+Presentación General del Proyecto Bancard

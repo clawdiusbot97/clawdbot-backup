@@ -1,0 +1,179 @@
+TITLE: Proceso de Desarrollo y Programación Segura
+DOMAIN: General
+PRIORITY: Media
+ID: 2260336704
+SOURCE: 2260336704__Proceso_de_Desarrollo_y_Programacio╠ün_Segura.json
+
+---
+
+Proceso de desarrollo
+Nuestra metodología es SCRUM. Scrum es ampliamente conocido como un marco Ágil para el desarrollo y gestión de proyectos de software, pero es mucho más que eso.
+Es un marco de gestión que permite hacer frente a problemas complejos de manera adaptativa, contribuyendo al desarrollo de productos y/o soluciones del más alto valor para los clientes.
+En este sentido más amplio Scrum es:
+Un acelerador de negocios.
+
+Un sistema de gestión del riesgo integrado.
+
+Una herramienta de gestión de equipos.
+
+¿Por qué es interesante SCRUM?
+La implementación de Scrum puede reportar enormes beneficios:
+Como acelerador de negocios permite hacer las cosas más rápido y mejor, priorizando las características de mayor valor para los clientes.
+Como sistema de gestión del riesgo permite a los equipos probar ciertas características, enfoques o tácticas, y actuar rápidamente sobre los resultados.
+Como herramienta de gestión de equipos contribuye a que los equipos sean más felices y más productivos.
+Elementos importantes en SCRUM
+Scrum se basa en tres elementos:eventos,rolesyartefactos, que deben ser aplicados en conjunto. Cada uno de estos elementos sirve para un propósito específico, y cada uno es esencial para el éxito de Scrum. Además, es necesario un conjunto de reglas para aglutinar y armonizar todos los elementos.
+Roles
+Es sabido que Scrum es fácil de aprender (pocas reglas y pocos instrumentos), pero muy difícil de implementar, ya que requiere cambios muy profundos a nivel personal y organizacional. La principal dificultad pasa por la gestión del cambio.
+En todo Scrum Team (ST) hay un total de tres roles: el Product Owner (PO), el Development Team (DT) y el Scrum Master (SM). Es posible, pero no recomendable, asignar a una persona más de un rol, pero no está permitido crear ningún otro rol, ya que podría perjudicar al equipo poniendo en peligro su unidad.
+El Scrum Team tiene que ser:
+Auto-organizado:No hay un líder de equipo que decide qué persona va a hacer qué tarea o cómo se resuelve un problema. Es el equipo en su conjunto quien decide estas y otras cuestiones.
+Multidisciplinar:El ST tiene todos los conocimientos y las competencias necesarias para realizar el trabajo, dependiendo lo mínimo de personas externas al equipo.
+El SCRUM Team (ST)
+
+Artefactos
+
+El PO crea el Product Backlog, una lista de todas las características que podrían ser necesarias en el producto final (#1, #2, #3, ...) Esta lista nunca está completa y cambia constantemente (1, 1.1, 1.2, ...) La acción de ordenar y añadir detalles y/o estimaciones se conoce como "refinamiento", y es un proceso continuo del que participan el PO y DT.
+
+El contenido del Product Backlog (#1, #2, #3 ...) puede presentarse como "historias de usuario", aunque si bien es lo mas habitual, no tiene que ser así necesariamente. Estas no son oficialmente un artefacto SCRUM.
+
+El Sprint Backlog es el conjunto de características seleccionadas el Product Backlog que se producirán y entregarán al finalizar el Sprint actual, y que contribuyen a la consecución del objetivo del Sprint.
+
+Por incremento entendemos todos los elementos / características del Product Backlog completados hasta el final de un determinado Sprint. Dichos elementos deben estar completamente hechos para revisarse y enviarse al cliente en caso de que lo solicite. Done (hechos), se refiere a la compresión compartida por todo el equipo de lo que significa que una pieza de trabajo este completa al 100%.
+
+Eventos
+Visto los roles y artefactos es momento de centrarse en los eventos. Un proyecto gestionado con Scrum se desarrolla a partir de un número de sprints consecutivos. El número de sprints depende del proyecto.
+Un Sprint es un periodo máximo de tiempo preestablecido con una duración fija (timeboxed) que se establece para maximizar la productividad. Todos los eventos scrum son timeboxed.
+Los ST son libres de cambiar la duración en base a las lecciones aprendidas, pero no con frecuencia, y nunca basándose en ocasiones individuales.
+Anteriormente hemos hecho referencia al Sprint Backlog, el conjunto de elementos / características acordadas al inicio de cada Sprint que el DT debe desarrollar durante el Sprint actual.
+Los eventos más importantes de un Sprint son:
+El Sprint en sí mismo y su propósito
+
+Sprint planning
+
+Daily Scrum
+
+Sprint Review
+
+Sprint Retrospective
+
+Sprint Weekly
+
+Eventos - Contenido de un Sprint
+Valores del equipo
+A continuación se listan los valores que el equipo Scrum debe contar:
+Compromiso:los miembros del equipo deben estar personalmente comprometidos con el lograr los objetivos del equipo Scrum.
+
+Coraje:los miembros del equipo Scrum tienen el valor para hacer las cosas bien y trabajar en los problemas difíciles.
+
+Foco:los miembros del equipo se centran en el trabajo del Sprint y en los objetivos del Equipo Scrum.
+
+Apertura:el Equipo de Scrum y los interesados acuerdan ser francos acerca de todos los trabajos y desafíos en la realización del trabajo
+
+El respeto:los miembros del Equipo Scrum se respetan entre sí para ser personas capaces e independientes.
+
+Lineamientos OWASP
+El concepto de programación segura es analizar y estudiar la seguridad del código fuente, cuyo objetivo es prevenir errores en el software con respecto a seguridad y estabilidad (por ejemplo, uso de criptografía en el uso de los datos, uso de casos de pruebas, atención a lineamientos de seguridad indicados por OWASP, protección ante fallas, etc.).
+OWASP es una organización sin fines de lucro, cuyo objetivo es centrarse en mejorar la seguridad del software. Dentro de sus iniciativas, la más reconocida es la OWASP Top 10 Project (documento sobre los diez riesgos de seguridad más críticos que debemos atacar para obtener aplicaciones web seguras y confiables).
+Por lo tanto, en este documento analizaremos como Moove It realiza la prevención de esos problemas de seguridad.
+Revisión de Código
+Una revisión de código (code review) es un proceso por el cual se revisa el código de otra persona en busca de errores o posibles mejoras.
+El objetivo principal de la importancia de una buena revisión de código es que todos cometemos errores (o no hacemos las cosas todo lo óptimas que podrían ser) y que poder ver los propios errores es más difícil que los vea otra persona.
+Las revisiones de código tiene varias ventajas:
+Detección temprana de errores
+
+Detección de mala legibilidad del código
+
+Búsqueda de soluciones más eficientes a un problema
+
+Descentralización del conocimiento
+
+Aprendizaje recíproco
+
+En Moove It es obligatorio realizar code review para cada funcionalidad que desarrollemos en el proyecto. Esto nos brinda seguridad en cada desarrollo, así como también consistencia en la arquitectura de todos los servicios y portales.
+Pruebas unitarias
+Las pruebas unitarias nos ayudan a prevenir errores, especialmente cuando hacemos nuevos cambios sobre nuestro código, haciendo nuestras aplicaciones más mantenibles en el tiempo. La desventaja de escribir pruebas es que es lento y es más código por mantener. Pero en el mediano y largo plazo las ventajas superan las desventajas.
+En Moove It usamos RSpec como framework de fabricación de pruebas unitarias y FactoryGirl para la creación de cada una de las entidades del modelo.Realizamos dos tipos de pruebas:
+Pruebas unitarias cuyo objetivo es probar la lógica de métodos específicos de la aplicación, aislando sistemas externos como bases de datos, otros servidores, etc.
+
+Pruebas de integración cuyo objetivo es probar funcionalidades completas de la aplicación y pueden involucrar componentes y sistemas externos. Para el caso de componentes o sistemas externos, realizamos un “stub” (o mock) de cada uno de dichos servicios.
+
+SQL Injection
+En nuestros proyectos usamos ActiveRecord ORM como forma de comunicación con la base de datos (MySQL y Postgres). Dado que consultamos muchos datos y, en muchos casos, para construir dicha consulta, necesitamos algún parámetro de entrada.
+Este es un lugar muy frágil del código fuente. Supongamos el siguiente código:
+Usuario.where("apellido = '" + params [:last_name] +" '")
+La búsqueda es solicitada en forma externa, por lo que recibamos como parámetro puede ser cualquier texto, inclusive una declaración SQL, haciendo que fácilmente alguien pueda utilizar nuestra base de datos a su placer.
+En todos nuestros proyectos, utilizamos mecanismos de ActiveRecord para prevención de inyección de código SQL en nuestras consultas.
+En el caso de ejemplo, la sentencia debería ser de la siguiente forma
+Usuario.where(apellido: params[:last_name])
+Por mas información, sugerimos la siguiente lectura:https://www.netsparker.com/blog/web-security/sql-injection-ruby-on-rails-development/
+
+Cross-site Scripting (XSS)
+Una secuencia de comandos en sitios cruzados o Cross-site scripting (XSS por sus siglas en idioma inglés) es un tipo de vulnerabilidad informática o agujero de seguridad típico de las aplicaciones Web, que puede permitir a una tercera persona inyectar en páginas web visitadas por el usuario código JavaScript (ref: Wikipedia)
+Imaginemos que tenemos el siguiente código:
+<%= link_to "Sitio Bancard", @usuario.sitio %>
+Si “@usuario.sitio” contiene código Javascript, alguien puede robarnos información desde su browser.
+Rails nos provee algunos mecanismos para prevenir ataques XSS. Los datos de tipo texto, por defecto, son “escapeados”, por lo que nunca va a ser posible un ataque del tipo XSS. Pero, en casos particulares donde queramos deshabilitar esta opción, usamos el método “html_safe”. En nuestros proyectos, el “html_safe” solamente es utilizado en ocasiones donde sabemos de antemano que los datos son confiables y controlables/validados.
+Por mas información, sugerimos la siguiente lectura:https://www.netsparker.com/blog/web-security/preventing-xss-ruby-on-rails-web-applications/
+Command Injection
+Se trata de ejecutar un comando que proviene del mundo exterior.
+Kernel.exec("rm -rf")
+En nuestros proyectos, nunca realizaremos llamadas de ese estilo, nunca ejecutaremos funciones si un parámetro proviene del usuario y no está ni validado ni filtrado.
+Mecanismo de Autenticación
+Dado que RoR no provee ningún mecanismo de autenticación, Moove It utiliza uno propio, basado en clave pública y privada (almacenadas en un MySQL).El cliente cuenta con una clave pública y otra clave privada proporcionadas por Bancard.
+Estas claves permiten identificar inequívocamente a la entidad en todas las interacciones con el servicio de Bancard.
+Las claves serán enviadas por el producto desarrollado por la entidad en todas sus peticiones para autenticarse.
+
+Prefijo
+
+Valor
+
+Usuario
+
+apps/
+
+Clave pública
+
+Contraseña
+
+Clave privada
+
+El método de autenticación utilizado por el servicio es Autenticación de acceso básico (Basic Access Authentication).
+Según las especificaciones del método Basic Access Authentication, el header del mensaje se construye como sigue:
+Se unen la clave pública y clave privada, separadas por ":", incluyendo el prefijo antes de la primera. Ejemplo:  apps/y24gDAN3rjOESvpZ4UrmqF6sjjLqAut9:m8F1,NmHoD9xfuOWJr)UKoz,(QQ(TF4DELFtR1fj
+
+La concatenación anterior se codifica utilizando la variante RFC2045-MIME de Base64, excepto que no limitado a 76 caracteres por línea. Ejemplo: YXBwcy95MjRnREFOM3JqT0VTdnBaNFVybXFGNnNqakxxQXV0OTptOEYxLE5tSG9EOXhmdU9XSnIpVUtveiwoUVEoVEY0REVMRnRSMWZq
+
+Se le agrega a la cadena codificada el método de autenticación, en este caso Basic, más un espacio en blanco. Ejemplo: Basic YXBwcy95MjRnREFOM3JqT0VTdnBaNFVybXFGNnNqakxxQXV0OTptOEYxLE5tSG9EOXhmdU9XSnIpVUtveiwoUVEoVEY0REVMRnRSMWZq
+
+Ejemplo
+Dadas las siguientes claves de una entidad:
+Prefijo más clave pública:
+apps/y24gDAN3rjOESvpZ4UrmqF6sjjLqAut9
+
+Clave privada:
+m8F1,NmHoD9xfuOWJr)UKoz,(QQ(TF4DELFtR1fj
+
+Siguiendo los pasos anteriores obtenemos:
+Basic YXBwcy95MjRnREFOM3JqT0VTdnBaNFVybXFGNnNqakxxQXV0OTptOEYxLE5tSG9EOXhmdU9XSnIpVUtveiwoUVEoVEY0REVMRnRSMWZq
+
+Y por lo tanto el header sería:
+Authorization: Basic YXBwcy95MjRnREFOM3JqT0VTdnBaNFVybXFGNnNqakxxQXV0OTptOEYxLE5tSG9EOXhmdU9XSnIpVUtveiwoUVEoVEY0REVMRnRSMWZq
+Referencia:https://www.base64encode.org
+Observación:Las conexiones se realizan exclusivamente a través de una VPN y se realiza filtrado de IPs.
+
+Manejo de sesiones
+Por defecto, para el manejo de sesiones, RoR usa cookies almacenadas en el navegador y tampoco existe una fecha de caducidad establecida (lo cual, la sesión nunca caduca). Esto implica no almacenar nunca información confidencial en esta configuración.
+En Moove It manejamos la sesión a través de un Redis, asignándole además un tiempo de expiración a la sesión. Con ello, no estamos enviando información al usuario vía Cookies.
+CSRF (Cross Site Request Forgery)
+Este método de ataque funciona al incluir un enlace malicioso en una página que accede a su aplicación web que se cree que el usuario ha autenticado. Ruby on Rails tiene un mecanismo para tokens CSRF, el cual usamos en todos los proyectos web.
+class ApplicationController < ActionController::Base
+...
+protect_from_forgery if: :logged_in?
+Referencia de objeto directa insegura o navegación forzada
+El diseño de aplicaciones RESTful es muy popular en Rails y es una buena práctica. Pero también significa que las rutas a los recursos son intuitivas y fáciles de adivinar y que es muy fácil acceder a recursos que no deberían estar expuestos a todos.
+En Moove It usamos una gema para el control de acceso llamada “cancan” que restringe el acceso a recursos específicos usando algunas reglas.
+Datos cifrados
+Todos los datos sensibles están encriptados. Para el caso particular de los números de tarjetas, también están enmascarados. En caso de querer obtener el número real de una tarjeta, usamos un servicio exclusivo de Bancard para ello.
+Archivos sensibles
+Hoy en día, nuestros proyectos están alojados en GitHub disponible para los usuarios autorizados. Hay algunos archivos frágiles en cada aplicación de Ruby on Rails que no deberían ser parte del control de versiones, como ser database.yml, service_configuration.yml, etc. Para ello, lo que realmente se sube a GitHub son archivos “sample” (ej: database.sample.yml), donde ingresamos información falsa de ejemplo para quien deba utilizar esos archivos. Luego, en el servidor donde está deployado el proyecto, se ingresan los datos reales en los archivos yml.

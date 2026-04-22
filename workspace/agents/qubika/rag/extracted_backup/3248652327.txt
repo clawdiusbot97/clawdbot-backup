@@ -1,0 +1,99 @@
+TITLE: Setup invoices-services - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3248652327
+SOURCE: 3248652327__Setup_invoices-services_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación parabancard-invoices-service.
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Setup inicial y creación de proyecto de bancard-invoice-services
+
+8
+
+invoices-service
+
+Dockerización con docker-compose
+
+8
+
+invoices-service
+
+Configuración de sentry
+
+4
+
+invoices-service
+
+Github Actions, Rubocop y RSpec
+
+8
+
+invoices-service
+
+Creación de Application Credentials
+
+4
+
+invoices-service
+
+Integrar Baas middleware
+
+2
+
+invoices-service
+
+Agregar bancard-invoice-service en bancard-docker
+
+4
+
+invoices-service / bancard-docker
+
+Agregar bancard-invoice-service en bancard-configurations
+
+4
+
+invoices-service / bancard-configurations
+
+Configurar máquina de staging para bancard-invoice-service
+
+4
+
+invoices-service / dockerized-nginx
+
+Configurar proxy de servicios de staging para bancard-invoice-servicew
+
+4
+
+invoices-service / commerce-suite-nginx
+
+Configurar máquina de producción para bancard-invoice-service
+
+6
+
+invoices-service / dockerized-nginx
+
+Configurar proxy de servicios de producción para bancard-invoice-service
+
+6
+
+invoices-service / commerce-suite-nginx
+
+Total Desarrollo
+
+62
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+9
+
+Total Desarrollo + Gestión
+
+71

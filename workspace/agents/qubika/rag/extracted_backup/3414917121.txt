@@ -1,0 +1,57 @@
+TITLE: Project Status Report
+DOMAIN: General
+PRIORITY: Media
+ID: 3414917121
+SOURCE: 3414917121__Project_Status_Report.json
+
+---
+
+noteBancard | Date: XX/XX/XX
+Bancard | Date: XX/XX/XX
+
+Sprint Goal
+What do we want to accomplish with this sprint?
+
+Decisions
+Outline what kind of approaches were considered and the benefits and drawbacks of each. What decisions did we make, and why?
+Example
+
+Progress updates
+Task Name
+
+Status
+
+Scope
+
+ETA
+
+Comments
+
+TO DO/IN PROGRESSBlue/BLOCKEDRed/WAITING FOR FEEDBACKYellow/DONEGreen
+
+OUT OF SCOPEPurple/SCOPE CREEPPurple
+
+Risk Management - Follow-up Actions
+
+Description
+
+Severity
+
+Impact
+
+Owner
+
+Plan
+
+Status
+
+LOWBlue/MEDIUMYellow/HIGHRed
+
+LOWBlue/MEDIUMYellow/HIGHRed
+
+IDENTIFIED/ASSESSEDBlue/MITIGATEDYellow/CLOSEDGreen
+
+Next steps
+33incompleteWhat should we do next?SET A STATUS
+Other documents
+Example

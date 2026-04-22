@@ -1,0 +1,45 @@
+TITLE: Deploy a producción
+DOMAIN: 1) Deploy
+PRIORITY: Alta
+ID: 2757492739
+SOURCE: 2757492739__Deploy_a_produccio╠ün.json
+
+---
+
+Feature Branch
+feature/<nombre_de_iniciativa>
+Proyectos involucrados
+bancard-commerce-service
+
+…
+
+Consideraciones Generales
+
+o
+
+Necesita cambios en la configuración
+
+Necesita conexión con servicios externos (Coordinar con Denis).
+
+Necesita conexión con otros servidores (Revisar conectividad y coordinar con Denis).
+
+Necesita ejecutar migraciones en la db (Coordinar con DBA).
+
+Necesita Buckets de S4
+
+Necesita cargar imágenes o datos estáticos
+
+Cambios en la configuración
+PR config Staging: <LINK A PR>
+PR config Producción: <LINK A PR>
+Migraciones a ejecutar
+<Listado de todas las migraciones que se deben ejecutar>
+sqlDatos a insertar
+Commerce Service:
+CREACION DEL SERVICIO:
+CREACION DE LA ROLE_CATEGORY:
+CREACION DEL ROLE CAJERO PIX:
+CREACION DE PERMISSIONS:
+CREACION DE ROLE_PERMISSIONS:
+Pull requests a develop/master
+<link a pr en github>

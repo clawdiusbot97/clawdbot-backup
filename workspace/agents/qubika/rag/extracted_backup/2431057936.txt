@@ -1,0 +1,24 @@
+TITLE: Users Registration
+DOMAIN: General
+PRIORITY: Media
+ID: 2431057936
+SOURCE: 2431057936__Users_Registration.json
+
+---
+
+Required Changes
+
+Correr migraciones:
+Nro 18
+
+Nro 20
+
+Nro 22
+
+Nro 23
+
+Points to Consider
+
+Recordar popular tabla de financial_institutions con datos de las instituciones financieras
+
+Recordar agregar financial institution con código 0 para tarjetas internacionales

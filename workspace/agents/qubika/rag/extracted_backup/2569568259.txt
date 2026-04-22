@@ -1,0 +1,71 @@
+TITLE: Portal de Comercios App
+DOMAIN: General
+PRIORITY: Media
+ID: 2569568259
+SOURCE: 2569568259__Portal_de_Comercios_App.json
+
+---
+
+App Portal de Comercios – Figma
+
+Jira - Portal de Comercios
+
+Github Portal de Comercios
+
+Commerces API
+
+Alcance
+Etapa Inicial (comercios existentes):
+Gestión de ventas con QR estático/dinámico.
+
+Movimientos de ventas con QR
+
+Gestión de ventas con TPago
+
+Movimientos de ventas con TPago
+
+Administración de usuarios
+
+Autenticación de usuarios y recupero de contraseñas
+
+Movimientos del portal de comercios. (vista reducida en cuanto a datos comparando con el portal de comercios web).
+
+Gestión de soporte
+
+Notificaciones. (soporte, creación de usuarios). Configurable por el usuario.
+
+Sprints
+Los sprint tendrán una duración de 2 semanas comenzando los días jueves y terminando con una demo al cliente mostrando avances.
+Diseños
+Prototipo:https://www.figma.com/prototipo/App-Portal-de-Comercios
+
+Implementación:https://www.figma.com/implementacion/App-Portal-de-Comercios
+
+Credenciales
+Usuario: bancard@moove-it.com | Contraseña: 123bancard
+API_BASE_URL=https://desa.infonet.com.py/auth/api/0.2 (staging)
+API_BASE_URL=https://www.infonet.com.py/auth/api/0.2 (production)
+Librerías
+Librerías utilizadas en el proyecto fuera de lo común.
+@reduxjs/toolkit
+
+react-native-quick-base64(sin signature)
+
+react-native-share
+
+react-native-toast-message
+
+@react-navigation/bottom-tabs
+
+react-native-device-info
+
+react-native-date-picker
+
+@react-native-camera-roll/camera-roll
+
+react-native-document-picker
+
+react-native-quick-crypto(con signature)
+
+React Native
+El proyecto utiliza la versión0.70.8de React Native, que si bien contiene la nueva arquitectura, no se encuentra funcional.

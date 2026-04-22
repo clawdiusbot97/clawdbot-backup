@@ -1,0 +1,39 @@
+TITLE: Vulnerabilidades Daily Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2675966020
+SOURCE: 2675966020__Vulnerabilidades_Daily_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Se pudo solucionar la vulnerabilidad de volver para atrás. Se encontraron aparte, muchas mejoras que excede el scope de la vulnerabilidad.
+Today: Plasmar en un documento de confluence las mejoras encontradas.
+Blockers? No.
+
+7incompleteHablar con Joaco el tema de PRs y deploy.
+
+Yesterday: El problema es más grande de lo pensado.
+Today: Hoy va a seguir tratando de identificar el problema.
+Blockers? Si, pero va a ayudar Joaco a destrabar.
+
+6completeHablar con Joaco para que ayude
+
+Yesterday: Investigando sobre la tecnología. Joaco estuvo dando una mano.
+Today: Esta semana cerrar el fix de Tpago. Hoy va a seguir investigando.
+Blockers? No.
+
+5incompleteMiércoles, tratar de tener el problema detectado.
+
+Yesterday: Error 1 de Tpago, lo pudo replicar. Aprendiendo de frameworks y set up del proyecto.
+Today: Seguir analizando Tpago y commerce-suite.
+Blockers? No.
+
+2incomplete

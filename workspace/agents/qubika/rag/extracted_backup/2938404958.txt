@@ -1,0 +1,55 @@
+TITLE: Qué es Sentry y como accedo?
+DOMAIN: 5) Observabilidad
+PRIORITY: Alta
+ID: 2938404958
+SOURCE: 2938404958__Que╠ü_es_Sentry_y_como_accedo_.json
+
+---
+
+Sentry es una poderosa herramienta de monitoreo y seguimiento de errores que ayuda a los equipos de desarrollo a identificar, diagnosticar y solucionar problemas en sus aplicaciones de manera rápida y eficiente. Esta guía está diseñada para proporcionarte instrucciones claras y detalladas sobre cómo acceder a la plataforma Sentry y comenzar a aprovechar todas sus funcionalidades.
+
+16falsedefaultlistfalseRequerimientos
+Configurar el host desentry.bancard.com.py. Documento de configuración de hosts en el siguiente link:Hosts Configuration.
+
+Tener configurada la VPN de Bancard. Documento de configuración de la VPN en el siguiente link:VPN Configuration (DEPRECATED).
+
+Estar conectado a la VPN.
+
+Instrucciones
+Ingresar al siguiente link:sentry.bancard.com.py
+
+Al ingresar al link, verás la siguiente pantalla:
+Una vez aquí, presionar en el botón “Request to Join“ en la parte superior derecha.
+
+Al presionar el botón, verás el siguiente formulario:
+Ingresar el correo electrónico corporativo. Por ejemplo:ignacio.jorge@qubika.com. Luego, presionar el botón de “Request to Join”.
+
+Solicitar al PM, TL o cualquier miembro del Tech Core Team que acepte la solicitud para unirte a la plataforma.
+
+Una vez que algún administrador de Sentry acepte tu solicitud, debería llegarte un correo con la invitación a unirte al equipo (revisar spam, por lo general llega ahí). El correo puede demorar un momento en llegar.
+Debes presionar en el boton de “Join your team“.
+
+NOTA: El mail puede ser marcado como no confiable. Marcar como confiable para poder presionar el boton.
+NOTA 2: Al ingresar al link, el navegador puede mostrar un warning de conexión no privada, proceder de todas formas.
+
+El botón te llevará a la siguiente vista:
+Presionar en el botón de “Create a new account“.
+
+Serás redireccionado al siguiente formulario nuevamente:
+En este caso, presionar “Register“.
+
+Completar los datos en el siguiente formulario con la misma dirección de correo que se ingresó en el paso 3 (es probable que ese campo ya esté completo con esa dirección de correo).
+Presionar el botón “Register“.
+
+Esto te permitirá entrar a la plataforma pero aún debes unirte al equipo.
+Presiona el boton “Join a Team“.
+
+Únete al equipo #moove-it presionando “Join Team“ en la siguiente página:
+Una vez hecho esto, ya formarás parte del equipo y podrás acceder al monitoreo de errores de todos los servicios y portales.
+
+En el sidebar podrás acceder a la sección “Projects“ donde verás un resumen general del reporte de todos los servicios y portales:
+Al presionar sobre uno de los proyectos, verás los errores específicos de ese proyecto y podrás aplicar filtros sobre los mismos.
+En la sección “Issues“ podrás ver una lista de todos los errores de todos los servicios y portales y aplicar filtros sobre ellos:
+MISSION ACCOMPLISHED!
+Siguiente Paso: Aprendé a configurar nuestros proyectos ↓
+Cómo levanto un proyecto de Bancard dockerizado?

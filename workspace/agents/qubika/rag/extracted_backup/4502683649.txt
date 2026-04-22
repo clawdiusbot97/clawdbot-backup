@@ -1,0 +1,127 @@
+TITLE: vPOS - 3DS Cybersource - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4502683649
+SOURCE: 4502683649__vPOS_-_3DS_Cybersource_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para el proyecto de migración del flujo 3DS Cardinal a Cybersource en vPOS, a cargo dey
+Las horas estimadas son: 336 ~ 42 días
+El equipo hizo el análisis y hay un 30% de tareas que se puede paralelizar, por ende, no van a ser 21 días de cada desarrollador, sino 30 de uno y 12 del otro. En el desarrollo vamos a definir quien es el que culmina primero y queda libre para tomar otras tareas o dar soporte.
+Fecha de Inicio:
+Fecha de Entrega:
+Consideraciones Generales
+El proceso 3DS en cybersource está dividido en 5 pasos, los cuales son nuestra guía para el armado de la estimación:
+Setup Service:llamado a la API de cybersource enviando datos de la tarjeta para obtener la URL y el JWT para el DDC.
+
+Device Data Collection:llamado a la DDC URL, recolección de los datos del navegador en iframe invisible.
+
+Payer Authentication Check Enrollment Service:(ex lookup) llamado a la API de cybersource para conocer el nivel de riesgo de la operación:
+- Frictionless success (riesgo bajo)
+- Challenge required (riesgo moderado)
+- Frictionless failure or decline (riesgo alto)
+
+Step-Up iframe:iframe visible donde el usuario completa el challenge para validar su identidad.
+
+Payer Authentication Validation Service:verificación de que el usuario validó exitosamente su identidad (solo si ocurrió un challenge).
+
+vPOS
+Flujos involucrados:
+Pago con formulario
+Single (con o sin preautorización)
+
+Multi (con o sin preautorización)
+
+Pago con token
+Single (con o sin preautorización)
+
+Multi (con o sin preautorización)
+
+Catastro
+
+Tarea
+
+Estimación (hs)
+
+[PASO 1] Setup Service
+Implementar endpoint en vpos-service para invocar al servicio de setups para obtener JWT y URL para el DDC.
+Llamar a la API de Cybersourse usando gema oficialcybersource-rest-client-rubyreempazando external-services.
+Invocar a esta nueva operación al hacer submit en todos los flujos involucrados.
+
+40
+
+[PASO 2] Device Data Collection
+Implementar el iframe y form ocultos para DDC. Capturar el mensaje desde el iframe oculto para habilitar el paso 3.
+Implementar para todos los flujos involucrados.
+
+40
+
+[PASO 3] Payer Authentication Check Enrollment Service
+Invocar al servicio usando elreferenceIdobtenido en el paso 1. Evaluar si se hará challenge o no.
+Implementar para todos los flujos involucrados.
+
+32
+
+[PASO 4] Step-Up iframe
+Implementar el iframe visible para el challenge. Integrar elstepUpUrlyaccessTokenrecibidos en el punto 3. Gestionar el callback: eliminar websockets y reemplazar por mensajes de javascript.
+Implementar para todos los flujos involucrados.
+
+56
+
+[PASO 5] Payer Authentication ValidationVerificar el resultado del challenge (si ocurrió). Invocar el endpoint de validación y procesar la respuesta antes de autorizar el pago/catastro.
+Implementar para todos los flujos involucrados.
+
+24
+
+Diseño del modelo de datos. Crear asociaciones en modelos.
+Creación de tabla three_ds_sessions:
+- id
+- reference_id
+- setup_response
+- enrollment_response
+- validation_response
+- resource_id
+- resource_type (Flow o NewCardRequest)
+
+24
+
+Deprecar cardinal:
+eliminar código referente a cardinal.
+
+dejar de usar columnas en la BBDD referentes a cardinal. usar ignored_columns de ActiveRecord en caso de que sea pertinente.
+
+12
+
+Modificar llamados al JPOS de todas las operaciones para enviar las respuestas de cybersource.
+
+24
+
+Relevamiento de seguridad en todos los flujos. Evaluar riesgos y vulnerabilidades.
+Evitar validaciones de seguridad o controles en el front-end. En caso de ser necesarios, respaldarlos con sus respectivas validaciones en el back-end.
+Especialmente importante cuando validamos si un flujo debe o no realizar 3DS.
+Refactorizar según sea necesario.
+
+16
+en caso de un refactor significativo, puede requerir una extensión.
+
+Integración y pruebas en Staging- Integración de los flujos
+- Creación y corrección de PRs
+- Pruebas locales
+- Armado de ramas
+- Deploy a STG
+- Pruebas iniciales en STG
+
+24
+
+Total Desarrollo
+
+292
+
+Total Gestión 15%Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+44
+
+Total Desarrollo + Gestión
+
+336

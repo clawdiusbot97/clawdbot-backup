@@ -1,0 +1,101 @@
+TITLE: WARP VPN Configuration
+DOMAIN: 8) Infraestructura
+PRIORITY: Baja
+ID: 3657138188
+SOURCE: 3657138188__WARP_VPN_Configuration.json
+
+---
+
+Introduction
+With the new setup of our corporate WARP VPN, we can now access Bancard servers more securely and efficiently. This document explains how to configure and use the VPN, along with the necessary IP mapping to connect to Bancard servers from our internal network.
+Configuring the WARP VPN
+If you already have the WARP VPN installed and configured, you'll need to log out and log back in for the new configuration to take effect. Follow the steps below to log out:
+Logging Out of WARP:
+Click the WARP icon in the top-right menu bar.
+
+Click the settings icon.
+
+Select "Preferences."
+
+Go to the "Account" tab.
+
+Click the "Logout from Cloudflare Zero Trust" button.
+
+After logging out, follow the instructions in the attached document to log back into the WARP VPN.
+Note:If you haven't configured the VPN yet, follow the instructions in the attached document for the initial setup.
+Documento de Configuración:
+
+Using the VPN
+Once the VPN is configured, activating it is simple:
+Click the WARP icon in the top-right menu bar.
+
+Toggle the switch to activate the VPN.
+
+That’s it! You are now connected to the WARP VPN.
+IP Mapping
+With the new setup, we will access Bancard servers using private IPs from our VPN instead of the actual server IPs. Here's an IP mapping table:
+Bancard IP
+
+From WARP
+
+Ports
+
+10.100.13.131
+
+10.200.0.1
+
+TCP/22
+
+10.30.12.16
+
+10.200.0.2
+
+TCP/443
+
+10.100.14.4
+
+10.200.0.3
+
+TCP/22
+
+10.100.14.22
+
+10.200.0.4
+
+TCP/3306
+
+10.100.14.36
+
+10.200.0.5
+
+TCP/3306
+
+10.100.14.48
+
+10.200.0.6
+
+TCP/3306
+
+10.100.14.73
+
+10.200.0.7
+
+TCP/443, 40xx, 44xx, 80xx, 90xx.
+
+Once you access the first Bancard server using the WARP private IP, you can navigate between servers using the usual Bancard VPN real IPs, as outlined in theinfrastructure document.
+Common Issues
+Issue: DNS error when trying to activate the WARP VPN.
+Solution:
+Execute this command:sed -i '' 's/"kernelForUDP": true/"kernelForUDP": false/' ~/Library/Group\ Containers/group.com.docker/settings.json
+
+Close Docker Desktop
+
+Activate the WARP VPN.
+
+Restart Docker Desktop.
+
+This document should guide you through a smooth transition to the new VPN setup and access to Bancard servers.
+
+MISSION ACCOMPLISHED!
+Siguiente Paso →
+Git Branching

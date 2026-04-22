@@ -1,0 +1,77 @@
+TITLE: Criterios en la Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2260336727
+SOURCE: 2260336727__Criterios_en_la_Estimacio╠ün.json
+
+---
+
+SERVICIOS
+Agregar un campo en una operación (0.5 puntos)
+Se tiene que devolver
+
+Necesita migración
+
+Necesita validación
+
+Testing Automático
+
+Hacer todas las operaciones CRUD: (3 puntos)
+Crear operación en el resource
+
+Crear operación en el business
+
+Testing Automático
+
+Crear modelo y migración con 3 validaciones y tests: (2 puntos)
+Crear modelo ← Validaciones
+
+Crear migración
+
+Testing Automático
+
+Hacer una tarea asincrónica: (2 puntos)
+Agregar la asynctask
+
+Crear el método en el business (Que recorre una tabla de la base de datos y hace update de la misma)
+
+Testing Automático y manual
+
+PORTALES
+Agregar un campo a un formulario y enviarlo en el servicio (0.5)
+Agregar campo
+
+Llamar al servicio con el campo nuevo
+
+Hacer validación JS
+
+Testing automático
+
+Hacer un formulario para dar de alta (3 puntos)
+Crear las vistas
+
+Crear métodos en el controlador
+
+Llamar al servicio (GET)
+
+Llamar al servicio (POST / UPDATE / PATCH)
+
+Validaciones del lado del javascript
+
+Testing automático
+
+Hacer un listado con filtro (3 puntos)
+Crear vista
+Crear formulario de búsqueda
+
+Paginado (helpers rails)
+
+Llenar comboboxes (GET)
+
+Realizar la busqueda (GET)
+
+Crear método en el controlador
+
+Validaciones en javascript
+
+Vista de zero state.

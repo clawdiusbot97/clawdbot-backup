@@ -1,0 +1,1708 @@
+TITLE: Rediseño del Portal de Comercios - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4087841218
+SOURCE: 4087841218__Redisen╠âo_del_Portal_de_Comercios_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el Tasking y Estimación para el Rediseño del Portal de Comercios, a cargo de.
+Observaciones:
+Esta estimación incluye únicamente las tareas de Rediseño de vistas, no la creación y separación de los dos nuevos portales →epos-portal y commerce-portalque fueron enviados en otro documento.
+
+Esta estimación incluye únicamente horas de desarrollo
+No incluye horas de deploy
+
+No incluye horas de bug fixing
+
+No incluye horas de QA
+
+Las tareas fueron desglosadas con sus respectivos requerimientos para facilitar su comprensión y a su vez poder asociarlos directamente con un ticket en Jira.
+
+En este análisis hay tareas relacionadas al tomado de datos del backend que aún no fueron estimadas porque faltan definiciones de implementación deClickhouse.
+
+Las tareas que fueron estimadas son las relacionadas a las vistas que necesitan reingeniería.
+
+Las horas de las vistas que solo necesitan un re-skin fueron estimadas en base a las estimaciones que nos enviaron del lado de Bancard, a las cuales les sumamos un 20% pensando que van a ser creadas en el nuevo portal propuesto →bancard-portal,donde no solo hay que cambiar estilos, textos y colores, sino que hacer las vistas nuevamente.
+
+Las tareas marcadas enrojono fueron incluidas en la estimación porque les falta definición.
+
+Hemos encontrado algunos detalles de vistas que no fueron contemplados en el diseño, pero hicimos una estimación aproximada pensando en la posible vista o flujo a considerar.
+
+Recalcar que esta estimación no es la oficial, pero si se acerca mucho. Una vez que tengamos todas las preguntas abiertas definidas, vamos a poder entregar una versión final.
+
+Las horas estimadas son:1343horas
+Desglose de horas por sección
+Login y Recuperar Contraseña: 91 hs
+Inicio / Dashboard: 70hs →Reestimar horas backend cuando tengamos la solución con Clickhouse
+Ventas y Movimientos: 227hs → Reestimar horas backend cuando tengamos la solución con Clickhouse
+Movimientos InfoNet Cobranzas: 191hs → Reestimar horas backend cuando tengamos la solución con Clickhouseusuario
+Reporte de Movimientos:215hs → Reestimar horas backend cuando tengamos la solución con Clickhouseusuario
+Comprobantes y Facturas:109 → Tenemos que verificar si en los servicios de facturación se brindan todos los datos que se piden. Una vez verificado podemos continuar con las tareas de backend.
+Reskin Portal:→ 319hs → Basadas en estimación Bancard
+Reskin IC:121hs → Basadas en estimación Bancard
+Tarea
+
+Servicio / Portal
+
+Estimación (hs)
+
+Login y Recuperar Contraseña
+
+91
+
+Crear vista deLogin
+Incluir campos, mensajes de error (contraseña y usuario incorrecto, aviso de usuario bloqueado si usuario escribe mal contraseña 3 veces)
+
+commerce-portal
+
+6
+
+Crear modelo de dispositivos seguros
+Nombre
+
+Dispositivo
+
+Comercio
+
+Usuario
+
+Fecha de registro de dispositivo
+
+Último inicio de sesión
+
+Activo
+
+Borrado
+
+commerce-service
+
+4
+
+Hacer CRD de dispositivos seguros
+
+commerce-service
+
+8
+
+Crear lógica para revisar dispositivo seguro
+Si el usuario no tiene dispositivo seguro pedir que lo registre.
+
+Si es la primera vez, enviar a vista de primer registro
+
+Si ya tenía otro/s dispositivos vinculados, enviar a vista de registrar dispositivo nuevo
+
+Si el dispositivo estaba registrado pero pasaron 60 días, volver a pedir que registre
+
+commerce-portal
+
+4
+
+Crear vista deRegistrar Dispositivopor primera vez
+Crear vista deRegistrar Nuevo Dispositivo
+
+Estas serán unificadas en una sola
+
+commerce-portal
+
+2
+
+Crear vista deRegistrar Dispositivo Expirado
+
+commerce-portal
+
+2
+
+Crear lógica para enviar OTP al mail del usuario para registrar dispositivo
+Usamos la lógica que ya está en auth
+
+auth-service
+
+2
+
+Crear vista paraIngresar OTPenviado al mail, con opción de reenviar cada 60 segundos.
+Incluir mensajes de error
+Al ingresar OTP correcto, registrar dispositivo y enviar al usuario a vista para ingresar un nombre
+
+commerce-portal
+
+8
+
+Crear vista paraIngresar Nombre de dispositivo seguro
+Este campo es opcional
+Incluir botón de Agregar Nombre que será habilitado una vez que el usuario incluya un nombre
+Incluir link de No, Gracias en el caso de que el usuario no quiera ingresar un nombre
+Luego de esta vista, dirigimos al usuario a la pantalla de Inicio del Portal
+
+commerce-portal
+
+6
+
+Crear vista deaviso de usuario bloqueado
+Esta es la vista que se muestra cuando el usuario escribe incorrectamente la contraseña 3 veces.
+
+Mostrar opción de Recuperar Contraseña, que redirigirá al flujo de recuperación.
+
+commerce-portal
+
+4
+
+Crear vista de usuariobloqueado, comunicarse con soporte
+Esta vista se desplegará una vez que el usuario haya ingresado incorrectamente 3 veces la contraseña, se haya bloqueado, y aún así vuelta a intentar hacer el login.
+
+commerce-portal
+
+4
+
+Crear vista derecuperar contraseña.
+El usuario va a poder acceder a esta vista desde:
+la vista deusuario bloqueadodel Login
+
+el botón derecuperar contraseñadel Login
+
+la Landing Page de Bancard.
+
+Usuario ingresa el mail asociado a su cuenta. Se envía un mail con un enlace para recuperar contraseña solo si el usuario tiene un celular asociado.
+
+Si no tiene celular asociado, redirigimos a la vista deemail no enviado porque el usuario no tiene el celular registrado
+
+commerce-portal
+
+5
+
+Crear vista deemail enviado cuando el usuario tiene el celular registrado
+Esta vista es informativa, da la opción al usuario de volver a enviar mail en caso que no le haya llegado, con un contador de 60 segundos.
+
+commerce-portal
+
+3
+
+Crear vista deemail no enviado porque el usuario no tiene el celular registrado
+Redirigimos al usuario a esta vista si ingresa un mail que no tiene celular asociado
+
+commerce-portal
+
+1
+
+Crear vista deingresar código enviado al teléfono celular
+Agregar contador para reenviar código cada 60 segundos
+
+Agregar mensajes de error en caso que el código sea inválido
+
+Redirigir al usuario a la vista decreá tu contraseñasi el código es correcto
+
+commerce-portal
+
+4
+
+Crear vista decreá tu contraseña
+Incluir reglas que tiene que cumplir la nueva contraseña
+
+Actualizar ícono de las reglas cuando el usuario escriba (y viceversa)
+
+Validar cuando se acepte la nueva contraseña que cumpla con todo
+
+Guardar contraseña nueva en el caso que el usuario ingrese una correcta
+
+Si el usuario ingresa una contraseña nueva válida, redirigir a pantalla decontraseña actualizada
+
+commerce-portal
+
+12
+
+Modificación en auth-service para manejar contraseñas con nuevo formato de commerce-portal
+Modificar generación de contraseña para cumplir con el formato nuevo
+
+Agregar validación en la creación de usuario de que la creación tenga el formato indicado por bancard, únicamente si el usuario que se crea es del portal de comercios
+
+auth-service
+
+16
+
+Crear vista decontraseña actualizada
+
+commerce-portal
+
+2
+
+Inicio
+
+70
+
+[Opción] Sección de Resúmenes Totales
+
+commerce-portal
+
+8
+
+[Opción 1] Obtener Ventas de hoy, semana y mes
+Estimación en base a criterio pensando que vamos a tomar esta info de Clickhouse
+Si la informacion la traemos directo de Clickhouse y no tenemos que hacer tareas en commerce-service, la estimación baja
+
+commerce-service / Clickhouse
+
+20
+
+[Opción 1] Como obtener detalles de ventas y de IC?
+Estimación en base a criterio pensando que vamos a tomar esta info de Clickhouse
+Si la informacion la traemos directo de Clickhouse y no tenemos que hacer tareas en commerce-service, la estimación baja
+
+commerce-service / Clickhouse
+
+20
+
+[Opción 1] Sección de Detalles de Ventas
+
+commerce-portal
+
+24
+
+[Opción 1] Sección de InfoNet Cobranzas
+
+commerce-portal
+
+8
+
+[Opción 1] Sección de Avisos
+
+commerce-portal
+
+8
+
+[Opción 1] Sección de Marketing
+
+commerce-portal
+
+8
+
+[Opción 1] Crear modelo de Anuncios de Mktg
+Imagen
+
+Link a Imagen
+
+Texto
+
+Titulo
+
+Texto boton
+
+Redirect del botón
+
+commerce-service
+
+4
+
+[Opción 1] Crear CRUD para modelo de Anuncios de Mktg
+
+commerce-service
+
+8
+
+Ventas / Movimientos
+
+227
+
+Crear modelo en commerce-service contemplando únicamente las columnas que requieren los usuarios
+
+commerce-service
+
+2
+
+En el proceso que carga las transacciones a la tabla actual de transacciones de commerce-service, agregarle la lógica para que además la suma a la tabla nueva, pero solo teniendo en cuenta las columnas necesarias.
+Incluye modificación del proceso y tests.
+
+commerce-service
+
+12
+
+Agregar en el Dataset del reporte de ventas la info de los descuentos hechos desglosado por tipo / categoría de descuento
+
+commerce-service
+
+8
+
+Devolver el monto sin descuento en el Dataset del reporte de ventas
+
+commerce-service
+
+4
+
+Crear componente para cambiar de pestaña (turbo)
+
+commerce-portal
+
+6
+
+Crear modelo para Filtros Guardados
+Incluye
+nombre
+
+type
+
+commerce-id
+
+fecha creación
+
+fecha modificación
+
+activo / no activo
+
+commerce-service
+
+4
+
+Crear modelo para guardar los campos del filtro guardado
+Incluye
+Nombre
+
+Valor
+
+id filtro
+
+commerce-service
+
+4
+
+Crear CRD para filtros
+
+commerce-service
+
+12
+
+Todas las Transacciones
+
+Crear UI de filtros
+Buscador
+
+Fecha de transacción → Cuáles son las opciones? Hoy, semana pasada, rango de fechas??
+
+Moneda → Cuáles son las opciones?
+
+Estado
+
+Sucursal
+
+Más → Cuáles son las opciones?
+
+Agregar botón de Aplicar filtros para iniciar el filtrado
+
+commerce-portal
+
+16
+
+Crear la opción de guardado de filtros.
+Incluye botón y pop up
+
+Incluye llamada a api
+
+commerce-portal
+
+6
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+Incluye llamda a commerce-service
+
+Incluye actualizar tabla con filtros aplicados
+
+commerce-portal
+
+8
+
+Crear header condetalles de ventas
+Ventas → Resumen total del las ventas listadas acorde al filtrado
+
+Descuentos → Resumen de los descuentos listados acorde al filtrado
+
+Ventas Netas → Resumen de Ventas - Descuentos listados acorde al filtrado
+
+Notas:
+Incluirtooltipen todas las opciones
+
+Incluir link a ver detalle con el detalle de cada transacción como está en Figma
+
+Actualizar valores según filtros seleccionados
+
+commerce-portal
+
+6
+
+Crear pop up con detalle de cada header
+Detalle de ventas
+
+Detalle de descuentos
+
+commerce-portal
+
+6
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Transacción
+
+Nº Transacción (en forma de link para poder desplegar el pop up con lavista del detalle)
+
+Estado
+
+Tipo de Movimiento
+
+Tipo de Tarjeta
+
+Medio de Pago
+
+Ciclo de Facturación
+
+Sucursal
+
+Importe
+
+commerce-portal
+
+8
+
+Crearvista del detallede transacción.
+Incluye opción de cerrar
+
+Incluye opción de imprimir que despliega el recibo en pdf en otra pestaña
+
+6
+
+Agregar funcionalidad para que al scrollear se vayan cargando de a 15 registros
+
+8
+
+Crear vista con empty state para cuando no coinciden las búsquedas con los filtros seleccionados
+
+commerce-portal
+
+2
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip
+
+commerce-portal
+
+4
+
+Crear componente de drawer para detalles de movimientos
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+Incluir link en Nº de transacción que abre la vista de Promociones con Tarjeta de débito asociada
+
+Algunas de las opciones de arriba van a variar según el tipo y estado del movimiento
+
+commerce-portal
+
+16
+
+Crear estilo de drawer paraVenta Débito
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraVenta Crédito
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraVenta con Promoción
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+Incluir link en Nº de transacción que abre la vista de Promociones con Tarjeta de débito asociada
+
+commerce-portal
+
+4
+
+Crear estilo de drawer paraPromoción con Tarjeta de débito
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir link en Nº de transacción que abre la vista de Venta con promoción asociada
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraVenta con vuelto
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+Incluir link en Nº de transacción que abre la vista de Vuelto asociada
+
+commerce-portal
+
+4
+
+Crear estilo de drawer paraVuelto
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir link en Nº de transacción que abre la vista de Venta con vuelto asociada
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraVenta con Reembolso
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+Incluir link en Nº de transacción que abre la vista de Reembolso asociada
+
+commerce-portal
+
+4
+
+Crear estilo de drawer paraReembolso
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir link en Nº de transacción que abre la vista de Venta con reembolso
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraLealtad
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraPreautorización Aprobada
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+commerce-portal
+
+3
+
+Crear estilo de drawer paraPreautorización Anulada
+Incluir opción de Imprimir comprobante que abrirá otra pestaña con el detalle en PDF
+
+Incluir opción de Solicitar anulación que va a redirigir al usuario al flujo de anulaciones
+
+commerce-portal
+
+3
+
+Transacciones acreditadas
+
+Crear UI de filtros
+Reutilizar la de la vista de Todas las transacciones
+
+commerce-portal
+
+6
+
+Crear la opción de guardado de filtros.
+Reutilizar la de la vista de Todas las transacciones
+
+commerce-portal
+
+6
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+Reutilizar la de la vista de Todas las transacciones
+
+commerce-portal
+
+8
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip
+
+Incluir Dropdown para seleccionar tipo de archivo
+
+commerce-portal
+
+6
+
+Crear header con detalles de ventas
+Ventas acreditadas → Resumen total del las ventas acreditadas listadas acorde al filtrado
+
+Ventas pendientes de acreditar → Resumen de las ventas pendientes de acreditar listadas acorde al filtrado
+
+Comisiones pendientes de cobro → Resumen de comisiones pendientes de cobro listadas acorde al filtrado
+
+Notas:
+Incluir tooltip en todas las opciones -Falta tooltop
+
+Incluir link a ver detalle con el detalle de cada transacción como está en Figma
+
+commerce-portal
+
+6
+
+Crear pop up con detalle de cada header
+Detalle de ventas
+
+Detalle de descuentos
+
+commerce-portal
+
+6
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Proceso
+
+Fecha de Acreditación
+
+Estado
+
+Tipo de Tarjeta
+
+Entidad
+
+Nº de Cuenta
+
+Sucursal
+
+Tipo de Operación
+
+Importe
+
+commerce-portal
+
+8
+
+Crearvista del detallede transacción.
+Incluye opción de cerrar
+
+Incluye opción de imprimir que despliega el recibo en pdf en otra pestaña
+
+commerce-portal
+
+4
+
+Agregar funcionalidad para que al scrollear se vayan cargando de a 15 registros
+
+commerce-portal
+
+6
+
+Crear vista con empty state para cuando no coinciden las búsquedas con los filtros seleccionados
+
+commerce-portal
+
+2
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip
+
+commerce-portal
+
+4
+
+Crear vista deDetalle de Movimientos Acreditados
+Vista que incluye el detalle de los movimientos acreditados.
+
+Cada movimiento puede ser abierto en un drawer con su detalle.
+
+commerce-portal
+
+16
+
+Botón paradescargar las acreditaciones. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip
+
+Incluir Dropdown para seleccionar tipo de archivo
+
+commerce-portal
+
+4
+
+Movimientos InfoNet Cobranzas
+
+191
+
+Vista de Servicios Cobrados
+
+Crear la opción de guardado de filtros.
+Esto como lo guardamos? Deberíamos tener un pop up para seleccionar el nombre para luego poder buscar?
+Incluye botón y pop up
+
+Incluye llamada a api
+
+commerce-portal
+
+2
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+Incluye llamda a commerce-service
+
+Incluye actualizar tabla con filtros aplicados
+
+commerce-portal
+
+2
+
+Crear UI de filtros
+Buscador por N
+
+Fecha de transacción → Cuáles son las opciones? Hoy, semana pasada, rango de fechas??
+
+Moneda → Cuáles son las opciones?
+
+Estado
+
+Sucursal
+
+Más → Cuáles son las opciones?
+
+Agregar botón de Aplicar filtros para iniciar el filtrado
+
+commerce-portal
+
+6
+
+Crear header con detalles de los movimientos
+Total cobros realizados → Resumen total de los cobros realizados en las bocas
+
+Total extracciones → Resumen total de las extracciones realizadas en las bocas:
+
+Diagramar ambos headers con los detalles que se muestran en elFigma
+Títulos
+
+Tooltips
+
+Monto en Guaraníes (incluir separador de miles)
+
+Total de transacciones
+
+Los montos se van a actualizar según los filtros seleccionados
+
+Desplegar tooltip al hacer hover en el ícono de información
+
+commerce-portal
+
+4
+
+Crear pop up con detalle de cada header
+Detalle de ventas
+
+Detalle de descuentos
+
+Duda: Es necesario un popup para el detalle de las transacciones/descuentos?
+
+commerce-portal
+
+4
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Transacción
+
+Nº Transacción (en forma de link para poder desplegar el pop up con lavista del detalle/ vista del Ticket de la transacción.)
+
+Estado
+
+Tipo de Movimiento
+
+Tipo de Tarjeta
+
+Medio de Pago
+
+Ciclo de Facturación
+
+Sucursal
+
+Importe
+
+commerce-portal
+
+12
+
+Crearvista delticket de latransacción (Llamada detalle en el Confluence).
+Incluye opción de cerrar
+
+Incluye opción de imprimir que despliega el recibo en pdf en otra pestaña
+
+commerce-portal
+
+2
+
+Agregar funcionalidad para que al scrollear se vayan cargando de a 15 registros
+
+commerce-portal
+
+8
+
+Crear vista con empty state para cuando no coinciden las búsquedas con los filtros seleccionados
+
+commerce-portal
+
+2
+
+Desplegar drawers con el detalle de la transacción al hacer click en la lupa
+
+commerce-portal
+
+4
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip
+
+commerce-portal
+
+2
+
+Crear componente para cambiar de pestaña (turbo)
+
+commerce-portal
+
+6
+
+Comisiones a Cobrar
+
+Crear la opción de guardado de filtros.
+Incluye botón y pop up
+
+Incluye llamada a api
+
+commerce-portal
+
+2
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+Incluye llamda a commerce-service
+
+Incluye actualizar tabla con filtros aplicados
+
+commerce-portal
+
+2
+
+Crear UI de filtros
+Año
+
+Mes
+
+Sucursal
+
+Agregar botón de Aplicar filtros para iniciar el filtrado
+
+commerce-portal
+
+3
+
+Crear header con detalles de los movimientos
+Total cobros realizados → Resumen total de los cobros realizados en las bocas
+
+Total comisiones generadas → Resumen total de las comisiones generadas por transacciones en las bocas
+
+Comisión Acumulada → Comisión acumulada por transacciones hasta el próximo cierre de caja.
+
+% Facturadores con más cobros → % de cobros desglosado por Facturador.
+
+Comisiones generaddas por Facturadores → Monto desglosado por facturador.
+
+Diagramar los 5 headers con los detalles que se muestran en elFigma
+Títulos
+
+Tooltips
+
+Monto en Guaraníes (incluir separador de miles)
+
+Total de transacciones
+
+Los montos se van a actualizar según los filtros seleccionados
+
+Desplegar tooltip al hacer hover en el ícono de información
+
+commerce-portal
+
+8
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Transacción
+
+Nº Transacción (en forma de link para poder desplegar el pop up con lavista del detalle/ vista del Ticket de la transacción.)
+
+Estado
+
+Tipo de Movimiento
+
+Tipo de Tarjeta
+
+Medio de Pago
+
+Ciclo de Facturación
+
+Sucursal
+
+Importe
+
+commerce-portal
+
+10
+
+Botón de Adjuntar Factura
+
+commerce-portal
+
+2
+
+Vista de Adjuntar Factura
+Detalle de comisiones disponibles
+
+Opción para subir factura pdf
+
+Envío de factura a commerce-service ?
+
+commerce-portal
+
+10
+
+Vista de Factura recibida con éxito
+
+commerce-portal
+
+2
+
+Recibir factura subida y enviarla al C4C?
+
+commerce-service
+
+12
+
+Obtener listado de facturas/comisiones disponibles.
+Consulta a Rediseño?
+
+commerce-service
+
+10
+
+Vista de detalle de Comisión
+- Datos del período
+- Ranking de Comisiones
+- Detalle del desgloce (Tabla con transacciones/acreditación)
+- Botón de descarga del reporte
+
+commerce-portal
+
+8
+
+Vista de Facturador
+
+Crear componente para cambiar de pestaña (turbo)
+
+commerce-portal
+
+6
+
+Crear la opción de guardado de filtros.
+Incluye botón y pop up
+
+Incluye llamada a api
+
+commerce-portal
+
+2
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+Incluye llamda a commerce-service
+
+Incluye actualizar tabla con filtros aplicados
+
+commerce-portal
+
+2
+
+Crear UI de filtros
+Buscador por N
+
+Fecha de cobro → Cuáles son las opciones? Hoy, semana pasada, rango de fechas??
+
+Estado
+
+Servicio
+
+Boca de cobranza
+
+commerce-portal
+
+6
+
+Crear header con detalles de los movimientos
+Total cobrado → Resumen total de los cobros realizados en las bocas
+
+Cobrado via boca física → Resumen total de los cobros realizadas en las bocas presencialmente.
+
+Cobrado via entidades financieras.
+
+Diagramar ambos headers con los detalles que se muestran en elFigma
+Títulos
+
+Tooltips
+
+Monto en Guaraníes (incluir separador de miles)
+
+Total de transacciones
+
+Los montos se van a actualizar según los filtros seleccionados
+
+Desplegar tooltip al hacer hover en el ícono de información
+
+commerce-portal
+
+4
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Cobro
+
+Nº Transacción (en forma de link para poder desplegar el pop up con lavista del detalle/ vista del Ticket de la transacción.)
+
+Estado
+
+Servicio
+
+Boca de Cobranza
+
+Importe
+
+commerce-portal
+
+12
+
+Crear Drawer de detalle de transacción
+
+commerce-portal
+
+4
+
+Vista de Comisiones a Pagar
+
+Crear UI de filtros
+Año
+
+Sucursal
+
+commerce-portal
+
+4
+
+Crear header con detalles de los movimientos
+Total servicios cobrados → Resumen total de los cobros realizados en las bocas
+
+Total de comisiones pagadas → Resumen total de los comisiones pagadas a las bocas
+
+Diagramar ambos headers con los detalles que se muestran en elFigma
+Títulos
+
+Tooltips
+
+Monto en Guaraníes (incluir separador de miles)
+
+Total de transacciones
+
+Los montos se van a actualizar según los filtros seleccionados
+
+Desplegar tooltip al hacer hover en el ícono de información
+
+commerce-portal
+
+4
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Mes
+
+Fecha de Cobro
+
+Estado
+
+Sucursal
+
+Período
+
+# de días
+
+Cobrado
+
+Comisión
+
+Detalle
+
+commerce-portal
+
+10
+
+Crear vista de detalle de comisiones
+Incluye:
+Header de Total de comisiones pagadas
+
+Header con datos del cobro
+
+Tabla de comisiones cobradas
+
+commerce-portal
+
+12
+
+Lógica para identificar si se debe mostrar la vista de Facturador o la de Cobros
+
+commerce-portal
+
+Reportes Programados
+
+215
+
+Crear modelo de columnas disponibles para reportes programados
+Tipo de reporte (Ventas/IC)
+
+Categoría (Datos de tarjeta/Datos de transacción/etc)
+
+Nombre de la columna
+
+commerce-service
+
+4
+
+Crear modelo de filtro disponible para reporte programado
+Tipo de reporte (IC/ Ventas/ etc)
+
+Nombre del campo
+
+Valor del campo
+
+Tipo de dato
+
+commerce-service
+
+4
+
+Crear modelo para reportes guardados
+Nombre del Reporte
+
+Comercio
+
+Usuario
+
+Frecuencia
+
+Fecha usada para la generación (transacción o cobro)
+
+Tipo de reporte (IC/Ventas/Etc)
+
+Ya corrió
+
+Activo/No Activo
+
+Fecha de ultima ejecución
+
+Fecha de próxima ejecución
+
+Fecha de primer envío
+
+Emails de los usuarios
+
+Se envía por mail?
+
+Validar con Luis si queremos que el usuario configure sobre que fecha filtrar para los rangos de los reportes programados.
+
+commerce-service
+
+4
+
+Crear modelo de columna elegida para reporte programado
+Id del reporte programado
+
+Columna elegida
+
+commerce-service
+
+4
+
+Crear modelo de filtro para reporte programado
+Id del reporte programado
+
+Nombre del campo
+
+Valor del campo
+
+commerce-service
+
+4
+
+Crear modelo para reporte que corrió:
+Id del reporte programado
+
+Fecha de ejecución
+
+Link a csv en s4
+
+Estado (Ok/ Error)
+
+Reintentos
+
+commerce-service
+
+4
+
+CRUD de columnas disponibles para reportes programados
+GET → Filtros para un tipo de reporte en particular
+
+commerce-service
+
+8
+
+CRUD de Filtros disponibles para reportes programados
+GET → Filtros para un tipo de reporte en particular
+
+commerce-service
+
+8
+
+Integración con ClickHouse para reporting
+
+commerce-service
+
+32
+
+Proceso asíncrono (Sidekiq) que tome todos los reportes programados que la fecha de ejecución sea hoy y los ejecute
+El proceso corre una vez al día en un horario a definir
+
+Obtiene los datos del reporte en clickhouse con los filtros elegidos
+
+Los envía por email a los usuarios si corresponde
+
+Modifica la fecha de próxima ejecución
+
+commerce-service
+
+32
+
+Crear CRUD para reportes guardados
+
+commerce-service
+
+16
+
+Crear header de la vista deReportes Programados
+Incluir título de Reportes Programados
+
+Incluir botón de crear nuevo reporte con opciones Ventas / InfoNet Cobranzas
+
+Incluir Modal donde se van a desplegar los reportes
+
+commerce-portal
+
+4
+
+Crear vista de inicio de Reportes Programados -Vista con reportes creados
+Incluir vista con reporte seleccionado donde se despliegan los reportes creados
+
+Incluir vista cuandono hay reportes seleccionados
+
+Incluir opción para descargar reporte
+
+commerce-portal
+
+6
+
+Crear lógica para descargar reporte
+
+commerce-portal
+
+3
+
+Crear opción desplegable para Eliminar / pausar / reanudar reporte
+Esta opción se desplegará a partir de seleccionar los 3 puntos
+
+commerce-portal
+
+4
+
+Crear botón para crear nuevo reporte
+Incluir opciones de Ventas e InfoNet Cobranzas
+
+commerce-portal
+
+2
+
+Crear vista deCreación de Reporte - Paso 1
+Incluir chips desplegables para seleccionar las columnas por las cuales se quiere filtrar - sin lógica
+
+Incluir el header con el progreso del proceso de creado
+
+Incluir botón continuar
+
+Incluir opción para salir
+
+commerce-portal
+
+8
+
+Crear lógica paraseleccionar columnas y seleccionarlas
+Incluir vista de cada dropdown desplegable con cantidad de opciones marcadas
+
+commerce-portal
+
+16
+
+Crear vista deAplicar Filtros - Paso 2
+Incluir chips desplegables para seleccionar los filtros - sin lógica
+
+Incluir el header con el progreso del proceso de creado
+
+Incluir botón continuar
+
+Incluir opción para salir
+
+commerce-portal
+
+8
+
+Crear lógica paraseleccionar filtros y seleccionarlas
+Incluir vista de cada dropdown desplegable con filtros.
+
+Incluir lógica para poder filtrar por un tipo de fecha únicamente (Filtro aparte que sea por fecha de tx/de crédito o de promoción/ etc)
+
+commerce-portal
+
+16
+
+Crear vista deFrecuencia de envío de Reporte
+Incluir opciones Diario, Semanal, Mensual, Por única vez
+
+Incluir el header con el progreso del proceso de creado
+
+Incluir botón continuar
+
+Incluir opción para salir
+
+commerce-portal
+
+8
+
+Crear vista deIngresar nombre y destinatarios del reporte
+Incluir ambos campos
+
+El campo de destinatarios admite múltiples correos
+
+Validar los formatos de los correos
+
+Si el campo destinatarios está vacío solo se envía al usuario que creó el reporte
+
+commerce-portal
+
+12
+
+Crear modal deConfirmación para terminar con el proceso de creación de reporte. (Cancelar el reporte antes)
+
+commerce-portal
+
+6
+
+Comprobantes y Facturas
+
+109
+
+Crear modelo para Filtros Guardados
+Incluye
+nombre
+
+type
+
+commerce-id
+
+fecha creación
+
+fecha modificación
+
+activo / no activo
+
+commerce-service
+
+4
+
+Crear modelo para guardar los campos del filtro guardado
+Incluye
+Nombre
+
+Valor
+
+id filtro
+
+commerce-service
+
+4
+
+Crear CRD para filtros
+
+commerce-service
+
+12
+
+Crear UI de filtros
+Buscador
+
+Estado
+
+Mes de Emisión
+
+Más → Cuáles son las opciones?
+
+Agregar botón de Aplicar filtros para iniciar el filtrado
+
+commerce-portal
+
+16
+
+Crear la opción de guardado de filtros.
+Incluye botón y pop up
+
+Incluye llamada a api
+
+commerce-portal
+
+6
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+Incluye llamda a commerce-service
+
+Incluye actualizar tabla con filtros aplicados
+
+commerce-portal
+
+8
+
+Crear header condetalles de facturas
+Total a Pagar
+
+Total Pagado
+
+Total Pendiente
+
+Notas:
+Incluirtooltipen todas las opciones
+
+Incluir link a ver detalle con el detalle de cada transacción como está en Figma
+
+Actualizar valores según filtros seleccionados
+
+commerce-portal
+
+6
+
+Crear pop up con detalle de cada header
+Detalle de ventas
+
+Detalle de descuentos
+
+commerce-portal
+
+6
+
+Crear tabla de detalles de facturas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Nº de Factura
+
+Tipo de Factura
+
+Estado
+
+Mes de emisión
+
+Período de Facturacion
+
+Vencimiento
+
+Sucursal
+
+Importe
+
+commerce-portal
+
+8
+
+Agregar funcionalidad para que al scrollear se vayan cargando de a 15 registros
+
+commerce-portal
+
+4
+
+Crear vista con empty state para cuando no coinciden las búsquedas con los filtros seleccionados
+
+commerce-portal
+
+2
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip
+
+commerce-portal
+
+2
+
+Crearpopuppara elegir formato de descarga
+
+commerce-portal
+
+6
+
+Crear estilo de drawer para mostrar detalle de factura
+
+commerce-portal
+
+4
+
+Crear estilo parafactura vencida
+
+commerce-portal
+
+3
+
+Crear estilo parafactura pendiente
+
+commerce-portal
+
+3
+
+Crear estilo parafactura pagada
+
+commerce-portal
+
+3
+
+Crear vista paraDetalle de Movimientos Acreditadosasociados a la factura
+
+commerce-portal
+
+20
+
+Reskin Portal
+
+319
+
+Mis transacciones - Resumen
+
+No va a existir en el nuevo portal
+
+20
+
+Anulaciones
+
+commerce-suite
+
+25
+
+Soporte
+
+commerce-suite
+
+40
+
+Anulaciones facturadores y detalle de anulación
+
+commerce-suite
+
+16
+
+Administrar Dispositivos
+
+commerce-portal
+
+24
+
+Usuarios y Cajas - Administrar Usuarios
+
+commerce-suite
+
+24
+
+Usuarios y Cajas - Administración de Caja
+
+commerce-suite
+
+30
+
+Análisis - Ventas
+
+No va a existir en el nuevo portal
+
+20
+
+Análisis - Boca de Cobranzas
+
+No va a existir en el nuevo portal
+
+20
+
+Análisis - Facturación en IC
+
+No va a existir en el nuevo portal
+
+20
+
+Gestión de Contracargos - Notificaciones
+
+commerce-suite
+
+20
+
+Gestión de Contracargos - Retenciones
+
+commerce-suite
+
+20
+
+Cobros Facturadores
+
+No va a existir en el nuevo portal
+
+-
+
+Auditar Usuarios
+
+commerce-suite
+
+20
+
+Administrar Logos
+
+commerce-portal
+
+20
+
+Reskin IC
+
+121
+
+Operaciones
+
+41
+
+Mis Operaciones
+
+20
+
+Mi Cuenta
+
+10
+
+Monitoreo
+
+38
+
+Límites
+
+12
+
+El header va a desaparecer en el flujo de configuración de los reportes programados? En el figma se ve que no está pero queda raro.
+
+Se va a permitir modificar los reportes programados? En ese caso, agregar tareas para eso.
+
+Queremos que el usuario configure sobre qué fecha filtrar para los rangos de los reportes programados (fecha de transacción o fecha de cobro)?

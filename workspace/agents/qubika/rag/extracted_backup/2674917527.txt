@@ -1,0 +1,1804 @@
+TITLE: Tpago Daily Sync
+DOMAIN: General
+PRIORITY: Media
+ID: 2674917527
+SOURCE: 2674917527__Tpago_Daily_Sync.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Ayer: Esperando por los tickets de dba en tpago. A la orden para que surja.
+Hoy:
+Blockers?:
+
+Ayer: Trabajando con la tarea de las notificaciones y el websocket.
+Hoy: Cerró esa tarea y esta trabajando en notificar desde el service al portal PRYLDP-912
+Blockers?:
+
+Ayer: Subió las tareas terminadas de payment-link-service y payment-link-portal.
+Se consulta la bd, se carga la tabla y se habilita para descargar desde s4 en la tabla del historial.
+Hoy: Va a probar los cambios e intentar replicar el comportamiento de un usuario antes de subirlo a revisión.
+Blockers?:
+
+Ayer: Trabajando con PRYLDP-907.
+Hoy: Está revisando unos tests que están fallando, luego sube los cambios y va a seguir con PRYLDP-906.
+Blockers?:
+
+Ayer: Esperando que salgan tareas de TPago para poder probar.
+Hoy:
+Blockers?:
+
+Ayer: Trabajando con Ruby Upgrade
+Hoy: Trabajando con Ruby Upgrade
+Blockers?:
+
+Ayer: Trabajando con PRYLPD-903. Viéndolo con Jose.
+Hoy: Va a tomar la tarea de la flash notification
+Blockers?:
+
+Ayer: Trabajando con payment-link-service para creación de reporte de errores. Terminó con la migración y ahora está trabajando en la lógica del guardado.
+Hoy: Trabajando también con el portal, donde se llama al servicio y descarga el csv del s4.
+Blockers?:
+
+Ayer: Trabajando en IC
+Hoy: Va a tomar la tarea PRYLDP-906
+Blockers?:
+
+Ayer: Trabajando en TTP
+Hoy: Trabajando en TTP
+Blockers?:
+
+Ayer: Trabajando con PIX
+Hoy: Trabajando con PIX
+Blockers?:
+
+Ayer: Trabajando con PRYLPD-903 para crear el endpoint que notifique que cargo el proceso.
+Hoy: Viendounos comentarios en la PR que le dejó Joaco.
+Blockers?:
+
+Ayer: Terminó trabajando en la parte del portal para descargar el reporte de errores.
+Terminó con el proceso que indica el status de la migración
+Hoy: Va a trabajar con la parte del servicio para traer el reporte de errores.
+Blockers?:
+
+Ayer: Trabajando en error al crear el usuario al final del pago. Quedó mergeado. Trabajando con parte del registro que no pedía nombre y apellido
+Hoy: Esperando por unos tests para poder deployar estos fixes.
+Blockers?:
+
+Ayer: Haciendo regresión de TPago y revisando lo de reference para confirmar que esté todo ok.
+Hoy: Viendo cosas de tap to phone
+Blockers?:
+
+Ayer: Terminó de crear y correr los casos de ID Reference, y estuvo probando y cerrando algunos tickets que arreglo
+Hoy:
+Blockers?:
+
+Ayer: Trabajando con los tests.
+Hoy: Está viendo un problema que tiene, donde le fallan todos los tests. Luego que lo resuelva va a pasar a crear las prs de las tareas que estuvo trabajando.
+Blockers?:
+
+Ayer: Terminó con la PR de los tickets del portal.
+Hoy:Agregó las correcciones de los comentarios del PR. Va a subirla y luego pasar a trabajar en los nuevos tickets.
+Blockers?:
+
+Ayer: Terminando tickets de IC
+Hoy: Va a dar soporte a TPago en lo que se necesite.
+Blockers?:
+
+Ayer:
+Hoy: VIendo el bug que paso Carlos al grupo.
+Pudo reproducirlo pero no coincide con lo que se planteo al principio.
+Va a verlo mejor para entender los distintos flujos de login y creación de usuario.
+Blockers?:
+
+Ayer: Trabajando sobre tareas de VisaQR.
+Hoy: Creando casos para TPago y ejecutándolos. Intentando terminar para hoy.
+Se juntó con jose para ver un error que estaba saliendo al querer crear link de suscripción.
+Quedó solucionado.
+Blockers?:
+
+Ayer: Poniéndose al día con las tareas post licencia.
+Hoy: Trabajando en tarea PRY-893. Luego va a crear PR con los cambios
+Blockers?:
+
+Ayer: Trabajando en los tickets de la UI de carga de archivos y viendo validaciones que están fallando.
+Hoy: PR de front lista. Falta reviews.
+Trabajó con branch de Joe para enviar CSV, y viendo unos detalles que faltan al recibir la respuesta.
+Blockers?:
+
+Ayer: Participó en tasking.
+Tareas de IC.
+Hoy:
+Blockers?:
+
+Ayer: Revisando algunas cosas de Reference Id.
+Hoy:
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: Trabajando en la validación de roles para acceder a la vista de migración de tpago.
+PR-878, 879, 880 y 881
+Hoy:
+Blockers?:
+
+Ayer: Trabajando con anulaciones en app de IC
+Hoy:
+Blockers?:
+
+Ayer: Trabajando sobre issues relacionados a los reference id (búsqueda y edición)
+Hoy: Reporto un bug que dejo en el board.
+Blockers?:
+
+Ayer: Trabajando en tickets de num de referencia que le pasó joe y manu.
+Hoy:
+Blockers?:
+
+Ayer: Trabajando en tarea [Histórico de Migraciones] Crear Tabla y Modelo de Migraciones de DBA
+Hoy: Faltan hacer test y termina.
+blockers?:
+
+Ayer: Solucionando un bug que esta surgiendo al subir un archivo.
+Hoy: Dejo mockeada la llamada al servicio
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Haciendo testing exploratorio de # de referencia. Encontró bug donde no se está guardando el # de referencia cuando el usuario está suscrito y hace login.
+Hoy:
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: Terminando con las tareas de filtro y edición
+Hoy: idem ayer. Revisando todo.
+blockers?:
+
+Ayer: Trabajando con el agregado del num de ref en tpago.
+Agregando los inputs en payment-link-portal.
+Hoy: Testeando el flujo y terminando los detalles del front.
+Blockers?:
+
+Ayer: Viendo algunas tareas con Lau.
+Otras Iniciativas
+Hoy:
+Otras Inciativas
+Blockers?:
+
+Ayer: TTP
+Hoy: TTP
+Blockers?:
+
+Ayer: Terminando con las tareas del front.
+Hoy: Va a crear un ticket con mejoras para las pruebas que vino haciendo.
+Blockers?:
+
+Ayer: Trabajando en tarea de edición de Pagos. Tiene que verificar con Bancard a ver como quieren que se vea.
+Hoy:
+blockers?:
+
+Ayer: Terminó con parte de payment-link-service con num de referencia.
+Hoy: Va a terminar de hacer unas pruebas y pasar a las tareas del front.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Deploy
+Blockers?:
+
+Ayer: TTP
+Hoy: TTP
+Blockers?:
+
+Ayer: Trabajando en los tickets de Ruby upgrade.
+Hoy: Va a trabajar sobre los tickets de pagos adelantados y pausado.
+Blockers?:
+
+Ayer: Avanzando con tareas filtrado y edición de numero de referencia
+Hoy: Continua con esas tareas y va a replicarlo en payments.
+blockers?:
+
+Ayer: Trabajando con payment-link-service.
+Hoy: Trabajando sobre los endpoint de tpago
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Haciendo regresión sobre parte de transacciones y reversas en tpago
+Hoy: sync con nahuel para ver unos blockers sobre los tests.
+Blockers?:
+
+Ayer: Se reunió con Joe para hablar sobre los tickets que estaban en QA.
+Hoy: Re testeó un bug que arregló Joaco. Va a seguir con tests de pausar y adelantar pagos.
+Blockers?:
+
+Ayer: Trabajando con tareas del portal de # de referencia. Esta abarcando las 4 tareas que tiene asignadas, sobre filtros y edición de # de ref en pantallas de movimientos y suscriptores
+Hoy: Sigue con lo de arriba
+blockers?:
+
+Ayer: Trabajando con tareas de reference id a las tablas de subscribers y payments.
+Trabajando con external-commerce-service.
+Hoy: Esta terminando con los tests y luego pasa a payment-link-service para terminar los detalles que le falten.
+Blockers?:
+
+Ayer:
+Hoy: Dándole una mano a Lau con los tests de la tareas del link.
+Y soporte en IC.
+Blockers?:
+
+Ayer: Revisando los issues que estaban abiertos. Terminando unos test cases de la parte de modificar descripciones.
+Hoy: Terminando de probar de hacer pago de las suscripciones.
+Esprando por bugs abiertos para poder probarlos.
+Blockers?:
+
+Ayer: Trabajando con nueva tarea de pagos adelantados, campo de descripción. Arreglando unas cosas que tenía en las prs.
+Hoy: Viendo comentarios sobre las PRs que dejó jose. La idea es mergear y dejar todo deployado hoy.
+blockers?:
+
+Ayer: PTO
+Hoy: Poniendose al dia con los mensjaes y y trabajando con los tickets relacionados a payment-link-portal
+Blockers?:
+
+Ayer: Trabajando en InfoNet cobranzas y dando soporte
+Hoy:
+Blockers?:
+
+Ayer: Probando cambios de Lau.
+Hoy: Revisando issues que habían sido levantados y cerrando los que están arreglados.
+Blockers?:
+
+Ayer: Trabajando sobre un ticket de actualización de suscriptores
+Hoy: Empezando con un ticket que se adelantó de pagos adelantados. Hoy va a pasar las prs de lo que hizo para pagos adelantados así ya queda pronto para deployar.
+blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Haciendo pruebas sobre la funcionalidad de Actualización de Suscripciones. Subió bugs de algunos casos que encontró que no funcionaban como deberían.
+Participó en reu de estimacion y tasking
+Hoy:
+Blockers?:
+
+Ayer: Trabajando en el borrado de suscriptores.
+Hoy: Continúa trabajando en borrado de suscriptores. Va a deployar cambios de Lau.
+blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Dandole una mano a Joaco con 3DSec.
+Trabajando en PR-322 en Ruby Upgrade.
+Hoy: Terminando con Code Review de PR de joaco.
+Tomo PR 323 (mpos, ruby upgrade)
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Terminando unos tests de tap to phone y va a empezar a probar la funcionalidad de Actualización de Suscripciones.
+Blockers?:
+
+Ayer: Terminó con los pagos adelantados.
+Hoy: Arrancó con la tarea de borrado de suscriptores.
+blockers?:
+
+Ayer:
+Hoy: Terminó con PRY-817 y deployo a staging.
+Va a seguir revisando los cambios y hacer algunos fixes correspondientes.
+Blockers?:
+
+Ayer: Viendo algunos temas con Lau.
+Tareas de InfonetCobranzas
+Hoy: Viendo temas con Joaco en 3DSec
+Tomando tarea de Ruby Upgrade
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Trabajando con PRY-812.
+Hoy: Termino con la lógica y ahora esta trabajando con los spec.
+Habría que modificar el endpoint para adelantar los pagos para que se limite la cantidad de pagos que se pueden adelantar.
+Evitar que el usuario haga la llamada a adelantar pagos desde tpago y la api de comercios.
+Si ya existe y esta pausado, no permitir hacer un pago de nuevo.
+blockers?:
+
+Ayer: Trabajando con las ultimas modificaciones de Actualización de Suscripciones. Viendo un error que le estaba dando el login del portal.
+Subió las pr.
+Hoy: Falta arreglar el error de auth que está teniendo y en la tarde si se soluciona va a terminar con las validaciones que le queda.
+Blockers?:
+
+Ayer: Viendo unas cosas con Joe.
+Hoy: Estaba esperando el deploy de desembolosos. Terminando con tareas de InfoNet cobranzas.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Termino con PRY-811 y PRY-813.
+Hoy: Subió PRs del portal y service.
+Está trabajando con la PRY-812
+Blockers?:
+
+Ayer: Trabajando sobre error en DockerFile. Pudo solucionar
+Hoy: Revisando los cambios hechos para subir.
+Actualizó la versión de ruby.
+El plan es terminar con PRY815, 16 y 17 para miercoles / jueves.
+Blockers?:
+
+Ayer:
+Hoy: Terminando con tareas de InfoNet cobranzas.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Resolvió un problema que tenía para levantar commerce-suite, y sigue con PRY-811.
+Hoy: Trabajando sobre PRY-811 y PRY-812, intentando sacarlos para hoy.
+Blockers?:
+
+Ayer: Trabajando PRY-817, que es la parte de la edición del front. Una vez que termine va a integrar todo con PRY-815 y PRY-816 para probar todo junto.
+Hoy: Trabajando con PRY-815, PRY-816 y PRY-817. Probando el flujo para poder cerrar todo, hacer correcciones y arreglar lo que no funcione.
+Blockers?:
+
+Ayer: Dándole una mano a Joe para levantar commerce-suite y luego trabajando en otras Iniciativas.
+Hoy: Terminando con tareas de InfoNet cobranzas.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Resolvió un problema que tenía para levantar commerce-suite, y sigue con PRY-811.
+Hoy: Trabajando sobre PRY-811 y PRY-812, intentando sacarlos para hoy.
+Blockers?:
+
+Ayer: Trabajando PRY-817, que es la parte de la edición del front. Una vez que termine va a integrar todo con PRY-815 y PRY-816 para probar todo junto.
+Hoy: Trabajando con PRY-815, PRY-816 y PRY-817. Probando el flujo para poder cerrar todo, hacer correcciones y arreglar lo que no funcione.
+Blockers?:
+
+Ayer: Dándole una mano a Joe para levantar commerce-suite y luego trabajando en otras Iniciativas.
+Hoy: Terminando con tareas de InfoNet cobranzas.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Trabajando con PRY-811. Haciendo consultas en teams para resolver puntos que no estaban bien definidos.
+Hoy: Resolvió un problema que tenía para levantar commerce-suite, y sigue con PRY-811.
+Blockers?:
+
+Ayer: PTO
+Hoy: Trabajando PRY-817, que es la parte de la edición del front. Una vez que termine va a integrar todo con PRY-815 y PRY-816 para probar todo junto.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Re viendo las estimaciones.
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Trabajando en PRY-811
+Hoy: Trabajando en PRY-811
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Trabajando con PRY-808, PRY-809 y PRY-810
+Hoy: Trabajando con PRY-808, PRY-809 y PRY-810
+Blockers?:
+
+Ayer: Trabajando en PRY-815, PRY-816 y PRY-817.
+Hoy: PTO
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Trabajando con PRY-808, PRY-809 y PRY-810
+Hoy: Trabajando con PRY-808, PRY-809 y PRY-810
+Blockers?:
+
+Ayer: Trabajando en PRY-815 y PRY-816
+Hoy: Trabajando en PRY-815, PRY-816 y PRY-817.
+Blockers?:
+
+Ayer: Viendo otras iniciativas y viendo algunos temas de TPago con Joe.
+Hoy:
+Blockers?:
+
+Ayer: Otras iniciativas
+Hoy: Otras iniciativas
+Blockers?:
+
+Ayer: Trabajando con PRY-808
+Hoy: Trabajando con PRY-808
+Blockers?:
+
+Ayer: Trabajando en PRY-815 y PRY-816
+Hoy: Va a empezar con PRY-817 luego de terminar
+Blockers?:
+
+Ayer: Viendo otras iniciativas y viendo algunos temas de TPago con Joe.
+Hoy:
+Blockers?:
+
+Ayer: Ruby Upgrade
+Hoy: Esperando respuesta a ver si hay deploy para hacer una regresión
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: Trabajando con el workaround para los mails. Hizo deploy a staging.
+Hoy: Haciendo cambios para dejar la branch pronta así se podían deployar otros cambios.
+Trabajó en ticket de filtro con fechas en rediseño
+Blockers?:
+
+Ayer: extracciones y ruby.
+Hoy: Ruby upgrade
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Avanzando con la pantalla de movimientos / pagos procesados
+Hoy: idem
+Blockers?:
+
+136incompleteNecesita el endpoint de consultar los pagos para desplegar en la tabla
+
+Ayer: Terminó con ticket de maquetado de suscripciones.
+Hoy: Empezó a trabajar con ticket la funcionalidad de filtros.
+También estuvo trabajando relacionado al problema con la url del mail
+Blockers?:
+
+Ayer: IC y participó del deploy de Captcha
+Hoy: IC
+Blockers?:
+
+Ayer: Billing
+Hoy: Billing
+Blockers?:
+
+Ayer: Empezó a trabajar en PRYLDP-783 (loader).
+Hoy: Está terminando con PRYLDP-783. Una vez terminada esta, terminaría con la Épica relacionada al header y sidebar.
+Blockers?:
+
+Ayer: Trabajando en vista de suscripciones
+Hoy: Continúa con vista de suscripciones, agregando estilos.
+Va a continuar también trabajando en problema que esta apareciendo en los mails.
+Blockers?:
+
+Ayer: Viendo con joaco el problema que plantearon sobre el catastro de tarjetas.
+Hoy: Cashout (IC)
+Blockers?:
+
+Ayer: Trabajando en tarea del flujo del limite de catastro con Joaco
+Hoy: Haciendo cambios que pidieron desde Bancard.
+
+Ayer: Probando el PRYLDP-774 (error al catastrar las tarjetas de deb)
+Esperando a que terminen de arreglar todo para vovler a probar y cerrar
+Hoy: Va a trabajar en las pruebas de biller.
+Blockers?:
+
+Ayer: Trabajando en el maquetado de la sidebar.
+Hoy: Sigue con tarea de sidebar, esperando terminar hoy o mañana
+Blockers?:
+
+Ayer: Trabajando en PRYLDP-751 (maquetado de suscripciones)
+Hoy: Está teniendo un error seguramente relacionado a auth.
+Sigue con 751.
+Blockers?: Esperando a que se solucione tema con auth.
+
+Ayer: IC
+Hoy: Viendo errores que pasaron al grupo de teams.
+Sigue con cosas de IC.
+Blockers?:
+
+Ayer: Terminaron con regresión de TPago.
+Hoy: Estuvo haciendo pruebas y encontró un error relacionado al JPos.
+Preparando todo para el deploy y viendo que necesita, organizándose con Nahuel.
+Blockers?:
+
+Ayer: Se juntaron con Joaco y Jose para preparar todo para el deploy. Arreglando cosas que fueron saliendo
+Hoy: Viendo tareas de rediseño.
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: Arreglando ramas y corrigiendo cosas que encontraron para el deploy
+Hoy: Viendo el tema del JPos que enviaron al grupo de Teams.
+Blockers?:
+
+Ayer: Terminó con los casos de prueba del PRYLDP-710
+Hoy: Empezó con regresión de portal de comercios y links
+Esta esperando por una respuesta relacionada al registro de usuario con CI
+Blockers?:
+
+Ayer: Terminó con tarea de flujo Stripe. Hicieron deploy a staging y arreglar problema con historial de commits
+Hoy: Empezó con PRYLDP-749 relacionado al maquetado del header de rediseño
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: Armando ramas para hacer deploy y haciendo fixes en develop.
+Hoy:
+Blockers?:
+
+Ayer: Armando ramas para hacer deploy y haciendo fixes en develop.
+Viendo error del 502 que estaba surgiendo. Encontraron que era por una gema que estaba haciendo mal la conexión al redis y eso hacía que el contenedor se reiniciara.
+Hizo pr con fix.
+Hoy: Haciendo cambios que pidió Pao.
+Blockers?:
+
+Ayer: Siguió con casos de prueba y levantó Issue PRY-772
+Hoy: Sigue probando pero está bloqueado por el error que surgió del pase a contingencia. Una vez que esto esté solucionado va a volver a probar para ver si todo funciona ok
+Blockers?: Esperando que se solucione el problema que surgió en el pase a contingencia
+
+Ayer: Trabajando con tarea PRY-769. Corroboró el error y encontró la raíz del problema.
+Hoy: Terminando con el ticket y va a intentar solucionarlo para hoy.
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: Trabajó en PRY-766, quedó en review.
+Hoy: Viendo el issue que surgió con el Re-Captcha. No pudo reproducir localmente pero va a ver en staging que puede ser.
+Blockers?:
+
+Ayer: Terminando PRY-767
+Hoy: Terminó la tarea y pasó ticket a en testing. Hablando con Pao también sobre problema del JPos
+Blockers?:
+
+Ayer: Creando casos de prueba para flujo stripe y ejecutándolos
+Hoy: Continúa con casos de prueba
+Blockers?:
+
+Ayer: PTO
+Hoy: Volvió de licencia. Está trabajando en PRY-769
+Blockers?:
+
+Ayer: PTO
+Hoy: PTO
+Blockers?:
+
+Ayer: No
+Hoy: Dando soporte y ahora va a arrancar con tarea PRY-766.
+Va a ver error con joaco relacionado a timeout 502
+Blockers?:
+
+Ayer:
+Hoy: Trabajando en PRY-770. A raíz de eso encontró el error del proxy que está tirando un 502. Va a trabajar en el PRY-767 y ver el error del timeout con Jose
+Blockers?:
+
+Ayer: Viendo como se hace login de commerce-suite en otras pantallas para replicarlo en pix.
+Hoy: Investigando sentry para ver si se puede usar una nueva. Hay que ver como afectaría esta nueva versión en cloud teniendo e cuenta que la que se utiliza es on-premise
+Blockers?:
+
+Ayer: Trabajando en OTP para sacarlo en tpago y que no mande msg de texto.
+Hoy: Siguiendo con flujo de reseteo de pwd. Viendo un error que se generó en el login. Va a redeployar tpago y auth-portal.
+Blockers?:
+
+Ayer: Investigando un error en S4 relacionado al cargo de imágenes. Lo pudo solucionar con Joaco
+Hoy: Hizo PR con tickets de imágenes. Paso tickets a revisión y va a seguir con otros del board.
+Blockers?:
+
+Ayer: Dando soporte y trabajandon con temas de vulnerabilidades, infonet cobranzas y app de comercios
+Hoy: Dando soporte y trabajandon con temas de vulnerabilidades, infonet cobranzas y app de comercios
+Blockers?:
+
+Ayer: Trabajó en unos comments que dejó Manu sobre flujo de stripe.
+Hoy: Intentando replicar otro ticket relacionado a los mails que se envían.
+Dando soporte a lau.
+Trabajando en tickets de BUS
+Blockers?:
+
+Ayer: Probando PRY-704, y reportó algunos errores.
+ORganizándose con Marcelo y Carlos para distribuirse las tareas.
+Hoy: Va a continuar testeando los test case de TPago.
+Blockers?:
+
+Ayer:
+Hoy: Ver como está hecho ventasQR para sacar info para PIX.
+Va a empezar a hacer setup para armar los repos (hablar con nacho)
+Blockers?:
+
+135incompleteHablar con nacho por setup.
+
+Ayer: Terminó con mejora de TPago. Hizo seguimiento a tickets abiertos que necesitaban aprobación de PR.
+Hoy: Viendo PRY-722 sobre config de opt para mandar mail de restauración de pwd
+Blockers?:
+
+Ayer: Termino con PRY-721 (imágenes en mails)
+Hoy: Esperando al deploy para poder testear los cambios en staging.
+Va a ver tickets abiertos para poder atacarlos.
+Blockers?:
+
+reu 3dsec
+
+reu 3dsec
+
+Ayer: Reportó issues que encontró, PRY-684, 687, 688, 690 y alguno mas
+Hoy: Call con Marcelo para mostarle el panorama de tpago y ponerse a punto.
+Se repartieron tareas.
+Probando issues varios.
+Va a seguir probando issues y ver casos de prueba.
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: trabajando en mejoras, PR-722.
+Hoy: Revisando otros tickets mas chicos, PR-719.
+Blockers?:
+
+134incompleteHablar con team de bancard para ver que quieren sobre la feature del pr-722
+
+Ayer: Trabajando con PRT-721 relacionado a imágenes de los mail
+Hoy: Viendo con Jose sobre como subir imágenes a S4. Por terminar y a mandar pr’s.
+Viendo tickets que quedan en to do
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: Corrigiendo comentarios de PR-714 que dejaron Jose y Gasti.
+Hoy: Corrigiendo comentarios que dejó Jose y viendo un problema en payment-link-service con ruby gems.
+Blockers?:
+
+Ayer: Empezó a trabjar con issues de auth. Creó tarea test para probar flujo de auth completo.
+Hoy: Terminó con tarea de test de flujo PRY-720 y agregó casos de prubea.
+Reportó bugs que surgieron de este testing.
+Ahora esperando por deploy de issues nuevos para seguir con ellos.
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer: encontró el error de auth-service por el se estaba mandando mal el mail de reseteo de contraseña.
+Hoy: Va a hacer un par de pruebitas más y si está todo bien ya manda la pr de eso.
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Ayer:
+Hoy:
+Blockers?:
+
+Yesterday:
+Today: Trabajando en test de dba en tpago. Seteando configuraciones del endpoint nuevo con Jose.
+Blockers?:
+
+Yesterday: Revisando error que reportó Carlos relacionado al JPos.
+Today: Trabajando en PRY-702 (tarea diferenciada)
+Blockers?: Revisar tarea que reportó Carlos
+
+Yesterday:
+Today:
+Blockers?:
+
+Yesterday: Actualizando selling-portal. Agregando solargraph.
+Today: Terminando con auth-portal, agregando re-captcha.
+Blockers?:
+
+Yesterday: Tests de ruby para PRY-714.
+Today: Sigue con tests y va a dar una mano a Joe con un blocker que tiene.
+Blockers?:
+
+Yesterday:
+Today: Hablar con Carlos para organizar tareas de testing
+Blockers?:
+
+Yesterday:
+Today: Meeting con Pao para definir unos puntos sobre los usuarios de DBA. No cambia el funcionamiento, solo la implementación.
+Blockers?:
+
+Yesterday: Trabajando en ticket reportado de Carlos.
+Trabajó con ticket reportado de manu de los pagos diferenciados
+Today: Continúa con tareas del viernes. Si sigue bloqueado va a seguir con tickets ToDo
+Blockers?: Esperando respuetas de Carlos
+
+Yesterday: Trabajando con Ticket PRY-717 - Deshabilitar botón de suscribirse hasta que se completen campos.
+Ticket esta en revisión
+Today: Empezando a trabajar en PRY-707, está esperando unas respuesta de Carlos para definir si ya está hecho o necesita trabajo.
+Al confirmar pasa a tomar otro ticket.
+Blockers?:
+
+Yesterday: Viendo migración de DBA con Juli y Joaco.
+Agregando recaptcha a selling-portal.
+Today: Continúa con tarea de selling-portal. Actualizando tambiên el proyecto.
+Blockers?:
+
+Yesterday: Trabajando en PRY-714 de modificar limite de usuarios por tarjeta.
+Today: Continúa con PRY-714, haciendo pruebas.
+Sync con pao para poder avanzar sin necesitar cambios en JPos.
+Blockers?:
+
+Yesterday: Resolviendo dudas para dba en tpago.
+Va a tener meeting con Pao para terminar de definir esto
+Today: Va a dar soporte y una mano con code reviews y tareas que surjan mientras resuelve lo de dba en tpago.
+Blockers?
+
+Yesterday: Trabajando con ticket de agregar manejo de errores cuando jpos rechaza la tarjeta PRY-709
+Today: Viendo ticket PRY-704 - Cuando ci es invalida da error 500.
+Trabajando en error que está teniendo Carlos
+Blockers?
+
+Yesterday: Termino con ticket PRY-697 - Cambiar detalles en mail que se envía al usuario.
+Today: Trabajando con PRY-707 - Customización de mensajes de error cuando usuario coincide.
+Blockers?
+
+Yesterday: Dando soporte a Juli en tema BD
+viendo temas internos
+
+Today: Trabajando con tareas para agregar captcha al pago movil
+Blockers?
+
+Yesterday: Ajustes en prs para deployarlos a staging. Tasking para modificar limites de catastros de tarj
+Today: Empezó con tickets de feature para modificar tareas - Creando tabla en db para las configs (estructura, modelo, operaciones)
+Viendo error que pasó Carlos al grupo con Joe
+Blockers?
+
+Yesterday: Act Ruby
+Today: Act Ruby
+Blockers?
+
+Yesterday: Trabajando con DBA en TPago. Termino test de reintentos de cobro de suscripción fallidos.
+Today: Viendo como leer info que llega de jpos porque llega mal parseado.
+Blockers?
+
+Yesterday: Trabajando en tareas que levanto Manu. Trabajando en test que faltaban en payment-link-service
+Today: Continúa con los tests y luego pasa a agarrar otro de los tickets que quedan abiertos.
+Blockers?
+
+Yesterday: Trabajando en fixes de Flujo Stripe. Creó PR
+Today: Continuó con fixes de Flujo Stripe, y ahora va a seguir con otros items abiertos.
+Blockers?
+
+Yesterday: Terminando con el captcha. Creó PR
+Today: Dando soporte en backend de infonet cobranzas.
+Blockers?
+
+Yesterday: Trabajando en tickets de mejoras de textos y botones. PR creada
+Today: Investigando error de reportó carlos sobre creación de los links.
+Blockers?
+
+Yesterday:
+Today: Terminando de trabajar en los tests complementarios de la api de reintentos de cobro. Va a seguir trabajando con DBA
+Blockers?
+
+Yesterday: Trabajando con fixes de Manu en flujo stripe.
+Today: Trabajando con validaciones en campo de mail y expiración de tarjeta. Va a cotninuar con tarea 691 (tests de payment link service)
+Blockers?
+
+Yesterday: Trabajando en items que salieron en las demos. Saco boton de enviar por mail en desktop. Refactor para enviar mail apenas se termina la suscripción si es exitosa
+Today: Continua con tarea del mail y arreglando bugs que encuentra. Al terminar hace pr.
+Blockers?
+
+Yesterday: Trabajando con captcha en pantalla de registro de tpago.
+Today: Tareas de infonet cobranzas. Cuando termine va a seguir con lo de captcha
+Blockers?
+
+Yesterday: Haciendo refactor en acción de catastrar y registrar usuario.
+Today: Terminando con pruebas y tasks de este refactor.
+Blockers?
+
+Yesterday: Viendo blockers con Joaco y Jose de DBA en tpago
+Today: Trabajar en los tests de redis. Al terminar sigue con DBA
+Blockers?
+
+Yesterday: Trabajando en mejoras que subió Manu. Después se puso a testear el flujo y armar la D*** y viendo con el equipo detalles que estaban trancando el flujo.
+Today: Integró los cambios de Lau y está probando el flujo completo. Van a deployar a staging y preparar la demo.
+Blockers?
+
+132incompletedeployar flujo stripe a stg
+
+Yesterday: Terminando con PR del flujo de Stripe e hizo un par de mejoras en el código con Joaco.
+Today: Probando ngrok para hacer pruebas en mobile. Viendon error que recibe al enviar por mail
+Blockers?
+
+133incompleteVer error que recibe al enviar por mail
+
+Yesterday: Agregando recaptcha a TPago. Quedaron pronto v2 y v3.
+Today: Viendo unos detalles para mejorar la ux.
+Blockers?
+
+Yesterday: Dando soporte al equipo, Carlos qeu tenia problemas con VPos. Soporte a Juli en DBA (llamado a JPos). Lau tambien y haciendo code reviews.
+Today: Dar una mano con el deploy a staging de Flujo Stripe.
+Blockers?
+
+Yesterday: Haciendo conexión a JPos con Jose
+Today: Trabajando en conexión de API de comercios a payment-link-service.
+Cuando termine va a volver a otra tarea que tiene bloqueado porque no puede traer los datos.
+Blockers?
+
+129completeVer con jose la conexión a jpos
+
+Yesterday: Mirando bugs levantados por manu y mandó capturas de las pantallas al equipo.
+Today: Trabajando con bugs levantados por manu. Va a deployar todo lo relacionado a auth y preparar la demo.
+Blockers?
+
+130completeMandar screenshots de las pantallas y preparando demo
+
+Yesterday: Trabajando con mejoras estéticas y agregó el loader. Bloqueó el botón luego de pagar antes de pasar a la pantalla siguiente.
+Today: Viendo que es lo que está pasando con el error de los mails y probar algunas soluciones posibles.
+Blockers?
+
+131incompleteVer error que recibe al enviar por mail
+
+Yesterday: Dando una mano a Juli para levantar el tunnel para la comunicación con el JPos.
+Today:
+Blockers?
+
+Yesterday: PTO
+Today: Viendo un error que apareció en el portal de tpago de comercios.
+Sync con Lau y Joe por cambios hechos en auth.
+Ver tema de DBA con Juli
+Blockers?
+
+Yesterday: API de reintento de suscripciones
+Today: Trabajando en DBA en TPago
+Blockers? No se esta pudiendo conectar a jpos
+
+125incompleteVer con jose la conexión a jpos
+
+Yesterday: Seteando proyecto con Manu para hacer las pruebas
+Today: Probando flujo y revisando los bugs que levantó Manu
+Blockers?
+
+126incompleteMandar screenshots de las pantallas y preparando demo
+
+Yesterday: Ayudando a Manu para setear el entorno. Arreglando unos detalles de estilos
+Today: Probando el flujo y vistas. Trabajando con la animación de loading.
+Blockers?
+
+127incompleteVer error que recibe al enviar por mail128incomplete
+
+Yesterday:
+Today: Va a ayudar a Juli a configurar el tunel para lograr conexión a Jpos
+Blockers?
+
+Yesterday:
+Today: Trabajando en terminar payment-link-service y entrega de requerimientos por API.
+Esta terminando endpoint de api de comercios. Funciona pero faltan los tests.
+Blockers?
+
+122incomplete
+
+Yesterday: Terminó con el manejo de errores en el endpoint de suscripcion. Creó PR
+Today: Revisando el código y juntarse con el equipo a ver el flujo.
+Blockers?
+
+Yesterday: Trabajando en maquetado de mails de reseteo de contra y completar el registro (terminado). Hay que unir esto con lo que trabajo Jose
+Today: Trabajando en su branch, uniendo todo con los cambios de Joe.
+Al terminar pasar a loading del boton
+Blockers?
+
+123incompleteVer error que recibe al enviar por mail124incompleteSeguir con botón de loading
+
+Yesterday: Viendo con Juli errores en external services. Se pudo solucionar, era tema de config.
+Creo PR de 672 y 674.
+Today: Viendo test de Auth Service que se rompió.
+Juntarse con el equipo a unir el flujo y ver que todo funcione.
+Blockers?
+
+Yesterday:
+Today: Trabajando en los fixes con Jose para reintento de cobro. Faltan unos pequeños ajustos para presentar la api completa.
+Primero payment link services
+Después API comercios
+Blockers? Soluciones de lo de arriba
+
+119incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre
+
+Yesterday: Trabajando en catastro de tarjeta
+Today: Viendo unos bugs que está teniendo y unos temas de estilos.
+Esta por terminar y continúa con la
+Blockers?
+
+Yesterday: Terminó con botones de mandar mail, compartir y descargar.
+Today: Trabajando con templates de mail de reseteo de contraseña
+Blockers?
+
+120incompleteVer error que recibe al enviar por mail121incompleteSeguir con botón de loading
+
+Yesterday: Trabajando con tickets de auth, 672 y 674. Terminó vistas y flujos
+Today: Probar a ver si es consistente con el comportamiento esperado.
+Sigue con 676
+Blockers?
+
+Yesterday: Deploy de redis
+Today: Trabajando con API de reintentos fallidos.
+Va a ver si puede desplegar en partes, primero payment link service para que qa vaya probando.
+Blockers?
+
+117incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre118incompleteSync con Jose / Juan / Nacho
+
+Yesterday: Trabajando con las validaciones para flujo de suscripción.
+Today: Estaba trancado con flujo de tarjetas pero pudo pasarlo.
+Blockers?
+
+Yesterday: Trabajando y solucionando error del mailer. Termino con funcionalidad de compartir, descargar y mandar por mail
+Today: Revisando un nuevo error en el mailer
+Blockers?
+
+Yesterday: Trabajando con Auth. Modificando vistas para tpago y auth-service de reseteo de contraseña para dar soporte al flujo de stripe.
+Today:
+Blockers?
+
+Yesterday:
+Today: Armar los specs para todo los casos
+Blockers? No está pudiendo pegarle a la API de comercios
+
+115incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre116incompleteVer con joaco el blocker
+
+Yesterday: Termino el flujo para poder catastrar la tarjeta.
+Today: Creando endpoint para validar tarjeta.
+Blockers?
+
+Yesterday: Viendo la funcionalidad del loading que ya estaba hecha en otra iniciativa (VPos Portal)
+Today: Trabajando en las funcionalidades del mailer. Viendo si es tema de configuración en el proyecto.
+Blockers?
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday:
+Today: Trabajando con la salida de los datos desde pm link service hacia la api de comercios. Terminar el endpoint de la api para fin del dia así para mañana pueda empezar a preparar los casos de prueba.
+Blockers?
+
+112incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre
+
+Yesterday: Intentando hacer el pago.
+Today: Pudo hacerlo funcionar y catastro la tarjeta. Crea suscriptor. Ahora va a agregar pantallas de success y failure
+Blockers?
+
+Yesterday: Armando programa de Java para RPG
+Today: Armando programa de Java para RPG
+Blockers?
+
+113completeEsperando a ver si Gian puede recomendarle a alguien que le de una mano
+
+Yesterday: Terminando y probando funcionalidades de botones compartir y descargar
+Today: Terminando cosas del mailer y esta probando unas cosas de compartir. Cuando termina va a hacer rebase de la branch de joel para unificar todo.
+Luego empieza con maquetado de mail
+Blockers?
+
+114completeQue sucede con la pantalla de carga post click en pagar
+
+Yesterday: Actualización de Ruby
+Today: Viendo un error con Juan, que termino siendo tema de datos.
+Blockers?
+
+Yesterday:
+Today:
+Blockers?
+
+109incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre
+
+Yesterday: Trabajando con feature de catastrar tarjeta cuando se submitea el form.
+Arreglando bugs del form.
+Today: Idem ayer. Luego continuar con lo de auth.
+Blockers?
+
+Yesterday: Coordinando con Pao y nacho sobre JPos y RPG.
+Today: Va a usar esta info que consiguió para hacer el POC
+Blockers?
+
+111incompleteEsperando a ver si Gian puede recomendarle a alguien que le de una mano
+
+Yesterday: sigue trabajando en la funcionalidad de enviar Mail
+Today: va a avanzar hasta el Mail genérico que ya tenemos y ahora cuando hagamos sync arregla con Joel para ver donde sigue él
+Blockers?
+
+110incompleteQue sucede con la pantalla de carga post click en pagar
+
+Yesterday: Act Ruby.
+Dandole una mano a Joaco con investigación de JPos.
+Today: Act Ruby.
+Blockers?
+
+Yesterday:
+Today: Trabajando sobre el fix de un error en producción. PR pronta, y ya se coordinó para hacer el deploy.
+Se están haciendo las pruebas de redis en stg.
+Blockers? No
+
+107incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre
+
+Yesterday:
+Today: Trabajando con la feature de crear el usuario y catastrar la tarj
+Blockers? No
+
+Yesterday: Investigando RPG y empezó a trabjar con el POC. Encontró un problema con Ruby gems al querer instalar una gema
+Today: Pudo solucionar el problema. Va a ayudar a Lau con un tema del portal
+Blockers? No
+
+Yesterday: Funcionalidades de botones de compartir y descargar. Buscando solución con joaco sobre unos temas en el botón de compartir.
+Today: Trabajando en la vista de Voucher
+Blockers?
+
+108incompleteQue sucede con la pantalla de carga post click en pagar
+
+Yesterday:
+Today: Dando soporte a Joaco
+Blockers?
+
+Yesterday:
+Today: Claves de Redis en Staging. Va a probar cambiar una de las claves. Trabajar con 4 servicios aprovechando que no se están usando.
+Luego seguir investigando para crear un endpoint en external service.
+Blockers? No
+
+105incompleteEsperando diseños de Figma de TPago DBA - queda para 15 de Noviembre
+
+Yesterday: Trabajando en diseño de tarjeta en vista web y mobile
+Today: Trabajando en endpoint de submit de form para uqe se cree el usuario y catastre la tarjeta y configurando mail cuando se marque casilla en register
+Blockers? No
+
+Yesterday:
+Today: Investigación vpos para RPG. Buscando terminar esto para pasar a POC
+Blockers? No
+
+Yesterday: Trabajando en botones de descarga y compartir y de enviar por mail. Detalles entre mobile y desktop
+Today: Continuando con estas funcionalidades hoy
+Blockers?
+
+106incompleteQue sucede con la pantalla de carga post click en pagar
+
+Yesterday:
+Today: PR para vulnerabilidades.
+Resolviendo problema con Jose de DBA, comunicación con external service y a aprtir de eso va a poder hacer las primeras pruebas para la implementación. Ya armo CSV de DBA
+Blockers? No
+
+102incompleteEsperando diseños de Figma de TPago DBA
+
+Yesterday: Encontró SVG. Trabajando refactorizar las lógica de las pausas
+Today: Hoy retomó con flujo de stripe. Trabajando en forms para catastrar la tarjeta
+Blockers? No
+
+103completePedir SVG a Pao / Carlos para la tarjeta (Juli va a ayudarlo y si no lo logran van a pedir SVG al cliente)
+
+Yesterday: Dándole soporte a Juli con la com de DBA.
+Today: Avanzando con investigación de RPG. Armando todo localmente para armar el POC
+Blockers? No
+
+Yesterday: Vistas de Flujo de stripe. Terminó vistas de Voucher Mobile y Desktop. Modificando y ajustando dif de mobile y desktop de otra pantalla.
+Today: Darle funcionalidad a botones de mobile (compartir y descargar)
+Blockers? No
+
+104incompleteQue sucede con la pantalla de carga post click en pagar
+
+Yesterday:
+Today: Haciendo pruebas en Redis con Juli
+Blockers?
+
+Yesterday: -
+Today: Trabajando con Redis. Tpago DBA, viendo requisitos. Por ahora solo está consumiendo la api. El 2 de Nov tendríamos figma de diseño.
+Blockers? - Esperando por QA para hacer cambios en las maquinas
+
+Martes verificar que estén los diseños y modelo csv de TPago DBA y confirmar si tenemos todo para arrancar. Hablar con Pao
+
+Yesterday: -
+Today: Trabajando con las vistas del flujo de Stripe. Trabajando también con vistas mobile
+Blockers? Necesita SVG para poner en el fondo de la tarjeta
+
+Pedir SVG a Pao / Carlos para la tarjeta (Juli va a ayudarlo y si no lo logran van a pedir SVG al cliente)
+
+Yesterday: Borrado de las tarjetas. Quedó en STG
+Today: Ayudando al equipo. Viendo estimación de RPG
+Blockers?
+
+Yesterday:
+Today: Trabajando con la vista de Voucher.
+Blockers?
+
+Yesterday: Resolviendo comentarios en un PR de Auth Service (Autenticación y cierre de sesión)
+Today: Viendo VPOS y 3DSec
+Blockers?
+
+Yesterday: -
+Today: Empezando con tarea y requerimientos de DBA. Preparando todo lo de las claves de redis. Miercoles comienza con sus pruebas.
+Blockers? No.
+
+Yesterday: -
+Today: Terminando vistas de stripe. TRabajando en la animación de la tarjeta
+Blockers? No.
+
+Yesterday: -
+Today: Trabado con uno de los test. Liquidando eso y deployando a staging.
+Blockers? No.
+
+Yesterday: -
+Today: Maquetado de la vista de voucher de las nuevas pantallas. Solo con el HTML por ahora.
+Blockers? No.
+
+Yesterday: Se deployó a staging el fix de Tpago. Apuntan a deploy a PROD el miércoles.
+Today: Seguir con el tema de VPOS.
+Blockers? No.
+
+Yesterday: Mirando la tarea de redis.
+Today: Hoy también estuvo viendo eso. Son 12 servidores que hay que actualizar. Hoy va a estar full con eso.
+Blockers? No.
+
+99incomplete
+
+Yesterday: Creando la página del flujo de suscripciones cuando el user no está logueado.
+Today: Sigue con la misma tarea.
+Blockers? No.
+
+100incomplete
+
+Yesterday: Revisando bugs de UX que se deployaron ayer.
+Today: Ayer mini sync con Gasty que le mostró una solución a lo de turboframe. Ya se aprobó esa PR. Sync con Juli por lo de redis.
+Blockers? No.
+
+101incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+Yesterday: Hubo tareas que no pudo continuar por el cluster
+Today: Se terminaron los dos tickets, ya se van a mover a revisión.
+Blockers? No.
+
+96incompleteCoordinar reunión para tasking inicial de DBA (Seba)
+
+Yesterday: Tasking y tarea nueva del flujo de stripe.
+Today: Viendo las primeras tareas del flujo.
+Blockers? No.
+
+97incomplete
+
+Yesterday: Trabajando en el bug de los frames. Medio trancado por la vpn.
+Today: Hoy se retomó esa tarea. Se crearon los tickets para eso y otro bug. Se va a juntar con el equipo. Ticket 657 y 658.
+Blockers? No.
+
+98incomplete
+
+Yesterday: Revisando todo para arrancar con el flujo de stripe. Algunos errores en el set up local de auth.
+Today: Hoy había otro error de migraciones. Cualquier cosa se va a juntar con Juli.
+Blockers? No.
+
+Yesterday: -
+Today: Trabajando en los bugs de mejoras ux, se reportó el viernes. Durante el día de hoy se terminan. Tickets 655 y 656.
+Blockers? No.
+
+93incomplete
+
+Yesterday: Trabajando con las pausas. No hay tarea creada.
+Today: Hoy se subió la PR de eso, y esta viendo los tests.
+Blockers? No.
+
+94incomplete
+
+Yesterday: Analizando lo que se deployó de ux y atacando un bug. Problema en la vista del alert.
+Today: Luchando con la PR de Joel. Y siguiendo con el bug.
+Blockers? No.
+
+95incomplete
+
+Yesterday: Haciendo set up del entorno local. Quedo andando.
+Today: Trabajando con vuelto.
+Blockers? No.
+
+Yesterday: -
+Today: Trabajando en arreglos para la 646. quedo bien pero siguen probando.
+Blockers? No.
+
+90incomplete
+
+Yesterday: -
+Today: Trabajando en el arreglo de las pausas. Hablando con Camila se encontró un fix por los pagos, cuando son 2 meses pero 3 pagos.
+Blockers? No.
+
+91incomplete
+
+Yesterday: Toda la tarde con los rebases de develop. Metió varios commits chiquitos de fixes.
+Today: Repasando el flujo de 3DS. Esta sin tarea de Tpago
+Blockers? No.
+
+92incomplete
+
+Yesterday: Viendo un fix que paso Nahuel.
+Today: Localmente logro fixearlo. Encarando el error que acaba de reportar Carlos.
+Blockers? No.
+
+86incomplete
+
+Yesterday: -
+Today: Poniendose al día.
+Blockers? No.
+
+87incomplete
+
+Yesterday: -
+Today: Después de la reunión se mergeo el cambio que estaba trabajando el viernes.
+Blockers? No.
+
+88incomplete
+
+Yesterday: Se cambio de proyectos. Pasó de Vulnerabilidades a Extracciones.
+Today: Sigue indagando y entendiendo Extracciones.
+Blockers? No.
+
+89incomplete
+
+Yesterday:
+Today: Sigue con el fix de cuota diferenciada y revisando porque sucede el ticket. Ticket 646.
+Blockers? No.
+
+82incomplete
+
+Yesterday: -
+Today:
+Blockers? -
+
+83incomplete
+
+Yesterday: Trabajando con deuda técnica.
+Today: Charlando con Pao de un posible bug.
+Blockers?
+
+84incomplete
+
+Yesterday: Quedandose sin tareas porque se termina el de log out. GE89 y GE82
+Today: Ya están las PRs listas. Repasando si puede avanzar con algo más del roadmap.
+Blockers? No.
+
+85incomplete
+
+Yesterday: -
+Today: Meeting bien temprano. Terminando lo de Kount. Cerrar el flujo y testear el flujo.
+Blockers? No.
+
+78incomplete
+
+Yesterday: -
+Today: PTO
+Blockers? -
+
+79incomplete
+
+Yesterday: Trabajando en algunos tickets de bugs que se levantaron. Arreglando validación de javascript. Ya quedaron las PRs.
+Today: Trabajando en una tarea que pasó Carlos. Un bug
+Blockers? No.
+
+80incomplete
+
+Yesterday: -
+Today: -
+Blockers? -
+
+81incomplete
+
+Yesterday: -
+Today: Terminando de hacer pruebas sobre el desarrollo de migrar kount. Meetings y más meetings.
+Blockers? No.
+
+74incomplete
+
+Yesterday: -
+Today: Joel está PTO.
+Blockers? -
+
+75incomplete
+
+Yesterday: Siguiendo el análisis de flujo. Se encontraron un par de bugs. Se solucionó todo, el commit quedó en staging
+Today: Ticket que levantó Cami que era cambiar un texto (Ticket 642). Va a continuar con ticket 643
+Blockers? No.
+
+76incomplete
+
+Yesterday: Tenia listo el tema del log out y salieron mejoras en base al code review.
+Today: Cambiando el código y arreglando algunas cosas. Preparando una nueva versión de la PR.
+Blockers? No.
+
+77incomplete
+
+Yesterday: Los tickets que se encararon ayer están listos. El 638 ya quedó.
+Today: Queda el 640 que está en backlog que va a estar trabajando hoy.
+Blockers? No.
+
+70incomplete
+
+Yesterday: Agregar los datos de la primera cuota diferenciada.
+Today: hoy sigue con esa tarea y revisando la lista de suscriptores.
+Blockers? No.
+
+71incomplete
+
+Yesterday: VPOs trabajando en un caso que saltó en PROD. Quedó solucionado.
+Today: Sigue con el botón de back en todas las pantallas. Ya quedó.
+Blockers? No.
+
+72incomplete
+
+Yesterday: Siguió con el tema del log out, esta funcionando bien.
+Today: Hoy estan bajando esas pruebas para testear el código, queda eso para finalizar la PR. Todo se esta bajando a tests.
+Blockers? No.
+
+73incomplete
+
+Yesterday: -
+Today: Viendo el teams ty la VPN no anda. Sin sistema no se puede testear pero estuvo diagnosticando. 627 lista, un update a las 622.
+Blockers? No.
+
+66incomplete
+
+Yesterday: Viernes terminó la 626. Agregar el dato de la primera cuota diferenciada.
+Today: Hoy va a tratar de terminar la 631 y 629.
+Blockers? No.
+
+67incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+68incomplete
+
+Yesterday: Está avanzado el tema del log out.
+Today: Depende de la VPN pero está tratando probar de manera local para armar la PR. Miércoles temprano tiene la meeting de vulnerabilidades.
+Blockers?
+
+69incomplete
+
+Yesterday: Revisando los conflictos que surgieron al mergear todas las ramas
+Today: Siguen revisando los conflictos que surgieron al mergear todas las ramas. Esta heavy.
+Blockers?
+
+62incomplete
+
+Yesterday: Trabajo en la tarea 626. Medio bloqueado ahí.
+Today: Revisando los conflictos. Despues seguira con la tarea
+Blockers? Ticket 626, bloqueado, va a ver con quien puede desbloquear.
+
+63incomplete
+
+Yesterday: Probando la tarea de agregar el botón atrás en todas las pantallas. Casi liquidada.
+Today: Arrancaron con el tema del deploy, revisando todo los commits y links a todos los commits. Revisando varios conflictos. Probando.
+Blockers? No.
+
+64incomplete
+
+Yesterday: Se ordeno un poco el confluence de Vulnerabilidades. Se agregó info.
+Today: Va a mandar mensaje a Bancard para organizar una reunión. Faltan definiciones así que hay que tener esa reunión. Va a agregar cosas a lo que trabajo de Tpago. Sigue con el tema de log out de las apps móviles.
+Blockers? No.
+
+65incomplete
+
+Yesterday: -
+Today: Ticket 630 terminado y continúa ua con 627
+Blockers? No.
+
+58incomplete
+
+Yesterday: Ticket 625, arreglando cosas con Joaco.
+Today: Arrancó con la 626 la de eliminar tarjetas de cada suscriptor. Deploy y después seguir con la 626.
+Blockers? No.
+
+59incomplete
+
+Yesterday: Agregar el botón de volver en todas las pantallas.
+Today: Sigue con la tarea de ayer y van a deployar develop a staging. Y seguir con las tareas.
+Blockers? No.
+
+60incomplete
+
+Yesterday: Se junto con Nacho y descubrieron que auth responde distinto si usas www o no usas. Consultó a Bancard.
+Today: Hoy sigue con esa tarea, a la espera de Bancard. Usando el www pudo replicarlo.
+Blockers? No.
+
+61incomplete
+
+Yesterday: -
+Today: Logro encontrar el error en el ticket 623. hoy por la tarde estara listo y continuar con mejores.
+Blockers? No.
+
+54incomplete
+
+Yesterday: -
+Today: Tarea del filtro, la 625. Va a estar trabajando con eso para deployar eso a staging.
+Blockers? No.
+
+55incomplete
+
+Yesterday: -
+Today: Por subir la PR de la tarea del paginado. Después a reunirse con Joel por la tarea del filtro. Dejar eso deployado lo antes posible.
+Blockers? No.
+
+56incomplete
+
+Yesterday: -
+Today: Log out en auth, en PROD esta para la autenticación. Auth no chequea quien lo usa. Hoy va a intentar hacerlo replicar y seguir investigando.
+Blockers? No.
+
+57incomplete
+
+Yesterday:
+Today: Terminando de refinar el ticket 622. Temas de seguridad. Sigue trabajando. Pendiente un cambio.
+Blockers? No.
+
+50incomplete
+
+Yesterday: Trabajando en la tarea de suspender. Como hacer para contar las cuotas.
+Today: La tarea de suspender quedó suspendida. Tomó la 610 que ya estaba hecha pero resta un cambio. Arrancó con la 625.
+Blockers? No.
+
+51incomplete
+
+Yesterday: Meeting con el equipo.
+Today: Meeting interna y después con el cliente. Revisando los bugs que encontró Manu. Fix del portal de comercios que ya estaba hecho.
+Blockers? No.
+
+52incomplete
+
+Yesterday: Siguió con la tarea del log out para las aplicaciones móviles.
+Today: Termino de hacer una solución pero no va a funcionar. Va a intentar destrabar ese tema.
+Blockers? No.
+
+53incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+46incomplete
+
+Yesterday: Arreglando los test de las PRs abiertas. Tomo la tarea que volvió para atrás la 609.
+Today: Solucionando comentarios de José en la PR de suspender.
+Blockers?
+
+47incomplete
+
+Yesterday: Terminó la 621. Probó bastante localmente. Quedó la PR.
+Today: Refactor de lógica que está en el controller. En TPAGO portal. Se encontraron dos bugs más.
+Blockers?
+
+48incomplete
+
+Yesterday: Tarea GE-89, todo el tema de autenticación de apps mobile. BAS gema de autenticación.
+Today: Hoy sigue con lo mismo. Desarrollar la funcionalidad de log out.
+Blockers? No.
+
+49incomplete
+
+Yesterday: -
+Today: Ticket 588 para ocultar en la vista de tpago el botón de reintento para pagos manuales.
+Blockers?
+
+42incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+43incomplete
+
+Yesterday: Trabajando en el ticket 617. De este ticket se abrirían dos nuevos. Agregar un boton de volver al los forms y refactorear el manejo de los casos de error cuando se catastre una tarjeta.
+Today: Hoy trabajando con esos dos tickets.
+Blockers?
+
+44incomplete
+
+Yesterday: Ticket GE 82 y el GE 89. Ticket Log out para aplicaciones moviles.
+Today: Se avanza con el deploy de otro ticket. Bancar dio el ok para deployar.
+Blockers?
+
+45incomplete
+
+Yesterday: Carlos reportó el 584. Falto publicar la PR de ese ticket.
+Today: Se hizo otra rama del commit ese y se pasó de nuevo.
+Blockers?
+
+39incomplete
+
+Yesterday: Tarea de suspender los pagos.
+Today: Afinar detalles en la lista de suscriptores y hacer el cambio del lado del cliente.
+Blockers? No.
+
+40incomplete
+
+Yesterday: Tomó el ticket 617.
+Today: Va a seguir trabajando con ese bug. Debuggeando localmente.
+Blockers? No.
+
+41incomplete
+
+Yesterday: Reunión con Pablo y Nacho, yendo punto por punto.
+Today: Le enviaron a Gustavo las conclusiones y pidieron reunión. La reunión se movió y aun no hay fecha. Ticket GE-89, avanzando con ese.
+Blockers?
+
+Yesterday:
+Today: Ticket 604 completado. Radio button como requerido.
+Blockers?
+
+36incomplete
+
+Yesterday: -
+Today: Tarea 611, mostrar en tpago el monto A la par de la 610. Continuar con la 562.
+Blockers? No.
+
+37incomplete
+
+Yesterday:-
+Today: Hoy se deployó la rama de feature 3.2 con el fix de los filtros. Eso quedo en staging. Avanzo con un ticket que tenía Juli (ticket 613). Se subira la PR.
+Blockers? No.
+
+38incomplete
+
+Yesterday: -
+Today: Estuvo bloqueado porque las vulnerabilidades no están muy claras. Pasar a Gustavo todas las dudas.
+Blockers?
+
+Yesterday:
+Today: Ticket 606. Prioridad. Se encontró el problema con los reintentos.
+Blockers? No.
+
+33incomplete
+
+Yesterday: Tarea 609.
+Today: Hoy también 609, terminada. Dando una mano en la 606. Ver si arranca una nueva tarea.
+Blockers? No.
+
+34incomplete
+
+Yesterday: Ticket de los filtros que no son los filtros.
+Today: Siguiendo investigando ese bug. Reunirse por la tarde para pensar fix al problema. Dando soporte a Juli.
+Blockers? No.
+
+35incomplete
+
+Yesterday: Estuvo en reuniones con Nacho que le amplio todo bancard. Y repasaron punto por punto las vulnerabilidades de confluence.
+Today: Va a continuar con el punto 2 (billing-proxy) se va a coordinar con el equipo de SRE.
+Blockers? No.
+
+Yesterday: --
+Today: Trabajando en la tarea 600 (FASE 3.2). Buscando forma distinta de exportarlos, para cambiarles el color y adaptarlos al formato. Después sigue con la 599.
+Blockers? No.
+
+29incomplete
+
+Yesterday: Trabajando en la tarea de suspender el pago, quedo en revision.
+Today: Arreglando comments y hablar con Pao por unas mejoras y tomar la tarea 602.
+Blockers? No.
+
+30incomplete
+
+Yesterday:
+Today: Avanzando con la tarea 603, investigando eso.
+Blockers? No.
+
+31incomplete
+
+Yesterday: Ya no más en TPAGO.
+Today: Pago móvil, resolvió las vulnerabilidades. Esta semana sumándose a las dailies.
+Blockers? No.
+
+32incompleteVer con qué vulnerabilidades seguir.
+
+Yesterday: Soporte en el deploy.
+Today: Terminando el ticket 598. No se pudo replicar aun. Deployar en staging FASE 3.1.
+Blockers? No.
+
+26incomplete
+
+Yesterday: --
+Today: --
+Blockers? --
+
+27incomplete
+
+Yesterday:
+Today: Tickets de Michael, se pueden solucionar rápidamente.
+Blockers? No.
+
+28incomplete
+
+Yesterday: -
+Today: Ticket 598, revisando si está resuelto.
+Blockers? No.
+
+23incomplete
+
+Yesterday: Siguió en la tarea 562.
+Today: Hoy trabajo en la parte de vista la tarea. Hoy podría llegar a salir.
+Blockers? No.
+
+24incompleteVer si la 562 queda lista hoy.
+
+Yesterday: Preparativos para el deploy. Viendo las PRs, arreglando conflictos.
+Today: Adelantando vpos pci.
+Blockers? No.
+
+25incomplete
+
+Yesterday: Resolviendo problemas que estuvieron detectando, para lo que sale el miércoles.
+Today: Se hizo el deploy de los cambios a staging. Terminar de sanear diferencias en los repos de los tickets para septiembre.
+Blockers? No.
+
+20incomplete
+
+Yesterday: -
+Today: Siguiendo los últimos cambios del último ticket (562). Mañana podría tener la vista pronta.
+Blockers? No.
+
+21incomplete
+
+Yesterday: -
+Today: -
+Blockers? -
+
+22incomplete
+
+Yesterday:
+Today: Se hizo el despliegue de los cambios que se hicieron la semana pasada, listos para el miércoles. Ver con que seguir.
+Blockers? No.
+
+17incomplete
+
+Yesterday:
+Today: Subiendo fix encontrado hoy. Trabajando la 562. Hablar con Pao.
+Blockers? No.
+
+18incomplete
+
+Yesterday: El ticket 580.
+Today: La mañana de hoy el ticket 580. Hoy va a seguir trabajando con eso, ya pudo replicarlo.
+Blockers? No.
+
+19incomplete
+
+Yesterday: El viernes se terminó el cambio de la vulnerabilidad. Quedaron dos recomendaciones.
+Today: Trabajando con el repo de Vportal
+Blockers? No.
+
+Yesterday: Correcciones que paso Joaco al ticket 560.
+Today: Completando esas correcciones y mergear las ramas de esos fixes. Agarrar nuevo ticket.
+Blockers? No.
+
+14incomplete
+
+Yesterday: Trabajo en el fix que apareció 595.
+Today: Arreglando los test del ticket. Se va a deployar ese cambio y después a seguir con 594
+Blockers? No.
+
+15incomplete
+
+Yesterday: Meet con Gastón por el tema vulnerabilidades. Se fixeo un bug que esta mergeado a la rama.
+Today: Tomó la task 593. Se trabajo a la mañana en estimación Vpos. La iniciativa se va a ver la semana que viene.
+Blockers? No.
+
+16incomplete
+
+Yesterday: Comenzó el ticket 576 y termino el 583.
+Today: Hoy termino el 576. Va a empezar a ver un problema con la API.
+Blockers? No.
+
+11incomplete
+
+Yesterday: Arrancó con la 594.
+Today: Seguir con el ticket 594. Ajuste del teams (595)
+Blockers? No
+
+12incomplete
+
+Yesterday: Ticket 582. Ya está terminado. Quedó arreglado en staging.
+Today: 590 y 593. Va a seguir con esos.
+Blockers? No.
+
+13incomplete
+
+Yesterday: -
+Today: Ticket N 583 desde temprano. Limitar cuenta de usuarios, cambiar estética. Seguir trabajando en los test del 560.
+Blockers? No.
+
+8incomplete
+
+Yesterday: Cerrando ticket 591. Al final del día se cerró ,problemas con el deploy.
+Today: Cambios para arreglar el deploy, ya quedo resuelto.
+Blockers? No.
+
+9incomplete
+
+Yesterday: Viendo el ticket 591.
+Today: Estimación de vpos, a definir si toma tareas de Tpago.
+Blockers? No.
+
+10incomplete
+
+Yesterday: -
+Today: -
+Blockers? -
+
+5incomplete
+
+Yesterday: Ticket 591
+Today: Cerrar ticket 591
+Blockers? No.
+
+6completeTerminar el ticket (debe estar listo el viernes 11-08)
+
+Yesterday:
+Today:
+Blockers?
+
+7incomplete
+
+Yesterday: Ayudando a Joel en la tarea 591.
+Today: Tomando tickets chicos de la FASE 3.1. Trabajando en 581 y 583.
+Blockers? No.
+
+2completeDejar todo en regla antes del PTO.
+
+Yesterday: Terminando los fixes de FASE 3.1
+Today: Hoy va a trabajar con la 591.
+Blockers? No.
+
+3incomplete
+
+Yesterday:
+Today:
+Blockers?
+
+4incomplete

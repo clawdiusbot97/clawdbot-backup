@@ -1,0 +1,50 @@
+TITLE: Picasso/Angus: Parámetros opcionales de respuesta
+DOMAIN: General
+PRIORITY: Media
+ID: 3900669976
+SOURCE: 3900669976__Picasso_Angus__Para╠ümetros_opcionales_de_respuesta.json
+
+---
+
+Esta feature posibilita incluir ciertos atributos en la respuesta de las operaciones del servicio según algún criterio. Por ejemplo, un criterio podría ser si el cliente solicitó el parámetro opcional.
+Los parámetros opcionales deben ser identificados en el archivooperations.ymlorepresentations.yml(según en donde se posicione en la estructura de la respuesta) con el atributooptional: true.
+Por default:
+ningún atributo es opcional. El framework arma el JSON de respuesta con todos los atributos definidos en los archivosoperations.ymlyrepresentations.yml. Los atributos opcionales deben ser explícitamente declarados como tal.
+
+los atributos definidos como opcionales no son devueltos al cliente en el JSON de respuesta.
+
+Parámetros opcionales: introducción
+Definimos una operación sin parámetros de entrada que devuelve un body con un elementotest_optional_attrsde tipooptional_attrs_representation
+yamlDefinimos la representationoptional_attrs_represetnationcon dos atributos. Uno convencional y otro opcional.
+yamlEn la implementación de la operación, devolvemos un objeto que se adecúa a la estructura de la response de la operation.
+rubyResultado:
+El atributobes opcional. Por default, no se devuelve al cliente.
+Si bien no se devuelve el atributob, debido a la implementación de la feature es necesario que el objeto que se devuelve en la implementación de la operación tenga el getterb.
+rubyObtenemos un errorInvalidGetterErrordebido a que el objeto devuelto no tiene un getterb
+Ejemplo #1: devolver según el cliente solicita el parámetro opcional.
+Se agrega a la operation:
+Un parámetro en la request para que el cliente pueda indicar qué parámetros opcionales quiere recibir. Es un array de strings
+Este parámetro puede estar anidado dentro de otro, no necesariamente tiene que estar en el primer nivel. Es responsabilidad del programador el manejo de este parámetro.
+
+Un parámetro en la response para indicar que la respuesta puede incluir parámetros opcionales. Esto es necesario para el funcionamiento de la feature. No significa que el json de la respuesta vaya a tener el atributoextra_response_attributesy que su valor va a ser un array de strings. Es solo una limitación y requisito de la implementación.
+
+yamlSe agrega al código de la operación un nuevo atributoextra_response_attributesen el objeto que retorna, acorde a lo solicitado por el cliente. El valor debe ser un array de stings. Para el ejemplo, el cliente es el que envia el parametro en forma de array de strings.
+rubyEl cliente solicitó el parámetro opcionalby se retorna
+El parámetro opcionalbinternamente es identificado comotest_optional_attrs.bpor su ubicación en la representation. Cualquier cadena incluida entest_optional_attrs.bhace que se retorne el parámetro opcional. Ejemplos:
+
+Ejemplo #2: parámetro opcional no primitivo
+En este ejemplo se agrega un parámetro opcional de respuesta que no es de un tipo primitivo, sino que es de un tipo representation
+yamlrubyEl cliente solamente solicitób
+El cliente solamente solicitóc
+El cliente solicitóbyc
+Por lo aclarado arriba, cualquier string incluida en los identificadores de los parámetros opcionales hacen que éstos se devuelvan. En el ejemplo se retornanbyc
+Ejemplo #3: parámetros opcionales en Arrays.
+Cuando un atributo de respuesta es un array y el tipo de dato de los elementos contiene un parámetro de respuesta opcional, para cada elemento del array se aplica la lógica de los parámetros opcionales.
+yamlrubySin atributos opcionales.
+Retorna sólob
+Retorna sóloc
+Retornabyc
+También retornabyc
+Ejemplo #4: parámetros opcionales en la raíz
+Los parámetros opcionales pueden situarse en cualquier nivel de la respuesta del servicio, incluida la raíz.
+yamlruby

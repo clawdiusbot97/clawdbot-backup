@@ -1,0 +1,12 @@
+TITLE: SPI - Portal de Comercios
+DOMAIN: General
+PRIORITY: Media
+ID: 2630057990
+SOURCE: 2630057990__SPI_-_Portal_de_Comercios.json
+
+---
+
+Confluence: :https://jira.bancardnet.dom/confluence/pages/viewpage.action?spaceKey=PRYINPA&title=Portal+de+comercios
+
+Introducción
+Esta iniciativa trata de incluir nueva información (provenientes del BUS) en las tablas raw_transactions y transactions para luego mostrarlas en los reportes de Ventas. Para ello es necesario crear un nuevo modelo asociado a las raw_transactions y transactions, y realizar todas las modificaciones en los endpoints y reportes para incluir un nuevo campo (en formato json).

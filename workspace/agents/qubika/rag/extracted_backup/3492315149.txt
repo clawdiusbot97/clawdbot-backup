@@ -1,0 +1,91 @@
+TITLE: 3DS en Pre-autorizaciones - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3492315149
+SOURCE: 3492315149__3DS_en_Pre-autorizaciones_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para agregar 3DS en los flujos dePre-Autorización.
+
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Inducción Joe (trabajar los primeros días en conjunto para la induccion de Joe a VPos
+
+20
+
+Pre-autorización single buy ocasional
+
+Enviar la respuesta de 3DS al JPos en la creación del pago de la pre-autorización
+
+10
+
+vpos-service
+
+Pre-autorización single buy token
+
+Agregar el flujo de 3DS en pre-autorización
+Enviar la respuesta de 3DS al JPos en la pre-autorizacion
+
+Guardar la respuesta de 3DS en tablas de VPos
+
+20
+
+vpos-service
+
+Pre-autorización multi buy ocasional (todo de 0, agregar pre-autorización y 3DS)
+
+Agregar el flujo de pre-autorización
+Agregar creación
+
+Agregar confirmación
+
+Agregar reversa
+
+20
+
+vpos-service
+
+Agregar servicio nuevo de JPos en external-services para multi-buy ocasional de pre-autorizacion
+
+12
+
+external-services
+
+Enviar la respuesta de 3DS al JPos en la creación del pago de la pre-autorización
+
+4
+
+vpos-service
+
+Agregar la reversa de una pre-autorización
+
+18
+
+vpos-service
+
+Pre-autorizacion multi buy token
+
+Agregar flujo de 3DS en pre-autorización
+Enviar la respuesta de 3DS al JPos en la pre-autorización
+
+Guardar la respuesta de 3DS en tablas de VPos
+
+20
+
+Total Desarrollo
+
+124
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+20
+
+Total Desarrollo + Gestión
+
+144

@@ -1,0 +1,234 @@
+TITLE: Friday Sessions - Dinámicas
+DOMAIN: General
+PRIORITY: Media
+ID: 4864311386
+SOURCE: 4864311386__Friday_Sessions_-_Dina╠ümicas.json
+
+---
+
+🐛 Random Bug Resolution
+¿Qué es?
+Una sesión práctica donde investigamos y resolvemos en vivo un error real de Sentry o un ticket.
+Cómo funciona:
+Cada sesión se asigna aleatoriamente a una persona del equipo para que:
+Elija un error real en Sentry o un Ticket
+
+Traiga el contexto mínimo necesario
+
+Guíe la investigación durante la sesión
+
+Durante la hora:
+Analizamos el stack trace
+
+Proponemos hipótesis
+
+Buscamos en el código
+
+Discutimos posibles soluciones
+
+Si es viable, lo resolvemos en vivo o definimos el plan
+
+Objetivo:
+Mejorar nuestras habilidades de debugging, compartir conocimiento del sistema y aprender cómo otros investigan problemas. No buscamos “encontrar al culpable”, sino entender el sistema y mejorar nuestra capacidad de diagnóstico.
+Ejemplos:
+Un NoMethodError intermitente en producción
+
+Un job de Sidekiq que falla bajo ciertas condiciones
+
+Un error 500 difícil de reproducir
+
+🗺 Team Knowledge Map
+¿Qué es?
+Una sesión para mapear y entender mejor una parte del sistema.
+Cómo funciona:
+Cada sesión una persona presenta un área específica del sistema:
+Qué hace
+
+Dónde vive en el repo
+
+Modelos principales
+
+Endpoints clave
+
+Integraciones externas
+
+Cosas que suelen romperse
+
+Objetivo:
+Reducir knowledge silos y aumentar la visión global del producto. Se espera que el resto del equipo haga preguntas y comparta experiencias relacionadas con ese módulo.
+Ejemplos de temas:
+Pago de Servicios
+
+Pagos con QR (VentasQR)
+
+Pagos Agendados
+
+Pagos con Link (TPago)
+
+Links de Suscripción
+
+“Cards” de billing/notification
+
+🏗Rails Pattern
+¿Qué es?
+Una sesión enfocada en conocer diferentes patrones clásicos y ver como los usamos en nuestro código (si los usamos 👀).
+Cómo funciona:
+Un responsable elige un patrón o práctica a desarrollar, da una introducción al equipo sobre el mismo y se analizan ejemplos reales del proyecto:
+Cómo lo estamos usando hoy
+
+Qué está bien
+
+Qué podemos mejorar
+
+Qué deberíamos estandarizar
+
+Objetivo:
+Alinear criterios técnicos y mejorar consistencia.
+Ejemplos:
+Service Objects: cuándo usar y cuándo no
+
+Uso de callbacks
+
+Policies
+
+Background jobs e idempotencia
+
+Transaction boundaries
+
+Validaciones complejas
+
+🔧 Live Refactor Session
+¿Qué es?
+Refactor en vivo de código real del proyecto.
+Cómo funciona:
+Un miembro del equipo trae un fragmento de código pequeño y:
+Se analiza en conjunto
+
+Se proponen mejoras
+
+Se exploran distintas soluciones
+
+No se trata de criticar, sino de pensar colectivamente.
+Objetivo:
+Entrenar diseño, legibilidad y pensamiento crítico.
+Ejemplos:
+Un controller/resource con demasiada lógica
+
+Un método largo con muchos if
+
+Una spec repetitiva
+
+Un modelo con demasiadas responsabilidades
+
+Un modulo Business con responsabilidades poco claras
+
+☕ Architecture Coffee
+¿Qué es?
+Espacio abierto de discusión técnica sobre decisiones arquitectónicas.
+Cómo funciona:
+Se plantea una pregunta o problema y se abre debate guiado.
+No necesariamente se toma una decisión formal, el objetivo es explorar perspectivas.
+Objetivo:
+Pensar en el largo plazo y mejorar criterios de diseño.
+Ejemplos:
+¿Cómo modularizamos mejor un sistema?
+
+¿Dónde estamos acumulando deuda técnica?
+
+¿Cómo manejamos integraciones externas?
+
+¿Qué límites debería tener cada dominio?
+
+🛠 Tool Swap
+¿Qué es?
+Un espacio para compartir herramientas, workflows o trucos útiles. Puede durar entre 10 y 20 minutos, manteniéndolo liviano y práctico.
+Cómo funciona:
+Una persona muestra algo que usa y que le mejora la productividad.
+Objetivo:
+Elevar la productividad colectiva compartiendo conocimiento práctico.
+Ejemplos:
+Shortcuts de VSCode o Cursor
+
+Git aliases
+
+Cómo usar Rack Mini Profiler
+
+Feature flags
+
+Herramientas para debugging
+
+Configuración de entorno de desarrollo
+
+🎭 Tech Debate
+¿Qué es?
+Debates técnicos con roles asignados.
+Cómo funciona:
+Se elige un tema polémico.
+Una persona defiende una postura
+
+Otra persona defiende la opuesta
+
+El resto participa con preguntas y opiniones
+
+Objetivo:
+Explorar trade-offs y aprender a argumentar decisiones técnicas. Se prioriza el respeto y la argumentación técnica por sobre “ganar” la discusión.
+Ejemplos:
+Callbacks vs lógica explícita
+
+Fat models vs Service layer
+
+Tests más unitarios vs más integración
+
+Rspec vs Minitest
+
+🎤 Guest Friday
+¿Qué es?
+Invitamos developers Rails de otros proyectos o equipos para intercambiar experiencias.
+Cómo funciona:
+Un invitado externo comparte:
+Cómo trabajan en su proyecto
+
+Decisiones arquitectónicas
+
+Problemas que resolvieron
+
+Lecciones aprendidas
+
+Luego abrimos conversación.
+Objetivo:
+Salir de nuestra burbuja y enriquecer perspectiva técnica.
+🎮 Friday Challenge
+¿Qué es?
+Desafíos interactivos y preguntas relacionadas con negocio, producto o conocimiento técnico del sistema.
+Cómo funciona:
+Se presentan preguntas, escenarios o pequeños retos y el equipo responde en vivo mediante chat, votación o discusión abierta.
+Puede ser individual o en equipos pequeños.
+Objetivo:
+Entender mejor el negocio
+
+Detectar gaps de conocimiento
+
+Fomentar participación activa
+
+Romper la rutina con una dinámica más lúdica
+
+Ejemplos:
+Ni idea, hay de todo pero estoy con las ultimas energías del día
+
+📰 Tech News
+¿Qué es?
+Espacio para compartir novedades del ecosistema tech o Ruby/Rails.
+Cómo funciona:
+Alguien trae una noticia relevante no relacionada con el proyecto y la comenta brevemente. Idealmente se comparte previamente el artículo o recurso en Slack para que el equipo pueda revisarlo antes de la sesión.
+Objetivo:
+Mantenernos actualizados sin necesidad de una charla formal.
+Ejemplos:
+Novedades de Rails 8
+
+Cambios en gems que usamos
+
+Tendencias en testing
+
+Nuevas prácticas de seguridad
+
+Artículos técnicos interesantes

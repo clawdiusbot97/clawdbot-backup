@@ -1,0 +1,38 @@
+TITLE: Combobox - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 2999877637
+SOURCE: 2999877637__Combobox_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Tarea
+
+Estimación (días)
+
+Proyecto
+
+Agregar columnas en bd y agregar el enumerado en el modelo
+Sugerencia: ComponentType y ComponentValue
+
+billing-service
+
+Agregar las columnas nuevas en el CRUD
+
+billing-service
+
+Agregar validaciones del formato del componentValue en función del componentType
+
+billing-service
+
+Adaptar formulario de ingreso de datos del cliente para mostrar los inputs correctos
+
+bportal
+
+Adaptar formulario de ingreso de datos del cliente para mostrar los inputs correctos
+
+commerce-suite
+
+Modificar operación de get_products para agregar la nueva información
+
+infonet-cobranzas-app

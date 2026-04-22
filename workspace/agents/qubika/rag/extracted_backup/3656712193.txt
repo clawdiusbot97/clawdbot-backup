@@ -1,0 +1,153 @@
+TITLE: [TPago] Vista Resumen de Pagos - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3656712193
+SOURCE: 3656712193__[TPago]_Vista_Resumen_de_Pagos_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para lavista de resumen de pagos de TPago.
+Las horas estimadas son:197hsentre dos personas
+Fecha estimada de entrega:Miércoles, comenzando:Miércoles
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Mejora en el reporte de suscriptores para actualizar el último pago
+
+4
+
+payment-link-service
+
+Crear endpoint que consuma reporte de suscriptores y devuelva la cabecera y los datos de la tabla.
+
+12
+
+payment-link-service
+
+Modificar reporte de suscriptores para sumar aggregations nuevas y columnas necesarias para filtros.
+
+12
+
+payment-link-service
+
+Lógica para formateo y descarga de archivos
+PDF:
+Logo de Bancard
+
+Cabcera con el nombre del comercio
+
+Titulo del documento: Resume de suscripores #[Filtro aplicado]
+
+Tabla del pdf
+
+TXT: Investigar
+
+24
+
+payment-link-service
+
+Agregar endpoint que consuma el nuevo reporte de pagos de suscripciones
+
+10
+
+external-commerce-service
+
+Agregar endpoint que permita descargar el reporte de pago de suscripciones
+
+6
+
+external-commerce-service
+
+Agregar lógica de re-dirección al plan seleccionado
+Al seleccionar el plan, nos lleva a la vista del link
+
+8
+
+payment-link-portal
+
+Agregar lógica para volver a la pantalla anterior
+Devuelve al usuario a la Vista de Resumen de Suscriptores
+A investigar
+
+16
+
+payment-link-portal
+
+Crear cabecera con resumen de suscripciones
+La cabecera debe adaptarse al filtro
+Figma
+
+12
+
+payment-link-portal
+
+Crear tabla de suscriptores con detalle
+columnas:
+Fecha de suscripcion
+
+Cliente (nombre /email)
+
+Fecha ultimo cobro
+
+Fecha proximo cobro
+
+Numero de referencia
+
+estado (Confirmado, Fallido, Pendiente)
+
+Sucursal
+
+Plan (nombre suscripcion)
+este linkea a la vista de la suscripcion
+
+y al ir a la vista de la suscripcion el volver que vuelva a esta lista
+
+24
+
+payment-link-portal
+
+Crear filtro por Nombre de Plan (descripción)
+Permitir búsqueda dentro del filtro
+
+4
+
+payment-link-portal
+
+Crear filtro por Sucursal (commerce_branch)
+
+4
+
+payment-link-portal
+
+Crear filtro por fecha de creación de suscripción
+Si es mensual entonces tener en cuenta que solo deben de entrar los suscriptores, que se hayan suscripto por lo menos a partir de ese mes.
+
+6
+
+payment-link-portal
+
+Botón para descargar el reporte encsv, pdf y txt
+
+8
+
+payment-link-portal
+
+Creación de PRs, revisión, corrección de comentarios y sugerencias, mergeo, pruebas locales y despliegue a staging
+
+24
+
+Total Desarrollo
+
+174
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+25
+
+Total Desarrollo + Gestión
+
+199

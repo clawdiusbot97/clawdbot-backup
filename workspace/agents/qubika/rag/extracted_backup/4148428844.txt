@@ -1,0 +1,172 @@
+TITLE: Desglose de flujos de vPOS KOUNT
+DOMAIN: General
+PRIORITY: Media
+ID: 4148428844
+SOURCE: 4148428844__Desglose_de_flujos_de_vPOS_KOUNT.json
+
+---
+
+Flujos de pagos involucrados:
+DDC
+Pago single y multi ocasional
+
+Preautorización single y multi
+
+Catastro de tarjeta
+
+No se incluyen flujos de tarjeta catastrada pues no necesariamente incluyen la interacción de un usuario desde la web.
+EvaluateOrder
+Pago single y multi ocasional
+
+Preautorización single y multi
+
+Catastro de tarjeta
+
+Pago con tarjeta catastrada single y multi (No enviarán session_id pues no involucran DDC)
+
+Preautorización con tarjeta catastrada single y multi (No enviarán session_id pues no involucran DDC.
+
+Todos los flujos estarán protegidos por Kount siempre y cuando no involucren 3DS.
+No habrán flujos que tengan ambas protecciones, ni tampoco flujos sin niguna de las dos.
+EvaluateOrder retornará 2 valores que se utilizan para determinar si se aprueba o cancela un flujo:
+- decision:string ('APPROVE', ‘DECLINE', ‘REVIEW’)
+- omniscore:float (Un float entre 0 y 1 que indica un porcentaje de confianza en el origen del pago)
+Sin embargo, no tiene la palabra final en cuanto al resultado que tendrá el pago. En cambio, nosotros podremos actualizar el estado final del pago utilizando el endpoint UpdateOrder, al cual le mandaremos un decision acorde a lo determinado por la procesadora de pago. Esto ayuda al motor de seguridad de Kount a mutar su concepto de 'pago seguro' en el contexto de Bancard.
+Esto se hará en el retorno(si es sincrónico) o en el notify(si es asíncrono) de cada flujo, y debe hacerse tal que su posible fallo no interrumpa el flujo de confirmación (capturas de errores o proceso async?).
+
+Adicionalmente, cada llamado a la API debe hacerse con un bearer token de un tiempo de vida de 20 minutos, que conseguimos al llamar al endpoint de authorize usando nuestra api key.
+
+La estructura final de la solución será esta:
+
+External Services - KountService (basado eneste API doc):
+POST Authorize
+
+POST EvaluateOrder
+
+PATCH UpdateOrder
+
+Vpos portal
+Se envía en el formulario correspondiente el kount_session_id producido que identifica a ese DDC específico
+
+Flujos:
+Pago single, multi
+
+Preauth single, multi
+
+Catastro
+
+SI Y SOLO SI NO LLEVA 3DS
+
+Vpos service
+Flujos:
+Pago single, multi
+
+Preauth single, multi
+
+Pago con tarjeta catastrada single, multi
+
+Preauth con tarjeta catastrada single, multi
+
+Catastro (Pago de monto cero)
+
+Se vuelve a chequear si 3DS está involucrado
+
+Al recibir la consulta en el endpoint correspondiente, se llama a EvaluateOrder para obtener la decisión y el score de Kount. Dicho llamado se hará con unchanneldiferente para filtrado en la plataforma.
+
+Se procesa el pago/preauth/catastro
+
+Durante el retorno del flujo correspondiente, se llama al UpdateOrder para corregir el resultado de dicho proceso.
+
+Para todos los llamados a Kount, se debe crear un bearer token
+Si no existe uno, se llama a Authorize y se cachea la api key por el lapso de 20 minutos
+
+Si existe uno, se lo usa directamente desde la caché
+
+La lógica de autenticación cacheada y los llamados a external services deben pasar por un KountBusiness
+
+Tareas/Estimaciones:
+Epica Setup del external service( 114h / 20h por endpoint de Kount (3) / 6h por flujo actualizado (9) ):
+Crear endpoint de EvaluateOrder - 12h
+
+Crear stubs de EvaluateOrder - 4h
+
+Crear tests de EvaluateOrder - 4h
+Idem para Authenticate y para UpdateOrder
+
+Actualización de los parámetros que se envían a RPG + Ajuste de tests y stubs- 6h por flujo
+Flujos (9 en total):
+Pago single, multi
+
+Preauth single, multi
+
+Pago con tarjeta catastrada single, multi
+
+Preauth con tarjeta catastrada single, multi
+
+Catastro (Pago de monto cero)
+
+Epica DDC (60 hs / 12hs por flujo)
+Incorporar script de DDC a la vista - 4h por flujo
+
+Disparar DDC solo si se requiere 3DS, y cargar session_id en el form - 4h por flujo
+
+Capa Resource → Recibir session_id y pasar al backend - 4h por flujo
+Flujos (5 flujos):
+Pago simple y multi
+
+Preauth single y multi
+
+Catastro
+
+Epica KountBusiness (48hs)
+Crear capa business con el método authorize -12h
+
+Crear el método evaluate_order - 8h
+
+Crear el método update_order - 8h
+
+Lógica de cacheo/re-creado de la api-key - 8h
+
+Unit tests de la capa business -12h
+
+Epica llamados desde los procesos (180hs / 20 hs por flujo)
+Determinar si es flujo con 3DS - 4h por flujo
+
+Llamar EvaluateOrder e incorporar los parámetros de respuesta en la solicitud - 4h por flujo
+
+Al retornar, enviar UpdateOrder con el resultado final (En una async task)- 8h por flujo
+
+Modificar unit tests de los flujos existentes para contemplar Kount - 4h por flujo
+Flujos (9 en total):
+Pago single, multi
+
+Preauth single, multi
+
+Pago con tarjeta catastrada single, multi
+
+Preauth con tarjeta catastrada single, multi
+
+Catastro (Pago de monto cero)
+
+Tpago Kount Upgrade (30h)
+Ruby bump from 3.0.0 to 3.4.5 and as many gems as possible (Kount included)- 16h
+
+Update configurations (keys, credentials, URLs) for Kount 360 in all envs -> 6h
+
+Test occasional payment locally - 2h
+
+Regression tests (due to overall gemfile upgrades) - 6h
+
+Horas totales de desarrollo para esta iniciativa: 432h
+Horas Totales (sumando gestión): 492h
+
+Anexo:
+Incorporación de flujos nuevos (tras el lanzamiento de esta iniciativa):
+Setup de infra Kount (Epica Kount Business): 48hs
+
+Setup de Kount para un flujo puntual (44h por flujo):
+Epica actualizaciones en procesamiento del pago/catastro (External-Services): 6h
+
+Epica Llamado desde un proceso: 20h
+
+Epica DDC: 12h (Solo si existe un cliente web/mobile)

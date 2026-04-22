@@ -1,0 +1,47 @@
+TITLE: Ambientes en Bancard
+DOMAIN: 8) Infraestructura
+PRIORITY: Alta
+ID: 2794455126
+SOURCE: 2794455126__Ambientes_en_Bancard.json
+
+---
+
+Conjunto de máquinas (hardware y software base) donde una aplicación es instalada, ejecutada y accedida.
+Ambiente
+
+Descripcion
+
+Desarrollo
+
+Ambiente levantado por un desarrollador
+
+Se levantan servicios y portales en una sola máquina local
+
+Tiene como objetivo permitir desarrollar nuevas funcionalidades
+
+Staging
+
+Ambiente donde se realizan las pruebas antes de pasaje a producción
+
+Aceptación de las tareas (testing de parte del equipo de QA).
+
+Los servicios y portales se encuentran distribuidos en varias VMs
+
+Sandbox
+
+Ambiente donde los comercios realizan la certificación vPOS
+
+Es lo más similar al ambiente de Producción
+
+Producción
+
+Ambiente donde se encuentran los productos que han pasado a producción
+
+Generalmente no más de dos servicios/portales por nodo
+
+Existencia de balanceadores
+
+Es donde los usuarios finales interactúan con la aplicación
+
+Felicitaciones! Terminaste la parte teórica del Onboarding, vamos por la práctica! →
+Ejercicio Práctico: Añadir Promociones a Links de Pago

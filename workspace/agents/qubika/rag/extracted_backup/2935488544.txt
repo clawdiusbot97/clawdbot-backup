@@ -1,0 +1,27 @@
+TITLE: Vulnerabilidades 2024 - Tasking y Estimación
+DOMAIN: 5) Observabilidad
+PRIORITY: Media
+ID: 2935488544
+SOURCE: 2935488544__Vulnerabilidades_2024_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Tarea
+
+Estimación (Días)
+
+Estimación (Hs)
+
+Generación y envío de OTP - Gema ROTP
+
+3
+
+24
+
+Validación de OTP
+
+3
+
+24
+
+Crear historia que diga que quiere que el suuario al ingresar a un dispositivo nuevo tenga un OTP, donde tenga que validar su login con el dispositivo registrado, mediante un sms, o en su defecto mediante un codigo que se le envia al mail registrado.

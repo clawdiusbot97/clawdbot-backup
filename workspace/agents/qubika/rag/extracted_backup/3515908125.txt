@@ -1,0 +1,110 @@
+TITLE: Sentry and Docker Compose Status
+DOMAIN: 2) Docker
+PRIORITY: Baja
+ID: 3515908125
+SOURCE: 3515908125__Sentry_and_Docker_Compose_Status.json
+
+---
+
+Project
+
+Sentry
+
+Docker Compose
+
+bancard-auth-service
+
+Stg:
+Prd:
+
+bancard-billing-service
+
+Stg:(con sentry-raven)
+Prd:
+
+bancard-billing-service-public-proxy
+
+Stg:
+Prd:
+
+bancard-commerces-app-service
+
+Stg:
+Prd:
+
+bancard-commerce-service
+
+Stg:
+Prd:
+
+bancard-commerce-suite
+
+Stg:
+Prd:
+
+bancard-epos-service
+
+Stg:(Listo para Deployar)
+Prd:
+
+bancard-epos-service-public-proxy
+
+Stg:
+Prd:
+
+bancard-external-commerce-service
+
+Stg:
+Prd:
+
+bancard-infonet-cobranzas-app-service
+
+Stg:( Listo para Deployar)
+Prd:
+
+bancard-invoices-portal
+
+Stg:( Listo para Deployar)
+Prd:( Listo para Deployar, error en comunicación)
+
+bancard-invioces-service
+
+Stg:
+Prd:
+
+bancard-payment-link-portal
+
+Stg:(con sentry-raven)
+Prd:(con sentry-raven, error en comunicación)
+
+bancard-payment-link-service
+
+Stg:(Listo para Deployar)
+Prd:
+
+bancard-pix-portal
+
+bancard-pix-service
+
+Stg:
+Prd:
+
+bancard-selling-portal
+
+Stg:(con sentry-raven)
+Prd:(con sentry-raven)
+
+bancard-selling-service
+
+Stg:(con sentry-raven)
+Prd:(con sentry-raven)
+
+bancard-vpos-portal
+
+Stg:(con sentry-raven)
+Prd:
+
+bancard-vpos-service
+
+Stg:
+Prd:

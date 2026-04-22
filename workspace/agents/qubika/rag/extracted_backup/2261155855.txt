@@ -1,0 +1,91 @@
+TITLE: Cómo levanto un proyecto de Bancard dockerizado?
+DOMAIN: 6) Onboarding
+PRIORITY: Media
+ID: 2261155855
+SOURCE: 2261155855__Co╠ümo_levanto_un_proyecto_de_Bancard_dockerizado_.json
+
+---
+
+This document aims to serve as a guide for setting up a dockerized Bancard project in a personal development environment.
+
+Requirements
+To have a GitHub user with the necessary permissions to download Bancard projects. Request it from the team lead or tech lead.
+
+To have a personal SSH key associated with the GitHub user (Connecting to GitHub with SSH).
+
+Note: The personal SSH key should not use a passphrase and should be generated using the ed25519 algorithm.
+To have Docker Desktop installed and running.
+Install Docker Desktop on Mac
+
+Install Docker Desktop on Linux
+
+Set up the moove-it VPN following theVPN Configuration (DEPRECATED)document.
+
+Instructions
+Project with docker-compose
+All the necessary information for setting up a project with docker-compose should be found in the README of that project. If not, we appreciate the initiative to correct the README. However, this document will provide a step-by-step explanation for setting up a dockerized project with docker-compose.
+For this document, thepayment-link-serviceproject will be used as an example. However, please note that the configuration is the same for all services using docker-compose.
+Clone the project using SSH.
+
+Once the project is downloaded, open a terminal in the root directory of the project and execute the command:
+This script will be responsible for copying the configuration files, creating the databases, running the migrations, and spinning up a Docker container with the service and another one with Sidekiq, along with all the necessary containers for the proper functioning of the service, such as a container with MySQL and another one with Redis.
+
+Check the service documentation to confirm that the service is running in the following URL:
+http://localhost:8079/payment-link/doc/0.1/
+
+Once the service is running, access a terminal within the service container with the following command:
+
+Once inside the container, run the tests to confirm that the service is properly configured and ready for development.
+
+MISSION ACCOMPLISHED!
+
+Project without docker-compose
+For this document, thebilling-serviceproject will be used as an example. However, please note that the configuration is the same for all services without docker-compose.
+Run two Docker containers, one with MySQL and another with Redis, using the following commands:
+Note:For the case of the portals, simply start the Redis container.
+
+Clone the project using SSH.
+
+Copy all files/folders that contain.samplein their name to their equivalent without the.sample.
+Example for a file and a folder:
+Note:The .sample files are versioned in the repository.
+
+Configure thedatabase.ymlfile to use the database container (develop and testing).
+MAC:host: docker.for.mac.host.internal
+Linux:host: 127.0.0.1
+Note:This step does not apply to the portals.
+
+Configure theservices.ymlfile to use the staging services.
+To do this, search for theservices.ymlfile inbancard-configurationsfor the respective project and modify the URL with the service’s proxy IP (10.100.14.73).
+
+Example for billing-service:
+> In this case you will need to use the filebancard-configurations/bancard-billing-service/staging/common/services.yml
+> For auth-service, changeservices.auth.stagingto10.100.14.73
+> Do the same for all the services
+
+Configure Redis in services_configuration.yml by modifying the 'host' key:
+MAC:host: docker.for.mac.host.internal
+Linux:host: 127.0.0.1
+
+The redis configuration in MAC should look like this:
+Note:For the case of the portals, the configuration file is calledapplication_configuration.yml.
+
+Create databases:
+Execute theterminal.shscript. This will position us inside the project container. Once there, run the following commands to create the development and test databases:
+Note:This step does not apply to the portals.
+
+Start the Docker container for the project by executing the run.sh file:
+Note:Wait for the gem installation and server startup to complete. You can monitor the process by running:docker logs -f billing-service.
+
+Check the service documentation to confirm that the service is running in the following URL:
+http://localhost:8081/billing/doc/0.2
+Note:You can find the corresponding project URL in the README file.
+Note:For the case of the portals, you can validate if the portal is running by accessing the portal's URL.
+
+Once the service is running, access a terminal within the service container with the following command:
+
+Once inside the container, run the tests to confirm that the service is properly configured and ready for development.
+
+MISSION ACCOMPLISHED!
+En Bancard nos ayudamos entre todos, por esa razón creamos una suite en StackOverflow para preguntar y responder dudas técnicas, mirá la guía de como lo utilizamos acá↓
+Stack Overflow Guideline

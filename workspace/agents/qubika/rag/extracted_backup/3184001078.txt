@@ -1,0 +1,44 @@
+TITLE: Pendientes PCI preauth
+DOMAIN: General
+PRIORITY: Media
+ID: 3184001078
+SOURCE: 3184001078__Pendientes_PCI_preauth.json
+
+---
+
+Mejoras
+Agregar tests de RSpec.
+
+Revisar messages de todas las operaciones involucradas en PCI preauth.
+
+Revisar pay_pci_encrypted_buy (NO preauth) que haya mantenido mismo comportamiento.
+
+Ver manera de validar que el comercio y sucursal en la confirmación pertenezcan a la preauth a ser confirmada. Ver si hay un /refund que hace algo similar
+
+checkear campos response y response_details de la respuesta del endpoint de confirmacion. Se podría hacer similar al endpoint de la creación?
+
+corregir typo fué
+
+enviar string vacio al RPG cuando se hace una preauth sin cvv
+
+revisar token de respuesta enpay_pci_buy,pay_pci_encrypted_buyy si hay alguna operación mas que pueda haber sido afectada:
+pay_pci_encrypted_buy: volver a como era antes. Formato"confirm#{shop_process_id}" + "#{amount_in_gs_for_token}#{currency_for_token}”y MD5.
+
+confirm_pci_preauthorization: devolver mismo token que la request.
+
+Con ruby-upgrade
+logger de rpg. Vpos ya tiene integrado bancard-loggers?
+
+revisar logs de puma de ruby-upgrade
+
+Deploy
+Correr migración
+
+Hacer inserts:
+INSERT INTO service_operations(name) VALUES ('confirm_pci_preauthorization')
+
+INSERT INTO application_permissions(application_id, service_operation_id) VALUES (_, _)
+
+Prestar atención aupdate!/update_attributes!. En caso de deployar junto a ruby-upgrade, se debe usarupdate!. En caso de deployar unicamente la rama feature/pci-preauthorizations se debe usarupdate_attributes!.https://github.com/bancardsa/bancard-vpos-service/commit/5a99f4b091d89afc2c186a7ad586d501bb01ecb4
+
+Agregar archivos de RPG middleware a bancard-configurations en ambiente prod, etc.

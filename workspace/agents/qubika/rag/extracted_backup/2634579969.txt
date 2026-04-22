@@ -1,0 +1,149 @@
+TITLE: VUELTO Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 2634579969
+SOURCE: 2634579969__VUELTO_Estimation.json
+
+---
+
+CONFLUENCE:https://jira.bancardnet.dom/confluence/pages/viewpage.action?pageId=115658737
+JIRA: TO-DO
+
+PROYECTO
+
+TAREA
+
+NOTAS
+
+ESTIMACIÓN (hrs)
+
+selling-service
+
+Agregar columnaqr_sourcea la tablapayment_hooks, amonut_buy, amount_change (para vuelto) y validar si no agregamos otra columna para el caso de Extracción.
+
+8hs
+
+selling-service
+
+Recibir como parámetro los camposqr_sourceen la operación degenerate_qr_expressy almacenar en la base.
+
+Vamos a tener que agregar los siguientes campos:
+Vuelto: amount_buy, amount_change => sumando estos deberia coincidir con el amount.
+Extracción: por ahora no vemos un campo nuevo a agregar
+
+El campo qr_source debe ser opcional y puede tener los valores:
+QR-BCpara el caso de los QRs actuales
+
+QR-EXTpara el caso de extracciones
+
+QR-CHpara el caso de vuelto
+
+En el caso de no recibir el campoqr_source, se debe usarQR-BCpor defecto.
+
+En el caso de los QRs ya creados y que tendrán el campoqr_sourceennil, se deberá considerar que son del tipoQR-BC.
+
+20hs
+
+selling-service
+
+Modificar respuestas de payment_hook para incluir los datosqr_source
+
+12hs
+
+selling-service
+
+Modificar callback al comercio
+
+Enviar un campos mas correspondiente a la comisión, solo para el caso deQR-EXT.
+Para el caso deQR-CH, hay que mandar los montos desglosados (monto y vuelto)
+En los casos de los QR “comunes”, los campos extras no se envian ni siquiera la clave.
+
+16hs
+
+selling-service
+
+Modificar el endpoint de confirmación de QR “comun”, para enviar los nuevos parametros al JPOS.
+Fijarse si viene el bank_code (se llama entity_bank_code).
+Consultar el servicio de comisión de las entidades (Rediseño a traves de external-services) y obtener el monto de la comisión para esa entidad.
+Guardar la comisión en la base (Payments.extraction_comission)
+
+Estos parametros se definirán durante el desarrollo
+
+32hs
+
+external-services
+
+Agregar endpoint para consultar la comisión dado un importe y bank_code
+
+20hrs
+
+selling-service
+
+Agregar “extraction_commission” en la tabla Payments
+
+8hrs
+
+billing-proxy
+
+Si entity_bank_code = 0 (es pago móvil), no lo dejamos confirmar QR-EXT y QR-CH.
+Modificar operación de confirmación, retornar un error en caso de que la entidad no esté habilitada para operar QR-EXT y QR-CH.
+
+12hrs
+
+billing-proxy
+
+Agregar dos columnas en la tabla “entity” para indicar si puede operar Vuelto y/o Extracciones.
+También agregar 1 flag (o mas) mas indicando “si hay que mandar los campos adicionales o no”
+Analizar también un json, por ejemplo:
+{
+vuelto: true
+datos_adicionales: false
+extraccion: true
+datos_adicionales: true
+}
+Modificar el CRUD
+
+20hrs
+
+external-commerce-service
+
+Recibir como parámetro los camposqr_sourceen la operación degenerate_qr_expressy almacenar en la base.
+
+Vamos a tener que agregar los siguientes campos:
+Vuelto: amount_buy, amount_change => sumando estos deberia coincidir con el amount.
+Extracción: por ahora no vemos un campo nuevo a agregar
+
+El campo qr_source debe ser opcional y puede tener los valores:
+QR-BCpara el caso de los QRs actuales
+
+QR-EXTpara el caso de extracciones
+
+QR-CHpara el caso de vuelto
+
+En el caso de no recibir el campoqr_source, se debe usarQR-BCpor defecto.
+
+16hs
+
+selling-service
+
+Modificar endpoint para la obtención de un Payment, para que devuelva el “extraction_comission”
+
+12hrs
+
+angus
+
+Revisar e implementar la devolución de parametros opcionales para que, en ciertos casos, no se devuelva ni siquiera la key
+
+30hrs
+
+billing-proxy
+
+Agregar campoqr_source, amount_buy, amount_change y la exchange_commission a la respuesta deldecode_qr_code
+
+20hs
+
+Contigencia
+
+16hs
+
+Total: 242

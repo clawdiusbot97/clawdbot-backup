@@ -1,0 +1,59 @@
+TITLE: [Ruby Update] Status Qubika - 10 de Noviembre
+DOMAIN: General
+PRIORITY: Media
+ID: 2775056562
+SOURCE: 2775056562__[Ruby_Update]_Status_Qubika_-_10_de_Noviembre.json
+
+---
+
+Date
+
+Name
+
+Status
+
+Action Items
+
+Yesterday: Issue PR-191
+Today: Continúo con PR-191 , revisando un problema de transacciones duplicadas en procesos sidekiq.
+Blockers? No
+
+1incomplete
+
+QA / Dev: Emiliano Gomez
+Yesterday: Trabajé en PR-199, hice seguimiento al resto de tickets asignados a mi
+Today: Terminar con PR-199, y tomar un nuevo ticket
+Blockers?
+
+2incompletePR-106 vuelve a estar bloqueado, ya que siguen los problemas de C4C
+
+Yesterday: ReTesting in prod PR-167, PR-179, PR-180, PR-181. ReTest PR-203, PR-160, PR-94, PR-106, PR-123
+Today:ReTest PR-66, PR-73, PR-94
+Blockers?
+
+QA / Dev: Jhonatan Sarrazola
+Yesterday: Trabajé y finalicé los tickets 192 de ruby-upgrade y 242 de desembolsos
+Today: Empecé el ticket 207 de ruby-upgrade
+Blockers? El ticket no tiene mucha info, estoy coordinando con Carlos para reunirnos y aclararlo un poco más.
+
+Yesterday: PR-212 y PR-215. Debugging y replicación de los errores. Revision de PRs.
+Today: continue con esos tickets que pasaron al srpint de errores conocidos. Estoy tomando el PR-210 dobre paginado de usuarios
+
+Yesterday: Revisión ticket PR-197 (pasó a rechazado, no relacionado a ruby upgrade) Comencé PR-76
+Today: Subí para revisión de código PR-76. Estuve revisando error en iniciativa de Datos Adicionales.
+Blockers?
+
+3incompleteTicket de revisar pendiente PR-161, error en servicio de c4c
+
+Dev: Gastón Zanuttini
+Yesterday: PR-214. Debuggie el error local
+Today: Encontre el posible error que se encuentra en Picasso-remote-client.
+Blockers? No
+
+4incompleteHablar con Denis5incompleteVer este ticket porque no es tema de actualización de Ruby. F5 está trancando esto, por ende escapa de nosotros y no es tema de actualización de Ruby. Habría que arreglar F5 y re testear para ver si esto sigue sin funcionar.
+
+Yesterday: PR-69, PR-98, PR-70
+Today: PR-70, PR-216
+Blockers?
+
+6incomplete

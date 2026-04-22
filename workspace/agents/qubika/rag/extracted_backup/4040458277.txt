@@ -1,0 +1,82 @@
+TITLE: Preguntas Qubika
+DOMAIN: General
+PRIORITY: Media
+ID: 4040458277
+SOURCE: 4040458277__Preguntas_Qubika.json
+
+---
+
+En este documento vamos a dejar las preguntas relacionadas al diseño
+Figma URL:https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=1-26362&p=f&t=OplWcJttNmwdhLut-0
+Contraseña para Figma: uxbancard2025
+
+Pregunta
+
+Sección
+
+Resp
+
+Vamos a manejar el login y reseteo de contraseña directamente desde el portal? La UI se independiza de auth-portal?
+
+Login / Reseteo de contraseña
+
+Se mueve el flujo del frontend al portal de comercios.
+
+Vemos que en el Home están opción A y opción B.
+Vemos la opcion A muy útil ya que es un resumen del cliente, y tiene de entrada un panorama general de como viene su comercio, pero se pierde lo de la opción B que es la oferta de nuevos productos, que son oportunidades de venta para Bancard.
+Creemos que sería mejor que el inicio pueda incluir los productos que se ofrecen, y tal vez tener la vista de resumen en otra pestaña. Sino, ver la forma de que puedan coexistir ambas.
+Se puede también pensar la forma de hacer un A/B testing, donde unos usuarios tengan opción A y otros opción B a la vista, y ver como repercute en las ventas.
+
+Home / Inicio
+
+A definir. Se van a crear ambas, pero luego definir si la de resumen sale en el primer release.
+
+En Menu lateral está definido? Vemos que está InfoNet cobranzas como opción. Que pasa cuando el usuario no lo tiene contratado? No es mejor mostrar esa vista solo si el usuario está dentro del producto?
+
+Menu de Navegación lateral
+
+El menu oficial es el deestavista
+
+Que ocurre con la landing de cada uno de los productos que tenemos actualmente?
+
+Home
+
+Sigue en pie, rediseño →
+
+El Botón de Solicitar Factura Electrónica va a redirigir al usuario al flujo de contratación de productos existentes?
+
+Inicio, opcion A
+
+Falta vista de permisos por producto.
+
+Como se maneja Fingerprint/autenticación por cajas? No se ve como una opción en los menús lateraels, se mueve dentro de IC?
+
+Las configuraciones propias de cada producto se agrupan dentro de la sección “Configuraciones” (Ej entorno y clientes de pruebas de vpos)
+Lo mismo con el soporte de cada producto
+
+Como funcionarían los filtros por fecha en los reportes “programados”?
+Es decir, si yo filtro por el mes de Mayo en un reporte y lo marco para ser programado, me va a enviar el mismo reporte para que rango de fecha? Cada cuanto tiempo?
+
+Además, envío por mail va a ser al correo de el o los supervisores?
+Se va a enviar todos los meses? semana a semana? Va a ser configurable la frecuencia?
+
+Ventas - Reportes de movimiento
+
+La descarga del reporte de movimientos se va a hacer en formato excel (xlmx) en lugar de csv? Vamos a tener alguna plantilla especial para estos resportes?
+
+Ventas - Reportes de movimiento
+
+Los filtros guardados van a poder ser modificados?
+Borrados?
+
+Misma pregunta respecto a los reportes programados
+
+Ventas - Reportes de movimiento
+
+No están claras las transiciones entre vistas
+
+fixed
+
+No se identifica bien en que vista estamos parados
+
+fixed

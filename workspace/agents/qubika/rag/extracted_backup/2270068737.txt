@@ -1,0 +1,51 @@
+TITLE: Configuración de Repositorios
+DOMAIN: 7) Repos
+PRIORITY: Alta
+ID: 2270068737
+SOURCE: 2270068737__Configuracio╠ün_de_Repositorios.json
+
+---
+
+The purpose of this document is to act as a guide on how to configure GitHub repositories and each of its branches.
+noneRepository Name
+All Bancard GitHub repositories must be named according to the following rules.
+The name should start withbancard
+
+Use-as word separator
+
+E.g.
+bancard-selling-service
+bancard-payment-link-portal
+
+Default Branch
+The default branch must bedevelopfor all of our services and portals, andmasterfor our gems.
+
+General Configuration
+Features Configuration
+Pull Requests Configuration
+
+Colaborators and Teams
+
+Branches Configuration
+Services and Portals
+develop
+Branch name pattern
+Protect matching branches
+Rules applied to everyone including administrators
+master
+Branch name pattern
+Protect matching branches
+Rules applied to everyone including administrators
+feature/*
+Branch name pattern
+Protect matching branches
+Rules applied to everyone including administrators
+
+Gems
+master
+Branch name pattern
+Protect matching branches
+Rules applied to everyone including administrators
+
+Siguiente Paso→
+Configuración de Reminders en GitHub

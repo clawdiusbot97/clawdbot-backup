@@ -1,0 +1,13 @@
+TITLE: Cardinal fecha de vencimiento
+DOMAIN: General
+PRIORITY: Media
+ID: 4406542349
+SOURCE: 4406542349__Cardinal_fecha_de_vencimiento.json
+
+---
+
+Descripción
+Ajustar el parámetro fecha de vencimiento que se envia a Cardinal cuando una tarjeta catastrada local ya expiró, pero se emitió su renovación. Consultar la fecha de vencimiento actualizada y enviar ese valor a Cardinal para evitar rechazos.
+Aplica a vPOS y TPago.
+TPago:BAUSD-5682
+VPos:BAUSD-5683

@@ -1,0 +1,35 @@
+TITLE: Análisis de operación get_products - commerce-suite
+DOMAIN: General
+PRIORITY: Media
+ID: 2791866672
+SOURCE: 2791866672__Ana╠ülisis_de_operacio╠ün_get_products_-_commerce-suite.json
+
+---
+
+Este documento se centra en abordar un problema de rendimiento identificado en una operación específica del portal de comercios. A través de este análisis, buscamos identificar las causas subyacentes, evaluar el impacto y proponer soluciones para mejorar la velocidad y la estabilidad de la operación.
+Información General
+Plataforma: Infonet Cobranzas
+Proyecto: commerce-suite
+Operación:/services/epos/cashiers/get_products
+Motivación
+Este análisis se encuentra motivado por las siguiente consideraciones:
+Infonet cobranzas es una plataforma que cuenta al día de hoy con mucho potencial de mejoras en cuanto a performance y en la que se quiere poner especial énfasis de cara al 2024.
+
+La operación a analizar, resulta ser la operación con el tiempo medio de respuesta mas alto de commerce-suite, registrando un tiempo medio total de 4.89 segundos, y de 8.8 segundos en el 5% mas lento. Un tiempo de respuesta que afecta considerablemente la experiencia de usuario.
+
+Esta operación es una de las 10 operaciones mas consumidas de commerce-suite con un total de 12,8 solicitudes/minuto. A su vez, es la operación que mas tiempo de ejecución consume de commerce-suite.
+
+Para extraer todas estas mediciones y evidencias se utilizó un timeframe de 1 semana.
+Investigación
+La operación con problemas tiene dos consultas a servicios externos
+get_commerce_branch_productsen epos-service
+
+59.8ms tiempo medio de respuesta
+86.6ms tiempo medio del 5% mas lento
+
+get_products_reporten billing-service
+
+37.5ms tiempo medio de respuesta
+49.1ms tiempo medio del 5% mas lento
+
+Con esta información y teniendo en cuenta que ademas ambas operaciones se cachean usando dory, se puede deducir que los problemas de performance no son a causa de las consultas a los servicios externos a commerce-suite, sino que se encuentra en el mismo portal.

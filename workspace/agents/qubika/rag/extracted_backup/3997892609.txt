@@ -1,0 +1,406 @@
+TITLE: QR Argentino - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3997892609
+SOURCE: 3997892609__QR_Argentino_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para QR Argentino, a cargo de Bruno Morena.
+Las horas estimadas son:462
+Fecha de Inicio:
+Fecha de Entrega:
+Requerimientos:
+
+Iniciativa solo para POS, como Pix en POS
+
+Crear QR, partner que trabaja en argentina que va a ser el proveedor DePay
+URL de documentación:https://docs.latam-payments.depay.us/reference/api-reference/qr
+Onboarding queda afuera
+
+No se carga ninguna información como era en pix, se crea el qr y se escanea de parte del usuario, recien ahi recibimos la info
+
+Nosotros no hacemos movimiento financiero, sino que solo registramos
+
+Los pagos son en Guaraníes, el servicio de DePay se encarga de hacer la conversión pero se está negociando a que lo haga Bancard y se muestre como en PIX
+
+Evaluar si vamos a crear un servicio nosotros o utilizar un servicio que ya existe
+Mejor aislarlo del flujo existente por si llega a escalar este proyecto (crear un servicio)
+
+La parte de reconciliación va por parte de Bancard
+
+Tenemos que guardar la información de los movimientos / transacciones
+No vamos a tener un apartado exclusivo para QR Argentino como en PIX, por ende debemos mostrar los movimientos en la sección de Mis Transacciones del Portal de Comercios.
+
+Tarea
+
+Estimación (hs)
+
+Proyecto/Servicio
+
+Setup inicial QR Argentino Service
+
+-
+
+-
+
+Creación de repositorio en GitHub
+
+4
+
+qr-arg-service
+
+Iniciar proyecto con Angus
+
+8
+
+qr-arg-service
+
+Dockerización
+
+8
+
+qr-arg-service
+
+GitHub Actions
+
+8
+
+qr-arg-service
+
+Instalación de Gemas (dependencias, external-services, loggers)
+
+8
+
+qr-arg-service
+
+Agregar configuraciones
+
+4
+
+bancard-configurations
+
+Agregar proyecto en bancard-docker
+
+8
+
+bancard-docker
+
+Implementar Dynatrace
+
+8
+
+SRE
+
+Implementar Opentelemetry (new standars)
+
+8
+
+SRE
+
+Implementar Caché de comercios
+
+8
+
+qr-arg-service
+
+Autenticación local
+
+8
+
+qr-arg-service
+
+Sentry
+
+4
+
+SRE
+
+Creación de Application Credentials
+
+4
+
+qr-arg-service
+
+Integrar Baas middleware
+
+2
+
+qr-arg-service
+
+Configurar máquina de STG
+
+4
+
+SRE
+
+Configurar proxy de servicios STG
+
+4
+
+SRE
+
+Configurar máquina de PROD
+
+4
+
+SRE
+
+Configurar proxy de servicios PROD
+
+4
+
+SRE
+
+Desarrollo servicio
+
+-
+
+-
+
+Creación de modelos, tests, validaciones
+
+12
+
+qr-arg-service
+
+Creación de tablas en BD
+
+4
+
+qr-arg-service
+
+Producto en commerce-service (tablas, usuarios)
+
+8
+
+commerce-service, external-commerce-service
+
+Apikey Depay, authentication
+
+8
+
+qr-arg-service
+
+Fine tuning & error handling
+
+16
+
+qr-arg-service
+
+Crear servicio qr_arg (Depay) (archivos de business, service, restool)
+
+8
+
+external-services
+
+Flujo de compra (Create new QR for POS)
+
+-
+
+-
+
+POSTqr, tests
+
+20
+
+qr-arg-service
+
+Endopoint qr, tests & stubs
+
+16
+
+external-services
+
+Endpoint qr
+
+8
+
+external-commerce-service
+
+Validación contrato
+
+8
+
+external-commerce-service
+
+Tests endpoint qr
+
+12
+
+external-commerce-service
+
+Creación qr (Depay API)
+
+8
+
+qr-arg-service
+
+Creación payment_hook
+
+12
+
+qr-arg-service
+
+Manejo de errores
+
+8
+
+qr-arg-service
+
+Sanitizar flujo con Depay
+
+4
+
+qr-arg-service
+
+Flujo Confirmación
+
+-
+
+-
+
+Endpoint Confirmación (configurar proxy DMZ)
+
+16
+
+qr-arg-service
+
+Llamado a pos-service para confirmación
+
+4
+
+qr-arg-service
+
+Reportar a RPG el pago al llegar la confirmación
+
+16
+
+RPG (qr-arg-service)
+
+Cancelación (Cancel an existing QR)
+
+-
+
+-
+
+DELETEqr, tests
+
+16
+
+qr-arg-service
+
+Cancelar qr
+
+8
+
+external-commerce-service
+
+Endpoint cancel, tests & stubs
+
+8
+
+external-services
+
+Cancelación (Depay API)
+
+8
+
+qr-arg-service
+
+Actualilzar flujo de cancelación
+
+4
+
+qr-arg-service
+
+Manejo de errores
+
+8
+
+qr-arg-service
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+16
+
+Soporte Pre-Producción. Bug fixing.
+
+40
+
+Total Desarrollo
+
+402
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+60
+
+Total Desarrollo + Gestión
+
+462
+
+Preguntas 8 Julio (Proveedor descartado)
+En qué monedas vamos a permitir la generación de hooks? Solo GS o también USD?
+
+PayWay acepta la moneda solo en ARG o también en USD? En el caso de que acepte las dos, en que moneda vamos a mandar el monto si la venta se hizo en GS?
+
+Como vamos a consultar el cambio de GS a ARG?
+
+Que es el CUIT y que vamos a usar para identificar a los comercios?
+
+Hay una operación disponible para cancelar una intención de pago antes de ser aceptada?
+
+(Va a tener integración con el Portal de Comercios?)
+
+Api key de PayWay, será una sola para todos? o distinta por caja/comercio
+
+Los pos deben recibir el qr_raw o en base64(imagen)
+
+Deberíamos hacer una consulta para la anulación/devolución? o nos devuelve ya el resultado (success/fail)
+
+Se debe comunicar al RPG para los casos de anulación/devolución? En particular en la anulación
+
+Preguntas 4 Agosto
+Vamos a utilizar collector/stores/pos para cada comercio registrado, o utilizar un único comercio “Bancard” para operar todos los QRs? ->Se va a hacer una sola vez el onbording del comercio Bancard y bajo este cliente se va a generar todos los QR de los comercios de Bancard
+
+Lógica financiera del lado nuestro? Cacluclar comisiones?-> En principio vamos a mostrar el importe de la venta, tanto en gs y pesos con su respectiva conversión, la app del proveedor se va a encargar de agregar un importe por costo de servicio, esto debemos revalidar si va a continuar de esta forma
+
+Nosotros generamos el QR en monto Guaraníes? Depay devuelve el monto en Pesos AR incluyendo su comisión?-> En principio nosotros vamos a hacer la conversión del importe total de la venta
+
+Una vez hecha la conversión, cual monto deberíamos registrar como monto de la transacción, en gurarníes o pesos arg?-> En gs para nuestro caso, pero vamos a analizarle mejor si guardamos toda la info como la tasa de conversión usada y el importe en pesos
+
+Cancelar los QRs o dejarlos colgados?-> Debe tener tiempo de expiración el qr de nuestra parte, aparte de la cancelación desde el pos
+
+Imprementar los rollbacks(refunds) manuales? Vamos a rollbackear pagos desde el portal de Comercios?Vamos a rollbackear pagos desde el portal de Comercios? -> Anulaciones manuales ni refund vamos a tener
+
+Vamos a querer el status del pago?-> Si, estaria bueno contar con esta opción
+
+Vamos a querer utilizar Reconciliation Files de depay?-> Si, se debe usar, pero vamos a ver si lo hacemos en nuestros servicios ruby o lo hacemos en otra plataforma
+
+Vamos a tener un portal específico?-> Esto no comprendo
+
+Parámetros en la creación de QR? Usaríamos items, tax_id(sería el rut)?-> No lo usuaríamos
+
+Para varios pagos podemos utilizar el mismo JWT?-> Esto lo podemos ver con el proveedor
+
+Preguntas 7 de Agosto
+Cómo vamos a obtener el pos_external_reference, que Depay nos genera en el onboarding de los merchants para cada pos?-> Este hay que ver la flexibilidad que tenemos con el servicio de depay, si nos permite "solo" crear un pos_external_reference podemos usar el mismo para todas las request aunque no es de mi agrado al 100% esa solución, lo otro es usar el mismo proceso de visa qr que crea terminales y aparte de llamar al servicio de hst también llamar al servicio de depay para dar de alta el dispositivo pos y obtener este valor para la generación del qr
+
+external_reference sería el hook alias?-> Puede ser un tid generado único para cada invocación, por ejemplo si usamos el hook alias no se si vamos a poder identificar de manera única cada llamada al servicio de depay
+
+El botón de cancelación desde el pos, tiene que llamar al endpoint de cancelación de Depay? O podemos dejar de mostrarlo en pos, y permitir que expire por tiempo (10 minutos, expiración de Depay)-> Mejor que demos la flexibilidad de llamar al servicio de cancelación de qr y que el cajero no quede esperando los 10 min, ya que en algunos situaciones se carga mal el importe y se quiere cancelar el qr y pide pagar con tarjeta en lugar de qr
+
+Vamos a querer utilizar específicamente el endpoint de reconciliación que nos provee Depay? Desde el nuevo servicio (qr-arg-service) vamos a necesitar comunicarnos con ese endpoint?-> Como este proceso se encarga del proceso de pago a comercios queremos usar el mismo esquema de pix que hay un proceso en genexus que hace la lectura de las tx en nuestras tablas transaccionales y los pagos a los comercios

@@ -1,0 +1,150 @@
+TITLE: TPago Tareas Diciembre 2024 - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3566502316
+SOURCE: 3566502316__TPago_Tareas_Diciembre_2024_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación paraTPago, a cargo dey.
+Las horas estimadas son:
+Fecha estimada de entrega:{Día}, comenzando: {Día}
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+[tarea 1] Agregar lógica para consultar cantidad de tarjetas catastradas por un usuario.
+El máximo debe ser configurable.
+
+Si el usuario intenta catastrar una cantidad mayor, indicarle que no es posible con un mensaje.
+
+Solo las tarjetas activas deben contar para la cantidad de catastros.
+
+Agregar flag para que las tarjetas que se migran desde pago movil NO pasen por este control.
+
+Stripe SI debe pasar por este control.
+
+18
+
+payment-link-service
+
+[tarea 1] Mapear el error en TPago Portal en el caso que el usuario ya tenga 5 tarjetas catastradas.
+
+4
+
+tpago-portal
+
+[tarea 2] Crear tabla y modelo para intentos de registros de catastros fallidos
+
+4
+
+payment-link-service
+
+[tarea 2] Crear lógica para bloquear a un usuario tras tres rechazos al intentar catastrar una tarjeta
+Crear query con el conteo de fallos y comparar con el valor máximo de rechazos seteado en la configuración. Si supera la configuración se bloquea y sino se deja pasar. El usuario debe desbloquear su cuenta con atención al cliente
+
+El filtro será para un usuario y una tarjeta.
+
+El límite va a ser mensual
+
+Si el usuario queda bloqueado, cerrar sesión
+
+Incluir también para Flujo Stripe
+
+24
+
+payment-link-service y tpago-portal
+
+[tarea 2] Crear modelo de limpieza de datos, con tiempo configurable
+
+8
+
+payment-link-service y bancard-configurations
+
+[tarea 3] Crear tabla y modelo para lista blanca de usuarios catastro.
+La lista blanca incluirá los usuarios que están exentos del control de cantidad de catastros por usuarios
+
+4
+
+payment-link-service
+
+[tarea 3] Crear CRUD sobre este nuevo modelo y exponer en endpoints.
+Get de todos los usuarios, toggle del estado activo/inactivo y un create.
+
+24
+
+payment-link-service
+
+[tarea 3] Agregar lógica en business de catastros para que los usuarios de la lista blanca NO pasen por el nuevo control.
+
+4
+
+payment-link-service
+
+[tarea 4] Agregar cédula en vista de flujo catastro normal
+Solamente será para tarjetas locales (agregar control para esconder el input si no lo es).
+
+Input nuevo de cedula será agregado a la misma fila de fecha de exp y cvv.
+
+Borrar ‘current_user.ci’ del parametro de cédula para siempre enviar lo que llegue de la vista
+
+6
+
+tpago-portal
+
+[tarea 4] Agregar cédula en vista de flujo stripe
+Agregar checkbox de ‘No soy titular de la tarjeta’ que al clickear abrirá nuevo input de ‘C.I del Titular’
+
+Pendiente: carlos confirmará si habrá que ocultar o no el checkbox nuevo si la tarjeta es internacional.
+
+Agregar logica para enviar una cédula u otra dependiendo del checkbox
+
+6
+
+tpago-portal
+
+[tarea 5] Agregar lógica en rescue de pago con tarjeta catastrada y pago ocasional para links UNICOS
+Agregar migración para nueva columna ‘blocked’ en tabla de links.
+
+Agregar nueva config en tabla de configuraciones de máximos intentos de pago fallidos.
+
+En los rescue, filtrar por pagos fallidos de un link en un rango de 1 mes, si supera a la configuración nueva entonces bloquear.
+
+10
+
+payment-link-service
+
+[tarea 5] Agregar dataset de Links
+Un dataset genérico que operará sobre tabla de Links, pudiendo filtrar inicialmente por tipo de link, el tipo de pago (pago unico) y la columna nueva ‘blocked’.
+
+Exponer dataset en endpoint
+
+24
+
+payment link service
+
+[tarea 5] Agregar nueva vista en portal de comercios para mostrar links bloqueados
+Consumir nuevo dataset de links, filtrando por tipo de link, el tipo de pago (pago unico) y la columna nueva ‘blocked’.
+
+16
+
+payment link portal
+
+Revisión y corrección de PRs, pruebas locales, deploy a stg, pruebas en ambiente
+
+24
+
+Total Desarrollo
+
+176
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+23
+
+Total Desarrollo + Gestión
+
+199

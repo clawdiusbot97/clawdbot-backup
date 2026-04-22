@@ -1,0 +1,34 @@
+TITLE: Microsoft Teams Setup
+DOMAIN: 6) Onboarding
+PRIORITY: Media
+ID: 2621308929
+SOURCE: 2621308929__Microsoft_Teams_Setup.json
+
+---
+
+Guide for logging into Microsoft Teams
+
+Download Microsoft Teams
+If you haven't already, download and install the Microsoft Teams application on your device.
+https://www.microsoft.com/en/microsoft-teams/download-app
+
+Wait to receive access from Bancard via email
+You need to wait to receive an email from the Bancard Team containing the necessary login details for Microsoft Teams.
+
+Sign in to Teams with your Moove-IT email
+Open the Microsoft Teams application on your device and select the "Sign in" option. Enter your Moove-IT email address and click "Next" or the arrow icon.
+
+Choose "Sign-in options" > "Sign in to an organization"
+Once you've entered your email address, you'll be presented with a screen to select sign-in options. Choose "Sign-in options" and then select "Sign in to an organization".
+
+Paste the organization’s domain name
+In the provided field, paste the organization domain name that was sent to you via email from Bancard. Make sure to copy and paste the name accurately.
+
+Paste the verification code
+After entering the organization name, you'll receive an additional email with a verification code. Open your email client, find the verification email, and copy the code.
+
+Enter the verification code
+Return to the Microsoft Teams sign-in screen and paste the verification code into the corresponding field. Ensure that the code is entered correctly.
+
+Complete the sign-in process
+Once you've entered the verification code, click the "Sign in" or "Accept" button to complete the sign-in process. If the verification code is correct, you'll be taken to your Microsoft Teams account associated with the specified organization.

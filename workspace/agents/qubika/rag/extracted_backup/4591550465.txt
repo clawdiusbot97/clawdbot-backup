@@ -1,0 +1,189 @@
+TITLE: Pago Movil - Pago con Cuenta Bancaria- Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4591550465
+SOURCE: 4591550465__Pago_Movil_-_Pago_con_Cuenta_Bancaria-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Pago con Cuenta Bancaria, a cargo de.
+Las horas estimadas son: 214 ~ 35 días teniendo en cuenta quetrabaja 6hs por día.
+Fecha de Inicio:
+Fecha de Entrega:
+Tarea
+
+Servicio
+
+Estimación (hs)
+
+Agregar columnas para bank_account_original_number y account_holder a Account,
+Crear modelo BankAccount < Account
+y validaciones de presencia de los valores mencionados
+
+billing-service
+
+12
+
+Crear Tabla y modelo BankAccountAttempt con las siguientes columnas:
+
+- id (indexado, único)
+- user_id (belongs_to)
+- Account (belongs_to optional)
+- otp
+-otp_expires_at
+- todos los campos requeridos para catastrar la cuenta bancaria (account_number, cel y CI ingresados por el usuario)
+-status (pendiente/aceptado/rechazado validacion/ rechazado notificacion)
+
+Definir métodos on-create para asignación automática de OTP
+
+Definir métodos de instancia para renovar OTP
+
+12
+
+Insertar en tabla FinancialInstitutions una columna accepts_bank_accountbooleancondefault false
+
+agregar la columna al dataset FinancialInstitutions
+
+billing_service
+
+4
+
+Crear tabla financial_institution_messages que tenga columnas: financial_institution_id, message_key y el message
+
+billing-srv
+
+4
+
+Implementar vista para elegir una entidad financiera (para catastrar una cuenta) (inicialmente solo Banco Continental)
+
+utilizar get_financial_institutions_report filtrando por accepts_bank_account = true
+
+bportal
+
+8
+
+Vista formulario agregar medio de pago (Cuenta Bancaria)
+
+Al submittear el form se llama a billing-service y se redirecciona a la vista de OTP
+
+se submittea bank_account_original_number, ci(tomado del user), celular (tomado del user) y financial_institution_id(de la vista anterior)
+
+Ante error de la entidad de 'Catastro bloqueado' redirigir al index con un flash de error
+
+bportal
+
+16
+
+Implementar endpoint de pre-registro de cuenta bancaria.
+
+Se creará un nuevo registro en la tabla BankAccountAttempt con los datos de la cuenta y un OTP generado en el momento
+Se llama a la entidad y se le envía el OTP
+(Usar FinancialInstitutionOperations)
+Timeout configurable globalmente para este llamado (5 seg originalmente)
+Se retorna a bportal el otp_expires_at
+
+billing-service
+
+18
+
+Agregar endpoint de reenvio de otp
+Recibe el id del bank_account_attempt, genera un nuevo otp y llama a la misma operación de la entidad de validación de cuenta (con la informacion que ya esta guardada en el bank_account_attempt)
+Validar que el status sea pendiente, levantar error en caso contrario.
+
+billing-srv
+
+8
+
+Implementar vista de ingreso de OTP
+
+Al submittear el OTP se llama a Billing-service
+para validar el OTP de registro de cuenta, y completar el catastro.
+
+Se debe incluir boton de reenvio de OTP, recordar bloquearlo por 30 seg despues de clickeado (mostrar este contador?)
+Se debe mostrar un contador del tiempo de validez del OTP. Este contador no se reinicia si se ingresa OTP invalido, pero si si se reenvia el OTP
+
+En caso de éxito se redirecciona a la vista de medios de pago
+
+En caso de fracaso, se debe soportar estos dos flujos:
+- Reintentar hasta que el back-end indique que no se puede más
+- Flash de error y redirección a vista de medios de pago
+
+bportal
+
+20
+
+Implementar endpoint confirm_bank_account
+
+Se valida OTP contra el guardado
+Se llama al endpoint de notificacion en caso de otp fallido con key otp_failed, y en caso de exito con key approved/otp_success. Siempre esperando la respuesta de la entidad.
+
+Si el otp fue exitoso y la entidad responde un 200 solo entonces se crea el entry BankAccount en la DB
+En caso de que el otp falle y la entidad responda con 200, no se crea la cuenta pero se permite reintentar otp
+Si la entidad responde error, responder un error y en el front se redirige a medios de pago
+
+Enviar a audit-srv el resultado si el otp coincide y la respuesta de la entidad, con bank_account_attempt_id. y user_id. Ver que datos mandar.
+Loggear todas las requests a la entidad (ver si se puede extender GenericRequest para redefinir el metodo logger)
+
+Se actualiza el BankAccountAttempt acorde al resultado (status).
+
+billing-service
+
+20
+
+En vista de Mis Transacciones agregar filtro de BankAccount
+
+bportal
+
+12
+
+Agregar cuenta bancaria a Reportes de transacciones
+
+bportal/notification-service
+
+12
+
+enconfirm_paymentasegurar soporte para pagos de QR con cuentas de tipo BankAccount
+
+billing-service
+
+4
+
+Para borrado de Accounts, adaptar para el borrado de BankAccounts
+
+billing-service
+
+8
+
+Notificar catastros borrados de una cuenta al banco correspondiente (asincrónico)
+
+billing-service
+
+8
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+20
+
+Total Desarrollo
+
+186
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+28
+
+Total Desarrollo + Gestión
+
+214

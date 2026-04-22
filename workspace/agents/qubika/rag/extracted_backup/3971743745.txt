@@ -1,0 +1,155 @@
+TITLE: Pagos Adicionales - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3971743745
+SOURCE: 3971743745__Pagos_Adicionales_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la funcionalidad dePagos Adicionales, a cargo de.
+Las horas estimadas son:171 ~ 28 días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+Nota: Joe estará de licencia los días 25, 26 y 27 de Junio.
+Tarea
+
+Estimación (hs)
+
+Servicio / Portal
+
+Agregar un nuevo tipo de pago llamado ExtraPayment
+Corroborar que no afecte con algun reporte de pagos
+
+6
+
+payment-link-service
+
+Crear nuevo endpoint para poder cobrar un pago adicional a un único o múltiples suscriptores
+Deberá ser un pago ocasional y no debe afectar a la suscripción(pago extra).
+
+El pago no se muestra en la vista de suscripciones(No es el último pago).
+
+Al pago se le agrega el ExtraPayment Type y está asociado al suscriptor.
+
+18
+
+payment-link-service
+
+Modificar lógica de último pago de un suscriptor para que discrimine el nuevo tipo de pago.
+El pago adicional no es el último pago.
+
+Este cambio se hace tanto en el subscriber summary report como en la lógica del modelo.
+
+12
+
+payment-link-service
+
+Reutilizar vista y lógica de reintento de pagos para la vista de histórico
+Solo es posible reintentar pagos fallidos y reversados
+
+16
+
+payment-link-portal
+
+Agregar nuevo botón en las acciones de suscriptores para cobrar pago adicional
+Solo accesible para usuarios administradores
+
+Si no es administrador, mostrar el botón en gris(deshabilitado) con un hover “No cuenta con permiso para esta funcionalidad”
+
+4
+
+payment-link-portal
+
+Crear modal con formulario que solicite el monto del pago adicional, que cuente con doble confirmación
+Que consuma el endpoint nuevo endpoint del servicio.
+
+Completado el proceso, genera un hipervículo para ir al reporte de movimientos y ver los nuevos pagos adicionales.
+
+Al comercio se le pide el monto, se pide una doble confirmación antes de hacerlo. Al terminar se le genera un hipervínculo para ir al reporte de movimientos.
+
+16
+
+payment-link-portal
+
+Modificar el endpoint de reporte de movimientos para que devuelva el Type del pago
+
+2
+
+payment-link-service
+
+Mostrar el dato Type en la vista de reporte de movimientos
+Consultar si también se quiere filtrar por tipo
+
+4
+
+payment-link-portal
+
+Crear endpoint endpoint para debitarle el pago adicional a suscriptores específicos
+En el body se pasa el monto en formato Gs y el array de ids. En la URL el link alias. Si los suscriptores no coinciden con la suscripción o no existe, raisear un error.
+
+16
+
+external-commerce-service
+
+Crear opción para volver a listado de Suscripciones desde la vista de Histórico de Pagos
+
+6
+
+payment-link-portal
+
+Agregar nueva entrada en la tabla configuraciones para determinar la cantidad de meses previos habilitados para poder reintentar pagos.
+
+2
+
+payment-link-service
+
+Contemplar la config en los endpoints de reintento.
+En caso de que el pago a reintentar supere los meses, raisear un error
+
+6
+
+payment-link-service
+
+Mostrar excepción en las vistas de reintento de pagos.
+
+6
+
+payment-link-portal
+
+Manejar excepción en los endpoints de reintento de pagos en API
+
+6
+
+external-commerce-service
+
+Soporte para Pagos Adicionales
+
+12
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+18
+
+Total Desarrollo
+
+150
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+21
+
+Total Desarrollo + Gestión
+
+171

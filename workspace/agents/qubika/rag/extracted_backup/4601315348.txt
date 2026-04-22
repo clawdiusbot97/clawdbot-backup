@@ -1,0 +1,32 @@
+TITLE: Requerimientos del SeriaFramework
+DOMAIN: General
+PRIORITY: Media
+ID: 4601315348
+SOURCE: 4601315348__Requerimientos_del_SeriaFramework.json
+
+---
+
+Lista de requerimientos para el seriaframework:
+Serialización
+
+Manejo de errores y messages, probablemente en un middleware o explorar el rescue_from de rails (no me acuerdo como lo hice en pix)
+
+Parámetros opcionales de respuesta
+
+respuestas dinamicas? type: object
+
+Clases y excepciones dentro del namespace de la gema
+
+Sería bueno que en la documentación no obligue a pasar una “master“ key para dentro devolver el objeto. Que permita devolver la representation de un objeto directamente en el root de la respuesta.
+
+Ser un contrato a todas las respuestas de la API (Que la respuesta de la API sea la misma que está definida en la doc)
+
+En principio vamos a ir por definir la información de las operaciones en el routes.rb definiendo los atributos custom de las rutas.
+
+Revisar como se usa jbuilder, la idea es replicar un poco su funcionamiento, usando el archivo que esté dentro de las views y usando partials para reutilizar.
+
+Ver la posibilidad de poder anidar campos en la respuesta sin la necesidad de usar partials/representations.
+
+Falta ver lo de los parámetros de entrada. Como vamos a hacer para documentarlos?
+
+Definir la url de la documentación “/doc”, y exponerla (En principio como una ruta estática, no como parte del routes.rb)

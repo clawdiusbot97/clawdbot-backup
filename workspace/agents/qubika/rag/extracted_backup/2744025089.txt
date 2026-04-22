@@ -1,0 +1,36 @@
+TITLE: DBA Migration to Tpago - Tasking and Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 2744025089
+SOURCE: 2744025089__DBA_Migration_to_Tpago_-_Tasking_and_Estimation.json
+
+---
+
+Tarea
+
+Hrs.
+
+Payment Link Portal
+
+Vista para cargar la planilla de migración
+
+Cambio en lista de suscriptores para listar la lista completa de los mismos y no separado por link (preguntar si esto va junto con dba)
+
+Analizar todo el portal para validar que el usuario sea un “anonymous_subscriber” y no hacer llamados a auth, ademas de verificar datos que se usen de ese usuario.
+
+Payment Link Service
+
+Agregar flag en el modelo de subscriber para diferenciar los subs de la migración vs los subs de las suscripciones normales. “anonymous_subscriber” como idea. (subs sin user_id)
+
+Analizar proceso de suscriptores para validar que el usuario sea un “anonymous_subscriber” y no hacer llamados a auth, ademas de verificar datos que se usen de ese usuario.
+
+Procesador de planilla para crear suscripción, subs y medios de pago. Agregar comunicación con nuevo servicio de external-services para datos de tarjeta
+
+Modificar registro de tarjetas de débito/credito para actualizar tarjetas anteriormente catastradas como “anónimas” y agregar datos faltantes
+
+External Services
+
+Agregar comunicación con servicio externo para obtener por número de contrato, comercio y sucursal los datos de la tarjeta
+
+Comentarios
+El cambio en la lista de suscriptores, va junto con esta iniciativa? O se va a llevar por separado?

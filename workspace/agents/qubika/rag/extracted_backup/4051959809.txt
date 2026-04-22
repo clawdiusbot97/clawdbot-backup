@@ -1,0 +1,85 @@
+TITLE: App IC Mobile Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4051959809
+SOURCE: 4051959809__App_IC_Mobile_Tasking_y_Estimacio╠ün.json
+
+---
+
+Épica
+
+Tarea
+
+Servicio
+
+Estimación (horas)
+
+App IC Mobile
+
+Análisis de tareas e impacto
+
+8
+
+Añadir parámetro source y modificar operación de crear desembolso para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de crear pago para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de creación de QR para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de pagos con tarjeta para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+24
+
+Añadir parámetro source y modificar operación de permisos para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+16
+
+Añadir parámetro source y modificar operación de onboarding para manejo de datos de pos
+
+infonet-cobranzas-app-service
+
+16
+
+Añadir origen nuevo para movimientos de app mobile
+
+epos-service
+
+8
+
+Modificaciones en manejo de origen de movimientos
+
+epos-service
+
+24
+
+Configuraciones y deploy
+
+8
+
+Total desarrollo
+
+176
+
+Total gestión
+
+17.6
+
+Total
+
+193.6

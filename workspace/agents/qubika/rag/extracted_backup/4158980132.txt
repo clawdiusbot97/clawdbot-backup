@@ -1,0 +1,123 @@
+TITLE: Flujo Transaccional de Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 4158980132
+SOURCE: 4158980132__Flujo_Transaccional_de_Bancard.json
+
+---
+
+Participantes
+En todo el proceso transaccional existen varios participantes, a contiuación listamos los mas importantes:
+Servicios de Qubika
+
+jPOS
+
+AS/400
+
+Driver Transaccional Switch
+
+Autorizaciones/Core
+
+Marcas
+
+Servicios de Qubika
+Son nuestros servicios:
+billing-service
+
+epos-service
+
+vpos-service
+
+etc
+
+Realizan todas las validaciones iniciales, preparan los datos de las transacciones y se comunican con el jPOS.
+
+jPOS
+Es un framework java que se encarga de procesar mensajes en formato ISO-8583. Se utiliza para adaptar los datos que salen de nuestros servicios, al estándar financiero que se utiliza en el resto de procesos.
+Debido a que existe un volumen transaccional bastante alto, y a que tenemos varios medios de pago (QR, vpos, mpos, etc) distintos, cada uno con sus distintas necesidades, cada servicio se suele comunicar con un jPOS distinto.
+
+Ejemplo selling-service:
+Ejemplo epos-service:
+En cada uno se ve que utilizan campos distintos, incluso con un formato diferente para mismos campos.
+Más info:
+Documentación oficial
+
+Github
+
+Una de nuestras integraciones con el jPOS
+
+Estandar ISO-8583
+Estandar ISO para la comunicación de transacciones financieras. Permite que varios sistemas distintos compartan información sobre una transacción.
+Un mensaje ISO 8583 consta principalmente de 3 partes:
+Message Type Indicator (MTI): Indicador de Tipo de Mensaje.
+
+Uno o másbitmaps: Indican qué elementos están presentes en el mensaje.
+
+Data elements: Contiene los campos del mensaje.
+
+De nuestro lado (Qubika), tenemos una implementación de este punto, en los QRs de la iniciativa VisaQR, ya que para comunicarnos con HST, nuestros QRs tienen que respetar el estandar ISO-8583.
+Mas info de la implementación
+Algunos links:
+Parser de ISO8583
+
+Librería JAVA open source
+
+AS/400
+Es una computadora de IBM donde corren tanto el BUS de Transacciones como el Driver Transaccional Switch.
+Más allá del tiempo, tiene varias ventajas interesantes para un sistema financiero:
+Arquitectura robusta y segura (todo esta fuertemente tipado).
+
+Herramientas integradas con foco en seguridad y alta disponibilidad.
+
+Sistema de roles y permisos por rol.
+
+“Sencillo” de usar para usuarios no técnicos.
+
+Retrocompatible con sistemas de los 80’s
+
+Más info:AS/400
+
+Driver Transaccional Switch
+Es un programa en la IBM AS/400, que recibe e interpreta los datos en el estandar ISO-8583.
+Su función es realizar, en primer lugar, validaciones sobre el comercio:
+Si es un comercio activo.
+
+Si tiene deudas con Bancard.
+
+Si tiene habilitado transaccionalmente el producto solicitado (Ej: QR)
+
+Su segunda función es redirigir las transacciones a su siguiente destino según el medio de pago:
+Si se usa una tarjeta de débito, se comunica directo con las Entidades.
+
+Si es una tarjeta de crédito, arma el mensaje para Autorizaciones.
+
+Autorizaciones
+Es el llamado “Core”de Bancard, ya que procesa tarjetas de crédito.
+Para los pagos con tarjeta de crédito, se encarga de validar los datos de las tarjetas (PAN, expiración, marca, etc).
+
+Luego de eso, para los pagos con tarjetas regionales, se encarga de procesar las transacciones.
+Si, en cambio, es un pago con tarjeta de crédito internacional, deriva la transacción hacia las marcas.
+
+Marcas (Visa, Amex, Mastercard, etc)
+En el caso de los pagos con tarjetas de crédito internacional, es el último paso del flujo.
+Se encargan de procesar las transacciones.
+
+Flujos Genéricos
+Aclaraciones
+Todos estos flujos son síncronos, es decir, que si hay un error en cualquier paso, se va a marcar la transacción como rechazada y el jPOS nos va a devolver el error correspondiente.
+
+El flujo es lo mismo para una transacción de pago, de reversa o de anulación.
+Tarjeta de Débito
+Tarjeta de Crédito Regional
+Tarjeta de Crédito Internacional
+Flujo de QR (tarjeta de crédito)
+Flujo de Pago de Servicio Boca Web (tarjeta de crédito)
+Las únicas diferencias en este flujo con el de QR, son el jPOS utilizado (transfer vs buy) y que al final se llama directamente a la entidad, para comunicarle el pago del servicio realizado.
+Para leer más:
+Que es un switch transaccional?
+
+Otro link con info de los switch transaccionales
+
+Porque se sigue usando la AS/400?
+
+https://medium.com/@integrative-systems/what-are-the-key-features-of-as400-that-benefit-banks-e9da454104e7

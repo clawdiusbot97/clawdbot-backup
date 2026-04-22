@@ -1,0 +1,28 @@
+TITLE: Proceso de Carga de PTOs
+DOMAIN: General
+PRIORITY: Media
+ID: 3360751622
+SOURCE: 3360751622__Proceso_de_Carga_de_PTOs.json
+
+---
+
+Este documento detalla los pasos a seguir al momento de cargar un PTO (vacaciones, estudio, enfermedad, etc..), así mejoramos la planificación desde nuestro lado, y le damos visibilidad a Bancard de los días en los que no vamos a estar disponibles.
+Notificar a/sobre las fechas que se solicitan, en lo posible con un tiempo moderado de aviso previo de 2 semanas para licencias cortas, y 1 / 2 meses para licencias largas. Esto no es obligatorio, pero si nos permite acomodar el equipo y las iniciativas, y también evaluar el tema de budget con el equipo de Allocations / Operaciones por si hay que conseguir un suplente para esas fechas.
+
+Cargar las fechas en HiBob
+Desde la Home deHiBobvamos a seleccionar la opciónRequest Time Off
+
+Seleccionamos tipo de PTO que vamos a solicitar
+
+Seleccionamos la fecha deseada
+
+Le damosSubmit, y queda cargada la solicitud de PTO
+
+Por último, antes de irnos, vamos a cargar enTeamsnuestro estado de PTO, para darle visibilidad al equipo, para que tengan en cuenta que no estamos conectados, ya que ellos no tienen acceso a nuestro HiBob ni nuestros calendarios.
+En la ventana de Teams, hacemos click al ícono de nuestro perfil en el lado superior izquierdo y seleccionamosSet Status Message
+
+Escribimos un mensaje que queremos que se muestre mientras estamos de PTO.Importante en el mensaje incluir la fecha de regreso.
+PTO por estudio / enfermedad / vacaciones hasta XX/XX/XXXX
+Seleccionamos también la opciónShow when people message me, yClear status message after <Custom>, con la fecha de regreso.
+
+SeleccionamosDoney queda prontooo, a disfrutar las vacaciones 😎

@@ -1,0 +1,96 @@
+TITLE: Backend CMB - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3771432961
+SOURCE: 3771432961__Backend_CMB_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para CMB, a cargo de.
+Las horas estimadas son:
+Fecha de Inicio:Martes
+Fecha estimada de entrega:Lunes
+Servicio / Portal
+
+Tarea
+
+Estimación (hs)
+
+billing-service
+
+Agregar columna en la tabla Productos para diferenciar si la extracción es por QR
+La columna debería ser Is_QR_Cashout
+
+6
+
+Revisar el endpoint de creación de productos para que se creen con esta flag nueva
+
+8
+
+commerce-suite
+
+Agregar la lógica en el portal de Boca-Web para generar el QR en el caso de que el producto tenga la flag Is_QR_Cashout
+
+16
+
+Agregar lógica de websockets para renderizar voucher cuando llegue la notificación exitosa
+
+24
+
+Llamar al endpoint de generar el QR para cada entidad
+
+16
+
+epos-service
+
+Agregar un nuevo modelo de cashout qr
+
+16
+
+Agregar endpoint para generar QR
+Esto va a tomar todos los datos de desembolso para generar el QR de cada entidad
+
+24
+
+Crear endpoint para confirmar QR de desembolso
+Vamos a precisar un endpoint nuevo para notificar al facturador que se hizo el desembolso
+Hay que rechazar todo lo que no sea débito en cuenta
+
+32
+
+Modificar endpoint de transfer para diferenciar que es un desembolso por QR
+
+16
+
+Agregar comunicación con endpoint del facturador para comunicar el desembolso
+
+16
+
+Agregar comunicación de Websocket con commerce-suite para notificar el estado del desembolso
+
+16
+
+billing-service-public-proxy
+
+Agregar lógica del decode para llamar al endpoint de confirmación del QR de desembolso
+
+16
+
+General
+
+Creación y revisión de PRs, solución de comments, armado de ramas, deploy a stagin
+
+24
+
+Total Desarrollo
+
+230
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+34
+
+Total Desarrollo + Gestión
+
+264

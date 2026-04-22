@@ -1,0 +1,53 @@
+TITLE: Seguimiento Nuevos Medios de Pago - QR
+DOMAIN: General
+PRIORITY: Media
+ID: 3741483042
+SOURCE: 3741483042__Seguimiento_Nuevos_Medios_de_Pago_-_QR.json
+
+---
+
+Este documento tiene el seguimiento de la iniciativa para agregar QR a los Nuevos Medios de Pago.
+PEV20-583 - Nuevos Medios de Pago - QR
+Fecha de Inicio:
+Fecha de Entrega:
+Tarea
+
+Titular
+
+Inicio
+
+Fin
+
+Comentarios
+
+PEV20-584 - [vpos-portal] Agregar tab al iframe para mostrar el QR. Agregar comportamiento para que cargue la imagen solo al primer click. Subsiguientes clicks no cargan la imagen.
+
+PEV20-585 - [vpos-portal] Implementar endpoint que consuma vpos-service y genere el alias y el qr para un SingleBuy dado
+
+PEV20-586 - Limitar pestaña de QR a flujos de single_buy y comercios que lo tengan habilitado
+
+PEV20-587 - [vpos-portal] Agregar endpoint para recibir confi rmaciones de pagos QR desde vpos-service para actualizar vista de usuarios
+
+PEV20-588 - [vpos-portal] Configuración de websockets en el código javascript de vpos-portal para poder recibir notifi caciones del pago y redirigir al usuario correspondientemente.
+
+PEV20-589 - [vpos-portal] Configuración de websockets en el código javascript de vpos-portal para poder recibir notifi caciones del pago y redirigir al usuario correspondientemente.
+
+PEV20-590 - [vpos-service] Agregar columnas alias y qr_url en la tabla operations, asociado a un SingleBuy.
+
+PEV20-591 - [vpos-service] Crear endpoint para generar QR de un determinado process_id
+
+PEV20-592 - [vpos-service] Eliminar de manera periodica los QRs. Ver de referencia selling-service. Tiempo de vida: 1 mes a partir del created_at
+
+PEV20-593 - [vpos-service] Crear endpoint de confi rmación para que billing-service-public-proxy confi rme los pagos que se hayan hecho a través de pago QR con App de entidad bancaria.
+
+PEV20-594 - [vpos-service] En la operación de get_buy debemos agregar en la respuetsa para que vpos-portal pueda distinguir si mostrar o no la tab de QR
+
+PEV20-595 - [commerce-suite] Agregar a la pantalla de personalización de aplicación de vpos la posibilidad de encender/apagar pagos QR.
+
+PEV20-596 - [billing-service-public-proxy] Editar las operaciones confirm y confirm_payment_with_confirmation
+
+PEV20-597 - [billing-service-public-proxy] Adaptar la operación confirmation_by_entity_transaction_id para que funcione con QRs de vpos
+
+PEV20-598 - [billing-service-public-proxy] Adaptar la operación decode_qr_code para soportar el decode de QRs de vpos
+
+PEV20-599 - [nginx] Debuggear y revisar configuración relacionada a websockets en vpos-portal

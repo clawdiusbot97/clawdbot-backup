@@ -1,0 +1,215 @@
+TITLE: Proceso de Deploy
+DOMAIN: 1) Deploy
+PRIORITY: Alta
+ID: 2430435329
+SOURCE: 2430435329__Proceso_de_Deploy.json
+
+---
+
+Introducción
+
+Este documento tiene como objetivo servir de guía para comprender los pasos del flujo de trabajo de un proyecto Bancard utilizando docker. También cumple con el propósito de contribuir al desarrollo de la autonomía progresiva de los nuevos integrantes de Bancard.
+
+Setup de un proyecto local
+
+Branches
+
+Cambios en el proyecto
+
+Ejecutar tests
+
+Stagear cambios
+
+Crear un commit
+
+Crear una PR
+
+Circle CI
+
+Code review
+
+Merge
+
+Deploy
+
+Anexo:
+Gemas locales
+
+Stubs y bancard-stubs
+
+Setup de un proyecto local
+Para el setup local de cualquier proyecto dockerizado seguiremosestedocumento.
+
+Branches
+Cuando desarrollamos en bancard, siempre lo hacemos en una branch propia de esa tarea que luego mergearemos a develop. Siempre la nombraremos en base al ticket de Jira. ej:PRYPOR-697.Para crearla, se recomienda usar el comandogit checkout -b nombre-de-la-branch.La flag-bcrea una branch a partir de la que estamos parados y nos muevedirectamente a la misma, todo en el mismo comando. Es importante estar parados endevelopal hacer esto y antes ejecutar ungit pullpara asegurarnos que la branch “madre” esté actualizada.
+
+Ej:
+
+Tips: Para que ya quede la branch en el repositorio al cual luego vamos a subir nuestros cambios, es recomendable ejecutar el comandogit push --set-upstream origin nombre-de-la-branch.Esto es para que luego al momento de pushear un commit no tengamos que preocuparnos de que la branch en la que trabajamos se encuentre o no en el repositorio de GitHub.
+
+Ej:
+
+Cambios en el proyecto
+Siempre que realicemos cambios en un proyecto local deberemos tener tests para ellos. Utilizaremos RSpec como framework para la creación de estos tests y FactoryGirl para la representación de las entidades de los modelos. Podés leer la documentación básica de RSpecaquíasí como también verestapresentación sobre la forma de testear que manejamos en bancard.
+
+Cuidado: Podés guiarte con los tests ya hechos en los proyectos, pero por lo general estos están desactualizados ya que la sintaxis que se usó quedó deprecada. Más info enestapresentación. También se recomienda usar como guía de tests PR’s recientes de compañeros.
+
+Ejecutar tests
+Para ejecutar los tests localmente, y como estamos en un ambiente dockerizado, debemos primero acceder al contenedor en donde está corriendo el proyecto que queremos testear. Para ello en la terminal utilizaremos el comandodocker exec -it nombre-del-contenedor bash. Una vez dentro, procedemos a correr los tests utilizando el comandobundle exec rspec.
+
+Tips:
+Para ver los contenedores que están corriendo locamente utilizamos el comandodocker ps. De ahí podremos sacar el nombre del contenedor.
+
+Si quieres probar un test en específico y para no tener que correr todos los tests (demora un tiempo), podemos agregarle al comando anterior lo siguiente:bundle exec rspec ruta-del-test. Esto ejecutará únicamente el archivo de test que le indicamos con la ruta.
+
+Ejemplo:bundle exec rspec spec/controllers/movements_controller_spec.rb
+También podemos agregar al anterior comando la opción de solo ejecutar una línea de código específica dentro del archivo de test. Para ellos utilizamos:bundle exec rspec ruta-absoluta-del-test:linea-de-código.
+
+Ejemplo:bundle exec rspec .spec/controllers/movements_controller_spec.rb:56
+Stagear Cambios
+Para ver los cambios que tenemos hasta el momento, debemos movernos en la terminal hacia la carpeta donde tenemos nuestro proyecto local. Una vez ahí, utilizaremos el comandogit statuspara ver los archivos modificados.
+
+Ej:
+
+Como se observa en el ejemplo, los cambios se despliegan como ‘not staged for commit’ y el nombre de los archivos en color rojo. Parastashearestos cambios y así podercommitearusaremos el comandogit add(git add nombre-de-archivo agrega únicamente ese archivo y git add . agrega todos los archivos modificados)
+
+Ej:
+
+Luego de ejecutar el comandogit add .volvemos a ejecutargit statuspara ver el nuevo estado de nuestros archivos modificados. Como vemos en la imagen del ejemplo, los archivos modificados ahora se listan en verde y bajo la descripción de ‘changes to be committed’.
+
+Crear Commit
+Una vez que nuestros archivos modificados se encuentren en lastaging area,creamos el commit utilizando el comandogit commit -m “mensaje-descriptivo-del-commit.”Respecto al mensaje, seguiremosestaguía de estilos. Como convención dentro de bancard, siempre el mensaje del commit tendrá antes el código de la tarea entre paréntesis rectos. Ej:git commit -m “[PRYPOR-697] - mensaje-descriptivo-en-inglés”
+
+Una vez hayamos creado el commit con su respectivo mensaje procederemos a pushear nuestros cambios a la branch que creamos anteriormente. Para ello, utilizaremos el comandogit push origin nombre-de-nuestra-branch.Una vez ejecutados estos comandos tendremos nuestros cambios pusheados en la branch remota.
+
+Crear PR
+Ya que nuestros cambios fueronpusheadosa nuestra branch, debemos ir al GitHub del proyecto en el que estamos trabajando y buscar la branch a la que acabamos de pushear. Por lo general, al momento de entrar al repositorio del proyecto,  se mostrará un aviso como el de la imagen:
+
+Esto indicará el nombre de nuestra branch, hace cuanto se pushearon nuestros cambios y el botón verde el cual nos permitirá crear la PR.
+
+Si no llegásemos a ver este cartel, nos dirigimos a la branch que creamos anteriormente o directamente al link que nos devuelve GitHub al crear y pushear nuestra branch (ver Branches).
+
+Procederemos a clickear en el botón “Compare & pull request” y esto es lo que mostrará:
+
+Lo primero y más importante es la barra de encima donde leemosbase: developycompare: nombre-de-nuestra-branch.Aquí debemos asegurarnos que la PR siempre sea contra develop y comparando desde nuestra branch la cual tiene el commit con todos los cambios. A la derecha en el apartado ‘Reviewers’ siempre agregaremos a todos nuestros compañeros del team, que serán notificados para luego hacercode-review. En la caja de texto opcionalmente podríamos agregar una breve descripción del cambio, simplemente para aportar al contexto de la PR. Debajo (en la imagen no se muestra) tendremos la cantidad de commits y una vista previa de todos los archivos que fueron cambiados.
+
+Luego de modificar estos pasos, procedemos a clickear en “Create pull request” y la PR se creará.
+
+Circle CI
+Circle CI correrá los tests incluyendo los que nosotros agregamos para estos cambiospusheadosy también creará unaimagendel proyecto. Esta imagen será la utilizada al momento de hacer eldeploy, información sobre esto más adelante. El estado de este proceso lo podemos ver en la pestaña de la PR, bajando hasta lo último:
+
+Ahí podemos ver que los tests fueron ejecutados por Circle CI y pasaron sin errores. Si tocamos en ‘Details’ nos llevará a la página de Circle Ci donde podremos ver más información respecto a este proceso. Si fallan, Circle CI notificará y no podremos mergear nuestros cambios a develop.
+
+Code Review
+Luego de que nuestros cambios se encuentran en una PR y agregamos como reviewers a todos nuestros compañeros, llega el momento en que los demás revisan nuestros cambios. A esta corrección grupal la llamamos code review. Es trabajo de todos revisar y ser meticulosos a la hora de ver código ajeno ya que esto es crucial para evitar posibles futuros errores. Es normal que siempre haya detalles para corregir, ya sean mejoras en la lógica de nuestros cambios o errores de tipeo (typos). Los comentarios se hacen en inglés y siempre hay lugar para discutir sobre los mismos. Cuando un compañero llega a la conclusión de que el código está OK, se obtiene unapprove.
+
+Tip:
+
+En bancard al momento de agregar un cambio a una PR, lo que utilizaremos será la siguiente secuencia de comandos:
+
+Luego de efectuar los cambios, los agregamos al staging area congit add .
+
+Seguido de esto, utilizaremos el comandogit commit --amend.Este comando actualiza el último commit sin necesidad de deshacerlo ni volver a poner el mismo mensaje. Es importante tener los cambios stageados antes de utilizar este comando. Al hacerlo, se abrirá una ventana vim. Para salir de ella y guardar tipeamos:wq(write and quit)
+
+Por último debemos pushear este commit ahora actualizado con las correcciones. Para ello volveremos a utilizar nuestro querido git push pero agregando al final la flag--force-with-leasela cual sobreescribirá los commits de la branch solamente si los cambios que tenemos localmente son los únicos en esa branch.
+
+Como resultado final ahora el commit que se encontraba en la PR está actualizado respecto a los comentarios de nuestros compañeros. Al utilizar la flag-fsobreescribimos el commit viejo con el nuevo.
+
+Merge
+Luego de recibir por lo menos 2 approves y que los tests en circle CI se ejecuten sin errores, podremos mergear nuestros cambios a develop. Para esto simplemente bajamos hasta el final de la PR y seleccionamos la opción a utilizar para el merge. Aquí veremos 2 opciones:Rebase and merge,Squash and merge y Create a merge commit(ignoraremos las opciones deCreate a merge commit y Squash and mergeya que no acostumbramos a usar esta opción en Bancard).
+
+Seleccionaremos la opción deRebase and merge. Esta es la opción a elegir ya que siempre preferimos tener todos los cambios en un solo commit.
+
+Una vez elegida la opción nuestro/s commit/s se mergearan a la branch contra la que hicimos nuestra PR.
+
+Ej:
+Deploy
+Finalmente, es hora de deployar nuestros cambios. Previamente habremos mergeado los mismos a una branch cómodevelop.Existe la posibilidad de que nuestra iniciativa tenga una branch aparte en la cual ya existan otros cambios y querramos agregar los nuestros ahí. Por lo general estas siempre se nombran comofeature/nombre-de-la-iniciativa o provide/nombre-de-la-iniciativa.
+Ej:feature/preauthorizations.
+
+Una vez que nuestro commit fué mergeado a la branch contra la que hicimos la PR,  nos dirigimos hacia el repositorio del proyecto y, seleccionando la branch a la cual mergeamos nuestros cambios, veremos que hay un apartado por encima de los archivos del proyecto en donde se muestra el último commit.
+
+Ej:
+
+Como vemos en la imagen, el último commit es “[PRYPOR] - View for preauthorizations report” y podemos notar un tick verde a la izquierda del commit hash. Esto indica que la imagen de este proyecto fue buildeada correctamente por circle CI. Al momento de mergear, veremos en lugar de este tick un punto amarillo que indica que el buildeado de la imagen está en proceso. Deberemos esperar a que se muestre el tick verde para continuar con el deploy.
+
+Una vez que la imagen del proyecto está buildeada, deployaremos. Para esto, primero debemos entrar al bastión mediante ssh utilizando este comando:
+sshsoporte_ais02@10.100.14.4
+
+Una vez dentro del bastión entraremos al servidor de Deploy, también mediante ssh, utilizando este comando:
+sshservicios@10.100.14.57
+
+Una vez dentro del servidor de deploy, ingresamos a la carpeta de bancard-docker, la cual se encuentra en/opt/ruby/bancard-docker, utilizando el comandocdpara movernos entre los directorios. Existe también un link simbólico desde el home hacia esta ruta, por lo cual podemos movernos directamente hacia ella utilizando el comandocd bancard-docker. Dentro de la carpetatiramosel deploy. El comando tipo para el mismo es el siguiente:
+
+./bin/bancard-deploy -p <nombre-del-proyecto> -e <enviroment> -t <nombre de la imagen>
+
+-p <nombre-del-proyecto> ejs: bancard-billing-service, bancard-commerce-service, bancard-commerce-suite, etc
+
+-e <environment> por defecto siempre es staging, se agregue o no se agregue la flag.
+
+-t <nombre de la imagen> será el nombre de la branch la cual sebuildeóla imagen. Si mergeamos a develop, el nombre será ‘develop’. Sino, será el nombre de la branch sin elfeature/oprovide/
+
+Recomendamos leer el README de bancard-docker para información más detallada respecto al comando usado para el deploy. Lo puedes encontraraquí.
+
+Ej:
+
+Una vez confirmada la configuración, el deploy comenzará a ejecutarse. Una vez terminada la ejecución, nuestro trabajo quedará deployado y el flujo de trabajo finalizado.
+
+Anexo
+
+Gemas locales
+En Bancard utilizamos varias gemas, por ejemploBancard External ServicesoBancard Services Stubs, sobre las cuales desarrollamos frecuentemente agregando diversas funcionalidades a los proyectos en los que estas se encuentran. Para ello será necesario, una vez hayamos descargado el proyecto de la gema a nuestro ambiente de trabajo y hayamos terminado con el desarrollo, probar ese código desde un servicio que contiene esta gema y para el cual pensamos añadir estas funcionalidades.
+
+Para ello es importante entender el correcto funcionamiento delGemfileyGemfile.lock, 2 archivos que estarán presentes en cualquier proyecto Ruby de Bancard. Estos 2 archivos sirven como registro de todas las gemas que nuestro proyecto instala al momento de inicializarse.
+
+Para ello utilizaremos como ejemplo el proyectovpos-servicey la gemabancard-external-services.
+
+Veamos ahora el archivoGemfilede vpos-service:
+La keyword ‘gem’ se utiliza para indicar una gema, ‘git’ para indicar el repositorio git remoto. Vemos en la línea 73 se utiliza ‘branch’ para indicar que branch queremos que apunte del repositorio git señalado.
+Notaremos que en la línea 81 se encuentra la gema bancard-external-services y está actualmente apuntando al repositorio git correspondiente.
+
+Si observamos ahora elGemfile.lock, donde se encuentra la gema en cuestión, veremos lo siguiente:
+En este archivo se despliega más información sobre la gema.
+
+El grupo ‘GIT’ indica que nos encontramos ante una gema obtenida desde un repositorio remoto de git.
+
+El subgrupo ‘remote’ indica el repositorio git remoto. El subgrupo ‘revision’ contiene el commit hash de referencia. Generalmente, siempre debería contener el del último commit que se encuentre en el repositorio. Así siempre tendremos la gema actualizada con los últimos cambios. El subgrupo ‘specs’ lista las dependencias junto con sus versiones exactas.
+
+Para poder apuntar a nuestra gema local, en donde tenemos los cambios que queremos probar en nuestro servicio, haremos lo siguiente:
+
+IMPORTANTE:Antes de realizar estos pasos, asegurarse de que tenemos el contenedor del proyecto corriendo en nuestra máquina (chequear esto con el comandodocker ps)
+
+En el
+
+Gemfile, cambiaremos la gema a lo siguiente:
+Aquí indicamos que la gema no la obtenga de un repositorio remoto git, sino que desde el path ‘/home/gems/nombre-de-la-gema’. Esto es posible gracias a que en el script run.sh (el cual utilizamos paralevantarel proyecto), en la línea donde ejecutamos el docker run del contenedor del proyecto, se encuentra montado un volumen a este directorio.
+
+Entramos al contenedor del proyecto, que levantamos previamente, y ejecutamos un
+
+bundle install.
+
+(Para acceder al contenedor utilizamosdocker exec -it nombre-del-contenedor bash)
+
+Una vez hecho esto, notaremos que el Gemfile.lock se habrá modificado, y si entramos veremos que la gema ya no se encuentra listada bajo el grupo GIT sino que ahora se encuentra bajo el grupo PATH, como lo muestra la imagen:
+El subgrupo ‘remote’ ahora apunta a la ruta del volumen que montamos en el contenedor donde dentro se encuentra la gema. El subgrupo ‘specs’ sigue mostrando las mismas dependencias.
+Una vez ejecutados estos pasos, ya tendremos funcionando nuestro proyecto (en este ejemplo, vpos-service) junto con nuestra gema local (en este ejemplo, bancard-external-services). Cualquier cambio que hayamos realizado en la gema se refleja localmente.
+
+Bancard-stubs
+Dentro del espectro de gemas de Bancard,bancard-services-stubses la más utilizada en los proyectos al momento de escribir los stubs en nuestros archivos de test. Aclarar en primer lugar que no es necesario usar esta gema para realizar un stub, pero hay muchos proyectos que la utilizan y por eso debemos conocer su funcionamiento.
+
+Dentro del repositorio hay 2 ramas: La principal, que es la más nueva y que se sigue actualizando, se llamarefactor(la que está seleccionada por defecto). También estámasterque contiene una versión más vieja de la gema pero que aún se utiliza en algunos proyectos. Estas coexisten como dos versiones muy diferentes de la misma gema. Notaremos cual de las dos usa nuestro proyecto ya que estará indicado bajo la key ‘branch’ en el Gemfile.
+
+Existe el caso donde un proyecto utiliza ambas versiones, tanto de refactor como master. Este es el caso de  commerce-service por ejemplo, en donde dentro de nuestro Gemfile encontramos lo siguiente:
+Notamos que se definen 2 gemas, llamando al mismo repositorio. ‘bancard-services-stubs’ es la que apunta a la versión vieja, la rama master, mientras que ‘bancard-stubs’ apunta a la versión nueva, la rama refactor. El ‘require: false’ de estas líneas sirve para decirle albundlerque instale la gema pero no la deje como requerida para todo el proyecto, ya que esto consumiría recursos innecesariamente. Debido a esto, en nuestros archivo de test deberemos llamarlas específicamente con un require ‘nombre-de-la-gema’ (Aclaración: esto se hace en un archivohelperllamado ‘spec_helper.rb’ que setea todo lo necesario para ejecutar nuestros tests sin ningún problema).
+
+En otras casos, como por ejemplo vpos-service, la gema está definida una sola vez de la siguiente manera:
+
+Veamos ahora el funcionamiento de esta gema. Como ejemplo utilizaremos el proyecto commerce-service. Veamos un archivo de test que utilice la gema, por ejemplo aquí:
+En este archivo lo que notamos es que define un let ‘auth_service’ y llama a la ruta entera ‘Bancard::Stubs::Services::Auth’, luego llamando a la operación ‘stub’ y pasándole el servicio de Auth. Lo que esto ejecutará es la operación stub que, si vamos a bancard-stubs, la encontraremos en el archivo ‘base.rb’, dentro de la carpeta services, y del cual el archivo ‘auth.rb’ hereda.
+Lo que esto genera es un mock up entero del proyecto (en este caso de Auth) en donde todas las operaciones serán stubeadas. Si seguimos con el ejemplo del test de arriba, lo siguiente que hace utilizando ese let de Auth es llamar a la operacion ‘register_user’, la cual devuelve un usuario registrado y obviamentestubeadodesde la gema, como vemos aquí:
+Esta misma lógica se repite dentro de muchos proyectos y tests. Es decir, stubear un servicio entero para luego llamar a las operaciones stubeadas de esos servicios, que en vez de manejar y retornar valores reales utilizan valores falsos pero con la misma estructura.
+
+Veamos otro ejemplo en vpos-service:
+Acá estamos aplicando la misma lógica que veíamos en el ejemplo anterior, pero ahora utilizando Commerce-service. Primero, stubeamos el servicio en el let. Seguido, llamamos a operaciones del servicio como lo son ‘register_commerce’ y ‘register_commerce_branch’.
+
+Viendo esto, podemos notar el siguiente patrón: se utilizará esta gema siempre que el servicio que queramos testear realice una llamada a otro servicio de Bancard (ej: vpos-service llama a commerce-service). Si la llamada es a external-services, ahí utilizaremos los stubs que habremos hecho dentro de external service. Y por último, si la llamada es a un método interno de nuestro servicio, ahí utilizaremos los stubs propios de rspec.

@@ -1,0 +1,46 @@
+TITLE: Proceso de Performance Review - Engineering
+DOMAIN: General
+PRIORITY: Media
+ID: 3404890117
+SOURCE: 3404890117__Proceso_de_Performance_Review_-_Engineering.json
+
+---
+
+Dos veces al año, llega el período de evaluaciones, durante el cual realizamos el proceso de calificación del rendimiento de nuestros pares. Este es un enfoque colaborativo que considera diversos factores, como la comunicación, el conocimiento técnico, la responsabilidad, la proactividad, entre otros.
+En este documento, detallaremos las referencias y criterios que deben tenerse en cuenta al evaluar a cada compañero.
+Es fundamental mantener un criterio objetivo al evaluar cada punto para garantizar que la revisión de cada miembro del equipo sea justa y equilibrada.
+Dado que los líderes de cada área no están al tanto del trabajo diario de todos, contamos con la colaboración de ustedes para realizar estas evaluaciones de manera precisa y detallada.
+Consideración del Rol y Seniority en las Evaluaciones
+Cada miembro del equipo tiene un rol y un nivel de seniority diferente dentro del área. Por lo tanto, es esencial que las evaluaciones se realicen tomando como referencia las responsabilidades y expectativas del rol específico de la persona que estamos evaluando. Las descripciones detalladas de cada rol se encuentran en la plataforma Hibob, y es importante revisarlas antes de comenzar con la evaluación.
+Para consultar las descripciones de cada rol, pueden acceder al siguiente documento:Engineering Roles.
+Es fundamental tener en cuenta el rol y seniority de la persona evaluada para asegurar que las expectativas sean acordes a las responsabilidades que tiene dentro del equipo.
+Descripción de cada criterio de evaluación
+Necesita Mejora:
+El desempeño en este aspecto no cumple con las expectativas básicas del rol. Requiere un esfuerzo significativo para mejorar en áreas claves para cumplir con los estándares mínimos.
+
+Deficiente:
+El integrante del equipo tiene algunos logros, pero su desempeño es inconsistente. Existen varias oportunidades de mejora que deben ser abordadas para alcanzar un nivel adecuado en su función.
+
+Cumple las Expectativas:
+El desempeño es adecuado y consistente con las responsabilidades del rol. El integrante del equipo realiza las tareas esperadas sin mayores dificultades, cumpliendo con los estándares requeridos.
+
+Muy Bueno:
+El integrante del equipo supera las expectativas en varias áreas. Muestra un desempeño fuerte y consistente, contribuyendo significativamente al equipo o al proyecto, y sobresale en ciertas áreas clave.
+
+Excelente:
+El integrante del equipo no solo cumple, sino que excede las expectativas en la mayoría de las áreas de su rol. Demuestra un liderazgo sobresaliente y tiene un impacto significativo en el equipo o el proyecto, destacándose en todas sus responsabilidades.
+
+Descripción de cada punto a evaluar
+Teamwork: Evalúa la capacidad del integrante del equipo para trabajar de manera efectiva con otros, contribuyendo al éxito del equipo a través de la colaboración, comunicación, y apoyo mutuo.
+
+Communication: Evalúa la capacidad del integrante del equipo para expresar ideas de manera clara y efectiva, tanto con el equipo con el cliente y de forma verbal como escrita, asegurando que la información se transmita adecuadamente a los miembros del equipo y otros interesados.
+
+Delivery: Evalúa la capacidad del integrante del equipo para cumplir con los plazos del proyecto y los estándares de calidad. Mide la consistencia con la que entrega resultados y la calidad del trabajo que aporta en cada entrega.
+
+Technical Expertise: Evalúa el nivel de comprensión y aplicación de las tecnologías y herramientas clave por parte del integrante del equipo, en relación con las exigencias de su rol. Mide su capacidad para utilizar de manera efectiva los recursos tecnológicos relevantes.
+
+Problem-Solving Skills: Evalúa la capacidad del integrante del equipo para identificar y resolver problemas técnicos complejos de manera efectiva. Mide su habilidad para analizar situaciones, encontrar soluciones eficientes y aplicar el razonamiento adecuado en su trabajo.
+
+Quality of Work: Evalúa la calidad general y la fiabilidad del trabajo técnico realizado por el integrante del equipo. Esto incluye aspectos como la precisión y atención al detalle en la ejecución de tareas, la adherencia a los estándares de calidad y buenas prácticas, y la capacidad de entregar resultados consistentes. También mide la eficacia del integrante del equipo para entregar soluciones técnicas bien ejecutadas, limpias y sostenibles, minimizando errores y retrabajo. La evaluación se centra tanto en la calidad del producto final como en la capacidad de mantener altos estándares en todas las fases del trabajo.
+
+Overall Performance: Esta sección requiere un resumen escrito que capture una visión general del desempeño del miembro del equipo evaluado. Debe incluir un análisis integral de cómo esta persona se desempeñó en cada uno de los criterios evaluados, proporcionando ejemplos concretos que respalden las calificaciones otorgadas. El objetivo es dar una idea clara y objetiva de por qué se asignaron las puntuaciones, destacando tanto sus fortalezas como áreas de mejora. Este resumen es clave para que quienes preparan la revisión de desempeño final puedan tener una comprensión más completa y profunda de la forma en que esta persona contribuye al equipo y a la organización.

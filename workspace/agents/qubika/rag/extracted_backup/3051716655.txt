@@ -1,0 +1,93 @@
+TITLE: PIX en POS - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3051716655
+SOURCE: 3051716655__PIX_en_POS_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+https://bancard.atlassian.net/wiki/spaces/PRYPIX/pages/266993665/Qr+PIX+en+POS+v1.0
+Responsables:/
+Fecha inicio:
+Fecha entrega:
+Se tiene en cuenta para la estimación el tiempo de desarrollo, y luego se agregan horas de Management y horas que puedan surgir post salida a Staging.
+Estas horas post salida a Staging son contempladas para un caso donde no hayan complicaciones de factores externos que bloqueen el desarrollo, ni problemas con proveedores o tareas significativas que puedan surgir.
+En el caso de terminar todo antes, esas horas también pueden verse reducidas.
+Tarea
+
+Estimación (hs)
+
+Responsable
+
+Nuevo endpoint para generacion de QRs para POS.
+
+32
+
+external-commerce
+
+Modificar endpoint de generación de QRs para recibir el origen, tipo de POS y revisar si es necesario devolver algún parámetro extra en la respuesta. Guardar tipo de POS para la notificación (crear columna nueva en el hook).
+
+8
+
+pix-service
+
+Guardar RMerchantCode en la respuesta de la notificación del pago al RPG porque luego se va a enviar en el callback al POS
+
+8
+
+pix-service
+
+Implementar lógica para notificar al portal cuando el QR se crea desde el portal y al POS cuando se crea desde el POS.
+
+32
+
+pix-service
+
+Modificar roles de los POS y agregar el nuevo rol en el authorizer con permiso para todas las operaciones de selling y pix.
+
+16
+
+external-commerce
+
+Agregar columna de status interno de bancard para saber si se pudo hacer la notificación al POS y hacer los cambios para actualizar esa columna.
+
+8
+
+pix-service
+
+Tenemos que enviar currency a PIX. Para enviar el monto en guaranies.
+Desde POS, todos los pagos van a ser en GS.
+
+24
+
+pix-service
+
+Agregar una column en el dataset de payments para filtrar ventas de acuerdo a si es POS o no
+
+4
+
+pix-service
+
+No mostrar en el reporte de ventas de pix-portal aquellas ventas que son del POS.
+Modificar el q que envía pix-portal para filtrar por ventas del POS
+
+16
+
+pix-portal
+
+Total Desarrollo
+
+148
+
+Total trabajo post deploy a Staging
+Incluye tareas de soporte, bug fixing, mejoras, pruebas con rendimento, puesta y deploy a staging + producción, entre otras.
+
+40
+
+Management (15% para facturación. No afecta la fecha de entrega)
+
+28
+
+Total horas de desarrollo Pix en POS
+
+216

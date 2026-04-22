@@ -1,0 +1,15 @@
+TITLE: Management
+DOMAIN: General
+PRIORITY: Media
+ID: 2260140085
+SOURCE: 2260140085__Management.json
+
+---
+
+Tableros de Jira actuales
+BAU
+https://jira.bancardnet.dom/secure/RapidBoard.jspa?rapidView=23&selectedIssue=BILLENT-99&quickFilter=53
+Tpago
+https://jira.bancardnet.dom/secure/RapidBoard.jspa?rapidView=463&projectKey=PRYLDP&selectedIssue=PRYLDP-260
+Procesos de Management
+Proceso H2 2023

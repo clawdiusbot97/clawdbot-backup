@@ -1,0 +1,47 @@
+TITLE: Daily Tasks - Facturación Electrónica
+DOMAIN: General
+PRIORITY: Media
+ID: 3170041871
+SOURCE: 3170041871__Daily_Tasks_-_Facturacio╠ün_Electro╠ünica.json
+
+---
+
+Fecha
+
+Developer
+
+Tarea
+
+Action items
+
+Tarea: PFE-17 Trabajando en la pantalla de selección de productos. Armando las vistas e intentando hacer convivir lo que tenemos con lo viejo.
+Blockers:
+
+9incomplete
+
+Tarea: PFE-19 y PFE-32. Armando la landing page y ajustando los estilos.
+Blockers:
+
+10incompleteDudas sobre el modelado para ver con Luis
+
+Tarea: Trabajando en la pantalla de productos y su maquetada. Viento estilos y responsive de la misma
+
+Blockers:
+
+Tarea: Terminando vista de Landing y arrancando a trabajar con obtener datos de commerce service.
+
+Blockers:
+
+11incompleteDuda sobre si mostrar botón deConocer mas informaciónen la pantalla Landing
+
+Tarea: PR Vista de Producto y avanzando con carrito. Ya mergo cambio del BE que tenia.
+Blockers:
+
+Tarea: Viernes termino Landing (faltan algunos ajustes para cuando unamos dos partes). Lunes empezó con 21. Pantalla de Resumen de Productos.
+Blockers: Parte del BE para unir con front de Landing. Se volvió a cambiar el flujo de las pantallas. Se sacaron pantallas.
+
+Tarea: Avanzando con carrito
+Blockers:
+
+Tarea: Casi pronta vista de facturación electronica. Falta logica y responsive.
+Blockers:

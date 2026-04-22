@@ -1,0 +1,88 @@
+TITLE: Revisión de Versiones de Ruby en Servicios
+DOMAIN: 4) Servicios
+PRIORITY: Alta
+ID: 3194716248
+SOURCE: 3194716248__Revisio╠ün_de_Versiones_de_Ruby_en_Servicios.json
+
+---
+
+Revisar los servicios y clasificarlos en:
+Esta actualizado (Ruby v2.6 o +, JRuby 9.3)
+
+Falta actualizar pero no afectaría (Ruby v2.5 o +, JRuby 9.2)
+
+Necesitamos trabajo de upgrade (Ruby v2.4 o -, JRuby 9.1)
+
+Servicio
+
+Versión / Clasif
+
+Nota
+
+Estado
+
+Audit-service
+
+Jruby 9.4.5.0 / 1
+
+Auth-service
+
+Jruby 9.4.1.0-jdk8 / 1
+
+Backend-service
+
+Jruby 1.7.23 / 3
+
+Este valor se obtuvo en config/deploy/settings.rb
+
+Billing-service
+
+Jruby 9.2.7.0-jdk / 2
+
+Biller-service
+
+Jruby 9.4.5.0 / 1
+
+Billing-service-public-proxy
+
+Jruby 9.4.1.0-jdk8 / 1
+
+Commerce-service
+
+Jruby 9.4.5.0 / 1
+
+ePOS-service
+
+Jruby 9.4.1.0-jdk8 / 1
+
+External-commerce-service
+
+Jruby 9.2.7.0 / 2
+
+Loyalty-service
+
+Jruby 1.7.27 / 3
+
+mPOS-service
+
+ruby 3.1.0 / 1
+
+Notifications-service
+
+Jruby 9.1.15.0 / 3
+
+Payment-link-service
+
+Jruby 9.3.14.0/ 3
+
+S4-service
+
+ruby 2.1.10-slim / 3
+
+selling-service
+
+Jruby 9.2.7.0-jre / 2
+
+vPOS-service
+
+Jruby 1.7.27 / 3

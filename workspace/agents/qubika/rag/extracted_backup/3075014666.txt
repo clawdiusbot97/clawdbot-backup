@@ -1,0 +1,85 @@
+TITLE: Requerimientos y Responsabilidades - Tech Core Team
+DOMAIN: General
+PRIORITY: Media
+ID: 3075014666
+SOURCE: 3075014666__Requerimientos_y_Responsabilidades_-_Tech_Core_Team.json
+
+---
+
+Nuestro equipo de desarrollo se compone de un numeroso grupo de desarrolladores dedicados a la creación e implementación de soluciones tecnológicas de alta calidad. Dentro de este grupo, el sub-equipo denominadoBancard Tech Corejuega un papel fundamental, actuando como la referencia técnica de nuestras iniciativas y proyectos. Este sub-equipo no solo aporta su expertise y liderazgo técnico dentro del proyecto, sino que también sirve como punto de referencia para nuestro cliente, asegurando que las soluciones entregadas cumplan con los más altos estándares de calidad y eficiencia.
+Dada la importancia y el impacto de Bancard Tech Core, es esencial definir claramente los requisitos y responsabilidades para aquellos que aspiren a formar parte de este grupo. Este documento tiene como objetivo delinear los criterios y las expectativas para los miembros del Bancard Tech Core, garantizando que aquellos que integren el equipo posean las habilidades, conocimientos y competencias necesarias para liderar y representar técnicamente a nuestro equipo tanto internamente como frente al cliente.
+En las siguientes secciones, se detallarán los requisitos específicos en términos de experiencia técnica, habilidades de comunicación, capacidad de liderazgo y otros criterios relevantes, así como las responsabilidades que cada miembro deberá asumir para contribuir al éxito continuo del Bancard Tech Core y, por ende, al logro de los objetivos estratégicos de nuestro equipo.
+Procesos
+Un requerimiento esencial para formar parte del Tech Core es tener un conocimiento profundo y detallado de los procesos de desarrollo utilizados por nuestro equipo. Esto incluye, pero no se limita a:
+Proceso de Desarrollo:Comprensión integral de las metodologías de desarrollo de software adoptadas por el equipo.
+
+Branching y Control de Versiones:Dominio de las estrategias de branching empleadas, y la capacidad de gestionar y optimizar el flujo de trabajo en control de versiones.
+
+Integración Continua (CI):Conocimiento y experiencia en la implementación y mantenimiento de pipelines de integración continua, asegurando que las actualizaciones y despliegues se realicen de manera eficiente.
+
+La familiaridad y expertise en estos procesos son cruciales para asegurar que el equipo Bancard Tech Core pueda liderar técnicamente las iniciativas de desarrollo, manteniendo la calidad, consistencia y eficiencia en todas las etapas del ciclo de vida de los proyectos.
+Un miembro del Tech Core debe ser capaz de sugerir mejoras tanto en los procesos y dinámicas generales del equipo como en proyectos específicos. Esto implica identificar oportunidades de optimización, proponer soluciones innovadoras y colaborar en la implementación de mejoras que aumenten la eficiencia y calidad del trabajo realizado por el equipo.
+
+Técnicos
+Tener un buen manejo de los lenguajes, tecnologías y herramientas utilizadas por el equipo.
+Manejo de Lenguajes:Alta experiencia en Ruby y Ruby on Rails.
+
+Conocimientos de Redis:Comprender su funcionamiento, configuración y monitoreo.
+
+Conocimientos de Sidekiq:Entender su funcionamiento y configuración.
+
+Conocimientos Sólidos en Bases de Datos:Competencia en modelado de bases de datos y optimización de consultas, con capacidad para analizar y mejorar las consultas generadas por Active Record.
+
+Poseer un profundo entendimiento tanto del ecosistema técnico como del contexto de negocio de Bancard. Esto implica:
+Conocer los principales proyectos, sus responsabilidades y clientes.
+
+Conocer y entender en profundidad los mecanismos de autenticación/autorización de los servicios y portales de Bancard.
+
+Conocer y poder revisar/administrar la infraestructura de Bancard en cualquiera de sus ambientes.
+
+Conocer en profundidad proceso de CI y deploy.
+
+Conocer en profundidad frameworks utilizados por Bancard en los servicios (angus/angus-remote, picasso/picasso-remote) y ser capaz de transmitir los conocimientos.
+
+Conocer las principales gemas y herramientas de Bancard y su funcionamiento (picasso-listing, external-services, baas, bancard-docker)
+
+Total independencia en la resolución de tareas o cualquier inconveniente que pueda surgir.
+Tareas
+
+Errores en producción
+
+Participación en deploys
+
+Soporte a compañeros
+
+Soporte al cliente
+
+Un miembro del Tech Core debe destacarse por su habilidad analítica y propositiva tanto en la comprensión de los requerimientos del cliente como en la identificación y resolución de desafíos en los proyectos. Esto implica:
+Escucha Activa y Análisis:Escuchar atentamente los requerimientos del cliente y analizarlos exhaustivamente, identificando posibles dificultades, limitaciones o áreas de mejora en los proyectos.
+
+Propuestas de Cambio:Proponer cambios o mejoras cuando sea necesario, basándose en el análisis detallado de los requisitos y las condiciones del proyecto.
+
+Evaluación de Alternativas:Evaluar diferentes alternativas para la resolución de problemas, considerando los pros y contras de cada una y colaborando con otros miembros del equipo para tomar decisiones informadas y efectivas.
+
+Ejercer una gestión cautelosa de los cambios que puedan afectar a múltiples servicios o a todo el ecosistema de Bancard, priorizando la cuidadosa evaluación del posible impacto. Esto implica promover discusiones técnicas con el equipo para analizar diferentes perspectivas y considerar detenidamente las implicaciones antes de tomar decisiones, asegurando así la estabilidad y la integridad del sistema sin comprometer la calidad del servicio ofrecido.
+
+Comunicación
+Mantener una comunicación fluida y efectiva con el cliente. Esto implica proporcionar respuestas rápidas, concretas y convincentes que generen confianza y demuestren un profundo entendimiento de las necesidades y preocupaciones del mismo. Al mantener una comunicación clara y transparente, se fortalece la relación con el cliente y se garantiza una colaboración exitosa.
+
+Una comunicación efectiva con el equipo de desarrollo es esencial para el éxito del proyecto. Esto implica mantener canales abiertos y transparentes de comunicación, compartir información de manera clara y oportuna, escuchar activamente las ideas y preocupaciones de los compañeros, y trabajar en colaboración para resolver desafíos y alcanzar los objetivos establecidos. Al fomentar un ambiente de confianza y respeto mutuo, se fortalece la sinergia del equipo y se impulsa la excelencia en la ejecución de los proyectos de desarrollo de Bancard.
+
+Participar activamente en los canales de soporte, ofreciendo ayuda y asistencia a los compañeros del equipo.
+
+Liderazgo
+Ser capaz de liderar el proceso de integración de nuevos miembros, presentándolos a los diferentes proyectos, procesos y dinámicas del equipo. Esto implica proporcionar una guía clara y detallada sobre las responsabilidades, herramientas y expectativas, así como ofrecer apoyo y orientación durante el período de adaptación para garantizar una transición exitosa y una rápida incorporación al equipo.
+
+Debe ser capaz de dirigir la identificación de tareas y estimaciones, asegurando resultados organizados y precisos. Esto implica liderar discusiones para identificar claramente las tareas necesarias para alcanzar los objetivos del proyecto, así como facilitar el proceso de estimación del tiempo y los recursos requeridos para completar cada tarea de manera efectiva.
+
+Ser capaz de servir como referente técnico en una iniciativa, incluso sin ser parte del equipo de desarrollo directamente involucrado.
+Estar al pendiente del estado de la iniciativa en todo momento.
+
+Atender y analizar nuevos requerimientos elevados por el cliente.
+
+Evaluación del progreso y rendimiento del equipo de desarrollo.
+
+En resumen, este documento establece los requisitos clave para unirte al equipo Bancard Tech Core. Desde el dominio técnico hasta las habilidades de liderazgo y comunicación, cada punto refleja nuestro compromiso con la excelencia y el éxito en nuestros proyectos. Al cumplir con estos estándares, buscamos fomentar una colaboración efectiva y un desempeño destacado en nuestro equipo.

@@ -1,0 +1,25 @@
+TITLE: Issue bancard-loggers
+DOMAIN: General
+PRIORITY: Media
+ID: 4349395069
+SOURCE: 4349395069__Issue_bancard-loggers.json
+
+---
+
+Durante la implementación de Kount en vpos-service se ha dado un problema con respecto a bancard-loggers.
+Loggers que deberian estar escribiendo al mismo archivo, estaban escribiendo a archivos ya rotados.
+Setup:
+rubywide760yamlwide760Extras:
+Todos los updates se hacen desde el contenedor de Sidekiq.
+
+Todos los evaluate se hacen desde el contenedor de Puma.
+
+El login se hace cuando el token anterior caduca. Esto puede suceder desde sidekiq o desde puma.
+
+Problema:
+El diase estaban escribiendo logs a 3 files distintos:
+/var/log/bancard.vpos.service/kount_requests_production.logtodos los updates
+
+/var/log/bancard.vpos.service/kount_requests_production.log.20251110.1todos los logins
+
+/var/log/bancard.vpos.service/kount_requests_production.log.20251110.2todos los evaluate

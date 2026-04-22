@@ -1,0 +1,11 @@
+TITLE: Documentación de Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 2206957569
+SOURCE: 2206957569__Documentacio╠ün_de_Bancard.json
+
+---
+
+Presentación sobre Investigación en Proyectos Bancard →https://docs.google.com/presentation/d/1pZkyMcSGMfkX-a8ZcdYFEV67GQh5lw1iL3D2HZukHdo/edit#slide=id.ge49cc733f2_0_18
+VIDEO: Como generar un JWT →https://drive.google.com/file/d/1Lknswh7muzgi1we56YHoeUOqBJH8vcFJ/view?usp=sharing
+Presentación sobre Ramas de Múltiples Iniciativas →https://docs.google.com/presentation/d/1KWS1Ph4lxmG_pZ_52cMmULci4xp0YcQgTwGTO62aICs/edit?usp=sharing

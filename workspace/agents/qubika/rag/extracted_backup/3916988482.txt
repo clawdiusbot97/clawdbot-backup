@@ -1,0 +1,59 @@
+TITLE: Mejoras UI en Vista de Resumen de Suscripciones - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3916988482
+SOURCE: 3916988482__Mejoras_UI_en_Vista_de_Resumen_de_Suscripciones_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para las mejoras UX propuestas por @Carlos Velazquez para la vista de resumen de suscripciones, a cargo de.
+Las horas estimadas son:63
+Fecha de inicio:Martes
+Fecha estimada de entrega:Lunes
+Tarea
+
+Estimación (hs)
+
+Las etiquetas de los filtros se ecuentran dentro de las opciones mismas. Debería separarse y quedar fuera
+
+1
+
+Remarcar con color los valores de los filtros (Tomar ejemplo del figma)
+
+1
+
+Remover las negritas en los nombres de los clientes en las tablas y agregar el icono
+
+2
+
+Agregar responsive al nuevo diseño
+Lo que tenemos del diseño anterior mantenerlo
+
+Lo que no tenemos y no tenemos figma, dejar como desktop y usar scroll
+
+40
+
+Indicación visual al pasar de página, icono de cargando al costado del total de páginas
+
+4
+
+Indicación visual para el botón de descargas para una descarga activa
+
+4
+
+Palabras de suscripciones muy largas sin espacio
+
+3
+
+Total Desarrollo
+
+55
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+8
+
+Total Desarrollo + Gestión
+
+63

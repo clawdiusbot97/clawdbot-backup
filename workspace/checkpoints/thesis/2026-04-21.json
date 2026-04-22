@@ -1,0 +1,17 @@
+{
+  "date": "2026-04-21",
+  "stage": "ok",
+  "generated_at": "2026-04-21T11:05:02Z",
+  "cache_used": false,
+  "deliver_to_channel_id": "1476311753305362564",
+  "delivery_error": "Not delivered: this runtime does not have the Discord message tool available. Content written to outbox for manual send.",
+  "findings_count": 6,
+  "sources": [
+    "https://github.com/mindee/doctr",
+    "https://arxiv.org/abs/2204.08387",
+    "https://github.com/Unstructured-IO/unstructured",
+    "https://docs.llamaindex.ai/",
+    "https://github.com/openai/whisper",
+    "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+  ]
+}

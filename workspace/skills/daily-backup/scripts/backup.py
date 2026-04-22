@@ -48,11 +48,17 @@ EXCLUDE_PATTERNS = [
     "**/.git",
     "**/.git/**",  # exclude nested git dirs (submodules, vendored repos)
     "**/node_modules",
+    "**/node_modules/**",
     "**/venv",
+    "**/venv/**",
     "**/.venv",
+    "**/.venv/**",
     "**/tmp",
+    "**/tmp/**",
     "**/temp",
+    "**/temp/**",
     "**/logs",
+    "**/logs/**",
     "**/*.log",
     "**/*.pid",
     "**/*.lock",
@@ -308,7 +314,7 @@ def main():
         sys.exit(1)
     
     # Create temporary directory
-    temp_root = Path(os.getenv("BACKUP_TEMP_DIR", "/tmp/openclaw-backup"))
+    temp_root = Path(os.getenv("BACKUP_TEMP_DIR", "/home/manpac/.openclaw/tmp/openclaw-backup"))
     temp_root.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     temp_dir = temp_root / f"backup-{timestamp}"

@@ -1,0 +1,186 @@
+TITLE: Recomendaciones Detalladas de Configuración commerce-service
+DOMAIN: General
+PRIORITY: Media
+ID: 4478959617
+SOURCE: 4478959617__Recomendaciones_Detalladas_de_Configuracio╠ün_commerce-service.json
+
+---
+
+1. Estrategia general de memoria en el host (30GB)
+Primero pensemos en el servidor completo:
+RAM total:30GB
+
+Tenemos:
+1 contenedor JRuby Puma (commerce-service API)
+
+1 contenedor JRuby Sidekiq (commerce-service jobs)
+
+2 contenedores más de vpos-service (Puma + Sidekiq) que consumen poco
+
+el propio sistema operativo y daemons varios
+
+Regla de dedo razonable:
+No usar más del75–80%de la RAM del host comosuma de límites de contenedores JVM.
+
+Dejar al menos4–6GBlibres para:
+OS
+
+page cache
+
+picos inesperados
+
+Con 30GB totales:
+Reservamos ~5GBpara OS/overhead.
+
+Quedan ~25GBpara contenedores.
+
+Como los otros dos contenedores “consumen poco”, asumamos que entre los dos usan4–6GBde límite de RAM.
+
+Quedan19–21GBpara los dos contenedores grandes de commerce-service.
+
+Conclusión práctica - se puede armar algo como:
+commerce-service Puma container: límite entre10–12GB
+
+commerce-service Sidekiq container: límite entre6–8GB
+
+Otros servicios: mantenerlos en2–3GBcada uno si es suficiente
+
+Y verificar que la suma no pase ~24–25GB.
+2. Relación contenedor ↔ JVM: heap vs. native
+Dentro de cada contenedor JRuby tenemos:
+Heap de la JVM (-Xmx/-Xms)
+
+Metaspace + code cache (clases, JIT)
+
+Memoria nativa de JRuby / C extensions / buffers
+
+Stacks de threads (Java threads)
+
+Overhead del propio contenedor y librerías
+
+Regla de dedo razonable:
+Memoria del contenedor ≈ 1.5–2 × heap máximo (Xmx)
+
+Ejemplo:
+Si le damosXmx = 4.5GB:
+Configuramos el contenedor alrededor de7–9GB.
+
+Si le damosXmx = 6GB:
+Contenedor entre9–12GB.
+
+Así evitamos:
+OOM killer del contenedor
+
+y a la vez no reservamos 10GB de heap que nunca vamos a usar.
+
+3. Cómo saber cuánta memoria REALMENTE necesita cada contenedor
+No hay una fórmula mágica, pero hay una metodología bastante clara:
+Paso 1 – Medir el “live set” máximo
+Mirar en los GC logs / Dynatrace elOld Gen used-after-GC(después de un full GC o un major GC).
+
+Ese valor es “lo que realmente está vivo” (ellive set).
+
+Tomamos:
+L = máximo Old Gen used-after-GCen el período “peor caso” (picos de tráfico o jobs).
+
+Paso 2 – Agregar margen de seguridad
+Elegimos un factor de seguridad (S) entre1.3 y 1.5.
+
+Calculás:Xmx = L × S
+
+Ejemplo numérico:
+Si el Old Gen usado después del GC nunca pasa de3GBen los peores picos:
+Con S = 1.5 → Xmx ≈4.5GB
+
+Si en Sidekiq vemos que el máximo usado-after-GC está en2GB:
+Xmx ≈3GB
+
+Paso 3 – Derivar el límite de memoria del contenedor
+Usando el factor 1.5–2 para overhead:
+Memoria contenedor ≈ Xmx × 1.5–2
+
+Con los ejemplos:
+Puma:
+Xmx = 4.5GB → contenedor entre7 y 9GB
+
+Sidekiq:
+Xmx = 3GB → contenedor entre4.5 y 6GB
+
+Y luego verificamos que:
+Puma + Sidekiq de commerce-service + otros contenedores + OS ≤ 30GB con margen.
+
+4. Recomendaciones concretas para nuestro escenario
+Teniendo en cuenta la realidad (JRuby, Puma 32 threads, Sidekiq, 30GB host, heap actual 10GB):
+Para Puma (JRuby API, 32 hilos)
+Reducir heap máximo (Xmx)
+En vez de 10GB, probablemente algo como4–6GBsea más realista si el Old Gen used-after-GC está bastante por debajo de eso.
+
+Idealmente: calibrar usando el procedimiento de arriba (gc logs → L → Xmx = L × S).
+
+Emparejar Xms y Xmx (en un valor ya razonable)
+Ej:-Xms4g -Xmx4g
+
+Ventaja: evitás escaladas progresivas del heap y tenés un comportamiento más predecible.
+
+Desventaja: reserva esa memoria desde el arranque, pero si Xmx ya es razonable, está bien.
+
+Revisar el número de threads Puma
+32 threads para una sola instancia JRuby puede ser demasiado si no tenés suficientes cores y si la app no es súper I/O bound.
+
+Valores típicos invertibles:
+CPU-bound:#cores o 2× #cores
+
+I/O-bound (mucho tiempo en la DB / API externas):8–16 threadssuele ser más que suficiente.
+
+Menos threads = menos stacks, menos objetos vivos al mismo tiempo, mejor comportamiento de memoria.
+
+Para Sidekiq (JRuby workers)
+Ajustar la concurrencia de Sidekiq
+No usar una concurrencia exagerada si después los jobs son principalmente CPU-bound.
+
+Por ejemplo, 5–10 workers concurrentes puede ser más sano que 25–50, dependiendo de la carga.
+
+Heap y memoria
+Mismo método: medís L (live set) de Old Gen y calculás Xmx.
+
+Probablemente Sidekiq pueda vivir con2–4GBde heap en muchos escenarios, salvo que los jobs procesen payloads grandes.
+
+5. Ajustes recomendados de JVM (GC, contenedores, etc.)
+Dado que los contenedores tienen límites y el problema principal es cómo “se queda agarrada” la memoria:
+Considerar G1GC en lugar de Parallel GC
+Ventajas:
+Menos pausas largas.
+
+Mejor manejo de heaps medianos/grandes.
+
+En JDKs modernos, G1 puede devolver memoria al SO más agresivamente que Parallel (aunque nunca es perfecto).
+
+Ej: agregar:
+-XX:+UseG1GC
+
+Configurar la JVM para que respete el límite del contenedor
+En JDK 10+ esto suele estar activado por defecto, pero podés hacerlo explícito:
+-XX:+UseContainerSupport(si aplica a la versión)
+
+O usar-XX:MaxRAMPercentageen lugar de-Xmxfijo, pero como ya tenés 10GB fijo, para vos es más claro seguir con-Xmxy-Xms.
+
+Otros flags útiles (opcional, orientativo)
+Y algo similar para Sidekiq pero con Xmx menor si el live set lo permite.
+
+6. Cómo validar que “no te quedaste corto”
+Una vez aplicadas las configuraciones:
+Mirar métricas en picos de tráfico / jobs
+Old Gen used-after-GC: que no se acerque a Xmx de forma sostenida.
+
+Frecuencia de full GCs: que no sea excesiva.
+
+Pausas de GC: que estén dentro de valores aceptables para tu SLA.
+
+Mirar el uso de memoria del contenedor
+Que el RSS del proceso + resto de cosas dentro del contenedor se mantengan lejos del límite (por ejemplo ≤ 80% del límite) incluso en picos.
+
+Iterar
+Si ves que:
+Heap se queda muy sobrado todo el tiempo (Old Gen after GC << Xmx/2) → podés bajar Xmx.
+
+Heap vive demasiado cerca del techo y el GC empieza a ser agresivo → subís un poco Xmx o bajás concurrencia (threads Puma / Sidekiq).

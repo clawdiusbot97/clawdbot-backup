@@ -1,0 +1,95 @@
+TITLE: Customer Fields for Transfers JPOS
+DOMAIN: General
+PRIORITY: Media
+ID: 2709127200
+SOURCE: 2709127200__Customer_Fields_for_Transfers_JPOS.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+PM
+
+Technical Reference
+
+DEV
+
+Ariel Samaniego & Tania Lorena Ocampos Rojas
+
+Client/Owner
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+Customer Fields for Transfers JPOS
+
+Jira Board
+
+https://jira.bancardnet.dom/projects/PDADFEEPDC/issues/PDADFEEPDC-3?filter=allissues
+
+Slack Channel
+
+#bancard-customer-fields
+
+M. Teams Channel
+
+Datos Adicionales de Facturadores en el Portal de Comercios
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Daily
+
+Minutes
+
+15
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-
+
+Client Demo / Sprint Review
+
+Cadence
+
+Every 2 weeks
+
+Minutes
+
+30
+
+Owner
+
+First Roadmap
+true%7B%22title%22%3A%22Roadmap%20Planner%22%2C%22timeline%22%3A%7B%22startDate%22%3A%222023-09-27%2000%3A00%3A00%22%2C%22endDate%22%3A%222023-10-20%2000%3A00%3A00%22%2C%22displayOption%22%3A%22WEEK%22%7D%2C%22lanes%22%3A%5B%7B%22title%22%3A%22Sprint%201%22%2C%22color%22%3A%7B%22lane%22%3A%22%23f6c342%22%2C%22bar%22%3A%22%23fadb8e%22%2C%22text%22%3A%22%23594300%22%2C%22count%22%3A1%7D%2C%22bars%22%3A%5B%7B%22title%22%3A%22Agregar%20los%20atributos%20nuevos%20customer_field%20y%20billing_identifier%20al%20JSON%20enviado%20al%20transfer%20de%20JPOS%22%2C%22description%22%3A%22%22%2C%22startDate%22%3A%222023-09-01%2000%3A00%3A00%22%2C%22duration%22%3A4.285714285714286%2C%22rowIndex%22%3A0%2C%22id%22%3A%229f22e08f-e403-4328-944a-599a798e4334%22%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22rowIndex%22%3A0%2C%22startDate%22%3A%222023-10-02%2009%3A58%3A48%22%2C%22id%22%3A%22e31bbe24-387e-41cf-ad2a-1fc62f202206%22%2C%22title%22%3A%22Agregar%20los%20atributos%20nuevos%20customer_field%20y%20billing_identifier%20al%20JSON%20enviado%20al%20transfer%20de%20JPOS%22%2C%22description%22%3A%22%22%2C%22duration%22%3A1%2C%22pageLink%22%3A%7B%7D%7D%5D%7D%2C%7B%22title%22%3A%22Sprint%202%22%2C%22color%22%3A%7B%22lane%22%3A%22%233b7fc4%22%2C%22bar%22%3A%22%236c9fd3%22%2C%22text%22%3A%22%23ffffff%22%2C%22count%22%3A1%7D%2C%22bars%22%3A%5B%7B%22rowIndex%22%3A0%2C%22startDate%22%3A%222023-10-08%2020%3A40%3A23%22%2C%22id%22%3A%221507e3d8-3190-4111-b8db-8525f09467db%22%2C%22title%22%3A%22Agregar%20los%20atributos%20nuevos%20customer_field%20y%20billing_identifier%20al%20JSON%20enviado%20al%20transfer%20de%20JPOS%22%2C%22description%22%3A%22%22%2C%22duration%22%3A1%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22rowIndex%22%3A1%2C%22startDate%22%3A%222023-10-09%2000%3A00%3A00%22%2C%22id%22%3A%227353f571-5fce-44a8-941d-cc78b4f02251%22%2C%22title%22%3A%22Modificar%20stubs%20del%20post_transfer%20en%20external-services%20en%20el%20caso%20de%20que%20la%20respuesta%20cambie.%22%2C%22description%22%3A%22%22%2C%22duration%22%3A1%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22rowIndex%22%3A0%2C%22startDate%22%3A%222023-10-16%2001%3A39%3A48%22%2C%22id%22%3A%22dda62627-f918-4783-bc53-d2c7f4e2ddec%22%2C%22title%22%3A%22Modificar%20stubs%20del%20post_reverse_transfer%20en%20el%20caso%20de%20que%20la%20respuesta%20cambie.%22%2C%22description%22%3A%22%22%2C%22duration%22%3A1%2C%22pageLink%22%3A%7B%7D%7D%5D%7D%5D%2C%22markers%22%3A%5B%7B%22title%22%3A%22Marker%201%22%2C%22markerDate%22%3A%222023-09-15%2000%3A00%3A00%22%7D%5D%7DRoadmap%20Planner3a613f2d7aacaeebdc633484af057e0f

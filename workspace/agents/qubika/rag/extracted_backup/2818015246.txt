@@ -1,0 +1,15 @@
+TITLE: Baas Token Authentication
+DOMAIN: 3) Auth
+PRIORITY: Media
+ID: 2818015246
+SOURCE: 2818015246__Baas_Token_Authentication.json
+
+---
+
+Login with user email and password
+
+Generate plain_signature
+
+Generate SHA1 hash signature
+
+Make requests using baas authentication with the signature and the date used to create it

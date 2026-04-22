@@ -1,0 +1,38 @@
+TITLE: Tutorial dump de base de staging
+DOMAIN: 1) Deploy
+PRIORITY: Media
+ID: 2548170757
+SOURCE: 2548170757__Tutorial_dump_de_base_de_staging.json
+
+---
+
+este tutorial está pensado para usar el editor mysqlworkbench. para seguir estos pasos lo necesitas tener instalado y ademas configurar la conexión a la/s base/s de dato/s de staging (existe la vieja y la nueva) tal que así ->
+para la vieja:
+para la nueva:
+para establecer ambas conexiones utilizaremos el siguiente usuario:
+u: mooveit
+p: 123mooveit
+
+una vez tengamos la conexión establecida, seguimos los siguientes pasos:
+para exportar un dump:
+en mysqlworkbench, conectado a la maquina con las bases de staging, vas a las opciones de la barra de arriba y seleccionasServer>Data Export
+
+ahi te va a salir un listado con todas las bases de la maquina de staging, seleccionas la que queres exportar (por ejemplocommerce_service_production)
+
+seleccionas la opciónDump Structure and Data
+
+abajo del todo, en export options, seleccionasExport to Self-Contained Filey le pones el nombre que quieras al archivo .sql que te va a generar con todos los datos y estructura de la base (recomiendo un nombre descriptivo asi luego sabes detectar cual es el archivo)
+
+le das a start export y continuar si te lo pide
+
+para import un dump:
+luego para importar la base a tu base local:
+en mysqlworkbench, conectado a la maquina local con tus bases, te vas aServer > Data Import
+
+en import options, seleccionaImport from Self-Contained Fileapuntando al archivo .sql que acabas de exportar
+
+seleccionas la base donde queres importar ese .sql (siguiendo el ejemplo, tu base local que creaste de commerce-service)
+
+le das aStart Import
+
+y ahí ya tendrias importado tu dump de la base de staging en tu base local.

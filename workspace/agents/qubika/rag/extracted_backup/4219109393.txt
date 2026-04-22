@@ -1,0 +1,54 @@
+TITLE: 3D Secure en VPOS
+DOMAIN: General
+PRIORITY: Media
+ID: 4219109393
+SOURCE: 4219109393__3D_Secure_en_VPOS.json
+
+---
+
+VPOS fue el primer producto de Bancard en incorporar 3D Secure. Esta es una explicación simplificada del proceso.
+La imagen a continuación muestra los componentes HTML necesarios para llevar a cabo el proceso 3D Secure.
+
+Click en el botón de pagar.
+Se previene el submit del form.
+Se llama agetCardDatay se obtiene info de tarjetacards/get_card_info
+Se llama avalidateCardinalPayment
+requiresCardinal()llama a vpos-servicevalidate_payment_for_3dsecy evalúa todo localmente usando sus modelos (y llamando al jpos aget_card_info). Si es true se continua el flujo
+addDataToDDCForm()llama a vpos-servicegenerate_jwt_for_3dsecy arma un JWT firmandolo con elcardinal_authentication.api_key. En la respuesta viene el jwt y ese valor se guarda en el inputddcJwtdel form ocultocollectionForm. Payload del JWT:
+rubyfull-width760Se submiteacollectionFormcon targetcollectionFrameahttps://centinelapistag.cardinalcommerce.com/V1/Cruise/Collect. No se bien que respuesta envia cardinal, pero en ese iframe se disparan varias peticiones a las apis de cardinal y se requieren varios archivos js. Entiendo que cuando termina, elcollectionFrameen donde está cardinal ejecutando hace un postMessage que es manejado por vpos_portal.
+rubywide760El SessionId que se obtiene como resultado del DDC, se usa como DFReferenceId en el request body en el lookup. Y si hace falta challenge, va tambien en el JWT del challenge como ReferenceId.
+validateCarginalChallenge(referenceId)
+getCardinalCmpiLookupInfo(referenceId)llama a vpos-service para hacer el lookupvalidate_payment_for_3dsec_with_cmpi_lookupenviando el SessionId del DDC. Envia el lookup a cardinal y vpos-service detecta si hay que hacer el challenge (presencia de stepUpUrl) y responde a vpos-portal con un jwt, la stepUpUrl un transactionId de caredinal. Para generar el jwt se envia el siguietne payload
+rubywide760open_channelabre conexion websockets con vpos-portal
+doChallenge
+setea el action del formcmpiFormalstepUpUrldevuelto en el lookup.
+pone el jwt en el inputcmpiJwtdelcmpiForm
+submiteacmpiForm. Esto hace que se muestre el challenge en elcmpiFrame.
+El usuario completa OTP
+De alguna manera magica luego de que el usuario submitea el form del challenge y llega la respuesta, desde el navegador es que se envia la request al endpoint de cardinalNotify de vpos-portal. Debe ser que es el propio cmpiFrame el que hace la request a la ReturnUrl colocado en el JWT.
+wide1800vpos-portal recibe el notify y broadcastea por websockets.
+el navegador recibe el broadcast y submitea el form original (datos de tarjeta, etc) para procesar el pago, gracias a que pasaron las validaciones (challenge_channel.js).
+el challenge de ejemplo va ahttps://1merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+Tokenización de tarjetas VISA (VPOS)
+En algunos flujos se tokeniza la tarjeta si es Visa y ese token se usa en vez del card_pan indistintamente. Estos lugares son:
+Validar si un pago/catastro requiere cardinal.
+
+Obtener en un pago/catastro el JWT para el DDC.
+
+Enviar a la operacióncard_validation_sw_sden el catastro.
+
+Enviar alpay_buy.
+
+El lookup de cardinal en un pago/catastro se hace con el card_number en plano (no se usa token).
+
+Pagos Ocasionales con tarjeta VISA con use_type Internacional1800Se tokeniza la tarjeta para validar si requiere cardinal, hacer el DDC y pagar.
+Obtener un token_requestor
+
+rubyGenerar el token
+
+rubyEl token es response[“tokenInfo”][“token”]
+Catastros de tarjetas VISA con use_type Internacional1800Se tokeniza la tarjeta para validar si requiere cardinal, hacer el DDC y catastrar.
+Generar el token
+
+rubyEl token es response[“pan_token”]
+Pagos con AliasToken (tarjeta catastrada)1800Se utiliza ExternalServices Restool card_utils_service#get_card_number. /util/get_card. Esta operación del JPOS devuelve el VISA token en caso de que corresponda.

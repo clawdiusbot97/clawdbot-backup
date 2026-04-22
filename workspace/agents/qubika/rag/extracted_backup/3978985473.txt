@@ -1,0 +1,225 @@
+TITLE: VPos 3.0 - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3978985473
+SOURCE: 3978985473__VPos_3.0_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para la iniciativaVPos 3.0, a cargo de.
+Las horas estimadas son:441 horas ~ 55 días
+Fecha de Inicio:
+Fecha estimada de Entrega:
+Tarea
+
+Estimación (hs)
+
+Portal / Servicio
+
+Setup inicial y creación de Proyecto de de Portal bancard-cybersource-portal
+
+8
+
+cybersource-portal
+
+Dockerización con docker-compose
+
+8
+
+cybersource-portal
+
+Configuración de Sentry
+
+4
+
+cybersource-portal
+
+Configuración de GitHub Actions, Bito, RSpec, Rubocop
+
+8
+
+cybersource-portal
+
+Creación de Application Credentials
+
+4
+
+cybersource-portal
+
+Integrar Redis para compartir sesión con commerce-suite
+
+4
+
+cybersource-portal
+
+Agregar bancard-cybersource-portal en bancard-configurations
+
+4
+
+bancard-configurations
+
+Configurar máquina de staging para bancard-cybersource-portal
+
+4
+
+dockerized-nginx
+
+Configurar proxy de servicios de staging para bancard-cybersource-portal
+
+4
+
+commerce-suite-nginx
+
+Configurar maquina de producción para bancard-cybersource-portal
+
+6
+
+dockerized-nginx
+
+Configurar proxy de servicios de producción para bancard-cybersource-portal
+
+6
+
+commerce-suite-nginx
+
+Crear tarjeta del producto de VPos 3.0 “Cybersource” en sección de Mis Productos Contratados / Productos Adicionales.
+
+16
+
+commerce-suite
+
+Crear la landing (opportunity product) para contratar este nuevo producto VPos 3.0
+Pendiente logos, Precios y Diseño de Landing con textos.
+
+24
+
+commerce-suite
+
+Para la sección soporte, crear el producto y pasarlo al Controller genérico. Simular lo que hoy en día esta para VPos 2.0 pero para el nuevo producto.
+
+16
+
+commerce-suite
+
+Crear vista al entrar a la configuración del nuevo producto VPos 3.0.
+Simular vista rediseño nueva de TPago Portal (sidebar fija + centro cambiable)
+
+32
+
+commerce-suite
+
+Crear SideBar con el Menú
+
+16
+
+Crear vista de 'Comercios Habilitados'→ esta vista mostrará una tabla con datos de sucursales del comercio que esté logueado.
+Para obtener estos datos consumiremos otro servicio RPG. También manejar datos tanto de Sandbox como de Produccion.
+
+24
+
+commerce-suite
+
+Crear vista de ‘Integración con API’ → contendrá sección para credenciales pub/priv, tanto para Sandbox como Prod (pestañas switcheables).
+Para obtener estas credenciales consumiremos servicio RPG. También tendrá una pestaña ‘documentación’ con texto, tarjetas de prueba, etc
+
+40
+
+commerce-suite
+
+Crear vista de 'Movimientos' → tabla para filtrar los movimientos hechos con Cybersource.
+Consumiremos un dataset de vpos-service para obtener estos datos.
+
+La tabla tendrá:
+Datos de un pago Cybersource
+
+Filtros sobre los datos numero de boleta, fecha, codigo de autorizacion, medio de pago y sucursal. (Sólo se mostrarán pagos de Cybersource aprobados)
+
+Opción de descargar un .csv con los datos mostrados en la tabla.
+
+40
+
+commerce-suite
+
+Crear endpoint para consumir servicio REST que obtiene claves pub/priv para comercio Cybersource (sandbox y prod)
+
+16
+
+commerce-service
+
+Crear endpoint para consumir servicio REST que obtiene comercios habilitados de Cybersource para un comercio dado.
+
+16
+
+commerce-service
+
+Crear endpoint para dataset de nueva tabla Cybersource, para el reporte de movimientos.
+
+20
+
+commerce-service
+
+Crear nueva tabla Cybersource donde persistir transacciones de Cybersource.
+Las columnas serán:
+nro boleta,
+
+transaction id de Cybersource,
+
+Transaction id de commerce-service.
+
+Pendiente: consulta que otros datos se necesitan para la tabla nueva.
+
+4
+
+commerce-service
+
+Crear nueva tablaraw_trn_cybersourcedonde persistir transacciones raw de Cybersource y agregar nuevas columnas a la tablatransactions_cybersource
+
+4
+
+commerce-service
+
+Crear proceso Sidekiq que migre los datos de la tabla deraw_trn_cybersourceatransactions_cybersource.
+
+32
+
+commerce-service
+
+Crear endpoint para cargar raw transactions de Cybersource a la tablaraw_trn_cybersource
+
+16
+
+commerce-service
+
+Modificar validaciones de preauth confirm en el proceso que tenemos hoy en día de raw transactions
+
+8
+
+commerce-service
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+32
+
+Total Desarrollo
+
+392
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+49
+
+Total Desarrollo + Gestión
+
+441

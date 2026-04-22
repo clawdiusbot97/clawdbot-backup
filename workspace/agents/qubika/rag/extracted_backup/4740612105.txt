@@ -1,0 +1,9 @@
+TITLE: Tokenizacion en API Entidades
+DOMAIN: General
+PRIORITY: Media
+ID: 4740612105
+SOURCE: 4740612105__Tokenizacion_en_API_Entidades.json
+
+---
+
+Por requerimiento de BEPSA los pagos que se realicen con tarjetas procesadas por ellos tienen que ir tokenizados.

@@ -1,0 +1,9 @@
+TITLE: VPos
+DOMAIN: General
+PRIORITY: Media
+ID: 3233218577
+SOURCE: 3233218577__VPos.json
+
+---
+
+Esta carpeta contiene todas las iniciativas relacionadas a VPos

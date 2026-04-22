@@ -1,0 +1,83 @@
+TITLE: Portales de Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 2794356818
+SOURCE: 2794356818__Portales_de_Bancard.json
+
+---
+
+Los portales se encargan de presentar la lógica de los servicios para que el usuario final interactúe con ellos.
+🖥️ Rails + JQuery
+Portal
+
+Funcionalidad
+
+Servicios
+
+Repositorio
+
+Pago Móvil
+
+Portal destinado al usuario final de facturas
+
+Permite pagar facturas con Tarjetas de Débito y Crédito
+
+Ver transacciones realizadas con TC y TD
+
+Commerce-Suite (Portal de Comercios)
+
+Portal destinado a los comercios
+
+Contiene la interfaz web para usuarios de comercios
+Boca Web, Facturador Offline (biller-service) y vPOS
+
+Consume principalmente commerce-service y epos-service
+
+Commerce-service
+
+Portal de Directores
+
+Directores suben archivos y son compartidos con otros directores
+
+Actas y Presentaciones
+
+S4-servicecon archivos privados
+
+Portal de Lealtad
+
+Portal para entidades
+
+Permite definir y gestionar campañas de puntos
+
+Loyaly-service
+
+https://github.com/bancardsa/bancard-loyalty-portal
+
+Portal de Autenticación
+
+Vistas para activar tu cuenta
+
+Vistas para cambio de password
+
+Vistas para olvidé mi password
+
+Auth-service
+
+https://github.com/bancardsa/bancard-auth-portal
+
+Portal de vPOS
+
+App similar a Paypal
+
+Vistas donde las páginas de los comercios redirigen para que el usuario final ingrese y pague con su tarjeta
+
+vPOS-service
+
+https://github.com/bancardsa/bancard-vpos-portal
+
+TPago
+
+payment-link-service
+
+Ambientes con los que trabajamos en Bancard↓
+Ambientes en Bancard

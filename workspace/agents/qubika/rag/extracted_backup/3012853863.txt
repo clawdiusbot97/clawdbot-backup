@@ -1,0 +1,79 @@
+TITLE: Extracciones Api de Comercios - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3012853863
+SOURCE: 3012853863__Extracciones_Api_de_Comercios_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Tarea
+
+Estimación (días)
+
+Proyecto
+
+[epos-public-service] Crear una API de cashout_status
+
+2
+
+epos-public-service
+
+[epos-public-service] Agregar de forma opcional los dos campos nuevos de tipo extracción y el field_type de tipo 4
+
+2
+
+epos-public-service
+
+[epos-public-service] Crear una API de create_cashout
+
+3
+
+epos-public-service
+
+[epos-public-service] Crear una API de cashout_info
+
+2
+
+epos-public-service
+
+[epos-public-service] Crear una API de reverse_cashout
+
+3
+
+epos-public-service
+
+[epos-service] Crear endpoint para create_anonymous_cashout
+
+5
+
+epos-service
+
+[epos-service] Crear endpoint para reverse_anonymous_cashout
+
+4
+
+epos-service
+
+[epos-service] Renombrar AnonymousPayments a AnonymousMovements y refactorear los modelos
+
+2
+
+epos-service
+
+[epos-service] Crear el modelo de AnonymousCashouts
+
+1
+
+epos-service
+
+[epos-service] Crear endpoint de cashout_info
+
+2
+
+epos-service
+
+[epos-service] Crear endpoint de anonymous_cashouts
+
+1
+
+epos-service

@@ -1,0 +1,50 @@
+TITLE: Auth Public - Tasking and Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 2719678507
+SOURCE: 2719678507__Auth_Public_-_Tasking_and_Estimation.json
+
+---
+
+Tarea
+
+Hrs.
+
+bancard-docker
+
+Agregar la taskpublicpara el ambiente de staging de auth-service
+
+2
+
+infra
+
+Configurar nginx para auth-public en staging en la máquina del servicio
+
+2
+
+Configurar iptables para auth-public en staging en la máquina del servicio
+
+1
+
+Configurar nginx para auth-public en staging en el proxy de servicios
+
+2
+
+Configurar iptables para auth-public en staging en el proxy de servicios
+
+1
+
+Configurar nginx en el proxy dmz para que use auth-public en lugar de auth normal
+
+2
+
+auth-service
+
+Fixes surgidos a partir del cambio. (Esto es una estimación muy a grandes razgos ya que no sabemos la cantidad de problemas que pueden surgir)
+
+40-100
+
+Comentarios
+Una vez hecho el cambio en el proxy dmz para utilizar auth-service con autenticación, todas las aplicaciones en staging se pueden ver afectadas en su funcionamiento. Las aplicaciones que utilizan este servicio son PagoMovil iOS, PagoMovil Android, App de Comercios, App de Minipos y App de Infonet Cobranzas.
+
+Es probable que necesitemos soporte de los equipos de mobile encargados del mantenimiento de dichas aplicaciones para realizar los cambios necesarios del lado de las apps.

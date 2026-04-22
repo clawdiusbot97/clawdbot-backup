@@ -1,0 +1,82 @@
+TITLE: Notas sobre definiciones para logs, vista de detalles y proceso para migraciones DBA
+DOMAIN: 5) Observabilidad
+PRIORITY: Alta
+ID: 3066069021
+SOURCE: 3066069021__Notas_sobre_definiciones_para_logs,_vista_de_detalles_y_proceso_para_migraciones_DBA.json
+
+---
+
+Este documento presenta las dudas / preguntas / notas sobre el siguiente archivo
+https://bancard.atlassian.net/wiki/spaces/PRYLDP/pages/300875864/Definiciones+para+logs+vista+de+detalles+y+proceso+para+migraciones+DBA.
+
+Nota
+
+LOGS
+
+Crear un archivo logdedicadonetamente a las migraciones DBA. El nombre puede ser dba_migrations_#{ENVIRONMENT}.log
+Por cada migración que se realice desde elPortal o la APIse pide guardar los datos relacionados a la migración y a los contratos que tuvieron inconvenientes al ser procesados.
+
+Posible formato del log:
+Se indica un posible formato a continuación:
+
+Con respecto a los contratos con fallas, la cantidad de contratos mostrados en debe de ser igual a la cantidad mostrada en el total de errores. El mensaje de excepción también debe de ser lo másespecifico y técnicoposible ya que está orientado a soporte.
+
+VISTA DE HISTÓRICO
+
+Vamos a tener una sección de Histórico de Migraciones. Acá vamos a tener unatablacon una lista de los nombres de los archivos migrado, con los siguientes valores:
+Fecha/Hora inicio procesamiento
+
+Fecha/Hora fin procesamiento
+
+Cantidad total de registros del archivo.
+
+Cantidad de registros procesados exitosamente.
+
+Cantidad de registros procesados con errores. (enlazar errores)
+
+Link de suscripción generado. (Utilizar formato de enlace).
+
+Nombre del archivo subido.
+
+Usuario que cargo el archivo.
+
+Detalle: Este campo va a descargar un archivo con los logs de la migación
+
+El usuario va a poder descargar el archivo con el detalle de los errores, con Titulo:{Nombre del archivo}
+Los datos a mostrar son:
+Número de contrato
+
+Estado (No encontrado / error)
+
+Mensaje (guardar en una tabla)
+
+El mensaje no debe contener datos sensibles ni indicar porque ha habido error. Ejemplos:
+Tarjeta no encontrada bajo el contrato indicado.
+
+Error de proceso (Mostrar cuando es un fallo del proceso en si)
+
+Esos datos de detalles deben ser guardados en una nueva tabla dba_migrations_details con una columna por cada dato de la tabla y
+también guardar la excepción detallada en una columna separada que no se muestra al comercio. Esta columna servirá para hacer
+soporte
+
+PROCESO DE MIGRACIÓN
+
+El proceso de migración debe recorrer todas las migración e intentar procesar la mayor cantidad de contratos posibles. Es decir que en
+caso de encontrar error con un contrato, el proceso no debe parar sino que debe de realizar el registro del fallo y continuar con el
+siguiente contrato. No realizar rollback en caso de errores.
+
+Idealmente este proceso debe ser asíncrono. Esto implica que a nivel del portal se debe indicar que el archivo de migración se ha cargado correctamente y se estará procesando el documento. A nivel de API, al finalizar la petición de la migración, se debe de contestar de manera síncrona que el proceso fue encolado exitosamente.
+
+Un detalle importante a tener en cuenta es que el proceso de migración no debe de tener en cuenta el limite máximo de catastros de una tarjeta. Por ejemplo, hoy está configurado el máximo de catastros de una misma tarjeta en 3 y si está tarjeta vuelve a entrar mediante la migración DBA entonces se le debe permitir el catastro.
+
+NOTIFICACIÓN DEL FIN DE PROCESO DE MIGRACIÓN
+
+Como el proceso de migración se busca realizar de manera asíncrona, se debe de notificar al usuario cuando el proceso a finalizado.
+
+Para el portal se puede notificar el usuario utilizando el cuadro flash utilizado en el portal de usuarios Tpago.
+
+Con respecto a la API, se pondrá a disposición del comercio un servicio de consulta donde se indique el estado actual de la migración.
+
+Ejemplo exitoso:
+
+Ejemplo fallido:

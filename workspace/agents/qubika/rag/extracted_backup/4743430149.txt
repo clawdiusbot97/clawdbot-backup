@@ -1,0 +1,168 @@
+TITLE: Propuesta técnica sobre uso de PDF en reportes de gran volumen
+DOMAIN: General
+PRIORITY: Media
+ID: 4743430149
+SOURCE: 4743430149__Propuesta_te╠ücnica_sobre_uso_de_PDF_en_reportes_de_gran_volumen.json
+
+---
+
+Contexto actual
+Hoy el reporte de pagos de suscriptores ya existe y funciona correctamente para volúmenes pequeños y medianos.
+
+El procesamiento es:
+Sincrónicopara volúmenes normales.
+
+Asincrónico(envío por mail y almacenamiento en S4) cuando el volumen de datos es elevado.
+
+En los últimos días estuvimos trabajando en optimizaciones que lograron:
+Reducir significativamente el tamaño del archivo.
+
+Bajar el consumo de memoria del proceso.
+
+Mantener tiempos de generación estables.
+
+Los resultados técnicos son buenos y el comportamiento actual es estable.
+Sin embargo, más allá de las optimizaciones, el problema principal no es de implementación sino denaturaleza del formato PDF.
+Por qué el PDF no es la mejor opción para grandes volúmenes?
+El PDF es un formato pensado para:
+Visualización.
+
+Presentación.
+
+Impresión.
+
+Distribución estática.
+
+No está pensado para manejar grandes volúmenes de datos tabulares extensos.
+Cuando el volumen crece:
+El tiempo de generación aumenta.
+
+El consumo de memoria crece proporcionalmente.
+
+El archivo final se vuelve más pesado.
+
+El costo de infraestructura (CPU, memoria, almacenamiento) aumenta.
+
+El proceso puede dejar de escalar correctamente.
+
+Es decir, podemos optimizar, pero no podemos cambiar la naturaleza del formato.
+Siempre va a existir un límite práctico.
+Comparación real entre formatos (≈850 registros)
+Tomando un volumen aproximado de850 registros, obtuvimos los siguientes resultados:
+Formato
+
+Tamaño archivo
+
+Memoria utilizada
+
+PDF
+
+~2.6 MB
+
+~95 MB
+
+CSV
+
+~190 KB
+
+~33 MB
+
+TXT
+
+~500 KB
+
+~33 MB
+
+(Se omite el tiempo de generación ya que las pruebas fueron realizadas en entorno local y no representan el comportamiento real en producción.)
+Diferencia porcentual
+Con el mismo volumen de datos:
+ElPDF utiliza aproximadamente 3 veces más memoriaque CSV/TXT (≈ +190%).
+
+ElPDF pesa entre 5 y 13 veces más en tamaño finalque TXT y CSV respectivamente (≈ +400% a +1.200%).
+
+Es decir, incluso en un volumen moderado, la diferencia ya es estructuralmente significativa.
+¿Por qué el PDF consume más?
+El PDF no solo guarda datos. También incluye:
+Estructura visual.
+
+Formato de tabla.
+
+Márgenes, fuentes y estilos.
+
+Elementos gráficos.
+
+Representación lista para impresión.
+
+Eso implica más procesamiento y más información embebida en el archivo.
+En cambio, CSV y TXT son formatos planos:
+Guardan únicamente datos.
+
+No incluyen formato visual.
+
+Son mucho más livianos y eficientes en memoria.
+
+El problema de escalabilidad
+Con ~850 registros la diferencia ya es significativa.
+Ahora bien, nuestros comercios suelen manejar volúmenes considerablemente mayores (varios miles o decenas de miles de registros).
+En esos escenarios:
+El consumo de memoria del PDF crece de forma proporcional.
+
+El tamaño del archivo aumenta rápidamente.
+
+El costo de infraestructura (CPU, RAM y almacenamiento) se intensifica.
+
+El proceso puede volverse inestable o requerir mayor capacidad del servidor.
+
+Es decir, aunque optimicemos, el PDFno está pensado para escalar masivamente.
+Propuesta del equipo técnico
+No proponemos eliminar el PDF.
+Sabemos que algunos comercios lo utilizan para:
+Imprimir reportes.
+
+Compartir visualmente información.
+
+Tener un formato “presentable”.
+
+Lo que proponemos es:
+1️⃣ Limitar el uso del PDF
+Definir un límite máximo de registros configurable para generación en PDF. Quedando disponible las opciones de exportar en formato TXT y/o CSV.
+Esto nos permite:
+Proteger la estabilidad del sistema.
+
+Evitar consumos excesivos de infraestructura.
+
+Reducir riesgos operativos.
+
+2️⃣ Mantener PDF optimizado para volúmenes razonables
+Seguir optimizando el comportamiento actual, pero entendiendo que siempre tendrá un costo mayor que CSV/TXT.
+3️⃣ Purgado automático de archivos en S4
+Actualmente los PDFs generados asincrónicamente se almacenan en S4 y permanecen allí.
+Se propone implementar unpurgado automático cada 24 horas, ya que:
+Son archivos temporales.
+
+No necesitan persistencia indefinida.
+
+Están ocupando espacio innecesario.
+
+Esto reduce costos y mantiene el almacenamiento controlado.
+Contras de no limitar el límite de registros
+Si se decide mantener PDF para grandes volúmenes, se debe contemplar que eso implica:
+Mayor uso de memoria.
+
+Mayor tiempo de procesamiento.
+
+Mayor almacenamiento.
+
+Mayor costo de infraestructura.
+
+Conclusión
+El PDF funciona bien para volúmenes pequeños y medianos, y se puede mantener.
+Pero para grandes volúmenes no es el formato adecuado por naturaleza.
+La propuesta busca:
+Mantener la funcionalidad para quienes realmente la usan.
+
+Evitar problemas de escalabilidad futuros.
+
+Controlar costos de infraestructura.
+
+Ofrecer alternativas más eficientes (CSV/TXT) cuando el volumen lo requiera.

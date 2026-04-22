@@ -1,0 +1,14 @@
+TITLE: Create Application
+DOMAIN: General
+PRIORITY: Media
+ID: 2818080786
+SOURCE: 2818080786__Create_Application.json
+
+---
+
+Check the minor application_id value in the application_credentials table in auth-service database.
+
+Create a new application_credential using the auth-service API and send as application_id the previous number than the last one. In this case, -311.
+
+Add the corresponding credential_role to the created application_credential using as credential_identifier the string “apps/“ followed by the public key.
+In this case, “apps/xw1pdhLhgAoFyPhntATsckgSzWmW7kyJ“

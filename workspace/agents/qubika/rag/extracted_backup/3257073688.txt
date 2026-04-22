@@ -1,0 +1,59 @@
+TITLE: Tablas billing-dbs
+DOMAIN: General
+PRIORITY: Media
+ID: 3257073688
+SOURCE: 3257073688__Tablas_billing-dbs.json
+
+---
+
+Base de Datos
+
+Tabla
+
+billing-proxy
+
+transactions
+
+transactions_logs
+
+billing-service
+
+anonympous_payments
+
+bill_metadata
+
+bills
+
+notifications
+
+payments
+
+transactions
+
+auth-service
+
+users
+
+user_credentials
+
+credential_roles
+
+biller-service
+
+bills
+
+extra_expires
+
+payments
+
+processed_parts
+
+wrong_lines
+
+mpos-service
+
+application_logs
+
+notification_registrations
+
+payments

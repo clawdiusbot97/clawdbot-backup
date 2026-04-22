@@ -1,0 +1,214 @@
+TITLE: DBA en TPago Fase 1 - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3025043467
+SOURCE: 3025043467__DBA_en_TPago_Fase_1_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este es el tasking y la estimación de las tareas que restan terminar para la migración de DBA a TPago.
+Fecha de fin para 2 devs
+→
+→
+En la tabla se muestran las tareas detalladas y el período de tiempo para dos personas. Al final de el documento
+Tarea
+
+Estimación
+(hs)
+
+Responsable
+
+Período
+
+Portal / Servicio
+
+Revisión del estado actual en external-commerce
+
+18
+
+→
+
+external-commerce-service
+
+Revisión del estado actual en payment-link-service
+
+24
+
+→
+
+payment-link-service
+
+Revisar el flujo de rollback ante fallos
+
+18
+
+→
+
+payment-link-service
+
+Revisar módulo de loggeo del proceso de carga de archivos
+
+12
+
+→
+
+payment-link-service
+
+[Vista de Carga de Archivos] Validación del rol de usuario que puede acceder a esta vista
+Agregar una validación isDBA? al usuario.
+
+6
+
+payment-link-portal
+
+Refactor de lógica del procesado del csv.
+En el análisis del algoritmo de procesamiento se encontraron algunas mejoras para hacerlo más eficiente, en esta tarea se va a trabajar en ese refactor.
+
+12
+
+->
+
+Revisar lógica de tabla de subscripciones para agregar el número de contrato
+
+6
+
+[Vista de Carga de Archivos] Maquetado de la Vista de Carga de Archivos
+Incluye opcion en Menu, vistas, opción para descargar template con una explicación de como usar y opción para cargar el archivo csv.
+
+40
+
+→
+
+payment-link-portal
+
+[Vista de Carga de Archivos] Llamado a la API para migración de DBA
+
+16
+
+→
+
+payment-link-portal
+
+[Vista de Carga de Archivos] Validación de archivo (formato, extensión)
+
+8
+
+payment-link-portal
+
+[Vista de Carga de Archivos] Manejo de errores hacia el usuario mediante alerts
+
+8
+
+payment-link-portal
+
+[Histórico de Migraciones] Crear Tabla y Modelo de Migraciones de DBA
+
+6
+
+payment-link-service
+
+[Histórico de Migraciones] Crear Dataset y Endpoint para listar todas las migraciones
+
+12
+
+->
+
+payment-link-service
+
+[Histórico de Migraciones] Crear Vista con Tabla del Historial
+
+16
+
+->
+
+payment-link-portal
+
+[Histórico de Migraciones] Crear registro en la tabla de Historial al terminar de procesar una migración
+
+12
+
+→
+
+Crear tabla “dba_migrations_details” y modelo para detalle de proceso de migración.
+
+8
+
+payment-link-service
+
+[Histórico de Migraciones] Crear endpoint en payment-link-service para consultar los datos de los suscriptores fallidos dentro de la migración
+Esos datos de detalles deben ser guardados en una nueva tabla dba_migrations_details con una columna por cada dato de la tabla y también guardar la excepción detallada en una columna separada que no se muestra al comercio. Esta columna servirá para hacer soporte
+
+32
+
+→
+
+payment-link-service
+
+[Histórico de Migraciones] Crear funcionalidad en la tabla de Histórico de Migraciones para que el usuario pueda descargar un archivo .csv con el detalle de cada error
+
+8
+
+payment-link-portal
+
+Investigar como podemos hacer para que el proceso de catastros no tenga en cuenta el límite de catastros al momento de querer agregar una suscripción por DBA
+
+Crear un archivo logdedicadonetamente a las migraciones DBA.
+El nombre puede ser dba_migrations_#{ENVIRONMENT}.log
+Por cada migración que se realice desde elPortal o la APIse pide guardar los datos relacionados a la migración y a los contratos que tuvieron inconvenientes al ser procesados.
+
+24
+
+->
+
+payment-link-service
+
+Crear un endpoint en el portal a través de WebSockets para notificar al usuario cuando un proceso de migración esté completo.
+
+18
+
+->
+
+payment-link-service
+
+[Histórico de Migraciones] Utilizar la columna Fin de Migración para identificar el proceso de la misma. Si aún no terminó, mostrar estado En proceso.. y al terminar actualizar el campo con la Fecha / Hora de Fin.
+Crear un proceso de migración asíncrono, que notifique al usuario en el portal cuando se terminen de procesar todas las suscripciones.
+
+4
+
+payment-link-portal
+
+Crear notificación flash para avisarle al usuario cuando el proceso de migración culmine.
+
+16
+
+->
+
+payment-link-portal
+
+Crear un endpoint en external-commerce-service para que el comercio pueda consultar el estado de la migración
+
+8
+
+external-commerce-service
+
+Crear un endpoint en payment-link-service para poder consultar el estado de la migración.
+
+16
+
+payment-link-service
+
+Total Desarrollo
+
+348
+
+Gestión 15% (Tasking, estimación, seguimiento, reuniones diarias - no afecta al scope final)
+
+52
+
+QA + Bug Fixing 20% (post desarrollo)
+
+70
+
+Total Desarrollo + Gestión + QA y Bug Fixing
+
+470

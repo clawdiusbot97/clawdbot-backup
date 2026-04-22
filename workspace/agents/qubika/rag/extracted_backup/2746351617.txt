@@ -1,0 +1,78 @@
+TITLE: SQLs para Nodos de Lectura
+DOMAIN: General
+PRIORITY: Media
+ID: 2746351617
+SOURCE: 2746351617__SQLs_para_Nodos_de_Lectura.json
+
+---
+
+Se desea incorporar la funcionalidad de Preautorizaciones en los servicios de VPOS PCI. Para ello, es necesario agregar nuevos servicios, tanto en la creación de una pre-autorización como en la confirmación de la misma.
+Team
+
+Name
+
+Role
+
+PM
+
+Technical Reference
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+15 dias
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+Slack Channel
+
+M. Teams Channel
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Minutes
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-
+
+Client Demo
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-

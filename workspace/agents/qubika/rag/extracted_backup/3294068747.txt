@@ -1,0 +1,71 @@
+TITLE: Onboarding en App Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3294068747
+SOURCE: 3294068747__Onboarding_en_App_Tasking_y_Estimacio╠ün.json
+
+---
+
+Épica
+
+Tarea
+
+Estimación (horas)
+
+Onboarding App IC
+
+Análisis de tareas e impacto
+
+8
+
+Endpoint para listar emails de super admins por comercio
+
+20
+
+Endpoint para listar cuentas corrientes por comercio
+
+16
+
+Endpoint para envío de OTP por mail
+
+20
+
+Endpoint para verificación de OTP
+
+20
+
+Endpoint para listar entidades bancarias para cuenta TIC
+
+16
+
+Endpoint para enviar solicitud de oportunidad comercial
+
+40
+
+Endpoint para QR de términos y condiciones
+
+8
+
+Endpoint para obtener comercio por datos de POS
+
+16
+
+Comunicación con servicio externo para obtener comercio por datos de POS (external-services)
+
+16
+
+Configuraciones y deploy
+
+2
+
+Total Desarrollo:
+
+186
+
+Total Gestión (10%)
+
+18
+
+Total:
+
+204

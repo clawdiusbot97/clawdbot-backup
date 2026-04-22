@@ -1,0 +1,58 @@
+TITLE: Facturación Electrónica
+DOMAIN: General
+PRIORITY: Media
+ID: 3063087149
+SOURCE: 3063087149__Facturacio╠ün_Electro╠ünica.json
+
+---
+
+El propósito de esta iniciativa es refactorear el flujo de Facturación Electrónica para nuevos clientes.
+Team
+
+Name
+
+Role
+
+Technical Lead
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+TBD
+
+Start date
+
+TBD
+
+End date
+
+TBD
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+Link a Jira
+
+Slack Channel
+
+#bancard-facturacion-electronica
+
+M. Teams Channel
+
+Facturación Electrónica - Qubika
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Minutes
+
+Owner

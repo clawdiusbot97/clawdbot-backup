@@ -1,0 +1,92 @@
+TITLE: Auth Public
+DOMAIN: 3) Auth
+PRIORITY: Alta
+ID: 2719973398
+SOURCE: 2719973398__Auth_Public.json
+
+---
+
+Se desea incorporar la funcionalidad de Preautorizaciones en los servicios de VPOS PCI. Para ello, es necesario agregar nuevos servicios, tanto en la creación de una pre-autorización como en la confirmación de la misma.
+Team
+
+Name
+
+Role
+
+PM
+
+Tech Lead
+
+DEV
+
+Victor
+
+Client
+
+Tentative Timeline
+
+Estimación Original
+
+Auth Public - Tasking and Estimation
+
+Start date
+
+End date
+
+(1 semana de desarrollo - 2 semanas de testeo y fixeo)
+
+Comms + Management Tools
+
+Confluence Space
+
+https://qubika.atlassian.net/wiki/spaces/BAN/pages/edit-v2/2719973398
+
+Jira Board
+
+Slack Channel
+
+#bancard-team
+
+M. Teams Channel
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+2 per week
+
+Minutes
+
+15
+
+Owner
+
+Refinement / Backlog Review
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-
+
+Client Demo
+
+Cadence
+
+-
+
+Minutes
+
+-
+
+Owner
+
+-

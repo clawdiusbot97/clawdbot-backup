@@ -1,0 +1,52 @@
+TITLE: Ejercicio Práctico: Añadir Promociones a Links de Pago
+DOMAIN: General
+PRIORITY: Media
+ID: 2839085776
+SOURCE: 2839085776__Ejercicio_Pra╠üctico__An╠âadir_Promociones_a_Links_de_Pago.json
+
+---
+
+Se debe crear un sistema de manejo de promociones para Links de Pago en Tpago.
+Cada promoción cuenta con un identificador único, un nombre y una descripción. Se requiere desarrollar un modelo para almacenar dichas promociones y asociarlas a los links de pago
+
+Modelo de datos
+Diseñar un modelo que contenga los siguientes datos para las promociones
+Identificador de la promoción (id)
+
+Nombre (name)
+
+Descripción (description)
+
+Asociar un link a una promoción
+Cada promoción debe ser creada para un link en específico.
+
+Operaciones CRUD
+Se deben tener en cuenta los siguientes casos:
+Se debe poder crear nuevas promociones y asociarlas a un link dado
+
+Se debe poder obtener una promoción dado un identificador de link
+
+Se debe poder actualizar el nombre y la descripción de una promoción dada
+
+Se debe poder eliminar una promoción dada
+
+(Opcional) Se deben poder obtener todas las promociones que se encuentren disponibles, utilizandopicasso-listing
+
+Creación de vistas
+(Opcional) Se debe poder visualizar las promociones creadas desde el portal de Tpago de comercios (payment-link-portal), en una nueva sección del menú, dando la opción de crear, actualizar y eliminar cada una de ellas
+
+Al momento de que un usuario ingresa a un link para el cual haya una promoción asociada, se debe mostrar un mensaje con el título y la descripción de la promoción (no se necesita que se aplique ningun descuento real, simplemente mostrar el mensaje)
+
+Pruebas
+Se deben realizar tests utilizando Rspec
+
+Proyectos involucrados:
+bancard-payment-link-portal
+
+bancard-tpago-portal
+
+bancard-payment-link-service
+
+Este ejercicio busca desarrollar un conocimiento inicial sobre el desarrollo en nuestros proyectos.
+
+Bienvenidos y mucha suerte!!

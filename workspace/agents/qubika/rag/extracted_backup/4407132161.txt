@@ -1,0 +1,63 @@
+TITLE: Tasking y Estimación- Cardinal Fecha de Vencimiento
+DOMAIN: General
+PRIORITY: Media
+ID: 4407132161
+SOURCE: 4407132161__Tasking_y_Estimacio╠ün-_Cardinal_Fecha_de_Vencimiento.json
+
+---
+
+Este documento representa el tasking y estimación para la Renovación de tarjetas vencidas para 3DS, a cargo dey.
+Las horas estimadas son:128 ~ 8 días por desarrollador.
+Fecha de Inicio:Jueves
+Fecha de Entrega:
+Tarea
+
+Estimación (hs)
+
+Análisis del requerimiento (TPago y VPos)
+
+24hs (12hs Julian + 12hs Gaston)
+
+Desarrollo TPago
+
+32h (Gaston)
+
+Desarrollo VPos
+
+32h (Julian)
+
+RSpec TPago
+
+8h (Gaston)
+
+RSpec VPos
+
+8h (Julian)
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+8h
+
+Total Desarrollo
+
+112
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+16
+
+Total Desarrollo + Gestión
+
+128

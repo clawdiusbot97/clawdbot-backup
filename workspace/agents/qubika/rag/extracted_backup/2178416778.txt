@@ -1,0 +1,109 @@
+TITLE: Bancard
+DOMAIN: General
+PRIORITY: Media
+ID: 2178416778
+SOURCE: 2178416778__Bancard.json
+
+---
+
+25falseHere are a few suggestions to get started:flatpipefalse🏢 El Cliente
+Bancard es una destacada empresa de fintech con sede en Paraguay 🇵🇾 que ofrece una amplia gama de soluciones de pago electrónico y servicios financieros. La compañía tiene como objetivo modernizar y agilizar las transacciones financieras en el país. Como un actor principal en el mercado financiero paraguayo, Bancard ofrece diversas plataformas, herramientas e instalaciones para facilitar pagos fluidos y seguros para individuos y empresas.
+Sus servicios incluyen procesamiento de pagos con tarjetas de crédito y débito y soluciones de pago en línea, entre otros. El compromiso de Bancard con la innovación y la inclusión va más allá de los servicios de pago. La compañía ha estado activamente involucrada en proyectos para fomentar la inclusión financiera y desarrollar soluciones tecnológicas que mejoren el acceso a servicios financieros en diferentes segmentos de la sociedad paraguaya. Con un enfoque en la eficiencia, la comodidad y la tecnología de vanguardia, Bancard continúa desempeñando un papel vital en la transformación del paisaje financiero en Paraguay, empoderando a empresas e individuos por igual para prosperar en la economía digital.
+🚩 Nuestra responsabilidad
+Como miembro clave del equipo de desarrollo de software, nuestra responsabilidad es proporcionar a Bancard servicios de primera categoría que abarquen el desarrollo y mantenimiento de todas sus plataformas de pago electrónico. Estamos comprometidos a mantener los más altos estándares de calidad, asegurando que las plataformas funcionen de manera impecable, segura y eficiente tanto para las empresas como para los usuarios finales. Además de nuestra experiencia técnica, actuamos como consultores de confianza, ofreciendo valiosas perspectivas sobre los aspectos empresariales de las soluciones de pago. Proporcionamos orientación estratégica a Bancard, ayudándoles a tomar decisiones informadas que se alineen con sus objetivos a largo plazo y mejoren su posición competitiva en la industria fintech. Además, nuestro papel se extiende más allá del puro desarrollo; jugamos un papel crucial en la defensa de la experiencia de los usuarios finales. Al aprovechar nuestro enfoque centrado en el usuario, nos aseguramos de que las plataformas que entregamos sean intuitivas, fáciles de usar y estén alineadas con las preferencias y necesidades de la diversa base de usuarios de Bancard. En resumen, nuestro equipo está dedicado a ser un socio confiable para Bancard, entregando soluciones de software de alta calidad, ofreciendo consultoría estratégica y abogando por una mentalidad centrada en el usuario. Al hacerlo, contribuimos al éxito continuo y la reputación de Bancard como un proveedor líder de soluciones de pago electrónico en Paraguay.
+Equipo
+Nombre
+
+Rol
+
+Principal Delivery Manager
+
+Project Manager
+
+Technical Architect
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+SRE
+
+SRE
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+Mobile Developer
+
+FS Developer
+
+SRE
+
+FS Developer
+
+💡 Iniciativas
+Name
+
+Status
+
+TPago
+
+OpenGreen
+
+Corresponsales no bancarios
+
+OpenGreen
+
+Vuelto 2.0
+
+OpenGreen
+
+Actualización de Ruby
+
+openGreen
+
+Vulnerabilidades
+
+OpenGreen
+
+3DSec Fase 2
+
+OpenGreen
+
+Pre-autorizaciones en VPOS PCI
+
+TBDYellow
+
+SPI (Proyecto iniciadores de pago)
+
+TBD - NEXT YEARYellow
+
+App Infonet Cobranzas
+
+OpenGreen
+
+App de Comercios
+
+OpenGreen
+
+Comenzá con el Onboarding ⛴️→
+Onboarding - General

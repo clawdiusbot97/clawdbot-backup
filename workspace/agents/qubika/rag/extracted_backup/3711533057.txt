@@ -1,0 +1,145 @@
+TITLE: Nuevos medios de pago -  QR en VPOS - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3711533057
+SOURCE: 3711533057__Nuevos_medios_de_pago_-__QR_en_VPOS_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para QR en VPOS, a cargo de Julián Carracedo y Gastón Gabadian.
+Las horas estimadas son:339 ~ 43 días
+Fecha estimada de entrega:Viernes, comenzando:Martes
+Proyecto
+
+Tarea
+
+Estimación (hs)
+
+vpos-portal
+
+Agregar tab al iframe para mostrar el QR. Agregar comportamiento para que cargue la imagen solo al primer click. Subsiguientes clicks no cargan la imagen.
+
+12
+
+vpos-portal
+
+Implementar endpoint que consuma vpos-service y genere el alias y el qr para un SingleBuy dado.
+
+12
+
+vpos-portal
+
+Limitar pestaña de QR a flujos de single_buy y comercios que lo tengan habilitado. Implementarlo de manera que por default nunca se muestre la pestaña QR, a menos que estén dadas las condiciones.
+Nota: validar otras acciones que rendericen la misma vista que single_buy.
+
+12
+
+vpos-portal
+
+Agregar endpoint para recibir confirmaciones de pagos QR desde vpos-service para actualizar vista de usuarios
+
+12
+
+vpos-portal
+
+Configuración de websockets en el código javascript de vpos-portal para poder recibir notificaciones del pago y redirigir al usuario correspondientemente.
+
+20
+
+vpos-service
+
+Agregar columnaqr_enableda las applications para poder configurar si un comercio/sucursal tiene habilitado el pago con QR. Endpoint para actualizar el campo.
+
+8
+
+vpos-service
+
+Agregar columnasaliasyqr_urlen la tablaoperations, asociado a unSingleBuy. Agregar validación depresencepara ambas columnas a la vez. Ajustar factories y tests.
+
+8
+
+vpos-service
+
+Crear endpoint para generar QR de un determinado process_id:POST /buy/:process_id/generate_qr.
+Estas operación completa las columnasaliasyqr_urlen conjunto. Las mismas se completan únicamente para aquellos SingleBuy que el usuario solicita QR.
+Usar la constanteBancard::PaymentsWithConfirmation::Prefixes::VPOS(V) para la primera letra del alias.
+Usar bancard-commons para generación del QR. (payment-link-service de referencia)
+Almacenar en S4 la imagen del QR.
+
+24
+
+vpos-service
+
+Crear endpoint de confirmación para que billing-service-public-proxy confirme los pagos que se hayan hecho a través de pago QR con App de entidad bancaria.
+El endpoint debe:
+confirmar el pago en jpos-compras
+
+enviar callback de confirmación al comercio a su URL de confirmación del pago
+
+llamar al endpoint de confirmación de vpos-portal
+
+devolver mensaje a public-proxy para que la app de la entidad bancaria reciba los datos de la confirmación.
+
+32
+
+vpos-service
+
+En la operación deget_buydebemos agregar en la respuesta para que vpos-portal pueda distinguir si mostrar o no la tab de QR
+Al buy un atributo que describa si es una preautorización.
+
+Al store un atributo que describa si tiene activo QR.
+
+8
+
+commerce-suite
+
+Agregar a la pantalla de personalización de aplicación de vpos la posibilidad de encender/apagar pagos QR.
+
+12
+
+billing-service-public-proxy
+
+Editar las operaciones:
+confirm:POST /payments
+
+confirm_payment_with_confirmation:POST /payments/:payment_alias/payment_with_confirmation/confirm
+
+Para que en el caso en el que el alias comience conBancard::Payment sWithConfirmation::Prefixes::VPOS(V) redirigir dicha confirmación a VPOS service.
+Evaluar parámetros de entrada, salida y validaciones propias de QRs VPOS
+
+32
+
+billing-service-public-proxy
+
+Adaptar operaciónconfirmation_by_entity_transaction_idpara que funcione con QRs de vpos.
+
+32
+
+billing-service-public-proxy
+
+Adaptar la operacióndecode_qr_codepara soportar el decode de QRs de vpos.
+
+24
+
+nginx
+
+Debuggear y revisar configuración relacionada a websockets en vpos-portal
+
+8
+
+Revisión y corrección de PRs, pruebas locales, armado de provides, deploy a stg, pruebas en ambiente
+
+32
+
+Total Desarrollo
+
+288
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+51
+
+Total Desarrollo + Gestión
+
+339

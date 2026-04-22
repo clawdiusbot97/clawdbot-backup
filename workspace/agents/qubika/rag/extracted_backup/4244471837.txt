@@ -1,0 +1,99 @@
+TITLE: QR Propina - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4244471837
+SOURCE: 4244471837__QR_Propina_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Propina QR, a cargo de
+Las horas estimadas son: 115h ~ 15 días
+Si se inicia ahora:
+Fecha de Inicio:
+Fecha de Entrega:
+Tarea
+
+Estimación (hs)
+
+Servicio
+
+Agregar soporte para parametros:
+- qr_source = ‘QR-Tip'
+- server_id: integerrequerido si qr_source = 'QR-Tip’
+- amount_tip: integerrequerido si qr_source = 'QR-Tip’
+
+16h
+
+External-commerce-service
+
+Agregar soporte para parametros:
+qr_source = ‘QR-Tip'
+
+server_id: integerrequerido si qr_source = 'QR-Tip’
+
+amount_tip: integerrequerido si qr_source = 'QR-Tip’
+Validar en el modelo
+
+16h
+
+Selling-service
+
+Agregar soporte para parámetros:
+
+Enviar nuevos parámetros a JPOS (Confirmacion de pago)
+
+4h
+
+selling-service
+
+Enviar nuevos parámetros a JPOS (Confirmacion de pago)
+
+12h
+
+external-services
+
+Agregar nuevos parametros a la request GETpayment_hook_by_alias+ actualizar stub
+
+12h
+
+selling-service
+
+Agregar nuevos parámetros a los additional_data en decode_qr_code
+
+8h
+
+billing-service-public-proxy
+
+Regla de negocio para no permitir pagos a QR-Tip con tarjeta de crédito, confirm_payment
+
+16h
+
+billing-service-public-proxy
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+16h
+
+Total Desarrollo
+
+100
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+15
+
+Total Desarrollo + Gestión
+
+115

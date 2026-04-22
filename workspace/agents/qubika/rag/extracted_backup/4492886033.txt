@@ -1,0 +1,22 @@
+TITLE: [STEP 2] - Actualizar DDC
+DOMAIN: General
+PRIORITY: Media
+ID: 4492886033
+SOURCE: 4492886033__[STEP_2]_-_Actualizar_DDC.json
+
+---
+
+Utilizando el accessToken y ddcFormUrl Recibidos en el Step 1, debemos completar y submittear el ddcForm via Javascript. Este proceso debe completarse previo a iniciar el Step 3
+
+DDC Iframe y Form:
+
+Se debe incorporar estos tags HTML a la vista del pago. Están ocultos, por lo que no interfieren con el renderizado del DOM.
+wide760Completado y submit del ddcForm
+Desde el javascript ya se disparó el Step 1 y se obtuvo una respuesta. Posterior a ello, se debe ejecutar la siguiente función para completar y submittear el collection form
+
+wide760
+Al completarse el proceso de submit, el iframe emitirá un message que se puede capturar de la siguiente manera para comenzar el Step 3:
+
+wide760La url de origen debe ser acorde al ambiente de trabajo
+Test:https://centinelapistag.cardinalcommerce.com
+Prod:https://centinelapi.cardinalcommerce.com

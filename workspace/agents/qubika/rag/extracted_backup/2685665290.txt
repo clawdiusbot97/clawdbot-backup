@@ -1,0 +1,84 @@
+TITLE: Ruby Upgrade
+DOMAIN: General
+PRIORITY: Media
+ID: 2685665290
+SOURCE: 2685665290__Ruby_Upgrade.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+Project Manager
+
+Technical Reference / FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+FS Developer
+
+QA
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+End date
+
+Comms + Management Tools
+
+Confluence Space
+
+https://jira.bancardnet.dom/confluence/pages/viewpage.action?pageId=115641737
+
+Jira Board
+
+https://jira.bancardnet.dom/secure/RapidBoard.jspa?rapidView=677&view=detail
+
+Slack Channel
+
+#bancard-ruby-upgrade
+
+M. Teams Channel
+
+[PRIVATE_URL_WITH_CREDENTIALS]
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Weekly on Monday, Tuesday and Thursday
+
+Minutes
+
+15
+
+Owner
+
+Client Demo
+
+Cadence
+
+Weekly on Tuesdays and Fridays
+
+Minutes
+
+30
+
+Owner
+
+@Belen Castillo (Bancard)

@@ -1,0 +1,21 @@
+TITLE: Hosts Configuration
+DOMAIN: 8) Infraestructura
+PRIORITY: Alta
+ID: 2576154645
+SOURCE: 2576154645__Hosts_Configuration.json
+
+---
+
+Some tools used by the Bancard team do not have an assigned domain and are therefore accessible only by IP. To ease access and make it more intuitive, we recommend configuring the following hosts, as they are used by all team members.
+Pasos
+Open the terminal
+
+Open thehostsfile using the command:vim /etc/hosts
+
+Add the following hosts to the file:
+
+Save and quit
+
+MISSION ACCOMPLISHED!
+Siguiente Paso↓
+WARP VPN Configuration

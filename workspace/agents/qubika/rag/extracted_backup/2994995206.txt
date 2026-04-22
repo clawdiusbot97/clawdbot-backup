@@ -1,0 +1,21 @@
+TITLE: Sincronización del Tablero con GitHub
+DOMAIN: 7) Repos
+PRIORITY: Media
+ID: 2994995206
+SOURCE: 2994995206__Sincronizacio╠ün_del_Tablero_con_GitHub.json
+
+---
+
+Trazabilidad Completa: Al vincular commits, pull requests y branches de GitHub directamente a las tareas y historias de usuario en Jira, se logra una trazabilidad completa desde la planificación hasta la entrega. Esto permite a los equipos entender rápidamente el estado del trabajo y cómo los cambios en el código afectan a las funcionalidades específicas o a la resolución de problemas.
+Mejora la Colaboración: Facilita la comunicación entre desarrolladores y otros miembros del equipo (como gestores de proyecto, QA, etc.) al permitirles ver en Jira los detalles relevantes del desarrollo en GitHub sin necesidad de cambiar de plataforma.
+Automatización de Tareas: Puedes configurar Jira para actualizar automáticamente el estado de las tareas basándose en acciones específicas en GitHub, como cuando se hace merge a un pull request. Esto reduce la necesidad de actualizaciones manuales y mejora la precisión del seguimiento del proyecto.
+Gestión de Releases y Versiones: Conectar GitHub con Jira facilita la creación y el seguimiento de releases. Puedes asociar commits y pull requests a versiones específicas en Jira, lo que ayuda en la planificación de lanzamientos y en la gestión de versiones.
+Facilita la Revisión de Código: Integrar GitHub con Jira hace que sea más sencillo para los equipos realizar revisiones de código de manera eficiente, ya que pueden vincular directamente los cambios en el código con las tareas correspondientes, proporcionando un contexto claro durante las revisiones.
+Informes Mejorados: La integración permite generar informes más ricos y detallados sobre el progreso del desarrollo, ya que puedes combinar datos de Jira y GitHub para obtener una visión completa del trabajo realizado y pendiente.
+Mejora la Visibilidad: Todos los miembros del equipo pueden tener una visión clara del progreso del desarrollo y de cómo contribuye cada cambio en el código a los objetivos del proyecto, lo que mejora la transparencia y la comprensión general del proyecto.
+Seguimiento de Problemas Eficiente: La conexión entre Jira y GitHub facilita el seguimiento de bugs o incidencias desde que se reportan hasta que se resuelven, vinculando directamente los problemas en el código con las tareas de Jira correspondientes.
+Modificar campos en los tickets
+
+Crear columnas
+
+Crear reglas de automatización.

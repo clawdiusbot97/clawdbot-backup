@@ -1,0 +1,133 @@
+TITLE: Reskin App de Comercios  - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4866146359
+SOURCE: 4866146359__Reskin_App_de_Comercios__-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para el Reskin de las vistas de Soporte, Gestión de usuarios y Mi Cuenta para la App de Comercios, a cargo de
+Las horas estimadas son: ~
+Fecha de Inicio:{día}
+Fecha de Entrega:{día}
+Tarea
+
+Estimación (hs)
+
+Mi Cuenta
+
+[Mi Cuenta] Reskin para vista de “Mi Cuenta”
+Figma
+
+Soporte
+
+[Soporte] Reskin para vista principal de soporte. Incluir opciones de soporte a seleccionar e historial de solicitudes con opción de filtrado
+Figma
+
+[Soporte] Reskin de filtros. Implementar bottom sheet para filtrar el historial de las solicitudes de soporte
+Figma
+
+[Soporte] Reskin de filtro de vista de Seleccionar tipo de Asistencia
+Listar las distintas opciones de Asistencia
+
+Figma
+
+[Soporte][Asistencia][POS] Reskin de vista para asistencia de POS
+Figma
+
+[Soporte][Asistencia][POS] Reskin de formulario de Solicitar Soporte para POS
+Figma
+
+[Soporte][Asistencia][POS] Reskin de vista de Confirmar Solicitud de soporte de POS
+Figma
+
+[Soporte][Asistencia][Transacciones] Reskin de vista de Seleccionar el tipo de Asistencia para una transacción
+Hay solo una opción, es necesaria esta vista o deberíamos pasar directo al form?
+
+Figma
+
+[Soporte][Asistencia][Transacciones] Reskin de formulario de Solicitar Anulación de Transaccion
+Figma
+
+[Soporte][Asistencia][Transacciones] Reskin de vista de Confirmar Solicitud de Anulación de Transaccion
+Figma
+
+[Soporte][Asistencia][Facturación] Reskin de vista para solicititar Asistencia de Facturación
+Figma
+
+[Soporte][Asistencia][MiniPos] Reskin de vista para solicitar Asistencia de reclamo de MiniPOS
+Figma
+
+[Soporte][Bobina] Reskin de Formulario de Bobina
+Verificar con @mauri bazan a ver si falta diseño aca
+
+Figma
+
+[Soporte][Bobina] Reskin de vista de Confirmación de Bobina
+Verificar con @mauri bazan a ver si falta diseño aca
+
+Figma
+
+[Soporte][Anulación] Reskin de Formulario de Anulación
+Verificar con @mauri bazan a ver si falta diseño aca
+
+[Soporte][Bobina] Reskin de vista de Confirmación de Anulación
+Verificar con @mauri bazan a ver si falta diseño aca
+
+Figma
+
+Gestión de Usuarios
+
+[Usuarios] Reskin de vista de Resumen de Usuarios
+Listar los usuarios existentes para el comercio
+
+Agregar opcion de Agregar usuario (funcionalidad en otro ticket)
+
+Se debe permitir buscar usuarios
+
+Figma
+
+[Usuarios] Reskin de formulario de Nuevo Usuario
+Figma
+
+[Usuario] Reskin de la vista de seleccionarRoles del usuariopor Producto
+Mostrar roles seleccionados dentro de cada Producto →Figma
+
+Si ningún producto tiene roles seleccionados, el usuario debe seleccionar un rol por producto para poder continuar
+
+Una vez que un producto tiene rol seleccionado, usuario puede seleccionar Continuar
+
+Figma
+
+[Usuarios] Reskin para vista de marcar rol dentro de un Producto
+Luego de “Asignar Rol” volvemos a mostrar lavista de productos
+
+Crear modal de confirmación al cancelar →Figma
+
+Figma
+
+[Usuarios] Reskin vista de Confirmar solicitud
+Figma
+
+[Usuarios] Toast nuevo usuario creado
+Figma
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+Total Desarrollo
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+Total Desarrollo + Gestión

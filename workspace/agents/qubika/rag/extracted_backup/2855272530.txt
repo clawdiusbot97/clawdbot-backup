@@ -1,0 +1,79 @@
+TITLE: Revisión de Proyectos
+DOMAIN: General
+PRIORITY: Media
+ID: 2855272530
+SOURCE: 2855272530__Revisio╠ün_de_Proyectos.json
+
+---
+
+Servicios
+Servicio
+
+Actualizado en STG (jruby > 2.6)
+
+Actualizado en PROD (jruby > 2.6)
+
+Existe rama de ruby-upgrade
+
+Audit-service
+
+Auth-service
+
+SIGreen
+
+NORed
+
+SIGreen
+
+Backend-service
+
+Billing-service
+
+Biller-service
+
+Billing-service-public-proxy
+
+Commerce-service
+
+ePOS-service
+
+Loyalty-service
+
+mPOS-service
+
+Notifications-service
+
+Payment-link-service
+
+pix-service
+
+S4-service
+
+selling-service
+
+vPOS-service
+
+Portales
+Portal
+
+Actualizado en STG (jruby > 2.6)
+
+Actualizado en PROD (jruby > 2.6)
+
+Existe rama de ruby-upgrade
+
+Commerce-Suite (Portal de Comercios)
+
+Pago Móvil
+
+Portal de Directores
+
+Portal de Lealtad
+
+Portal de Autenticación
+
+Portal de vPOS
+
+Portal Pix
+
+TPago

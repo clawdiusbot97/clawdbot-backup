@@ -1,0 +1,101 @@
+TITLE: Onboarding Infonet Cobranzas - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3048144919
+SOURCE: 3048144919__Onboarding_Infonet_Cobranzas_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Tasking y estimación para las tareas del Onboarding de Infonet Cobranzas. Estas tareas están hechas en base al siguiente Figma
+https://www.figma.com/file/RMWUxevSsRLXyu4Q8ibCJO/Infonet-Cobranzas-WEB?type=design&node-id=840-7691&mode=design&t=IZOZAcPY46ag5onc-0
+Tarea
+
+Estimación (hs)
+
+Comentarios
+
+TAREAS FRONTEND
+
+Landing Page
+Vamos a crear esta pantalla siguiendo el mismo esquema de las otras landings, para que sea reutilizable en el caso que quieran cambiar las otras landings a este formato
+
+40
+
+Seleccionar Dispositivo
+
+24
+
+Seleccionar Tipo de Operación Bancaria para Capital Propio
+
+28
+
+Seleccionar Tipo de Operación Bancaria para Cuenta TIC
+
+No está contemplada para esta etapa
+
+Pantalla para Adjuntar Documentos
+
+No está contemplada para esta etapa
+
+Pantalla de Incluir POS
+
+No está contemplada para esta etapa
+
+Loader Procesando
+
+8
+
+Modal de Solicitud Exitosa
+
+8
+
+Modal de Solicitud Rechazada
+
+4
+
+Falta diseño
+
+TAREAS BACKEND
+
+Crear endpoint en commerce-service para consultar las cuentas
+
+24
+
+Crear operación en external-services para consultar a rediseño
+
+20
+
+:note:atlassian-note#EAE6FFPreguntas
+Pregunta
+
+Respuesta
+
+Esto es para usuarios deslogueados que quieren contratar un servicio, o para usuarios ya existentes? Nos genera la duda, porque en el caso que sean usuarios existentes porque se pide igualmente documentación al final?
+
+Para comercios existentes en base a este doc:
+https://bancard.atlassian.net/wiki/spaces/PMIC/pages/206405892/Onboarding+-+Portal+de+Comercios
+
+En la pantalla para seleccionar como el usuario quiere operar con el servicio, tenemos la opción para seleccionar una cuenta TIC.
+Figma
+Esto es para abrir una cuenta de sobregiro?
+
+Si.
+
+En la pantalla para seleccionar como el usuario quiero operar con el servicio, en la opción de “Capital Propio”, tenemos Términos y Condiciones.
+Como se pretende que sea este formato? Si una web, un pdf?
+Figma
+
+En la pantalla para seleccionar como quiere operar el usuario, de donde vamos a traer la información de todos los Bancos?
+Figma
+
+En la pantalla para seleccionar como quiere operar el usuario, como quieren que funcione el buscador?
+Figma
+
+En que etapa del flujo va la pantalla de incluir POS?
+Figma
+
+Al finalizar una solicitud, tenemos diseño para solicitud exitosa, pero no para cuando falla
+Figma
+
+Para crear la oportunidad comercial, nos sirve la operacióncreate_commercial_opportunity_with_item?
+Qué parámetros mandamos enopportunity_name, product_id, device_id, cost_id, quantity ?

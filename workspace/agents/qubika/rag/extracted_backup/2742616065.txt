@@ -1,0 +1,192 @@
+TITLE: 3D Sec Fase 2 - Tasking and Estimation
+DOMAIN: General
+PRIORITY: Media
+ID: 2742616065
+SOURCE: 2742616065__3D_Sec_Fase_2_-_Tasking_and_Estimation.json
+
+---
+
+Épica
+
+Tarea
+
+Hrs.
+
+Servicio
+
+Investigación
+
+Investigar como podemos hacer la comunicación con un servicio RPG. (no existe mucha información respecto a esto)
+
+16
+
+Hacer POC de comunicación con servicio RPG desde Ruby.
+
+20
+
+Implementación
+
+Crear base de gema para comunicación con servicios RPG.
+
+12
+
+Implementar comunicación con servicio RPG para catastro.
+
+32
+
+Implementar comunicación con servicio RPG para consulta de TC
+
+24
+
+Agregar columna para indicar si desarrolló el pago con token con 3DS
+
+4
+
+vpos-service
+
+Agregar columna para indicar si firmó la adenda para bypassear 3DS para los pagos en los que la tarjeta no fue catastrada con 3DS
+
+4
+
+vpos-service
+
+Modificar operación de pay_with_alias_token para que haga la validación de si va a ser con cardinal o no el pago.
+Si es buy, crear el pago con estado pendiente cardinal
+
+24
+
+vpos-service
+
+Modificar operación de multibuy_with_alias_token para que haga la validación de si va a ser con cardinal o no el pago.
+Si es buy, crear el pago con estado pendiente cardinal
+(aca hay que guardar toda la información (sensible de la tarjeta?) del comercio cuando recibimos el pago, porque luego no la vmoas a recibir)
+
+24
+
+vpos-service
+
+Implementar la integración con el RPG para consultar la info de la tarjeta
+
+24
+
+external-services o gema nueva
+
+Implementar comunicación con servicio JPOS visa token
+
+32
+
+Modificar endpoint de lookup para que si es un pago con token haga todo el flujo nuevo (consultar info de la tarjeta, que por ser pago con token no la tenemos, y con esa info llamar al lookup)
+
+24
+
+vpos-service
+
+Agregar el endpoint para terminar de procesar el pago con token
+
+32
+
+vpos-service
+
+Agregar el iFrame en Bancard_connectors
+
+24
+
+Agregar el iFrame en Bancard_checkout_js
+
+16
+
+Modificar endpoint de register_card para que no llame al jpos si es una tarjeta local. Y que llame al servicio RPG en el caso de que el catastro no requiera validación con 3D Sec.
+
+32
+
+vpos-service
+
+Modificar endpoint validate_register_card_for_3dsec_with_cmpi_authenticate para que llame al servicio RPG cuando un catastro de tarjeta se validó de forma exitosa.12:11P h
+
+32
+
+Quitar consumo y logica alrededor de la flag 'international_card_registration' del controller y js del flujo de catastro
+
+4
+
+Refactorear la logica if else-if que existe hoy en dia para discriminar a que tipo de tarjeta mostrar cvv, cédula y datos adicionales
+
+4
+
+Quitar flag de 'international_card_registration' del codigo, asi como tambien logica y quitarlo de parametro en varios endpoints, ya que esa flag no se utilizará mas
+
+4
+
+Agregar una columna en el modelo 'card_request' para guardar un dato de boleta que devuelve el ultimo servicio JPOS que aprueba el catastro
+
+4
+
+Vista vpos-portal
+
+Crear la vista en vpos-portal para cargar el ddc (device data collector), cargar el ddc y abrir el listener para el mensaje que devuelve cuando termina de recolectar la data
+Investigar lo del load
+
+24
+
+vpos-portal
+
+Integrar con operación para confirmar el pago con token
+
+16
+
+vpos-portal
+
+Llamar al lookup desde vpos-portal y en caso de ser necesario levantar el iFrame del challenge y abrir los WebSockets. En el caso de ser frictionless llamar a la operación de confirmación de pago.
+
+24
+
+vpos-portal
+
+En el caso de que se haya requerido el challenge, cuando recibimos el callback por el socket, llamamos a la operación de confirmación de pago.
+
+16
+
+vpos-portal
+
+Management
+
+48h
+
+6d
+
+Total
+
+472h
+
+59d
+
+Total + Management(esto no afecta la duración del proyecto)
+
+520h
+
+Fecha de Fin estimada
+Teniendo en cuenta las tareas ya culminadas, al día de hoy nos quedan 52 días de trabajo. La tabla de abajo representa la fecha tentativa de fin, dependiendo la fecha de cuando se una el segundo recurso al proyecto.
+
+Fecha Inicio 2do recurso
+
+Días solo
+
+Días en conjunto
+
+Fecha Fin
+
+5
+
+47 / 2 = 24
+
+9
+
+43 / 2 = 22
+
+14
+
+38 / 2 = 19
+
+19
+
+33 / 2 = 17

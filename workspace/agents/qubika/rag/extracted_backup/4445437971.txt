@@ -1,0 +1,294 @@
+TITLE: Análisis de uso de memoria de commerce-service
+DOMAIN: General
+PRIORITY: Media
+ID: 4445437971
+SOURCE: 4445437971__Ana╠ülisis_de_uso_de_memoria_de_commerce-service.json
+
+---
+
+1. Objetivo del documento
+Este documento tiene el objetivo de analizar los incidentes recientes decommerce-servicerelacionados con memoria y los reinicios aplicados en las últimas semanas.
+El foco principal es:
+Explicarcómo la JVM usa la memoriaen este servicio (Puma y Sidekiq en JRuby).
+
+Mostrar por quéno vemos evidencia clara de un memory leak.
+
+Describir cómo la configuración actual de heap y contenedores puede llevar a problemas en situaciones de pico.
+
+Proponerrecomendaciones concretas de configuraciónpara reducir la probabilidad de incidentes similares en el futuro y ademas tener un comportamiento más predecible en el uso de memoria de los servicios de manera de tener un mejor manejo de la misma.
+
+2. Alcance del análisis
+Servicio analizado:commerce-service.
+
+Nodo principal analizado:commerce-srv-prd-1.infrabc.dom.
+
+Entorno: producción.
+
+Arquitectura relevante:
+Una VM con30 GB de RAM.
+
+En ese servidor correndos contenedores principales de commerce-service:
+Un contenedor conPuma + JRuby.
+
+Un contenedor conSidekiq + JRuby.
+
+Cada contenedor de Docker tiene configurado unlímite de memoria igual a 30 GB(el del host).
+
+Cada JVM dentro de esos contenedores tiene unheap máximo configurado de 10 GB.
+
+Además, en el mismo host existen otros dos contenedores (otro servicio con Puma y Sidekiq) que consumen relativamente poco.
+
+Ventana temporal: desde elúltimo reinicio de los contenedoreshasta el día de hoy, 22 de Diciembre, para poder ver la evolución del consumo de memoria.
+
+3. Cómo usa la memoria la JVM en este escenario
+3.1 Heap vs memoria total del proceso
+Es importante separar dos conceptos:
+Heap de la JVM:
+Es la memoria donde viven los objetos Java/JRuby.
+
+Está acotado por las opciones-Xms(tamaño inicial) y-Xmx(tamaño máximo).
+
+Memoria total del proceso:
+Incluye heap + metaspace + stacks de hilos + buffers nativos + librerías cargadas, etc.
+
+Es lo que ve el sistema operativo / contenedor como “RSS” o “memory usage” del proceso.
+
+En los gráficos de infraestructura (Dynatrace, etc.) normalmente vemos la memoria total del proceso, no sólo el heap.
+3.2 Estrategia de GC: Parallel GC y retención de memoria
+En estos contenedores se está utilizandoParallel GC(en lugar de G1 u otros recolectores más nuevos).
+Algunos puntos relevantes:
+Parallel GClibera memoria dentro del heap(es decir, objetos que ya no se usan), pero:
+No suele devolver memoria al sistema operativode forma agresiva.
+
+Lo usual es que, una vez que el heap crece,se mantenga cerca del tamaño máximo alcanzado.
+
+El GC tiende a ejecutar recolecciones completas cuando:
+La memoria libre en el heap baja de cierto umbral.
+
+O cuando se cumplen ciertas condiciones internas de la JVM.
+
+Desde fuera, esto se percibe como:
+Picos de uso de memoria(el heap crece porque la carga aumenta).
+
+Luego, el GC limpia objetos viejos y mantiene el heap “internamente” sano.
+
+Pero eltamaño reservado por el proceso(lo que vemos en el host)no disminuye mucho, porque la JVM se reserva esa memoria por si vuelve a necesitarla.
+
+En otras palabras: la JVMno tiene un comportamiento “elástico” perfectorespecto a la memoria del sistema. Una vez que el proceso crece, generalmente se queda con esa memoria, sobre todo con Parallel GC.
+4. Evidencia de ausencia de memory leak
+En los análisis realizados (GC logs, métricas de heap y gráficos de uso de memoria):
+Elespacio de Old Gendespués de cada GCno muestra un crecimiento sostenido:
+Tras una recolección completa, el uso de Old Gen suele bajar a valores similares a los de corridas anteriores.
+
+No se observa una tendencia clara de “cada GC deja Old Gen más arriba que el anterior” a lo largo del tiempo.
+
+Esto es un indicador fuerte de queno hay una pérdida de memoria significativa en el heap:
+En un memory leak clásico, veríamos que el Old Gen usadodespués de GCsube de forma escalonada hasta llenar el heap.
+
+El crecimiento abrupto de la memoria total del proceso está más asociado a:
+Unpico de carga(más tráfico en Puma o más jobs en Sidekiq).
+
+El crecimiento del heap hasta valores cercanos a su-Xmx.
+
+Y el hecho de que esa memoriano se devuelveluego al sistema operativo, aunque internamente el heap quede con espacio libre.
+
+Nota: esto no significa que sea imposible que exista algún leak puntual (por ejemplo, en código nativo Java, buffers, etc.), perocon la evidencia que tenemos, el comportamiento del Old Gen no respalda la hipótesis de un leak de objetos Ruby/Java clásico.
+Comportamiento de memoria y CPU en los contenedores (8–22 de diciembre)
+En el período entre el 8 y el 22 de diciembre se observó el comportamiento de memoria y CPU de los dos contenedores decommerce-service(Puma y Sidekiq). En ese rango sólo hubo dos reinicios:
+9/12: reinicio del contenedor de Puma.
+
+11/12: reinicio del contenedor de Sidekiq.
+A partir de esas fechas no se registraron nuevos reinicios.
+
+En el caso del contenedor dePuma(línea amarilla), la memoria crece hasta alcanzar un cierto nivel y luego se mantiene relativamente estable, con pequeñas variaciones normales para una aplicación con carga variable. Después del reinicio del 11/12 no se observa una tendencia de crecimiento continuo ni escaleras de memoria que indiquen acumulación progresiva; más bien, el proceso parece alcanzar un “piso” de memoria de trabajo y mantenerse alrededor de ese valor.
+En el contenedor deSidekiq(línea violeta) se ven dos “empujes” claros de memoria, uno alrededor del14/12y otro alrededor del21/12. Esos aumentos coinciden con dos picos marcados deuso de CPUen el mismo contenedor en esas fechas, lo que indica momentos de alta ejecución de jobs. Es decir: cuando Sidekiq procesa muchos jobs simultáneamente, la JVM necesita más heap, lo toma del sistema y luego queda reservado. Después de cada uno de esos empujes no se ve un patrón de crecimiento constante; la memoria se estabiliza en un nuevo nivel y se mantiene allí.
+Este patrón —saltos de memoria asociados a picos de CPU/carga, seguidos por estabilidad y sin crecimiento sostenido entre picos— es consistente con el comportamiento normal de una JVM que reserva heap ante picos de trabajo y luego no lo devuelve al sistema,nocon el patrón típico de un memory leak, donde la memoria usada sigue subiendo incluso con carga estable o baja y los valores after-GC muestran una tendencia claramente ascendente.
+Comportamiento de la memoria Old Gen
+Otra señal fuerte de queno hay un memory leak evidenteen commerce-service es el comportamiento de la memoriaOld Gende la JVM.
+En el mismo rango de fechas analizado (del 8/12 al 22/12), y tomando como referencia el último reinicio del contenedor (9/12), se observa lo siguiente en el gráfico de Old Gen:
+El9/12, luego del reinicio y de las primeras corridas del GC, el uso de Old Gen queda en torno a749 MiB.
+
+El21/12, después del último GC registrado en el período, el uso de Old Gen es de aproximadamente756 MiB.
+
+Entre esas dos fechas se ejecutan múltiples ciclos degarbage collection. En cada ciclo, la memoria Old Gen utilizada:
+Crece durante el uso normal del servicio, cuando se van acumulando objetos de larga vida.
+
+Luego, en cada GC,vuelve a valores muy similares a los anteriores, sin mostrar una tendencia clara de crecimiento en el “used-after-GC”.
+
+Si existiera un memory leak relevante, lo esperable sería ver que elmínimo de Old Gen después de cada GCvaya subiendo de forma constante a lo largo del tiempo (por ejemplo, 700 MiB → 1 GiB → 2 GiB → etc.). En cambio, lo que se observa es que el “piso” de Old Gen después de cada colección se mantiene estable alrededor de los750 MiB, incluso después de casi dos semanas de actividad continua.
+Este patrón es coherente con un uso normal de memoria de la JVM yno respalda la hipótesis de una pérdida de memoriaen el heap de la aplicación.
+5. Efecto de la configuración actual en un host compartido
+La combinación actual es:
+Host con30 GB de RAM.
+
+Dos contenedores grandes(Puma y Sidekiq, cada uno con límite de 30 GB).
+
+Cada JVM con unheap máximo de 10 GB(-Xmx=10g).
+
+Otros contenedores adicionales que también consumen memoria (aunque menos).
+
+Problema principal:
+Cada proceso de JRuby (Puma y Sidekiq) puedellegar a usar en algún pico:
+Hasta10 GB de heap.
+
+memoria adicional no-heap (stacks de hilos, código nativo, etc.).
+
+Esto hace que, en un pico de carga fuerte de Puma, o en un pico de procesamiento de Sidekiq:
+La JVM pueda crecer cerca de su-Xmx.
+
+La memoriaqueda reservadayno se devuelvefácilmente.
+
+Si luego el otro contenedor también tiene un pico importante, se suman:
+Memoria alta de Puma+memoria alta de Sidekiq+otros contenedores.
+
+Todo sobre un host de 30 GB.
+
+Esto puede llevar al host a:
+Quedarse con muy poco espacio libre.
+
+Disparar OOM killer o disparar mecanismos externos de reinicio.
+
+En resumen:el problema no es un leak, sino unacombinación de: heap máximo grande, GC que no devuelve memoria al OS y múltiples contenedores compartiendo un host relativamente justo de RAM para estos servicios y su cantidad de hilos.
+6. Recomendaciones de configuración de memoria y JVM
+A continuación, se listan recomendaciones concretas para reducir el riesgo de incidentes.
+6.1 Definir límites claros por contenedor
+Bajar el límite de memoria del contenedor:
+Hoy cada contenedor tiene límite de 30 GB (igual al host).
+
+Es más sano poner límites reales por contenedor, por ejemplo:
+Puma: límite de memoria del contenedor en el orden de6–8 GB(ejemplo ilustrativo).
+
+Sidekiq: límite similar o ajustado al patrón de uso que tenga (puede necesitar más si procesa jobs pesados).
+
+La idea es quela suma de los límites de los contenedores nunca supere la RAM real del hostmás un pequeño margen.
+
+Distribuir carga entre hosts si es posible:
+Si el servicio puede escalar horizontalmente, conviene tenermás nodos con contenedores más pequeños, en lugar de pocos nodos muy cargados.
+
+(Los valores exactos deben ajustarse con métricas históricas y pruebas de carga; acá la idea es la dirección, no el número exacto.)
+6.2 Ajustar el tamaño del heap (-Xmx) por tipo de proceso
+Dado que:
+Puma maneja requests web (latencia sensible).
+
+Sidekiq procesa jobs en background (más pesado en CPU/memoria en ciertos casos).
+
+Recomendaciones generales:
+Puma (JRuby):
+Mantener un-Xmxsuficiente para soportar el número de hilos configurados, pero sin sobre dimensionar.
+
+Si se usan, por ejemplo, 32 hilos, y la app no necesita 10 GB de heap en condiciones normales, se podría:
+Bajar-Xmxa un valor más alineado con el uso real (ej. 4–6 GB si las métricas lo permiten).
+
+Sidekiq (JRuby):
+Ajustar-Xmxsegún el tipo de jobs:
+Jobs con payloads grandes, mucha deserialización, o uso intensivo de objetos pueden requerir más heap.
+
+Si Sidekiq sólo tuvo picos esporádicos, quizás se pueda bajar de 10 GB a algo intermedio (ej. 6–8 GB), siempre validando con métricas.
+
+Clave:mirar el “live set” promedio después de GCy agregar un margen razonable (por ejemplo, 30–50%) en vez de usar 10 GB “por las dudas”.
+7.-Xmxvs-Xms: producción
+7.1 Qué significan
+-Xmx: tamañomáximodel heap.
+
+-Xms: tamañoinicialdel heap.
+
+Si se configura-Xms = -Xmx:
+La JVM arranca directamente con el heap en su tamaño máximo.
+
+No tiene que ir “creciendo” de a poco.
+
+Se reservadesde el inicioese bloque de memoria para el heap.
+
+Sinose define-Xms(o se deja mucho más chico que-Xmx):
+La JVM empieza con un heap más pequeño.
+
+A medida que necesita memoria, lo va agrandando hasta-Xmx(si hace falta).
+
+Esto puede implicar redimensionamientos de heap en momentos de carga, con impacto en GC.
+
+Además, incluso sin-Xmsalto, en la práctica:
+Una vez que el heap crece,la JVM suele mantenerese tamaño alto y no lo reduce significativamente, especialmente con Parallel GC.
+
+7.2 Qué conviene en producción
+Enproducción, especialmente en contenedores y con memoria ajustada:
+Lo más recomendable esigualar-Xmsy-Xmxuna vez que se conoce el tamaño de heap adecuado.
+
+Ejemplo:-Xms4g -Xmx4g.
+
+Ventajas:
+Comportamiento predecible:
+Sabemos exactamente cuánta memoria va a reservar la JVM desde el inicio.
+
+Evitamos que el proceso vaya creciendo “sorpresivamente” bajo carga y se acerque al límite del contenedor/host.
+
+Menos pausas por crecimiento de heap:
+No hay que redimensionar el heap en momentos de tráfico alto, lo cual puede disparar pausas de GC adicionales.
+
+Mejor planificación de capacidad del host:
+Si cada contenedor tiene un heap fijo conocido, es más fácil calcular cuántos contenedores pueden convivir en un host de 30 GB sin riesgo alto de OOM.
+
+7.3 Qué conviene en staging / desarrollo
+En entornos destagingodesarrollo, la lógica puede ser diferente:
+Es razonable:
+Fijarsólo-Xmxy dejar-Xmsmás chico o default.
+
+Usar estos entornos paraobservar el uso de memoriay entender:
+Cuánto crece el heap en carga típica.
+
+Cuál es el live set después de GC.
+
+Con esa información, luego se define un tamaño de heap más preciso para producción yahí sí se fija-Xms = Xmx.
+
+8. Recomendaciones adicionales
+Elegir la estrategia de GC adecuada
+Evaluar si tiene sentido seguir conParallel GCo considerarG1GC(que suele manejar mejor heaps grandes y puede devolver algo más de memoria en ciertos escenarios).
+
+Cualquier cambio de GC debe ir acompañado de:
+Pruebas de carga.
+
+Monitoreo de pausas de GC y throughput.
+
+Monitoreo más fino del heap
+Seguir observando:
+Uso de Old Genantes y despuésde GC.
+
+Frecuencia y duración de las pausas de GC.
+
+Esto ayuda a validar que no aparece un leak nuevo y que el tamaño de heap está bien elegido.
+
+Dimensionar los hilos de Puma y Sidekiq según memoria
+32 hilos en un Puma JRuby implican:
+Más stacks de hilos.
+
+Más objetos vivos en cada momento.
+
+Conviene alinear:
+Número de hilos,
+
+Tamaño de heap,
+
+Límite de memoria de contenedor,
+
+Capacidad del host.
+
+9. Conclusiones
+Los incidentes recientes decommerce-servicerelacionados con memoria y reiniciosno están respaldados por evidencia clara de un memory leaken el heap:
+El Old Gen después de GC se mantiene relativamente estable.
+
+No se observa el patrón típico de crecimiento irreversible de memoria.
+
+El patrón observado encaja mejor con:
+Picos de carga que empujan el heap hacia su máximo.
+
+Una JVM (Parallel GC) queretienela memoria reservada y casi no la devuelve al OS.
+
+Un host con 30 GB donde conviven varios contenedores con heaps máximos grandes.
+
+Para reducir el riesgo de nuevos incidentes, se recomienda:
+Ajustarlímites de memoria de contenedores.
+
+Reducir y calibrar-Xmxpor proceso según uso real.
+
+En producción,igualar-Xmsy-Xmxpara tener un comportamiento predecible.
+
+Seguir monitoreando métricas de heap y GC para ajustar fino.

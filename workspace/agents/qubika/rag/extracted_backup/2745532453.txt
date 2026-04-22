@@ -1,0 +1,19 @@
+TITLE: Estimación SQLs para Nodos de Lectura
+DOMAIN: General
+PRIORITY: Media
+ID: 2745532453
+SOURCE: 2745532453__Estimacio╠ün_SQLs_para_Nodos_de_Lectura.json
+
+---
+
+Estimación total: 15 días.
+Se ha estimado 3 días para cada proyecto y en este orden: payment_link_services_production (que es el que ahora tiene problemas), selling_service_production, epos_*, reversal y transfer
+Tareas por proyecto:
+
+Setup local del proyecto y portal asociado
+
+Activar logs de Active Record
+
+Ejecutar consultas de reportes
+
+Anotar las SQLs y armar documento

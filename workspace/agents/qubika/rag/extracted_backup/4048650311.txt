@@ -1,0 +1,21 @@
+TITLE: Lookup de un pago ocasional
+DOMAIN: General
+PRIORITY: Media
+ID: 4048650311
+SOURCE: 4048650311__Lookup_de_un_pago_ocasional.json
+
+---
+
+VPOS
+JS → VPOS Portal
+jsVPOS portal → VPOS service
+rubyVPOS service → external-services
+rubyTPAGO
+JS → TPago Portal
+js
+
+TPago portal → payment-link-service
+ruby
+
+payment-link-service → external-services
+ruby

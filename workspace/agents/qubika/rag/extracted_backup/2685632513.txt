@@ -1,0 +1,82 @@
+TITLE: Tpago
+DOMAIN: General
+PRIORITY: Media
+ID: 2685632513
+SOURCE: 2685632513__Tpago.json
+
+---
+
+Descripción de la iniciativa
+Team
+
+Name
+
+Role
+
+Project Manager
+
+Technical Reference
+
+FS Developer
+
+FS Developer
+
+Tentative Timeline
+
+Estimación Original
+
+Link to confluence page
+
+Start date
+
+Next Release
+
+End date
+
+TBD
+
+Comms + Management Tools
+
+Confluence Space
+
+Jira Board
+
+https://jira.bancardnet.dom/projects/PRYLDP/summary
+
+Slack Channel
+
+#bancard-tpago
+
+M. Teams Channel
+
+[PRIVATE_URL_WITH_CREDENTIALS]
+
+Figma
+
+https://www.figma.com/file/MdD7STqtLBZRgEjrb96W5Z/TPago?type=design&node-id=120-1124&mode=design&t=vqILwBY85pL54xpx-0
+
+Comms Cadence
+
+Daily Standup / Project Sync
+
+Cadence
+
+Weekly on Monday, Tuesday, Thursday
+
+Minutes
+
+15
+
+Owner
+
+Client Demo
+
+Cadence
+
+Mondays
+
+Minutes
+
+30
+
+Owner

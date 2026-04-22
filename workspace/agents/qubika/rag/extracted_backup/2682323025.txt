@@ -1,0 +1,27 @@
+TITLE: Estimación - Preautorizaciones en VPOS PCI
+DOMAIN: General
+PRIORITY: Media
+ID: 2682323025
+SOURCE: 2682323025__Estimacio╠ün_-_Preautorizaciones_en_VPOS_PCI.json
+
+---
+
+Requerimientos:https://jira.bancardnet.dom/confluence/display/PRYVPOS2/Especificaciones+vPOS-PCI
+Introducción
+Se desea incorporar la funcionalidad de Preautorizaciones en los servicios de VPOS PCI. Para ello, es necesario agregar nuevos servicios, tanto en la creación de una pre-autorización como en la confirmación de la misma.
+Datos para seguimiento
+Estimación: 120hrs
+Fecha inicio: TBD
+Fecha fin: TBD
+Qubika Jira: TBD
+Equipo
+Gestión:
+Desarrollo:
+Tasking:
+Un nuevo servicio para retornar la info de una card dado un pan encriptado.
+
+Modificar el servicio pay_pci_encrypted_buy para recibir un flag si es preautorizacion o no. Si es una preautorización, hay que llamar al flujo de Preautorizaciones (business::preautorizations.create). Agregar en external-services el nuevo endpoint de jpos.
+
+En preautorization service, hacer un nuevo endpoint (confirm_pci). Tomar como referencia “confirm”. Llamar a un nuevo servicio de jpos. Agregar en la tabla operations una columna de cantidad de reintentos. Solo se puede reintentar el confirm si la preautorización fue fallida. En caso de exceder una cantidad X (configurable) de reintentas, directamente no se le deja reintentar mas. En este último caso, devolver un nuevo error.
+
+Hoy en dia ya usa pci_buy/rollback. En caso de ser una preautorización (pendiente) para un shop_process_id, indicar al jpos con una flag que es una preauth.

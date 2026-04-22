@@ -1,0 +1,86 @@
+TITLE: Deuda Técnica - 2022/04
+DOMAIN: 5) Observabilidad
+PRIORITY: Alta
+ID: 2785771945
+SOURCE: 2785771945__Deuda_Te╠ücnica_-_2022_04.json
+
+---
+
+Este documento se centra en ofrecer una visión rápida y específica de la deuda técnica dentro de nuestro proyecto. Presentaremos una lista detallada de las áreas de deuda técnica identificadas, acompañadas de sus niveles de severidad. Esta aproximación concisa nos permitirá abordar de manera efectiva las cuestiones críticas para mejorar la integridad y el rendimiento de Bancard.
+Niveles de severidad:
+- Crítico
+- Muy Alto
+- Alto
+- Moderado
+Descripción
+
+Proyecto
+
+Severidad
+
+Comentarios
+
+Servicios sin autenticación. Analizar que hacemos con las apps
+
+auth-service
+
+endpoints sin autenticación (endpoints para comercios)
+
+vpos-service
+
+Acción inmediata agregar reglas en el nginx para restringir el acceso. Agregar en los proyectos la autenticación tanto del servicio como de los consumidores.
+
+Agregar Sentry en todos los proyectos que no lo tengan.
+
+Actualización de Ruby y dependencias
+
+TODOS
+
+Actualización JS
+
+PORTALES
+
+Actualización bus de transacciones
+
+bus
+
+Resolver errores que llegan por mail y Sentry
+
+TODOS
+
+Agregar rubocop en todos los proyectos
+
+TODOS
+
+Agregar brakeman en todos los proyectos
+
+TODOS
+
+Escalonamiento de timeouts
+
+TODOS
+
+Ejemplo: que el tiempo que tiene commerce-service con billing no sea menor que el tiempo de billing con los servicios externos. Asegurarse de no cerrar conexiones.
+
+Redis Cluster: centralizar el redis en un cluster con alta disponibilidad
+
+Ejecutar checklists de calidad de Moove-it
+
+TODOS
+
+Manejo de secrets, no manejar claves en plano en bancard-configurations
+
+Manejo de logging
+
+TODOS
+
+Revisar todos los servicios si están loggeando. Tener mas información sobre los errores que suceden entre nuestros servicios (servicios internos). Tratar de escapar de los RemoteErrors.
+Centralización de los logs. Mandar los logs a un servidor centralizado y ver si hay una herramientas de visualización de esos logs
+
+Documentación técnica
+
+Monitoreo de facturadores
+
+Detectar caidas o fallas de tiempo con facturadores y elevar alerrtas y/o graficas de rendimiento
+
+Monitoreo general de servicios

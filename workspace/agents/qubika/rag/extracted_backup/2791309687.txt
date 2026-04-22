@@ -1,0 +1,25 @@
+TITLE: Solicitud de Usuario SSH Producción
+DOMAIN: General
+PRIORITY: Media
+ID: 2791309687
+SOURCE: 2791309687__Solicitud_de_Usuario_SSH_Produccio╠ün.json
+
+---
+
+Este documento proporciona los pasos detallados para facilitar el proceso de solicitud de un usuario SSH, permitiéndote acceder de manera segura a nuestros servidores de producción.
+Recordar que estos usuarios solo serán necesarios para acceder a los servidores deproducción. Para acceder a los servidores de staging podremos utilizar los usuarios IPA personales.
+Pasos para la Solicitud
+Ingresar al siguiente link:https://bancard.atlassian.net/servicedesk/customer/portal/16/group/29/create/99
+
+Al ingresar al link, verá el siguiente formulario de solicitud.
+Debe completar el formulario con los siguientes datos (algunos ya se encontrarán seleccionados):
+
+Contact us about:Monitoreo - Solicitudes
+What can we help you with?:Gestión de usuarios para PRD
+Resumen:Solicitud de usuario SSH para producción
+Seleccione el sistema al que accederá:Servidores Linux
+Descripción:Usuario para acceder a ambiente de producción para el equipo desarrollo de Qubika, utilizado para configuración, análisis de inconvenientes en producción y revisiones periódicas.
+
+Luego de enviar el formulario y de que alguien del equipo de Bancard pueda completar la solicitud, recibirá en su correo un usuario válido por 3 días para acceder a los servidores de producción:
+
+MISSION ACCOMPLISHED!

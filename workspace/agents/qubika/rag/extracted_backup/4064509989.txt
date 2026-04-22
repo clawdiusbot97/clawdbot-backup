@@ -1,0 +1,481 @@
+TITLE: Requerimiento Evolución del Portal de Comercios
+DOMAIN: General
+PRIORITY: Media
+ID: 4064509989
+SOURCE: 4064509989__Requerimiento_Evolucio╠ün_del_Portal_de_Comercios.json
+
+---
+
+Este documento fue creado en base a elFigmapropuesto por Bancard, para el rediseño del Portal de Comercios a cargo de
+Figma →Release 1 - Portal de Comercios
+Contraseña: uxbancard2025
+
+noteIndice
+Landing Page
+
+Login y Recuperación de Contraseña
+
+Menú Lateral
+
+Movimientos y Acreditaciones (Ventas)
+
+Movimientos InfoNet Cobranzas
+
+Reportes Automatizados
+
+Comprobantes y Facturas
+
+Indice
+Landing Page
+
+Login y Recuperación de Contraseña
+
+Menú Lateral
+
+Movimientos y Acreditaciones (Ventas)
+
+Movimientos InfoNet Cobranzas
+
+Reportes Automatizados
+
+Comprobantes y Facturas
+
+Landing Page
+No tenemos un diseño para la Landing Page. Vamos a mantener la misma, o el usuario va a ser redirigido directamente a la vista delLogin?
+Login y Recuperación de Contraseña
+Login Page
+Requerimientos:
+noteComo usuario del Portal de Comercios, voy a poder loguearme a mi cuenta desde la vista deLogin
+Como usuario del Portal de Comercios, voy a poder loguearme a mi cuenta desde la vista deLogin
+
+Ingresar credenciales en campos deLogin
+Si las credenciales son correctas, ingresa al portal
+
+El usuario va a tener 3 intentos, si falla los 3, se lo bloquea la cuenta →Vista de su cuenta ha sido bloqueada
+
+Si un usuario bloqueado intenta loguearse, se le muestra la siguiente vista →Usuario bloqueado intenta loguearse
+Qué pasa si el usuario llega a esta página y luego vuelve al login y selecciona Olvidé mi contraseña? Lo mandamos al flujo de recuperación igualmente?
+
+Verificaciones:
+Campos vacíos
+
+Formatos
+
+Mensajes de error
+
+Links
+
+Estilos
+
+Recuperar Contraseña
+noteComo usuario registrado del Portal de Comercios, voy a poder recuperar mi contraseña en el caso que haya sido bloqueada u olvidada.
+Hoy en día el flujo de recuperar contraseña lo hacemos a través deauth-portal.Para este rediseño, vamos a dejar de usarauth-portaly la responsabilidad de login y recuperación de contraseña van a recaer sobre el Portal de Comercios.
+Como usuario registrado del Portal de Comercios, voy a poder recuperar mi contraseña en el caso que haya sido bloqueada u olvidada.
+Hoy en día el flujo de recuperar contraseña lo hacemos a través deauth-portal.Para este rediseño, vamos a dejar de usarauth-portaly la responsabilidad de login y recuperación de contraseña van a recaer sobre el Portal de Comercios.
+
+Recuperar Contraseña:El usuario va a poder acceder a la pantalla de recuperar contraseña de 3 maneras:
+
+Desde la vista deusuario bloqueadodel Login
+
+Desde el botón derecuperar contraseñadel Login
+
+Desde la Landing Page de Bancard.Cómo accedemos desde la Landing Page?
+
+Qué pasa si el usuario ingresa un mail que no está asociado a ninguna cuenta?
+
+Ingreso de mail y validación de datos:El usuario va a ingresar el email asociado a su cuenta en la pantalla inicial deRecuperar Contraseñay hacer click en continuar.
+Se verifica que el mail esté asociado a una cuenta
+
+Se verifica que el teléfono asociado a la cuenta esté actualizado
+Si el teléfono está actualizado, se envía un link de verificación por mail y se despliega la siguiente vista deRevisá tu Correo:
+
+Si el teléfono no está actualizado, dirigir al usuario a la vista notificando que tiene que actualizar los datos por teléfono y bloquear flujo -Necesitamos actualizar tus datos
+
+Validación de mail por enlace:El usuario recibe por mail un enlace de recuperación y se le envía un código de recuperación al teléfono celular asociado
+El usuario es redirigido a lavista para ingresar el código enviado al celularpara ingresar el código de 6 dígitos enviado al cel.
+
+Verificar:
+Flujo feliz, que el usuario pueda ingresar el código y continuar
+
+Contador para volver a enviar mensaje de texto luego de 60 segundos
+
+Mensaje de error si ingresa mal el código
+
+Hay límite de ingresos erróneos?
+
+El usuario ingresa correctamente el código enviado al cel y se lo redirige a la vista deIngreso de Nueva Contraseña
+
+Ingreso de Nueva Contraseña:El usuario debe ingresar una nueva contraseña respetando todas las características listadas en la pantalla deCreá una Nueva Contraseña
+
+Verificar con múltiples contraseñas que todas las validaciones estén siendo consideradas.
+
+Nueva contraseña creada:Se ingresa una contraseña correcta y se actualiza.
+Mostrar vista deNueva contraseña creada.
+
+Verificar que la contraseña haya sido correctamente actualizada.
+
+Menú Lateral
+ElMenú Lateralva a brindarnos la posibilidad de navegar por las distintas vistas del Portal de Comercios.
+Desglose de Menúes:
+Inicio: Esta vista nos va a redirigir al “Home” del Portal. Se está evaluando aún si es
+Opción A: Vista de Detalles de Ventas por sucursal, medio de pago, entidad…
+
+Opción B: Vista de Productos Contratados + acciones rápidas para cada producto
+
+Mis Productos: Vista de productos contratados y productos adicionales para contratar.Esta vista no tiene cambios, solo reskin.
+
+Ventas / Movimientos Bancard: Esta es la vista de movimientos.Cambios en las columnas y en el backend, detallados más adelante
+
+Movimientos InfoNet Cobranzas: Esta es la vista de movimientos relacionada a InfoNet Cobranzas.Cambios en las columnas y en el backend, detallados más adelante
+
+Reportes Programados: Esta vista va a permitir crear reportes personalizados con datos relevantes que luego serán enviados por mail en fechas programadas.
+
+Mis Facturas: Vista con las facturas relevantes del negocio.
+
+Anulaciones: Vista con lista de anulaciones.Esta vista no tiene cambios, solo reskin.
+
+Contacto a Soporte: Vista para solicitar soporte.Esta vista no tiene cambios, solo reskin.
+
+Anulaciones Facturadores:Falta vista
+
+Administrar Dispositivos: Lista de dispositivos habilitados para esta cuenta.Esta vista no tiene cambios, solo reskin.
+
+Usuarios y Cajas:Falta vista
+
+Análisis:Falta Vista→ No va, confirmado por Luis
+
+Gestión de Contracargas:Falta vista
+
+Cobro Facturadores:Falta vista→ No va, confirmado por Luis
+
+Preguntas y Observaciones sobre desglose de Menúes
+Ventas y Movimientos InfoNet Cobranzas muestran resúmenes de ventas, podríamos buscar un nombre que sea consistente entre ambas. Por ejemplo Movimientos y Movimientos InfoNet Cobranzas.
+
+Que diferencia hay entre Anulaciones y Anulaciones Facturadores? Al ser ambas anulaciones, podemos ponerlas en orden dentro de Menú? Ahora tienen aSoporteen el medio. Al ser ambas del mismo tipo estaría bueno tenerlas agrupadas.
+
+Faltan las siguientes vistas:
+Anulaciones Facturadores
+
+Usuarios y Cajas
+
+Gestión de Contracargas
+
+Cobro Facturadores
+
+Movimientos y Acreditaciones (Ventas)
+noteEsta vista representa la vista de Movimientos que tenemos hoy en día en el Portal de Comercios original.
+Esta vista representa la vista de Movimientos que tenemos hoy en día en el Portal de Comercios original.
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-6628&t=kWBcUwUS1Sw0jvXL-4
+Vista de Ventas (Todas las transacciones)
+Requerimiento
+
+Detalle
+
+Figma
+
+Header de ventas
+
+Crear header con detalles de ventas
+Ventas → Resumen total del las ventas listadas acorde al filtrado
+
+Descuentos → Resumen de los descuentos listados acorde al filtrado
+
+Ventas Netas → Resumen de Ventas - Descuentos listados acorde al filtrado
+
+Notas:
+Incluir tooltip en todas las opciones
+
+Incluir link a ver detalle con el detalle de cada transacción como está en Figma
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7025&t=vUHSFDuvcPjbjoat-4
+
+Filtros
+
+Donde está la documentación de filtros mencionada en el Figma?
+Incluir:
+Buscador →Que se puede buscar? Num de transacción?
+
+Fecha de transacción → Cuáles son las opciones? Hoy, semana pasada, rango de fechas??
+
+Moneda → Cuáles son las opciones?
+
+Estado
+
+Sucursal
+
+Más → Cuáles son las opciones?
+
+Agregar botón de Aplicar filtros para iniciar el filtrado
+
+Crearvista con Empty Statesi no hay resultados que coincidan con los filtros
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-6628&t=vUHSFDuvcPjbjoat-4
+
+Guardado de Filtros
+
+Agregar la opcion de guardado de filtros.Esto como lo guardamos? Deberíamos tener un pop up para seleccionar el nombre para luego poder buscar?
+
+Seleccionar Filtro Guardado
+
+Crear dropdown con la opción de seleccionar uno de los filtros guardados
+
+Tabla de detalles de Ventas
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Transacción
+
+Nº Transacción (en forma de link para poder desplegar el pop up con lavista del detalle)
+
+Estado
+
+Tipo de Movimiento
+
+Tipo de Tarjeta
+
+Medio de Pago
+
+Ciclo de Facturacion
+
+Sucursal
+
+Importe
+
+ó
+
+Descarga de Movimientos
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip.
+
+Vista de Detalle de Movimiento
+
+Cada fila de la tabla de movimientos va a tener una lupa a la derecha que desplegará la vista del movimiento según el tipo:
+Venta Débito
+
+Venta Crédito
+
+Venta con Promoción
+Con detalle dePromoción con Tarjeta de débito
+
+Venta con vuelto
+Con detalle deVuelto
+
+Movimiento deLealtad
+
+Venta con Reembolso
+Con detalle deReembolso
+
+Preautorización Aprobada
+
+Preautorización Anulada
+
+Nota:
+Incluir vista de detalle a las vistas que correspondan
+
+Incluir opción de imprimir, que desplegará una vista del detalla de la transacción en formato PDF
+
+Incluir opción de Solicitar Anulación en las vistas correspondientes. Esta opción redirigirá al usuario al flujo de anulaciones.
+
+Venta Crédito:https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-6912&t=vUHSFDuvcPjbjoat-4
+
+Venta Débito:https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-6813&t=vUHSFDuvcPjbjoat-4
+
+Otras Transacciones:https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7110&t=vUHSFDuvcPjbjoat-4
+
+Vista de Ventas (Transacciones acreditadas)
+Requerimiento
+
+Detalle
+
+Figma
+
+Header de ventas
+
+Crear header con detalles de ventas
+Ventas acreditadas → Resumen total del las ventas acreditadas listadas acorde al filtrado
+
+Ventas pendientes de acreditar → Resumen de las ventas pendientes de acreditar listadas acorde al filtrado
+
+Comisiones pendientes de cobro → Resumen de comisiones pendientes de cobro listadas acorde al filtrado
+
+Notas:
+Incluir tooltip en todas las opciones -Falta tooltop
+
+Incluir link a ver detalle con el detalle de cada transacción como está en Figma
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7953&t=vUHSFDuvcPjbjoat-4
+
+Filtros
+
+Igual que vista de todas las transacciones
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7953&t=QQ62e8ZthmAhjlux-4
+
+Filtros guardados
+
+Igual que vista de todas las transacciones
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7953&t=QQ62e8ZthmAhjlux-4
+
+Seleccionar Filtro Guardado
+
+Igual que vista de todas las transacciones
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7953&t=QQ62e8ZthmAhjlux-4
+
+Tabla de detalles de transacciones acreditadas
+
+Crear tabla de detalles de transacciones acreditadas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Proceso
+
+Fecha de Acreditación
+
+Estado
+
+Tipo de Tarjeta
+
+Entidad
+
+Nº de Cuenta
+
+Sucursal
+
+Tipo de Operación
+
+Importe
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7953&t=QQ62e8ZthmAhjlux-4
+
+Descarga de Movimientos
+
+Botón para descargar los movimientos. Los formatos van a ser igual a los que tenemos hoy.
+Incluír Tooltip.
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-7953&t=QQ62e8ZthmAhjlux-4
+
+Vista de Detalle de Movimientos Acreditados
+
+Vista que incluye el detalle de los movimientos acreditados.
+Cada movimiento puede ser abierto en un popup.
+Falta diseño del detalle
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-8089&t=QQ62e8ZthmAhjlux-4
+
+Descarga de Detalle de Movimientos Acreditados
+
+Botón para descargar los deta. Los formatos van a ser igual a los que tenemos hoy.
+
+https://www.figma.com/design/ARTHOZDBZpRP75dgnVB3NF/-HANDOFF--Release-1-Web---Comercios-e-Infonet?node-id=2715-8089&t=QQ62e8ZthmAhjlux-4
+
+noteAcá faltan listar los requerimientos en la creación de la nueva tabla, los procesos de registro de transacciones en ambas, etc…
+Acá faltan listar los requerimientos en la creación de la nueva tabla, los procesos de registro de transacciones en ambas, etc…
+
+Preguntas:
+Como se comporta el botón de Más filtros?
+
+Movimientos InfoNet Cobranzas (Ventas)
+Vista de Servicios Cobrados
+i. Header de Movimientos
+noteSe desplegará un header con el resumen de los movimientos para que el usuario puede tener una vista a alto nivel de sus movimientos de IC.
+Se desplegará un header con el resumen de los movimientos para que el usuario puede tener una vista a alto nivel de sus movimientos de IC.
+
+Crear header con detalles de los movimientos
+Total cobros realizados → Resumen total de los cobros realizados en las bocas
+
+Total extracciones → Resumen total de las extracciones realizadas en las bocas:
+
+Diagramar ambos headers con los detalles que se muestran en elFigma
+Títulos
+
+Tooltips
+
+Monto en Guaraníes (incluir separador de miles)
+
+Total de transacciones
+
+Los montos se van a actualizar según los filtros seleccionados
+
+Desplegar tooltip al hacer hover en el ícono de información
+
+ii. Filtros
+notePara poder tener una búsqeda más personalizada, tendremos la vista de filtros con campos clave por los cuales el usuario va a poder filtrar.
+Para poder tener una búsqeda más personalizada, tendremos la vista de filtros con campos clave por los cuales el usuario va a poder filtrar.
+
+El usuario va a tener la posibilidad de filtrar los movimientos acorde alFigma:
+Buscador →Que se puede buscar? Num de transacción?
+
+Fecha de cobro → Cuáles son las opciones? Hoy, semana pasada, rango de fechas??
+
+Fecha de Proceso
+
+Estado
+
+Facturador
+
+Más → Cuáles son las opciones?Donde está la documentación de filtros mencionada en el Figma?
+
+Agregar botón de Aplicar filtros para iniciar el filtrado
+
+El usuario va a tener la opción de guardado de filtros para poder acceder a búsquedas reiterativas más fácilmente. Va a poder guardar sus filtros y acceder a los ya creados mediante un dropdown.Esto como lo guardamos? Deberíamos tener un pop up para ingresar el nombre para luego poder buscar? En el dropdown de filtros guardados debemos agregar un buscador?
+
+iii. Descarga de Movimientos
+noteComo usuario del Portal de Comercios, quiero tener la opción de descargar la lista de mis movimientos en los formatos pdf, csv, xmls, txt desde la vista de Movimientos de IC.
+Como usuario del Portal de Comercios, quiero tener la opción de descargar la lista de mis movimientos en los formatos pdf, csv, xmls, txt desde la vista de Movimientos de IC.
+
+Agregar botón “Descargar Movimientos” para que el usuario pueda descargar el detalle de los movimientos (con los filtros seleccionados) en formatos pdf, csv, xmls y txt.
+
+iv. Tabla de detalles de Movimientos
+noteLa tabla de movimientos desplegará el resumen de los movimientos con información relevante para el usuario.
+La tabla de movimientos desplegará el resumen de los movimientos con información relevante para el usuario.
+
+Crear tabla de detalles de ventas que va a traer la información de la nueva tabla que vamos a crear con los siguientes detalles:
+Fecha de Cobro
+
+Nº Transacción (en forma de link para poder desplegar el pop up con lavista del detalle)
+
+Estado
+
+Facturador
+
+Servicio
+
+Sucursal
+
+Cajero
+
+Comisión
+
+Importe
+
+vi. Vista de Detalles de Movimiento
+noteComo usuario del Portal de Comercios y de InfoNet Cobranzas, quiero poder ver en detalle cada movimiento de IC.
+Como usuario del Portal de Comercios y de InfoNet Cobranzas, quiero poder ver en detalle cada movimiento de IC.
+
+La vista de Detalles de Movimiento se abre como u drawer desde la derecha.
+
+Se despliega como título Cobro de servicio, debajo el monto y el estado.
+
+Incluir los detalles en distintos contenedores
+Comisión generada
+
+Detalle del servicio
+
+Detalle del pago
+
+Medio de pago
+
+Cliente
+
+El contenedor deComisión generadadespliega una opción de “Ver listado de comisiones” que al clickearlo abre el listado de comisiones en formato .pdf en una nueva pestaña.Tenemos diseño para esto?
+
+Agregar la opción deImprimir Comprobante, que al clickearlo desplegará el comprobante en formato .pdf en una nueva pestaña
+
+Agregar opción deSolicitar Anulaciónel cual redirige al usuario al flujo de anulaciones con datos del movimiento precardados.
+
+Vista de Comisiones a Cobrar
+noteComo usuario del Portal de Comercios e InfoNet Cobranzas, quiero
+Como usuario del Portal de Comercios e InfoNet Cobranzas, quiero
+
+preguntas extra:
+que pasa si el usuario no tiene IC contratado? Tenemos algun diseño para mostrar? Escondemos la opcion del menu?

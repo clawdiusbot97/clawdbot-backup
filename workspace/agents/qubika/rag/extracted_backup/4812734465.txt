@@ -1,0 +1,88 @@
+TITLE: Tpago - 3DS Cybersource - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 4812734465
+SOURCE: 4812734465__Tpago_-_3DS_Cybersource_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para el proyecto de migración del flujo 3DS Cardinal a Cybersource en Tpago, a cargo dey
+Las horas estimadas son:
+Fecha de Inicio: a definir
+Fecha de Entrega: a definir
+Consideraciones Generales
+El proceso 3DS en cybersource está dividido en 5 pasos, los cuales son nuestra guía para el armado de la estimación:
+Setup Service:llamado a la API de cybersource enviando datos de la tarjeta para obtener la URL y el JWT para el DDC.
+
+Device Data Collection:llamado a la DDC URL, recolección de los datos del navegador en iframe invisible.
+
+Payer Authentication Check Enrollment Service:(ex lookup) llamado a la API de cybersource para conocer el nivel de riesgo de la operación:
+- Frictionless success (riesgo bajo)
+- Challenge required (riesgo moderado)
+- Frictionless failure or decline (riesgo alto)
+
+Step-Up iframe:iframe visible donde el usuario completa el challenge para validar su identidad.
+
+Payer Authentication Validation Service:verificación de que el usuario validó exitosamente su identidad (solo si ocurrió un challenge).
+
+Tpago
+El flujo 3DS en Tpago está presente en los flujos:
+Pago Ocasional Sin Login (en conjunto con Kount. Si kount está activo, solo si kount aprueba. Si kount está inactivo, se realiza 3DS)
+
+Pago Ocasional con Login (Formulario de tarjeta)
+
+Pago con tarjeta catastrada
+
+Flujo stripe (Configurable, apagado al momento de escribir este doc)
+
+Catastro de tarjetas
+
+Tarea
+
+Estimación (hs)
+
+[PASO 1] Setup Service
+Invocar al servicio de setups para obtener JWT y URL para el DDC. Implementar usando gema oficialcybersource-rest-client-rubyreempazando external-services. Actualizar vistas de pago ocasional y tarjeta catastrada, catastro y stripe.
+
+40
+
+[PASO 2] Device Data Collection
+Implementar el iframe y form ocultos para DDC. Capturar el mensaje desde el iframe oculto para habilitar el paso 3.
+
+40
+
+[PASO 3] Payer Authentication Check Enrollment Service
+Invocar al servicio usando elreferenceIddel paso 1. Procesar los posibles resultados (frictionless, challenge, reject).
+Pendiente: Adaptar lógica para NO llamar a JPOS si la respuesta es reject?
+
+32
+
+[PASO 4] Step-Up iframe
+Implementar el iframe visible para el challenge. Integrar elstepUpUrlyaccessTokenrecibidos en el punto 3. Gestionar el callback: eliminar websockets y reemplazar por mensajes de javascript.
+
+56
+
+[PASO 5] Payer Authentication ValidationVerificar el resultado del challenge (si ocurrió). Invocar el endpoint de validación y procesar la respuesta antes de autorizar el pago.
+
+24
+
+Integración y pruebas en Staging- Integración de los flujos
+- Creación y corrección de PRs
+- Pruebas locales
+- Armado de ramas
+- Deploy a STG
+- Pruebas iniciales en STG
+
+24
+
+Total Desarrollo
+
+216
+
+Total Gestión 15%Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+32
+
+Total Desarrollo + Gestión
+
+248

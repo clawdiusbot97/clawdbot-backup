@@ -1,0 +1,9 @@
+TITLE: Cronograma de Licencias 2022
+DOMAIN: General
+PRIORITY: Media
+ID: 2261352477
+SOURCE: 2261352477__Cronograma_de_Licencias_2022.json
+
+---
+
+https://docs.google.com/spreadsheets/d/16phV9OLJ_LK2cLhbXlTCY6_mjsIfvTv7DXf8utIJaKg/edit#gid=0

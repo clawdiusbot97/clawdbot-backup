@@ -1,0 +1,180 @@
+TITLE: Exploración QR Argentino
+DOMAIN: General
+PRIORITY: Media
+ID: 4072505346
+SOURCE: 4072505346__Exploracio╠ün_QR_Argentino.json
+
+---
+
+ERD para la base de datos:
+ERD
+
+Diagramas para los flujos de trabajo:
+Generación de PaymentHook (intención de pago)
+
+Confirmación de Pago
+
+Cómo se hace este flujo en Selling
+En selling es Bancard mismo quien procesa el pago, por lo que no se sale a otro proveedor, pero vale la pena estudiar qué suele solicitar el servicio POS, y qué información provee para identificarse a sí mismo.
+QR de Comercio (Estático)
+Ex-Com-Service: POST generate_qr_commerce
+URI:
+Commerce_code
+
+Commerce_branch_code
+
+Response:
+QR_raw
+
+SellingService: POST generate_qr_commerce
+Request:
+Commerce_code
+
+Commerce_branch_code
+
+Force_new_qr (no es relevante para QR Arg)
+
+Response:
+QR_raw
+
+supported_clients
+
+QR Express (Dinámico, el body es más grande para aportar todos los datos de generación de QR)
+Ex-Com-Service: POST generate_qr_express
+URI:
+Commerce_code
+
+Commerce_branch_code
+
+Request:
+amount
+
+description
+
+one_time
+
+cashier_user_id
+
+origin
+
+serial_number
+
+device_version
+
+promotions
+
+qr_source
+
+amount_buy
+
+amount_change
+
+trn_mode
+
+trn_provider
+
+Response:
+QR_raw
+
+supported_clients
+
+SellingService: POST generate_qr_express
+Request:
+Commerce_code
+
+Commerce_branch_code
+
+amount (Total a descontar, productos + extracción)
+
+description
+
+one_time
+
+cashier_user_id (solo en portal)
+
+origin (distingue los hooks creados en el portal de los creados por un POS)
+
+serial_number (del pos)
+
+device_version (legacy, android y uno más, no recuerdo)
+
+promotions
+
+qr_source (qr_raw)
+
+amount_buy (componente costo del producto)
+
+amount_change (componente extracción/vuelto)
+
+trn_mode
+
+trn_provider
+
+Response:
+QR_raw
+
+supported_clients
+
+Cómo se hace este flujo en PIX?
+QR PIX (De tipo dinámico, creados por PIX en su API)
+Ex-Com Service: POST generate_pix_qr
+URI
+Commerce_code
+
+Branch_code
+
+Request
+amount
+
+description
+
+serial_number
+
+device_version
+
+qr_source
+
+pix_payer_cpf
+
+pix_payer_phone
+
+pix_payer_email
+
+Response
+amount
+
+created_at
+
+description
+
+url
+
+qr_data
+
+pix_vetTax
+
+pix_priceRG
+
+Pix-Service: POST /payment_hooks, PaymentHooksController → Create
+Request
+operation_amount_cents
+
+operation_currency
+
+origin pos_type
+
+pos_serial_number
+
+pos_device_version
+
+buyer_email
+
+trn_mode
+
+trn_provider
+
+Nota: En la capa resource, ExternalCommerceService hace un chequeo de credenciales contra commerce_service para verificar que el comercio y la sucursal tengan vigente su contrato de servicio. Se puede suponer que cualquier pos perteneciente a una sucursal con el contrato vigente tendrá acceso al servicio QR Argentino
+
+Nota: External Commerce Service suele ser el último eslabón del proceso en operar teniendo en cuenta los commerce y branch CODES. De ahi en adelante se intenta utilizar nuestros IDs de commerce
+→ Queda pendiente API CRUD para crear nuevos cajeros y sus QR
+→ Queda pendiente definir quién preparará la lógica de alta de cajas (Generalmente lo hace Bancard con la API a disposición)

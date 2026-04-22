@@ -1,0 +1,91 @@
+TITLE: Tasking TPAGO flujo STRIPE
+DOMAIN: General
+PRIORITY: Media
+ID: 2753429612
+SOURCE: 2753429612__Tasking_TPAGO_flujo_STRIPE.json
+
+---
+
+FIGMA MOBILE:
+https://www.figma.com/proto/MdD7STqtLBZRgEjrb96W5Z/TPago?page-id=1%3A2&type=design&node-id=21-1346&viewport=455%2C820%2C0.1&t=f6MXcgxIolU0aMoc-1&scaling=min-zoom&starting-point-node-id=21%3A1346&show-proto-sidebar=1FIGMA DESKTOP:
+https://www.figma.com/proto/MdD7STqtLBZRgEjrb96W5Z/TPago?page-id=1%3A2&type=design&node-id=120-1124&viewport=455%2C820%2C0.1&t=f6MXcgxIolU0aMoc-1&scaling=scale-down-width&starting-point-node-id=93%3A3098
+FLUJO
+
+TAREAS
+
+DEV
+
+HS
+
+CATASTRAR TARJETA (Mobile y Desktop)
+
+Crear vista para detalles de suscripción
+
+12hs
+
+Crear vista para catastrar tarjeta
+
+24hs
+
+Agregar flujo para validar si el usuario que entra al link de suscripción está logueado o no
+
+16hs
+
+Cuando se toca continuar, hay que registrar al usuario, catastrar tarjeta y suscribir al usuario.
+
+16hs
+
+LOADING PAGE (Mobile y Desktop)
+
+Crear vista de loading
+
+8hs
+
+VOUCHER (Mobile y Desktop)
+
+Crear la vista (consulta con Bancard sobre unificar la vista desktop)
+
+24hs
+
+Botón Compartir (preguntar si es solo mobile) y Descargar (descargar PDF)
+
+16hs
+
+AUTH PORTAL (Mobile y Desktop)
+
+Conversar con Bancard la definición del flujo de figma
+
+24hs
+
+Crear flujo para recuperar contraseña
+
+Figma
+
+Doc Flujo
+
+Hacer llamada a auth service para cambiar la contraseña por la nueva
+
+8hs
+
+Detectar si viene de Tpago
+
+Investigar
+
+8hs
+
+AUTH SERVICE
+
+Crear la vista del mail
+
+20hs
+
+Modificar flujo de reseteo de contraseña para que envie el mail de TPAGO en lugar del de Auth
+
+Doc Flujo
+
+36hs
+
+TOTAL: 228 hs
+Días totales: 20
+Comienzo: 23-10-23
+Fin: 21-11-23

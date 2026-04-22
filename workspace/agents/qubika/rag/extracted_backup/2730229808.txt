@@ -1,0 +1,43 @@
+TITLE: Issue: BAAS authentication and service codes
+DOMAIN: 3) Auth
+PRIORITY: Alta
+ID: 2730229808
+SOURCE: 2730229808__Issue__BAAS_authentication_and_service_codes.json
+
+---
+
+Introducción
+DER auth_service
+Imagen 1: DER
+Observaciones:
+La relación entre user_credentials y users es 1 a 1
+
+La relación entre users y services es muchos a uno
+
+Una persona que quiera hacer uso denservices, requiere la creación denusers ynuser_credentials. Potencialmente con el mismo email.
+
+BAAS Tokens
+Los BAAS tokens son una forma de autenticación que se usa en la arquitectura de bancard para hacer requests autenticadas desde aplicaciones móviles. La misma consiste en una primera request a auth_service en donde se envía como parámetro email, contraseña e identificador del servicio. Esta operación valida contra las 3 tablas que se ven en imagen 1 y guarda en redis un token aleatorio bajo elemail del usuario únicamente, el cual es enviado al cliente para que use para firmar sus subsiguientes requests a los distintos servicios de bancard.
+Authentication Middleware
+La gema BAAS incluye un middleware llamado Authentication. La responsabilidad de este middleware es en base al contenido del headerAuthorizationautenticar al usuario que está realizando la request. Distintos servicios de bancard usan este middleware para autenticar a los usuarios.
+El middleware se encarga de parsear el header para extraer la información que contiene dentro para luego validar que las credenciales sean correctas. Por default, el middleware hace uso de angus-remote para pegarle a auth-service y validar la autenticación del usuario. Una excepción es auth-service, que para no hacer una request a si misma, define explicitamente la clase responsable de la autenticacion con el keyword argument:authenticator
+rubyEl valor del headerAuthorizationpuede corresponderse a una autenticación de tipo Basic o de tipo Baas:
+Este middleware setea en el entorno de Rack 2 variables:
+baas.auth.id: string que identifica el usuario (o aplicación). Por ejemplo
+“user-tokens/email” si se autenticó con un Baas token.
+
+“users/email” si se autenticó con basic authentication.
+
+“apps/public_key_de_la_app”si se autentico como una app, ya sea con basic o con Baas token.
+
+baas.auth.user_id: es el ID de la tabla Users de auth_service del usuario autenticado.
+
+Problema
+Cuando el Authentication Middleware busca el ID del usuario para poder guardarlo en el entorno, el middleware no tiene en cuenta el servicio desde el cual ese usuario se está autenticando. Esto se aprecia en estas 2 lineas de código resaltadas a continuación del archivo lib/baas/authenticator.rb en bancard-baas:
+Imagen 2: búsqueda del ID de usuario
+Sea cual sea la implementación de@authenticator, los métodosauthenticate_passwordyget_user_from_emailno reciben el ID del servicio desde el cual se hace la request (llámese desde qué aplicación mobile se hace la request en el caso de un baas token, por ejemplo)
+Lo que sucede entonces es que se asume el servicioGENERAL_SERVICEpara buscar en las tablas de auth_service y encontrar un ID deUser. Lo cual genera que si no existe dicho usuario, el middleware lanzaria una excepción. Al dia de la fecha este problema no se manifiesta ya que los usuarios con servicio GENERAL_SERVICE existen.
+Si en un futuro se da el caso que:
+Haya usuarios nuevos que no tienen habilitado el GENERAL_SERVICE, el middleware no funcionaría.
+
+Haya usuarios tengan el servicio GENERAL_SERVICE y otros más asociados a user_credentials con el mismo email, el baas token se guarda bajo el email, por lo cual no podran tener baas tokens independientes por servicio o aplicación. Esto hoy ya se manifiesta entre aplicaciones móviles de MPOS y Pago Movil.

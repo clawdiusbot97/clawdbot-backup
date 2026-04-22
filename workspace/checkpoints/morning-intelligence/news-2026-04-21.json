@@ -1,0 +1,49 @@
+{
+  "date": "2026-04-21",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "US–Iran standoff: live updates as ceasefire window narrows",
+        "category": "Geopolitics",
+        "source": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/world/middle-east/us-israel-iran-war-news-live-updates-donald-trump-shehbaz-sharif-iran-ceasefire-talks-us-cargo-ship-seizes-strait-of-hormuz-closed-impact-latest-update/liveblog/130381128.cms",
+        "date": "2026-04-21"
+      },
+      {
+        "title": "Strait of Hormuz shipping risk features in latest coverage",
+        "category": "Markets",
+        "source": "Sky News",
+        "url": "https://news.sky.com/story/iran-war-latest-trump-blockade-strait-of-hormuz-lebanon-13509565",
+        "date": "2026-04-21"
+      },
+      {
+        "title": "US–Iran talks and regional security updates",
+        "category": "Policy",
+        "source": "The National",
+        "url": "https://www.thenationalnews.com/news/mena/2026/04/20/live-us-iran-talks-hormuz/",
+        "date": "2026-04-20"
+      },
+      {
+        "title": "Lebanon–Israel ceasefire enters effect amid broader regional tensions",
+        "category": "Geopolitics",
+        "source": "The New York Times",
+        "url": "https://www.nytimes.com/live/2026/04/16/world/iran-war-trump-lebanon-news",
+        "date": "2026-04-16"
+      },
+      {
+        "title": "US officials travel for talks as conflict coverage continues",
+        "category": "Policy",
+        "source": "CBS News",
+        "url": "https://www.cbsnews.com/live-updates/iran-war-trump-israel-lebanon-ceasefire-hezbollah-strait-hormuz/",
+        "date": "2026-04-21"
+      }
+    ],
+    "uruguay": [],
+    "watch": [
+      "Monitor any confirmed announcements on shipping/energy restrictions tied to Strait of Hormuz and any dated diplomatic milestones."
+    ]
+  },
+  "sources_count": 5,
+  "generated_at": "2026-04-21T11:06:10Z"
+}

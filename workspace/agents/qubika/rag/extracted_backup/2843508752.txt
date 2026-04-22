@@ -1,0 +1,88 @@
+TITLE: Creación de un nuevo servicio en Ruby on Rails
+DOMAIN: 4) Servicios
+PRIORITY: Media
+ID: 2843508752
+SOURCE: 2843508752__Creacio╠ün_de_un_nuevo_servicio_en_Ruby_on_Rails.json
+
+---
+
+Guía para crear un servicio desde cero con Ruby on Rails. Se toma de base el procedimiento realizado para bancard-pix-service
+Creación del proyecto base con el comando rails new, utilizando las opciones acordes a la necesidad del proyecto.
+
+Es posible que se necesite instalar MySQL en el entorno local para poder inicializar el proyecto. En caso contrario, falla al momento de hacer bundle install.
+Agregar dockerizacion. Commit de referencia:https://github.com/bancardsa/bancard-pix-service/commit/c70447d6baedc6d1fce993f9d102fed2c0f7ed0b
+
+Agregar gemas y dependencias:
+
+Gema
+
+Pasos
+
+Commit de referencia
+
+Rubocop
+
+Agregar la/s gema/s al Gemfile
+
+Crear el archivo de configuración .rubocop.yml
+
+Commit
+
+RSpec
+
+Agregar la gema rspec-rails
+
+Instalar con el comandorails generate rspec:install
+
+Commit
+
+Sidekiq
+
+Agregar la gema
+
+Agregar redis y el proceso sidekiq en el docker-compose.
+
+Agregar la configuración necesaria.
+
+Commit
+
+Brakeman
+
+agregar la gema brakeman en el grupo develop
+
+Commit
+
+Strong migrations
+
+agregar gema al Gemfile
+
+Correr el generadorrails generate strong_migrations:install
+
+Commit
+
+Sentry
+
+Agregar gemas
+
+Crear el initializer.
+
+Agregar configuraciones correspondientes.
+
+Commit
+
+Annotate
+
+Agregar gema
+
+Correr el generadorrails g annotate:install
+
+Commit
+
+Shoulda Matchers
+Factory Bot
+Faker
+Jbuilder
+
+Ver documentación de cada gema y commit.
+
+Commit

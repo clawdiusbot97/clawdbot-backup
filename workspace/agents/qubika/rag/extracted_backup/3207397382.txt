@@ -1,0 +1,159 @@
+TITLE: Onboarding para clientes existentes - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3207397382
+SOURCE: 3207397382__Onboarding_para_clientes_existentes_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Tarea
+
+Estimación (hs)
+
+Portal / Servicio
+
+Flujo de Contratación de Productos
+
+Pantalla Principal - Selección de Productos
+
+20
+
+commerce-suite
+
+Landing Page - Facturación Electrónica
+
+36
+
+commerce-suite
+
+Landing Page - Smart POS
+
+8
+
+commerce-suite
+
+Landing Page - POS Android
+
+8
+
+commerce-suite
+
+Landing Page - VentasQR
+
+8
+
+commerce-suite
+
+Landing Page - VPos
+
+8
+
+commerce-suite
+
+Landing Page - TPago
+
+8
+
+commerce-suite
+
+Conversión de la Moneda en Landing Page
+
+PopUp para seleccionar sucursales
+Incluye lista de sucursales, buscador, scroll y opción para seleccionar / deseleccionar
+
+commerce-suite
+
+Lógica para el buscador de sucursales
+
+commerce-service
+
+Pantalla de checkout de Producto
+Incluye contador si el producto es POS, y no si el producto se contrata a nivel de sucursal y no por cantidad
+
+commerce-suite
+
+Pantalla de Configuración de Producto (Facturación Electrónica)
+
+8
+
+commerce-suite
+
+Pantalla deselección de cuenta Bancaria
+
+18
+
+commerce-suite
+
+Pantalla de ingreso de datos para nueva cuenta bancaria
+
+16
+
+commerce-suite
+
+Pantalla de Resumen de Productos
+
+24
+
+commerce-suite
+
+Pantalla para adjuntar Documentos
+
+a definir
+
+commerce-suite
+
+Pantalla de ingreso de contraseña
+
+8
+
+commerce-suite
+
+Pantalla de resumen
+Datos ingresados + carrito
+Esta tarea va a requerir trabajo en commerce-service también
+
+40
+
+commerce-suite / commerce-service
+
+Agregar modal para retomar el proceso de onboarding para clientes que ya lo hayan iniciado.
+Esta función va a redirigir al usuario
+
+32
+
+commerce-suite / commerce-service
+
+Modal de solicitud procesada
+
+8
+
+commerce-suite
+
+Flujo de Crear Sucursal
+
+Total desarrollo
+
+Gestión 20%(Incluye reuniones de seguimiento, tasking, re estimación, etc.. No afecta el tiempo de entrega, es solo para facturación)
+
+QA 20%(Tareas de QA a realizarse a medida que la iniciativa vaya avanzando, para crear un desarrollo más ágil y evitar acumulación de errores al final del proyecto)
+
+BugFixing Milestone 1
+
+BugFixing Milestone 2
+
+Total desarrollo + QA + gestión
+
+Preguntas
+Por que valor vamos a querer que el usuario pueda buscar una sucursal? Hoy en dia se permite por nombre y codigo.
+
+Ver donde colocamos la basura a nivel de diseño cuando el producto no tiene contador, por ejemplo TPago, Fact electrónica, etc…
+
+Tenemos la forma de averiguar si el producto es POS o no? En ese caso necesitamos una lista con los codigos de los productos. Tal vez también agregar una columna en la tabla para marcar si es pos o no.
+
+Porque solo en facturacion electronica nos pide datos bancarios etc…
+
+En el flujo de Facturación Electrónica se van a requerir distintos documentos según el tipo de empresa? Necesitaríamos un listado de cada una
+
+En el flujo de facturacion electrónica vamos a tener que elegir por cada sucursal si queremos con o sin pos
+
+En la seleccion de productos, podemos ver la forma de agregar el producto y carrito sin tener que abrir la landing? Puede suceder que el usuario ya lo conozca y le ahorramos un paso

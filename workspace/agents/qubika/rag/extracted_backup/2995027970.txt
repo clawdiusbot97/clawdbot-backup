@@ -1,0 +1,34 @@
+TITLE: Releases / Versiones
+DOMAIN: 7) Repos
+PRIORITY: Alta
+ID: 2995027970
+SOURCE: 2995027970__Releases___Versiones.json
+
+---
+
+Los Releases / Versiones son una utilidad que nos ofrece Jira para identificar distintos momentos dentro del proyecto. Estas nos ayudan a organizar el trabajo proporcionándonos puntos de partida y llegada a los que debemos aspirar.
+Para esto, nos da la opción de asignar distintos Tickets / Indicentes a las versiones creadas
+Release = Versión
+
+I. Habilitar la funcion Releases en la configuración del Proyecto
+Desde el menú izquierdo de nuestro tablero vamos aConfiguración de Proyecto⚙️
+
+SeleccionamosFeatures
+
+Habilitamos la funcionReleases
+
+II. Crear una versión / release en Jira
+Abrir proyecto
+
+En el menú izquierdo del proyecto, seleccionarReleases (versiones).
+
+Seleccionar la opciónCrear versión
+
+Completar los datos. El nombre puede ser un nombre de clave interno, pero generalmente es un valor numérico, por ejemplo 1.0, 2.1.1, etc.
+
+Al crear la versión / release, se van a crear dos campos.
+Affect Version→ Este campo es básicamente para seleccionar de que versión resultó un bug encontrado.
+
+Fix Version→Este es el campo más importante, que identifica dentro en que versión se va a publicar esta tarea. Nos va a ayudar para la planificación de los deploys, la supervisión del progreso y de la velocidad, y se utiliza también para la generación de reportes.
+
+https://www.atlassian.com/es/agile/tutorials/versionshttps://support.atlassian.com/jira-software-cloud/docs/enable-releases-and-versions/

@@ -1,0 +1,35 @@
+TITLE: [Iniciativa] - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3233316888
+SOURCE: 3233316888__[Iniciativa]_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para [Iniciativa], a cargo de [Dev].
+Las horas estimadas son:
+Fecha de Inicio:{día}
+Fecha de Entrega:{día}
+Tarea
+
+Estimación (hs)
+
+Salida a Staging
+Integración de los flujos
+
+Creación y correción de PRs
+
+Pruebas locales
+
+Armado de ramas
+
+Deploy a STG
+
+Pruebas iniciales en STG
+
+Total Desarrollo
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+Total Desarrollo + Gestión

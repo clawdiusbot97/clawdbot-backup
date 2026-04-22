@@ -1,0 +1,128 @@
+TITLE: Michi Token - Tasking y Estimación
+DOMAIN: General
+PRIORITY: Media
+ID: 3639345154
+SOURCE: 3639345154__Michi_Token_-_Tasking_y_Estimacio╠ün.json
+
+---
+
+Este documento representa el tasking y estimación para Michi Token, a cargo de.
+Las horas totales estimadas son de395.
+Fecha de Inicio:Martes
+Fecha Estimada de Entrega:Lunes
+Módulo
+
+Tarea
+
+Estimación (hs)
+
+auth-service
+
+Investigar cómo podemos resolver la validación de autenticación de un usuario desde la API de Michi
+
+4
+
+Agregar endpoint para autenticar usuario desde la API de Michi
+Comentarios:
+Esto está sujeto a la tarea de arriba, en el caso de ya existir una forma de realizar esta autenticación, esta tarea no aplica.
+
+24
+
+Agregar endpoint para bloquear un usuario por cierto tiempo.
+
+12
+
+billing-service
+
+Agregar columna en los productos para indicar si requiere validación con Michi
+
+4
+
+Modificar CRUD de productos para crear/modificar esa columna.
+
+8
+
+Crear tabla de dispositivos de confianza de los usuarios. Debe tener el token, platform y el user_id.
+
+8
+
+Agregar CRUD para los dispositivos de confianza de los usuarios.
+
+24
+
+Agregar endpoint para enviar push al dispositivo de confianza de un usuario. Para esto, vamos a tener que agregar un notification type nuevo que identifique a este tipo de notificaciones.
+
+16
+
+Al endpoint de pago, agregarle la recepción de un OTP que vamos a tener que validar contra michi.
+
+24
+
+external-services
+
+Agregar endpoint para validar OTP contra Michi.
+
+16
+
+Agregar operación para el request new otp de Michi.
+
+16
+
+notification-service
+
+Agregar endpoint para enviar push notification recibiendo el token, platform, data (incluye el tipo de notificación) y message.
+
+32
+
+bportal
+
+En el login, enviar push al dispositivo de confianza del usuario. Esto pegándole al endpoint de billing-service.
+Comentario:
+En el caso de que el usuario no tenga un dispositivo de confianza, no le permitiremos el login y le mostraremos un error.
+En el caso de que tenga un dispositivo de confianza, el portal deberá triggerear el envio de la notificación y abrir un socket para esperar el aviso por parte de la app.
+
+32
+
+Crear un endpoint para recibir el callback por parte del servicio y hacer el broadcast al socket para continuar el login del usuario.
+
+28
+
+Al intentar pagar un servicio que requiere validación de pin, enviar push al dispositivo de confianza para iniciar la validación. Luego de esto, abrir un socket para esperar el aviso por parte de la app.
+
+32
+
+Crear Modal y vista para el doble factor de seguridad en login.
+
+16
+
+Agregar lógica para bloqueo de usuario en el login.
+
+8
+
+Crear Modales para la confirmación de pago con soft token.
+Incluye modal de success, carga e intento fallido.
+
+12
+
+Agregar lógica para confirmación de pago con soft token e intento fallido.
+
+12
+
+GENERAL
+
+Revisiones y correcciones de PRS, deploys, pruebas de ambiente
+
+24
+
+Total Desarrollo
+
+344
+
+Total Gestión 15% (para facturación, no afecta el desarrollo)
+Incluye reuniones de estimación, planificación, técnicas y de seguimiento.
+
+51
+
+Total Desarrollo + Gestión
+
+395

@@ -1,0 +1,220 @@
+TITLE: Angus vs Rails
+DOMAIN: General
+PRIORITY: Media
+ID: 2830041277
+SOURCE: 2830041277__Angus_vs_Rails.json
+
+---
+
+16falselistfalseComparación de alternativas a Angus
+
+Angus
+
+Rails API + Open API
+
+Rails API + Angus remote
+
+Exponer documentación
+
+Nativo. Angus está construido en funcion de poder exponer una documentacion estandarizada. Archivos operations.yml, representations.yml, messages.yml, service.yml, etc.
+El propio dessarrollo de la API exige tener estos archivos creados.
+
+RSwag como herramienta para generacion de documentacion.
+
+Escribir a mano documento yml de documentacion de los endpoints
+
+Hay herramientas para validar que el yml se corresponda con la API
+
+construir la API en Rails, y exponer la documentacion e formado Angus conangus-sdoc. Implica un directorio definitions con el siguiente contenido
+
+Consumir la API
+
+angus-remote
+
+https://openapi-generator.tech/
+Correr el generador dandole de entrada el yml con la documentacion generada. El output es una gema ruby con el cliente de la API. Clases bien documentadas, archivos .md con ejemplos de codigo, etc.
+
+angus-remote
+
+Autenticación
+
+angus-remote (rama baas) se autentica utilizando el esquema baas, con clave publica y privada de app.
+
+No soporta baas. Soporta Basic auth, ya que es un standard.
+Basic es facilmente configurable en la gema cliente.
+
+angus-remote.
+
+Angus
+
+Rails API
+
+PROS
+
+angus-remote
+
+mantenimiento
+
+versiones de dependencias
+
+compatibilidad con gemas (brakeman, string-migrations, rubocop-rails, sentry-rails, etc)
+
+comunidad
+
+features
+
+CONS
+
+mantenimiento
+
+versiones de dependencias
+
+compatibilidad con gemas
+
+migraciones manuales
+
+comunidad.
+
+No se pueden configurar códigos de respuesta
+
+Dificulta implementar una API Restful.
+
+no tiene angus-remote
+
+Open API
+rswag
+Gema para la generacion de la documentacion en formato Open API en base a tests.
+Usar el OpenAPI Generator
+Ejemplo para usar el OpenAPI Generator. Se debe contar con un archivo petstore.yml en el directorio en donde se corre este comando (se adjunta archivo de ejemplo).
+Generador ruby
+En base al archivo petstore.yaml, genera el codigo de una gema ruby cliente de esa API.
+
+Rails API + Angus SDOC
+Prueba de concepto: Rails API + Angus SDOC
+https://github.com/gaston-gabadian/Rails-API-Angus-SDOC
+Dudas
+Angus-SDOC: Se puede usar una representation como root de la respuesta? O siempre que se use el atributo type en una response dentro de operations.yml tiene que ser anidado a un atributo padre?
+
+Los messages.yml exigen "level", "status_code". Estos se usan para exponer la docu. En la API Rails hay que renderizar errores haciendo que coincida con messages.yml.
+
+Que pasa si devuelvo un error que no tengo declarado en operations? No hay problema con eso, simplemente tu cliente no cuenta con que puedas devolver ese message en ese endpoint. angus-remote funciona bien.
+
+Formato del json al devolver error. para los errores rescatados con rescue_from se puede usar un template. Y para los 500?
+
+Que pasa con los 500? Hay que formatearlos? Habría que rescatarlos y formatearlos para que angus-remote lo pueda entender. (principalmente keys status y mesages)
+
+La doc en html expone la ruta /rails-blogs-api/api/1.0, es decir tiene ese prefijo hardcodeado ("/#{@service.code_name}/api/#{@service.version}#{operation.path}"). La doc en JSON no agrega ese prefijo. angus-remote al usar el JSON, usa la ruta que le configures. Meter la API en rails para que este dentro de esa ruta base?
+
+Angus no responde otro status code que no sea 200 para éxito. Devolver 200 en rails aunque la semántica de la operación amerite otro código? Ver que pasa si se responde 2XX con angus remote a ver si no se queja. 201 created, 204 no content, etc. angus-remote no se fija en el status code, se puede devolver cualquier cosa. Excepto 500, 501 y 503 los cuales angus-remote trata de manera especial y lanza excepcion.
+
+Versionado de la API y los docs?
+
+angus-remote no funciona en ruby 3.2.2 porque se elimina el metodo File.exists? (usar File.exist?) Funciona en 3.1.4, no se en que version deja de funcionar.
+
+Angus remote parece que tiene el metodo .status_code pero que no funciona. Para fijarse si una request anduvo bien o mal, se fija en la key "status" del body. Y se puede hacer .status. por ejemplo:
+
+Definitivamente angus-remote trata de forma especial a la key "status" del body de la respuesta, seteandolo como una variable de instancia @status.
+Desventaja de angus: en los distintos {resource}/operations.yml no se pueden repetir claves de operaciones. Por ejemplo no puedo tener el show en mas de un recurso, ya que después se usa remote_service.show. En su lugar hay que tener show_blog, show_comment, etc.
+
+Al renderizar un error, la key messages del body es esperado que sea un array de objetos con las keys level, key y dsc. (level y key deberían coincidir con messages.yml). Como si pudiera haber varios errores en una misma API call. Generalmente es una sola excepción. ver casos de uso de eso y si hay solución. Imagino que para errores de validación no seria muy complicado. Update: ya lo implementé para RecordInvalid.
+
+Mantener sincronizados los codigos de respuesta de los errores (404, 422, etc) de la implementación en Rails con los de los messages
+
+angus-remote no se fija en la semantica de los codigos de respuesta. Un 204 con body vacío tras eliminar un recurso por ejemplo.
+
+Angus messages
+Si en operations.yml pongo un mensaje que no existe en messages.yml, explota
+
+Si raiseo una excepción o respondo un mensaje de exito en el codigo del resource, pero en operations.yml no declaré esa excepcion o mensaje en los mesages de la operacion, el mensaje se va a renderizar de todos modos, pero no va a aparecer en la doc.
+
+Angus para renderizar mensajes OK:
+No se pueden renderizar mensajes con un status_code distinto a 200.
+
+Angus para renderizar mensajes de excepciones
+Respeta el status_code definido en messages
+
+Formato de Angus para devolver errores:
+wideCasos de Prueba
+respuesta JSON con campos faltantes respecto a lo expuesto en operations/representations
+Primero no me funcionó. Me rompía con cualquier combinacion de required/optional. Era porque estaba usando angus-remote en la rama gems-upgrade, pero que no tiene dependencia explicita con la rama optional-parameters de angus-sdoc entonces le faltaba el metodo field.optional.
+
+Arreglando el tema de las versiones de las gemas, pasa esto:
+
+required
+
+optional
+
+resultado
+
+true
+
+true
+
+Funciona. No responde al metodo del campo que falta (rompe)
+
+true
+
+false
+
+Funciona. Responde al metodo del campo que le falta con nil.
+
+true
+
+nil
+
+Funciona. Responde al metodo del campo que le falta con nil.
+
+false
+
+true
+
+Funciona. No responde al metodo del campo que falta (rompe)
+
+false
+
+false
+
+Funciona. Responde al metodo del campo que le falta con nil.
+
+false
+
+nil
+
+Funciona. Responde al metodo del campo que le falta con nil.
+
+nil
+
+true
+
+Funciona. No responde al metodo del campo que falta (rompe)
+
+nil
+
+false
+
+Funciona. Responde al metodo del campo que le falta con nil.
+
+nil
+
+nil
+
+Funciona. Responde al metodo del campo que le falta con nil.
+
+respuesta JSON con campos extras, no expuestos en operations/representations (Solo te deja acceder a los campos declarados a través de los métodos. Para ver los campos extra habría que entrar al body)
+
+Respondo con un error message bien formateado pero que no está en operations.yml (operations.yml solo influye para la doc, pero angus-remote no le afecta. funciona de igual forma, se le puede hacer .messages, .status normalmente.)
+
+Caso base (respuesta JSON no tiene ningún campo de más ni de menos respecto a lo expuesto en operations/representations)
+
+Caso base con error (respuesta de error declarada en el operations.yml con su respectivo message)
+
+Status code distinto de 200 (angus-remote no se fija en el status code. Solamente se fija cuando es 500, 501, 503)
+
+Respondo con un error en un json que no se parece al de angus (hace la request y devuelve una respuesta, la cual no sirve de mucho:
+
+TO DO:
+Parámetros opcionales
+
+rswag con la API de prueba
+
+baas en rails

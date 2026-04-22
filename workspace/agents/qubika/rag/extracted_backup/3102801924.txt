@@ -1,0 +1,69 @@
+TITLE: Ruby Upgrade - estimación de tareas pendientes
+DOMAIN: General
+PRIORITY: Media
+ID: 3102801924
+SOURCE: 3102801924__Ruby_Upgrade_-_estimacio╠ün_de_tareas_pendientes.json
+
+---
+
+En este documento listamos las estimaciones para las tareas pendientes relacionadas al deploy de los servicios vpos, mpos, audit y s4, y también para el flujo de 3DSec.
+Esta estimación va a partir del Lunes
+El total de hs calculadas son 450 hasta el
+Tarea
+
+Fecha
+
+Estimacion (hs)
+
+Tareas Cluster - Juan
+
+→
+
+24
+
+Tareas mpos - Dev + QA (bug fixing, testing)
+
+→
+(1er ccc)
+
+48
+
+Tareas audit - Dev
+
+->
+
+60
+
+Tareas audit - QA
+
+->
+
+30
+
+Tareas s4 - Dev
+
+->
+
+60
+
+Tareas s4 - QA
+
+->
+
+30
+
+Tareas vpos - Dev + QA (rebase, deploy, pruebas y bugfixing y preparación para staging y prod, todo en la base sin cluster)
+
+->
+
+120
+
+Tareas 3DSec - 40
+
+->
+
+40
+
+Total Desarrollo + Gestión 10% (Para facturación)
+
+450
