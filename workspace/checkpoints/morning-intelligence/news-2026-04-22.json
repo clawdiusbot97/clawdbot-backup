@@ -1,0 +1,24 @@
+{
+  "date": "2026-04-22",
+  "stage": "error",
+  "message": "Discord message tool unavailable in this runtime; manual send required to channel_id 1477319018992898171 (retry once if platform error).",
+  "sections": {
+    "global": [
+      {"title":"Iran says it seized two cargo ships in the Strait of Hormuz after vessels attacked","source":"BBC","url":"https://www.bbc.com/news/articles/cdxd074kr8go"},
+      {"title":"EU decides on key €90bn Ukraine loan after pipeline deadlock ends","source":"BBC","url":"https://www.bbc.com/news/articles/cnv8l99r3yyo"},
+      {"title":"Thirteen killed in second India fireworks blast in three days","source":"BBC","url":"https://www.bbc.com/news/articles/cwydzddp4j9o"},
+      {"title":"Taiwan president cancels trip after African countries revoke flight permits","source":"BBC","url":"https://www.bbc.com/news/articles/crl16p72x7xo"},
+      {"title":"Meta to track workers' clicks and keystrokes to train AI","source":"BBC","url":"https://www.bbc.com/news/articles/cvglyklz49jo"}
+    ],
+    "uruguay": [
+      {"title":"Amenazas a centros educativos: 'Mañana tiroteo'","source":"El País Uruguay","url":"https://www.elpais.com.uy/informacion/policiales/manana-tiroteo-que-hay-detras-de-las-amenazas-a-centros-educativos-y-como-siguen-las-clases"},
+      {"title":"Llamado de BPS: 86 auxiliares administrativos","source":"El País Uruguay","url":"https://www.elpais.com.uy/informacion/servicios/llamado-de-bps-buscan-86-auxiliares-administrativos-con-sueldo-de-hasta-82-000-y-solo-exigen-bachillerato-completo"},
+      {"title":"Pronóstico Inumet por zonas (22/04/2026)","source":"El País Uruguay","url":"https://www.elpais.com.uy/informacion/servicios/el-pronostico-para-el-miercoles-22-de-abril-de-2026-como-estara-el-tiempo-en-cada-zona-del-pais-segun-inumet"},
+      {"title":"Cotización de la Unidad Indexada (UI) hoy","source":"El País Uruguay","url":"https://www.elpais.com.uy/negocios/finanzas/unidad-indexada-hoy-cuanto-cotiza-la-ui-este-miercoles-22-de-abril-de-2026-en-pesos-uruguayos"},
+      {"title":"Resultados de Quiniela y Tómbola (21/04/2026)","source":"El País Uruguay","url":"https://www.elpais.com.uy/informacion/servicios/estas-fueron-las-bolillas-de-la-suerte-en-la-quiniela-y-tombola-de-ayer-martes-21-de-abril-de-2026"}
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-04-22T11:05:47Z"
+}
