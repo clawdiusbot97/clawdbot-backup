@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-23",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Disaster",
+        "title": "Two trains collide head-on in Denmark, leaving five critically hurt",
+        "source": "BBC",
+        "date": "2026-04-23",
+        "url": "https://www.bbc.com/news/articles/cgqkw3qk0dlo?at_medium=RSS&at_campaign=rss"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "Lebanon accuses Israel of targeting journalist killed in air strike",
+        "source": "BBC",
+        "date": "2026-04-23",
+        "url": "https://www.bbc.com/news/articles/c5yvn036evlo?at_medium=RSS&at_campaign=rss"
+      },
+      {
+        "category": "Policy",
+        "title": "EU approves €90bn loan for Ukraine as pipeline is turned on ending deadlock",
+        "source": "BBC",
+        "date": "2026-04-22",
+        "url": "https://www.bbc.com/news/articles/cnv8l99r3yyo?at_medium=RSS&at_campaign=rss"
+      },
+      {
+        "category": "Markets",
+        "title": "Lufthansa cuts 20,000 summer flights as fuel prices surge",
+        "source": "BBC",
+        "date": "2026-04-22",
+        "url": "https://www.bbc.com/news/articles/cre1r4n5j5wo?at_medium=RSS&at_campaign=rss"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "Taiwan president cancels trip after African countries revoke flight permits",
+        "source": "BBC",
+        "date": "2026-04-22",
+        "url": "https://www.bbc.com/news/articles/crl16p72x7xo?at_medium=RSS&at_campaign=rss"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Comienza el plan Más Barrio en Cerro Norte con un censo de los vecinos",
+        "source": "Subrayado",
+        "date": "2026-04-23",
+        "url": "https://www.subrayado.com.uy/comienza-el-plan-mas-barrio-cerro-norte-un-censo-los-vecinos-conocer-sus-necesidades-dice-el-gobierno-n1005787"
+      },
+      {
+        "title": "Negro dijo que la Policía trabajó en Cerro Norte para poder ingresar con el plan Más Barrio",
+        "source": "Subrayado",
+        "date": "2026-04-23",
+        "url": "https://www.subrayado.com.uy/negro-dijo-que-la-policia-trabajo-cerro-norte-que-hoy-estemos-condiciones-ingresar-el-plan-mas-barrio-n1005782"
+      },
+      {
+        "title": "Encuesta: inseguridad se mantiene como principal problema, algunos indicadores mejoran (Equipos)",
+        "source": "Subrayado",
+        "date": "2026-04-23",
+        "url": "https://www.subrayado.com.uy/aunque-la-inseguridad-se-mantiene-como-principal-problema-del-pais-algunos-indicadores-percepcion-mejoran-segun-equipos-consultores-n1005777"
+      },
+      {
+        "title": "Baja la pobreza multidimensional y alcanza el 18,7% de la población (INE)",
+        "source": "Subrayado",
+        "date": "2026-04",
+        "url": "https://www.subrayado.com.uy/baja-la-pobreza-multidimensional-y-alcanza-el-187-la-poblacion-n1005746"
+      },
+      {
+        "title": "Acuerdo Mercosur – Unión Europea regirá desde el 1º de mayo, dijo el canciller",
+        "source": "Subrayado",
+        "date": "2026-04-23",
+        "url": "https://www.subrayado.com.uy/acuerdo-mercosur-union-europea-regira-el-1-mayo-el-mas-grande-nivel-mundial-dijo-el-canciller-n1005748"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-04-23T11:10:00Z"
+}
