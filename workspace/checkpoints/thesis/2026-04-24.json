@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-24",
+  "stage": "ok",
+  "generated_at": "2026-04-24T11:04:38Z",
+  "cache_used": false,
+  "dedupe_window_days": 7,
+  "findings_count": 6,
+  "delivery": {
+    "target_channel_id": "1476311753305362564",
+    "status": "not_sent",
+    "delivery_error": "message tool unavailable in this runtime; manual send required"
+  },
+  "sources": [
+    "https://github.com/opendatalab/OmniDocBench",
+    "https://docs.cloud.google.com/document-ai/docs/evaluate",
+    "https://reducto.ai/blog/rd-tablebench",
+    "https://aon.mediaroom.com/2025-11-11-Aon-Launches-Claims-Copilot-Bringing-Together-Expert-Advocacy-and-Advanced-Technology-for-better-client-outcomes",
+    "https://www.ey.com/en_gl/insights/financial-services/emeia/how-a-nordic-insurance-company-automated-claims-processing",
+    "https://arxiv.org/html/2508.04721v1"
+  ]
+}

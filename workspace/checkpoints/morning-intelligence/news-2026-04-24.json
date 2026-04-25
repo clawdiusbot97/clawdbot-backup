@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-24",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Trump extends ceasefire with Iran",
+        "category": "Geopolitics",
+        "source": "Reuters",
+        "date": "2026-04-21",
+        "url": "https://www.reuters.com/world/iran-war-live-us-pushes-new-peace-talks-ceasefire-deadline-looms-2026-04-21/"
+      },
+      {
+        "title": "Global stocks wobble, oil above $100 amid Middle East risk",
+        "category": "Markets",
+        "source": "Reuters",
+        "date": "2026-04-24",
+        "url": "https://www.reuters.com/world/asia-pacific/global-markets-global-markets-2026-04-24/"
+      },
+      {
+        "title": "UN agencies warn extreme heat threatens food systems",
+        "category": "Climate",
+        "source": "la diaria (citing FAO/WMO + Reuters)",
+        "date": "2026-04",
+        "url": "https://ladiaria.com.uy/mundo/articulo/2026/4/agencias-de-la-onu-advierten-que-el-calor-extremo-esta-llevando-al-borde-del-colapso-a-los-sistemas-alimentarios/"
+      },
+      {
+        "title": "FTC court filing alleges Amazon pricing practices",
+        "category": "Policy",
+        "source": "Reuters Daily Briefing",
+        "date": "2026-04",
+        "url": "https://newslink.reuters.com/public/33242946"
+      },
+      {
+        "title": "OpenAI releases GPT-5.5",
+        "category": "Tech/AI",
+        "source": "TechCrunch",
+        "date": "2026-04-23",
+        "url": "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Paro de cooperativas de transporte por agresión a trabajador",
+        "source": "Subrayado",
+        "date": "2026-04-24 07:50",
+        "url": "https://www.subrayado.com.uy/hay-paro-las-cooperativas-transporte-todo-el-viernes-agresion-un-trabajador-n1005831"
+      },
+      {
+        "title": "Interpelación por limpieza en Montevideo (IMM)",
+        "source": "Subrayado",
+        "date": "2026-04-23 20:09",
+        "url": "https://www.subrayado.com.uy/oposicion-interpelara-al-director-desarrollo-ambiental-la-imm-la-limpieza-montevideo-n1005825"
+      },
+      {
+        "title": "Unasev: siniestros con movilidad personal +600% (2020–2025)",
+        "source": "Subrayado",
+        "date": "2026-04-23 20:21",
+        "url": "https://www.subrayado.com.uy/aumento-mas-600-los-siniestros-monopatines-electricos-bicicletas-y-patinetas-2020-y-2025-n1005826"
+      },
+      {
+        "title": "BTG Pactual espera autorización del BCU tras compra de HSBC Uruguay",
+        "source": "El País",
+        "date": "2026-04-24",
+        "url": "https://www.elpais.com.uy/negocios/noticias/grupo-comprador-del-hsbc-considera-que-uruguay-es-el-singapur-de-latinoamerica-y-aguarda-autorizacion-del-bcu-para-operar"
+      },
+      {
+        "title": "Orsi advierte volatilidad en combustibles por contexto internacional",
+        "source": "Subrayado",
+        "date": "2026-04-23 17:26",
+        "url": "https://www.subrayado.com.uy/orsi-combustibles-esta-todo-muy-volatil-y-no-hay-muchas-miras-que-esto-cambie-mejor-n1005818"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-04-24T11:05:55Z"
+}
