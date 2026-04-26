@@ -1,0 +1,86 @@
+{
+  "date": "2026-04-25",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Iran's foreign minister in Islamabad for talks as US envoys set to travel to Pakistan",
+        "source": "BBC",
+        "timestamp": "2026-04-25 (BBC:  LIVE)",
+        "url": "https://www.bbc.com/news/world"
+      },
+      {
+        "category": "Conflict/Security",
+        "title": "Seven dead in major Russian attack on Ukraine (Dnipro hardest hit)",
+        "source": "BBC",
+        "timestamp": "2026-04-25 (BBC: 38 mins ago)",
+        "url": "https://www.bbc.com/news/world"
+      },
+      {
+        "category": "Security",
+        "title": "Mali army says armed groups launch coordinated attacks across country",
+        "source": "BBC",
+        "timestamp": "2026-04-25 (BBC: 29 mins ago)",
+        "url": "https://www.bbc.com/news/world"
+      },
+      {
+        "category": "Policy",
+        "title": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
+        "source": "BBC",
+        "timestamp": "2026-04-25 (BBC: 19 hrs ago)",
+        "url": "https://www.bbc.com/news/world"
+      },
+      {
+        "category": "Climate/Disaster",
+        "title": "Everest flood warning system left to rust, thousands at risk",
+        "source": "BBC",
+        "timestamp": "2026-04-25 (BBC: 12 hrs ago)",
+        "url": "https://www.bbc.com/news/world"
+      }
+    ],
+    "uruguay": [
+      {
+        "category": "Weather",
+        "title": "Inumet emitió aviso por vientos fuertes (rachas 60-80 km/h)",
+        "source": "Subrayado",
+        "timestamp": "2026-04-24 15:11",
+        "url": "https://www.subrayado.com.uy/inumet-emitio-un-aviso-vientos-fuertes-rachas-60-80-kmh-o-superiores-n1005862"
+      },
+      {
+        "category": "Security",
+        "title": "Homicidio: mataron a un delivery en Carrasco Norte durante rapiña",
+        "source": "Subrayado",
+        "timestamp": "2026-04-24 20:22",
+        "url": "https://www.subrayado.com.uy/mataron-un-hombre-31-anos-un-intento-rapina-cuando-trabajaba-como-delivery-carrasco-norte-n1005896"
+      },
+      {
+        "category": "Policy",
+        "title": "Orsi convocó al Consejo de Ministros (Diálogo Social / AFAP)",
+        "source": "Subrayado",
+        "timestamp": "2026-04-25",
+        "url": "https://www.subrayado.com.uy/orsi-convoco-al-consejo-ministros-el-martes-torre-ejecutiva-el-dialogo-social-n1005869"
+      },
+      {
+        "category": "Economy/Energy",
+        "title": "Ajuste de combustibles: Ejecutivo espera informe de Ursea; define la próxima semana",
+        "source": "Subrayado",
+        "timestamp": "2026-04-25",
+        "url": "https://www.subrayado.com.uy/ajuste-el-precio-los-combustibles-poder-ejecutivo-espera-informe-ursea-y-definira-la-proxima-semana-n1005893"
+      },
+      {
+        "category": "Labor/Energy",
+        "title": "Fancap resolvió paro de 24h el sábado 2 de mayo en planta La Tablada",
+        "source": "Subrayado",
+        "timestamp": "2026-04-24 17:32",
+        "url": "https://www.subrayado.com.uy/sindicato-ancap-resolvio-realizar-un-paro-24-horas-el-sabado-2-mayo-la-planta-la-tablada-n1005874"
+      }
+    ],
+    "watch": [
+      "Sábado 2 de mayo: paro de 24h en planta La Tablada (Fancap).",
+      "Próxima semana: definición de ajuste de combustibles tras informe de Ursea."
+    ]
+  },
+  "sources_count": 6,
+  "generated_at": "2026-04-25T11:02:54Z"
+}
