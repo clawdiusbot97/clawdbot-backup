@@ -1,0 +1,39 @@
+{
+  "date": "2026-04-26",
+  "stage": "error",
+  "message": "Uruguay queries returned 0 results from SearXNG; unable to produce Uruguay Top 5.",
+  "sections": {
+    "global": [
+      {
+        "title": "Ships attacked in Strait of Hormuz amid fragile ceasefire talks",
+        "category": "Geopolitics",
+        "primary": "https://apnews.com/live/iran-war-israel-trump-04-21-2026",
+        "backup": "https://www.reuters.com/world/iran/"
+      },
+      {
+        "title": "FTC filing alleges algorithmic tactics raised US household costs by $1B+",
+        "category": "Policy",
+        "primary": "https://newslink.reuters.com/public/33242946"
+      },
+      {
+        "title": "AP to provide US election results to prediction market Kalshi",
+        "category": "Markets",
+        "primary": "https://www.ap.org/"
+      },
+      {
+        "title": "Pope Leo XIV performs rite of humility at St. John Lateran",
+        "category": "Policy",
+        "primary": "https://www.nytimes.com/section/aponline/world"
+      },
+      {
+        "title": "Google commits up to $40B investment in Anthropic",
+        "category": "Tech/AI",
+        "primary": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+      }
+    ],
+    "uruguay": [],
+    "watch": ["Strait of Hormuz developments (shipping/energy escalation risk)"]
+  },
+  "sources_count": 5,
+  "generated_at": "2026-04-26T11:04:00Z"
+}

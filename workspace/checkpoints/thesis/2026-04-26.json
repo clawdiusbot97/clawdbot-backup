@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-26",
+  "stage": "ok",
+  "cache_used": false,
+  "dedupe_window_days": 7,
+  "deliver_to_channel_id": "1476311753305362564",
+  "delivery_attempted": false,
+  "delivery_error": "No Discord message tool available in this runtime; content written to markdown only.",
+  "sources": [
+    "https://content.naic.org/sites/default/files/cmte-h-big-data-artificial-intelligence-wg-map-ai-model-bulletin.pdf",
+    "https://www.eiopa.europa.eu/eiopa-publishes-opinion-ai-governance-and-risk-management-2025-08-06_en",
+    "https://github.com/sucramual/structured-extraction-benchmark",
+    "https://link.springer.com/content/pdf/10.1007/978-981-97-3289-0_15",
+    "https://parseur.com/blog/ai-invoice-processing-benchmarks",
+    "https://www.businesswaretech.com/blog/research-ai-models-invoice-processing-benchmark"
+  ],
+  "generated_at": "2026-04-26T11:04:30Z"
+}
