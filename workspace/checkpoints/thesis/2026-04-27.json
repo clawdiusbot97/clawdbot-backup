@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-27",
+  "stage": "ok",
+  "findings_count": 6,
+  "markdown_path": "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-04-27.md",
+  "delivery_error": "Discord delivery not performed in this runtime (no Discord message tool available). Required channel_id: 1476311753305362564.",
+  "generated_at": "2026-04-27T11:04:25Z",
+  "sources": [
+    "https://99franklin.github.io/ocrbench_v2/",
+    "https://github.com/getomni-ai/benchmark",
+    "https://www.usenix.org/system/files/usenixsecurity25-zong.pdf",
+    "https://reports.weforum.org/docs/WEF_Unmasking_Cybercrime_Strengthening_Digital_Identity_Verification_against_Deepfakes_2026.pdf",
+    "https://www.orange-business.com/en/press/newsblog-Orange-business-adds-deepfake-detection-enterprise-communications",
+    "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-04-27",
+  "stage": "error",
+  "message": "Discord delivery not performed in this runtime (no Discord message tool available); per SYSTEM.md would require send to channel_id 1477319018992898171 with one retry.",
+  "sections": {
+    "global": [
+      {
+        "title": "U.S.-Iran peace talks stall; tensions persist around shipping routes",
+        "source": "BBC",
+        "link": "https://www.bbc.com/news/world",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Oil prices rise as negotiations remain stuck",
+        "source": "BBC",
+        "link": "https://www.bbc.com/news/world",
+        "category": "Markets"
+      },
+      {
+        "title": "Shooting at White House correspondents’ dinner: suspect due to appear in court",
+        "source": "BBC",
+        "link": "https://www.bbc.com/news/world",
+        "category": "Policy"
+      },
+      {
+        "title": "Pirates seize another vessel off Somali coast as threat level increases",
+        "source": "BBC",
+        "link": "https://www.bbc.com/news/world",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Kim Jong Un opens memorial for North Korean soldiers killed in Ukraine war",
+        "source": "BBC",
+        "link": "https://www.bbc.com/news/world",
+        "category": "Geopolitics"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Inumet emitió alerta naranja y amarilla por vientos",
+        "source": "El País",
+        "link": "https://www.elpais.com.uy/informacion/servicios/inumet-emitio-una-alerta-naranja-y-otra-amarilla-por-vientos-que-pueden-llegar-a-90-km-h-o-mas"
+      },
+      {
+        "title": "Pronóstico del tiempo por zonas para hoy",
+        "source": "El País",
+        "link": "https://www.elpais.com.uy/informacion/servicios/el-pronostico-para-el-lunes-27-de-abril-de-2026-como-estara-el-tiempo-en-cada-zona-del-pais-segun-inumet"
+      },
+      {
+        "title": "Cotización del dólar hoy",
+        "source": "El País",
+        "link": "https://www.elpais.com.uy/negocios/finanzas/asi-abre-la-cotizacion-del-dolar-hoy-lunes-27-de-abril-de-2026-en-pesos-uruguayos"
+      },
+      {
+        "title": "Unidad Indexada (UI) de hoy",
+        "source": "El País",
+        "link": "https://www.elpais.com.uy/negocios/finanzas/unidad-indexada-hoy-cuanto-cotiza-la-ui-este-lunes-27-de-abril-de-2026-en-pesos-uruguayos"
+      },
+      {
+        "title": "Reforma jubilatoria: frustraciones y riesgos",
+        "source": "El País",
+        "link": "https://www.elpais.com.uy/economia-y-mercado/frustraciones-y-riesgos-nueva-reforma-jubilatoria"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 2,
+  "generated_at": "2026-04-27T11:03:50Z"
+}
