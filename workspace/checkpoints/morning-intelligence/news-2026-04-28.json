@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-28",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Suspect charged with attempted assassination of Trump at Washington dinner",
+        "category": "Geopolitics",
+        "source": "BBC",
+        "when": "~10 hrs ago",
+        "url": "https://www.bbc.com/news/articles/cew7wez72vxo"
+      },
+      {
+        "title": "Pakistan accused of attacking Afghan university",
+        "category": "Geopolitics",
+        "source": "BBC",
+        "when": "~18 hrs ago",
+        "url": "https://www.bbc.com/news/articles/cvg0gxrgklro"
+      },
+      {
+        "title": "IS says it was behind deadly Nigeria attack on football pitch",
+        "category": "Geopolitics",
+        "source": "BBC",
+        "when": "~8 hrs ago",
+        "url": "https://www.bbc.com/news/articles/c62d43vdgmmo"
+      },
+      {
+        "title": "Russian superyacht sails through Strait of Hormuz despite blockade",
+        "category": "Markets",
+        "source": "BBC",
+        "when": "~4 hrs ago",
+        "url": "https://www.bbc.com/news/articles/cm2pn8zdxdjo"
+      },
+      {
+        "title": "Man admits plotting attack on Taylor Swift concert in Vienna",
+        "category": "Policy",
+        "source": "BBC",
+        "when": "~51 mins ago",
+        "url": "https://www.bbc.com/news/articles/c05d5qgprjzo"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Un bebé de un año y medio fue asesinado en un ataque a tiros en Colón",
+        "source": "Subrayado",
+        "when": "lunes (última hora de la tarde)",
+        "url": "https://www.subrayado.com.uy/un-bebe-un-ano-y-medio-fue-asesinado-un-ataque-tiros-colon-n1006088"
+      },
+      {
+        "title": "Informe de Ursea: incremento en combustibles de cara al ajuste de mayo",
+        "source": "Subrayado",
+        "when": "reciente",
+        "url": "https://www.subrayado.com.uy/informe-ursea-da-incremento-todos-los-combustibles-cara-al-ajuste-tarifas-previsto-mayo-n1006073"
+      },
+      {
+        "title": "Orsi convocó al Consejo de Ministros por el Diálogo Social",
+        "source": "Subrayado",
+        "when": "martes",
+        "url": "https://www.subrayado.com.uy/orsi-convoco-al-consejo-ministros-el-martes-torre-ejecutiva-el-dialogo-social-n1005869"
+      },
+      {
+        "title": "Repartidores: proponen limitar pedidos en efectivo y delimitar zonas rojas",
+        "source": "Montevideo Portal",
+        "when": "reciente",
+        "url": "https://www.montevideo.com.uy/Noticias/Repartidores-se-reunieron-con-Negro-proponen-limitar-pedidos-en-efectivo-y-a-zonas-rojas-uc960371"
+      },
+      {
+        "title": "Primeras heladas: mañanas y noches frías, tardes aún templadas",
+        "source": "Subrayado",
+        "when": "hoy",
+        "url": "https://www.subrayado.com.uy/llegaron-las-primeras-heladas-mananas-y-noches-frias-pero-tardes-aun-templadas-n1006111"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-04-28T11:00:00Z"
+}
