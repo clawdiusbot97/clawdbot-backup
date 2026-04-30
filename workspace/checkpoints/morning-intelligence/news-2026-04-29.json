@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-29",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {"title":"UAE to leave OPEC (AP)","url":"https://apnews.com/article/opec-united-arab-emirates-leaving-cartel-4966108c3fafacb67181152216deda14"},
+      {"title":"Amazon expands partnership with OpenAI (AP)","url":"https://apnews.com/article/amazon-openai-microsoft-06a952e75217c14c98278d6ae78d9daf"},
+      {"title":"Microsoft cuts OpenAI revenue share (AP)","url":"https://apnews.com/article/openai-microsoft-chatgpt-copilot-ai-2a44fa94da6913074f97f916332b33f6"},
+      {"title":"China blocks foreign acquisition of AI startup Manus (AP)","url":"https://apnews.com/article/china-meta-manus-ai-acquisition-5f8012791f86f719a24a3ebac06d9b0a"},
+      {"title":"Oil markets focus: OPEC fallout and pricing (context links)","url":"https://apnews.com/article/opec-united-arab-emirates-leaving-cartel-4966108c3fafacb67181152216deda14"}
+    ],
+    "uruguay": [
+      {"title":"Interior minister reacts to baby homicide investigation (Subrayado)","url":"https://www.subrayado.com.uy/carlos-negro-sepan-que-ninguno-nosotros-va-detenerse-dar-los-responsables-del-homicidio-un-nino-apenas-un-ano-n1006110"},
+      {"title":"9-year-old hospitalized, cocaine intoxication under investigation (Subrayado)","url":"https://www.subrayado.com.uy/nino-9-anos-fue-ingresado-al-hospital-rivera-descompuesto-y-constataron-intoxicacion-cocaina-n1005721"},
+      {"title":"Inumet storm warnings update (Subrayado)","url":"https://www.subrayado.com.uy/inumet-actualizo-la-doble-advertencia-tormentas-fuertes-y-puntualmente-severas-y-lluvias-abundantes-n1004419"}
+    ],
+    "watch": []
+  },
+  "sources_count": 8,
+  "generated_at": "2026-04-29T11:04:05Z"
+}
