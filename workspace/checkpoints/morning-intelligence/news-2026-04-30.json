@@ -1,0 +1,84 @@
+{
+  "date": "2026-04-30",
+  "stage": "error",
+  "message": "Delivery not executed from this cron environment (no Discord message tool available here).",
+  "sections": {
+    "global": [
+      {
+        "category": "Markets",
+        "title": "UAE says it quits OPEC",
+        "source": "Reuters",
+        "date": "2026-04-28",
+        "url": "https://www.reuters.com/markets/commodities/uae-says-it-quits-opec-opec-statement-2026-04-28/"
+      },
+      {
+        "category": "Markets",
+        "title": "Meta lifts capital expenditure forecast, shares fall on AI spending concerns",
+        "source": "Reuters",
+        "date": "2026-04-29",
+        "url": "https://www.reuters.com/business/meta-lifts-capital-expenditure-forecast-doubling-down-ai-push-2026-04-29/"
+      },
+      {
+        "category": "Policy",
+        "title": "Google signs classified AI deal with Pentagon (report)",
+        "source": "Reuters",
+        "date": "2026-04-28",
+        "url": "https://www.reuters.com/technology/google-signs-classified-ai-deal-with-pentagon-information-reports-2026-04-28/"
+      },
+      {
+        "category": "Policy",
+        "title": "EU regulators give Google pointers on helping rivals access services",
+        "source": "Reuters",
+        "date": "2026-04-27",
+        "url": "https://www.reuters.com/world/google-gets-pointers-eu-regulators-helping-ai-rivals-access-services-2026-04-27/"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "Trump announces two-week ceasefire as Iran says talks to begin soon (Strait of Hormuz)",
+        "source": "Reuters",
+        "date": "2026-04-07",
+        "url": "https://www.reuters.com/world/iran-war-live-tehran-rejects-ceasefire-deal-trumps-deadline-reopen-strait-hormuz-2026-04-07/"
+      }
+    ],
+    "uruguay": [
+      {
+        "category": "Markets",
+        "title": "Uruguay will push ahead with pivot away from dollar debt, says finance minister",
+        "source": "Reuters",
+        "date": "2026-02-16",
+        "url": "https://www.reuters.com/markets/us/uruguay-will-push-ahead-with-pivot-away-dollar-debt-says-finance-minister-2026-02-16/"
+      },
+      {
+        "category": "Markets",
+        "title": "Rising fuel prices test Milei's free-market gamble as South America feels oil shock",
+        "source": "Reuters",
+        "date": "2026-04-02",
+        "url": "https://www.reuters.com/business/energy/rising-fuel-prices-test-mileis-freemarket-gamble-south-america-feels-oil-shock-2026-04-02/"
+      },
+      {
+        "category": "Economy",
+        "title": "Uruguay central bank chief sees better growth in first quarter",
+        "source": "Bloomberg",
+        "date": "2026-04-17",
+        "url": "https://www.bloomberg.com/news/articles/2026-04-17/uruguay-central-bank-chief-sees-better-growth-in-first-quarter"
+      },
+      {
+        "category": "Policy",
+        "title": "Mercosur and Canada near free-trade agreement with April talks",
+        "source": "Reuters",
+        "date": "2026-03-27",
+        "url": "https://www.reuters.com/world/americas/mercosur-canada-near-free-trade-agreement-with-april-talks-2026-03-27/"
+      },
+      {
+        "category": "Policy",
+        "title": "Uruguay news stream (for local follow-up)",
+        "source": "MercoPress",
+        "date": "2026-04",
+        "url": "https://en.mercopress.com/uruguay"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-04-30T11:04:27Z"
+}
