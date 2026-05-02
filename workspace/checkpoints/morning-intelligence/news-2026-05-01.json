@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-01",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Ukraine–Russia war updates hub",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/ukraine-russia-war/"
+      },
+      {
+        "category": "Policy",
+        "title": "World top stories hub",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "BBC World: top updates",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/world"
+      },
+      {
+        "category": "Markets",
+        "title": "AP top headlines hub",
+        "source": "AP",
+        "url": "https://apnews.com/"
+      },
+      {
+        "category": "Tech/AI",
+        "title": "Google–Anthropic investment surge",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Gobierno fijó aumento de combustibles para mayo",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/gobierno-fijo-aumento-7-la-nafta-y-el-supergas-y-14-el-gasoil-mayo-n1006364"
+      },
+      {
+        "title": "Reacciones al aumento de combustibles",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/-El-mayor-aumento-de-la-historia--las-reacciones-nuevos-precios-de-combustibles-uc960693"
+      },
+      {
+        "title": "Portada y agenda nacional",
+        "source": "El País",
+        "url": "https://www.elpais.com.uy/"
+      },
+      {
+        "title": "Opinión y debate laboral",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/"
+      },
+      {
+        "title": "Resumen de notas destacadas",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-01T11:02:55Z"
+}

@@ -1,0 +1,11 @@
+{
+  "date": "2026-05-01",
+  "stage": "ok",
+  "findings_count": 6,
+  "delivery": {
+    "target_channel_id": "1476311753305362564",
+    "status": "not_sent_from_job",
+    "reason": "No Discord message tool available in this runtime; content written to markdown only."
+  },
+  "generated_at": "2026-05-01T11:03:10Z"
+}
