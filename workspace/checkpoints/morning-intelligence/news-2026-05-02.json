@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-02",
+  "stage": "error",
+  "message": "Insufficient high-confidence sourced items returned by SearXNG queries in this run; News Extension not delivered.",
+  "sections": {"global": [], "uruguay": [], "watch": []},
+  "sources_count": 0,
+  "generated_at": "2026-05-02T11:00:00Z"
+}
