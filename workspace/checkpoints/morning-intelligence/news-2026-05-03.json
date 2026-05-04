@@ -1,0 +1,59 @@
+{
+  "date": "2026-05-03",
+  "stage": "error",
+  "message": "Delivery not attempted: discord message tool unavailable in this runtime.",
+  "sections": {
+    "global": [
+      {
+        "title": "Ceasefire threatened as Israel expands Lebanon strikes; Iran controls Strait again",
+        "category": "Geopolitics",
+        "primary": "https://apnews.com/article/iran-us-israel-trump-lebanon-april-8-2026-38d75d5e4f1c7339a1456fc99415bb2a"
+      },
+      {
+        "title": "Germany troop cuts send wrong signal to Russia, say two top US Republicans",
+        "category": "Policy",
+        "primary": "https://www.bbc.com/news/articles/cewpx5yvwyxo"
+      },
+      {
+        "title": "Nigeria summons South African envoy over attacks on its nationals",
+        "category": "Geopolitics",
+        "primary": "https://www.bbc.com/news/articles/c78q6e98878o"
+      },
+      {
+        "title": "OPEC publishes Annual Statistical Bulletin 2026 highlights (data to end-2025)",
+        "category": "Markets",
+        "primary": "https://www.opec.org/opec_web/en/"
+      },
+      {
+        "title": "Starlink terminals smuggled into Iran to beat internet blackouts",
+        "category": "Tech/AI",
+        "primary": "https://www.bbc.com/news/articles/cvgzk91leweo"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Masa de aire frío afectará a Uruguay entre domingo y lunes",
+        "primary": "https://www.montevideo.com.uy/Noticias/Temperaturas-en-baja-masa-de-aire-frio-afectara-a-Uruguay-entre-el-domingo-y-el-lunes-uc960802"
+      },
+      {
+        "title": "MSP extiende a un año las recetas para pacientes con enfermedades crónicas",
+        "primary": "https://www.montevideo.com.uy/Modo-saludable/MSP-extiende-a-un-ano-las-recetas-de-medicamentos-para-pacientes-con-enfermedades-cronicas-uc960796"
+      },
+      {
+        "title": "Repartidores de PedidosYa dejarán de aceptar efectivo desde las 19h",
+        "primary": "https://www.subrayado.com.uy/a-partir-del-lunes-repartidores-pedidosya-no-aceptaran-efectivo-las-19-horas-n1006577"
+      },
+      {
+        "title": "Oca advierte intento de estafa por SMS con link",
+        "primary": "https://www.subrayado.com.uy/oca-advierte-intento-estafa-sus-usuarios-mensaje-texto-n1006573"
+      },
+      {
+        "title": "Oposición critica ingreso de nave militar por presunta falta de venia",
+        "primary": "https://www.montevideo.com.uy/Noticias/Blanco-critico-a-gobierno-por-violar-la-Constitucion-al-permitir-ingreso-de-nave-militar-uc960788"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-03T11:03:40Z"
+}
