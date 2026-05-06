@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-05",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Fragile US-Iran ceasefire tested after incidents in Strait of Hormuz",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2026/05/04/world/live-news/iran-war-hormuz-trump",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "How a volatile 24 hours edged Iran and Israel to a ceasefire",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c3vdpeq606do",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "US and Iran agree to a two-week ceasefire",
+        "source": "AP",
+        "url": "https://apnews.com/live/iran-war-israel-trump-04-07-2026",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "UAE leaves OPEC and OPEC+",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/4/28/uae-leaves-opec-and-opec",
+        "category": "Markets"
+      },
+      {
+        "title": "EU countries, lawmakers fail to reach deal on watered-down AI rules",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/sustainability/boards-policy-regulation/eu-countries-lawmakers-fail-reach-deal-watered-down-ai-rules-2026-04-29/",
+        "category": "Policy"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "El pronóstico para el martes 5 de mayo de 2026 (Inumet)",
+        "source": "El País Uruguay",
+        "url": "https://www.elpais.com.uy/informacion/servicios/el-pronostico-para-el-martes-5-de-mayo-de-2026-como-estara-el-tiempo-en-cada-zona-del-pais-segun-inumet"
+      },
+      {
+        "title": "Compras por internet al exterior: lo que cambia a partir del 1° de mayo 2026",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/opinion/compras-internet-al-exterior-lo-que-cambia-partir-del-1-mayo-2026-n6039883"
+      },
+      {
+        "title": "Inumet prevé un mayo más cálido de lo normal y con precipitaciones irregulares",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/nacional/inumet-preve-un-mayo-mas-calido-lo-normal-y-comportamiento-irregular-precipitaciones-que-dice-metsul-n6042392"
+      },
+      {
+        "title": "UTE planea inversiones por US$ 280 millones en 2026",
+        "source": "Búsqueda",
+        "url": "https://www.busqueda.com.uy/economia/ute-planea-inversiones-us-280-millones-la-distribucion-y-generacion-energia-2026-n5410902"
+      },
+      {
+        "title": "Calendario de pagos de jubilaciones y pensiones de mayo 2026 (BPS)",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/bps-compartio-calendario-pagos-jubilaciones-y-pensiones-mayo-2026-aqui-todas-las-fechas-n6041457"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-05T11:04:00Z"
+}
