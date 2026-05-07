@@ -1,0 +1,85 @@
+{
+  "date": "2026-05-06",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Strait of Hormuz standoff raises risk of wider war",
+        "source": "BBC",
+        "published": "2026-05-05",
+        "url": "https://www.bbc.com/news/articles/cgrpnq00j5vo"
+      },
+      {
+        "category": "Markets",
+        "title": "Oil prices drop after reports of deal to end Iran war",
+        "source": "BBC",
+        "published": "2026-05-06",
+        "url": "https://www.bbc.com/news/articles/c4g8zejyyr3o"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "Russian attacks kill more than 20 ahead of rival ceasefires",
+        "source": "BBC",
+        "published": "2026-05-05",
+        "url": "https://www.bbc.com/news/articles/c1e2zjz22p9o"
+      },
+      {
+        "category": "Policy",
+        "title": "Romanian PM ousted in no-confidence vote",
+        "source": "BBC",
+        "published": "2026-05-05",
+        "url": "https://www.bbc.com/news/articles/cgkpjz2638ro"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "BBC traces how 10 minutes of Israeli bombing brought devastation to Lebanon",
+        "source": "BBC",
+        "published": "2026-05-05",
+        "url": "https://www.bbc.com/news/articles/c202652vvnjo"
+      }
+    ],
+    "uruguay": [
+      {
+        "category": "Weather",
+        "title": "Inumet emitió alerta amarilla por tormentas fuertes (zonas afectadas)",
+        "source": "El País Uruguay",
+        "published": "2026-05-06",
+        "url": "https://www.elpais.com.uy/informacion/servicios/inumet-emitio-una-alerta-meteorologica-por-tormentas-zonas-afectadas-miercoles-6-mayo-2026"
+      },
+      {
+        "category": "Weather/Preparedness",
+        "title": "Sinae publica recomendaciones ante aviso especial de Inumet por ciclón extratropical",
+        "source": "El Observador",
+        "published": "2026-05-05",
+        "url": "https://www.elobservador.com.uy/nacional/ciclon-extratropical-uruguay-las-recomendaciones-del-sinae-el-aviso-especial-inumet-n6042966"
+      },
+      {
+        "category": "Weather",
+        "title": "Inumet: aviso especial por tormentas fuertes y posterior ciclón extratropical",
+        "source": "El País Uruguay",
+        "published": "2026-05-05",
+        "url": "https://www.elpais.com.uy/informacion/servicios/ciclon-extratropical-y-tormentas-fuertes-inumet-emite-un-aviso-a-la-poblacion-con-advertencia"
+      },
+      {
+        "category": "Weather",
+        "title": "Alerta Inumet por tormentas (actualización martes 5)",
+        "source": "El País Uruguay",
+        "published": "2026-05-05",
+        "url": "https://www.elpais.com.uy/informacion/servicios/alerta-inumet-tormentas-5-5-2026"
+      },
+      {
+        "category": "Weather",
+        "title": "Debate: panorama y preparación ante ciclón extratropical (vientos/lluvias)",
+        "source": "Debate",
+        "published": "2026-05-05",
+        "url": "https://www.debate.com.uy/actualidad/alerta-por-ciclon-extratropical-esta-uruguay-listo-ante-vientos-y-lluvias-20260505-0026.html"
+      }
+    ],
+    "watch": [
+      "Seguimiento Inumet/Sinae: evolución de alertas y potencial impacto costero (si se confirma evento)."
+    ]
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-06T11:02:40Z"
+}

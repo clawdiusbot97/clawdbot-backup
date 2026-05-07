@@ -6,7 +6,7 @@
       "name": "morning-intelligence",
       "enabled": true,
       "createdAtMs": 1771973997595,
-      "updatedAtMs": 1777979089304,
+      "updatedAtMs": 1778065417969,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -26,11 +26,11 @@
         "to": "1475961144416931931"
       },
       "state": {
-        "nextRunAtMs": 1778065200000,
-        "lastRunAtMs": 1777978800099,
+        "nextRunAtMs": 1778151600000,
+        "lastRunAtMs": 1778065200031,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 289205,
+        "lastDurationMs": 217938,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -41,7 +41,7 @@
       "name": "brokia-deadline-alerts",
       "enabled": true,
       "createdAtMs": 1772312086457,
-      "updatedAtMs": 1777982433931,
+      "updatedAtMs": 1778068857684,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -61,11 +61,11 @@
         "to": "brokia-ai-alerts"
       },
       "state": {
-        "nextRunAtMs": 1778068800000,
-        "lastRunAtMs": 1777982400063,
+        "nextRunAtMs": 1778155200000,
+        "lastRunAtMs": 1778068800006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 33868,
+        "lastDurationMs": 57678,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -111,7 +111,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772315991427,
-      "updatedAtMs": 1777966641983,
+      "updatedAtMs": 1778053040308,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -129,15 +129,15 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1778052600000,
-        "lastRunAtMs": 1777966200108,
+        "nextRunAtMs": 1778139000000,
+        "lastRunAtMs": 1778052600033,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 441875,
+        "lastDurationMs": 440275,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1778052600006
+        "runningAtMs": 1778139000003
       }
     },
     {
@@ -145,7 +145,7 @@
       "name": "brokia-intel-radar",
       "enabled": true,
       "createdAtMs": 1772649843672,
-      "updatedAtMs": 1777896963117,
+      "updatedAtMs": 1778069741984,
       "schedule": {
         "kind": "cron",
         "expr": "15 9 * * 1,3,5",
@@ -163,11 +163,11 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1778069700000,
-        "lastRunAtMs": 1777896900023,
+        "nextRunAtMs": 1778242500000,
+        "lastRunAtMs": 1778069700032,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 63094,
+        "lastDurationMs": 41952,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
