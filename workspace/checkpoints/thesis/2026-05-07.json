@@ -1,0 +1,9 @@
+{
+  "date": "2026-05-07",
+  "stage": "ok",
+  "cached": false,
+  "findings_count": 6,
+  "delivered": false,
+  "delivery_error": "Discord send not executed in this runtime (no message tool available); would send ONLY to channel_id 1476311753305362564.",
+  "generated_at": "2026-05-07T11:04:00Z"
+}

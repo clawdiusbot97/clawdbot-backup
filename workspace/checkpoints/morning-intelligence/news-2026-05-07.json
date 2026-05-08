@@ -1,0 +1,79 @@
+{
+  "date": "2026-05-07",
+  "stage": "error",
+  "message": "Discord send not executed in this runtime (no message tool available); would send to channel_id 1477319018992898171 with one retry.",
+  "sections": {
+    "global": [
+      {
+        "title": "Iran considering US proposal as Trump says war will be 'over quickly'",
+        "source": "BBC",
+        "category": "Geopolitics",
+        "published": "2026-05-07",
+        "url": "https://www.bbc.com/news/articles/cj0pq2q8221o"
+      },
+      {
+        "title": "Israel strikes Beirut for first time since Hezbollah ceasefire",
+        "source": "BBC",
+        "category": "Geopolitics",
+        "published": "2026-05-06",
+        "url": "https://www.bbc.com/news/articles/crmpjjl02l2o"
+      },
+      {
+        "title": "Shell latest oil giant to see profits surge due to Iran war impact",
+        "source": "BBC",
+        "category": "Markets",
+        "published": "2026-05-07",
+        "url": "https://www.bbc.com/news/articles/ce3p0x54drwo"
+      },
+      {
+        "title": "DR Congo president hints at extending his term and delaying polls",
+        "source": "BBC",
+        "category": "Policy",
+        "published": "2026-05-07",
+        "url": "https://www.bbc.com/news/articles/c202dkkk70po"
+      },
+      {
+        "title": "Hantavirus-hit cruise ship on way to Canary Islands after three evacuated",
+        "source": "BBC",
+        "category": "Science",
+        "published": "2026-05-07",
+        "url": "https://www.bbc.com/news/articles/c5y093d5n9ko"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Más de medio país bajo doble alerta amarilla y naranja de Inumet por tormentas fuertes",
+        "source": "El Observador",
+        "published": "2026-05-07",
+        "url": "https://www.elobservador.com.uy//nacional/mas-medio-pais-doble-alerta-amarilla-y-naranja-inumet-tormentas-fuertes-los-detalles-n6043197"
+      },
+      {
+        "title": "Corriente en chorro y 'ciclón bomba' en Argentina: qué puede pasar en Uruguay",
+        "source": "El Observador",
+        "published": "2026-05-07",
+        "url": "https://www.elobservador.com.uy//nacional/corriente-chorro-y-ciclon-bomba-argentina-que-puede-pasar-uruguay-el-fenomeno-que-afecta-al-sur-brasil-n6043200"
+      },
+      {
+        "title": "Dólar hoy: cotización del jueves 7 de mayo, según el BROU",
+        "source": "El Observador",
+        "published": "2026-05-07",
+        "url": "https://www.elobservador.com.uy//economia-y-empresas/dolar-hoy-esta-es-la-cotizacion-del-jueves-7-mayo-segun-el-brou-n6043198"
+      },
+      {
+        "title": "Dudas por las AFAP: cierre del Diálogo Social ya generó movimientos en bonos uruguayos",
+        "source": "El Observador",
+        "published": "2026-05-07",
+        "url": "https://www.elobservador.com.uy//economia-y-empresas/dudas-las-afap-cierre-del-dialogo-social-ya-genero-movimientos-bonos-uruguayos-inversores-extranjeros-vendieron-titulos-pesos-n6043149"
+      },
+      {
+        "title": "Justicia laboral condenó a Unilever a pagar $7 millones por horas extras y descansos impagos",
+        "source": "El Observador",
+        "published": "2026-05-07",
+        "url": "https://www.elobservador.com.uy//nacional/justicia-laboral-le-dio-la-razon-un-jefe-y-condeno-unilever-pagarle-horas-extras-n6043184"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-07T11:04:00Z"
+}
