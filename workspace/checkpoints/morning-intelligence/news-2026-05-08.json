@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-08",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Russia and Ukraine accuse each other of breaching Victory Day ceasefire",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c202zn5gg0lo",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "US–Iran ceasefire still in place after exchange of fire in Strait of Hormuz",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c626zyywxjno",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Oil prices rise after US and Iran exchange fire in Hormuz strait",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c86dp85g59xo",
+        "category": "Markets"
+      },
+      {
+        "title": "South Africa president faces call to resign after court ruling",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cy4287vpvl7o",
+        "category": "Policy"
+      },
+      {
+        "title": "Three dead after volcano erupts on Indonesian island",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cp3p418x513o",
+        "category": "Disaster"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Proyecto del gobierno para descentralizar INR ingresará en breve al Parlamento",
+        "source": "El País",
+        "url": "https://www.elpais.com.uy/informacion/politica/proyecto-del-gobierno-para-descentralizar-inr-ingresara-en-breve-al-parlamento-tras-ultimo-analisis-juridico"
+      },
+      {
+        "title": "Así abre la cotización del dólar hoy",
+        "source": "El País",
+        "url": "https://www.elpais.com.uy/negocios/finanzas/asi-abre-la-cotizacion-del-dolar-hoy-viernes-8-de-mayo-de-2026-en-pesos-uruguayos"
+      },
+      {
+        "title": "Unidad Indexada hoy: cuánto cotiza la UI",
+        "source": "El País",
+        "url": "https://www.elpais.com.uy/negocios/finanzas/unidad-indexada-hoy-cuanto-cotiza-la-ui-este-viernes-8-de-mayo-de-2026-en-pesos-uruguayos"
+      },
+      {
+        "title": "Se revisará el caso Ghione: argumentos y críticas",
+        "source": "El País",
+        "url": "https://www.elpais.com.uy/informacion/judiciales/corporativismo-conductas-desprolijas-y-dudas-los-argumentos-por-los-que-se-revisara-el-caso-ghione"
+      },
+      {
+        "title": "Mercado en Uruguay sin lanas y pocos negocios",
+        "source": "El País Rurales",
+        "url": "https://rurales.elpais.com.uy/mercados/mercado-en-uruguay-sin-lanas-y-pocos-negocios"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-08T11:03:00Z"
+}

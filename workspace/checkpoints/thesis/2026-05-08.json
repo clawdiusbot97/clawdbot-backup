@@ -1,0 +1,11 @@
+{
+  "date": "2026-05-08",
+  "stage": "ok",
+  "findings_count": 5,
+  "sources": [
+    "techcrunch.com",
+    "owasp.org"
+  ],
+  "delivery_error": null,
+  "generated_at": "2026-05-08T11:03:30Z"
+}
