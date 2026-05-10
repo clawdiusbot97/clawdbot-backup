@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-09",
+  "stage": "error",
+  "message": "research_failed: searxng returned 0 results",
+  "sections": {
+    "global": [],
+    "uruguay": [],
+    "watch": []
+  },
+  "sources_count": 0,
+  "generated_at": "2026-05-09T11:02:16.517645Z"
+}
