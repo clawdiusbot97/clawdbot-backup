@@ -1,0 +1,79 @@
+{
+  "date": "2026-05-10",
+  "stage": "error",
+  "message": "Not delivered: message tool unavailable in this environment. Standalone News Extension draft written to outbox for channel_id 1477319018992898171.",
+  "sections": {
+    "global": [
+      {
+        "title": "Iran–UAE escalation tests a fragile ceasefire",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/uae-countering-iranian-air-attack-after-trump-says-ceasefire-still-effect-2026-05-08/",
+        "category": "Geopolitics",
+        "date": "2026-05-08"
+      },
+      {
+        "title": "Iran conflict live updates and shipping risk signals",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2026/05/10/world/live-news/iran-war-news",
+        "category": "Geopolitics",
+        "date": "2026-05-10"
+      },
+      {
+        "title": "EU–Mercosur interim trade agreement applies provisionally",
+        "source": "European Commission",
+        "url": "https://trade.ec.europa.eu/access-to-markets/en/news/application-eu-mercosur-interim-trade-agreement-1-may-2026",
+        "category": "Policy",
+        "date": "2026-05-01"
+      },
+      {
+        "title": "EU–Mercosur trade deal takes provisional effect amid controversy",
+        "source": "Euronews",
+        "url": "https://www.euronews.com/business/2026/05/01/contentious-eu-mercosur-trade-deal-takes-provisional-effect",
+        "category": "Markets",
+        "date": "2026-05-01"
+      },
+      {
+        "title": "OpenAI on delivering low-latency voice AI at scale",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+        "category": "Tech/AI",
+        "date": "2026"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Orsi courts Brazilian investors in São Paulo",
+        "source": "Ámbito",
+        "url": "https://www.ambito.com/uruguay/yamandu-orsi-viaja-brasil-captar-inversiones-y-reforzar-vinculos-empresarios-n6273981",
+        "date": "2026-05-06"
+      },
+      {
+        "title": "Uruguay + Argentina ratify EU–Mercosur free trade deal",
+        "source": "AP",
+        "url": "https://apnews.com/article/mercosur-argentina-uruguay-european-union-free-trade-c5e9b60d880a944ecaf64f06985c009a",
+        "date": "2026-02-26"
+      },
+      {
+        "title": "EU–Mercosur trade agreement official overview",
+        "source": "European Commission",
+        "url": "https://commission.europa.eu/topics/trade/eu-mercosur-trade-agreement_en",
+        "date": "2026"
+      },
+      {
+        "title": "Uruguay Herald (monitor)",
+        "source": "Uruguay Herald",
+        "url": "https://www.uruguayherald.com/",
+        "date": "2026-05-08"
+      },
+      {
+        "title": "Reuters Uruguay page (monitor)",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/uruguay/",
+        "date": "2026"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-10T11:00:00Z"
+}

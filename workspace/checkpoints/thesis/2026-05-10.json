@@ -1,0 +1,24 @@
+{
+  "date": "2026-05-10",
+  "stage": "ok",
+  "generated_at": "2026-05-10T11:00:00Z",
+  "notes": {
+    "cache_used": false,
+    "dedupe_window_days": 7
+  },
+  "delivery": {
+    "target_channel_id": "1476311753305362564",
+    "status": "not_sent",
+    "reason": "This run cannot call the Discord message tool; draft written to outbox and markdown saved."
+  },
+  "sources": [
+    "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+    "https://gradium.ai/content/tts-latency-benchmark-2026",
+    "https://medium.com/@mail2chasif/livekit-piper-tts-building-a-low-latency-local-voice-agent-with-real-time-latency-tracking-92a1008416e4",
+    "https://www.reinsurancene.ws/aon-launches-ai-enabled-platform-claims-copilot/",
+    "https://aon.mediaroom.com/2025-11-11-Aon-Launches-Claims-Copilot-Bringing-Together-Expert-Advocacy-and-Advanced-Technology-for-better-client-outcomes",
+    "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
+    "https://money.usnews.com/investing/news/articles/2026-05-05/openai-anthropic-ventures-in-talks-to-buy-ai-services-firms-sources-say",
+    "https://www.compliquest.com/en/blog/what-is-eu-ai-act-requirements-2026"
+  ]
+}
