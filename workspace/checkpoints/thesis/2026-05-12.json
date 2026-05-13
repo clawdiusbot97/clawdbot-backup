@@ -1,0 +1,7 @@
+{
+  "date": "2026-05-12",
+  "stage": "error",
+  "generated_at": "2026-05-12T11:03:57Z",
+  "reason": "Web research unavailable (SearXNG 0 results); thesis intel not generated.",
+  "delivery_error": "Discord message tool not available in this runtime; not sent."
+}

@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-12",
+  "stage": "error",
+  "message": "SearXNG returned 0 results on this host; cannot generate source-backed Global/Uruguay Top 5.",
+  "sections": {"global": [], "uruguay": [], "watch": []},
+  "sources_count": 0,
+  "generated_at": "2026-05-12T11:03:55Z"
+}
