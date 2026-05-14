@@ -1,0 +1,42 @@
+{
+  "date": "2026-05-13",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Stocks fall, oil rallies as peace hopes fade; inflation firm",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/china/global-markets-pix-2026-05-12/",
+        "category": "Markets"
+      },
+      {
+        "title": "Efforts to end US-Iran war appear to stall as sides trade fire",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/iran-war-live-us-expects-response-friday-trump-says-ceasefire-holds-after-strait-2026-05-08/",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Ceasefire is threatened as Israel expands Lebanon strikes",
+        "source": "AP",
+        "url": "https://apnews.com/article/iran-us-israel-trump-lebanon-april-8-2026-38d75d5e4f1c7339a1456fc99415bb2a",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "How a volatile 24 hours edged Iran and Israel to a ceasefire",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c3vdpeq606do",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "IEA Oil Market Report (May 2026)",
+        "source": "IEA",
+        "url": "https://www.iea.org/reports/oil-market-report-may-2026",
+        "category": "Markets"
+      }
+    ],
+    "uruguay": [],
+    "watch": []
+  },
+  "sources_count": 5,
+  "generated_at": "2026-05-13T11:00:00Z"
+}
