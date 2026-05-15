@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-14",
+  "stage": "ok",
+  "cached": false,
+  "findings_count": 6,
+  "delivery_error": "Discord message tool unavailable in this runtime; prepared outbox content only.",
+  "generated_at": "2026-05-14T11:03:10Z"
+}

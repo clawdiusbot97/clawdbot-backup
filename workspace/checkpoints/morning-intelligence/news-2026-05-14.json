@@ -1,0 +1,73 @@
+{
+  "date": "2026-05-14",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Rescuers pull dead from rubble of Kyiv flats after massive Russian strikes",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cq5p8yygq94o",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Israeli strikes in southern Lebanon kill 22 people, health ministry says",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c1k2zekj8y9o",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Trade, Iran and Taiwan on the agenda as Trump arrives in China for high-stakes talks with Xi",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c1w28qw1e0xo",
+        "category": "Policy"
+      },
+      {
+        "title": "Cuba has run out of diesel and oil, energy minister says",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cd7pyrj0vx7o",
+        "category": "Markets"
+      },
+      {
+        "title": "Introducing Claude for Small Business",
+        "source": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-for-small-business",
+        "category": "Tech/AI"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Trabajadores del sector turístico recibirán capacitación en inteligencia artificial",
+        "source": "Presidencia",
+        "url": "https://www.gub.uy/presidencia/comunicacion/noticias/turismo-trabajadores-inteligencia-artificial-menoni-mayo-2026",
+        "category": "Policy"
+      },
+      {
+        "title": "Operativo por frío intenso asistió a 3.252 personas en situación de calle el martes 12",
+        "source": "Presidencia/Sinae",
+        "url": "https://www.gub.uy/presidencia/comunicacion/noticias/frio-refugio-personas-calle-informe-sinae-miercoles-13",
+        "category": "Disaster"
+      },
+      {
+        "title": "Vivienda destinará unos 6.000.000 de dólares a plan para personas en situación de calle",
+        "source": "Presidencia",
+        "url": "https://www.gub.uy/presidencia/comunicacion/noticias/vivienda-personas-situacion-calle-paseyro-mayo-2026",
+        "category": "Policy"
+      },
+      {
+        "title": "Observatorio relevará datos sobre siniestralidad laboral y enfermedades profesionales",
+        "source": "Presidencia",
+        "url": "https://www.gub.uy/presidencia/comunicacion/noticias/accidentes-laborales-banco-seguros-observatorio-mtss",
+        "category": "Markets"
+      },
+      {
+        "title": "Accidente fatal en Tacuarembó: choque entre dos camiones y un ciclista en Ruta 5",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/nacional/accidente-fatal-tacuarembo-un-hombre-murio-choque-dos-camiones-y-un-ciclista-ruta-5-n6043980",
+        "category": "Disaster"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-14T11:02:50Z"
+}
