@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-15",
+  "stage": "error",
+  "findings_count": 5,
+  "markdown_path": "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-05-15.md",
+  "delivery_error": "Discord send not executed in this environment; intended channel_id=1476311753305362564",
+  "generated_at": "2026-05-15T11:02:20Z"
+}

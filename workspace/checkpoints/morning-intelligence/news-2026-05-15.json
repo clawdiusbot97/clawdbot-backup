@@ -1,0 +1,69 @@
+{
+  "date": "2026-05-15",
+  "stage": "error",
+  "message": "Discord send not executed in this environment; intended channel_id=1477319018992898171 (retry-once rule not applicable).",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Ukraine rescuers pull dead from rubble after massive Russian strikes on Kyiv",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cq5p8yygq94o"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "‘Floating armoury’ ship reportedly seized by Iran",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cx219xwxg9no"
+      },
+      {
+        "category": "Policy",
+        "title": "US Supreme Court restores abortion pill access for now",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cx21x27d4jdo"
+      },
+      {
+        "category": "Health",
+        "title": "New outbreak of Ebola kills 65 in eastern DR Congo",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cze2wpk7y76o"
+      },
+      {
+        "category": "Science",
+        "title": "Warning of record global temperatures as chance of very strong El Niño grows",
+        "source": "BBC Weather",
+        "url": "https://www.bbc.com/weather/articles/cvgzn11v421o"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Evaluación de la gestión del presidente Yamandú Orsi: 27% aprueba y 48% desaprueba en abril",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/evaluacion-la-gestion-del-presidente-yamandu-orsi-27-aprueba-y-48-desaprueba-abril-n1007796"
+      },
+      {
+        "title": "Datos finales del censo 2023: 350.000 personas no habían sido contabilizadas; 34.500 viven en asentamientos",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/datos-finales-del-censo-2023-350000-personas-no-habian-sido-contabilizadas-34500-viven-asentamientos-n1007760"
+      },
+      {
+        "title": "Justicia confirmó que la herencia de Gustavo Basso irá a concurso por la causa de Conexión Ganadera",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/justicia-confirmo-que-la-herencia-gustavo-basso-ira-concurso-la-causa-conexion-ganadera-n1007756"
+      },
+      {
+        "title": "“El mismo día”: Fiscalía presentó acusación contra Carrera y este comentó con suspicacia",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/-El-mismo-dia--Fiscalia-presento-acusacion-contra-Carrera-y-este-comento-con-suspicacia-uc962068"
+      },
+      {
+        "title": "Es inminente el “Niño Godzilla” a Uruguay: cuándo llega la peor parte y qué podría pasar",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/Es-inminente-el-Nino-Godzilla-a-Uruguay-cuando-llega-la-peor-parte-y-que-podria-pasar-uc962050"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-15T11:03:05Z"
+}
