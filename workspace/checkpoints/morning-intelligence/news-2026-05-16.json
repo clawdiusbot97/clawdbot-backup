@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-16",
+  "stage": "error",
+  "message": "News Extension not posted: unable to compile quota-compliant Global Top 5 + Uruguay Top 5 with verified sources/links (SearXNG returned 0 results; key outlets blocked) and no Discord message tool available to deliver to channel_id 1477319018992898171.",
+  "sections": {
+    "global": [],
+    "uruguay": [],
+    "watch": []
+  },
+  "sources_count": 0,
+  "generated_at": "2026-05-16T11:02:55Z"
+}

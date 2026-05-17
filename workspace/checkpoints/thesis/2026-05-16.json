@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-16",
+  "stage": "ok",
+  "cached": false,
+  "findings_count": 6,
+  "markdown_path": "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-05-16.md",
+  "delivery": {
+    "target_channel_id": "1476311753305362564",
+    "status": "not_sent",
+    "delivery_error": "No Discord message tool available in this runtime; cannot send."
+  },
+  "generated_at": "2026-05-16T11:02:40Z"
+}
