@@ -1,0 +1,9 @@
+{
+  "date": "2026-05-17",
+  "stage": "error",
+  "findings_count": 6,
+  "markdown_path": "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-05-17.md",
+  "delivery_channel_id": "1476311753305362564",
+  "delivery_error": "Delivery not executed from this run (no Discord message tool available in this context). Thesis Intel markdown prepared for manual send.",
+  "generated_at": "2026-05-17T11:02:05Z"
+}
