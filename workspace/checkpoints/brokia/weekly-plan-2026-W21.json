@@ -1,0 +1,54 @@
+{
+  "schema": "brokia-weekly-plan-v1",
+  "generated_at": "2026-05-18T10:00:29.269251-03:00",
+  "tz": "America/Montevideo",
+  "week": "2026-W21",
+  "phase": "Phase 3 — Validation loop",
+  "objectives": [
+    "Ejecutar baseline medible (tiempos por cotización / pasos) con datos reales.",
+    "Correr 1 ciclo de validación (entrevistas + síntesis) y consolidar hallazgos.",
+    "Mantener backlog priorizado por evidencia (no por ideas)."
+  ],
+  "tasks": [
+    {
+      "title": "Definir plantilla de registro de baseline (tiempos/pasos) y recolectar 1 semana",
+      "owner": "Manu"
+    },
+    {
+      "title": "Completar 3 muestras reales de proceso (JM) y compartir resultados",
+      "owner": "JM"
+    },
+    {
+      "title": "Realizar 1–2 entrevistas y extraer métricas comparables",
+      "owner": "Rodrigo"
+    },
+    {
+      "title": "Actualizar backlog con top 5 por impacto medible",
+      "owner": "Manu"
+    },
+    {
+      "title": "Escribir síntesis semanal para tesis (bitácora) con evidencia",
+      "owner": "Rodrigo"
+    }
+  ],
+  "main_risk": "Datos inconsistentes (sin baseline comparable) ⇒ no hay resultados defendibles.",
+  "dependency": "Acceso sostenido a corredores/operadores para repetir mediciones.",
+  "inputs": {
+    "brief": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/01_BRIEF.md",
+    "academic_checklist": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/02_ACADEMIC_CHECKLIST.md",
+    "roadmap": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/03_ROADMAP.md",
+    "backlog": "/home/manpac/.openclaw/workspace/brokia/thesis-hub/04_BACKLOG.md"
+  },
+  "posts": {
+    "discord": {
+      "target": "1476311753305362564",
+      "sent": true,
+      "result": "│\n◇  Config warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - plugins.entries.google-gemini-cli-auth: plugin removed:             │\n│    google-gemini-cli-auth (stale config entry ignored; remove it from  │\n│    plugins config)                                                     │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n✅ Sent via Discord. Message ID: 1505918368568443032\nConfig warnings:\\n- plugins.entries.google-gemini-cli-auth: plugin removed: google-gemini-cli-auth (stale config entry ignored; remove it from plugins config)\nConfig warnings:\\n- plugins.entries.google-gemini-cli-auth: plugin removed: google-gemini-cli-auth (stale config entry ignored; remove it from plugins config)\n[sessions/store] session maintenance would evict active session; skipping enforcement"
+    },
+    "slack": {
+      "target": "brokia-ai-alerts",
+      "sent": false,
+      "result": "│\n◇  Config warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - plugins.entries.google-gemini-cli-auth: plugin removed:             │\n│    google-gemini-cli-auth (stale config entry ignored; remove it from  │\n│    plugins config)                                                     │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nConfig warnings:\\n- plugins.entries.google-gemini-cli-auth: plugin removed: google-gemini-cli-auth (stale config entry ignored; remove it from plugins config)\nConfig warnings:\\n- plugins.entries.google-gemini-cli-auth: plugin removed: google-gemini-cli-auth (stale config entry ignored; remove it from plugins config)\n[sessions/store] session maintenance would evict active session; skipping enforcement\nError: An API error occurred: channel_not_found"
+    }
+  }
+}

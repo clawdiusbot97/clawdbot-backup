@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-18",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Large-scale Ukrainian drone attack kills three in Moscow region, says Russia",
+        "source": "BBC",
+        "timestamp": "2026-05-17",
+        "links": ["https://www.bbc.com/news/articles/c5ye480kxpmo"],
+        "score": 7
+      },
+      {
+        "category": "Geopolitics",
+        "title": "Israeli forces boarding Gaza-bound flotilla near Cyprus, activists say",
+        "source": "BBC",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.bbc.com/news/articles/c142vz80553o"],
+        "score": 7
+      },
+      {
+        "category": "Policy",
+        "title": "Trump warns 'clock is ticking' for Iran as peace progress stalls",
+        "source": "BBC",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.bbc.com/news/articles/cd0p4y9y48xo"],
+        "score": 7
+      },
+      {
+        "category": "Science/Health",
+        "title": "At least six Americans exposed to Ebola during DR Congo outbreak",
+        "source": "BBC",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.bbc.com/news/articles/cq6pz60p996o"],
+        "score": 6
+      },
+      {
+        "category": "Markets",
+        "title": "Strike over high fuel prices paralyses transport in Kenya",
+        "source": "BBC",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.bbc.com/news/articles/cm2p0n44drvo"],
+        "score": 6
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Este lunes 18 de mayo es feriado laborable en Uruguay: qué se celebra y cómo se paga",
+        "source": "El Observador",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.elobservador.com.uy/nacional/cae-lunes-no-se-cambia-fecha-y-es-laborable-cuando-es-el-proximo-feriado-uruguay-y-que-se-conmemora-n6042931"]
+      },
+      {
+        "title": "Clima en Uruguay hoy: lo que hay que saber según Inumet para este lunes 18 de mayo",
+        "source": "El Observador",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.elobservador.com.uy/nacional/clima-uruguay-hoy-lo-que-hay-que-saber-segun-inumet-este-lunes-18-mayo-n6044327"]
+      },
+      {
+        "title": "Trabajo nocturno: el proyecto para eliminar el mínimo de cinco horas y universalizar el pago extra",
+        "source": "El Observador",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.elobservador.com.uy/economia-y-empresas/trabajo-nocturno-el-proyecto-eliminar-el-minimo-cinco-horas-y-universalizar-el-pago-extra-n6044166"]
+      },
+      {
+        "title": "Encontraron el cuerpo sin vida de una mujer cerca del Dique Mauá: Fiscalía investiga el caso",
+        "source": "El Observador",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.elobservador.com.uy/nacional/encontraron-el-cuerpo-vida-una-mujer-cerca-del-dique-maua-fiscalia-investiga-el-caso-n6044292"]
+      },
+      {
+        "title": "Una productora uruguaya hace ficción con IA para EEUU y organizará un festival",
+        "source": "El Observador",
+        "timestamp": "2026-05-18",
+        "links": ["https://www.elobservador.com.uy/ciencia-y-tecnologia/una-productora-uruguaya-hace-ficcion-ia-eeuu-y-organizara-un-festival-n6044179"]
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-18T11:02:30Z"
+}
