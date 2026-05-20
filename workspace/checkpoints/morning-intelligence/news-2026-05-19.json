@@ -1,0 +1,23 @@
+{
+  "date": "2026-05-19",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {"title": "Ebola may be spreading faster than first thought, WHO doctor warns", "source": "BBC", "date": "2026-05-19", "category": "Science/Health", "link": "https://www.bbc.com/news/world"},
+      {"title": "Death toll from Israeli strikes on Lebanon passes 3,000, officials say", "source": "BBC", "date": "2026-05-19", "category": "Geopolitics", "link": "https://www.bbc.com/news/world"},
+      {"title": "Trump says he called off new Iran attack at request of Gulf states", "source": "BBC", "date": "2026-05-19", "category": "Policy", "link": "https://www.bbc.com/news/world"},
+      {"title": "Major North American rail disruption ends after strike", "source": "BBC", "date": "2026-05-19", "category": "Economy/Markets", "link": "https://www.bbc.com/news/world"},
+      {"title": "Teen suspects fatally shoot three in suspected hate crime at San Diego mosque", "source": "BBC", "date": "2026-05-19", "category": "Geopolitics", "link": "https://www.bbc.com/news/world"}
+    ],
+    "uruguay": [
+      {"title": "Mercosur export quotas to the EU and ‘autocertificación’", "source": "El Observador", "date": "2026-05-19", "link": "https://www.elobservador.com.uy/nacional/la-autocertificacion-la-clave-la-ley-la-selva-del-mercosur-los-cupos-exportar-la-union-europea-n6044387"},
+      {"title": "Uruguay TPP/CPTPP accession progress and support for Argentina entry", "source": "El Observador", "date": "2026-05-19", "link": "https://www.elobservador.com.uy/nacional/mientras-avanza-su-adhesion-al-acuerdo-transpacifico-el-gobierno-orsi-respalda-argentina-que-solicite-su-ingreso-n6044410"},
+      {"title": "Paraguay-backed port project in Uruguay gets environmental permit", "source": "El Observador", "date": "2026-05-19", "link": "https://www.elobservador.com.uy/economia-y-empresas/puerto-paraguayo-uruguay-proyecto-grupo-empresarial-ya-tiene-permiso-ambiental-y-visto-bueno-oficial-n6044414"},
+      {"title": "Alert in Tacuarembó: two-month-old baby died from ‘púrpura fulminante’", "source": "El Observador", "date": "2026-05-19", "link": "https://www.elobservador.com.uy/nacional/alerta-tacuarembo-una-bebe-dos-meses-murio-purpura-fulminante-n6044375"},
+      {"title": "Factum poll: Orsi approval/disapproval figures", "source": "El Observador", "date": "2026-05-19", "link": "https://www.elobservador.com.uy/nacional/descenso-aprobacion-sus-propios-votantes-orsi-registra-46-desaprobacion-y-29-aprobacion-segun-factum-n6044405"}
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-19T11:02:10.000Z"
+}

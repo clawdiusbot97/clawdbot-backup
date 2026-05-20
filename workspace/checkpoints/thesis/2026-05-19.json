@@ -1,0 +1,14 @@
+{
+  "date": "2026-05-19",
+  "stage": "ok",
+  "findings_count": 6,
+  "sources": [
+    "https://www.anthropic.com/news/anthropic-acquires-stainless",
+    "https://safedep.io/mini-shai-hulud-strikes-again-314-npm-packages-compromised/",
+    "https://cursor.com/blog/composer-2-5",
+    "https://simonwillison.net/2026/May/19/5-minute-llms/",
+    "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/"
+  ],
+  "delivery_error": null,
+  "generated_at": "2026-05-19T11:02:20.000Z"
+}
