@@ -1,0 +1,94 @@
+{
+  "date": "2026-05-20",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Lebanon says 21 killed, including children, in Israeli air strikes",
+        "source": "BBC",
+        "timestamp": "2026-05-20",
+        "links": ["https://www.bbc.com/news/articles/ce9p1l7yp2lo"]
+      },
+      {
+        "category": "Science/Health",
+        "title": "More die of suspected Ebola as WHO warns numbers will rise",
+        "source": "BBC",
+        "timestamp": "2026-05-20",
+        "links": ["https://www.bbc.com/news/articles/cwy2g197dp8o"]
+      },
+      {
+        "category": "Policy",
+        "title": "Thailand cuts visa-free stay period for more than 90 countries",
+        "source": "BBC",
+        "timestamp": "2026-05-20",
+        "links": ["https://www.bbc.com/news/articles/c78q3qjqnn5o"]
+      },
+      {
+        "category": "Disaster/Accident",
+        "title": "Two fighter jets collide mid-air at US air show (crew ejected)",
+        "source": "BBC",
+        "timestamp": "2026-05-20",
+        "links": ["https://www.bbc.com/news/videos/ce8pzkg7klgo"]
+      },
+      {
+        "category": "Tech/AI",
+        "title": "US groups urge investigation into child safety and spending on Roblox",
+        "source": "BBC",
+        "timestamp": "2026-05-20",
+        "links": ["https://www.bbc.com/news/articles/cgqpz809e7lo"]
+      }
+    ],
+    "uruguay": [
+      {
+        "category": "Economy/Business",
+        "title": "Canelones recibe nuevo centro de distribución logística tras inversión privada por 18 millones de dólares",
+        "source": "Presidencia Uruguay",
+        "timestamp": "2026-05-19",
+        "links": ["https://www.gub.uy/presidencia/comunicacion/noticias/canelones-recibe-nuevo-centro-distribucion-logistica-tras-inversion-privada"]
+      },
+      {
+        "category": "Disaster/Weather",
+        "title": "Alerta por fríos extremos: 3.387 personas fueron asistidas el lunes 18",
+        "source": "Presidencia Uruguay",
+        "timestamp": "2026-05-19",
+        "links": ["https://www.gub.uy/presidencia/comunicacion/noticias/alerta-frios-extremos-3387-personas-fueron-asistidas-lunes-18"]
+      },
+      {
+        "category": "Tech/Innovation",
+        "title": "Industria y ANEP firman acuerdo para potenciar trabajo conjunto en tecnología e innovación (CATI + IA)",
+        "source": "Presidencia Uruguay",
+        "timestamp": "2026-05-19",
+        "links": ["https://www.gub.uy/presidencia/comunicacion/noticias/ministerio-industria-anep-firman-acuerdo-para-potenciar-trabajo-conjunto"]
+      },
+      {
+        "category": "Science/Education",
+        "title": "Comenzó la Semana de la Ciencia y la Tecnología 2026 con más de 1.200 actividades",
+        "source": "Presidencia Uruguay",
+        "timestamp": "2026-05-19",
+        "links": ["https://www.gub.uy/presidencia/comunicacion/noticias/comenzo-semana-ciencia-tecnologia-2026-1200-actividades-todo-pais"]
+      },
+      {
+        "category": "Policy",
+        "title": "Elecciones de directores sociales del BPS se realizarán el 22 de noviembre",
+        "source": "Presidencia Uruguay",
+        "timestamp": "2026-05-19",
+        "links": ["https://www.gub.uy/presidencia/comunicacion/noticias/elecciones-bps-cuando-son-mayo-2026"]
+      }
+    ],
+    "watch": [
+      {
+        "title": "Semana de la Ciencia y la Tecnología 2026 (18 al 24 de mayo)",
+        "date_range": "2026-05-18..2026-05-24",
+        "link": "https://www.gub.uy/presidencia/comunicacion/noticias/comenzo-semana-ciencia-tecnologia-2026-1200-actividades-todo-pais"
+      },
+      {
+        "title": "Elecciones BPS: 22 de noviembre (voto obligatorio)",
+        "date": "2026-11-22",
+        "link": "https://www.gub.uy/presidencia/comunicacion/noticias/elecciones-bps-cuando-son-mayo-2026"
+      }
+    ]
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-20T11:02:30Z"
+}
