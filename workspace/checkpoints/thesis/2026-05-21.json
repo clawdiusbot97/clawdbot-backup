@@ -1,0 +1,11 @@
+{
+  "date": "2026-05-21",
+  "stage": "ok",
+  "generated_at": "2026-05-21T11:03:00Z",
+  "notes": "Fresh research (limited sources available in this runtime); dedupe vs last 7 days not detected via title normalization heuristics.",
+  "delivery": {
+    "target_channel_id": "1476311753305362564",
+    "attempted": false,
+    "reason": "This cron runtime does not expose a Discord message tool; delivery must be performed by the orchestrator that has Discord send capability."
+  }
+}

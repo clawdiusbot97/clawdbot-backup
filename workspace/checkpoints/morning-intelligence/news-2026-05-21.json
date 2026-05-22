@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-21",
+  "stage": "error",
+  "message": "Not delivered: this runtime does not expose a Discord message tool. News Extension content prepared but must be sent to channel_id 1477319018992898171 by a sender-capable runner.",
+  "sections": {"global": [], "uruguay": [], "watch": []},
+  "sources_count": 0,
+  "generated_at": "2026-05-21T11:03:00Z"
+}
