@@ -1,0 +1,1 @@
+(Send the content from /home/manpac/.openclaw/workspace/memory/thesis-intel/2026-05-22.md to the Thesis Intel channel as instructed. This outbox stub exists to avoid echoing Thesis Intel content in job stdout.)
