@@ -1,0 +1,24 @@
+{
+  "date": "2026-05-23",
+  "stage": "error",
+  "message": "Discord send not executed (message tool not available in this runtime). Manual send required to channel_id 1477319018992898171.",
+  "sections": {
+    "global": [
+      {"title":"Coal mine blast in China kills at least 90","source":"BBC","url":"https://www.bbc.com/news/world","category":"Disaster"},
+      {"title":"Russia-Ukraine: Putin vows retaliation after alleged dormitory strike","source":"BBC","url":"https://www.bbc.com/news/world","category":"Geopolitics"},
+      {"title":"Senegal president sacks PM Sonko and dissolves government","source":"BBC","url":"https://www.bbc.com/news/world","category":"Policy"},
+      {"title":"WHO warns Ebola risk is 'very high' in DR Congo","source":"BBC","url":"https://www.bbc.com/news/world","category":"Science/Health"},
+      {"title":"SpaceX launches Starship V3 test flight","source":"BBC","url":"https://www.bbc.com/news/world","category":"Tech/AI"}
+    ],
+    "uruguay": [
+      {"title":"Maldonado raid: drugs, weapons, cash seized","source":"Montevideo Portal","url":"https://www.montevideo.com.uy/"},
+      {"title":"Death of Leandro Ribeiro after crash in Paysandú","source":"Montevideo Portal","url":"https://www.montevideo.com.uy/"},
+      {"title":"CED study on state/economy alignment","source":"Montevideo Portal","url":"https://www.montevideo.com.uy/"},
+      {"title":"'Las emociones como brújula' feature","source":"El País Uruguay","url":"https://www.elpais.com.uy/"},
+      {"title":"Maximiliano Araújo named best left back in Portugal","source":"Montevideo Portal","url":"https://www.montevideo.com.uy/"}
+    ],
+    "watch": []
+  },
+  "sources_count": 5,
+  "generated_at": "2026-05-23T11:02:21Z"
+}

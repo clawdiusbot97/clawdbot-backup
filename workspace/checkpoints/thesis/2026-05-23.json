@@ -1,0 +1,9 @@
+{
+  "date": "2026-05-23",
+  "stage": "error",
+  "reason": "Discord delivery not executed from cron stdout (no message tool available in this runtime).",
+  "deliver_to_channel_id": "1476311753305362564",
+  "markdown_path": "/home/manpac/.openclaw/workspace/memory/thesis-intel/2026-05-23.md",
+  "delivery_error": "MISSING_TOOL: message tool not available; requires manual send to Discord channel_id 1476311753305362564.",
+  "generated_at": "2026-05-23T11:02:21Z"
+}
