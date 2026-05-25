@@ -1,0 +1,73 @@
+{
+  "date": "2026-05-24",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "Geopolitics",
+        "title": "Large-scale Russian attack on Ukraine leaves four dead and dozens injured",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/clyp6831yp5o"
+      },
+      {
+        "category": "Policy",
+        "title": "Rubio says 'significant progress' made in Iran talks as potential deal details emerge",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/live/cgkp25x23pjt"
+      },
+      {
+        "category": "Geopolitics",
+        "title": "Blast targeting train kills at least 20 in Pakistan",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cm2pkd58xldo"
+      },
+      {
+        "category": "Disaster",
+        "title": "BBC at the site of China's worst mining disaster in more than a decade",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/videos/c809m33yjz7o"
+      },
+      {
+        "category": "Policy",
+        "title": "Suspect killed after opening fire on Secret Service near White House",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cjwp82ye4y3o"
+      }
+    ],
+    "uruguay": [
+      {
+        "category": "Markets",
+        "title": "Uruguay ya hizo los deberes para ser un hub aéreo regional, según experto",
+        "source": "El País (Uruguay)",
+        "url": "https://www.elpais.com.uy/negocios/noticias/uruguay-ya-hizo-los-deberes-para-ser-un-hub-aereo-regional-y-es-modelo-a-seguir-en-america-latina-segun-experto"
+      },
+      {
+        "category": "Policy",
+        "title": "Misión de asistencia del FMI recomendó cambios al Banco Central ante dolarización",
+        "source": "El País (Uruguay)",
+        "url": "https://www.elpais.com.uy/negocios/noticias/una-mision-de-asistencia-del-fmi-recomendo-cambios-al-banco-central-para-mejorar-la-operativa-monetaria-ante-dolarizacion"
+      },
+      {
+        "category": "Society",
+        "title": "La Iglesia Católica se organiza para recibir al papa León (tres escenarios)",
+        "source": "El País (Uruguay)",
+        "url": "https://www.elpais.com.uy/informacion/sociedad/la-iglesia-catolica-ya-se-organiza-para-recibir-al-papa-leon-crea-comisiones-y-maneja-tres-escenarios"
+      },
+      {
+        "category": "Policy",
+        "title": "Uruguay: hacia un mercado de capitales del siglo XXI (columna)",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/opinion/uruguay-un-mercado-capitales-del-siglo-xxi-n6044530"
+      },
+      {
+        "category": "Tech/AI",
+        "title": "El 82% del mundo nunca usó inteligencia artificial (columna)",
+        "source": "El Observador",
+        "url": "https://www.elobservador.com.uy/opinion/el-82-ciento-del-mundo-nunca-uso-inteligencia-artificial-n6044643"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-24T11:02:30Z"
+}

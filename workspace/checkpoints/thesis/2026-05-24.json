@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-24",
+  "stage": "ok",
+  "generated_at": "2026-05-24T11:02:30Z",
+  "findings_count": 6,
+  "sources": [
+    "https://openai.com/index/advancing-content-provenance/",
+    "https://openai.com/news/",
+    "https://elevenlabs.io/blog/blog/500m-arr-and-new-investors",
+    "https://github.com/ClickHouse/silk"
+  ]
+}
