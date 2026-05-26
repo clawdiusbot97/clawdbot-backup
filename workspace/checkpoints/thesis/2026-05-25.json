@@ -1,0 +1,11 @@
+{
+  "date": "2026-05-25",
+  "stage": "ok",
+  "findings_count": 6,
+  "sources": [
+    "https://news.ycombinator.com/",
+    "https://www.bbc.com/news",
+    "https://www.montevideo.com.uy/"
+  ],
+  "generated_at": "2026-05-25T11:02:20Z"
+}

@@ -286,3 +286,25 @@
 ### Dependency to unblock
 - Acceso sostenido a corredores/operadores para repetir mediciones.
 
+---
+## Weekly Plan — 2026-W22
+**Detected phase:** Phase 3 — Validation loop
+
+### Weekly objectives (3)
+1. Ejecutar baseline medible (tiempos por cotización / pasos) con datos reales.
+2. Correr 1 ciclo de validación (entrevistas + síntesis) y consolidar hallazgos.
+3. Mantener backlog priorizado por evidencia (no por ideas).
+
+### Tasks (5)
+- [ ] (Manu) Definir plantilla de registro de baseline (tiempos/pasos) y recolectar 1 semana
+- [ ] (JM) Completar 3 muestras reales de proceso (JM) y compartir resultados
+- [ ] (Rodrigo) Realizar 1–2 entrevistas y extraer métricas comparables
+- [ ] (Manu) Actualizar backlog con top 5 por impacto medible
+- [ ] (Rodrigo) Escribir síntesis semanal para tesis (bitácora) con evidencia
+
+### Main risk
+- Datos inconsistentes (sin baseline comparable) ⇒ no hay resultados defendibles.
+
+### Dependency to unblock
+- Acceso sostenido a corredores/operadores para repetir mediciones.
+

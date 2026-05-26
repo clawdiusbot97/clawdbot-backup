@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-25",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "title": "Large-scale Russian attack on Ukraine leaves four dead and dozens injured",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/clyp6831yp5o",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Oil prices slide on hopes of US-Iran peace deal",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c809m7g29r7o",
+        "category": "Markets"
+      },
+      {
+        "title": "Deal with US not imminent, Iran says",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cglpp2yk336o",
+        "category": "Policy"
+      },
+      {
+        "title": "Blast targeting train kills at least 20 in Pakistan",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cm2pkd58xldo",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "First Hong Kong astronaut launches into space onboard Chinese mission",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cn7p87r56mgo",
+        "category": "Science"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Brutal balacera en el Cerro de Montevideo dejó a tres jóvenes muertos y otros tres heridos",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/Brutal-balacera-en-el-Cerro-de-Montevideo-dejo-a-tres-jovenes-muertos-y-otros-tres-heridos-uc963066"
+      },
+      {
+        "title": "Cancelan premiación en Rally de Florida por un trágico accidente",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Airbag/-Fortisima-descarga--cancelan-premiacion-en-Rally-de-Florida-por-un-tragico-accidente-uc963067"
+      },
+      {
+        "title": "Caggiani anunció tres proyectos de ley para regular viáticos y subsidio de los políticos",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/Caggiani-anuncio-tres-proyectos-de-ley-para-regular-viaticos-y-subsidio-de-los-politicos-uc963058"
+      },
+      {
+        "title": "Meteorólogo anunció cuándo vuelve el frío invernal",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/Meteorologo-anuncio-cuando-vuelve-el-frio-invernal--que-llegara-a-Uruguay-con-algo-mas--uc963062"
+      },
+      {
+        "title": "Filmaron a camión que circuló diez kilómetros con portón trasero abierto y la carga suelta",
+        "source": "Montevideo Portal",
+        "url": "https://www.montevideo.com.uy/Noticias/Filmaron-a-camion-que-circulo-diez-kilometros-con-porton-trasero-abierto-y-la-carga-suelta-uc963065"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-25T11:02:25Z"
+}
