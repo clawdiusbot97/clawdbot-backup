@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-26",
+  "stage": "error",
+  "message": "News Extension research failed: local SearXNG returned 0 results for global/Uruguay queries; Discord send not attempted (no message tool in this runtime).",
+  "sections": {"global": [], "uruguay": [], "watch": []},
+  "sources_count": 0,
+  "generated_at": "2026-05-26T11:02:30Z"
+}

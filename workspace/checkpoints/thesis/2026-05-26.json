@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-26",
+  "stage": "ok",
+  "cached": false,
+  "findings_count": 6,
+  "delivery_error": "Discord send not attempted: message tool unavailable in this runtime; required channel_id is 1476311753305362564.",
+  "generated_at": "2026-05-26T11:02:50Z"
+}
