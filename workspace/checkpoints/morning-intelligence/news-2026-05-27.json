@@ -1,0 +1,73 @@
+{
+  "date": "2026-05-27",
+  "stage": "ok",
+  "sections": {
+    "global": [
+      {
+        "category": "[Markets]",
+        "title": "UAE quits OPEC in blow to cartel that could reshape global oil markets",
+        "source": "CNN",
+        "url": "https://edition.cnn.com/2026/04/28/business/uae-leaves-opec-oil-cartel-intl"
+      },
+      {
+        "category": "[Tech/AI]",
+        "title": "OpenAI rolls out GPT-5.5-Cyber to vetted cybersecurity teams",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/05/07/openai-rolls-out-new-gpt-5point5-cyber-to-vetted-cybersecurity-teams.html"
+      },
+      {
+        "category": "[Markets]",
+        "title": "Billion-dollar AI rounds push April to third-highest startup funding month in a year",
+        "source": "Crunchbase News",
+        "url": "https://news.crunchbase.com/venture/global-startup-funding-april-2026-anthropic-jeff-bezos-project-prometheus-biggest-deals/"
+      },
+      {
+        "category": "[Policy]",
+        "title": "Anthropic acquires Stainless, the SDK pipeline used by major AI API providers",
+        "source": "Forbes",
+        "url": "https://www.forbes.com/sites/janakirammsv/2026/05/19/anthropic-buys-the-sdk-pipeline-openai-and-gemini-depend-on/"
+      },
+      {
+        "category": "[Science]",
+        "title": "OpenAI outlines WebRTC architecture for low-latency voice AI at scale",
+        "source": "InfoQ",
+        "url": "https://www.infoq.com/news/2026/05/openai-voice-ai-scale/"
+      }
+    ],
+    "uruguay": [
+      {
+        "category": "[Policy]",
+        "title": "Uruguay’s president-elect Yamandú Orsi won’t live in the official presidential residence",
+        "source": "AP (via Yahoo)",
+        "url": "https://www.yahoo.com/news/uruguay-president-elect-wont-live-212812436.html"
+      },
+      {
+        "category": "[Society]",
+        "title": "Pope Leo XIV likely to visit Argentina and Uruguay in one trip",
+        "source": "NCR Online",
+        "url": "https://www.ncronline.org/vatican/pope-leo-xiv-likely-visit-argentina-and-uruguay-1-trip-peru"
+      },
+      {
+        "category": "[Sports]",
+        "title": "Uruguay national team begins to take shape for the 2026 World Cup",
+        "source": "AP",
+        "url": "https://apnews.com/article/mundial-2026-futbol-uruguay-seleccion-preparacion-465ff91ac7c13c75baa77829699f05e5"
+      },
+      {
+        "category": "[Sports]",
+        "title": "Uruguay World Cup 2026 schedule (locations, dates, times)",
+        "source": "Fox Sports",
+        "url": "https://www.foxsports.com/stories/soccer/uruguay-world-cup-2026-schedule-locations-dates-times"
+      },
+      {
+        "category": "[Sports]",
+        "title": "Uruguay World Cup 2026 squad outlook",
+        "source": "Goal.com",
+        "url": "https://www.goal.com/en/lists/uruguay-squad-world-cup-2026/blt1c90800c54756d7d"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-27T11:04:00Z"
+}
