@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-28",
+  "stage": "error",
+  "research": {
+    "error": "Research not executed: SearXNG returned 0 results (backend unavailable/empty)."
+  },
+  "delivery_error": "Not delivered: this runtime lacks the Discord message tool."
+}

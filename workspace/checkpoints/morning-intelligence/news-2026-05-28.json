@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-28",
+  "stage": "error",
+  "message": "News Extension not generated: SearXNG returned 0 results (search backend unavailable or empty).",
+  "sections": {"global": [], "uruguay": [], "watch": []},
+  "sources_count": 0,
+  "generated_at": "2026-05-28T11:00:00Z"
+}
