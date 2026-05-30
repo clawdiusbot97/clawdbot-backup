@@ -1,0 +1,69 @@
+{
+  "date": "2026-05-29",
+  "stage": "error",
+  "message": "Discord message tool not available in this runtime; News Extension delivery not attempted. Intended channel_id: 1477319018992898171 (retry rule not applicable without send capability).",
+  "sections": {
+    "global": [
+      {
+        "title": "Nato criticises Russia's 'reckless behaviour' after drone hits Romanian apartments, injuring two",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/live/cdepwzz23j0t",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "US and Iran 'very close' to deal but 'not there yet', Vance says",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c87qng40wz9o",
+        "category": "Policy"
+      },
+      {
+        "title": "Netanyahu says he has directed IDF to increase control of Gaza to 70%",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/ceqpelq5reqo",
+        "category": "Geopolitics"
+      },
+      {
+        "title": "Portugal breaks hottest May day record as Europe swelters in heatwave",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/c3v2yv5207xo",
+        "category": "Climate"
+      },
+      {
+        "title": "Exploding rocket casts doubts over Nasa's Moon plans (Blue Origin setback)",
+        "source": "BBC",
+        "url": "https://www.bbc.com/news/articles/cwy2q0g07kgo",
+        "category": "Science"
+      }
+    ],
+    "uruguay": [
+      {
+        "title": "Gobierno anuncia este viernes precios de combustibles: 'Estamos intentando que el shock no se traslade 100%', dijo Cardona",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/gobierno-anuncia-este-viernes-precios-combustibles-estamos-intentando-que-el-shock-no-se-traslade-100-dijo-cardona-n1008934"
+      },
+      {
+        "title": "Según los uruguayos, la inseguridad y el desempleo continúan siendo los principales problemas del país (Encuesta Equipos Consultores)",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/segun-los-uruguayos-la-inseguridad-y-el-desempleocontinuan-siendo-los-principales-problemas-del-pais-n1008937"
+      },
+      {
+        "title": "Fin de semana frío y algo inestable, nublado y con nieblas; el pronóstico de Nubel Cisneros",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/fin-semana-frio-y-algo-inestable-nublado-y-nieblas-el-pronostico-nubel-cisneros-n1008957"
+      },
+      {
+        "title": "Dos hombres y una mujer condenados por el caso del cuerpo desmembrado hallado en San Luis norte",
+        "source": "Subrayado",
+        "url": "https://www.subrayado.com.uy/dos-hombres-y-una-mujer-condenados-el-caso-del-cuerpo-desmembrado-hallado-san-luis-norte-n1008936"
+      },
+      {
+        "title": "Gravity, el parque de trampolines, se expande y lanzará una nueva marca",
+        "source": "El País",
+        "url": "https://www.elpais.com.uy/el-empresario/gravity-el-parque-de-trampolines-que-cumplio-un-sueno-de-la-adolescencia-se-expande-y-lanzara-una-nueva-marca"
+      }
+    ],
+    "watch": []
+  },
+  "sources_count": 10,
+  "generated_at": "2026-05-29T11:02:45Z"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-29",
+  "stage": "ok",
+  "cache_used": false,
+  "sources": [
+    "https://github.com/docling-project/docling",
+    "https://docling-project.github.io/docling/",
+    "https://github.com/Unstructured-IO/unstructured",
+    "https://docs.unstructured.io/",
+    "https://deepgram.com/",
+    "https://www.twilio.com/docs/whatsapp",
+    "https://genai.owasp.org/llm-top-10/"
+  ],
+  "generated_at": "2026-05-29T11:02:30Z",
+  "delivery_error": "Discord message tool not available in this runtime; delivery not attempted. Intended channel_id: 1476311753305362564"
+}
